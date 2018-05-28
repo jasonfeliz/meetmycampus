@@ -25,24 +25,7 @@ function queryMysql($query)
         return $result;
       }
 
-function createTable($name, $query)
-	{
-		queryMysql("CREATE TABLE IF NOT EXISTS $name($query)"."ENGINE=INNODB");
-	}
 
-
-
-createTable('collegeStudent',
-      'id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-       firstName VARCHAR(100),
-       lastName VARCHAR(100),
-       userName VARCHAR(30),
-       email VARCHAR(100),
-       token VARCHAR(100),
-      verified varchar(255) DEFAULT "no",
-      dateSignedUp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-      universityID INT UNSIGNED,
-      FOREIGN KEY (universityID) REFERENCES university(universityID)');
 
 
 
