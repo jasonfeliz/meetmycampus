@@ -1,0 +1,3665 @@
+[
+   {
+      "major": "Animal Training"
+   },
+   {
+      "major": "Dog/Pet/Animal Grooming"
+   },
+   {
+      "major": "Equestrian/Equine Studies"
+   },
+   {
+      "major": "Taxidermy/Taxidermist"
+   },
+   {
+      "major": "Agricultural and Food Products Processing"
+   },
+   {
+      "major": "Agribusiness/Agricultural Business Operations"
+   },
+   {
+      "major": "Agricultural Business and Management"
+   },
+   {
+      "major": "Agricultural Business Technology"
+   },
+   {
+      "major": "Agricultural Economics"
+   },
+   {
+      "major": "Agricultural/Farm Supplies Retailing and Wholesaling"
+   },
+   {
+      "major": "Farm/Farm and Ranch Management"
+   },
+   {
+      "major": "Agricultural Mechanics and Equipment/Machine Technology"
+   },
+   {
+      "major": "Agricultural Mechanization"
+   },
+   {
+      "major": "Agricultural Power Machinery Operation"
+   },
+   {
+      "major": "Agricultural Production Operations"
+   },
+   {
+      "major": "Agroecology and Sustainable Agriculture"
+   },
+   {
+      "major": "Animal/Livestock Husbandry and Production"
+   },
+   {
+      "major": "Aquaculture"
+   },
+   {
+      "major": "Crop Production"
+   },
+   {
+      "major": "Dairy Husbandry and Production"
+   },
+   {
+      "major": "Horse Husbandry/Equine Science and Management"
+   },
+   {
+      "major": "Viticulture and Enology"
+   },
+   {
+      "major": "Agricultural and Extension Education Services"
+   },
+   {
+      "major": "Agricultural Communication/Journalism"
+   },
+   {
+      "major": "Agricultural Animal Breeding"
+   },
+   {
+      "major": "Animal Health"
+   },
+   {
+      "major": "Animal Nutrition"
+   },
+   {
+      "major": "Animal Sciences"
+   },
+   {
+      "major": "Dairy Science"
+   },
+   {
+      "major": "Livestock Management"
+   },
+   {
+      "major": "Poultry Science"
+   },
+   {
+      "major": "Applied Horticulture/Horticulture Operations"
+   },
+   {
+      "major": "Floriculture/Floristry Operations and Management"
+   },
+   {
+      "major": "Greenhouse Operations and Management"
+   },
+   {
+      "major": "Landscaping and Groundskeeping"
+   },
+   {
+      "major": "Ornamental Horticulture"
+   },
+   {
+      "major": "Plant Nursery Operations and Management"
+   },
+   {
+      "major": "Turf and Turfgrass Management"
+   },
+   {
+      "major": "Food Science"
+   },
+   {
+      "major": "Food Technology and Processing"
+   },
+   {
+      "major": "International Agriculture"
+   },
+   {
+      "major": "Agricultural and Horticultural Plant Breeding"
+   },
+   {
+      "major": "Agronomy and Crop Science"
+   },
+   {
+      "major": "Horticultural Science"
+   },
+   {
+      "major": "Plant Protection and Integrated Pest Management"
+   },
+   {
+      "major": "Plant Sciences"
+   },
+   {
+      "major": "Range Science and Management"
+   },
+   {
+      "major": "Soil Chemistry and Physics"
+   },
+   {
+      "major": "Soil Microbiology"
+   },
+   {
+      "major": "Soil Science and Agronomy"
+   },
+   {
+      "major": "Architectural History and Criticism"
+   },
+   {
+      "major": "Architectural and Building Sciences/Technology"
+   },
+   {
+      "major": "Architectural Technology/Technician"
+   },
+   {
+      "major": "Architecture"
+   },
+   {
+      "major": "City/Urban, Community and Regional Planning"
+   },
+   {
+      "major": "Environmental Design/Architecture"
+   },
+   {
+      "major": "Interior Architecture"
+   },
+   {
+      "major": "Landscape Architecture"
+   },
+   {
+      "major": "Real Estate Development"
+   },
+   {
+      "major": "African Studies"
+   },
+   {
+      "major": "American/United States Studies/Civilization"
+   },
+   {
+      "major": "Asian Studies/Civilization"
+   },
+   {
+      "major": "Balkans Studies"
+   },
+   {
+      "major": "Baltic Studies"
+   },
+   {
+      "major": "Canadian Studies"
+   },
+   {
+      "major": "Caribbean Studies"
+   },
+   {
+      "major": "Chinese Studies"
+   },
+   {
+      "major": "Commonwealth Studies"
+   },
+   {
+      "major": "East Asian Studies"
+   },
+   {
+      "major": "European Studies/Civilization"
+   },
+   {
+      "major": "French Studies"
+   },
+   {
+      "major": "German Studies"
+   },
+   {
+      "major": "Irish Studies"
+   },
+   {
+      "major": "Italian Studies"
+   },
+   {
+      "major": "Japanese Studies"
+   },
+   {
+      "major": "Korean Studies"
+   },
+   {
+      "major": "Latin American and Caribbean Studies"
+   },
+   {
+      "major": "Latin American Studies"
+   },
+   {
+      "major": "Near and Middle Eastern Studies"
+   },
+   {
+      "major": "Pacific Area/Pacific Rim Studies"
+   },
+   {
+      "major": "Polish Studies"
+   },
+   {
+      "major": "Regional Studies (US, Canadian, Foreign)"
+   },
+   {
+      "major": "Russian Studies"
+   },
+   {
+      "major": "Russian, Central European, East European and Eurasian Studies"
+   },
+   {
+      "major": "Scandinavian Studies"
+   },
+   {
+      "major": "Slavic Studies"
+   },
+   {
+      "major": "South Asian Studies"
+   },
+   {
+      "major": "Southeast Asian Studies"
+   },
+   {
+      "major": "Spanish and Iberian Studies"
+   },
+   {
+      "major": "Tibetan Studies"
+   },
+   {
+      "major": "Ukraine Studies"
+   },
+   {
+      "major": "Ural-Altaic and Central Asian Studies"
+   },
+   {
+      "major": "Western European Studies"
+   },
+   {
+      "major": "African-American/Black Studies"
+   },
+   {
+      "major": "American Indian/Native American Studies"
+   },
+   {
+      "major": "Asian-American Studies"
+   },
+   {
+      "major": "Deaf Studies"
+   },
+   {
+      "major": "Disability Studies"
+   },
+   {
+      "major": "Folklore Studies"
+   },
+   {
+      "major": "Gay/Lesbian Studies"
+   },
+   {
+      "major": "Hispanic-American, Puerto Rican, and Mexican-American/Chicano Studies"
+   },
+   {
+      "major": "Women's Studies"
+   },
+   {
+      "major": "Aviation / Flight Training (UND Aerospace) "
+   },
+   {
+      "major": "Biochemistry"
+   },
+   {
+      "major": "Biochemistry and Molecular Biology"
+   },
+   {
+      "major": "Biophysics"
+   },
+   {
+      "major": "Molecular Biochemistry"
+   },
+   {
+      "major": "Molecular Biology"
+   },
+   {
+      "major": "Molecular Biophysics"
+   },
+   {
+      "major": "Photobiology"
+   },
+   {
+      "major": "Radiation Biology/Radiobiology"
+   },
+   {
+      "major": "Structural Biology"
+   },
+   {
+      "major": "Biology"
+   },
+   {
+      "major": "Biology/Biological Sciences"
+   },
+   {
+      "major": "Biomedical Sciences"
+   },
+   {
+      "major": "Bioinformatics"
+   },
+   {
+      "major": "Biometry/Biometrics"
+   },
+   {
+      "major": "Biostatistics"
+   },
+   {
+      "major": "Computational Biology"
+   },
+   {
+      "major": "Biotechnology"
+   },
+   {
+      "major": "Botany/Plant Biology"
+   },
+   {
+      "major": "Plant Molecular Biology"
+   },
+   {
+      "major": "Plant Pathology/Phytopathology"
+   },
+   {
+      "major": "Plant Physiology"
+   },
+   {
+      "major": "Anatomy"
+   },
+   {
+      "major": "Cell Biology and Anatomy"
+   },
+   {
+      "major": "Cell/Cellular and Molecular Biology"
+   },
+   {
+      "major": "Cell/Cellular Biology and Histology"
+   },
+   {
+      "major": "Developmental Biology and Embryology"
+   },
+   {
+      "major": "Aquatic Biology/Limnology"
+   },
+   {
+      "major": "Conservation Biology"
+   },
+   {
+      "major": "Ecology"
+   },
+   {
+      "major": "Ecology and Evolutionary Biology"
+   },
+   {
+      "major": "Environmental Biology"
+   },
+   {
+      "major": "Epidemiology"
+   },
+   {
+      "major": "Evolutionary Biology"
+   },
+   {
+      "major": "Marine Biology and Biological Oceanography"
+   },
+   {
+      "major": "Population Biology"
+   },
+   {
+      "major": "Systematic Biology/Biological Systematics"
+   },
+   {
+      "major": "Animal Genetics"
+   },
+   {
+      "major": "Genetics"
+   },
+   {
+      "major": "Genome Sciences/Genomics"
+   },
+   {
+      "major": "Human/Medical Genetics"
+   },
+   {
+      "major": "Microbial and Eukaryotic Genetics"
+   },
+   {
+      "major": "Molecular Genetics"
+   },
+   {
+      "major": "Plant Genetics"
+   },
+   {
+      "major": "Immunology"
+   },
+   {
+      "major": "Medical Microbiology and Bacteriology"
+   },
+   {
+      "major": "Microbiology"
+   },
+   {
+      "major": "Microbiology and Immunology"
+   },
+   {
+      "major": "Mycology"
+   },
+   {
+      "major": "Parasitology"
+   },
+   {
+      "major": "Virology"
+   },
+   {
+      "major": "Molecular Medicine"
+   },
+   {
+      "major": "Neuroanatomy"
+   },
+   {
+      "major": "Neurobiology"
+   },
+   {
+      "major": "Neurobiology and Anatomy"
+   },
+   {
+      "major": "Neurobiology and Behavior"
+   },
+   {
+      "major": "Neuroscience"
+   },
+   {
+      "major": "Environmental Toxicology"
+   },
+   {
+      "major": "Molecular Pharmacology"
+   },
+   {
+      "major": "Molecular Toxicology"
+   },
+   {
+      "major": "Neuropharmacology"
+   },
+   {
+      "major": "Pharmacology"
+   },
+   {
+      "major": "Pharmacology and Toxicology"
+   },
+   {
+      "major": "Toxicology"
+   },
+   {
+      "major": "Aerospace Physiology and Medicine"
+   },
+   {
+      "major": "Cardiovascular Science"
+   },
+   {
+      "major": "Cell Physiology"
+   },
+   {
+      "major": "Endocrinology"
+   },
+   {
+      "major": "Exercise Physiology"
+   },
+   {
+      "major": "Molecular Physiology"
+   },
+   {
+      "major": "Oncology and Cancer Biology"
+   },
+   {
+      "major": "Pathology/Experimental Pathology"
+   },
+   {
+      "major": "Physiology"
+   },
+   {
+      "major": "Reproductive Biology"
+   },
+   {
+      "major": "Vision Science/Physiological Optics"
+   },
+   {
+      "major": "Animal Behavior and Ethology"
+   },
+   {
+      "major": "Animal Physiology"
+   },
+   {
+      "major": "Entomology"
+   },
+   {
+      "major": "Wildlife Biology"
+   },
+   {
+      "major": "Zoology/Animal Biology"
+   },
+   {
+      "major": "Accounting"
+   },
+   {
+      "major": "Accounting and Business/Management"
+   },
+   {
+      "major": "Accounting and Finance"
+   },
+   {
+      "major": "Accounting Technology/Technician and Bookkeeping"
+   },
+   {
+      "major": "Auditing"
+   },
+   {
+      "major": "Business Administration and Management"
+   },
+   {
+      "major": "Customer Service Management"
+   },
+   {
+      "major": "E-Commerce/Electronic Commerce"
+   },
+   {
+      "major": "Logistics, Materials, and Supply Chain Management"
+   },
+   {
+      "major": "Non-Profit/Public/Organizational Management"
+   },
+   {
+      "major": "Office Management and Supervision"
+   },
+   {
+      "major": "Operations Management and Supervision"
+   },
+   {
+      "major": "Organizational Leadership"
+   },
+   {
+      "major": "Project Management"
+   },
+   {
+      "major": "Purchasing, Procurement/Acquisitions and Contracts Management"
+   },
+   {
+      "major": "Research and Development Management"
+   },
+   {
+      "major": "Retail Management"
+   },
+   {
+      "major": "Transportation/Mobility Management"
+   },
+   {
+      "major": "Business/Commerce"
+   },
+   {
+      "major": "Business Communications"
+   },
+   {
+      "major": "Business/Managerial Economics"
+   },
+   {
+      "major": "Construction Management"
+   },
+   {
+      "major": "Entrepreneurship/Entrepreneurial Studies"
+   },
+   {
+      "major": "Franchising and Franchise Operations"
+   },
+   {
+      "major": "Small Business Administration/Management"
+   },
+   {
+      "major": "Banking and Financial Support Services"
+   },
+   {
+      "major": "Credit Management"
+   },
+   {
+      "major": "Finance"
+   },
+   {
+      "major": "Financial Planning and Services"
+   },
+   {
+      "major": "International Finance"
+   },
+   {
+      "major": "Investments and Securities"
+   },
+   {
+      "major": "Public Finance"
+   },
+   {
+      "major": "Merchandising and Buying Operations"
+   },
+   {
+      "major": "Retailing and Retail Operations"
+   },
+   {
+      "major": "Sales, Distribution, and Marketing Operations"
+   },
+   {
+      "major": "Selling Skills and Sales Operations"
+   },
+   {
+      "major": "Casino Management"
+   },
+   {
+      "major": "Hospitality Administration/Management"
+   },
+   {
+      "major": "Hotel, Motel, and Restaurant Management"
+   },
+   {
+      "major": "Hotel/Motel Administration/Management"
+   },
+   {
+      "major": "Meeting and Event Planning"
+   },
+   {
+      "major": "Resort Management"
+   },
+   {
+      "major": "Restaurant/Food Services Management"
+   },
+   {
+      "major": "Tourism and Travel Services Management"
+   },
+   {
+      "major": "Human Resources Development"
+   },
+   {
+      "major": "Human Resources Management"
+   },
+   {
+      "major": "Labor and Industrial Relations"
+   },
+   {
+      "major": "Labor Studies"
+   },
+   {
+      "major": "Organizational Behavior Studies"
+   },
+   {
+      "major": "Insurance"
+   },
+   {
+      "major": "International Business"
+   },
+   {
+      "major": "Information Resources Management"
+   },
+   {
+      "major": "Knowledge Management"
+   },
+   {
+      "major": "Management Information Systems"
+   },
+   {
+      "major": "Actuarial Science"
+   },
+   {
+      "major": "Business Statistics"
+   },
+   {
+      "major": "Management Science"
+   },
+   {
+      "major": "International Marketing"
+   },
+   {
+      "major": "Marketing Research"
+   },
+   {
+      "major": "Marketing"
+   },
+   {
+      "major": "Real Estate"
+   },
+   {
+      "major": "Apparel and Accessories Marketing Operations"
+   },
+   {
+      "major": "Auctioneering"
+   },
+   {
+      "major": "Business and Personal/Financial Services Marketing Operations"
+   },
+   {
+      "major": "Fashion Merchandising"
+   },
+   {
+      "major": "Fashion Modeling"
+   },
+   {
+      "major": "Hospitality and Recreation Marketing Operations"
+   },
+   {
+      "major": "Special Products Marketing Operations"
+   },
+   {
+      "major": "Tourism and Travel Services Marketing Operations"
+   },
+   {
+      "major": "Tourism Promotion Operations"
+   },
+   {
+      "major": "Vehicle and Vehicle Parts and Accessories Marketing Operations"
+   },
+   {
+      "major": "Taxation"
+   },
+   {
+      "major": "Telecommunications Management"
+   },
+   {
+      "major": "Communications"
+   },
+   {
+      "major": "Mass Communication/Media Studies"
+   },
+   {
+      "major": "Speech Communication and Rhetoric"
+   },
+   {
+      "major": "Broadcast Journalism"
+   },
+   {
+      "major": "Journalism"
+   },
+   {
+      "major": "Photojournalism"
+   },
+   {
+      "major": "Advertising"
+   },
+   {
+      "major": "Health Communication"
+   },
+   {
+      "major": "International and Intercultural Communication"
+   },
+   {
+      "major": "Organizational Communication"
+   },
+   {
+      "major": "Political Communication"
+   },
+   {
+      "major": "Public Relations/Image Management"
+   },
+   {
+      "major": "Sports Communication"
+   },
+   {
+      "major": "Technical and Scientific Communication"
+   },
+   {
+      "major": "Publishing"
+   },
+   {
+      "major": "Digital Communication and Media/Multimedia"
+   },
+   {
+      "major": "Radio and Television"
+   },
+   {
+      "major": "Photographic and Film/Video Technology/Technician and Assistant"
+   },
+   {
+      "major": "Radio and Television Broadcasting Technology/Technician"
+   },
+   {
+      "major": "Recording Arts Technology/Technician"
+   },
+   {
+      "major": "Communications Technology/Technician"
+   },
+   {
+      "major": "Animation, Interactive Technology, Video Graphics and Special Effects"
+   },
+   {
+      "major": "Computer Typography and Composition Equipment Operator"
+   },
+   {
+      "major": "Graphic and Printing Equipment Operator Production"
+   },
+   {
+      "major": "Graphic Communications"
+   },
+   {
+      "major": "Platemaker/Imager"
+   },
+   {
+      "major": "Prepress/Desktop Publishing and Digital Imaging Design"
+   },
+   {
+      "major": "Printing Management"
+   },
+   {
+      "major": "Printing Press Operator"
+   },
+   {
+      "major": "Artificial Intelligence"
+   },
+   {
+      "major": "Computer and Information Sciences"
+   },
+   {
+      "major": "Informatics"
+   },
+   {
+      "major": "Information Technology"
+   },
+   {
+      "major": "Computer Programming, Specific Applications"
+   },
+   {
+      "major": "Computer Programming, Vendor/Product Certification"
+   },
+   {
+      "major": "Computer Programming/Programmer"
+   },
+   {
+      "major": "Computer Science"
+   },
+   {
+      "major": "Computer Graphics"
+   },
+   {
+      "major": "Data Modeling/Warehousing and Database Administration"
+   },
+   {
+      "major": "Modeling, Virtual Environments and Simulation"
+   },
+   {
+      "major": "Web Page, Digital/Multimedia and Information Resources Design"
+   },
+   {
+      "major": "Computer Systems Analysis/Analyst"
+   },
+   {
+      "major": "Computer Systems Networking and Telecommunications"
+   },
+   {
+      "major": "Computer and Information Systems Security/Information Assurance"
+   },
+   {
+      "major": "Computer Support Specialist"
+   },
+   {
+      "major": "Information Technology Project Management"
+   },
+   {
+      "major": "Network and System Administration/Administrator"
+   },
+   {
+      "major": "System, Networking, and LAN/WAN Management/Manager"
+   },
+   {
+      "major": "Web/Multimedia Management and Webmaster"
+   },
+   {
+      "major": "Data Entry/Microcomputer Applications"
+   },
+   {
+      "major": "Word Processing"
+   },
+   {
+      "major": "Data Processing and Data Processing Technology/Technician"
+   },
+   {
+      "major": "Information Science"
+   },
+   {
+      "major": "Building Construction Technology"
+   },
+   {
+      "major": "Building/Construction Site Management/Manager"
+   },
+   {
+      "major": "Building/Home/Construction Inspection/Inspector"
+   },
+   {
+      "major": "Building/Property Maintenance"
+   },
+   {
+      "major": "Carpet, Floor, and Tile Worker"
+   },
+   {
+      "major": "Concrete Finishing/Concrete Finisher"
+   },
+   {
+      "major": "Drywall Installation/Drywaller"
+   },
+   {
+      "major": "Glazier"
+   },
+   {
+      "major": "Insulator"
+   },
+   {
+      "major": "Metal Building Assembly/Assembler"
+   },
+   {
+      "major": "Painting/Painter and Wall Coverer"
+   },
+   {
+      "major": "Roofer"
+   },
+   {
+      "major": "Carpentry/Carpenter"
+   },
+   {
+      "major": "Electrical and Power Transmission Installation/Installer"
+   },
+   {
+      "major": "Electrician"
+   },
+   {
+      "major": "Lineworker"
+   },
+   {
+      "major": "Mason/Masonry"
+   },
+   {
+      "major": "Blasting/Blaster"
+   },
+   {
+      "major": "Pipefitting/Pipefitter and Sprinkler Fitter"
+   },
+   {
+      "major": "Plumbing Technology/Plumber"
+   },
+   {
+      "major": "Well Drilling/Driller"
+   },
+   {
+      "major": "Bilingual and Multilingual Education"
+   },
+   {
+      "major": "Indian/Native American Education"
+   },
+   {
+      "major": "Multicultural Education"
+   },
+   {
+      "major": "Curriculum and Instruction"
+   },
+   {
+      "major": "Administration of Special Education"
+   },
+   {
+      "major": "Adult and Continuing Education Administration"
+   },
+   {
+      "major": "Community College Education"
+   },
+   {
+      "major": "Educational Leadership and Administration"
+   },
+   {
+      "major": "Educational, Instructional, and Curriculum Supervision"
+   },
+   {
+      "major": "Elementary and Middle School Administration/Principalship"
+   },
+   {
+      "major": "Higher Education/Higher Education Administration"
+   },
+   {
+      "major": "Secondary School Administration/Principalship"
+   },
+   {
+      "major": "Superintendency and Educational System Administration"
+   },
+   {
+      "major": "Urban Education and Leadership"
+   },
+   {
+      "major": "Educational Assessment, Testing, and Measurement"
+   },
+   {
+      "major": "Educational Evaluation and Research"
+   },
+   {
+      "major": "Educational Statistics and Research Methods"
+   },
+   {
+      "major": "Learning Sciences"
+   },
+   {
+      "major": "Educational/Instructional Technology"
+   },
+   {
+      "major": "Education"
+   },
+   {
+      "major": "International and Comparative Education"
+   },
+   {
+      "major": "Social and Philosophical Foundations of Education"
+   },
+   {
+      "major": "Education/Teaching of Individuals in Early Childhood Special Education Programs"
+   },
+   {
+      "major": "Education/Teaching of Individuals in Elementary Special Education Programs"
+   },
+   {
+      "major": "Education/Teaching of Individuals in Junior High/Middle School Special Education Programs"
+   },
+   {
+      "major": "Education/Teaching of Individuals in Secondary Special Education Programs"
+   },
+   {
+      "major": "Education/Teaching of Individuals Who are Developmentally Delayed"
+   },
+   {
+      "major": "Education/Teaching of Individuals with Autism"
+   },
+   {
+      "major": "Education/Teaching of Individuals with Emotional Disturbances"
+   },
+   {
+      "major": "Education/Teaching of Individuals with Hearing Impairments Including Deafness"
+   },
+   {
+      "major": "Education/Teaching of Individuals with Mental Retardation"
+   },
+   {
+      "major": "Education/Teaching of Individuals with Multiple Disabilities"
+   },
+   {
+      "major": "Education/Teaching of Individuals with Specific Learning Disabilities"
+   },
+   {
+      "major": "Education/Teaching of Individuals with Speech or Language Impairments"
+   },
+   {
+      "major": "Education/Teaching of Individuals with Traumatic Brain Injuries"
+   },
+   {
+      "major": "Education/Teaching of Individuals with Vision Impairments Including Blindness"
+   },
+   {
+      "major": "Education/Teaching of the Gifted and Talented"
+   },
+   {
+      "major": "Special Education and Teaching"
+   },
+   {
+      "major": "College Student Counseling and Personnel Services"
+   },
+   {
+      "major": "Counselor Education/School Counseling and Guidance Services"
+   },
+   {
+      "major": "Adult and Continuing Education and Teaching"
+   },
+   {
+      "major": "Early Childhood Education and Teaching"
+   },
+   {
+      "major": "Elementary Education and Teaching"
+   },
+   {
+      "major": "Junior High/Intermediate/Middle School Education and Teaching"
+   },
+   {
+      "major": "Kindergarten/Preschool Education and Teaching"
+   },
+   {
+      "major": "Montessori Teacher Education"
+   },
+   {
+      "major": "Secondary Education and Teaching"
+   },
+   {
+      "major": "Teacher Education, Multiple Levels"
+   },
+   {
+      "major": "Waldorf/Steiner Teacher Education"
+   },
+   {
+      "major": "Agricultural Teacher Education"
+   },
+   {
+      "major": "Art Teacher Education"
+   },
+   {
+      "major": "Biology Teacher Education"
+   },
+   {
+      "major": "Business Teacher Education"
+   },
+   {
+      "major": "Chemistry Teacher Education"
+   },
+   {
+      "major": "Computer Teacher Education"
+   },
+   {
+      "major": "Drama and Dance Teacher Education"
+   },
+   {
+      "major": "Driver and Safety Teacher Education"
+   },
+   {
+      "major": "Earth Science Teacher Education"
+   },
+   {
+      "major": "English/Language Arts Teacher Education"
+   },
+   {
+      "major": "Environmental Education"
+   },
+   {
+      "major": "Family and Consumer Sciences/Home Economics Teacher Education"
+   },
+   {
+      "major": "Foreign Language Teacher Education"
+   },
+   {
+      "major": "French Language Teacher Education"
+   },
+   {
+      "major": "Geography Teacher Education"
+   },
+   {
+      "major": "German Language Teacher Education"
+   },
+   {
+      "major": "Health Occupations Teacher Education"
+   },
+   {
+      "major": "Health Teacher Education"
+   },
+   {
+      "major": "History Teacher Education"
+   },
+   {
+      "major": "Latin Teacher Education"
+   },
+   {
+      "major": "Mathematics Teacher Education"
+   },
+   {
+      "major": "Music Teacher Education"
+   },
+   {
+      "major": "Physical Education Teaching and Coaching"
+   },
+   {
+      "major": "Physics Teacher Education"
+   },
+   {
+      "major": "Psychology Teacher Education"
+   },
+   {
+      "major": "Reading Teacher Education"
+   },
+   {
+      "major": "Sales and Marketing Operations/Marketing and Distribution Teacher Education"
+   },
+   {
+      "major": "School Librarian/School Library Media Specialist"
+   },
+   {
+      "major": "Science Teacher Education/General Science Teacher Education"
+   },
+   {
+      "major": "Social Science Teacher Education"
+   },
+   {
+      "major": "Social Studies Teacher Education"
+   },
+   {
+      "major": "Spanish Language Teacher Education"
+   },
+   {
+      "major": "Speech Teacher Education"
+   },
+   {
+      "major": "Technical Teacher Education"
+   },
+   {
+      "major": "Technology Teacher Education/Industrial Arts Teacher Education"
+   },
+   {
+      "major": "Trade and Industrial Teacher Education"
+   },
+   {
+      "major": "Adult Literacy Tutor/Instructor"
+   },
+   {
+      "major": "Teacher Assistant/Aide"
+   },
+   {
+      "major": "Teaching English as a Second or Foreign Language/ESL Language Instructor"
+   },
+   {
+      "major": "Teaching French as a Second or Foreign Language"
+   },
+   {
+      "major": "Architectural Engineering Technology/Technician"
+   },
+   {
+      "major": "Civil Engineering Technology/Technician"
+   },
+   {
+      "major": "Computer Engineering Technology/Technician"
+   },
+   {
+      "major": "Computer Hardware Technology/Technician"
+   },
+   {
+      "major": "Computer Software Technology/Technician"
+   },
+   {
+      "major": "Computer Technology/Computer Systems Technology"
+   },
+   {
+      "major": "Construction Engineering Technology/Technician"
+   },
+   {
+      "major": "Architectural Drafting and Architectural CAD/CADD"
+   },
+   {
+      "major": "CAD/CADD Drafting and/or Design Technology/Technician"
+   },
+   {
+      "major": "Civil Drafting and Civil Engineering CAD/CADD"
+   },
+   {
+      "major": "Drafting and Design Technology/Technician"
+   },
+   {
+      "major": "Electrical/Electronics Drafting and Electrical/Electronics CAD/CADD"
+   },
+   {
+      "major": "Mechanical Drafting and Mechanical Drafting CAD/CADD"
+   },
+   {
+      "major": "Electrical, Electronic and Communications Engineering Technology/Technician"
+   },
+   {
+      "major": "Integrated Circuit Design"
+   },
+   {
+      "major": "Laser and Optical Technology/Technician"
+   },
+   {
+      "major": "Telecommunications Technology/Technician"
+   },
+   {
+      "major": "Automation Engineer Technology/Technician"
+   },
+   {
+      "major": "Biomedical Technology/Technician"
+   },
+   {
+      "major": "Electromechanical Technology/Electromechanical Engineering Technology"
+   },
+   {
+      "major": "Instrumentation Technology/Technician"
+   },
+   {
+      "major": "Robotics Technology/Technician"
+   },
+   {
+      "major": "Engineering Design"
+   },
+   {
+      "major": "Engineering/Industrial Management"
+   },
+   {
+      "major": "Packaging Science"
+   },
+   {
+      "major": "Hydraulics and Fluid Power Technology/Technician"
+   },
+   {
+      "major": "Surveying Technology/Surveying"
+   },
+   {
+      "major": "Energy Management and Systems Technology/Technician"
+   },
+   {
+      "major": "Environmental Engineering Technology/Environmental Technology"
+   },
+   {
+      "major": "Hazardous Materials Management and Waste Technology/Technician"
+   },
+   {
+      "major": "Heating, Ventilation, Air Conditioning and Refrigeration Engineering Technology/Technician"
+   },
+   {
+      "major": "Solar Energy Technology/Technician"
+   },
+   {
+      "major": "Water Quality and Wastewater Treatment Management and Recycling Technology/Technician"
+   },
+   {
+      "major": "Chemical Engineering Technology/Technician"
+   },
+   {
+      "major": "Industrial Technology/Technician"
+   },
+   {
+      "major": "Manufacturing Engineering Technology/Technician"
+   },
+   {
+      "major": "Metallurgical Technology/Technician"
+   },
+   {
+      "major": "Plastics and Polymer Engineering Technology/Technician"
+   },
+   {
+      "major": "Semiconductor Manufacturing Technology"
+   },
+   {
+      "major": "Welding Engineering Technology/Technician"
+   },
+   {
+      "major": "Aeronautical/Aerospace Engineering Technology/Technician"
+   },
+   {
+      "major": "Automotive Engineering Technology/Technician"
+   },
+   {
+      "major": "Mechanical Engineering/Mechanical Technology/Technician"
+   },
+   {
+      "major": "Mining Technology/Technician"
+   },
+   {
+      "major": "Petroleum Technology/Technician"
+   },
+   {
+      "major": "Nanotechnology"
+   },
+   {
+      "major": "Nuclear Engineering Technology/Technician"
+   },
+   {
+      "major": "Hazardous Materials Information Systems Technology/Technician"
+   },
+   {
+      "major": "Industrial Safety Technology/Technician"
+   },
+   {
+      "major": "Occupational Safety and Health Technology/Technician"
+   },
+   {
+      "major": "Quality Control Technology/Technician"
+   },
+   {
+      "major": "Aerospace, Aeronautical and Astronautical/Space Engineering"
+   },
+   {
+      "major": "Agricultural Engineering"
+   },
+   {
+      "major": "Architectural Engineering"
+   },
+   {
+      "major": "Biochemical Engineering"
+   },
+   {
+      "major": "Biological/Biosystems Engineering"
+   },
+   {
+      "major": "Bioengineering and Biomedical Engineering"
+   },
+   {
+      "major": "Ceramic Sciences and Engineering"
+   },
+   {
+      "major": "Chemical and Biomolecular Engineering"
+   },
+   {
+      "major": "Chemical Engineering"
+   },
+   {
+      "major": "Civil Engineering"
+   },
+   {
+      "major": "Geotechnical and Geoenvironmental Engineering"
+   },
+   {
+      "major": "Structural Engineering"
+   },
+   {
+      "major": "Transportation and Highway Engineering"
+   },
+   {
+      "major": "Water Resources Engineering"
+   },
+   {
+      "major": "Computer Engineering"
+   },
+   {
+      "major": "Computer Hardware Engineering"
+   },
+   {
+      "major": "Computer Software Engineering"
+   },
+   {
+      "major": "Construction Engineering"
+   },
+   {
+      "major": "Electrical and Electronics Engineering"
+   },
+   {
+      "major": "Laser and Optical Engineering"
+   },
+   {
+      "major": "Telecommunications Engineering"
+   },
+   {
+      "major": "Electromechanical Engineering"
+   },
+   {
+      "major": "Engineering Chemistry"
+   },
+   {
+      "major": "Engineering Mechanics"
+   },
+   {
+      "major": "Engineering Physics/Applied Physics"
+   },
+   {
+      "major": "Engineering Science"
+   },
+   {
+      "major": "Engineering"
+   },
+   {
+      "major": "Pre-Engineering"
+   },
+   {
+      "major": "Environmental/Environmental Health Engineering"
+   },
+   {
+      "major": "Forest Engineering"
+   },
+   {
+      "major": "Geological/Geophysical Engineering"
+   },
+   {
+      "major": "Industrial Engineering"
+   },
+   {
+      "major": "Manufacturing Engineering"
+   },
+   {
+      "major": "Materials Engineering"
+   },
+   {
+      "major": "Mechanical Engineering"
+   },
+   {
+      "major": "Mechatronics, Robotics, and Automation Engineering"
+   },
+   {
+      "major": "Metallurgical Engineering"
+   },
+   {
+      "major": "Mining and Mineral Engineering"
+   },
+   {
+      "major": "Naval Architecture and Marine Engineering"
+   },
+   {
+      "major": "Nuclear Engineering"
+   },
+   {
+      "major": "Ocean Engineering"
+   },
+   {
+      "major": "Operations Research"
+   },
+   {
+      "major": "Paper Science and Engineering"
+   },
+   {
+      "major": "Petroleum Engineering"
+   },
+   {
+      "major": "Polymer/Plastics Engineering"
+   },
+   {
+      "major": "Surveying Engineering"
+   },
+   {
+      "major": "Systems Engineering"
+   },
+   {
+      "major": "Textile Sciences and Engineering"
+   },
+   {
+      "major": "English Language and Literature"
+   },
+   {
+      "major": "American Literature (Canadian)"
+   },
+   {
+      "major": "American Literature (United States)"
+   },
+   {
+      "major": "Children's and Adolescent Literature"
+   },
+   {
+      "major": "English Literature (British and Commonwealth)"
+   },
+   {
+      "major": "General Literature"
+   },
+   {
+      "major": "Creative Writing"
+   },
+   {
+      "major": "Professional, Technical, Business, and Scientific Writing"
+   },
+   {
+      "major": "Rhetoric and Composition"
+   },
+   {
+      "major": "Writing"
+   },
+   {
+      "major": "Apparel and Textile Manufacture"
+   },
+   {
+      "major": "Apparel and Textile Marketing Management"
+   },
+   {
+      "major": "Apparel and Textiles"
+   },
+   {
+      "major": "Fashion and Fabric Consultant"
+   },
+   {
+      "major": "Textile Science"
+   },
+   {
+      "major": "Consumer Economics"
+   },
+   {
+      "major": "Consumer Services and Advocacy"
+   },
+   {
+      "major": "Family Resource Management Studies"
+   },
+   {
+      "major": "Business Family and Consumer Sciences/Human Sciences"
+   },
+   {
+      "major": "Consumer Merchandising/Retailing Management"
+   },
+   {
+      "major": "Family and Consumer Sciences/Human Sciences Communication"
+   },
+   {
+      "major": "Family and Consumer Sciences/Human Sciences"
+   },
+   {
+      "major": "Foods, Nutrition, and Wellness Studies"
+   },
+   {
+      "major": "Foodservice Systems Administration/Management"
+   },
+   {
+      "major": "Human Nutrition"
+   },
+   {
+      "major": "Facilities Planning and Management"
+   },
+   {
+      "major": "Home Furnishings and Equipment Installers"
+   },
+   {
+      "major": "Housing and Human Environments"
+   },
+   {
+      "major": "Adult Development and Aging"
+   },
+   {
+      "major": "Child Care and Support Services Management"
+   },
+   {
+      "major": "Child Care Provider/Assistant"
+   },
+   {
+      "major": "Child Development"
+   },
+   {
+      "major": "Developmental Services Worker"
+   },
+   {
+      "major": "Family and Community Services"
+   },
+   {
+      "major": "Family Systems"
+   },
+   {
+      "major": "Human Development and Family Studies"
+   },
+   {
+      "major": "African Languages, Literatures, and Linguistics"
+   },
+   {
+      "major": "American Indian/Native American Languages, Literatures, and Linguistics"
+   },
+   {
+      "major": "American Sign Language (ASL)"
+   },
+   {
+      "major": "Sign Language Interpretation and Translation"
+   },
+   {
+      "major": "Celtic Languages, Literatures, and Linguistics"
+   },
+   {
+      "major": "Ancient/Classical Greek Language and Literature"
+   },
+   {
+      "major": "Latin Language and Literature"
+   },
+   {
+      "major": "Chinese Language and Literature"
+   },
+   {
+      "major": "Japanese Language and Literature"
+   },
+   {
+      "major": "Korean Language and Literature"
+   },
+   {
+      "major": "Tibetan Language and Literature"
+   },
+   {
+      "major": "Danish Language and Literature"
+   },
+   {
+      "major": "Dutch/Flemish Language and Literature"
+   },
+   {
+      "major": "German Language and Literature"
+   },
+   {
+      "major": "Norwegian Language and Literature"
+   },
+   {
+      "major": "Scandinavian Languages, Literatures, and Linguistics"
+   },
+   {
+      "major": "Swedish Language and Literature"
+   },
+   {
+      "major": "Iranian Languages, Literatures, and Linguistics"
+   },
+   {
+      "major": "Applied Linguistics"
+   },
+   {
+      "major": "Comparative Literature"
+   },
+   {
+      "major": "Foreign Languages and Literatures"
+   },
+   {
+      "major": "Language Interpretation and Translation"
+   },
+   {
+      "major": "Linguistics"
+   },
+   {
+      "major": "Ancient Near Eastern and Biblical Languages, Literatures, and Linguistics"
+   },
+   {
+      "major": "Arabic Language and Literature"
+   },
+   {
+      "major": "Hebrew Language and Literature"
+   },
+   {
+      "major": "Modern Greek Language and Literature"
+   },
+   {
+      "major": "Catalan Language and Literature"
+   },
+   {
+      "major": "French Language and Literature"
+   },
+   {
+      "major": "Hispanic and Latin American Languages, Literatures, and Linguistics"
+   },
+   {
+      "major": "Italian Language and Literature"
+   },
+   {
+      "major": "Portuguese Language and Literature"
+   },
+   {
+      "major": "Romanian Language and Literature"
+   },
+   {
+      "major": "Spanish Language and Literature"
+   },
+   {
+      "major": "Albanian Language and Literature"
+   },
+   {
+      "major": "Baltic Languages, Literatures, and Linguistics"
+   },
+   {
+      "major": "Bosnian, Serbian, and Croatian Languages and Literatures"
+   },
+   {
+      "major": "Bulgarian Language and Literature"
+   },
+   {
+      "major": "Czech Language and Literature"
+   },
+   {
+      "major": "Polish Language and Literature"
+   },
+   {
+      "major": "Russian Language and Literature"
+   },
+   {
+      "major": "Slovak Language and Literature"
+   },
+   {
+      "major": "Ukrainian Language and Literature"
+   },
+   {
+      "major": "Bengali Language and Literature"
+   },
+   {
+      "major": "Hindi Language and Literature"
+   },
+   {
+      "major": "Punjabi Language and Literature"
+   },
+   {
+      "major": "Sanskrit and Classical Indian Languages, Literatures, and Linguistics"
+   },
+   {
+      "major": "Tamil Language and Literature"
+   },
+   {
+      "major": "Urdu Language and Literature"
+   },
+   {
+      "major": "Australian/Oceanic/Pacific Languages, Literatures, and Linguistics"
+   },
+   {
+      "major": "Burmese Language and Literature"
+   },
+   {
+      "major": "Filipino/Tagalog Language and Literature"
+   },
+   {
+      "major": "Indonesian/Malay Languages and Literatures"
+   },
+   {
+      "major": "Khmer/Cambodian Language and Literature"
+   },
+   {
+      "major": "Lao Language and Literature"
+   },
+   {
+      "major": "Thai Language and Literature"
+   },
+   {
+      "major": "Vietnamese Language and Literature"
+   },
+   {
+      "major": "Hungarian/Magyar Language and Literature"
+   },
+   {
+      "major": "Mongolian Language and Literature"
+   },
+   {
+      "major": "Turkish Language and Literature"
+   },
+   {
+      "major": "Uralic Languages, Literatures, and Linguistics"
+   },
+   {
+      "major": "Health and Wellness"
+   },
+   {
+      "major": "Advanced General Dentistry"
+   },
+   {
+      "major": "Dental Clinical Sciences"
+   },
+   {
+      "major": "Dental Materials"
+   },
+   {
+      "major": "Dental Public Health and Education"
+   },
+   {
+      "major": "Endodontics/Endodontology"
+   },
+   {
+      "major": "Oral Biology and Oral and Maxillofacial Pathology"
+   },
+   {
+      "major": "Oral/Maxillofacial Surgery"
+   },
+   {
+      "major": "Orthodontics/Orthodontology"
+   },
+   {
+      "major": "Pediatric Dentistry/Pedodontics"
+   },
+   {
+      "major": "Periodontics/Periodontology"
+   },
+   {
+      "major": "Prosthodontics/Prosthodontology"
+   },
+   {
+      "major": "Anesthesiologist Assistant"
+   },
+   {
+      "major": "Chiropractic Assistant/Technician"
+   },
+   {
+      "major": "Clinical/Medical Laboratory Assistant"
+   },
+   {
+      "major": "Emergency Care Attendant (EMT Ambulance)"
+   },
+   {
+      "major": "Lactation Consultant"
+   },
+   {
+      "major": "Medical/Clinical Assistant"
+   },
+   {
+      "major": "Occupational Therapist Assistant"
+   },
+   {
+      "major": "Pathology/Pathologist Assistant"
+   },
+   {
+      "major": "Pharmacy Technician/Assistant"
+   },
+   {
+      "major": "Physical Therapy Technician/Assistant"
+   },
+   {
+      "major": "Radiologist Assistant"
+   },
+   {
+      "major": "Respiratory Therapy Technician/Assistant"
+   },
+   {
+      "major": "Speech-Language Pathology Assistant"
+   },
+   {
+      "major": "Veterinary/Animal Health Technology/Technician and Veterinary Assistant"
+   },
+   {
+      "major": "Athletic Training/Trainer"
+   },
+   {
+      "major": "Cardiopulmonary Technology/Technologist"
+   },
+   {
+      "major": "Cardiovascular Technology/Technologist"
+   },
+   {
+      "major": "Diagnostic Medical Sonography/Sonographer and Ultrasound Technician"
+   },
+   {
+      "major": "Electrocardiograph Technology/Technician"
+   },
+   {
+      "major": "Electroneurodiagnostic/Electroencephalographic Technology/Technologist"
+   },
+   {
+      "major": "Emergency Medical Technology/Technician (EMT Paramedic)"
+   },
+   {
+      "major": "Gene/Genetic Therapy"
+   },
+   {
+      "major": "Hearing Instrument Specialist"
+   },
+   {
+      "major": "Magnetic Resonance Imaging (MRI) Technology/Technician"
+   },
+   {
+      "major": "Mammography Technician/Technology"
+   },
+   {
+      "major": "Medical Radiologic Technology/Science - Radiation Therapist"
+   },
+   {
+      "major": "Nuclear Medical Technology/Technologist"
+   },
+   {
+      "major": "Perfusion Technology/Perfusionist"
+   },
+   {
+      "major": "Physician Assistant"
+   },
+   {
+      "major": "Polysomnography"
+   },
+   {
+      "major": "Radiation Protection/Health Physics Technician"
+   },
+   {
+      "major": "Radiologic Technology/Science - Radiographer"
+   },
+   {
+      "major": "Respiratory Care Therapy/Therapist"
+   },
+   {
+      "major": "Surgical Technology/Technologist"
+   },
+   {
+      "major": "Direct Entry Midwifery"
+   },
+   {
+      "major": "Acupuncture and Oriental Medicine"
+   },
+   {
+      "major": "Ayurvedic Medicine/Ayurveda"
+   },
+   {
+      "major": "Holistic Health"
+   },
+   {
+      "major": "Homeopathic Medicine/Homeopathy"
+   },
+   {
+      "major": "Naturopathic Medicine/Naturopathy"
+   },
+   {
+      "major": "Traditional Chinese Medicine and Chinese Herbology"
+   },
+   {
+      "major": "Bioethics/Medical Ethics"
+   },
+   {
+      "major": "Chiropractic"
+   },
+   {
+      "major": "Blood Bank Technology Specialist"
+   },
+   {
+      "major": "Clinical Laboratory Science/Medical Technology/Technologist"
+   },
+   {
+      "major": "Clinical/Medical Laboratory Technician"
+   },
+   {
+      "major": "Cytogenetics/Genetics/Clinical Genetics Technology/Technologist"
+   },
+   {
+      "major": "Cytotechnology/Cytotechnologist"
+   },
+   {
+      "major": "Hematology Technology/Technician"
+   },
+   {
+      "major": "Histologic Technician"
+   },
+   {
+      "major": "Histologic Technology/Histotechnologist"
+   },
+   {
+      "major": "Ophthalmic Laboratory Technology/Technician"
+   },
+   {
+      "major": "Phlebotomy Technician/Phlebotomist"
+   },
+   {
+      "major": "Renal/Dialysis Technologist/Technician"
+   },
+   {
+      "major": "Sterile Processing Technology/Technician"
+   },
+   {
+      "major": "Audiology/Audiologist"
+   },
+   {
+      "major": "Audiology/Audiologist and Speech-Language Pathology/Pathologist"
+   },
+   {
+      "major": "Communication Sciences and Disorders"
+   },
+   {
+      "major": "Speech-Language Pathology/Pathologist"
+   },
+   {
+      "major": "Dental Assisting/Assistant"
+   },
+   {
+      "major": "Dental Hygiene/Hygienist"
+   },
+   {
+      "major": "Dental Laboratory Technology/Technician"
+   },
+   {
+      "major": "Dentistry"
+   },
+   {
+      "major": "Clinical Nutrition/Nutritionist"
+   },
+   {
+      "major": "Dietetic Technician"
+   },
+   {
+      "major": "Dietetics/Dietitian"
+   },
+   {
+      "major": "Dietitian Assistant"
+   },
+   {
+      "major": "Aromatherapy"
+   },
+   {
+      "major": "Herbalism/Herbalist"
+   },
+   {
+      "major": "Polarity Therapy"
+   },
+   {
+      "major": "Reiki"
+   },
+   {
+      "major": "Health Aide"
+   },
+   {
+      "major": "Home Health Aide/Home Attendant"
+   },
+   {
+      "major": "Medication Aide"
+   },
+   {
+      "major": "Rehabilitation Aide"
+   },
+   {
+      "major": "Clinical Research Coordinator"
+   },
+   {
+      "major": "Health Information/Medical Records Administration/Administrator"
+   },
+   {
+      "major": "Health Information/Medical Records Technology/Technician"
+   },
+   {
+      "major": "Health Unit Coordinator/Ward Clerk"
+   },
+   {
+      "major": "Health Unit Manager/Ward Supervisor"
+   },
+   {
+      "major": "Health/Health Care Administration/Management"
+   },
+   {
+      "major": "Health/Medical Claims Examiner"
+   },
+   {
+      "major": "Hospital and Health Care Facilities Administration/Management"
+   },
+   {
+      "major": "Long Term Care Administration/Management"
+   },
+   {
+      "major": "Medical Administrative/Executive Assistant and Medical Secretary"
+   },
+   {
+      "major": "Medical Insurance Coding Specialist/Coder"
+   },
+   {
+      "major": "Medical Insurance Specialist/Medical Biller"
+   },
+   {
+      "major": "Medical Office Assistant/Specialist"
+   },
+   {
+      "major": "Medical Office Computer Specialist/Assistant"
+   },
+   {
+      "major": "Medical Office Management/Administration"
+   },
+   {
+      "major": "Medical Reception/Receptionist"
+   },
+   {
+      "major": "Medical Staff Services Technology/Technician"
+   },
+   {
+      "major": "Medical Transcription/Transcriptionist"
+   },
+   {
+      "major": "Medical/Health Management and Clinical Assistant/Specialist"
+   },
+   {
+      "major": "Pre-Chiropractic Studies"
+   },
+   {
+      "major": "Pre-Dentistry Studies"
+   },
+   {
+      "major": "Pre-Medicine/Pre-Medical Studies"
+   },
+   {
+      "major": "Pre-Nursing Studies"
+   },
+   {
+      "major": "Pre-Occupational Therapy Studies"
+   },
+   {
+      "major": "Pre-Optometry Studies"
+   },
+   {
+      "major": "Pre-Pharmacy Studies"
+   },
+   {
+      "major": "Pre-Physical Therapy Studies"
+   },
+   {
+      "major": "Pre-Veterinary Studies"
+   },
+   {
+      "major": "Medical Scientist"
+   },
+   {
+      "major": "Medical Illustration/Medical Illustrator"
+   },
+   {
+      "major": "Medical Informatics"
+   },
+   {
+      "major": "Medicine"
+   },
+   {
+      "major": "Clinical Pastoral Counseling/Patient Counseling"
+   },
+   {
+      "major": "Clinical/Medical Social Work"
+   },
+   {
+      "major": "Community Health Services/Liaison/Counseling"
+   },
+   {
+      "major": "Genetic Counseling/Counselor"
+   },
+   {
+      "major": "Marriage and Family Therapy/Counseling"
+   },
+   {
+      "major": "Mental Health Counseling/Counselor"
+   },
+   {
+      "major": "Psychiatric/Mental Health Services Technician"
+   },
+   {
+      "major": "Substance Abuse/Addiction Counseling"
+   },
+   {
+      "major": "Movement Therapy and Movement Education"
+   },
+   {
+      "major": "Yoga Teacher Training/Yoga Therapy"
+   },
+   {
+      "major": "Ophthalmic Technician/Technologist"
+   },
+   {
+      "major": "Opticianry/Ophthalmic Dispensing Optician"
+   },
+   {
+      "major": "Optometric Technician/Assistant"
+   },
+   {
+      "major": "Orthoptics/Orthoptist"
+   },
+   {
+      "major": "Optometry"
+   },
+   {
+      "major": "Osteopathic Medicine/Osteopathy"
+   },
+   {
+      "major": "Clinical and Industrial Drug Development"
+   },
+   {
+      "major": "Clinical, Hospital, and Managed Care Pharmacy"
+   },
+   {
+      "major": "Industrial and Physical Pharmacy and Cosmetic Sciences"
+   },
+   {
+      "major": "Medicinal and Pharmaceutical Chemistry"
+   },
+   {
+      "major": "Natural Products Chemistry and Pharmacognosy"
+   },
+   {
+      "major": "Pharmaceutical Marketing and Management"
+   },
+   {
+      "major": "Pharmaceutical Sciences"
+   },
+   {
+      "major": "Pharmaceutics and Drug Design"
+   },
+   {
+      "major": "Pharmacoeconomics/Pharmaceutical Economics"
+   },
+   {
+      "major": "Pharmacy"
+   },
+   {
+      "major": "Pharmacy Administration and Pharmacy Policy and Regulatory Affairs"
+   },
+   {
+      "major": "Podiatric Medicine/Podiatry"
+   },
+   {
+      "major": "Licensed Practical/Vocational Nurse Training"
+   },
+   {
+      "major": "Nursing Assistant/Aide and Patient Care Assistant/Aide"
+   },
+   {
+      "major": "Behavioral Aspects of Health"
+   },
+   {
+      "major": "Community Health and Preventive Medicine"
+   },
+   {
+      "major": "Environmental Health"
+   },
+   {
+      "major": "Health Services Administration"
+   },
+   {
+      "major": "Health/Medical Physics"
+   },
+   {
+      "major": "International Public Health/International Health"
+   },
+   {
+      "major": "Maternal and Child Health"
+   },
+   {
+      "major": "Occupational Health and Industrial Hygiene"
+   },
+   {
+      "major": "Public Health"
+   },
+   {
+      "major": "Public Health Education and Promotion"
+   },
+   {
+      "major": "Adult Health Nurse/Nursing"
+   },
+   {
+      "major": "Clinical Nurse Leader"
+   },
+   {
+      "major": "Clinical Nurse Specialist"
+   },
+   {
+      "major": "Critical Care Nursing"
+   },
+   {
+      "major": "Emergency Room/Trauma Nursing"
+   },
+   {
+      "major": "Family Practice Nurse/Nursing"
+   },
+   {
+      "major": "Geriatric Nurse/Nursing"
+   },
+   {
+      "major": "Maternal/Child Health and Neonatal Nurse/Nursing"
+   },
+   {
+      "major": "Nurse Anesthetist"
+   },
+   {
+      "major": "Nurse Midwife/Nursing Midwifery"
+   },
+   {
+      "major": "Nursing Administration"
+   },
+   {
+      "major": "Nursing Education"
+   },
+   {
+      "major": "Nursing Practice"
+   },
+   {
+      "major": "Nursing Science"
+   },
+   {
+      "major": "Occupational and Environmental Health Nursing"
+   },
+   {
+      "major": "Palliative Care Nursing"
+   },
+   {
+      "major": "Pediatric Nurse/Nursing"
+   },
+   {
+      "major": "Perioperative/Operating Room and Surgical Nurse/Nursing"
+   },
+   {
+      "major": "Psychiatric/Mental Health Nurse/Nursing"
+   },
+   {
+      "major": "Public Health/Community Nurse/Nursing"
+   },
+   {
+      "major": "Registered Nursing/Registered Nurse"
+   },
+   {
+      "major": "Women's Health Nurse/Nursing"
+   },
+   {
+      "major": "Animal-Assisted Therapy"
+   },
+   {
+      "major": "Art Therapy/Therapist"
+   },
+   {
+      "major": "Assistive/Augmentative Technology and Rehabilitation Engineering"
+   },
+   {
+      "major": "Dance Therapy/Therapist"
+   },
+   {
+      "major": "Music Therapy/Therapist"
+   },
+   {
+      "major": "Occupational Therapy/Therapist"
+   },
+   {
+      "major": "Orthotist/Prosthetist"
+   },
+   {
+      "major": "Physical Therapy/Therapist"
+   },
+   {
+      "major": "Rehabilitation Science"
+   },
+   {
+      "major": "Therapeutic Recreation/Recreational Therapy"
+   },
+   {
+      "major": "Vocational Rehabilitation Counseling/Counselor"
+   },
+   {
+      "major": "Asian Bodywork Therapy"
+   },
+   {
+      "major": "Massage Therapy/Therapeutic Massage"
+   },
+   {
+      "major": "Somatic Bodywork"
+   },
+   {
+      "major": "Comparative and Laboratory Animal Medicine"
+   },
+   {
+      "major": "Large Animal/Food Animal and Equine Surgery and Medicine"
+   },
+   {
+      "major": "Small/Companion Animal Surgery and Medicine"
+   },
+   {
+      "major": "Veterinary Anatomy"
+   },
+   {
+      "major": "Veterinary Infectious Diseases"
+   },
+   {
+      "major": "Veterinary Microbiology and Immunobiology"
+   },
+   {
+      "major": "Veterinary Pathology and Pathobiology"
+   },
+   {
+      "major": "Veterinary Physiology"
+   },
+   {
+      "major": "Veterinary Preventive Medicine, Epidemiology, and Public Health"
+   },
+   {
+      "major": "Veterinary Sciences/Veterinary Clinical Sciences"
+   },
+   {
+      "major": "Veterinary Toxicology and Pharmacology"
+   },
+   {
+      "major": "Veterinary Medicine"
+   },
+   {
+      "major": "American History (United States)"
+   },
+   {
+      "major": "Asian History"
+   },
+   {
+      "major": "Canadian History"
+   },
+   {
+      "major": "European History"
+   },
+   {
+      "major": "History"
+   },
+   {
+      "major": "History and Philosophy of Science and Technology"
+   },
+   {
+      "major": "Military History"
+   },
+   {
+      "major": "Public/Applied History"
+   },
+   {
+      "major": "Corrections"
+   },
+   {
+      "major": "Corrections Administration"
+   },
+   {
+      "major": "Criminal Justice/Law Enforcement Administration"
+   },
+   {
+      "major": "Criminal Justice/Police Science"
+   },
+   {
+      "major": "Criminal Justice/Safety Studies"
+   },
+   {
+      "major": "Criminalistics and Criminal Science"
+   },
+   {
+      "major": "Critical Incident Response/Special Police Operations"
+   },
+   {
+      "major": "Cultural/Archaelogical Resources Protection"
+   },
+   {
+      "major": "Cyber/Computer Forensics and Counterterrorism"
+   },
+   {
+      "major": "Financial Forensics and Fraud Investigation"
+   },
+   {
+      "major": "Forensic Science and Technology"
+   },
+   {
+      "major": "Juvenile Corrections"
+   },
+   {
+      "major": "Law Enforcement Intelligence Analysis"
+   },
+   {
+      "major": "Law Enforcement Investigation and Interviewing"
+   },
+   {
+      "major": "Law Enforcement Record-Keeping and Evidence Management"
+   },
+   {
+      "major": "Maritime Law Enforcement"
+   },
+   {
+      "major": "Protective Services Operations"
+   },
+   {
+      "major": "Securities Services Administration/Management"
+   },
+   {
+      "major": "Security and Loss Prevention Services"
+   },
+   {
+      "major": "Suspension and Debarment Investigation"
+   },
+   {
+      "major": "Fire Prevention and Safety Technology/Technician"
+   },
+   {
+      "major": "Fire Science/Fire-fighting"
+   },
+   {
+      "major": "Fire Services Administration"
+   },
+   {
+      "major": "Fire Systems Technology"
+   },
+   {
+      "major": "Fire/Arson Investigation and Prevention"
+   },
+   {
+      "major": "Wildland/Forest Firefighting and Investigation"
+   },
+   {
+      "major": "Crisis/Emergency/Disaster Management"
+   },
+   {
+      "major": "Critical Infrastructure Protection"
+   },
+   {
+      "major": "Homeland Security"
+   },
+   {
+      "major": "Terrorism and Counterterrorism Operations"
+   },
+   {
+      "major": "Community Organization and Advocacy"
+   },
+   {
+      "major": "Public Administration"
+   },
+   {
+      "major": "Education Policy Analysis"
+   },
+   {
+      "major": "Health Policy Analysis"
+   },
+   {
+      "major": "International Policy Analysis"
+   },
+   {
+      "major": "Public Policy Analysis"
+   },
+   {
+      "major": "Social Work"
+   },
+   {
+      "major": "Youth Services/Administration"
+   },
+   {
+      "major": "Pre-Law Studies"
+   },
+   {
+      "major": "Law"
+   },
+   {
+      "major": "Advanced Legal Research/Studies"
+   },
+   {
+      "major": "American/US Law/Legal Studies/Jurisprudence"
+   },
+   {
+      "major": "Banking, Corporate, Finance, and Securities Law"
+   },
+   {
+      "major": "Canadian Law/Legal Studies/Jurisprudence"
+   },
+   {
+      "major": "Comparative Law"
+   },
+   {
+      "major": "Energy, Environment, and Natural Resources Law"
+   },
+   {
+      "major": "Health Law"
+   },
+   {
+      "major": "Intellectual Property Law"
+   },
+   {
+      "major": "International Business, Trade, and Tax Law"
+   },
+   {
+      "major": "International Law and Legal Studies"
+   },
+   {
+      "major": "Programs for Foreign Lawyers"
+   },
+   {
+      "major": "Tax Law/Taxation"
+   },
+   {
+      "major": "Court Reporting/Court Reporter"
+   },
+   {
+      "major": "Legal Administrative Assistant/Secretary"
+   },
+   {
+      "major": "Legal Assistant/Paralegal"
+   },
+   {
+      "major": "General Studies"
+   },
+   {
+      "major": "Humanities/Humanistic Studies"
+   },
+   {
+      "major": "Liberal Arts and Sciences/Liberal Studies"
+   },
+   {
+      "major": "Library and Archives Assisting"
+   },
+   {
+      "major": "Archives/Archival Administration"
+   },
+   {
+      "major": "Children and Youth Library Services"
+   },
+   {
+      "major": "Library and Information Science"
+   },
+   {
+      "major": "Applied Mathematics"
+   },
+   {
+      "major": "Computational and Applied Mathematics"
+   },
+   {
+      "major": "Computational Mathematics"
+   },
+   {
+      "major": "Financial Mathematics"
+   },
+   {
+      "major": "Mathematical Biology"
+   },
+   {
+      "major": "Algebra and Number Theory"
+   },
+   {
+      "major": "Analysis and Functional Analysis"
+   },
+   {
+      "major": "Geometry/Geometric Analysis"
+   },
+   {
+      "major": "Mathematics"
+   },
+   {
+      "major": "Topology and Foundations"
+   },
+   {
+      "major": "Mathematical Statistics and Probability"
+   },
+   {
+      "major": "Mathematics and Statistics"
+   },
+   {
+      "major": "Statistics"
+   },
+   {
+      "major": "Appliance Installation and Repair Technology/Technician"
+   },
+   {
+      "major": "Business Machine Repair"
+   },
+   {
+      "major": "Communications Systems Installation and Repair Technology"
+   },
+   {
+      "major": "Computer Installation and Repair Technology/Technician"
+   },
+   {
+      "major": "Electrical/Electronics Equipment Installation and Repair"
+   },
+   {
+      "major": "Industrial Electronics Technology/Technician"
+   },
+   {
+      "major": "Security System Installation, Repair, and Inspection Technology/Technician"
+   },
+   {
+      "major": "Heating, Air Conditioning, Ventilation and Refrigeration Maintenance Technology/Technician"
+   },
+   {
+      "major": "Heavy Equipment Maintenance Technology/Technician"
+   },
+   {
+      "major": "Industrial Mechanics and Maintenance Technology"
+   },
+   {
+      "major": "Gunsmithing/Gunsmith"
+   },
+   {
+      "major": "Locksmithing and Safe Repair"
+   },
+   {
+      "major": "Musical Instrument Fabrication and Repair"
+   },
+   {
+      "major": "Parts and Warehousing Operations and Maintenance Technology/Technician"
+   },
+   {
+      "major": "Watchmaking and Jewelrymaking"
+   },
+   {
+      "major": "Aircraft Powerplant Technology/Technician"
+   },
+   {
+      "major": "Airframe Mechanics and Aircraft Maintenance Technology/Technician"
+   },
+   {
+      "major": "Alternative Fuel Vehicle Technology/Technician"
+   },
+   {
+      "major": "Autobody/Collision and Repair Technology/Technician"
+   },
+   {
+      "major": "Automobile/Automotive Mechanics Technology/Technician"
+   },
+   {
+      "major": "Avionics Maintenance Technology/Technician"
+   },
+   {
+      "major": "Bicycle Mechanics and Repair Technology/Technician"
+   },
+   {
+      "major": "Diesel Mechanics Technology/Technician"
+   },
+   {
+      "major": "Engine Machinist"
+   },
+   {
+      "major": "High Performance and Custom Engine Technician/Mechanic"
+   },
+   {
+      "major": "Marine Maintenance/Fitter and Ship Repair Technology/Technician"
+   },
+   {
+      "major": "Medium/Heavy Vehicle and Truck Technology/Technician"
+   },
+   {
+      "major": "Motorcycle Maintenance and Repair Technology/Technician"
+   },
+   {
+      "major": "Recreation Vehicle (RV) Service Technician"
+   },
+   {
+      "major": "Small Engine Mechanics and Repair Technology/Technician"
+   },
+   {
+      "major": "Vehicle Emissions Inspection and Maintenance Technology/Technician"
+   },
+   {
+      "major": "Command & Control (C3, C4I) Systems and Operations"
+   },
+   {
+      "major": "Cyber/Electronic Operations and Warfare"
+   },
+   {
+      "major": "Information Operations/Joint Information Operations"
+   },
+   {
+      "major": "Information/Psychological Warfare and Military Media Relations"
+   },
+   {
+      "major": "Intelligence"
+   },
+   {
+      "major": "Signal/Geospatial Intelligence"
+   },
+   {
+      "major": "Strategic Intelligence"
+   },
+   {
+      "major": "Combat Systems Engineering"
+   },
+   {
+      "major": "Directed Energy Systems"
+   },
+   {
+      "major": "Engineering Acoustics"
+   },
+   {
+      "major": "Low-Observables and Stealth Technology"
+   },
+   {
+      "major": "Operational Oceanography"
+   },
+   {
+      "major": "Space Systems Operations"
+   },
+   {
+      "major": "Undersea Warfare"
+   },
+   {
+      "major": "Aerospace Ground Equipment Technology"
+   },
+   {
+      "major": "Air and Space Operations Technology"
+   },
+   {
+      "major": "Aircraft Armament Systems Technology"
+   },
+   {
+      "major": "Explosive Ordinance/Bomb Disposal"
+   },
+   {
+      "major": "Joint Command/Task Force (C3, C4I) Systems"
+   },
+   {
+      "major": "Military Information Systems Technology"
+   },
+   {
+      "major": "Missile and Space Systems Technology"
+   },
+   {
+      "major": "Munitions Systems/Ordinance Technology"
+   },
+   {
+      "major": "Radar Communications and Systems Technology"
+   },
+   {
+      "major": "Accounting and Computer Science"
+   },
+   {
+      "major": "Behavioral Sciences"
+   },
+   {
+      "major": "Biological and Physical Sciences"
+   },
+   {
+      "major": "Biopsychology"
+   },
+   {
+      "major": "Ancient Studies/Civilization"
+   },
+   {
+      "major": "Classical, Ancient Mediterranean and Near Eastern Studies and Archaeology"
+   },
+   {
+      "major": "Cognitive Science"
+   },
+   {
+      "major": "Computational Science"
+   },
+   {
+      "major": "Cultural Studies/Critical Theory and Analysis"
+   },
+   {
+      "major": "Dispute Resolution"
+   },
+   {
+      "major": "Gerontology"
+   },
+   {
+      "major": "Cultural Resource Management and Policy Analysis"
+   },
+   {
+      "major": "Historic Preservation and Conservation"
+   },
+   {
+      "major": "Holocaust and Related Studies"
+   },
+   {
+      "major": "Human Biology"
+   },
+   {
+      "major": "Human Computer Interaction"
+   },
+   {
+      "major": "Intercultural/Multicultural and Diversity Studies"
+   },
+   {
+      "major": "International/Global Studies"
+   },
+   {
+      "major": "Marine Sciences"
+   },
+   {
+      "major": "Maritime Studies"
+   },
+   {
+      "major": "Mathematics and Computer Science"
+   },
+   {
+      "major": "Medieval and Renaissance Studies"
+   },
+   {
+      "major": "Museology/Museum Studies"
+   },
+   {
+      "major": "Natural Sciences"
+   },
+   {
+      "major": "Nutrition Sciences"
+   },
+   {
+      "major": "Peace Studies and Conflict Resolution"
+   },
+   {
+      "major": "Science, Technology and Society"
+   },
+   {
+      "major": "Sustainability Studies"
+   },
+   {
+      "major": "Systems Science and Theory"
+   },
+   {
+      "major": "Fishing and Fisheries Sciences and Management"
+   },
+   {
+      "major": "Forest Management/Forest Resources Management"
+   },
+   {
+      "major": "Forest Resources Production and Management"
+   },
+   {
+      "major": "Forest Sciences and Biology"
+   },
+   {
+      "major": "Forest Technology/Technician"
+   },
+   {
+      "major": "Forestry"
+   },
+   {
+      "major": "Urban Forestry"
+   },
+   {
+      "major": "Wood Science and Wood Products/Pulp and Paper Technology"
+   },
+   {
+      "major": "Environmental Science"
+   },
+   {
+      "major": "Environmental Studies"
+   },
+   {
+      "major": "Natural Resources/Conservation"
+   },
+   {
+      "major": "Land Use Planning and Management/Development"
+   },
+   {
+      "major": "Natural Resource Economics"
+   },
+   {
+      "major": "Natural Resource Recreation and Tourism"
+   },
+   {
+      "major": "Natural Resources Law Enforcement and Protective Services"
+   },
+   {
+      "major": "Natural Resources Management and Policy"
+   },
+   {
+      "major": "Water, Wetlands, and Marine Resources Management"
+   },
+   {
+      "major": "Wildlife, Fish and Wildlands Science and Management"
+   },
+   {
+      "major": "Health and Physical Education/Fitness"
+   },
+   {
+      "major": "Kinesiology and Exercise Science"
+   },
+   {
+      "major": "Physical Fitness Technician"
+   },
+   {
+      "major": "Sport and Fitness Administration/Management"
+   },
+   {
+      "major": "Sports Studies"
+   },
+   {
+      "major": "Outdoor Education"
+   },
+   {
+      "major": "Golf Course Operation and Grounds Management"
+   },
+   {
+      "major": "Parks, Recreation and Leisure Facilities Management"
+   },
+   {
+      "major": "Parks, Recreation and Leisure Studies"
+   },
+   {
+      "major": "Baking and Pastry Arts/Baker/Pastry Chef"
+   },
+   {
+      "major": "Bartending/Bartender"
+   },
+   {
+      "major": "Culinary Arts/Chef Training"
+   },
+   {
+      "major": "Culinary Science/Culinology"
+   },
+   {
+      "major": "Food Preparation/Professional Cooking/Kitchen Assistant"
+   },
+   {
+      "major": "Food Service, Waiter/Waitress, and Dining Room Management/Manager"
+   },
+   {
+      "major": "Institutional Food Workers"
+   },
+   {
+      "major": "Meat Cutting/Meat Cutter"
+   },
+   {
+      "major": "Restaurant, Culinary, and Catering Management/Manager"
+   },
+   {
+      "major": "Wine Steward/Sommelier"
+   },
+   {
+      "major": "Aesthetician/Esthetician and Skin Care Specialist"
+   },
+   {
+      "major": "Barbering/Barber"
+   },
+   {
+      "major": "Cosmetology, Barber/Styling, and Nail Instructor"
+   },
+   {
+      "major": "Cosmetology/Cosmetologist"
+   },
+   {
+      "major": "Electrolysis/Electrology and Electrolysis Technician"
+   },
+   {
+      "major": "Facial Treatment Specialist/Facialist"
+   },
+   {
+      "major": "Hair Styling/Stylist and Hair Design"
+   },
+   {
+      "major": "Make-Up Artist/Specialist"
+   },
+   {
+      "major": "Master Aesthetician/Esthetician"
+   },
+   {
+      "major": "Nail Technician/Specialist and Manicurist"
+   },
+   {
+      "major": "Permanent Cosmetics/Makeup and Tattooing"
+   },
+   {
+      "major": "Salon/Beauty Salon Management/Manager"
+   },
+   {
+      "major": "Funeral Direction/Service"
+   },
+   {
+      "major": "Funeral Service and Mortuary Science"
+   },
+   {
+      "major": "Mortuary Science and Embalming/Embalmer"
+   },
+   {
+      "major": "Philosophy and Religious Studies"
+   },
+   {
+      "major": "Applied and Professional Ethics"
+   },
+   {
+      "major": "Ethics"
+   },
+   {
+      "major": "Logic"
+   },
+   {
+      "major": "Philosophy"
+   },
+   {
+      "major": "Buddhist Studies"
+   },
+   {
+      "major": "Christian Studies"
+   },
+   {
+      "major": "Hindu Studies"
+   },
+   {
+      "major": "Islamic Studies"
+   },
+   {
+      "major": "Jewish/Judaic Studies"
+   },
+   {
+      "major": "Religion/Religious Studies"
+   },
+   {
+      "major": "Astronomy"
+   },
+   {
+      "major": "Astrophysics"
+   },
+   {
+      "major": "Planetary Astronomy and Science"
+   },
+   {
+      "major": "Atmospheric Chemistry and Climatology"
+   },
+   {
+      "major": "Atmospheric Physics and Dynamics"
+   },
+   {
+      "major": "Atmospheric Sciences and Meteorology"
+   },
+   {
+      "major": "Meteorology"
+   },
+   {
+      "major": "Analytical Chemistry"
+   },
+   {
+      "major": "Chemical Physics"
+   },
+   {
+      "major": "Chemistry"
+   },
+   {
+      "major": "Environmental Chemistry"
+   },
+   {
+      "major": "Forensic Chemistry"
+   },
+   {
+      "major": "Inorganic Chemistry"
+   },
+   {
+      "major": "Organic Chemistry"
+   },
+   {
+      "major": "Physical Chemistry"
+   },
+   {
+      "major": "Polymer Chemistry"
+   },
+   {
+      "major": "Theoretical Chemistry"
+   },
+   {
+      "major": "Geochemistry"
+   },
+   {
+      "major": "Geochemistry and Petrology"
+   },
+   {
+      "major": "Geology/Earth Science"
+   },
+   {
+      "major": "Geophysics and Seismology"
+   },
+   {
+      "major": "Hydrology and Water Resources Science"
+   },
+   {
+      "major": "Oceanography, Chemical and Physical"
+   },
+   {
+      "major": "Paleontology"
+   },
+   {
+      "major": "Materials Chemistry"
+   },
+   {
+      "major": "Materials Science"
+   },
+   {
+      "major": "Physical Sciences"
+   },
+   {
+      "major": "Acoustics"
+   },
+   {
+      "major": "Atomic/Molecular Physics"
+   },
+   {
+      "major": "Condensed Matter and Materials Physics"
+   },
+   {
+      "major": "Elementary Particle Physics"
+   },
+   {
+      "major": "Nuclear Physics"
+   },
+   {
+      "major": "Optics/Optical Sciences"
+   },
+   {
+      "major": "Physics"
+   },
+   {
+      "major": "Plasma and High-Temperature Physics"
+   },
+   {
+      "major": "Theoretical and Mathematical Physics"
+   },
+   {
+      "major": "Boilermaking/Boilermaker"
+   },
+   {
+      "major": "Shoe, Boot and Leather Repair"
+   },
+   {
+      "major": "Upholstery/Upholsterer"
+   },
+   {
+      "major": "Computer Numerically Controlled (CNC) Machinist Technology/CNC Machinist"
+   },
+   {
+      "major": "Ironworking/Ironworker"
+   },
+   {
+      "major": "Machine Shop Technology/Assistant"
+   },
+   {
+      "major": "Machine Tool Technology/Machinist"
+   },
+   {
+      "major": "Metal Fabricator"
+   },
+   {
+      "major": "Sheet Metal Technology/Sheetworking"
+   },
+   {
+      "major": "Tool and Die Technology/Technician"
+   },
+   {
+      "major": "Welding Technology/Welder"
+   },
+   {
+      "major": "Cabinetmaking and Millwork"
+   },
+   {
+      "major": "Furniture Design and Manufacturing"
+   },
+   {
+      "major": "Woodworking"
+   },
+   {
+      "major": "Psychology"
+   },
+   {
+      "major": "Cognitive Psychology and Psycholinguistics"
+   },
+   {
+      "major": "Comparative Psychology"
+   },
+   {
+      "major": "Developmental and Child Psychology"
+   },
+   {
+      "major": "Experimental Psychology"
+   },
+   {
+      "major": "Personality Psychology"
+   },
+   {
+      "major": "Physiological Psychology/Psychobiology"
+   },
+   {
+      "major": "Psychometrics and Quantitative Psychology"
+   },
+   {
+      "major": "Psychopharmacology"
+   },
+   {
+      "major": "Social Psychology"
+   },
+   {
+      "major": "Chemical Technology/Technician"
+   },
+   {
+      "major": "Anthropology"
+   },
+   {
+      "major": "Cultural Anthropology"
+   },
+   {
+      "major": "Medical Anthropology"
+   },
+   {
+      "major": "Physical and Biological Anthropology"
+   },
+   {
+      "major": "Archeology"
+   },
+   {
+      "major": "Criminology"
+   },
+   {
+      "major": "Demography and Population Studies"
+   },
+   {
+      "major": "Applied Economics"
+   },
+   {
+      "major": "Development Economics and International Development"
+   },
+   {
+      "major": "Econometrics and Quantitative Economics"
+   },
+   {
+      "major": "Economics"
+   },
+   {
+      "major": "International Economics"
+   },
+   {
+      "major": "Geographic Information Science and Cartography"
+   },
+   {
+      "major": "Geography"
+   },
+   {
+      "major": "International Relations and Affairs"
+   },
+   {
+      "major": "National Security Policy Studies"
+   },
+   {
+      "major": "American Government and Politics (United States)"
+   },
+   {
+      "major": "Canadian Government and Politics"
+   },
+   {
+      "major": "Political Economy"
+   },
+   {
+      "major": "Political Science and Government"
+   },
+   {
+      "major": "Rural Sociology"
+   },
+   {
+      "major": "Research Methodology and Quantitative Methods"
+   },
+   {
+      "major": "Social Sciences"
+   },
+   {
+      "major": "Sociology and Anthropology"
+   },
+   {
+      "major": "Sociology"
+   },
+   {
+      "major": "Urban Studies/Affairs"
+   },
+   {
+      "major": "Bible/Biblical Studies"
+   },
+   {
+      "major": "Missions/Missionary Studies and Missiology"
+   },
+   {
+      "major": "Lay Ministry"
+   },
+   {
+      "major": "Pastoral Studies/Counseling"
+   },
+   {
+      "major": "Urban Ministry"
+   },
+   {
+      "major": "Women's Ministry"
+   },
+   {
+      "major": "Youth Ministry"
+   },
+   {
+      "major": "Religious Education"
+   },
+   {
+      "major": "Religious/Sacred Music"
+   },
+   {
+      "major": "Divinity/Ministry"
+   },
+   {
+      "major": "Pre-Theology/Pre-Ministerial Studies"
+   },
+   {
+      "major": "Rabbinical Studies"
+   },
+   {
+      "major": "Talmudic Studies"
+   },
+   {
+      "major": "Theology/Theological Studies"
+   },
+   {
+      "major": "Aeronautics/Aviation/Aerospace Science and Technology"
+   },
+   {
+      "major": "Air Traffic Controller"
+   },
+   {
+      "major": "Airline Flight Attendant"
+   },
+   {
+      "major": "Airline/Commercial/Professional Pilot and Flight Crew"
+   },
+   {
+      "major": "Aviation/Airway Management and Operations"
+   },
+   {
+      "major": "Flight Instructor"
+   },
+   {
+      "major": "Construction/Heavy Equipment/Earthmoving Equipment Operation"
+   },
+   {
+      "major": "Flagging and Traffic Control"
+   },
+   {
+      "major": "Mobil Crane Operation/Operator"
+   },
+   {
+      "major": "Railroad and Railway Transportation"
+   },
+   {
+      "major": "Truck and Bus Driver/Commercial Vehicle Operator and Instructor"
+   },
+   {
+      "major": "Commercial Fishing"
+   },
+   {
+      "major": "Diver, Professional and Instructor"
+   },
+   {
+      "major": "Marine Science/Merchant Marine Officer"
+   },
+   {
+      "major": "Arts, Entertainment,and Media Management"
+   },
+   {
+      "major": "Fine and Studio Arts Management"
+   },
+   {
+      "major": "Music Management"
+   },
+   {
+      "major": "Theatre/Theatre Arts Management"
+   },
+   {
+      "major": "Crafts/Craft Design, Folk Art and Artisanry"
+   },
+   {
+      "major": "Ballet"
+   },
+   {
+      "major": "Dance"
+   },
+   {
+      "major": "Commercial and Advertising Art"
+   },
+   {
+      "major": "Commercial Photography"
+   },
+   {
+      "major": "Design and Visual Communications"
+   },
+   {
+      "major": "Fashion/Apparel Design"
+   },
+   {
+      "major": "Game and Interactive Media Design"
+   },
+   {
+      "major": "Graphic Design"
+   },
+   {
+      "major": "Illustration"
+   },
+   {
+      "major": "Industrial and Product Design"
+   },
+   {
+      "major": "Interior Design"
+   },
+   {
+      "major": "Acting"
+   },
+   {
+      "major": "Costume Design"
+   },
+   {
+      "major": "Directing and Theatrical Production"
+   },
+   {
+      "major": "Drama and Dramatics/Theatre Arts"
+   },
+   {
+      "major": "Musical Theatre"
+   },
+   {
+      "major": "Playwriting and Screenwriting"
+   },
+   {
+      "major": "Technical Theatre/Theatre Design and Technology"
+   },
+   {
+      "major": "Theatre Literature, History and Criticism"
+   },
+   {
+      "major": "Cinematography and Film/Video Production"
+   },
+   {
+      "major": "Documentary Production"
+   },
+   {
+      "major": "Film/Cinema/Video Studies"
+   },
+   {
+      "major": "Photography"
+   },
+   {
+      "major": "Art History, Criticism and Conservation"
+   },
+   {
+      "major": "Art/Art Studies"
+   },
+   {
+      "major": "Ceramic Arts and Ceramics"
+   },
+   {
+      "major": "Drawing"
+   },
+   {
+      "major": "Fiber, Textile and Weaving Arts"
+   },
+   {
+      "major": "Fine/Studio Arts"
+   },
+   {
+      "major": "Intermedia/Multimedia"
+   },
+   {
+      "major": "Metal and Jewelry Arts"
+   },
+   {
+      "major": "Painting"
+   },
+   {
+      "major": "Printmaking"
+   },
+   {
+      "major": "Sculpture"
+   },
+   {
+      "major": "Brass Instruments"
+   },
+   {
+      "major": "Conducting"
+   },
+   {
+      "major": "Jazz/Jazz Studies"
+   },
+   {
+      "major": "Keyboard Instruments"
+   },
+   {
+      "major": "Music"
+   },
+   {
+      "major": "Music History, Literature, and Theory"
+   },
+   {
+      "major": "Music Pedagogy"
+   },
+   {
+      "major": "Music Performance"
+   },
+   {
+      "major": "Music Technology"
+   },
+   {
+      "major": "Music Theory and Composition"
+   },
+   {
+      "major": "Musicology and Ethnomusicology"
+   },
+   {
+      "major": "Percussion Instruments"
+   },
+   {
+      "major": "Stringed Instruments"
+   },
+   {
+      "major": "Voice and Opera"
+   },
+   {
+      "major": "Woodwind Instruments"
+   },
+   {
+      "major": "Digital Arts"
+   },
+   {
+      "major": "Visual and Performing Arts"
+   }
+]

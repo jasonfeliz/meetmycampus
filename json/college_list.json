@@ -1,0 +1,8240 @@
+[
+  {
+    "college_name": "Abilene Christian University",
+    "city": "Abilene",
+    "state": "TX",
+    "email_url": "acu.edu"
+  },
+  {
+    "college_name": "Abraham Baldwin Agricultural College",
+    "city": "Tifton",
+    "state": "GA",
+    "email_url": "abac.edu"
+  },
+  {
+    "college_name": "Adelphi University",
+    "city": "Garden City",
+    "state": "NY",
+    "email_url": "adelphi.edu"
+  },
+  {
+    "college_name": "Adler University",
+    "city": "Chicago",
+    "state": "IL",
+    "email_url": "adler.edu"
+  },
+  {
+    "college_name": "Alabama A & M University",
+    "city": "Normal",
+    "state": "AL",
+    "email_url": "aamu.edu"
+  },
+  {
+    "college_name": "Alabama State University",
+    "city": "Montgomery",
+    "state": "AL",
+    "email_url": "alasu.edu"
+  },
+  {
+    "college_name": "Alaska Pacific University",
+    "city": "Anchorage",
+    "state": "AK",
+    "email_url": "alaskapacific.edu"
+  },
+  {
+    "college_name": "Albertus Magnus College",
+    "city": "New Haven",
+    "state": "CT",
+    "email_url": "albertus.edu"
+  },
+  {
+    "college_name": "Albion College",
+    "city": "Albion",
+    "state": "MI",
+    "email_url": "albion.edu"
+  },
+  {
+    "college_name": "Albright College",
+    "city": "Reading",
+    "state": "PA",
+    "email_url": "albright.edu"
+  },
+  {
+    "college_name": "Alcorn State University",
+    "city": "Alcorn State",
+    "state": "MS",
+    "email_url": "alcorn.edu"
+  },
+  {
+    "college_name": "Alfred University",
+    "city": "Alfred",
+    "state": "NY",
+    "email_url": "alfred.edu"
+  },
+  {
+    "college_name": "Allan Hancock College",
+    "city": "Santa Maria",
+    "state": "CA",
+    "email_url": "hancockcollege.edu"
+  },
+  {
+    "college_name": "Allegheny College",
+    "city": "Meadville",
+    "state": "PA",
+    "email_url": "allegheny.edu"
+  },
+  {
+    "college_name": "Allen University",
+    "city": "Columbia",
+    "state": "SC",
+    "email_url": "allenuniversity.edu"
+  },
+  {
+    "college_name": "Alvernia University",
+    "city": "Reading",
+    "state": "PA",
+    "email_url": "alvernia.edu"
+  },
+  {
+    "college_name": "Amberton University",
+    "city": "Garland",
+    "state": "TX",
+    "email_url": "amberton.edu"
+  },
+  {
+    "college_name": "American Baptist College",
+    "city": "Nashville",
+    "state": "TN",
+    "email_url": "abcnash.edu"
+  },
+  {
+    "college_name": "American Indian College",
+    "city": "Phoenix",
+    "state": "AZ",
+    "email_url": "aicag.edu"
+  },
+  {
+    "college_name": "American Jewish University",
+    "city": "Los Angeles",
+    "state": "CA",
+    "email_url": "aju.edu"
+  },
+  {
+    "college_name": "American National University - Salem",
+    "city": "Salem",
+    "state": "VA",
+    "email_url": "ncbt.edu"
+  },
+  {
+    "college_name": "American Sentinel University",
+    "city": "Aurora",
+    "state": "CO",
+    "email_url": "americansentinel.edu"
+  },
+  {
+    "college_name": "American University",
+    "city": "Washington",
+    "state": "DC",
+    "email_url": "american.edu"
+  },
+  {
+    "college_name": "Amherst College",
+    "city": "Amherst",
+    "state": "MA",
+    "email_url": "amherst.edu"
+  },
+  {
+    "college_name": "Anaheim University",
+    "city": "Anaheim",
+    "state": "CA",
+    "email_url": "anaheim.edu"
+  },
+  {
+    "college_name": "Angelo State University",
+    "city": "San Angelo",
+    "state": "TX",
+    "email_url": "angelo.edu"
+  },
+  {
+    "college_name": "Appalachian Bible College",
+    "city": "Mt. Hope",
+    "state": "WV",
+    "email_url": "abc.edu"
+  },
+  {
+    "college_name": "Arcadia University",
+    "city": "Glenside",
+    "state": "PA",
+    "email_url": "arcadia.edu"
+  },
+  {
+    "college_name": "Arizona Christian University",
+    "city": "Phoenix",
+    "state": "AZ",
+    "email_url": "swcaz.edu"
+  },
+  {
+    "college_name": "Arizona College",
+    "city": "Glendale",
+    "state": "AZ",
+    "email_url": "arizonacollege.edu"
+  },
+  {
+    "college_name": "Arizona State University",
+    "city": "Tempe",
+    "state": "AZ",
+    "email_url": "asu.edu"
+  },
+  {
+    "college_name": "Arkansas Northeastern College",
+    "city": "Blytheville",
+    "state": "AR",
+    "email_url": "anc.edu"
+  },
+  {
+    "college_name": "Arkansas State University",
+    "city": "State University",
+    "state": "AR",
+    "email_url": "astate.edu"
+  },
+  {
+    "college_name": "Arkansas State University - Beebe",
+    "city": "Beebe",
+    "state": "AR",
+    "email_url": "asub.edu"
+  },
+  {
+    "college_name": "Arkansas State University - Newport",
+    "city": "Newport",
+    "state": "AR",
+    "email_url": "asun.edu"
+  },
+  {
+    "college_name": "Arkansas State University - Mountain Home",
+    "city": "Mountain Home",
+    "state": "AR",
+    "email_url": "asumh.edu"
+  },
+  {
+    "college_name": "Arkansas Tech University",
+    "city": "Russellville",
+    "state": "AR",
+    "email_url": "atu.edu"
+  },
+  {
+    "college_name": "Arlington Baptist College",
+    "city": "Arlington",
+    "state": "TX",
+    "email_url": "arlingtonbaptistcollege.edu"
+  },
+  {
+    "college_name": "Armstrong State University",
+    "city": "Savannah",
+    "state": "GA",
+    "email_url": "armstrong.edu"
+  },
+  {
+    "college_name": "ASA College",
+    "city": "Brooklyn",
+    "state": "NY",
+    "email_url": "asa.edu"
+  },
+  {
+    "college_name": "Ashland University",
+    "city": "Ashland",
+    "state": "OH",
+    "email_url": "ashland.edu"
+  },
+  {
+    "college_name": "Aspen University",
+    "city": "Denver",
+    "state": "CO",
+    "email_url": "aspen.edu"
+  },
+  {
+    "college_name": "Assumption College",
+    "city": "Worcester",
+    "state": "MA",
+    "email_url": "assumption.edu"
+  },
+  {
+    "college_name": "Athenaeum of Ohio",
+    "city": "Cincinnati",
+    "state": "OH",
+    "email_url": "athenaeum.edu"
+  },
+  {
+    "college_name": "Athens State University",
+    "city": "Athens",
+    "state": "AL",
+    "email_url": "athens.edu"
+  },
+  {
+    "college_name": "Atlanta College of Art",
+    "city": "Atlanta",
+    "state": "GA",
+    "email_url": "aca.edu"
+  },
+  {
+    "college_name": "Atlanta Metropolitan State College",
+    "city": "Atlanta",
+    "state": "GA",
+    "email_url": "atlm.peachnet.edu"
+  },
+  {
+    "college_name": "Atlantic Union College",
+    "city": "South Lancaster",
+    "state": "MA",
+    "email_url": "auc.edu"
+  },
+  {
+    "college_name": "Atlantic University",
+    "city": "Virginia Beach",
+    "state": "VA",
+    "email_url": "atlanticuniv.edu"
+  },
+  {
+    "college_name": "Auburn University",
+    "city": "Auburn University",
+    "state": "AL",
+    "email_url": "auburn.edu"
+  },
+  {
+    "college_name": "Auburn University-Montgomery",
+    "city": "Montgomery",
+    "state": "AL",
+    "email_url": "aum.edu"
+  },
+  {
+    "college_name": "Augsburg College",
+    "city": "Minneapolis",
+    "state": "MN",
+    "email_url": "augsburg.edu"
+  },
+  {
+    "college_name": "Augusta State University",
+    "city": "Augusta",
+    "state": "GA",
+    "email_url": "aug.edu"
+  },
+  {
+    "college_name": "Augustana College",
+    "city": "Rock Island",
+    "state": "IL",
+    "email_url": "augustana.edu"
+  },
+  {
+    "college_name": "Augustana University",
+    "city": "Sioux Falls",
+    "state": "SD",
+    "email_url": "augie.edu"
+  },
+  {
+    "college_name": "Aurora University",
+    "city": "Aurora",
+    "state": "IL",
+    "email_url": "aurora.edu"
+  },
+  {
+    "college_name": "Austin Peay State University",
+    "city": "Clarksville",
+    "state": "TN",
+    "email_url": "apsu.edu"
+  },
+  {
+    "college_name": "Averett University",
+    "city": "Danville",
+    "state": "VA",
+    "email_url": "averett.edu"
+  },
+  {
+    "college_name": "Avila University",
+    "city": "Kansas City",
+    "state": "MO",
+    "email_url": "avila.edu"
+  },
+  {
+    "college_name": "Azusa Pacific University",
+    "city": "Azusa",
+    "state": "CA",
+    "email_url": "apu.edu"
+  },
+  {
+    "college_name": "Babson College",
+    "city": "Wellesley",
+    "state": "MA",
+    "email_url": "babson.edu"
+  },
+  {
+    "college_name": "Bacone College",
+    "city": "Muskogee",
+    "state": "OK",
+    "email_url": "bacone.edu"
+  },
+  {
+    "college_name": "Bainbridge State College",
+    "city": "Bainbridge",
+    "state": "GA",
+    "email_url": "bainbridge.edu"
+  },
+  {
+    "college_name": "Baker College",
+    "city": "Flint",
+    "state": "MI",
+    "email_url": "baker.edu"
+  },
+  {
+    "college_name": "Baker University",
+    "city": "Baldwin City",
+    "state": "KS",
+    "email_url": "bakeru.edu"
+  },
+  {
+    "college_name": "Bakersfield College",
+    "city": "Bakersfield",
+    "state": "CA",
+    "email_url": "bakersfieldcollege.edu"
+  },
+  {
+    "college_name": "Ball State University",
+    "city": "Muncie",
+    "state": "IN",
+    "email_url": "bsu.edu"
+  },
+  {
+    "college_name": "Baltimore Hebrew University Inc",
+    "city": "Baltimore",
+    "state": "MD",
+    "email_url": "bhu.edu"
+  },
+  {
+    "college_name": "Baltimore International College",
+    "city": "Baltimore",
+    "state": "MD",
+    "email_url": "bic.edu"
+  },
+  {
+    "college_name": "Banner College-Arlington",
+    "city": "Arlington",
+    "state": "VA",
+    "email_url": "chubbinstitute.edu"
+  },
+  {
+    "college_name": "Baptist University of the Americas",
+    "city": "San Antonio",
+    "state": "TX",
+    "email_url": "bua.edu"
+  },
+  {
+    "college_name": "Barclay College",
+    "city": "Haviland",
+    "state": "KS",
+    "email_url": "barclaycollege.edu"
+  },
+  {
+    "college_name": "Bard College",
+    "city": "Annandale-On-Hudson",
+    "state": "NY",
+    "email_url": "bard.edu"
+  },
+  {
+    "college_name": "Barnard College",
+    "city": "New York",
+    "state": "NY",
+    "email_url": "barnard.edu"
+  },
+  {
+    "college_name": "Barry University",
+    "city": "Miami Shores",
+    "state": "FL",
+    "email_url": "barry.edu"
+  },
+  {
+    "college_name": "Barton College",
+    "city": "Wilson",
+    "state": "NC",
+    "email_url": "barton.edu"
+  },
+  {
+    "college_name": "Baruch College",
+    "city": "New York",
+    "state": "NY",
+    "email_url": "baruch.cuny.edu"
+  },
+  {
+    "college_name": "Bastyr University",
+    "city": "Kenmore",
+    "state": "WA",
+    "email_url": "bastyr.edu"
+  },
+  {
+    "college_name": "Bates College",
+    "city": "Lewiston",
+    "state": "ME",
+    "email_url": "bates.edu"
+  },
+  {
+    "college_name": "Baton Rouge College",
+    "city": "Baton Rouge",
+    "state": "LA",
+    "email_url": "brc.edu"
+  },
+  {
+    "college_name": "Bay Path University",
+    "city": "Longmeadow",
+    "state": "MA",
+    "email_url": "baypath.edu"
+  },
+  {
+    "college_name": "Bay State College",
+    "city": "Boston",
+    "state": "MA",
+    "email_url": "baystate.edu"
+  },
+  {
+    "college_name": "Baylor University",
+    "city": "Waco",
+    "state": "TX",
+    "email_url": "baylor.edu"
+  },
+  {
+    "college_name": "Beacon College",
+    "city": "Leesburg",
+    "state": "FL",
+    "email_url": "beaconcollege.edu"
+  },
+  {
+    "college_name": "Beacon University",
+    "city": "Columbus",
+    "state": "GA",
+    "email_url": "beacon.edu"
+  },
+  {
+    "college_name": "Beal College",
+    "city": "Bangor",
+    "state": "ME",
+    "email_url": "bealcollege.edu"
+  },
+  {
+    "college_name": "Becker College",
+    "city": "Worcester",
+    "state": "MA",
+    "email_url": "beckercollege.edu"
+  },
+  {
+    "college_name": "Belhaven University",
+    "city": "Jackson",
+    "state": "MS",
+    "email_url": "belhaven.edu"
+  },
+  {
+    "college_name": "Bellevue University",
+    "city": "Bellevue",
+    "state": "NE",
+    "email_url": "bellevue.edu"
+  },
+  {
+    "college_name": "Belmont Abbey College",
+    "city": "Belmont",
+    "state": "NC",
+    "email_url": "belmontabbeycollege.edu"
+  },
+  {
+    "college_name": "Belmont University",
+    "city": "Nashville",
+    "state": "TN",
+    "email_url": "belmont.edu"
+  },
+  {
+    "college_name": "Benedict College",
+    "city": "Columbia",
+    "state": "SC",
+    "email_url": "benedict.edu"
+  },
+  {
+    "college_name": "Benedictine College",
+    "city": "Atchison",
+    "state": "KS",
+    "email_url": "benedictine.edu"
+  },
+  {
+    "college_name": "Benedictine University",
+    "city": "Lisle",
+    "state": "IL",
+    "email_url": "ben.edu"
+  },
+  {
+    "college_name": "Benjamin Franklin Institute of Technology",
+    "city": "Boston",
+    "state": "MA",
+    "email_url": "bfit.edu"
+  },
+  {
+    "college_name": "Bennett College for Women",
+    "city": "Greensboro",
+    "state": "NC",
+    "email_url": "bennett.edu"
+  },
+  {
+    "college_name": "Bennington College",
+    "city": "Bennington",
+    "state": "VT",
+    "email_url": "bennington.edu"
+  },
+  {
+    "college_name": "Bentley University",
+    "city": "Waltham",
+    "state": "MA",
+    "email_url": "bentley.edu"
+  },
+  {
+    "college_name": "Berea College",
+    "city": "Berea",
+    "state": "KY",
+    "email_url": "berea.edu"
+  },
+  {
+    "college_name": "Berkeley College",
+    "city": "West Paterson",
+    "state": "NJ",
+    "email_url": "berkeleycollege.edu"
+  },
+  {
+    "college_name": "Berklee College of Music",
+    "city": "Boston",
+    "state": "MA",
+    "email_url": "berklee.edu"
+  },
+  {
+    "college_name": "Berry College",
+    "city": "Mount Berry",
+    "state": "GA",
+    "email_url": "berry.edu"
+  },
+  {
+    "college_name": "Bethany College",
+    "city": "Lindsborg",
+    "state": "KS",
+    "email_url": "bethanylb.edu"
+  },
+  {
+    "college_name": "Bethany Lutheran College",
+    "city": "Mankato",
+    "state": "MN",
+    "email_url": "blc.edu"
+  },
+  {
+    "college_name": "Bethany University",
+    "city": "Scotts Valley",
+    "state": "CA",
+    "email_url": "bethany.edu"
+  },
+  {
+    "college_name": "Bethel College",
+    "city": "Mishawaka",
+    "state": "IN",
+    "email_url": "bethelcollege.edu"
+  },
+  {
+    "college_name": "Bethel University",
+    "city": "St. Paul",
+    "state": "MN",
+    "email_url": "bethel.edu"
+  },
+  {
+    "college_name": "Bethesda University",
+    "city": "Anaheim",
+    "state": "CA",
+    "email_url": "buc.edu"
+  },
+  {
+    "college_name": "Bethune - Cookman University",
+    "city": "Daytona Beach",
+    "state": "FL",
+    "email_url": "bethune.cookman.edu"
+  },
+  {
+    "college_name": "Biola University",
+    "city": "La Mirada",
+    "state": "CA",
+    "email_url": "biola.edu"
+  },
+  {
+    "college_name": "Birmingham Southern College",
+    "city": "Birmingham",
+    "state": "AL",
+    "email_url": "bsc.edu"
+  },
+  {
+    "college_name": "Bismarck State College",
+    "city": "Bismarck",
+    "state": "ND",
+    "email_url": "bismarckstate.edu"
+  },
+  {
+    "college_name": "Bloomfield College",
+    "city": "Bloomfield",
+    "state": "NJ",
+    "email_url": "bloomfield.edu"
+  },
+  {
+    "college_name": "Bloomsburg University of Pennsylvania",
+    "city": "Bloomsburg",
+    "state": "PA",
+    "email_url": "bloomu.edu"
+  },
+  {
+    "college_name": "Blue Cliff College - Gulfport",
+    "city": "Gulfport",
+    "state": "MS",
+    "email_url": "bluecliffcollege.edu"
+  },
+  {
+    "college_name": "Blue Mountain College",
+    "city": "Blue Mountain",
+    "state": "MS",
+    "email_url": "bmc.edu"
+  },
+  {
+    "college_name": "Bluefield College",
+    "city": "Bluefield",
+    "state": "VA",
+    "email_url": "bluefield.edu"
+  },
+  {
+    "college_name": "Bluefield State College",
+    "city": "Bluefield",
+    "state": "WV",
+    "email_url": "bluefieldstate.edu"
+  },
+  {
+    "college_name": "Bluffton University",
+    "city": "Bluffton",
+    "state": "OH",
+    "email_url": "bluffton.edu"
+  },
+  {
+    "college_name": "Boise Bible College",
+    "city": "Boise",
+    "state": "ID",
+    "email_url": "boisebible.edu"
+  },
+  {
+    "college_name": "Boise State University",
+    "city": "Boise",
+    "state": "ID",
+    "email_url": "boisestate.edu"
+  },
+  {
+    "college_name": "Boston Baptist College",
+    "city": "Boston",
+    "state": "MA",
+    "email_url": "boston.edu"
+  },
+  {
+    "college_name": "Boston College",
+    "city": "Chestnut Hill",
+    "state": "MA",
+    "email_url": "bc.edu"
+  },
+  {
+    "college_name": "Boston University",
+    "city": "Boston",
+    "state": "MA",
+    "email_url": "bu.edu"
+  },
+  {
+    "college_name": "Bowdoin College",
+    "city": "Brunswick",
+    "state": "ME",
+    "email_url": "bowdoin.edu"
+  },
+  {
+    "college_name": "Bowie State University",
+    "city": "Bowie",
+    "state": "MD",
+    "email_url": "bowiestate.edu"
+  },
+  {
+    "college_name": "Bowling Green State University",
+    "city": "Bowling Green",
+    "state": "OH",
+    "email_url": "bgsu.edu"
+  },
+  {
+    "college_name": "Bradley University",
+    "city": "Peoria",
+    "state": "IL",
+    "email_url": "bradley.edu"
+  },
+  {
+    "college_name": "Brandeis University",
+    "city": "Waltham",
+    "state": "MA",
+    "email_url": "brandeis.edu"
+  },
+  {
+    "college_name": "Briarcliffe College",
+    "city": "Bethpage",
+    "state": "NY",
+    "email_url": "briarcliffe.edu"
+  },
+  {
+    "college_name": "Bridgewater College",
+    "city": "Bridgewater",
+    "state": "VA",
+    "email_url": "bridgewater.edu"
+  },
+  {
+    "college_name": "Bridgewater State University",
+    "city": "Bridgewater",
+    "state": "MA",
+    "email_url": "bridgew.edu"
+  },
+  {
+    "college_name": "Brigham Young University",
+    "city": "Provo",
+    "state": "UT",
+    "email_url": "byu.edu"
+  },
+  {
+    "college_name": "Brigham Young University - Hawaii",
+    "city": "Laie",
+    "state": "HI",
+    "email_url": "byuh.edu"
+  },
+  {
+    "college_name": "Brooklyn College",
+    "city": "Brooklyn",
+    "state": "NY",
+    "email_url": "brooklyn.cuny.edu"
+  },
+  {
+    "college_name": "Brooks College",
+    "city": "Long Beach",
+    "state": "CA",
+    "email_url": "brookscollege.edu"
+  },
+  {
+    "college_name": "Brown University",
+    "city": "Providence",
+    "state": "RI",
+    "email_url": "brown.edu"
+  },
+  {
+    "college_name": "Bryan College",
+    "city": "Dayton",
+    "state": "TN",
+    "email_url": "bryan.edu"
+  },
+  {
+    "college_name": "Bryant and Stratton College",
+    "city": "Getzville",
+    "state": "NY",
+    "email_url": "bryantstratton.edu"
+  },
+  {
+    "college_name": "Bryant University",
+    "city": "Smithfield",
+    "state": "RI",
+    "email_url": "bryant.edu"
+  },
+  {
+    "college_name": "Bucknell University",
+    "city": "Lewisburg",
+    "state": "PA",
+    "email_url": "bucknell.edu"
+  },
+  {
+    "college_name": "Buena Vista University",
+    "city": "Storm Lake",
+    "state": "IA",
+    "email_url": "bvu.edu"
+  },
+  {
+    "college_name": "Butler University",
+    "city": "Indianapolis",
+    "state": "IN",
+    "email_url": "butler.edu"
+  },
+  {
+    "college_name": "Caldwell University",
+    "city": "Caldwell",
+    "state": "NJ",
+    "email_url": "caldwell.edu"
+  },
+  {
+    "college_name": "California Baptist University",
+    "city": "Riverside",
+    "state": "CA",
+    "email_url": "calbaptist.edu"
+  },
+  {
+    "college_name": "California Christian College",
+    "city": "Fresno",
+    "state": "CA",
+    "email_url": "calchristiancollege.edu"
+  },
+  {
+    "college_name": "California Coast University",
+    "city": "Santa Ana",
+    "state": "CA",
+    "email_url": "calcoast.edu"
+  },
+  {
+    "college_name": "California Institute of Technology",
+    "city": "Pasadena",
+    "state": "CA",
+    "email_url": "caltech.edu"
+  },
+  {
+    "college_name": "California Intercontinental University",
+    "city": "Irvine",
+    "state": "CA",
+    "email_url": "caluniversity.edu"
+  },
+  {
+    "college_name": "California Lutheran University",
+    "city": "Thousand Oaks",
+    "state": "CA",
+    "email_url": "callutheran.edu"
+  },
+  {
+    "college_name": "California Northstate University",
+    "city": "Elk Grove",
+    "state": "CA",
+    "email_url": "cnsu.edu"
+  },
+  {
+    "college_name": "California Polytechnic State University",
+    "city": "San Luis Obispo",
+    "state": "CA",
+    "email_url": "calpoly.edu"
+  },
+  {
+    "college_name": "California State Polytechnic University - Pomona",
+    "city": "Pomona",
+    "state": "CA",
+    "email_url": "cpp.edu"
+  },
+  {
+    "college_name": "Cal State  - Bakersfield",
+    "city": "Bakersfield",
+    "state": "CA",
+    "email_url": "csub.edu"
+  },
+  {
+    "college_name": "Cal State  - Channel Islands",
+    "city": "Camarillo",
+    "state": "CA",
+    "email_url": "csuci.edu"
+  },
+  {
+    "college_name": "Cal State  - Chico",
+    "city": "Chico",
+    "state": "CA",
+    "email_url": "csuchico.edu"
+  },
+  {
+    "college_name": "Cal State  - Dominguez Hills",
+    "city": "Carson",
+    "state": "CA",
+    "email_url": "csudh.edu"
+  },
+  {
+    "college_name": "Cal State  - East Bay",
+    "city": "Hayward",
+    "state": "CA",
+    "email_url": "csueastbay.edu"
+  },
+  {
+    "college_name": "Cala State  - Fresno",
+    "city": "Fresno",
+    "state": "CA",
+    "email_url": "fresnostate.edu"
+  },
+  {
+    "college_name": "Cal State  - Fullerton",
+    "city": "Fullerton",
+    "state": "CA",
+    "email_url": "fullerton.edu"
+  },
+  {
+    "college_name": "Cal State  - Long Beach",
+    "city": "Long Beach",
+    "state": "CA",
+    "email_url": "csulb.edu"
+  },
+  {
+    "college_name": "Cal State  - Los Angeles",
+    "city": "Los Angeles",
+    "state": "CA",
+    "email_url": "calstatela.edu"
+  },
+  {
+    "college_name": "Cal State  - Monterey Bay",
+    "city": "Seaside",
+    "state": "CA",
+    "email_url": "csumb.edu"
+  },
+  {
+    "college_name": "Cal State  - Northridge",
+    "city": "Northridge",
+    "state": "CA",
+    "email_url": "csun.edu"
+  },
+  {
+    "college_name": "Cal State  - Sacramento",
+    "city": "Sacramento",
+    "state": "CA",
+    "email_url": "csus.edu"
+  },
+  {
+    "college_name": "Cal State  - San Bernardino",
+    "city": "San Bernardino",
+    "state": "CA",
+    "email_url": "csusb.edu"
+  },
+  {
+    "college_name": "Cal State  - San Marcos",
+    "city": "San Marcos",
+    "state": "CA",
+    "email_url": "csusm.edu"
+  },
+  {
+    "college_name": "Cal State  - Stanislaus",
+    "city": "Turlock",
+    "state": "CA",
+    "email_url": "csustan.edu"
+  },
+  {
+    "college_name": "Cal University of Pennsylvania",
+    "city": "California",
+    "state": "PA",
+    "email_url": "calu.edu"
+  },
+  {
+    "college_name": "Calvary University",
+    "city": "Kansas City",
+    "state": "MO",
+    "email_url": "calvary.edu"
+  },
+  {
+    "college_name": "Cameron University",
+    "city": "Lawton",
+    "state": "OK",
+    "email_url": "cameron.edu"
+  },
+  {
+    "college_name": "Campbell University",
+    "city": "Buies Creek",
+    "state": "NC",
+    "email_url": "campbell.edu"
+  },
+  {
+    "college_name": "Canada College",
+    "city": "Redwood City",
+    "state": "CA",
+    "email_url": "canadacollege.edu"
+  },
+  {
+    "college_name": "Canisius College",
+    "city": "Buffalo",
+    "state": "NY",
+    "email_url": "canisius.edu"
+  },
+  {
+    "college_name": "Capella University",
+    "city": "Minneapolis",
+    "state": "MN",
+    "email_url": "capella.edu"
+  },
+  {
+    "college_name": "Capital University",
+    "city": "Columbus",
+    "state": "OH",
+    "email_url": "capital.edu"
+  },
+  {
+    "college_name": "Cardean University",
+    "city": "Chicago",
+    "state": "IL",
+    "email_url": "cardean.edu"
+  },
+  {
+    "college_name": "Carleton College",
+    "city": "Northfield",
+    "state": "MN",
+    "email_url": "carleton.edu"
+  },
+  {
+    "college_name": "Carlow University",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "email_url": "carlow.edu"
+  },
+  {
+    "college_name": "Carnegie Mellon University",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "email_url": "cmu.edu"
+  },
+  {
+    "college_name": "Carolina Christian College",
+    "city": "Winston Salem",
+    "state": "NC",
+    "email_url": "carolina.edu"
+  },
+  {
+    "college_name": "Carrington College",
+    "city": "Boise",
+    "state": "ID",
+    "email_url": "carrington.edu"
+  },
+  {
+    "college_name": "Carroll College",
+    "city": "Helena",
+    "state": "MT",
+    "email_url": "carroll.edu"
+  },
+  {
+    "college_name": "Carroll University",
+    "city": "Waukesha",
+    "state": "WI",
+    "email_url": "carrollu.edu"
+  },
+  {
+    "college_name": "Carson-Newman University",
+    "city": "Jefferson City",
+    "state": "TN",
+    "email_url": "cn.edu"
+  },
+  {
+    "college_name": "Carthage College",
+    "city": "Kenosha",
+    "state": "WI",
+    "email_url": "carthage.edu"
+  },
+  {
+    "college_name": "Carver College",
+    "city": "Atlanta",
+    "state": "GA",
+    "email_url": "carver.edu"
+  },
+  {
+    "college_name": "Case Western Reserve University",
+    "city": "Cleveland",
+    "state": "OH",
+    "email_url": "case.edu"
+  },
+  {
+    "college_name": "Casper College",
+    "city": "Casper",
+    "state": "WY",
+    "email_url": "caspercollege.edu"
+  },
+  {
+    "college_name": "Castleton State College",
+    "city": "Castleton",
+    "state": "VT",
+    "email_url": "castleton.edu"
+  },
+  {
+    "college_name": "Cedarville University",
+    "city": "Cedarville",
+    "state": "OH",
+    "email_url": "cedarville.edu"
+  },
+  {
+    "college_name": "Centenary College of Louisiana",
+    "city": "Shreveport",
+    "state": "LA",
+    "email_url": "centenary.edu"
+  },
+  {
+    "college_name": "Centenary University",
+    "city": "Hackettstown",
+    "state": "NJ",
+    "email_url": "centenarycollege.edu"
+  },
+  {
+    "college_name": "Central Baptist College",
+    "city": "Conway",
+    "state": "AR",
+    "email_url": "cbc.edu"
+  },
+  {
+    "college_name": "Central Bible College",
+    "city": "Springfield",
+    "state": "MO",
+    "email_url": "cbcag.edu"
+  },
+  {
+    "college_name": "Central Christian College of Kansas",
+    "city": "McPherson",
+    "state": "KS",
+    "email_url": "centralchristian.edu"
+  },
+  {
+    "college_name": "Central Methodist University",
+    "city": "Fayette",
+    "state": "MO",
+    "email_url": "centralmethodist.edu"
+  },
+  {
+    "college_name": "Central Michigan University",
+    "city": "Mount Pleasant",
+    "state": "MI",
+    "email_url": "cmich.edu"
+  },
+  {
+    "college_name": "Central State University",
+    "city": "Wilberforce",
+    "state": "OH",
+    "email_url": "centralstate.edu"
+  },
+  {
+    "college_name": "Central Washington University",
+    "city": "Ellensburg",
+    "state": "WA",
+    "email_url": "cwu.edu"
+  },
+  {
+    "college_name": "Cerritos College",
+    "city": "Norwalk",
+    "state": "CA",
+    "email_url": "cerritos.edu"
+  },
+  {
+    "college_name": "Chadron State College",
+    "city": "Chadron",
+    "state": "NE",
+    "email_url": "csc.edu"
+  },
+  {
+    "college_name": "Chaffey College",
+    "city": "Rancho Cucamonga",
+    "state": "CA",
+    "email_url": "chaffey.edu"
+  },
+  {
+    "college_name": "Chaminade University of Honolulu",
+    "city": "Honolulu",
+    "state": "HI",
+    "email_url": "chaminade.edu"
+  },
+  {
+    "college_name": "Champlain College",
+    "city": "Burlington",
+    "state": "VT",
+    "email_url": "champlain.edu"
+  },
+  {
+    "college_name": "Chapman University",
+    "city": "Orange",
+    "state": "CA",
+    "email_url": "chapman.edu"
+  },
+  {
+    "college_name": "Charleston Southern University",
+    "city": "Charleston",
+    "state": "SC",
+    "email_url": "csuniv.edu"
+  },
+  {
+    "college_name": "Charter Oak State College",
+    "city": "New Britain",
+    "state": "CT",
+    "email_url": "cosc.edu"
+  },
+  {
+    "college_name": "Chase College",
+    "city": "Los Angeles",
+    "state": "CA",
+    "email_url": "chase.edu"
+  },
+  {
+    "college_name": "Chatfield College",
+    "city": "St. Martin",
+    "state": "OH",
+    "email_url": "chatfield.edu"
+  },
+  {
+    "college_name": "Chesapeake College",
+    "city": "Wye Mills",
+    "state": "MD",
+    "email_url": "chesapeake.edu"
+  },
+  {
+    "college_name": "Chicago State University",
+    "city": "Chicago",
+    "state": "IL",
+    "email_url": "csu.edu"
+  },
+  {
+    "college_name": "Christian Brothers University",
+    "city": "Memphis",
+    "state": "TN",
+    "email_url": "cbu.edu"
+  },
+  {
+    "college_name": "Claremont Lincoln University",
+    "city": "Claremont",
+    "state": "CA",
+    "email_url": "claremontlincoln.edu"
+  },
+  {
+    "college_name": "Claremont McKenna College",
+    "city": "Claremont",
+    "state": "CA",
+    "email_url": "claremontmckenna.edu"
+  },
+  {
+    "college_name": "Clarendon College",
+    "city": "Clarendon",
+    "state": "TX",
+    "email_url": "clarendoncollege.edu"
+  },
+  {
+    "college_name": "Clarion University of Pennsylvania",
+    "city": "Clarion",
+    "state": "PA",
+    "email_url": "clarion.edu"
+  },
+  {
+    "college_name": "Clark Atlanta University",
+    "city": "Atlanta",
+    "state": "GA",
+    "email_url": "cau.edu"
+  },
+  {
+    "college_name": "Clark University",
+    "city": "Worcester",
+    "state": "MA",
+    "email_url": "clarku.edu"
+  },
+  {
+    "college_name": "Clarke University",
+    "city": "Dubuque",
+    "state": "IA",
+    "email_url": "clarke.edu"
+  },
+  {
+    "college_name": "Clarks Summit University",
+    "city": "Clarks Summit",
+    "state": "PA",
+    "email_url": "clarkssummitu.edu"
+  },
+  {
+    "college_name": "Clarkson University",
+    "city": "Potsdam",
+    "state": "NY",
+    "email_url": "clarkson.edu"
+  },
+  {
+    "college_name": "Clayton  State University",
+    "city": "Morrow",
+    "state": "GA",
+    "email_url": "clayton.edu"
+  },
+  {
+    "college_name": "Clearwater Christian College",
+    "city": "Clearwater",
+    "state": "FL",
+    "email_url": "clearwater.edu"
+  },
+  {
+    "college_name": "Clemson University",
+    "city": "Clemson",
+    "state": "SC",
+    "email_url": "clemson.edu"
+  },
+  {
+    "college_name": "Cleveland State University",
+    "city": "Cleveland",
+    "state": "OH",
+    "email_url": "csuohio.edu"
+  },
+  {
+    "college_name": "Coastal Bend College",
+    "city": "Beeville",
+    "state": "TX",
+    "email_url": "coastalbend.edu"
+  },
+  {
+    "college_name": "Coastal Carolina University",
+    "city": "Conway",
+    "state": "SC",
+    "email_url": "coastal.edu"
+  },
+  {
+    "college_name": "Colby College",
+    "city": "Waterville",
+    "state": "ME",
+    "email_url": "colby.edu"
+  },
+  {
+    "college_name": "Colby-Sawyer College",
+    "city": "New London",
+    "state": "NH",
+    "email_url": "colby-sawyer.edu"
+  },
+  {
+    "college_name": "Coleman University",
+    "city": "San Diego",
+    "state": "CA",
+    "email_url": "coleman.edu"
+  },
+  {
+    "college_name": "Colgate University",
+    "city": "Hamilton",
+    "state": "NY",
+    "email_url": "colgate.edu"
+  },
+  {
+    "college_name": "College of Alameda",
+    "city": "Alameda",
+    "state": "CA",
+    "email_url": "peralta.edu"
+  },
+  {
+    "college_name": "College of Biblical Studies-Houston",
+    "city": "Houston",
+    "state": "TX",
+    "email_url": "cbshouston.edu"
+  },
+  {
+    "college_name": "College of Central Florida",
+    "city": "Ocala",
+    "state": "FL",
+    "email_url": "cf.edu"
+  },
+  {
+    "college_name": "College of Charleston",
+    "city": "Charleston",
+    "state": "SC",
+    "email_url": "cofc.edu"
+  },
+  {
+    "college_name": "College of DuPage",
+    "city": "Glen Ellyn",
+    "state": "IL",
+    "email_url": "cod.edu"
+  },
+  {
+    "college_name": "College of Eastern Utah",
+    "city": "Price",
+    "state": "UT",
+    "email_url": "ceu.edu"
+  },
+  {
+    "college_name": "College of Idaho",
+    "city": "Caldwell",
+    "state": "ID",
+    "email_url": "collegeofidaho.edu"
+  },
+  {
+    "college_name": "College of Menominee Nation",
+    "city": "Keshena",
+    "state": "WI",
+    "email_url": "menominee.edu"
+  },
+  {
+    "college_name": "College of Mount Saint Vincent",
+    "city": "Bronx",
+    "state": "NY",
+    "email_url": "mountsaintvincent.edu"
+  },
+  {
+    "college_name": "The College of New Jersey",
+    "city": "Ewing",
+    "state": "NJ",
+    "email_url": "tcnj.edu"
+  },
+  {
+    "college_name": "The College of New Rochelle",
+    "city": "New Rochelle",
+    "state": "NY",
+    "email_url": "cnr.edu"
+  },
+  {
+    "college_name": "College of Our Lady of the Elms",
+    "city": "Chicopee",
+    "state": "MA",
+    "email_url": "elms.edu"
+  },
+  {
+    "college_name": "College of Saint Benedict",
+    "city": "Saint Joseph",
+    "state": "MN",
+    "email_url": "csbsju.edu"
+  },
+  {
+    "college_name": "College of Saint Elizabeth",
+    "city": "Morristown",
+    "state": "NJ",
+    "email_url": "cse.edu"
+  },
+  {
+    "college_name": "College of Saint Mary",
+    "city": "Omaha",
+    "state": "NE",
+    "email_url": "csm.edu"
+  },
+  {
+    "college_name": "College of Saint Scholastica",
+    "city": "Duluth",
+    "state": "MN",
+    "email_url": "css.edu"
+  },
+  {
+    "college_name": "College of San Mateo",
+    "city": "San Mateo",
+    "state": "CA",
+    "email_url": "collegeofsanmateo.edu"
+  },
+  {
+    "college_name": "College of Southern Idaho",
+    "city": "Twin Falls",
+    "state": "ID",
+    "email_url": "csi.edu"
+  },
+  {
+    "college_name": "College of Southern Maryland",
+    "city": "La Plata",
+    "state": "MD",
+    "email_url": "csmd.edu"
+  },
+  {
+    "college_name": "College of Southern Nevada",
+    "city": "Las Vegas",
+    "state": "NV",
+    "email_url": "csn.edu"
+  },
+  {
+    "college_name": "College of St Joseph",
+    "city": "Rutland",
+    "state": "VT",
+    "email_url": "csj.edu"
+  },
+  {
+    "college_name": "College of Staten Island",
+    "city": "Staten Island",
+    "state": "NY",
+    "email_url": "csi.cuny.edu"
+  },
+  {
+    "college_name": "College of the Albemarle",
+    "city": "Elizabeth City",
+    "state": "NC",
+    "email_url": "albemarle.edu"
+  },
+  {
+    "college_name": "College of the Atlantic",
+    "city": "Bar Harbor",
+    "state": "ME",
+    "email_url": "coa.edu"
+  },
+  {
+    "college_name": "College of the Canyons",
+    "city": "Santa Clarita",
+    "state": "CA",
+    "email_url": "canyons.edu"
+  },
+  {
+    "college_name": "College of the Desert",
+    "city": "Palm Desert",
+    "state": "CA",
+    "email_url": "collegeofthedesert.edu"
+  },
+  {
+    "college_name": "College of the Holy Cross",
+    "city": "Worcester",
+    "state": "MA",
+    "email_url": "holycross.edu"
+  },
+  {
+    "college_name": "College of the Ozarks",
+    "city": "Point Lookout",
+    "state": "MO",
+    "email_url": "cofo.edu"
+  },
+  {
+    "college_name": "College of the Redwoods",
+    "city": "Eureka",
+    "state": "CA",
+    "email_url": "redwoods.edu"
+  },
+  {
+    "college_name": "College of the Sequoias",
+    "city": "Visalia",
+    "state": "CA",
+    "email_url": "cos.edu"
+  },
+  {
+    "college_name": "College of the Siskiyous",
+    "city": "Weed",
+    "state": "CA",
+    "email_url": "siskiyous.edu"
+  },
+  {
+    "college_name": "College of Visual Arts",
+    "city": "St. Paul",
+    "state": "MN",
+    "email_url": "cva.edu"
+  },
+  {
+    "college_name": "College of William and Mary",
+    "city": "Williamsburg",
+    "state": "VA",
+    "email_url": "wm.edu"
+  },
+  {
+    "college_name": "CollegeAmerica - Denver",
+    "city": "Denver",
+    "state": "CO",
+    "email_url": "collegeamerica.edu"
+  },
+  {
+    "college_name": "Colorado College",
+    "city": "Colorado Springs",
+    "state": "CO",
+    "email_url": "coloradocollege.edu"
+  },
+  {
+    "college_name": "Colorado Mesa University",
+    "city": "Grand Junction",
+    "state": "CO",
+    "email_url": "coloradomesa.edu"
+  },
+  {
+    "college_name": "Colorado School of Mines",
+    "city": "Golden",
+    "state": "CO",
+    "email_url": "mines.edu"
+  },
+  {
+    "college_name": "Colorado State University",
+    "city": "Fort Collins",
+    "state": "CO",
+    "email_url": "colostate.edu"
+  },
+  {
+    "college_name": "Colorado State University - Pueblo",
+    "city": "Pueblo",
+    "state": "CO",
+    "email_url": "colostate-pueblo.edu"
+  },
+  {
+    "college_name": "Columbia Southern University",
+    "city": "Orange Beach",
+    "state": "AL",
+    "email_url": "columbiasouthern.edu"
+  },
+  {
+    "college_name": "Columbia University",
+    "city": "New York",
+    "state": "NY",
+    "email_url": "columbia.edu"
+  },
+  {
+    "college_name": "Columbus State University",
+    "city": "Columbus",
+    "state": "GA",
+    "email_url": "columbusstate.edu"
+  },
+  {
+    "college_name": "Concord University",
+    "city": "Athens",
+    "state": "WV",
+    "email_url": "concord.edu"
+  },
+  {
+    "college_name": "Concordia College",
+    "city": "Moorhead",
+    "state": "MN",
+    "email_url": "cord.edu"
+  },
+  {
+    "college_name": "Concordia University",
+    "city": "Ann Arbor",
+    "state": "MI",
+    "email_url": "cuaa.edu"
+  },
+  {
+    "college_name": "Concordia University - Austin",
+    "city": "Austin",
+    "state": "TX",
+    "email_url": "concordia.edu"
+  },
+  {
+    "college_name": "Concordia University Chicago",
+    "city": "River Forest",
+    "state": "IL",
+    "email_url": "cuchicago.edu"
+  },
+  {
+    "college_name": "Concordia University Irvine",
+    "city": "Irvine",
+    "state": "CA",
+    "email_url": "cui.edu"
+  },
+  {
+    "college_name": "Concordia University Wisconsin",
+    "city": "Mequon",
+    "state": "WI",
+    "email_url": "cuw.edu"
+  },
+  {
+    "college_name": "Concordia University, St. Paul",
+    "city": "St. Paul",
+    "state": "MN",
+    "email_url": "csp.edu"
+  },
+  {
+    "college_name": "Coppin State University",
+    "city": "Baltimore",
+    "state": "MD",
+    "email_url": "coppin.edu"
+  },
+  {
+    "college_name": "Corban University",
+    "city": "Salem",
+    "state": "OR",
+    "email_url": "corban.edu"
+  },
+  {
+    "college_name": "Corcoran College of Art and Design",
+    "city": "Washington",
+    "state": "DC",
+    "email_url": "corcoran.edu"
+  },
+  {
+    "college_name": "Cornell University",
+    "city": "Ithaca",
+    "state": "NY",
+    "email_url": "cornell.edu"
+  },
+  {
+    "college_name": "Cottey College",
+    "city": "Nevada",
+    "state": "MO",
+    "email_url": "cottey.edu"
+  },
+  {
+    "college_name": "Creighton University",
+    "city": "Omaha",
+    "state": "NE",
+    "email_url": "creighton.edu"
+  },
+  {
+    "college_name": "Culinary Institute of America",
+    "city": "Hyde Park",
+    "state": "NY",
+    "email_url": "culinary.edu"
+  },
+  {
+    "college_name": "Curry College",
+    "city": "Milton",
+    "state": "MA",
+    "email_url": "curry.edu"
+  },
+  {
+    "college_name": "Dakota State University",
+    "city": "Madison",
+    "state": "SD",
+    "email_url": "dsu.edu"
+  },
+  {
+    "college_name": "Dakota Wesleyan University",
+    "city": "Mitchell",
+    "state": "SD",
+    "email_url": "dwu.edu"
+  },
+  {
+    "college_name": "Dallas Baptist University",
+    "city": "Dallas",
+    "state": "TX",
+    "email_url": "dbu.edu"
+  },
+  {
+    "college_name": "Dallas Christian College",
+    "city": "Dallas",
+    "state": "TX",
+    "email_url": "dallas.edu"
+  },
+  {
+    "college_name": "Dalton State College",
+    "city": "Dalton",
+    "state": "GA",
+    "email_url": "daltonstate.edu"
+  },
+  {
+    "college_name": "Daniel Webster College",
+    "city": "Nashua",
+    "state": "NH",
+    "email_url": "dwc.edu"
+  },
+  {
+    "college_name": "Dartmouth College",
+    "city": "Hanover",
+    "state": "NH",
+    "email_url": "dartmouth.edu"
+  },
+  {
+    "college_name": "Darton State College",
+    "city": "Albany",
+    "state": "GA",
+    "email_url": "darton.edu"
+  },
+  {
+    "college_name": "Davenport University",
+    "city": "Grand Rapids",
+    "state": "MI",
+    "email_url": "davenport.edu"
+  },
+  {
+    "college_name": "Davidson College",
+    "city": "Davidson",
+    "state": "NC",
+    "email_url": "www2.davidson.eduindex.asp"
+  },
+  {
+    "college_name": "Davis & Elkins College",
+    "city": "Elkins",
+    "state": "WV",
+    "email_url": "dewv.edu"
+  },
+  {
+    "college_name": "Davis College",
+    "city": "Johnson City",
+    "state": "NY",
+    "email_url": "davisny.edu"
+  },
+  {
+    "college_name": "Daytona State College",
+    "city": "Daytona Beach",
+    "state": "FL",
+    "email_url": "daytonastate.edu"
+  },
+  {
+    "college_name": "Delaware College of Art and Design",
+    "city": "Wilmington",
+    "state": "DE",
+    "email_url": "dcad.edu"
+  },
+  {
+    "college_name": "Delaware State University",
+    "city": "Dover",
+    "state": "DE",
+    "email_url": "desu.edu"
+  },
+  {
+    "college_name": "Delta State University",
+    "city": "Cleveland",
+    "state": "MS",
+    "email_url": "deltastate.edu"
+  },
+  {
+    "college_name": "Denison University",
+    "city": "Granville",
+    "state": "OH",
+    "email_url": "denison.edu"
+  },
+  {
+    "college_name": "DePaul University",
+    "city": "Chicago",
+    "state": "IL",
+    "email_url": "depaul.edu"
+  },
+  {
+    "college_name": "DePauw University",
+    "city": "Greencastle",
+    "state": "IN",
+    "email_url": "depauw.edu"
+  },
+  {
+    "college_name": "Design Institute of San Diego",
+    "city": "San Diego",
+    "state": "CA",
+    "email_url": "disd.edu"
+  },
+  {
+    "college_name": "DeVry University",
+    "city": "Oakbrook Terrace",
+    "state": "IL",
+    "email_url": "devry.edu"
+  },
+  {
+    "college_name": "Dixie State university",
+    "city": "Saint George",
+    "state": "UT",
+    "email_url": "dixie.edu"
+  },
+  {
+    "college_name": "Dominican University",
+    "city": "River Forest",
+    "state": "IL",
+    "email_url": "dom.edu"
+  },
+  {
+    "college_name": "Dominican University of California",
+    "city": "San Rafael",
+    "state": "CA",
+    "email_url": "dominican.edu"
+  },
+  {
+    "college_name": "Dongguk University - Los Angeles",
+    "city": "Los Angeles",
+    "state": "CA",
+    "email_url": "dula.edu"
+  },
+  {
+    "college_name": "Drake University",
+    "city": "Des Moines",
+    "state": "IA",
+    "email_url": "drake.edu"
+  },
+  {
+    "college_name": "Drew University",
+    "city": "Madison",
+    "state": "NJ",
+    "email_url": "drew.edu"
+  },
+  {
+    "college_name": "Drexel University",
+    "city": "Philadelphia",
+    "state": "PA",
+    "email_url": "drexel.edu"
+  },
+  {
+    "college_name": "Drury University",
+    "city": "Springfield",
+    "state": "MO",
+    "email_url": "drury.edu"
+  },
+  {
+    "college_name": "Duke University",
+    "city": "Durham",
+    "state": "NC",
+    "email_url": "duke.edu"
+  },
+  {
+    "college_name": "Duquesne University",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "email_url": "duq.edu"
+  },
+  {
+    "college_name": "East Carolina University",
+    "city": "Greenville",
+    "state": "NC",
+    "email_url": "ecu.edu"
+  },
+  {
+    "college_name": "East Central College",
+    "city": "Union",
+    "state": "MO",
+    "email_url": "eastcentral.edu"
+  },
+  {
+    "college_name": "East Central University",
+    "city": "Ada",
+    "state": "OK",
+    "email_url": "ecok.edu"
+  },
+  {
+    "college_name": "East Georgia State College",
+    "city": "Swainsboro",
+    "state": "GA",
+    "email_url": "ega.edu"
+  },
+  {
+    "college_name": "East Stroudsburg University of Pennsylvania",
+    "city": "East Stroudsburg",
+    "state": "PA",
+    "email_url": "esu.edu"
+  },
+  {
+    "college_name": "East Tennessee State University",
+    "city": "Johnson City",
+    "state": "TN",
+    "email_url": "etsu.edu"
+  },
+  {
+    "college_name": "East Texas Baptist University",
+    "city": "Marshall",
+    "state": "TX",
+    "email_url": "etbu.edu"
+  },
+  {
+    "college_name": "Eastern Connecticut State University",
+    "city": "Willimantic",
+    "state": "CT",
+    "email_url": "easternct.edu"
+  },
+  {
+    "college_name": "Eastern Illinois University",
+    "city": "Charleston",
+    "state": "IL",
+    "email_url": "eiu.edu"
+  },
+  {
+    "college_name": "Eastern Kentucky University",
+    "city": "Richmond",
+    "state": "KY",
+    "email_url": "eku.edu"
+  },
+  {
+    "college_name": "Eastern Michigan University",
+    "city": "Ypsilanti",
+    "state": "MI",
+    "email_url": "emich.edu"
+  },
+  {
+    "college_name": "Eastern Nazarene College",
+    "city": "Quincy",
+    "state": "MA",
+    "email_url": "enc.edu"
+  },
+  {
+    "college_name": "Eastern New Mexico University",
+    "city": "Portales",
+    "state": "NM",
+    "email_url": "enmu.edu"
+  },
+  {
+    "college_name": "Eastern New Mexico University - Roswell",
+    "city": "Roswell",
+    "state": "NM",
+    "email_url": "roswell.enmu.edu"
+  },
+  {
+    "college_name": "Eastern Oklahoma State College",
+    "city": "Wilburton",
+    "state": "OK",
+    "email_url": "eosc.edu"
+  },
+  {
+    "college_name": "Eastern Oregon University",
+    "city": "La Grande",
+    "state": "OR",
+    "email_url": "eou.edu"
+  },
+  {
+    "college_name": "Eastern University",
+    "city": "Saint Davids",
+    "state": "PA",
+    "email_url": "eastern.edu"
+  },
+  {
+    "college_name": "Eastern Washington University",
+    "city": "Cheney",
+    "state": "WA",
+    "email_url": "ewu.edu"
+  },
+  {
+    "college_name": "East-West University",
+    "city": "Chicago",
+    "state": "IL",
+    "email_url": "eastwest.edu"
+  },
+  {
+    "college_name": "Ecclesia College",
+    "city": "Springdale",
+    "state": "AR",
+    "email_url": "ecollege.edu"
+  },
+  {
+    "college_name": "Eckerd College",
+    "city": "Saint Petersburg",
+    "state": "FL",
+    "email_url": "eckerd.edu"
+  },
+  {
+    "college_name": "Edinboro University of Pennsylvania",
+    "city": "Edinboro",
+    "state": "PA",
+    "email_url": "edinboro.edu"
+  },
+  {
+    "college_name": "Elizabethtown College",
+    "city": "Elizabethtown",
+    "state": "PA",
+    "email_url": "etown.edu"
+  },
+  {
+    "college_name": "Ellis University",
+    "city": "Oakbrook Terrace",
+    "state": "IL",
+    "email_url": "ellis.edu"
+  },
+  {
+    "college_name": "Elmhurst College",
+    "city": "Elmhurst",
+    "state": "IL",
+    "email_url": "elmhurst.edu"
+  },
+  {
+    "college_name": "Elmira College",
+    "city": "Elmira",
+    "state": "NY",
+    "email_url": "elmira.edu"
+  },
+  {
+    "college_name": "Elon University",
+    "city": "Elon",
+    "state": "NC",
+    "email_url": "elon.edu"
+  },
+  {
+    "college_name": "Embry-Riddle  University",
+    "city": "Daytona Beach",
+    "state": "FL",
+    "email_url": "erau.edu"
+  },
+  {
+    "college_name": "Emerson College",
+    "city": "Boston",
+    "state": "MA",
+    "email_url": "emerson.edu"
+  },
+  {
+    "college_name": "Emmanuel College",
+    "city": "Franklin Springs",
+    "state": "GA",
+    "email_url": "ec.edu"
+  },
+  {
+    "college_name": "Emory University",
+    "city": "Atlanta",
+    "state": "GA",
+    "email_url": "emory.edu"
+  },
+  {
+    "college_name": "Empire College",
+    "city": "Santa Rosa",
+    "state": "CA",
+    "email_url": "empcol.edu"
+  },
+  {
+    "college_name": "Emporia State University",
+    "city": "Emporia",
+    "state": "KS",
+    "email_url": "emporia.edu"
+  },
+  {
+    "college_name": "Fairfield University",
+    "city": "Fairfield",
+    "state": "CT",
+    "email_url": "fairfield.edu"
+  },
+  {
+    "college_name": "Fairleigh Dickinson University",
+    "city": "Teaneck",
+    "state": "NJ",
+    "email_url": "fdu.edu"
+  },
+  {
+    "college_name": "Fairmont State University",
+    "city": "Fairmont",
+    "state": "WV",
+    "email_url": "fairmontstate.edu"
+  },
+  {
+    "college_name": "Fashion Institute of Technology",
+    "city": "New York",
+    "state": "NY",
+    "email_url": "fitnyc.edu"
+  },
+  {
+    "college_name": "Faulkner University",
+    "city": "Montgomery",
+    "state": "AL",
+    "email_url": "faulkner.edu"
+  },
+  {
+    "college_name": "Fayetteville State University",
+    "city": "Fayetteville",
+    "state": "NC",
+    "email_url": "uncfsu.edu"
+  },
+  {
+    "college_name": "Ferrum College",
+    "city": "Ferrum",
+    "state": "VA",
+    "email_url": "ferrum.edu"
+  },
+  {
+    "college_name": "FIDM/Fashion Institute of Design & Merchandising",
+    "city": "Los Angeles",
+    "state": "CA",
+    "email_url": "fidm.edu"
+  },
+  {
+    "college_name": "Fisher College",
+    "city": "Boston",
+    "state": "MA",
+    "email_url": "fisher.edu"
+  },
+  {
+    "college_name": "Fisk University",
+    "city": "Nashville",
+    "state": "TN",
+    "email_url": "fisk.edu"
+  },
+  {
+    "college_name": "Fitchburg State University",
+    "city": "Fitchburg",
+    "state": "MA",
+    "email_url": "fsc.edu"
+  },
+  {
+    "college_name": "Florida Atlantic University",
+    "city": "Boca Raton",
+    "state": "FL",
+    "email_url": "fau.edu"
+  },
+  {
+    "college_name": "Florida College",
+    "city": "Temple Terrace",
+    "state": "FL",
+    "email_url": "floridacollege.edu"
+  },
+  {
+    "college_name": "Florida Gulf Coast University",
+    "city": "Fort Myers",
+    "state": "FL",
+    "email_url": "fgcu.edu"
+  },
+  {
+    "college_name": "Florida Institute of Technology - Melbourne",
+    "city": "Melbourne",
+    "state": "FL",
+    "email_url": "fit.edu"
+  },
+  {
+    "college_name": "Florida International University",
+    "city": "Miami",
+    "state": "FL",
+    "email_url": "fiu.edu"
+  },
+  {
+    "college_name": "Florida Memorial University",
+    "city": "Miami Gardens",
+    "state": "FL",
+    "email_url": "fmuniv.edu"
+  },
+  {
+    "college_name": "Florida National University",
+    "city": "Hialeah",
+    "state": "FL",
+    "email_url": "fnu.edu"
+  },
+  {
+    "college_name": "Florida Southern College",
+    "city": "Lakeland",
+    "state": "FL",
+    "email_url": "flsouthern.edu"
+  },
+  {
+    "college_name": "Florida SouthWestern State College",
+    "city": "Fort Myers",
+    "state": "FL",
+    "email_url": "edison.edu"
+  },
+  {
+    "college_name": "Florida State College - Jacksonville",
+    "city": "Jacksonville",
+    "state": "FL",
+    "email_url": "fscj.edu"
+  },
+  {
+    "college_name": "Florida State University",
+    "city": "Tallahassee",
+    "state": "FL",
+    "email_url": "fsu.edu"
+  },
+  {
+    "college_name": "Fordham University",
+    "city": "Bronx",
+    "state": "NY",
+    "email_url": "fordham.edu"
+  },
+  {
+    "college_name": "Fortis College",
+    "city": "Mobile",
+    "state": "AL",
+    "email_url": "fortiscollege.edu"
+  },
+  {
+    "college_name": "Framingham State University",
+    "city": "Framingham",
+    "state": "MA",
+    "email_url": "framingham.edu"
+  },
+  {
+    "college_name": "Francis Marion University",
+    "city": "Florence",
+    "state": "SC",
+    "email_url": "fmarion.edu"
+  },
+  {
+    "college_name": "Franklin Pierce University",
+    "city": "Rindge",
+    "state": "NH",
+    "email_url": "fpc.edu"
+  },
+  {
+    "college_name": "Franklin University",
+    "city": "Columbus",
+    "state": "OH",
+    "email_url": "franklin.edu"
+  },
+  {
+    "college_name": "Fresno Pacific University",
+    "city": "Fresno",
+    "state": "CA",
+    "email_url": "fresno.edu"
+  },
+  {
+    "college_name": "Frostburg State University",
+    "city": "Frostburg",
+    "state": "MD",
+    "email_url": "frostburg.edu"
+  },
+  {
+    "college_name": "Fullerton College",
+    "city": "Fullerton",
+    "state": "CA",
+    "email_url": "fullcoll.edu"
+  },
+  {
+    "college_name": "Furman University",
+    "city": "Greenville",
+    "state": "SC",
+    "email_url": "furman.edu"
+  },
+  {
+    "college_name": "Gainesville State College",
+    "city": "Oakwood",
+    "state": "GA",
+    "email_url": "gc.peachnet.edu"
+  },
+  {
+    "college_name": "George Mason University",
+    "city": "Fairfax",
+    "state": "VA",
+    "email_url": "gmu.edu"
+  },
+  {
+    "college_name": "George Washington University",
+    "city": "Washington",
+    "state": "DC",
+    "email_url": "gwu.edu"
+  },
+  {
+    "college_name": "Georgetown University",
+    "city": "Washington",
+    "state": "DC",
+    "email_url": "georgetown.edu"
+  },
+  {
+    "college_name": "Georgia Christian University",
+    "city": "Atlanta",
+    "state": "GA",
+    "email_url": "gcuniv.edu"
+  },
+  {
+    "college_name": "Georgia College and State University",
+    "city": "Milledgeville",
+    "state": "GA",
+    "email_url": "gcsu.edu"
+  },
+  {
+    "college_name": "Georgia Institute of Technology",
+    "city": "Atlanta",
+    "state": "GA",
+    "email_url": "gatech.edu"
+  },
+  {
+    "college_name": "Georgia Southern University",
+    "city": "Statesboro",
+    "state": "GA",
+    "email_url": "georgiasouthern.edu"
+  },
+  {
+    "college_name": "Georgia Southwestern State University",
+    "city": "Americus",
+    "state": "GA",
+    "email_url": "gsw.edu"
+  },
+  {
+    "college_name": "Georgia State University",
+    "city": "Atlanta",
+    "state": "GA",
+    "email_url": "gsu.edu"
+  },
+  {
+    "college_name": "Georgian Court University",
+    "city": "Lakewood",
+    "state": "NJ",
+    "email_url": "georgian.edu"
+  },
+  {
+    "college_name": "Gettysburg College",
+    "city": "Gettysburg",
+    "state": "PA",
+    "email_url": "gettysburg.edu"
+  },
+  {
+    "college_name": "Golden Gate University",
+    "city": "San Francisco",
+    "state": "CA",
+    "email_url": "ggu.edu"
+  },
+  {
+    "college_name": "Goldey-Beacom College",
+    "city": "Wilmington",
+    "state": "DE",
+    "email_url": "gbc.edu"
+  },
+  {
+    "college_name": "Gonzaga University",
+    "city": "Spokane",
+    "state": "WA",
+    "email_url": "gonzaga.edu"
+  },
+  {
+    "college_name": "Grambling State University",
+    "city": "Grambling",
+    "state": "LA",
+    "email_url": "gram.edu"
+  },
+  {
+    "college_name": "Grand Canyon University",
+    "city": "Phoenix",
+    "state": "AZ",
+    "email_url": "gcu.edu"
+  },
+  {
+    "college_name": "Grand Valley State University",
+    "city": "Allendale",
+    "state": "MI",
+    "email_url": "gvsu.edu"
+  },
+  {
+    "college_name": "Grayson College",
+    "city": "Denison",
+    "state": "TX",
+    "email_url": "grayson.edu"
+  },
+  {
+    "college_name": "Great Lakes Institute of Technology",
+    "city": "Erie",
+    "state": "PA",
+    "email_url": "glit.edu"
+  },
+  {
+    "college_name": "Hampton University",
+    "city": "Hampton",
+    "state": "VA",
+    "email_url": "hamptonu.edu"
+  },
+  {
+    "college_name": "Harding University",
+    "city": "Searcy",
+    "state": "AR",
+    "email_url": "harding.edu"
+  },
+  {
+    "college_name": "Harvard University",
+    "city": "Cambridge",
+    "state": "MA",
+    "email_url": "harvard.edu"
+  },
+  {
+    "college_name": "Harvey Mudd College",
+    "city": "Claremont",
+    "state": "CA",
+    "email_url": "hmc.edu"
+  },
+  {
+    "college_name": "Haskell Indian Nations University",
+    "city": "Lawrence",
+    "state": "KS",
+    "email_url": "haskell.edu"
+  },
+  {
+    "college_name": "Haverford College",
+    "city": "Haverford",
+    "state": "PA",
+    "email_url": "haverford.edu"
+  },
+  {
+    "college_name": "Hawaii Pacific University",
+    "city": "Honolulu",
+    "state": "HI",
+    "email_url": "hpu.edu"
+  },
+  {
+    "college_name": "Hawaii Technology Institute",
+    "city": "Honolulu",
+    "state": "HI",
+    "email_url": "hti.edu"
+  },
+  {
+    "college_name": "Hebrew College",
+    "city": "Newton Centre",
+    "state": "MA",
+    "email_url": "hebrewcollege.edu"
+  },
+  {
+    "college_name": "Hebrew Theological College",
+    "city": "Skokie",
+    "state": "IL",
+    "email_url": "htcnet.edu"
+  },
+  {
+    "college_name": "Heidelberg University",
+    "city": "Tiffin",
+    "state": "OH",
+    "email_url": "heidelberg.edu"
+  },
+  {
+    "college_name": "Helena College University of Montana",
+    "city": "Helena",
+    "state": "MT",
+    "email_url": "umhelena.edu"
+  },
+  {
+    "college_name": "High Point University",
+    "city": "High Point",
+    "state": "NC",
+    "email_url": "highpoint.edu"
+  },
+  {
+    "college_name": "Highline College",
+    "city": "Des Moines",
+    "state": "WA",
+    "email_url": "highline.edu"
+  },
+  {
+    "college_name": "Hilbert College",
+    "city": "Hamburg",
+    "state": "NY",
+    "email_url": "hilbert.edu"
+  },
+  {
+    "college_name": "Hill College",
+    "city": "Hillsboro",
+    "state": "TX",
+    "email_url": "hillcollege.edu"
+  },
+  {
+    "college_name": "Hiram College",
+    "city": "Hiram",
+    "state": "OH",
+    "email_url": "hiram.edu"
+  },
+  {
+    "college_name": "Hiwassee College",
+    "city": "Madisonville",
+    "state": "TN",
+    "email_url": "hiwassee.edu"
+  },
+  {
+    "college_name": "Hobart & William Smith Colleges",
+    "city": "Geneva",
+    "state": "NY",
+    "email_url": "hws.edu"
+  },
+  {
+    "college_name": "Hobe Sound Bible College",
+    "city": "Hobe Sound",
+    "state": "FL",
+    "email_url": "hsbc.edu"
+  },
+  {
+    "college_name": "Hocking College",
+    "city": "Nelsonville",
+    "state": "OH",
+    "email_url": "hocking.edu"
+  },
+  {
+    "college_name": "Hodges University",
+    "city": "Naples",
+    "state": "FL",
+    "email_url": "hodges.edu"
+  },
+  {
+    "college_name": "Hofstra University",
+    "city": "Hempstead",
+    "state": "NY",
+    "email_url": "hofstra.edu"
+  },
+  {
+    "college_name": "Hope International University",
+    "city": "Fullerton",
+    "state": "CA",
+    "email_url": "hiu.edu"
+  },
+  {
+    "college_name": "Houghton College",
+    "city": "Houghton",
+    "state": "NY",
+    "email_url": "houghton.edu"
+  },
+  {
+    "college_name": "Houston Baptist University",
+    "city": "Houston",
+    "state": "TX",
+    "email_url": "hbu.edu"
+  },
+  {
+    "college_name": "Howard College",
+    "city": "Big Spring",
+    "state": "TX",
+    "email_url": "howardcollege.edu"
+  },
+  {
+    "college_name": "Howard Payne University",
+    "city": "Brownwood",
+    "state": "TX",
+    "email_url": "hputx.edu"
+  },
+  {
+    "college_name": "Howard University",
+    "city": "Washington",
+    "state": "DC",
+    "email_url": "howard.edu"
+  },
+  {
+    "college_name": "Humboldt State University",
+    "city": "Arcata",
+    "state": "CA",
+    "email_url": "humboldt.edu"
+  },
+  {
+    "college_name": "Humphreys College",
+    "city": "Stockton",
+    "state": "CA",
+    "email_url": "humphreys.edu"
+  },
+  {
+    "college_name": "Hunter College",
+    "city": "New York",
+    "state": "NY",
+    "email_url": "hunter.cuny.edu"
+  },
+  {
+    "college_name": "Huntingdon College",
+    "city": "Montgomery",
+    "state": "AL",
+    "email_url": "huntingdon.edu"
+  },
+  {
+    "college_name": "Huntington University",
+    "city": "Huntington",
+    "state": "IN",
+    "email_url": "huntington.edu"
+  },
+  {
+    "college_name": "Huntsville Bible College",
+    "city": "Huntsville",
+    "state": "AL",
+    "email_url": "hbc1.edu"
+  },
+  {
+    "college_name": "Hussian College",
+    "city": "Philadelphia",
+    "state": "PA",
+    "email_url": "hussianart.edu"
+  },
+  {
+    "college_name": "Husson University",
+    "city": "Bangor",
+    "state": "ME",
+    "email_url": "husson.edu"
+  },
+  {
+    "college_name": "Huston-Tillotson University",
+    "city": "Austin",
+    "state": "TX",
+    "email_url": "htu.edu"
+  },
+  {
+    "college_name": "Idaho State University",
+    "city": "Pocatello",
+    "state": "ID",
+    "email_url": "isu.edu"
+  },
+  {
+    "college_name": "Illinois College",
+    "city": "Jacksonville",
+    "state": "IL",
+    "email_url": "ic.edu"
+  },
+  {
+    "college_name": "Illinois Institute of Technology",
+    "city": "Chicago",
+    "state": "IL",
+    "email_url": "iit.edu"
+  },
+  {
+    "college_name": "Illinois State University",
+    "city": "Normal",
+    "state": "IL",
+    "email_url": "ilstu.edu"
+  },
+  {
+    "college_name": "Illinois Wesleyan University",
+    "city": "Bloomington",
+    "state": "IL",
+    "email_url": "iwu.edu"
+  },
+  {
+    "college_name": "Immaculata University",
+    "city": "Immaculata",
+    "state": "PA",
+    "email_url": "immaculata.edu"
+  },
+  {
+    "college_name": "Independence University",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "email_url": "independence.edu"
+  },
+  {
+    "college_name": "Indian River State College",
+    "city": "Fort Pierce",
+    "state": "FL",
+    "email_url": "irsc.edu"
+  },
+  {
+    "college_name": "Indiana Institute of Technology",
+    "city": "Fort Wayne",
+    "state": "IN",
+    "email_url": "indianatech.edu"
+  },
+  {
+    "college_name": "Indiana State University",
+    "city": "Terre Haute",
+    "state": "IN",
+    "email_url": "indstate.edu"
+  },
+  {
+    "college_name": "Indiana University - Purdue University Fort Wayne",
+    "city": "Fort Wayne",
+    "state": "IN",
+    "email_url": "ipfw.edu"
+  },
+  {
+    "college_name": "Indiana University - Purdue University Indianapolis",
+    "city": "Indianapolis",
+    "state": "IN",
+    "email_url": "iupui.edu"
+  },
+  {
+    "college_name": "Indiana University",
+    "city": "Bloomington",
+    "state": "IN",
+    "email_url": "iu.edu"
+  },
+  {
+    "college_name": "Indiana University - East",
+    "city": "Richmond",
+    "state": "IN",
+    "email_url": "iue.edu"
+  },
+  {
+    "college_name": "Indiana University - Kokomo",
+    "city": "Kokomo",
+    "state": "IN",
+    "email_url": "iu.edu"
+  },
+  {
+    "college_name": "Indiana University - Northwest",
+    "city": "Gary",
+    "state": "IN",
+    "email_url": "iu.edu"
+  },
+  {
+    "college_name": "Indiana University of Pennsylvania",
+    "city": "Indiana",
+    "state": "PA",
+    "email_url": "iup.edu"
+  },
+  {
+    "college_name": "Indiana University - South Bend",
+    "city": "South Bend",
+    "state": "IN",
+    "email_url": "iu.edu"
+  },
+  {
+    "college_name": "Indiana University - Southeast",
+    "city": "New Albany",
+    "state": "IN",
+    "email_url": "iu.edu"
+  },
+  {
+    "college_name": "Indiana Wesleyan University",
+    "city": "Marion",
+    "state": "IN",
+    "email_url": "indwes.edu"
+  },
+  {
+    "college_name": "Iona College",
+    "city": "New Rochelle",
+    "state": "NY",
+    "email_url": "iona.eduhome.aspx"
+  },
+  {
+    "college_name": "Iowa State University",
+    "city": "Ames",
+    "state": "IA",
+    "email_url": "iastate.edu"
+  },
+  {
+    "college_name": "Iowa Wesleyan University",
+    "city": "Mount Pleasant",
+    "state": "IA",
+    "email_url": "iwc.edu"
+  },
+  {
+    "college_name": "Irish American University",
+    "city": "Lewes",
+    "state": "DE",
+    "email_url": "iamu.edu"
+  },
+  {
+    "college_name": "Ithaca College",
+    "city": "Ithaca",
+    "state": "NY",
+    "email_url": "ithaca.edu"
+  },
+  {
+    "college_name": "Jackson State University",
+    "city": "Jackson",
+    "state": "MS",
+    "email_url": "jsums.edu"
+  },
+  {
+    "college_name": "Jacksonville State University",
+    "city": "Jacksonville",
+    "state": "AL",
+    "email_url": "jsu.edu"
+  },
+  {
+    "college_name": "Jacksonville University",
+    "city": "Jacksonville",
+    "state": "FL",
+    "email_url": "ju.edu"
+  },
+  {
+    "college_name": "James A Rhodes State College",
+    "city": "Lima",
+    "state": "OH",
+    "email_url": "rhodesstate.edu"
+  },
+  {
+    "college_name": "James Madison University",
+    "city": "Harrisonburg",
+    "state": "VA",
+    "email_url": "jmu.edu"
+  },
+  {
+    "college_name": "Jarvis Christian College",
+    "city": "Hawkins",
+    "state": "TX",
+    "email_url": "jarvis.edu"
+  },
+  {
+    "college_name": "Jefferson College",
+    "city": "Hillsboro",
+    "state": "MO",
+    "email_url": "jeffco.edu"
+  },
+  {
+    "college_name": "John A Gupton College",
+    "city": "Nashville",
+    "state": "TN",
+    "email_url": "guptoncollege.edu"
+  },
+  {
+    "college_name": "John A Logan College",
+    "city": "Carterville",
+    "state": "IL",
+    "email_url": "jalc.edu"
+  },
+  {
+    "college_name": "John Brown University",
+    "city": "Siloam Springs",
+    "state": "AR",
+    "email_url": "jbu.edu"
+  },
+  {
+    "college_name": "John Carroll University",
+    "city": "University Heights",
+    "state": "OH",
+    "email_url": "jcu.edu"
+  },
+  {
+    "college_name": "John Wesley University",
+    "city": "High Point",
+    "state": "NC",
+    "email_url": "laureluniversity.edu"
+  },
+  {
+    "college_name": "Johns Hopkins University",
+    "city": "Baltimore",
+    "state": "MD",
+    "email_url": "jhu.edu"
+  },
+  {
+    "college_name": "Johnson & Wales University",
+    "city": "Providence",
+    "state": "RI",
+    "email_url": "jwu.edu"
+  },
+  {
+    "college_name": "Johnson C Smith University",
+    "city": "Charlotte",
+    "state": "NC",
+    "email_url": "jcsu.edu"
+  },
+  {
+    "college_name": "Johnson University",
+    "city": "Knoxville",
+    "state": "TN",
+    "email_url": "jbc.edu"
+  },
+  {
+    "college_name": "Kansas Christian College",
+    "city": "Kansas City",
+    "state": "MO",
+    "email_url": "metropolitancollege.edu"
+  },
+  {
+    "college_name": "Kansas City Art Institute",
+    "city": "Kansas City",
+    "state": "MO",
+    "email_url": "kcai.edu"
+  },
+  {
+    "college_name": "Kansas State University",
+    "city": "Manhattan",
+    "state": "KS",
+    "email_url": "k-state.edu"
+  },
+  {
+    "college_name": "Kansas Wesleyan University",
+    "city": "Salina",
+    "state": "KS",
+    "email_url": "kwu.edu"
+  },
+  {
+    "college_name": "Kaskaskia College",
+    "city": "Centralia",
+    "state": "IL",
+    "email_url": "kaskaskia.edu"
+  },
+  {
+    "college_name": "Kean University",
+    "city": "Union",
+    "state": "NJ",
+    "email_url": "kean.edu"
+  },
+  {
+    "college_name": "Keene State College",
+    "city": "Keene",
+    "state": "NH",
+    "email_url": "keene.edu"
+  },
+  {
+    "college_name": "Keiser University",
+    "city": "Fort Lauderdale",
+    "state": "FL",
+    "email_url": "keiseruniversity.edu"
+  },
+  {
+    "college_name": "Kennesaw State University",
+    "city": "Kennesaw",
+    "state": "GA",
+    "email_url": "kennesaw.edu"
+  },
+  {
+    "college_name": "Kent State University",
+    "city": "Kent",
+    "state": "OH",
+    "email_url": "kent.edu"
+  },
+  {
+    "college_name": "Kentucky Mountain Bible College",
+    "city": "Jackson",
+    "state": "KY",
+    "email_url": "kmbc.edu"
+  },
+  {
+    "college_name": "Kentucky State University",
+    "city": "Frankfort",
+    "state": "KY",
+    "email_url": "kysu.edu"
+  },
+  {
+    "college_name": "Kentucky Wesleyan College",
+    "city": "Owensboro",
+    "state": "KY",
+    "email_url": "kwc.edu"
+  },
+  {
+    "college_name": "Kenyon College",
+    "city": "Gambier",
+    "state": "OH",
+    "email_url": "kenyon.edu"
+  },
+  {
+    "college_name": "Kettering College",
+    "city": "Kettering",
+    "state": "OH",
+    "email_url": "kcma.edu"
+  },
+  {
+    "college_name": "Kettering University",
+    "city": "Flint Township",
+    "state": "MI",
+    "email_url": "kettering.edu"
+  },
+  {
+    "college_name": "Keuka College",
+    "city": "Keuka Park",
+    "state": "NY",
+    "email_url": "keuka.edu"
+  },
+  {
+    "college_name": "Keystone College",
+    "city": "La Plume",
+    "state": "PA",
+    "email_url": "keystone.edu"
+  },
+  {
+    "college_name": "Kilgore College",
+    "city": "Kilgore",
+    "state": "TX",
+    "email_url": "kilgore.edu"
+  },
+  {
+    "college_name": "King University",
+    "city": "Bristol",
+    "state": "TN",
+    "email_url": "king.edu"
+  },
+  {
+    "college_name": "La Salle University",
+    "city": "Philadelphia",
+    "state": "PA",
+    "email_url": "lasalle.edu"
+  },
+  {
+    "college_name": "La Sierra University",
+    "city": "Riverside",
+    "state": "CA",
+    "email_url": "lasierra.edu"
+  },
+  {
+    "college_name": "Laboure College",
+    "city": "Milton",
+    "state": "MA",
+    "email_url": "laboure.edu"
+  },
+  {
+    "college_name": "Lackawanna College",
+    "city": "Scranton",
+    "state": "PA",
+    "email_url": "lackawanna.edu"
+  },
+  {
+    "college_name": "Lafayette College",
+    "city": "Easton",
+    "state": "PA",
+    "email_url": "lafayette.edu"
+  },
+  {
+    "college_name": "LaGrange College",
+    "city": "Lagrange",
+    "state": "GA",
+    "email_url": "lagrange.edu"
+  },
+  {
+    "college_name": "Laguna College of Art and Design",
+    "city": "Laguna Beach",
+    "state": "CA",
+    "email_url": "lcad.edu"
+  },
+  {
+    "college_name": "Lake Washington Institute of Technology",
+    "city": "Kirkland",
+    "state": "WA",
+    "email_url": "lwtech.edu"
+  },
+  {
+    "college_name": "Lamar Institute of Technology",
+    "city": "Beaumont",
+    "state": "TX",
+    "email_url": "lit.edu"
+  },
+  {
+    "college_name": "Lamar State College - Orange",
+    "city": "Orange",
+    "state": "TX",
+    "email_url": "lsco.edu"
+  },
+  {
+    "college_name": "Lamar State College - Port Arthur",
+    "city": "Port Arthur",
+    "state": "TX",
+    "email_url": "pa.lamar.edu"
+  },
+  {
+    "college_name": "Lamar University",
+    "city": "Beaumont",
+    "state": "TX",
+    "email_url": "lamar.edu"
+  },
+  {
+    "college_name": "Langston University",
+    "city": "Langston",
+    "state": "OK",
+    "email_url": "lunet.edu"
+  },
+  {
+    "college_name": "Lasell College",
+    "city": "Newton",
+    "state": "MA",
+    "email_url": "lasell.edu"
+  },
+  {
+    "college_name": "Lawrence University",
+    "city": "Appleton",
+    "state": "WI",
+    "email_url": "lawrence.edu"
+  },
+  {
+    "college_name": "Le Cordon Bleu College of Culinary Art - Portland",
+    "city": "Portland",
+    "state": "OR",
+    "email_url": "wci.edu"
+  },
+  {
+    "college_name": "Lee University",
+    "city": "Cleveland",
+    "state": "TN",
+    "email_url": "leeuniversity.edu"
+  },
+  {
+    "college_name": "Lees-McRae College",
+    "city": "Banner Elk",
+    "state": "NC",
+    "email_url": "lmc.edu"
+  },
+  {
+    "college_name": "Lehigh University",
+    "city": "Bethlehem",
+    "state": "PA",
+    "email_url": "lehigh.edu"
+  },
+  {
+    "college_name": "Lehman College",
+    "city": "Bronx",
+    "state": "NY",
+    "email_url": "lehman.cuny.edu"
+  },
+  {
+    "college_name": "LeMoyne-Owen College",
+    "city": "Memphis",
+    "state": "TN",
+    "email_url": "loc.edu"
+  },
+  {
+    "college_name": "Lenoir-Rhyne University",
+    "city": "Hickory",
+    "state": "NC",
+    "email_url": "lr.edu"
+  },
+  {
+    "college_name": "Lesley University",
+    "city": "Cambridge",
+    "state": "MA",
+    "email_url": "lesley.edu"
+  },
+  {
+    "college_name": "Lewis & Clark College",
+    "city": "Portland",
+    "state": "OR",
+    "email_url": "lclark.edu"
+  },
+  {
+    "college_name": "Lewis University",
+    "city": "Romeoville",
+    "state": "IL",
+    "email_url": "lewisu.edu"
+  },
+  {
+    "college_name": "Lewis-Clark State College",
+    "city": "Lewiston",
+    "state": "ID",
+    "email_url": "lcsc.edu"
+  },
+  {
+    "college_name": "Liberty University",
+    "city": "Lynchburg",
+    "state": "VA",
+    "email_url": "liberty.edu"
+  },
+  {
+    "college_name": "LIM College",
+    "city": "New York",
+    "state": "NY",
+    "email_url": "limcollege.edu"
+  },
+  {
+    "college_name": "Limestone College",
+    "city": "Gaffney",
+    "state": "SC",
+    "email_url": "limestone.edu"
+  },
+  {
+    "college_name": "Lincoln Christian University",
+    "city": "Lincoln",
+    "state": "IL",
+    "email_url": "lincolnchristian.edu"
+  },
+  {
+    "college_name": "Lincoln College",
+    "city": "Lincoln",
+    "state": "IL",
+    "email_url": "lincolncollege.edu"
+  },
+  {
+    "college_name": "Lincoln College of New England",
+    "city": "Southington",
+    "state": "CT",
+    "email_url": "lincolncollegene.edu"
+  },
+  {
+    "college_name": "Lincoln Memorial University",
+    "city": "Harrogate",
+    "state": "TN",
+    "email_url": "lmunet.edu"
+  },
+  {
+    "college_name": "Lincoln University",
+    "city": "Oakland",
+    "state": "CA",
+    "email_url": "lincolnuca.edu"
+  },
+  {
+    "college_name": "Lindenwood University",
+    "city": "St. Charles",
+    "state": "MO",
+    "email_url": "lindenwood.edu"
+  },
+  {
+    "college_name": "Lindsey Wilson College",
+    "city": "Columbia",
+    "state": "KY",
+    "email_url": "lindsey.edu"
+  },
+  {
+    "college_name": "Linfield College",
+    "city": "McMinnville",
+    "state": "OR",
+    "email_url": "linfield.edu"
+  },
+  {
+    "college_name": "Linfield College-Portland Campus",
+    "city": "Portland",
+    "state": "OR",
+    "email_url": "linfield.eduportland"
+  },
+  {
+    "college_name": "Lipscomb University",
+    "city": "Nashville",
+    "state": "TN",
+    "email_url": "lipscomb.edu"
+  },
+  {
+    "college_name": "Longwood University",
+    "city": "Farmville",
+    "state": "VA",
+    "email_url": "longwood.edu"
+  },
+  {
+    "college_name": "Lorenzo Walker Institute of Technology",
+    "city": "Naples",
+    "state": "FL",
+    "email_url": "lwit.edu"
+  },
+  {
+    "college_name": "Los Angeles Harbor College",
+    "city": "Wilmington",
+    "state": "CA",
+    "email_url": "lahc.edu"
+  },
+  {
+    "college_name": "Los Angeles Mission College",
+    "city": "Sylmar",
+    "state": "CA",
+    "email_url": "lamission.edu"
+  },
+  {
+    "college_name": "Los Angeles Southwest College",
+    "city": "Los Angeles",
+    "state": "CA",
+    "email_url": "lasc.edu"
+  },
+  {
+    "college_name": "Louisburg College",
+    "city": "Louisburg",
+    "state": "NC",
+    "email_url": "louisburg.edu"
+  },
+  {
+    "college_name": "Louisiana College",
+    "city": "Pineville",
+    "state": "LA",
+    "email_url": "lacollege.edu"
+  },
+  {
+    "college_name": "Louisiana State University - Alexandria",
+    "city": "Alexandria",
+    "state": "LA",
+    "email_url": "lsua.edu"
+  },
+  {
+    "college_name": "Louisiana State University - Eunice",
+    "city": "Eunice",
+    "state": "LA",
+    "email_url": "lsue.edu"
+  },
+  {
+    "college_name": "Louisiana State University - Shreveport",
+    "city": "Shreveport",
+    "state": "LA",
+    "email_url": "lsus.edu"
+  },
+  {
+    "college_name": "Louisiana State University and A&M College",
+    "city": "Baton Rouge",
+    "state": "LA",
+    "email_url": "lsu.edu"
+  },
+  {
+    "college_name": "Louisiana Tech University",
+    "city": "Ruston",
+    "state": "LA",
+    "email_url": "latech.edu"
+  },
+  {
+    "college_name": "Lourdes University",
+    "city": "Sylvania",
+    "state": "OH",
+    "email_url": "lourdes.edu"
+  },
+  {
+    "college_name": "Loyola Marymount University",
+    "city": "Los Angeles",
+    "state": "CA",
+    "email_url": "lmu.edu"
+  },
+  {
+    "college_name": "Loyola University Maryland",
+    "city": "Baltimore",
+    "state": "MD",
+    "email_url": "loyola.edu"
+  },
+  {
+    "college_name": "Loyola University New Orleans",
+    "city": "New Orleans",
+    "state": "LA",
+    "email_url": "loyno.edu"
+  },
+  {
+    "college_name": "Loyola University of Chicago",
+    "city": "Chicago",
+    "state": "IL",
+    "email_url": "luc.edu"
+  },
+  {
+    "college_name": "Lubbock Christian University",
+    "city": "Lubbock",
+    "state": "TX",
+    "email_url": "lcu.edu"
+  },
+  {
+    "college_name": "Luther College",
+    "city": "Decorah",
+    "state": "IA",
+    "email_url": "luther.edu"
+  },
+  {
+    "college_name": "Lycoming College",
+    "city": "Williamsport",
+    "state": "PA",
+    "email_url": "lycoming.edu"
+  },
+  {
+    "college_name": "Lynchburg College",
+    "city": "Lynchburg",
+    "state": "VA",
+    "email_url": "lynchburg.edu"
+  },
+  {
+    "college_name": "Lyndon State College",
+    "city": "Lyndonville",
+    "state": "VT",
+    "email_url": "lyndonstate.edu"
+  },
+  {
+    "college_name": "Lynn University",
+    "city": "Boca Raton",
+    "state": "FL",
+    "email_url": "lynn.edu"
+  },
+  {
+    "college_name": "Lyon College",
+    "city": "Batesville",
+    "state": "AR",
+    "email_url": "lyon.edu"
+  },
+  {
+    "college_name": "Macalester College",
+    "city": "St. Paul",
+    "state": "MN",
+    "email_url": "macalester.edu"
+  },
+  {
+    "college_name": "MacMurray College",
+    "city": "Jacksonville",
+    "state": "IL",
+    "email_url": "mac.edu"
+  },
+  {
+    "college_name": "Macon State College",
+    "city": "Macon",
+    "state": "GA",
+    "email_url": "maconstate.edu"
+  },
+  {
+    "college_name": "Madonna University",
+    "city": "Livonia",
+    "state": "MI",
+    "email_url": "madonna.edu"
+  },
+  {
+    "college_name": "Magdalen College",
+    "city": "Warner",
+    "state": "NH",
+    "email_url": "magdalen.edu"
+  },
+  {
+    "college_name": "Magnolia Bible College",
+    "city": "Kosciusko",
+    "state": "MS",
+    "email_url": "magnolia.edu"
+  },
+  {
+    "college_name": "Maharishi University of Management",
+    "city": "Fairfield",
+    "state": "IA",
+    "email_url": "mum.edu"
+  },
+  {
+    "college_name": "Maine College of Art",
+    "city": "Portland",
+    "state": "ME",
+    "email_url": "meca.edu"
+  },
+  {
+    "college_name": "Malone University",
+    "city": "Canton",
+    "state": "OH",
+    "email_url": "malone.edu"
+  },
+  {
+    "college_name": "Manchester University",
+    "city": "North Manchester",
+    "state": "IN",
+    "email_url": "manchester.edu"
+  },
+  {
+    "college_name": "Manhattan College",
+    "city": "Riverdale",
+    "state": "NY",
+    "email_url": "manhattan.edu"
+  },
+  {
+    "college_name": "Manor College",
+    "city": "Jenkintown",
+    "state": "PA",
+    "email_url": "manor.edu"
+  },
+  {
+    "college_name": "Marian University",
+    "city": "Indianapolis",
+    "state": "IN",
+    "email_url": "marian.edu"
+  },
+  {
+    "college_name": "Marietta College",
+    "city": "Marietta",
+    "state": "OH",
+    "email_url": "marietta.edu"
+  },
+  {
+    "college_name": "Marist College",
+    "city": "Poughkeepsie",
+    "state": "NY",
+    "email_url": "marist.edu"
+  },
+  {
+    "college_name": "Marquette University",
+    "city": "Milwaukee",
+    "state": "WI",
+    "email_url": "marquette.edu"
+  },
+  {
+    "college_name": "Marshall B. Ketchum University",
+    "city": "Fullerton",
+    "state": "CA",
+    "email_url": "ketchum.edu"
+  },
+  {
+    "college_name": "Marshall University",
+    "city": "Huntington",
+    "state": "WV",
+    "email_url": "marshall.edu"
+  },
+  {
+    "college_name": "Martin Luther College",
+    "city": "New Ulm",
+    "state": "MN",
+    "email_url": "mlc-wels.edu"
+  },
+  {
+    "college_name": "Martin Methodist College",
+    "city": "Pulaski",
+    "state": "TN",
+    "email_url": "martinmethodist.edu"
+  },
+  {
+    "college_name": "Martin University",
+    "city": "Indianapolis",
+    "state": "IN",
+    "email_url": "martin.edu"
+  },
+  {
+    "college_name": "Mary Baldwin College",
+    "city": "Staunton",
+    "state": "VA",
+    "email_url": "mbc.edu"
+  },
+  {
+    "college_name": "Marygrove College",
+    "city": "Detroit",
+    "state": "MI",
+    "email_url": "marygrove.edu"
+  },
+  {
+    "college_name": "Maryland Institute College of Art",
+    "city": "Baltimore",
+    "state": "MD",
+    "email_url": "mica.edu"
+  },
+  {
+    "college_name": "Marylhurst University",
+    "city": "Marylhurst",
+    "state": "OR",
+    "email_url": "marylhurst.edu"
+  },
+  {
+    "college_name": "Marymount California University",
+    "city": "Rancho Palos Verdes",
+    "state": "CA",
+    "email_url": "marymountcalifornia.edu"
+  },
+  {
+    "college_name": "Marymount Manhattan College",
+    "city": "New York",
+    "state": "NY",
+    "email_url": "mmm.edu"
+  },
+  {
+    "college_name": "Marymount University",
+    "city": "Arlington",
+    "state": "VA",
+    "email_url": "marymount.edu"
+  },
+  {
+    "college_name": "Maryville College",
+    "city": "Maryville",
+    "state": "TN",
+    "email_url": "maryvillecollege.edu"
+  },
+  {
+    "college_name": "Maryville University of Saint Louis",
+    "city": "Saint Louis",
+    "state": "MO",
+    "email_url": "maryville.edu"
+  },
+  {
+    "college_name": "Marywood University",
+    "city": "Scranton",
+    "state": "PA",
+    "email_url": "marywood.edu"
+  },
+  {
+    "college_name": "Massachusetts College of Art and Design",
+    "city": "Boston",
+    "state": "MA",
+    "email_url": "massart.edu"
+  },
+  {
+    "college_name": "Massachusetts College of Liberal Arts",
+    "city": "North Adams",
+    "state": "MA",
+    "email_url": "mcla.edu"
+  },
+  {
+    "college_name": "Massachusetts Institute of Technology",
+    "city": "Cambridge",
+    "state": "MA",
+    "email_url": "mit.edu"
+  },
+  {
+    "college_name": "Mayville State University",
+    "city": "Mayville",
+    "state": "ND",
+    "email_url": "mayvillestate.edu"
+  },
+  {
+    "college_name": "McDaniel College",
+    "city": "Westminster",
+    "state": "MD",
+    "email_url": "mcdaniel.edu"
+  },
+  {
+    "college_name": "McIntosh College",
+    "city": "Dover",
+    "state": "NH",
+    "email_url": "mcintoshcollege.edu"
+  },
+  {
+    "college_name": "McKendree University",
+    "city": "Lebanon",
+    "state": "IL",
+    "email_url": "mckendree.edu"
+  },
+  {
+    "college_name": "McKinley College",
+    "city": "Fort Collins",
+    "state": "CO",
+    "email_url": "mckinleycollege.edu"
+  },
+  {
+    "college_name": "McMurry University",
+    "city": "Abilene",
+    "state": "TX",
+    "email_url": "mcm.edu"
+  },
+  {
+    "college_name": "McNeese State University",
+    "city": "Lake Charles",
+    "state": "LA",
+    "email_url": "mcneese.edu"
+  },
+  {
+    "college_name": "McPherson College",
+    "city": "McPherson",
+    "state": "KS",
+    "email_url": "mcpherson.edu"
+  },
+  {
+    "college_name": "MCPHS University",
+    "city": "Boston",
+    "state": "MA",
+    "email_url": "mcphs.edu"
+  },
+  {
+    "college_name": "Medaille College",
+    "city": "Buffalo",
+    "state": "NY",
+    "email_url": "medaille.edu"
+  },
+  {
+    "college_name": "Medgar Evers College",
+    "city": "Brooklyn",
+    "state": "NY",
+    "email_url": "mec.cuny.edu"
+  },
+  {
+    "college_name": "MedQuest College",
+    "city": "Louisville",
+    "state": "KY",
+    "email_url": "medquestcollege.edu"
+  },
+  {
+    "college_name": "Memphis College of Art",
+    "city": "Memphis",
+    "state": "TN",
+    "email_url": "mca.edu"
+  },
+  {
+    "college_name": "Mendocino College",
+    "city": "Ukiah",
+    "state": "CA",
+    "email_url": "mendocinocollege.edu"
+  },
+  {
+    "college_name": "Menlo College",
+    "city": "Atherton",
+    "state": "CA",
+    "email_url": "menlo.edu"
+  },
+  {
+    "college_name": "Mercer University",
+    "city": "Macon",
+    "state": "GA",
+    "email_url": "mercer.edu"
+  },
+  {
+    "college_name": "Mercy College",
+    "city": "Dobbs Ferry",
+    "state": "NY",
+    "email_url": "mercy.edu"
+  },
+  {
+    "college_name": "Mercy College of Ohio",
+    "city": "Toledo",
+    "state": "OH",
+    "email_url": "mercycollege.edu"
+  },
+  {
+    "college_name": "Mercyhurst University",
+    "city": "Erie",
+    "state": "PA",
+    "email_url": "mercyhurst.edu"
+  },
+  {
+    "college_name": "Meredith College",
+    "city": "Raleigh",
+    "state": "NC",
+    "email_url": "meredith.edu"
+  },
+  {
+    "college_name": "Meridian University",
+    "city": "Petaluma",
+    "state": "CA",
+    "email_url": "meridianuniversity.edu"
+  },
+  {
+    "college_name": "Messiah College",
+    "city": "Grantham",
+    "state": "PA",
+    "email_url": "messiah.edu"
+  },
+  {
+    "college_name": "Methodist University",
+    "city": "Fayetteville",
+    "state": "NC",
+    "email_url": "methodist.edu"
+  },
+  {
+    "college_name": "Metropolitan College of New York",
+    "city": "New York",
+    "state": "NY",
+    "email_url": "mcny.edu"
+  },
+  {
+    "college_name": "Metropolitan State University",
+    "city": "Saint Paul",
+    "state": "MN",
+    "email_url": "metrostate.edu"
+  },
+  {
+    "college_name": "Metropolitan State University of Denver",
+    "city": "Denver",
+    "state": "CO",
+    "email_url": "mscd.edu"
+  },
+  {
+    "college_name": "Miami International University of Art and Design",
+    "city": "Miami",
+    "state": "FL",
+    "email_url": "artinstitutes.edumiami/"
+  },
+  {
+    "college_name": "Miami University",
+    "city": "Oxford",
+    "state": "OH",
+    "email_url": "muohio.edu"
+  },
+  {
+    "college_name": "Michigan State University",
+    "city": "East Lansing",
+    "state": "MI",
+    "email_url": "msu.edu"
+  },
+  {
+    "college_name": "Michigan Technological University",
+    "city": "Houghton",
+    "state": "MI",
+    "email_url": "mtu.edu"
+  },
+  {
+    "college_name": "MidAmerica Nazarene University",
+    "city": "Olathe",
+    "state": "KS",
+    "email_url": "mnu.edu"
+  },
+  {
+    "college_name": "Mid-Atlantic Christian University",
+    "city": "Elizabeth City",
+    "state": "NC",
+    "email_url": "macuniversity.edu"
+  },
+  {
+    "college_name": "Mid-Continent University",
+    "city": "Mayfield",
+    "state": "KY",
+    "email_url": "midcontinent.edu"
+  },
+  {
+    "college_name": "Middle Georgia College",
+    "city": "Cochran",
+    "state": "GA",
+    "email_url": "mgc.edu"
+  },
+  {
+    "college_name": "Middle Tennessee State University",
+    "city": "Murfreesboro",
+    "state": "TN",
+    "email_url": "mtsu.edu"
+  },
+  {
+    "college_name": "Middlebury College",
+    "city": "Middlebury",
+    "state": "VT",
+    "email_url": "middlebury.edu"
+  },
+  {
+    "college_name": "Midland College",
+    "city": "Midland",
+    "state": "TX",
+    "email_url": "midland.edu"
+  },
+  {
+    "college_name": "Midland University",
+    "city": "Fremont",
+    "state": "NE",
+    "email_url": "mlc.edu"
+  },
+  {
+    "college_name": "Midway University",
+    "city": "Midway",
+    "state": "KY",
+    "email_url": "midway.edu"
+  },
+  {
+    "college_name": "Midwest University",
+    "city": "Wentzville",
+    "state": "MO",
+    "email_url": "midwest.edu"
+  },
+  {
+    "college_name": "Midwestern State University",
+    "city": "Wichita Falls",
+    "state": "TX",
+    "email_url": "mwsu.edu"
+  },
+  {
+    "college_name": "Midwestern University",
+    "city": "Downers Grove",
+    "state": "IL",
+    "email_url": "midwestern.edu"
+  },
+  {
+    "college_name": "Midwives College of Utah",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "email_url": "midwifery.edu"
+  },
+  {
+    "college_name": "Milwaukee Institute of Art Design",
+    "city": "Milwaukee",
+    "state": "WI",
+    "email_url": "miad.edu"
+  },
+  {
+    "college_name": "Mineral Area College",
+    "city": "Park Hills",
+    "state": "MO",
+    "email_url": "mineralarea.edu"
+  },
+  {
+    "college_name": "Minneapolis College of Art and Design",
+    "city": "Minneapolis",
+    "state": "MN",
+    "email_url": "mcad.edu"
+  },
+  {
+    "college_name": "Minnesota State University - Moorhead",
+    "city": "Moorhead",
+    "state": "MN",
+    "email_url": "mnstate.edu"
+  },
+  {
+    "college_name": "Minot State University",
+    "city": "Minot",
+    "state": "ND",
+    "email_url": "minotstateu.edu"
+  },
+  {
+    "college_name": "Miracosta College",
+    "city": "Oceanside",
+    "state": "CA",
+    "email_url": "miracosta.edu"
+  },
+  {
+    "college_name": "Misericordia University",
+    "city": "Dallas",
+    "state": "PA",
+    "email_url": "misericordia.edu"
+  },
+  {
+    "college_name": "Mississippi College",
+    "city": "Clinton",
+    "state": "MS",
+    "email_url": "mc.edu"
+  },
+  {
+    "college_name": "Mississippi State University",
+    "city": "Mississippi State",
+    "state": "MS",
+    "email_url": "msstate.edu"
+  },
+  {
+    "college_name": "Mississippi University for Women",
+    "city": "Columbus",
+    "state": "MS",
+    "email_url": "muw.edu"
+  },
+  {
+    "college_name": "Mississippi Valley State University",
+    "city": "Itta Bena",
+    "state": "MS",
+    "email_url": "mvsu.edu"
+  },
+  {
+    "college_name": "Missouri Baptist University",
+    "city": "Saint Louis",
+    "state": "MO",
+    "email_url": "mobap.edu"
+  },
+  {
+    "college_name": "Missouri Southern State University",
+    "city": "Joplin",
+    "state": "MO",
+    "email_url": "mssu.edu"
+  },
+  {
+    "college_name": "Missouri State University",
+    "city": "Springfield",
+    "state": "MO",
+    "email_url": "missouristate.edu"
+  },
+  {
+    "college_name": "Missouri State University - West Plains",
+    "city": "West Plains",
+    "state": "MO",
+    "email_url": "wp.smsu.edu"
+  },
+  {
+    "college_name": "Missouri Tech",
+    "city": "St. Charles",
+    "state": "MO",
+    "email_url": "motech.edu"
+  },
+  {
+    "college_name": "Missouri Valley College",
+    "city": "Marshall",
+    "state": "MO",
+    "email_url": "moval.edu"
+  },
+  {
+    "college_name": "Missouri Western State University",
+    "city": "Saint Joseph",
+    "state": "MO",
+    "email_url": "missouriwestern.edu"
+  },
+  {
+    "college_name": "Monmouth College",
+    "city": "Monmouth",
+    "state": "IL",
+    "email_url": "monm.edu"
+  },
+  {
+    "college_name": "Monmouth University",
+    "city": "West Long Branch",
+    "state": "NJ",
+    "email_url": "monmouth.edu"
+  },
+  {
+    "college_name": "Montana Bible College",
+    "city": "Bozeman",
+    "state": "MT",
+    "email_url": "montanabiblecollege.edu"
+  },
+  {
+    "college_name": "Montana State University - Billings",
+    "city": "Billings",
+    "state": "MT",
+    "email_url": "msubillings.edu"
+  },
+  {
+    "college_name": "Montana State University - Bozeman",
+    "city": "Bozeman",
+    "state": "MT",
+    "email_url": "montana.edu"
+  },
+  {
+    "college_name": "Montana State University - Great Falls College of Technology",
+    "city": "Great Falls",
+    "state": "MT",
+    "email_url": "msugf.edu"
+  },
+  {
+    "college_name": "Montana State University - Northern",
+    "city": "Havre",
+    "state": "MT",
+    "email_url": "msun.edu"
+  },
+  {
+    "college_name": "Montana Tech of the University of Montana",
+    "city": "Butte",
+    "state": "MT",
+    "email_url": "mtech.edu"
+  },
+  {
+    "college_name": "Montclair State University",
+    "city": "Montclair",
+    "state": "NJ",
+    "email_url": "montclair.edu"
+  },
+  {
+    "college_name": "Montgomery College",
+    "city": "Rockville",
+    "state": "MD",
+    "email_url": "montgomerycollege.edu"
+  },
+  {
+    "college_name": "Montreat College",
+    "city": "Montreat",
+    "state": "NC",
+    "email_url": "montreat.edu"
+  },
+  {
+    "college_name": "Montserrat College of Art",
+    "city": "Beverly",
+    "state": "MA",
+    "email_url": "montserrat.edu"
+  },
+  {
+    "college_name": "Moore College of Art and Design",
+    "city": "Philadelphia",
+    "state": "PA",
+    "email_url": "moore.edu"
+  },
+  {
+    "college_name": "Moorpark College",
+    "city": "Moorpark",
+    "state": "CA",
+    "email_url": "moorparkcollege.edu"
+  },
+  {
+    "college_name": "Moravian College",
+    "city": "Bethlehem",
+    "state": "PA",
+    "email_url": "moravian.edu"
+  },
+  {
+    "college_name": "Morehead State University",
+    "city": "Morehead",
+    "state": "KY",
+    "email_url": "moreheadstate.edu"
+  },
+  {
+    "college_name": "Morehouse College",
+    "city": "Atlanta",
+    "state": "GA",
+    "email_url": "morehouse.edu"
+  },
+  {
+    "college_name": "Morgan State University",
+    "city": "Baltimore",
+    "state": "MD",
+    "email_url": "morgan.edu"
+  },
+  {
+    "college_name": "Morrison Institute of Technology",
+    "city": "Morrison",
+    "state": "IL",
+    "email_url": "morrison.tec.il.us"
+  },
+  {
+    "college_name": "Morthland College",
+    "city": "West Frankfort",
+    "state": "IL",
+    "email_url": "morthland.edu"
+  },
+  {
+    "college_name": "Morton College",
+    "city": "Cicero",
+    "state": "IL",
+    "email_url": "morton.edu"
+  },
+  {
+    "college_name": "Mount Ida College",
+    "city": "Newton Centre",
+    "state": "MA",
+    "email_url": "mountida.edu"
+  },
+  {
+    "college_name": "Mount Washington College",
+    "city": "Manchester",
+    "state": "NH",
+    "email_url": "hesser.edu"
+  },
+  {
+    "college_name": "Mountain State University",
+    "city": "Beckley",
+    "state": "WV",
+    "email_url": "mountainstate.edu"
+  },
+  {
+    "college_name": "Murray State College",
+    "city": "Tishomingo",
+    "state": "OK",
+    "email_url": "mscok.edu"
+  },
+  {
+    "college_name": "Murray State University",
+    "city": "Murray",
+    "state": "KY",
+    "email_url": "murraystate.edu"
+  },
+  {
+    "college_name": "Nebraska Wesleyan University",
+    "city": "Lincoln",
+    "state": "NE",
+    "email_url": "nebrwesleyan.edu"
+  },
+  {
+    "college_name": "Neumann University",
+    "city": "Aston",
+    "state": "PA",
+    "email_url": "neumann.edu"
+  },
+  {
+    "college_name": "Nevada State College - Henderson",
+    "city": "Henderson",
+    "state": "NV",
+    "email_url": "nsc.nevada.edu"
+  },
+  {
+    "college_name": "New England College",
+    "city": "Henniker",
+    "state": "NH",
+    "email_url": "nec.edu"
+  },
+  {
+    "college_name": "New England Culinary Institute",
+    "city": "Montpelier",
+    "state": "VT",
+    "email_url": "neci.edu"
+  },
+  {
+    "college_name": "New England Culinary Institute - Essex",
+    "city": "Essex Junction",
+    "state": "VT",
+    "email_url": "neci.edu"
+  },
+  {
+    "college_name": "New England Institute of Technology",
+    "city": "East Greenwich",
+    "state": "RI",
+    "email_url": "neit.edu"
+  },
+  {
+    "college_name": "New Hampshire Institute of Art",
+    "city": "Manchester",
+    "state": "NH",
+    "email_url": "nhia.edu"
+  },
+  {
+    "college_name": "New Jersey City University",
+    "city": "Jersey City",
+    "state": "NJ",
+    "email_url": "njcu.edu"
+  },
+  {
+    "college_name": "New Jersey Institute of Technology",
+    "city": "Newark",
+    "state": "NJ",
+    "email_url": "njit.edu"
+  },
+  {
+    "college_name": "New Mexico Highlands University",
+    "city": "Las Vegas",
+    "state": "NM",
+    "email_url": "nmhu.edu"
+  },
+  {
+    "college_name": "New Mexico State University",
+    "city": "Las Cruces",
+    "state": "NM",
+    "email_url": "nmsu.edu"
+  },
+  {
+    "college_name": "New York Institute of Art and Design",
+    "city": "New York",
+    "state": "NY",
+    "email_url": "sheffield.edu"
+  },
+  {
+    "college_name": "New York Institute of Technology",
+    "city": "New York",
+    "state": "NY",
+    "email_url": "nyit.edu"
+  },
+  {
+    "college_name": "New York University",
+    "city": "New York",
+    "state": "NY",
+    "email_url": "nyu.edu"
+  },
+  {
+    "college_name": "Newbury College",
+    "city": "Brookline",
+    "state": "MA",
+    "email_url": "newbury.edu"
+  },
+  {
+    "college_name": "Newman University",
+    "city": "Wichita",
+    "state": "KS",
+    "email_url": "newmanu.edu"
+  },
+  {
+    "college_name": "Nicholls State University",
+    "city": "Thibodaux",
+    "state": "LA",
+    "email_url": "nicholls.edu"
+  },
+  {
+    "college_name": "Norfolk State University",
+    "city": "Norfolk",
+    "state": "VA",
+    "email_url": "nsu.edu"
+  },
+  {
+    "college_name": "North Carolina A & T State University",
+    "city": "Greensboro",
+    "state": "NC",
+    "email_url": "ncat.edu"
+  },
+  {
+    "college_name": "North Carolina State University",
+    "city": "Raleigh",
+    "state": "NC",
+    "email_url": "ncsu.edu"
+  },
+  {
+    "college_name": "North Carolina Wesleyan College",
+    "city": "Rocky Mount",
+    "state": "NC",
+    "email_url": "ncwc.edu"
+  },
+  {
+    "college_name": "North Central College",
+    "city": "Naperville",
+    "state": "IL",
+    "email_url": "northcentralcollege.edu"
+  },
+  {
+    "college_name": "North Central Missouri College",
+    "city": "Trenton",
+    "state": "MO",
+    "email_url": "ncmissouri.edu"
+  },
+  {
+    "college_name": "North Central State College",
+    "city": "Mansfield",
+    "state": "OH",
+    "email_url": "ncstatecollege.edu"
+  },
+  {
+    "college_name": "North Central Texas College",
+    "city": "Gainesville",
+    "state": "TX",
+    "email_url": "nctc.edu"
+  },
+  {
+    "college_name": "North Central University",
+    "city": "Minneapolis",
+    "state": "MN",
+    "email_url": "northcentral.edu"
+  },
+  {
+    "college_name": "North Park University",
+    "city": "Chicago",
+    "state": "IL",
+    "email_url": "northpark.edu"
+  },
+  {
+    "college_name": "Northcentral University",
+    "city": "San Diego",
+    "state": "CA",
+    "email_url": "ncu.edu"
+  },
+  {
+    "college_name": "Northeastern Illinois University",
+    "city": "Chicago",
+    "state": "IL",
+    "email_url": "neiu.edu"
+  },
+  {
+    "college_name": "Northeastern State University",
+    "city": "Tahlequah",
+    "state": "OK",
+    "email_url": "nsuok.edu"
+  },
+  {
+    "college_name": "Northeastern University",
+    "city": "Boston",
+    "state": "MA",
+    "email_url": "northeastern.edu"
+  },
+  {
+    "college_name": "Northern Arizona University",
+    "city": "Flagstaff",
+    "state": "AZ",
+    "email_url": "nau.edu"
+  },
+  {
+    "college_name": "Northern Illinois University",
+    "city": "Dekalb",
+    "state": "IL",
+    "email_url": "niu.edu"
+  },
+  {
+    "college_name": "Northern Kentucky University",
+    "city": "Highland Heights",
+    "state": "KY",
+    "email_url": "nku.edu"
+  },
+  {
+    "college_name": "Northern Michigan University",
+    "city": "Marquette",
+    "state": "MI",
+    "email_url": "nmu.edu"
+  },
+  {
+    "college_name": "Northern State University",
+    "city": "Aberdeen",
+    "state": "SD",
+    "email_url": "northern.edu"
+  },
+  {
+    "college_name": "Northland College",
+    "city": "Ashland",
+    "state": "WI",
+    "email_url": "northland.edu"
+  },
+  {
+    "college_name": "Northwest Missouri State University",
+    "city": "Maryville",
+    "state": "MO",
+    "email_url": "nwmissouri.edu"
+  },
+  {
+    "college_name": "Northwest Nazarene University",
+    "city": "Nampa",
+    "state": "ID",
+    "email_url": "nnu.edu"
+  },
+  {
+    "college_name": "Northwest University",
+    "city": "Kirkland",
+    "state": "WA",
+    "email_url": "northwestu.edu"
+  },
+  {
+    "college_name": "Northwest Vista College",
+    "city": "San Antonio",
+    "state": "TX",
+    "email_url": "alamo.edunvc"
+  },
+  {
+    "college_name": "Northwestern College",
+    "city": "Orange City",
+    "state": "IA",
+    "email_url": "nwciowa.edu"
+  },
+  {
+    "college_name": "Northwestern Michigan College",
+    "city": "Traverse City",
+    "state": "MI",
+    "email_url": "nmc.edu"
+  },
+  {
+    "college_name": "Northwestern Oklahoma State University",
+    "city": "Alva",
+    "state": "OK",
+    "email_url": "nwosu.edu"
+  },
+  {
+    "college_name": "Northwestern Polytechnic University",
+    "city": "Fremont",
+    "state": "CA",
+    "email_url": "npu.edu"
+  },
+  {
+    "college_name": "Northwestern State University of Louisiana",
+    "city": "Natchitoches",
+    "state": "LA",
+    "email_url": "nsula.edu"
+  },
+  {
+    "college_name": "Northwestern University",
+    "city": "Evanston",
+    "state": "IL",
+    "email_url": "northwestern.edu"
+  },
+  {
+    "college_name": "Northwood University",
+    "city": "Midland",
+    "state": "MI",
+    "email_url": "northwood.edu"
+  },
+  {
+    "college_name": "Norwich University",
+    "city": "Northfield",
+    "state": "VT",
+    "email_url": "norwich.edu"
+  },
+  {
+    "college_name": "Nova Southeastern University",
+    "city": "Fort Lauderdale",
+    "state": "FL",
+    "email_url": "nova.edu"
+  },
+  {
+    "college_name": "Oakland University",
+    "city": "Rochester",
+    "state": "MI",
+    "email_url": "oakland.edu"
+  },
+  {
+    "college_name": "Oberlin College",
+    "city": "Oberlin",
+    "state": "OH",
+    "email_url": "oberlin.edu"
+  },
+  {
+    "college_name": "Occidental College",
+    "city": "Los Angeles",
+    "state": "CA",
+    "email_url": "oxy.edu"
+  },
+  {
+    "college_name": "Ohio Christian University",
+    "city": "Circleville",
+    "state": "OH",
+    "email_url": "ohiochristian.edu"
+  },
+  {
+    "college_name": "Ohio College of Massotherapy Inc",
+    "city": "Akron",
+    "state": "OH",
+    "email_url": "ocm.edu"
+  },
+  {
+    "college_name": "Ohio Dominican University",
+    "city": "Columbus",
+    "state": "OH",
+    "email_url": "ohiodominican.edu"
+  },
+  {
+    "college_name": "Ohio Northern University",
+    "city": "Ada",
+    "state": "OH",
+    "email_url": "onu.edu"
+  },
+  {
+    "college_name": "Ohio State University",
+    "city": "Columbus",
+    "state": "OH",
+    "email_url": "osu.edu"
+  },
+  {
+    "college_name": "Ohio Valley University",
+    "city": "Vienna",
+    "state": "WV",
+    "email_url": "ovc.edu"
+  },
+  {
+    "college_name": "Ohio Wesleyan University",
+    "city": "Delaware",
+    "state": "OH",
+    "email_url": "owu.edu"
+  },
+  {
+    "college_name": "Oklahoma Baptist University",
+    "city": "Shawnee",
+    "state": "OK",
+    "email_url": "okbu.edu"
+  },
+  {
+    "college_name": "Oklahoma Christian University",
+    "city": "Oklahoma City",
+    "state": "OK",
+    "email_url": "oc.edu"
+  },
+  {
+    "college_name": "Oklahoma City University",
+    "city": "Oklahoma City",
+    "state": "OK",
+    "email_url": "okcu.edu"
+  },
+  {
+    "college_name": "Oklahoma Panhandle State University",
+    "city": "Goodwell",
+    "state": "OK",
+    "email_url": "opsu.edu"
+  },
+  {
+    "college_name": "Oklahoma State University",
+    "city": "Stillwater",
+    "state": "OK",
+    "email_url": "pio.okstate.edu"
+  },
+  {
+    "college_name": "Oklahoma State University - Oklahoma City",
+    "city": "Oklahoma City",
+    "state": "OK",
+    "email_url": "osuokc.edu"
+  },
+  {
+    "college_name": "Oklahoma Wesleyan University",
+    "city": "Bartlesville",
+    "state": "OK",
+    "email_url": "okwu.edu"
+  },
+  {
+    "college_name": "Old Dominion University",
+    "city": "Norfolk",
+    "state": "VA",
+    "email_url": "odu.edu"
+  },
+  {
+    "college_name": "Oral Roberts University",
+    "city": "Tulsa",
+    "state": "OK",
+    "email_url": "oru.edu"
+  },
+  {
+    "college_name": "Oregon College of Art and Craft",
+    "city": "Portland",
+    "state": "OR",
+    "email_url": "ocac.edu"
+  },
+  {
+    "college_name": "Oregon Institute of Technology",
+    "city": "Klamath Falls",
+    "state": "OR",
+    "email_url": "oit.edu"
+  },
+  {
+    "college_name": "Otis College of Art and Design",
+    "city": "Los Angeles",
+    "state": "CA",
+    "email_url": "otis.edu"
+  },
+  {
+    "college_name": "Ottawa University",
+    "city": "Ottawa",
+    "state": "KS",
+    "email_url": "ottawa.edu"
+  },
+  {
+    "college_name": "Otterbein University",
+    "city": "Westerville",
+    "state": "OH",
+    "email_url": "otterbein.edu"
+  },
+  {
+    "college_name": "Oxnard College",
+    "city": "Oxnard",
+    "state": "CA",
+    "email_url": "oxnardcollege.edu"
+  },
+  {
+    "college_name": "Pace University",
+    "city": "New York",
+    "state": "NY",
+    "email_url": "pace.edu"
+  },
+  {
+    "college_name": "Pacific Islands University",
+    "city": "Mangilao",
+    "state": "GU",
+    "email_url": "piu.edu"
+  },
+  {
+    "college_name": "Pacific Lutheran University",
+    "city": "Tacoma",
+    "state": "WA",
+    "email_url": "plu.edu"
+  },
+  {
+    "college_name": "Pacific Northwest College of Art",
+    "city": "Portland",
+    "state": "OR",
+    "email_url": "pnca.edu"
+  },
+  {
+    "college_name": "Pacific Oaks College",
+    "city": "Pasadena",
+    "state": "CA",
+    "email_url": "pacificoaks.edu"
+  },
+  {
+    "college_name": "Pacific Rim Christian University",
+    "city": "Honolulu",
+    "state": "HI",
+    "email_url": "pacrim.edu"
+  },
+  {
+    "college_name": "Pacific States University",
+    "city": "Los Angeles",
+    "state": "CA",
+    "email_url": "psuca.edu"
+  },
+  {
+    "college_name": "Pacific Union College",
+    "city": "Angwin",
+    "state": "CA",
+    "email_url": "puc.edu"
+  },
+  {
+    "college_name": "Pacific University",
+    "city": "Forest Grove",
+    "state": "OR",
+    "email_url": "pacificu.edu"
+  },
+  {
+    "college_name": "Palm Beach Atlantic University - West Palm Beach",
+    "city": "West Palm Beach",
+    "state": "FL",
+    "email_url": "pba.edu"
+  },
+  {
+    "college_name": "Palo Alto University",
+    "city": "Palo Alto",
+    "state": "CA",
+    "email_url": "paloaltou.edu"
+  },
+  {
+    "college_name": "Peirce College",
+    "city": "Philadelphia",
+    "state": "PA",
+    "email_url": "peirce.edu"
+  },
+  {
+    "college_name": "Pennsylvania College of Art and Design",
+    "city": "Lancaster",
+    "state": "PA",
+    "email_url": "pcad.edu"
+  },
+  {
+    "college_name": "Pennsylvania College of Technology",
+    "city": "Williamsport",
+    "state": "PA",
+    "email_url": "pct.edu"
+  },
+  {
+    "college_name": "Pennsylvania Institute of Technology",
+    "city": "Media",
+    "state": "PA",
+    "email_url": "pit.edu"
+  },
+  {
+    "college_name": "Pennsylvania State University",
+    "city": "University Park",
+    "state": "PA",
+    "email_url": "psu.edu"
+  },
+  {
+    "college_name": "Pensacola State College",
+    "city": "Pensacola",
+    "state": "FL",
+    "email_url": "pjc.edu"
+  },
+  {
+    "college_name": "Pepperdine University",
+    "city": "Malibu",
+    "state": "CA",
+    "email_url": "pepperdine.edu"
+  },
+  {
+    "college_name": "Perelandra College",
+    "city": "La Mesa",
+    "state": "CA",
+    "email_url": "perelandra.edu"
+  },
+  {
+    "college_name": "Philadelphia University",
+    "city": "Philadelphia",
+    "state": "PA",
+    "email_url": "philau.edu"
+  },
+  {
+    "college_name": "Piedmont College",
+    "city": "Demorest",
+    "state": "GA",
+    "email_url": "piedmont.edu"
+  },
+  {
+    "college_name": "Piedmont International University",
+    "city": "Winston-Salem",
+    "state": "NC",
+    "email_url": "piedmontu.edu"
+  },
+  {
+    "college_name": "Pierce College",
+    "city": "Puyallup",
+    "state": "WA",
+    "email_url": "pierce.ctc.edu"
+  },
+  {
+    "college_name": "Pittsburg State University",
+    "city": "Pittsburg",
+    "state": "KS",
+    "email_url": "pittstate.edu"
+  },
+  {
+    "college_name": "Plymouth State University",
+    "city": "Plymouth",
+    "state": "NH",
+    "email_url": "plymouth.edu"
+  },
+  {
+    "college_name": "Polk State College",
+    "city": "Winter Haven",
+    "state": "FL",
+    "email_url": "polk.edu"
+  },
+  {
+    "college_name": "Polytechnic Institute of New York University",
+    "city": "Brooklyn",
+    "state": "NY",
+    "email_url": "poly.edu"
+  },
+  {
+    "college_name": "Pomona College",
+    "city": "Claremont",
+    "state": "CA",
+    "email_url": "pomona.edu"
+  },
+  {
+    "college_name": "Post University",
+    "city": "Waterbury",
+    "state": "CT",
+    "email_url": "post.edu"
+  },
+  {
+    "college_name": "Prairie State College",
+    "city": "Chicago Heights",
+    "state": "IL",
+    "email_url": "prairiestate.edu"
+  },
+  {
+    "college_name": "Pratt Institute",
+    "city": "Brooklyn",
+    "state": "NY",
+    "email_url": "pratt.edu"
+  },
+  {
+    "college_name": "Presbyterian College",
+    "city": "Clinton",
+    "state": "SC",
+    "email_url": "presby.edu"
+  },
+  {
+    "college_name": "Princeton University",
+    "city": "Princeton",
+    "state": "NJ",
+    "email_url": "princeton.edu"
+  },
+  {
+    "college_name": "Providence College",
+    "city": "Providence",
+    "state": "RI",
+    "email_url": "providence.edu"
+  },
+  {
+    "college_name": "Purdue University",
+    "city": "West Lafayette",
+    "state": "IN",
+    "email_url": "purdue.edu"
+  },
+  {
+    "college_name": "Purdue University - North Central",
+    "city": "Westville",
+    "state": "IN",
+    "email_url": "pnc.edu"
+  },
+  {
+    "college_name": "Purdue University Calumet",
+    "city": "Hammond",
+    "state": "IN",
+    "email_url": "calumet.purdue.edu"
+  },
+  {
+    "college_name": "Queens College",
+    "city": "Queens",
+    "state": "NY",
+    "email_url": "qc.cuny.edu"
+  },
+  {
+    "college_name": "Quincy University",
+    "city": "Quincy",
+    "state": "IL",
+    "email_url": "quincy.edu"
+  },
+  {
+    "college_name": "Quinnipiac University",
+    "city": "Hamden",
+    "state": "CT",
+    "email_url": "quinnipiac.edu"
+  },
+  {
+    "college_name": "Radford University",
+    "city": "Radford",
+    "state": "VA",
+    "email_url": "radford.edu"
+  },
+  {
+    "college_name": "Randall University",
+    "city": "Moore",
+    "state": "OK",
+    "email_url": "hc.edu"
+  },
+  {
+    "college_name": "Reed College",
+    "city": "Portland",
+    "state": "OR",
+    "email_url": "reed.edu"
+  },
+  {
+    "college_name": "Regent University",
+    "city": "Virginia Beach",
+    "state": "VA",
+    "email_url": "regent.edu"
+  },
+  {
+    "college_name": "Regis College",
+    "city": "Weston",
+    "state": "MA",
+    "email_url": "regiscollege.edu"
+  },
+  {
+    "college_name": "Regis University",
+    "city": "Denver",
+    "state": "CO",
+    "email_url": "regis.edu"
+  },
+  {
+    "college_name": "Reinhardt University",
+    "city": "Waleska",
+    "state": "GA",
+    "email_url": "reinhardt.edu"
+  },
+  {
+    "college_name": "Rensselaer Polytechnic Institute",
+    "city": "Troy",
+    "state": "NY",
+    "email_url": "rpi.edu"
+  },
+  {
+    "college_name": "Rhode Island College",
+    "city": "Providence",
+    "state": "RI",
+    "email_url": "ric.edu"
+  },
+  {
+    "college_name": "Rhode Island School of Design",
+    "city": "Providence",
+    "state": "RI",
+    "email_url": "risd.edu"
+  },
+  {
+    "college_name": "Rice University",
+    "city": "Houston",
+    "state": "TX",
+    "email_url": "rice.edu"
+  },
+  {
+    "college_name": "Rider University",
+    "city": "Lawrenceville",
+    "state": "NJ",
+    "email_url": "rider.edu"
+  },
+  {
+    "college_name": "Robert Morris University",
+    "city": "Moon Township",
+    "state": "PA",
+    "email_url": "rmu.edu"
+  },
+  {
+    "college_name": "Robert Morris University - Illinois",
+    "city": "Chicago",
+    "state": "IL",
+    "email_url": "robertmorris.edu"
+  },
+  {
+    "college_name": "Roberts Wesleyan College",
+    "city": "Rochester",
+    "state": "NY",
+    "email_url": "roberts.edu"
+  },
+  {
+    "college_name": "Rochester Institute of Technology",
+    "city": "Rochester",
+    "state": "NY",
+    "email_url": "rit.edu"
+  },
+  {
+    "college_name": "Rockefeller University",
+    "city": "New York",
+    "state": "NY",
+    "email_url": "rockefeller.edu"
+  },
+  {
+    "college_name": "Roger Williams University",
+    "city": "Bristol",
+    "state": "RI",
+    "email_url": "rwu.edu"
+  },
+  {
+    "college_name": "Rogers State University",
+    "city": "Claremore",
+    "state": "OK",
+    "email_url": "rsu.edu"
+  },
+  {
+    "college_name": "Rollins College",
+    "city": "Winter Park",
+    "state": "FL",
+    "email_url": "rollins.edu"
+  },
+  {
+    "college_name": "Roosevelt University",
+    "city": "Chicago",
+    "state": "IL",
+    "email_url": "roosevelt.edu"
+  },
+  {
+    "college_name": "Rutgers University",
+    "city": "New Brunswick",
+    "state": "NJ",
+    "email_url": "rutgers.edu"
+  },
+  {
+    "college_name": "Sacred Heart University",
+    "city": "Fairfield",
+    "state": "CT",
+    "email_url": "sacredheart.edu"
+  },
+  {
+    "college_name": "Saint Ambrose University",
+    "city": "Davenport",
+    "state": "IA",
+    "email_url": "sau.edu"
+  },
+  {
+    "college_name": "Saint Anselm College",
+    "city": "Manchester",
+    "state": "NH",
+    "email_url": "anselm.edu"
+  },
+  {
+    "college_name": "Saint Augustine's University",
+    "city": "Raleigh",
+    "state": "NC",
+    "email_url": "st-aug.edu"
+  },
+  {
+    "college_name": "Saint Cloud State University",
+    "city": "Saint Cloud",
+    "state": "MN",
+    "email_url": "stcloudstate.edu"
+  },
+  {
+    "college_name": "Saint Francis University",
+    "city": "Loretto",
+    "state": "PA",
+    "email_url": "francis.edu"
+  },
+  {
+    "college_name": "Saint Gregory's University",
+    "city": "Shawnee",
+    "state": "OK",
+    "email_url": "stgregorys.edu"
+  },
+  {
+    "college_name": "Saint John Fisher College",
+    "city": "Rochester",
+    "state": "NY",
+    "email_url": "sjfc.edu"
+  },
+  {
+    "college_name": "Saint Johns University",
+    "city": "Collegeville",
+    "state": "MN",
+    "email_url": "csbsju.edu"
+  },
+  {
+    "college_name": "Saint Joseph's University",
+    "city": "Philadelphia",
+    "state": "PA",
+    "email_url": "sju.edu"
+  },
+  {
+    "college_name": "Saint Leo University",
+    "city": "Saint Leo",
+    "state": "FL",
+    "email_url": "saintleo.edu"
+  },
+  {
+    "college_name": "Saint Louis Christian College",
+    "city": "Florissant",
+    "state": "MO",
+    "email_url": "slchristian.edu"
+  },
+  {
+    "college_name": "Saint Louis University",
+    "city": "Saint Louis",
+    "state": "MO",
+    "email_url": "slu.edu"
+  },
+  {
+    "college_name": "Saint Martin's University",
+    "city": "Lacey",
+    "state": "WA",
+    "email_url": "stmartin.edu"
+  },
+  {
+    "college_name": "Saint Mary's College",
+    "city": "Notre Dame",
+    "state": "IN",
+    "email_url": "saintmarys.edu"
+  },
+  {
+    "college_name": "Saint Michaels College",
+    "city": "Colchester",
+    "state": "VT",
+    "email_url": "smcvt.edu"
+  },
+  {
+    "college_name": "Saint Paul's College",
+    "city": "Lawrenceville",
+    "state": "VA",
+    "email_url": "saintpauls.edu"
+  },
+  {
+    "college_name": "Saint Peter's University",
+    "city": "Jersey City",
+    "state": "NJ",
+    "email_url": "spc.edu"
+  },
+  {
+    "college_name": "Saint Thomas University",
+    "city": "Miami Gardens",
+    "state": "FL",
+    "email_url": "stu.edu"
+  },
+  {
+    "college_name": "Saint Xavier University",
+    "city": "Chicago",
+    "state": "IL",
+    "email_url": "sxu.edu"
+  },
+  {
+    "college_name": "Salem International University",
+    "city": "Salem",
+    "state": "WV",
+    "email_url": "salemu.edu"
+  },
+  {
+    "college_name": "Salem State University",
+    "city": "Salem",
+    "state": "MA",
+    "email_url": "salemstate.edu"
+  },
+  {
+    "college_name": "Salve Regina University",
+    "city": "Newport",
+    "state": "RI",
+    "email_url": "salve.edu"
+  },
+  {
+    "college_name": "San Diego State University",
+    "city": "San Diego",
+    "state": "CA",
+    "email_url": "sdsu.edu"
+  },
+  {
+    "college_name": "San Francisco Art Institute",
+    "city": "San Francisco",
+    "state": "CA",
+    "email_url": "sfai.edu"
+  },
+  {
+    "college_name": "San Francisco Conservatory of Music",
+    "city": "San Francisco",
+    "state": "CA",
+    "email_url": "sfcm.edu"
+  },
+  {
+    "college_name": "San Francisco State University",
+    "city": "San Francisco",
+    "state": "CA",
+    "email_url": "sfsu.edu"
+  },
+  {
+    "college_name": "San Jose State University",
+    "city": "San Jose",
+    "state": "CA",
+    "email_url": "sjsu.edu"
+  },
+  {
+    "college_name": "Santa Clara University",
+    "city": "Santa Clara",
+    "state": "CA",
+    "email_url": "scu.edu"
+  },
+  {
+    "college_name": "Santa Fe College",
+    "city": "Gainesville",
+    "state": "FL",
+    "email_url": "sfcollege.edu"
+  },
+  {
+    "college_name": "Santa Fe University of Art and Design",
+    "city": "Santa Fe",
+    "state": "NM",
+    "email_url": "csf.edu"
+  },
+  {
+    "college_name": "Savannah College of Art and Design",
+    "city": "Savannah",
+    "state": "GA",
+    "email_url": "scad.edu"
+  },
+  {
+    "college_name": "Savannah State University",
+    "city": "Savannah",
+    "state": "GA",
+    "email_url": "savannahstate.edu"
+  },
+  {
+    "college_name": "Saybrook University",
+    "city": "Oakland",
+    "state": "CA",
+    "email_url": "saybrook.edu"
+  },
+  {
+    "college_name": "Schreiner University",
+    "city": "Kerrville",
+    "state": "TX",
+    "email_url": "schreiner.edu"
+  },
+  {
+    "college_name": "Seattle Pacific University",
+    "city": "Seattle",
+    "state": "WA",
+    "email_url": "spu.edu"
+  },
+  {
+    "college_name": "Seattle University",
+    "city": "Seattle",
+    "state": "WA",
+    "email_url": "seattleu.edu"
+  },
+  {
+    "college_name": "Selma University",
+    "city": "Selma",
+    "state": "AL",
+    "email_url": "selmauniversity.edu"
+  },
+  {
+    "college_name": "Seminole State College",
+    "city": "Seminole",
+    "state": "OK",
+    "email_url": "sscok.edu"
+  },
+  {
+    "college_name": "Seminole State College of Florida",
+    "city": "Sanford",
+    "state": "FL",
+    "email_url": "seminolestate.edu"
+  },
+  {
+    "college_name": "Seton Hall University",
+    "city": "South Orange",
+    "state": "NJ",
+    "email_url": "shu.edu"
+  },
+  {
+    "college_name": "Shawnee State University",
+    "city": "Portsmouth",
+    "state": "OH",
+    "email_url": "shawnee.edu"
+  },
+  {
+    "college_name": "Siena College",
+    "city": "Loudonville",
+    "state": "NY",
+    "email_url": "siena.edu"
+  },
+  {
+    "college_name": "Siena Heights University",
+    "city": "Adrian",
+    "state": "MI",
+    "email_url": "sienaheights.edu"
+  },
+  {
+    "college_name": "Sierra College",
+    "city": "Rocklin",
+    "state": "CA",
+    "email_url": "sierracollege.edu"
+  },
+  {
+    "college_name": "Sierra Nevada College",
+    "city": "Incline Village",
+    "state": "NV",
+    "email_url": "sierranevada.edu"
+  },
+  {
+    "college_name": "Simmons College",
+    "city": "Boston",
+    "state": "MA",
+    "email_url": "simmons.edu"
+  },
+  {
+    "college_name": "Simpson College",
+    "city": "Indianola",
+    "state": "IA",
+    "email_url": "simpson.edu"
+  },
+  {
+    "college_name": "Simpson University",
+    "city": "Redding",
+    "state": "CA",
+    "email_url": "simpsonu.edu"
+  },
+  {
+    "college_name": "Sinte Gleska University",
+    "city": "Mission",
+    "state": "SD",
+    "email_url": "sintegleska.edu"
+  },
+  {
+    "college_name": "Slippery Rock University",
+    "city": "Slippery Rock",
+    "state": "PA",
+    "email_url": "sru.edu"
+  },
+  {
+    "college_name": "Smith College",
+    "city": "Northampton",
+    "state": "MA",
+    "email_url": "smith.edu"
+  },
+  {
+    "college_name": "Snow College",
+    "city": "Ephraim",
+    "state": "UT",
+    "email_url": "snow.edu"
+  },
+  {
+    "college_name": "Sofia University",
+    "city": "Palo Alto",
+    "state": "CA",
+    "email_url": "sofia.edu"
+  },
+  {
+    "college_name": "Sonoma State University",
+    "city": "Rohnert Park",
+    "state": "CA",
+    "email_url": "sonoma.edu"
+  },
+  {
+    "college_name": "South Carolina State University",
+    "city": "Orangeburg",
+    "state": "SC",
+    "email_url": "scsu.edu"
+  },
+  {
+    "college_name": "South Dakota State University",
+    "city": "Brookings",
+    "state": "SD",
+    "email_url": "www3.sdstate.edu"
+  },
+  {
+    "college_name": "South Florida Bible College",
+    "city": "Deerfield Beach",
+    "state": "FL",
+    "email_url": "sfbc.edu"
+  },
+  {
+    "college_name": "Southern Connecticut State University",
+    "city": "New Haven",
+    "state": "CT",
+    "email_url": "southernct.edu"
+  },
+  {
+    "college_name": "Southern Illinois University Carbondale",
+    "city": "Carbondale",
+    "state": "IL",
+    "email_url": "siuc.edu"
+  },
+  {
+    "college_name": "Southern Illinois University - Edwardsville",
+    "city": "Edwardsville",
+    "state": "IL",
+    "email_url": "siue.edu"
+  },
+  {
+    "college_name": "Southern Methodist College",
+    "city": "Orangeburg",
+    "state": "SC",
+    "email_url": "smcollege.edu"
+  },
+  {
+    "college_name": "Southern Methodist University",
+    "city": "Dallas",
+    "state": "TX",
+    "email_url": "smu.edu"
+  },
+  {
+    "college_name": "Southern Nazarene University",
+    "city": "Bethany",
+    "state": "OK",
+    "email_url": "snu.edu"
+  },
+  {
+    "college_name": "Southern New Hampshire University",
+    "city": "Manchester",
+    "state": "NH",
+    "email_url": "snhu.edu"
+  },
+  {
+    "college_name": "Southern Oregon University",
+    "city": "Ashland",
+    "state": "OR",
+    "email_url": "sou.edu"
+  },
+  {
+    "college_name": "Southern Polytechnic State University",
+    "city": "Marietta",
+    "state": "GA",
+    "email_url": "spsu.edu"
+  },
+  {
+    "college_name": "Southern University - New Orleans",
+    "city": "New Orleans",
+    "state": "LA",
+    "email_url": "suno.edu"
+  },
+  {
+    "college_name": "Southern University - Shreveport",
+    "city": "Shreveport",
+    "state": "LA",
+    "email_url": "susla.edu"
+  },
+  {
+    "college_name": "Southern University and A & M College",
+    "city": "Baton Rouge",
+    "state": "LA",
+    "email_url": "subr.edu"
+  },
+  {
+    "college_name": "Southern Utah University",
+    "city": "Cedar City",
+    "state": "UT",
+    "email_url": "suu.edu"
+  },
+  {
+    "college_name": "Southern Vermont College",
+    "city": "Bennington",
+    "state": "VT",
+    "email_url": "svc.edu"
+  },
+  {
+    "college_name": "Southern Virginia University",
+    "city": "Buena Vista",
+    "state": "VA",
+    "email_url": "southernvirginia.edu"
+  },
+  {
+    "college_name": "Southern Wesleyan University",
+    "city": "Central",
+    "state": "SC",
+    "email_url": "swu.edu"
+  },
+  {
+    "college_name": "Southwest Applied Technology College",
+    "city": "Cedar City",
+    "state": "UT",
+    "email_url": "swatc.tec.ut.us"
+  },
+  {
+    "college_name": "Southwest Baptist University",
+    "city": "Bolivar",
+    "state": "MO",
+    "email_url": "sbuniv.edu"
+  },
+  {
+    "college_name": "Southwest Minnesota State University",
+    "city": "Marshall",
+    "state": "MN",
+    "email_url": "smsu.edu"
+  },
+  {
+    "college_name": "Southwest University",
+    "city": "Kenner",
+    "state": "LA",
+    "email_url": "southwest.edu"
+  },
+  {
+    "college_name": "Southwestern Christian University",
+    "city": "Bethany",
+    "state": "OK",
+    "email_url": "swcu.edu"
+  },
+  {
+    "college_name": "Southwestern Illinois College",
+    "city": "Belleville",
+    "state": "IL",
+    "email_url": "swic.edu"
+  },
+  {
+    "college_name": "Southwestern Indian Polytechnic Institute",
+    "city": "Albuquerque",
+    "state": "NM",
+    "email_url": "sipi.bia.edu"
+  },
+  {
+    "college_name": "Southwestern Michigan College",
+    "city": "Dowagiac",
+    "state": "MI",
+    "email_url": "swmich.edu"
+  },
+  {
+    "college_name": "Southwestern Oklahoma State University",
+    "city": "Weatherford",
+    "state": "OK",
+    "email_url": "swosu.edu"
+  },
+  {
+    "college_name": "Southwestern University",
+    "city": "Georgetown",
+    "state": "TX",
+    "email_url": "southwestern.edu"
+  },
+  {
+    "college_name": "Spalding University",
+    "city": "Louisville",
+    "state": "KY",
+    "email_url": "spalding.edu"
+  },
+  {
+    "college_name": "Spencerian College - Louisville",
+    "city": "Louisville",
+    "state": "KY",
+    "email_url": "spencerian.edu"
+  },
+  {
+    "college_name": "Spring Arbor University",
+    "city": "Spring Arbor",
+    "state": "MI",
+    "email_url": "arbor.edu"
+  },
+  {
+    "college_name": "Springfield College",
+    "city": "Springfield",
+    "state": "MA",
+    "email_url": "springfieldcollege.edu"
+  },
+  {
+    "college_name": "St Vincent's College",
+    "city": "Bridgeport",
+    "state": "CT",
+    "email_url": "stvincentscollege.edu"
+  },
+  {
+    "college_name": "St. Bonaventure University",
+    "city": "St. Bonaventure",
+    "state": "NY",
+    "email_url": "sbu.edu"
+  },
+  {
+    "college_name": "St. Catherine University",
+    "city": "St. Paul",
+    "state": "MN",
+    "email_url": "stkate.edu"
+  },
+  {
+    "college_name": "St. Edward's University",
+    "city": "Austin",
+    "state": "TX",
+    "email_url": "stedwards.edu"
+  },
+  {
+    "college_name": "St. Francis College",
+    "city": "Brooklyn Heights",
+    "state": "NY",
+    "email_url": "sfc.edu"
+  },
+  {
+    "college_name": "St. John's College",
+    "city": "Annapolis",
+    "state": "MD",
+    "email_url": "sjc.edu"
+  },
+  {
+    "college_name": "St. John's University",
+    "city": "Queens",
+    "state": "NY",
+    "email_url": "stjohns.edu"
+  },
+  {
+    "college_name": "St. Lawrence University",
+    "city": "Canton",
+    "state": "NY",
+    "email_url": "stlawu.edu"
+  },
+  {
+    "college_name": "St. Luke's College",
+    "city": "Sioux City",
+    "state": "IA",
+    "email_url": "stlukescollege.edu"
+  },
+  {
+    "college_name": "St. Mary's College of Maryland",
+    "city": "Saint Mary's City",
+    "state": "MD",
+    "email_url": "smcm.edu"
+  },
+  {
+    "college_name": "St. Mary's University",
+    "city": "San Antonio",
+    "state": "TX",
+    "email_url": "stmarytx.edu"
+  },
+  {
+    "college_name": "St. Petersburg College",
+    "city": "Clearwater",
+    "state": "FL",
+    "email_url": "spcollege.edu"
+  },
+  {
+    "college_name": "St. Philip's College",
+    "city": "San Antonio",
+    "state": "TX",
+    "email_url": "alamo.eduspc"
+  },
+  {
+    "college_name": "St. Thomas Aquinas College",
+    "city": "Sparkill",
+    "state": "NY",
+    "email_url": "stac.edu"
+  },
+  {
+    "college_name": "Stanford University",
+    "city": "Stanford",
+    "state": "CA",
+    "email_url": "stanford.edu"
+  },
+  {
+    "college_name": "Stephens College",
+    "city": "Columbia",
+    "state": "MO",
+    "email_url": "stephens.edu"
+  },
+  {
+    "college_name": "Sterling College",
+    "city": "Sterling",
+    "state": "KS",
+    "email_url": "sterling.edu"
+  },
+  {
+    "college_name": "Stetson University",
+    "city": "DeLand",
+    "state": "FL",
+    "email_url": "stetson.edu"
+  },
+  {
+    "college_name": "Stevens Institute of Technology",
+    "city": "Hoboken",
+    "state": "NJ",
+    "email_url": "stevens.edu"
+  },
+  {
+    "college_name": "Stevenson University",
+    "city": "Stevenson",
+    "state": "MD",
+    "email_url": "stevenson.edu"
+  },
+  {
+    "college_name": "Stockton University",
+    "city": "Galloway",
+    "state": "NJ",
+    "email_url": "stockton.edu"
+  },
+  {
+    "college_name": "Stone Child College",
+    "city": "Box Elder",
+    "state": "MT",
+    "email_url": "stonechild.edu"
+  },
+  {
+    "college_name": "Stonehill College",
+    "city": "Easton",
+    "state": "MA",
+    "email_url": "stonehill.edu"
+  },
+  {
+    "college_name": "Strayer University",
+    "city": "Washington",
+    "state": "DC",
+    "email_url": "strayer.edu"
+  },
+  {
+    "college_name": "Suffolk University",
+    "city": "Boston",
+    "state": "MA",
+    "email_url": "suffolk.edu"
+  },
+  {
+    "college_name": "SUNY - Albany",
+    "city": "Albany",
+    "state": "NY",
+    "email_url": "albany.edu"
+  },
+  {
+    "college_name": "SUNY - Binghamton",
+    "city": "Binghamton",
+    "state": "NY",
+    "email_url": "binghamton.edu"
+  },
+  {
+    "college_name": "SUNY - Buffalo",
+    "city": "Buffalo",
+    "state": "NY",
+    "email_url": "buffalo.edu"
+  },
+  {
+    "college_name": "SUNY - Fredonia",
+    "city": "Fredonia",
+    "state": "NY",
+    "email_url": "fredonia.edu"
+  },
+  {
+    "college_name": "SUNY - Buffalo State",
+    "city": "Buffalo",
+    "state": "NY",
+    "email_url": "buffalostate.edu"
+  },
+  {
+    "college_name": "SUNY - Brockport",
+    "city": "Brockport",
+    "state": "NY",
+    "email_url": "brockport.edu"
+  },
+  {
+    "college_name": "SUNY - Cortland",
+    "city": "Cortland",
+    "state": "NY",
+    "email_url": "cortland.edu"
+  },
+  {
+    "college_name": "SUNY - Geneseo",
+    "city": "Geneseo",
+    "state": "NY",
+    "email_url": "geneseo.edu"
+  },
+  {
+    "college_name": "SUNY - New Paltz",
+    "city": "New Paltz",
+    "state": "NY",
+    "email_url": "newpaltz.edu"
+  },
+  {
+    "college_name": "SUNY - Old Westbury",
+    "city": "Old Westbury",
+    "state": "NY",
+    "email_url": "oldwestbury.edu"
+  },
+  {
+    "college_name": "SUNY - Oswego",
+    "city": "Oswego",
+    "state": "NY",
+    "email_url": "oswego.edu"
+  },
+  {
+    "college_name": "SUNY - Plattsburgh",
+    "city": "Plattsburgh",
+    "state": "NY",
+    "email_url": "plattsburgh.edu"
+  },
+  {
+    "college_name": "SUNY - Oneonta",
+    "city": "Oneonta",
+    "state": "NY",
+    "email_url": "oneonta.edu"
+  },
+  {
+    "college_name": "SUNY - Polytechnic Institute",
+    "city": "Utica",
+    "state": "NY",
+    "email_url": "sunypoly.edu"
+  },
+  {
+    "college_name": "SUNY - Potsdam",
+    "city": "Potsdam",
+    "state": "NY",
+    "email_url": "potsdam.edu"
+  },
+  {
+    "college_name": "SUNY - Purchase",
+    "city": "Purchase",
+    "state": "NY",
+    "email_url": "purchase.edu"
+  },
+  {
+    "college_name": "SUNY - Stony Brook",
+    "city": "Stony Brook",
+    "state": "NY",
+    "email_url": "sunysb.edu"
+  },
+  {
+    "college_name": "Susquehanna University",
+    "city": "Selinsgrove",
+    "state": "PA",
+    "email_url": "susqu.edu"
+  },
+  {
+    "college_name": "Syracuse University",
+    "city": "Syracuse",
+    "state": "NY",
+    "email_url": "syr.edu"
+  },
+  {
+    "college_name": "Taft College",
+    "city": "Taft",
+    "state": "CA",
+    "email_url": "taftcollege.edu"
+  },
+  {
+    "college_name": "Talladega College",
+    "city": "Talladega",
+    "state": "AL",
+    "email_url": "talladega.edu"
+  },
+  {
+    "college_name": "Taylor University",
+    "city": "Upland",
+    "state": "IN",
+    "email_url": "taylor.edu"
+  },
+  {
+    "college_name": "Teachers College of Columbia University",
+    "city": "New York",
+    "state": "NY",
+    "email_url": "tc.edu"
+  },
+  {
+    "college_name": "Temple University",
+    "city": "Philadelphia",
+    "state": "PA",
+    "email_url": "temple.edu"
+  },
+  {
+    "college_name": "Tennessee State University",
+    "city": "Nashville",
+    "state": "TN",
+    "email_url": "tnstate.edu"
+  },
+  {
+    "college_name": "Tennessee Technological University",
+    "city": "Cookeville",
+    "state": "TN",
+    "email_url": "tntech.edu"
+  },
+  {
+    "college_name": "Tennessee Temple University",
+    "city": "Chattanooga",
+    "state": "TN",
+    "email_url": "tntemple.edu"
+  },
+  {
+    "college_name": "Tennessee Wesleyan University",
+    "city": "Athens",
+    "state": "TN",
+    "email_url": "twcnet.edu"
+  },
+  {
+    "college_name": "Texarkana College",
+    "city": "Texarkana",
+    "state": "TX",
+    "email_url": "texarkanacollege.edu"
+  },
+  {
+    "college_name": "Texas A&M International University",
+    "city": "Laredo",
+    "state": "TX",
+    "email_url": "tamiu.edu"
+  },
+  {
+    "college_name": "Texas A&M University",
+    "city": "College Station",
+    "state": "TX",
+    "email_url": "tamu.edu"
+  },
+  {
+    "college_name": "Texas A&M University - Commerce",
+    "city": "Commerce",
+    "state": "TX",
+    "email_url": "tamuc.edu"
+  },
+  {
+    "college_name": "Texas A&M University - Kingsville",
+    "city": "Kingsville",
+    "state": "TX",
+    "email_url": "tamuk.edu"
+  },
+  {
+    "college_name": "Texas A&M University - Texarkana",
+    "city": "Texarkana",
+    "state": "TX",
+    "email_url": "tamut.edu"
+  },
+  {
+    "college_name": "Texas Christian University",
+    "city": "Fort Worth",
+    "state": "TX",
+    "email_url": "tcu.edu"
+  },
+  {
+    "college_name": "Texas College",
+    "city": "Tyler",
+    "state": "TX",
+    "email_url": "texascollege.edu"
+  },
+  {
+    "college_name": "Texas Lutheran University",
+    "city": "Seguin",
+    "state": "TX",
+    "email_url": "tlu.edu"
+  },
+  {
+    "college_name": "Texas Southern University",
+    "city": "Houston",
+    "state": "TX",
+    "email_url": "tsu.edu"
+  },
+  {
+    "college_name": "Texas Southmost College",
+    "city": "Brownsville",
+    "state": "TX",
+    "email_url": "utb.edu"
+  },
+  {
+    "college_name": "Texas State University",
+    "city": "San Marcos",
+    "state": "TX",
+    "email_url": "txstate.edu"
+  },
+  {
+    "college_name": "Texas Tech University",
+    "city": "Lubbock",
+    "state": "TX",
+    "email_url": "ttu.edu"
+  },
+  {
+    "college_name": "Texas Wesleyan University",
+    "city": "Fort Worth",
+    "state": "TX",
+    "email_url": "txwes.edu"
+  },
+  {
+    "college_name": "Texas Woman's University",
+    "city": "Denton",
+    "state": "TX",
+    "email_url": "twu.edu"
+  },
+  {
+    "college_name": "Thaddeus Stevens College of Technology",
+    "city": "Lancaster",
+    "state": "PA",
+    "email_url": "stevenscollege.edu"
+  },
+  {
+    "college_name": "The Art Institute of Atlanta",
+    "city": "Atlanta",
+    "state": "GA",
+    "email_url": "artinstitutes.eduatlanta/"
+  },
+  {
+    "college_name": "The Art Institute of Colorado",
+    "city": "Denver",
+    "state": "CO",
+    "email_url": "aic.artinstitutes.edu"
+  },
+  {
+    "college_name": "The Art Institute of Fort Lauderdale Inc",
+    "city": "Fort Lauderdale",
+    "state": "FL",
+    "email_url": "aifl.edu"
+  },
+  {
+    "college_name": "The Art Institute of Houston",
+    "city": "Houston",
+    "state": "TX",
+    "email_url": "artinstitutes.eduhouston/"
+  },
+  {
+    "college_name": "The Art Institute of New York City",
+    "city": "New York",
+    "state": "NY",
+    "email_url": "ainyc.artinstitute.edu"
+  },
+  {
+    "college_name": "The Art Institute of Philadelphia",
+    "city": "Philadelphia",
+    "state": "PA",
+    "email_url": "aiph.artinstitutes.edu"
+  },
+  {
+    "college_name": "The Art Institute of Phoenix",
+    "city": "Phoenix",
+    "state": "AZ",
+    "email_url": "aipx.aii.edu"
+  },
+  {
+    "college_name": "The Art Institute of Pittsburgh",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "email_url": "artinstitutes.edupittsburgh"
+  },
+  {
+    "college_name": "The Art Institute of Portland",
+    "city": "Portland",
+    "state": "OR",
+    "email_url": "aipd.artinstitutes.edu"
+  },
+  {
+    "college_name": "The Art Institute of Seattle",
+    "city": "Seattle",
+    "state": "WA",
+    "email_url": "ais.edu"
+  },
+  {
+    "college_name": "The Art Institute of York",
+    "city": "York",
+    "state": "PA",
+    "email_url": "artinstitutes.eduyork"
+  },
+  {
+    "college_name": "The Citadel",
+    "city": "Charleston",
+    "state": "SC",
+    "email_url": "citadel.edu"
+  },
+  {
+    "college_name": "The College of Saint Rose",
+    "city": "Albany",
+    "state": "NY",
+    "email_url": "strose.edu"
+  },
+  {
+    "college_name": "The King's College",
+    "city": "New York",
+    "state": "NY",
+    "email_url": "tkc.edu"
+  },
+  {
+    "college_name": "The King's University",
+    "city": "Southlake",
+    "state": "TX",
+    "email_url": "tku.edu"
+  },
+  {
+    "college_name": "The New England Conservatory of Music",
+    "city": "Boston",
+    "state": "MA",
+    "email_url": "necmusic.edu"
+  },
+  {
+    "college_name": "The New York Conservatory for Dramatic Arts",
+    "city": "New York",
+    "state": "NY",
+    "email_url": "sft.edu"
+  },
+  {
+    "college_name": "The University of Alabama",
+    "city": "Tuscaloosa",
+    "state": "AL",
+    "email_url": "ua.edu"
+  },
+  {
+    "college_name": "The University of Findlay",
+    "city": "Findlay",
+    "state": "OH",
+    "email_url": "findlay.edu"
+  },
+  {
+    "college_name": "The University of Montana",
+    "city": "Missoula",
+    "state": "MT",
+    "email_url": "umt.edu"
+  },
+  {
+    "college_name": "The University of Montana - Western",
+    "city": "Dillon",
+    "state": "MT",
+    "email_url": "umwestern.edu"
+  },
+  {
+    "college_name": "The University of Tampa",
+    "city": "Tampa",
+    "state": "FL",
+    "email_url": "ut.edu"
+  },
+  {
+    "college_name": "The University of Tennessee - Chattanooga",
+    "city": "Chattanooga",
+    "state": "TN",
+    "email_url": "utc.edu"
+  },
+  {
+    "college_name": "The University of Tennessee - Knoxville",
+    "city": "Knoxville",
+    "state": "TN",
+    "email_url": "tennessee.edu"
+  },
+  {
+    "college_name": "The University of Tennessee - Martin",
+    "city": "Martin",
+    "state": "TN",
+    "email_url": "utm.edu"
+  },
+  {
+    "college_name": "The University of Texas - Arlington",
+    "city": "Arlington",
+    "state": "TX",
+    "email_url": "uta.edu"
+  },
+  {
+    "college_name": "The University of Texas - Dallas",
+    "city": "Richardson",
+    "state": "TX",
+    "email_url": "utdallas.edu"
+  },
+  {
+    "college_name": "The University of Texas - El Paso",
+    "city": "El Paso",
+    "state": "TX",
+    "email_url": "utep.edu"
+  },
+  {
+    "college_name": "The University of Texas - San Antonio",
+    "city": "San Antonio",
+    "state": "TX",
+    "email_url": "utsa.edu"
+  },
+  {
+    "college_name": "The University of Texas of the Permian Basin",
+    "city": "Odessa",
+    "state": "TX",
+    "email_url": "utpb.edu"
+  },
+  {
+    "college_name": "The University of Texas Rio Grande Valley",
+    "city": "Edinburg",
+    "state": "TX",
+    "email_url": "utpa.edu"
+  },
+  {
+    "college_name": "The University of the Arts",
+    "city": "Philadelphia",
+    "state": "PA",
+    "email_url": "uarts.edu"
+  },
+  {
+    "college_name": "The University of the South",
+    "city": "Sewanee",
+    "state": "TN",
+    "email_url": "sewanee.edu"
+  },
+  {
+    "college_name": "The University of Virginia's College - Wise",
+    "city": "Wise",
+    "state": "VA",
+    "email_url": "uvawise.edu"
+  },
+  {
+    "college_name": "The University of West Florida",
+    "city": "Pensacola",
+    "state": "FL",
+    "email_url": "uwf.edu"
+  },
+  {
+    "college_name": "The University of West Los Angeles",
+    "city": "Inglewood",
+    "state": "CA",
+    "email_url": "uwla.edu"
+  },
+  {
+    "college_name": "The Youngstown College of Massotherapy",
+    "city": "Struthers",
+    "state": "OH",
+    "email_url": "ycm.edu"
+  },
+  {
+    "college_name": "Thomas Aquinas College",
+    "city": "Santa Paula",
+    "state": "CA",
+    "email_url": "thomasaquinas.edu"
+  },
+  {
+    "college_name": "Thomas College",
+    "city": "Waterville",
+    "state": "ME",
+    "email_url": "thomas.edu"
+  },
+  {
+    "college_name": "Thomas Edison State University",
+    "city": "Trenton",
+    "state": "NJ",
+    "email_url": "tesu.edu"
+  },
+  {
+    "college_name": "Thomas Jefferson University",
+    "city": "Philadelphia",
+    "state": "PA",
+    "email_url": "jefferson.edu"
+  },
+  {
+    "college_name": "Thomas More College",
+    "city": "Crestview Hills",
+    "state": "KY",
+    "email_url": "thomasmore.edu"
+  },
+  {
+    "college_name": "Thomas University",
+    "city": "Thomasville",
+    "state": "GA",
+    "email_url": "thomasu.edu"
+  },
+  {
+    "college_name": "Touro College",
+    "city": "New York",
+    "state": "NY",
+    "email_url": "touro.edu"
+  },
+  {
+    "college_name": "Towson University",
+    "city": "Towson",
+    "state": "MD",
+    "email_url": "towson.edu"
+  },
+  {
+    "college_name": "Transylvania University",
+    "city": "Lexington",
+    "state": "KY",
+    "email_url": "transy.edu"
+  },
+  {
+    "college_name": "Trinity Baptist College",
+    "city": "Jacksonville",
+    "state": "FL",
+    "email_url": "tbc.edu"
+  },
+  {
+    "college_name": "Trinity Bible College",
+    "city": "Ellendale",
+    "state": "ND",
+    "email_url": "trinitybiblecollege.edu"
+  },
+  {
+    "college_name": "Trinity Christian College",
+    "city": "Palos Heights",
+    "state": "IL",
+    "email_url": "trnty.edu"
+  },
+  {
+    "college_name": "Trinity College",
+    "city": "Hartford",
+    "state": "CT",
+    "email_url": "trincoll.edu"
+  },
+  {
+    "college_name": "Trinity College of Florida",
+    "city": "Trinity",
+    "state": "FL",
+    "email_url": "trinitycollege.edu"
+  },
+  {
+    "college_name": "Trinity International University",
+    "city": "Deerfield",
+    "state": "IL",
+    "email_url": "tiu.edu"
+  },
+  {
+    "college_name": "Trinity Lutheran College",
+    "city": "Everett",
+    "state": "WA",
+    "email_url": "tlc.edu"
+  },
+  {
+    "college_name": "Trinity University",
+    "city": "San Antonio",
+    "state": "TX",
+    "email_url": "trinity.edu"
+  },
+  {
+    "college_name": "Trinity Washington University",
+    "city": "Washington",
+    "state": "DC",
+    "email_url": "trinitydc.edu"
+  },
+  {
+    "college_name": "Tri-State Bible College",
+    "city": "South Point",
+    "state": "OH",
+    "email_url": "tsbc.edu"
+  },
+  {
+    "college_name": "Troy University",
+    "city": "Troy",
+    "state": "AL",
+    "email_url": "troy.edu"
+  },
+  {
+    "college_name": "Truett McConnell University",
+    "city": "Cleveland",
+    "state": "GA",
+    "email_url": "truett.edu"
+  },
+  {
+    "college_name": "Truman State University",
+    "city": "Kirksville",
+    "state": "MO",
+    "email_url": "truman.edu"
+  },
+  {
+    "college_name": "Tufts University",
+    "city": "Medford",
+    "state": "MA",
+    "email_url": "tufts.edu"
+  },
+  {
+    "college_name": "Tulane University",
+    "city": "New Orleans",
+    "state": "LA",
+    "email_url": "tulane.edu"
+  },
+  {
+    "college_name": "Union University",
+    "city": "Jackson",
+    "state": "TN",
+    "email_url": "uu.edu"
+  },
+  {
+    "college_name": "University of Akron",
+    "city": "Akron",
+    "state": "OH",
+    "email_url": "uakron.edu"
+  },
+  {
+    "college_name": "University of Akron - Wayne College",
+    "city": "Orrville",
+    "state": "OH",
+    "email_url": "wayne.uakron.edu"
+  },
+  {
+    "college_name": "University of Alabama - Birmingham",
+    "city": "Birmingham",
+    "state": "AL",
+    "email_url": "uab.edu"
+  },
+  {
+    "college_name": "University of Alabama - Huntsville",
+    "city": "Huntsville",
+    "state": "AL",
+    "email_url": "uah.edu"
+  },
+  {
+    "college_name": "University of Alaska - Anchorage",
+    "city": "Anchorage",
+    "state": "AK",
+    "email_url": "uaa.alaska.edu"
+  },
+  {
+    "college_name": "University of Alaska - Fairbanks",
+    "city": "Fairbanks",
+    "state": "AK",
+    "email_url": "uaf.edu"
+  },
+  {
+    "college_name": "University of Alaska - Southeast",
+    "city": "Juneau",
+    "state": "AK",
+    "email_url": "uas.alaska.edu"
+  },
+  {
+    "college_name": "University of Antelope Valley",
+    "city": "Lancaster",
+    "state": "CA",
+    "email_url": "uav.edu"
+  },
+  {
+    "college_name": "University of Arizona",
+    "city": "Tucson",
+    "state": "AZ",
+    "email_url": "arizona.edu"
+  },
+  {
+    "college_name": "University of Arkansas - Fayetteville",
+    "city": "Fayetteville",
+    "state": "AR",
+    "email_url": "uark.edu"
+  },
+  {
+    "college_name": "University of Arkansas - Little Rock",
+    "city": "Little Rock",
+    "state": "AR",
+    "email_url": "ualr.edu"
+  },
+  {
+    "college_name": "University of Arkansas - Monticello",
+    "city": "Monticello",
+    "state": "AR",
+    "email_url": "uamont.edu"
+  },
+  {
+    "college_name": "University of Arkansas - Pine Bluff",
+    "city": "Pine Bluff",
+    "state": "AR",
+    "email_url": "uapb.edu"
+  },
+  {
+    "college_name": "University of Arkansas - Fort Smith",
+    "city": "Fort Smith",
+    "state": "AR",
+    "email_url": "uafortsmith.edu"
+  },
+  {
+    "college_name": "University of Atlanta",
+    "city": "Atlanta",
+    "state": "GA",
+    "email_url": "uofa.edu"
+  },
+  {
+    "college_name": "University of Baltimore",
+    "city": "Baltimore",
+    "state": "MD",
+    "email_url": "ubalt.edu"
+  },
+  {
+    "college_name": "University of Bridgeport",
+    "city": "Bridgeport",
+    "state": "CT",
+    "email_url": "bridgeport.edu"
+  },
+  {
+    "college_name": "University of California - Davis",
+    "city": "Davis",
+    "state": "CA",
+    "email_url": "ucdavis.edu"
+  },
+  {
+    "college_name": "University of California - Los Angeles",
+    "city": "Los Angeles",
+    "state": "CA",
+    "email_url": "ucla.edu"
+  },
+  {
+    "college_name": "University of California - San Diego",
+    "city": "La Jolla",
+    "state": "CA",
+    "email_url": "ucsd.edu"
+  },
+  {
+    "college_name": "University of California - Berkeley",
+    "city": "Berkeley",
+    "state": "CA",
+    "email_url": "berkeley.edu"
+  },
+  {
+    "college_name": "University of California - Irvine",
+    "city": "Irvine",
+    "state": "CA",
+    "email_url": "uci.edu"
+  },
+  {
+    "college_name": "University of California - Riverside",
+    "city": "Riverside",
+    "state": "CA",
+    "email_url": "ucr.edu"
+  },
+  {
+    "college_name": "University of California - San Francisco",
+    "city": "San Francisco",
+    "state": "CA",
+    "email_url": "ucsf.edu"
+  },
+  {
+    "college_name": "University of California - Santa Barbara",
+    "city": "Santa Barbara",
+    "state": "CA",
+    "email_url": "ucsb.edu"
+  },
+  {
+    "college_name": "University of California - Santa Cruz",
+    "city": "Santa Cruz",
+    "state": "CA",
+    "email_url": "ucsc.edu"
+  },
+  {
+    "college_name": "University of Central Arkansas",
+    "city": "Conway",
+    "state": "AR",
+    "email_url": "uca.edu"
+  },
+  {
+    "college_name": "University of Central Florida",
+    "city": "Orlando",
+    "state": "FL",
+    "email_url": "ucf.edu"
+  },
+  {
+    "college_name": "University of Central Missouri",
+    "city": "Warrensburg",
+    "state": "MO",
+    "email_url": "ucmo.edu"
+  },
+  {
+    "college_name": "University of Central Oklahoma",
+    "city": "Edmond",
+    "state": "OK",
+    "email_url": "uco.edu"
+  },
+  {
+    "college_name": "University of Charleston",
+    "city": "Charleston",
+    "state": "WV",
+    "email_url": "ucwv.edu"
+  },
+  {
+    "college_name": "University of Chicago",
+    "city": "Chicago",
+    "state": "IL",
+    "email_url": "uchicago.edu"
+  },
+  {
+    "college_name": "University of Cincinnati",
+    "city": "Cincinnati",
+    "state": "OH",
+    "email_url": "uc.edu"
+  },
+  {
+    "college_name": "University of Cincinnati - Blue Ash College",
+    "city": "Blue Ash",
+    "state": "OH",
+    "email_url": "rwc.uc.edu"
+  },
+  {
+    "college_name": "University of Cincinnati - Clermont College",
+    "city": "Batavia",
+    "state": "OH",
+    "email_url": "clc.uc.edu"
+  },
+  {
+    "college_name": "University of Colorado - Boulder",
+    "city": "Boulder",
+    "state": "CO",
+    "email_url": "colorado.edu"
+  },
+  {
+    "college_name": "University of Colorado - Colorado Springs",
+    "city": "Colorado Springs",
+    "state": "CO",
+    "email_url": "uccs.edu"
+  },
+  {
+    "college_name": "University of Colorado - Denver",
+    "city": "Aurora",
+    "state": "CO",
+    "email_url": "cudenver.edu"
+  },
+  {
+    "college_name": "University of Connecticut",
+    "city": "Storrs",
+    "state": "CT",
+    "email_url": "uconn.edu"
+  },
+  {
+    "college_name": "University of Dallas",
+    "city": "Irving",
+    "state": "TX",
+    "email_url": "udallas.edu"
+  },
+  {
+    "college_name": "University of Dayton",
+    "city": "Dayton",
+    "state": "OH",
+    "email_url": "udayton.edu"
+  },
+  {
+    "college_name": "University of Delaware",
+    "city": "Newark",
+    "state": "DE",
+    "email_url": "udel.edu"
+  },
+  {
+    "college_name": "University of Denver",
+    "city": "Denver",
+    "state": "CO",
+    "email_url": "du.edu"
+  },
+  {
+    "college_name": "University of Detroit Mercy",
+    "city": "Detroit",
+    "state": "MI",
+    "email_url": "udmercy.edu"
+  },
+  {
+    "college_name": "University of Dubuque",
+    "city": "Dubuque",
+    "state": "IA",
+    "email_url": "dbq.edu"
+  },
+  {
+    "college_name": "University of Evansville",
+    "city": "Evansville",
+    "state": "IN",
+    "email_url": "evansville.edu"
+  },
+  {
+    "college_name": "University of Florida",
+    "city": "Gainesville",
+    "state": "FL",
+    "email_url": "ufl.edu"
+  },
+  {
+    "college_name": "University of Fort Lauderdale",
+    "city": "Lauderhill",
+    "state": "FL",
+    "email_url": "uftl.edu"
+  },
+  {
+    "college_name": "University of Georgia",
+    "city": "Athens",
+    "state": "GA",
+    "email_url": "uga.edu"
+  },
+  {
+    "college_name": "University of Great Falls",
+    "city": "Great Falls",
+    "state": "MT",
+    "email_url": "ugf.edu"
+  },
+  {
+    "college_name": "University of Hartford",
+    "city": "West Hartford",
+    "state": "CT",
+    "email_url": "hartford.edu"
+  },
+  {
+    "college_name": "University of Hawaii - Hilo",
+    "city": "Hilo",
+    "state": "HI",
+    "email_url": "hilo.hawaii.edu"
+  },
+  {
+    "college_name": "University of Hawaii - Manoa",
+    "city": "Honolulu",
+    "state": "HI",
+    "email_url": "manoa.hawaii.edu"
+  },
+  {
+    "college_name": "University of Hawaii - West Oahu",
+    "city": "Kapolei",
+    "state": "HI",
+    "email_url": "westoahu.hawaii.edu"
+  },
+  {
+    "college_name": "University of Houston",
+    "city": "Houston",
+    "state": "TX",
+    "email_url": "uh.edu"
+  },
+  {
+    "college_name": "University of Houston - Clear Lake",
+    "city": "Houston",
+    "state": "TX",
+    "email_url": "uhcl.edu"
+  },
+  {
+    "college_name": "University of Houston - Downtown",
+    "city": "Houston",
+    "state": "TX",
+    "email_url": "uhd.edu"
+  },
+  {
+    "college_name": "University of Houston - Victoria",
+    "city": "Victoria",
+    "state": "TX",
+    "email_url": "uhv.edu"
+  },
+  {
+    "college_name": "University of Idaho",
+    "city": "Moscow",
+    "state": "ID",
+    "email_url": "uidaho.edu"
+  },
+  {
+    "college_name": "University of Illinois - Chicago",
+    "city": "Chicago",
+    "state": "IL",
+    "email_url": "uic.edu"
+  },
+  {
+    "college_name": "University of Illinois - Springfield",
+    "city": "Springfield",
+    "state": "IL",
+    "email_url": "uis.edu"
+  },
+  {
+    "college_name": "University of Illinois - Urbana-Champaign",
+    "city": "Champaign",
+    "state": "IL",
+    "email_url": "uiuc.edu"
+  },
+  {
+    "college_name": "University of Indianapolis",
+    "city": "Indianapolis",
+    "state": "IN",
+    "email_url": "uindy.edu"
+  },
+  {
+    "college_name": "University of Iowa",
+    "city": "Iowa City",
+    "state": "IA",
+    "email_url": "uiowa.edu"
+  },
+  {
+    "college_name": "University of Jamestown",
+    "city": "Jamestown",
+    "state": "ND",
+    "email_url": "jc.edu"
+  },
+  {
+    "college_name": "University of Kansas",
+    "city": "Lawrence",
+    "state": "KS",
+    "email_url": "ku.edu"
+  },
+  {
+    "college_name": "University of Kentucky",
+    "city": "Lexington",
+    "state": "KY",
+    "email_url": "uky.edu"
+  },
+  {
+    "college_name": "University of La Verne",
+    "city": "La Verne",
+    "state": "CA",
+    "email_url": "ulv.edu"
+  },
+  {
+    "college_name": "University of Louisiana - Lafayette",
+    "city": "Lafayette",
+    "state": "LA",
+    "email_url": "louisiana.edu"
+  },
+  {
+    "college_name": "University of Louisiana - Monroe",
+    "city": "Monroe",
+    "state": "LA",
+    "email_url": "ulm.edu"
+  },
+  {
+    "college_name": "University of Louisville",
+    "city": "Louisville",
+    "state": "KY",
+    "email_url": "louisville.edu"
+  },
+  {
+    "college_name": "University of Maine",
+    "city": "Orono",
+    "state": "ME",
+    "email_url": "umaine.edu"
+  },
+  {
+    "college_name": "University of Maine - Augusta",
+    "city": "Augusta",
+    "state": "ME",
+    "email_url": "uma.maine.edu"
+  },
+  {
+    "college_name": "University of Maine - Farmington",
+    "city": "Farmington",
+    "state": "ME",
+    "email_url": "umf.maine.edu"
+  },
+  {
+    "college_name": "University of Maine - Fort Kent",
+    "city": "Fort Kent",
+    "state": "ME",
+    "email_url": "umfk.maine.edu"
+  },
+  {
+    "college_name": "University of Maine - Machias",
+    "city": "Machias",
+    "state": "ME",
+    "email_url": "umm.maine.edu"
+  },
+  {
+    "college_name": "University of Maine - Presque Isle",
+    "city": "Presque Isle",
+    "state": "ME",
+    "email_url": "umpi.maine.edu"
+  },
+  {
+    "college_name": "University of Mary",
+    "city": "Bismarck",
+    "state": "ND",
+    "email_url": "umary.edu"
+  },
+  {
+    "college_name": "University of Mary Hardin-Baylor",
+    "city": "Belton",
+    "state": "TX",
+    "email_url": "umhb.edu"
+  },
+  {
+    "college_name": "University of Mary Washington",
+    "city": "Fredericksburg",
+    "state": "VA",
+    "email_url": "umw.edu"
+  },
+  {
+    "college_name": "University of Maryland - Baltimore",
+    "city": "Baltimore",
+    "state": "MD",
+    "email_url": "umaryland.edu"
+  },
+  {
+    "college_name": "University of Maryland - Baltimore County",
+    "city": "Baltimore",
+    "state": "MD",
+    "email_url": "umbc.edu"
+  },
+  {
+    "college_name": "University of Maryland - College Park",
+    "city": "College Park",
+    "state": "MD",
+    "email_url": "umd.edu"
+  },
+  {
+    "college_name": "University of Maryland - Eastern Shore",
+    "city": "Princess Anne",
+    "state": "MD",
+    "email_url": "umes.edu"
+  },
+  {
+    "college_name": "University of Maryland - University College",
+    "city": "Adelphi",
+    "state": "MD",
+    "email_url": "umuc.edu"
+  },
+  {
+    "college_name": "University of Massachusetts - Boston",
+    "city": "Boston",
+    "state": "MA",
+    "email_url": "umb.edu"
+  },
+  {
+    "college_name": "University of Massachusetts - Dartmouth",
+    "city": "North Dartmouth",
+    "state": "MA",
+    "email_url": "umassd.edu"
+  },
+  {
+    "college_name": "University of Massachusetts - Lowell",
+    "city": "Lowell",
+    "state": "MA",
+    "email_url": "uml.edu"
+  },
+  {
+    "college_name": "University of Massachusetts - Worcester",
+    "city": "Worcester",
+    "state": "MA",
+    "email_url": "umassmed.edu"
+  },
+  {
+    "college_name": "University of Massachusetts Amherst",
+    "city": "Amherst",
+    "state": "MA",
+    "email_url": "umass.edu"
+  },
+  {
+    "college_name": "University of Memphis",
+    "city": "Memphis",
+    "state": "TN",
+    "email_url": "memphis.edu"
+  },
+  {
+    "college_name": "University of Miami",
+    "city": "Coral Gables",
+    "state": "FL",
+    "email_url": "miami.edu"
+  },
+  {
+    "college_name": "University of Michigan - Ann Arbor",
+    "city": "Ann Arbor",
+    "state": "MI",
+    "email_url": "umich.edu"
+  },
+  {
+    "college_name": "University of Michigan - Dearborn",
+    "city": "Dearborn",
+    "state": "MI",
+    "email_url": "umd.umich.edu"
+  },
+  {
+    "college_name": "University of Michigan - Flint",
+    "city": "Flint",
+    "state": "MI",
+    "email_url": "umflint.edu"
+  },
+  {
+    "college_name": "University of Minnesota - Crookston",
+    "city": "Crookston",
+    "state": "MN",
+    "email_url": "crk.umn.edu"
+  },
+  {
+    "college_name": "University of Minnesota - Duluth",
+    "city": "Duluth",
+    "state": "MN",
+    "email_url": "d.umn.edu"
+  },
+  {
+    "college_name": "University of Minnesota - Morris",
+    "city": "Morris",
+    "state": "MN",
+    "email_url": "mrs.umn.edu"
+  },
+  {
+    "college_name": "University of Minnesota - Twin Cities",
+    "city": "Minneapolis",
+    "state": "MN",
+    "email_url": "www1.umn.edutwincities/index.php"
+  },
+  {
+    "college_name": "University of Mississippi",
+    "city": "University",
+    "state": "MS",
+    "email_url": "olemiss.edu"
+  },
+  {
+    "college_name": "University of Missouri - Columbia",
+    "city": "Columbia",
+    "state": "MO",
+    "email_url": "missouri.edu"
+  },
+  {
+    "college_name": "University of Missouri - Kansas City",
+    "city": "Kansas City",
+    "state": "MO",
+    "email_url": "umkc.edu"
+  },
+  {
+    "college_name": "University of Missouri - St Louis",
+    "city": "Saint Louis",
+    "state": "MO",
+    "email_url": "umsl.edu"
+  },
+  {
+    "college_name": "University of Mobile",
+    "city": "Mobile",
+    "state": "AL",
+    "email_url": "umobile.edu"
+  },
+  {
+    "college_name": "University of Montevallo",
+    "city": "Montevallo",
+    "state": "AL",
+    "email_url": "montevallo.edu"
+  },
+  {
+    "college_name": "University of Mount Olive",
+    "city": "Mount Olive",
+    "state": "NC",
+    "email_url": "moc.edu"
+  },
+  {
+    "college_name": "University of Mount Union",
+    "city": "Alliance",
+    "state": "OH",
+    "email_url": "mountunion.edu"
+  },
+  {
+    "college_name": "University of Nebraska - Kearney",
+    "city": "Kearney",
+    "state": "NE",
+    "email_url": "unk.edu"
+  },
+  {
+    "college_name": "University of Nebraska - Lincoln",
+    "city": "Lincoln",
+    "state": "NE",
+    "email_url": "unl.edu"
+  },
+  {
+    "college_name": "University of Nebraska - Omaha",
+    "city": "Omaha",
+    "state": "NE",
+    "email_url": "unomaha.edu"
+  },
+  {
+    "college_name": "University of Nevada - Las Vegas",
+    "city": "Las Vegas",
+    "state": "NV",
+    "email_url": "unlv.edu"
+  },
+  {
+    "college_name": "University of Nevada - Reno",
+    "city": "Reno",
+    "state": "NV",
+    "email_url": "unr.edu"
+  },
+  {
+    "college_name": "University of New England",
+    "city": "Biddeford",
+    "state": "ME",
+    "email_url": "une.edu"
+  },
+  {
+    "college_name": "University of New Hampshire",
+    "city": "Durham",
+    "state": "NH",
+    "email_url": "unh.edu"
+  },
+  {
+    "college_name": "University of New Haven",
+    "city": "West Haven",
+    "state": "CT",
+    "email_url": "newhaven.edu"
+  },
+  {
+    "college_name": "University of New Mexico",
+    "city": "Albuquerque",
+    "state": "NM",
+    "email_url": "unm.edu"
+  },
+  {
+    "college_name": "University of New Orleans",
+    "city": "New Orleans",
+    "state": "LA",
+    "email_url": "uno.edu"
+  },
+  {
+    "college_name": "University of North Alabama",
+    "city": "Florence",
+    "state": "AL",
+    "email_url": "una.edu"
+  },
+  {
+    "college_name": "University of North Carolina - Asheville",
+    "city": "Asheville",
+    "state": "NC",
+    "email_url": "unca.edu"
+  },
+  {
+    "college_name": "University of North Carolina - Chapel Hill",
+    "city": "Chapel Hill",
+    "state": "NC",
+    "email_url": "unc.edu"
+  },
+  {
+    "college_name": "University of North Carolina - Greensboro",
+    "city": "Greensboro",
+    "state": "NC",
+    "email_url": "uncg.edu"
+  },
+  {
+    "college_name": "University of North Carolina - Pembroke",
+    "city": "Pembroke",
+    "state": "NC",
+    "email_url": "uncp.edu"
+  },
+  {
+    "college_name": "University of North Carolina - Wilmington",
+    "city": "Wilmington",
+    "state": "NC",
+    "email_url": "uncw.edu"
+  },
+  {
+    "college_name": "University of North Dakota",
+    "city": "Grand Forks",
+    "state": "ND",
+    "email_url": "und.edu"
+  },
+  {
+    "college_name": "University of North Florida",
+    "city": "Jacksonville",
+    "state": "FL",
+    "email_url": "unf.edu"
+  },
+  {
+    "college_name": "University of North Texas",
+    "city": "Denton",
+    "state": "TX",
+    "email_url": "unt.edu"
+  },
+  {
+    "college_name": "University of Northern Colorado",
+    "city": "Greeley",
+    "state": "CO",
+    "email_url": "unco.edu"
+  },
+  {
+    "college_name": "University of Northern Iowa",
+    "city": "Cedar Falls",
+    "state": "IA",
+    "email_url": "uni.edu"
+  },
+  {
+    "college_name": "University of Northern Virginia",
+    "city": "Manassas",
+    "state": "VA",
+    "email_url": "unva.edu"
+  },
+  {
+    "college_name": "University of Northwestern - St. Paul",
+    "city": "Saint Paul",
+    "state": "MN",
+    "email_url": "nwc.edu"
+  },
+  {
+    "college_name": "University of Northwestern Ohio",
+    "city": "Lima",
+    "state": "OH",
+    "email_url": "unoh.edu"
+  },
+  {
+    "college_name": "University of Notre Dame",
+    "city": "Notre Dame",
+    "state": "IN",
+    "email_url": "nd.edu"
+  },
+  {
+    "college_name": "University of Oklahoma",
+    "city": "Norman",
+    "state": "OK",
+    "email_url": "ou.edu"
+  },
+  {
+    "college_name": "University of Oregon",
+    "city": "Eugene",
+    "state": "OR",
+    "email_url": "uoregon.edu"
+  },
+  {
+    "college_name": "University of Pennsylvania",
+    "city": "Philadelphia",
+    "state": "PA",
+    "email_url": "upenn.edu"
+  },
+  {
+    "college_name": "University of Phoenix",
+    "city": "Tempe",
+    "state": "AZ",
+    "email_url": "phoenix.edu"
+  },
+  {
+    "college_name": "University of Pikeville",
+    "city": "Pikeville",
+    "state": "KY",
+    "email_url": "pc.edu"
+  },
+  {
+    "college_name": "University of Pittsburgh - Bradford",
+    "city": "Bradford",
+    "state": "PA",
+    "email_url": "upb.pitt.edu"
+  },
+  {
+    "college_name": "University of Pittsburgh - Johnstown",
+    "city": "Johnstown",
+    "state": "PA",
+    "email_url": "upj.pitt.edu"
+  },
+  {
+    "college_name": "University of Pittsburgh",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "email_url": "pitt.edu"
+  },
+  {
+    "college_name": "University of Pittsburgh - Titusville",
+    "city": "Titusville",
+    "state": "PA",
+    "email_url": "upt.pitt.edu"
+  },
+  {
+    "college_name": "University of Portland",
+    "city": "Portland",
+    "state": "OR",
+    "email_url": "up.edu"
+  },
+  {
+    "college_name": "University of Puget Sound",
+    "city": "Tacoma",
+    "state": "WA",
+    "email_url": "ups.edu"
+  },
+  {
+    "college_name": "University of Redlands",
+    "city": "Redlands",
+    "state": "CA",
+    "email_url": "redlands.edu"
+  },
+  {
+    "college_name": "University of Rhode Island",
+    "city": "Kingston",
+    "state": "RI",
+    "email_url": "uri.edu"
+  },
+  {
+    "college_name": "University of Richmond",
+    "city": "Richmond",
+    "state": "VA",
+    "email_url": "richmond.edu"
+  },
+  {
+    "college_name": "University of Rochester",
+    "city": "Rochester",
+    "state": "NY",
+    "email_url": "rochester.edu"
+  },
+  {
+    "college_name": "University of Saint Francis - Fort Wayne",
+    "city": "Fort Wayne",
+    "state": "IN",
+    "email_url": "sf.edu"
+  },
+  {
+    "college_name": "University of Saint Joseph",
+    "city": "West Hartford",
+    "state": "CT",
+    "email_url": "sjc.edu"
+  },
+  {
+    "college_name": "University of Saint Mary",
+    "city": "Leavenworth",
+    "state": "KS",
+    "email_url": "stmary.edu"
+  },
+  {
+    "college_name": "University of San Diego",
+    "city": "San Diego",
+    "state": "CA",
+    "email_url": "sandiego.edu"
+  },
+  {
+    "college_name": "University of San Francisco",
+    "city": "San Francisco",
+    "state": "CA",
+    "email_url": "usfca.edu"
+  },
+  {
+    "college_name": "University of Scranton",
+    "city": "Scranton",
+    "state": "PA",
+    "email_url": "scranton.edu"
+  },
+  {
+    "college_name": "University of Sioux Falls",
+    "city": "Sioux Falls",
+    "state": "SD",
+    "email_url": "usiouxfalls.edu"
+  },
+  {
+    "college_name": "University of South Alabama",
+    "city": "Mobile",
+    "state": "AL",
+    "email_url": "usouthal.edu"
+  },
+  {
+    "college_name": "University of South Carolina - Aiken",
+    "city": "Aiken",
+    "state": "SC",
+    "email_url": "usca.edu"
+  },
+  {
+    "college_name": "University of South Carolina - Beaufort",
+    "city": "Bluffton",
+    "state": "SC",
+    "email_url": "uscb.edu"
+  },
+  {
+    "college_name": "University of South Carolina - Columbia",
+    "city": "Columbia",
+    "state": "SC",
+    "email_url": "sc.edu"
+  },
+  {
+    "college_name": "University of South Carolina Upstate",
+    "city": "Spartanburg",
+    "state": "SC",
+    "email_url": "uscupstate.edu"
+  },
+  {
+    "college_name": "University of South Dakota",
+    "city": "Vermillion",
+    "state": "SD",
+    "email_url": "usd.edu"
+  },
+  {
+    "college_name": "University of South Florida",
+    "city": "Tampa",
+    "state": "FL",
+    "email_url": "usf.edu"
+  },
+  {
+    "college_name": "University of Southern California",
+    "city": "Los Angeles",
+    "state": "CA",
+    "email_url": "usc.edu"
+  },
+  {
+    "college_name": "University of Southern Indiana",
+    "city": "Evansville",
+    "state": "IN",
+    "email_url": "usi.edu"
+  },
+  {
+    "college_name": "University of Southern Maine",
+    "city": "Portland",
+    "state": "ME",
+    "email_url": "usm.maine.edu"
+  },
+  {
+    "college_name": "University of Southern Mississippi",
+    "city": "Hattiesburg",
+    "state": "MS",
+    "email_url": "usm.edu"
+  },
+  {
+    "college_name": "University of St. Francis",
+    "city": "Joliet",
+    "state": "IL",
+    "email_url": "stfrancis.edu"
+  },
+  {
+    "college_name": "University of St. Thomas",
+    "city": "Saint Paul",
+    "state": "MN",
+    "email_url": "stthomas.edu"
+  },
+  {
+    "college_name": "University of Texas - Austin",
+    "city": "Austin",
+    "state": "TX",
+    "email_url": "utexas.edu"
+  },
+  {
+    "college_name": "University of Texas - Tyler",
+    "city": "Tyler",
+    "state": "TX",
+    "email_url": "uttyler.edu"
+  },
+  {
+    "college_name": "University of the Cumberlands",
+    "city": "Williamsburg",
+    "state": "KY",
+    "email_url": "ucumberlands.edu"
+  },
+  {
+    "college_name": "University of the District of Columbia",
+    "city": "Washington",
+    "state": "DC",
+    "email_url": "udc.edu"
+  },
+  {
+    "college_name": "University of the Incarnate Word",
+    "city": "San Antonio",
+    "state": "TX",
+    "email_url": "uiw.edu"
+  },
+  {
+    "college_name": "University of the Pacific",
+    "city": "Stockton",
+    "state": "CA",
+    "email_url": "pacific.edu"
+  },
+  {
+    "college_name": "University of the Potomac",
+    "city": "Washington",
+    "state": "DC",
+    "email_url": "potomac.edu"
+  },
+  {
+    "college_name": "University of the Rockies",
+    "city": "Denver",
+    "state": "CO",
+    "email_url": "rockies.edu"
+  },
+  {
+    "college_name": "University of the Southwest",
+    "city": "Hobbs",
+    "state": "NM",
+    "email_url": "usw.edu"
+  },
+  {
+    "college_name": "University of the West",
+    "city": "Rosemead",
+    "state": "CA",
+    "email_url": "uwest.edu"
+  },
+  {
+    "college_name": "University of Toledo",
+    "city": "Toledo",
+    "state": "OH",
+    "email_url": "utoledo.edu"
+  },
+  {
+    "college_name": "University of Tulsa",
+    "city": "Tulsa",
+    "state": "OK",
+    "email_url": "utulsa.edu"
+  },
+  {
+    "college_name": "University of Utah",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "email_url": "utah.edu"
+  },
+  {
+    "college_name": "University of Vermont",
+    "city": "Burlington",
+    "state": "VT",
+    "email_url": "uvm.edu"
+  },
+  {
+    "college_name": "University of Virginia",
+    "city": "Charlottesville",
+    "state": "VA",
+    "email_url": "virginia.edu"
+  },
+  {
+    "college_name": "University of Washington",
+    "city": "Seattle",
+    "state": "WA",
+    "email_url": "washington.edu"
+  },
+  {
+    "college_name": "University of West Alabama",
+    "city": "Livingston",
+    "state": "AL",
+    "email_url": "uwa.edu"
+  },
+  {
+    "college_name": "University of West Georgia",
+    "city": "Carrollton",
+    "state": "GA",
+    "email_url": "westga.edu"
+  },
+  {
+    "college_name": "University of Western States",
+    "city": "Portland",
+    "state": "OR",
+    "email_url": "wschiro.edu"
+  },
+  {
+    "college_name": "University of Wisconsin - Eau Claire",
+    "city": "Eau Claire",
+    "state": "WI",
+    "email_url": "uwec.edu"
+  },
+  {
+    "college_name": "University of Wisconsin - Green Bay",
+    "city": "Green Bay",
+    "state": "WI",
+    "email_url": "uwgb.edu"
+  },
+  {
+    "college_name": "University of Wisconsin - La Crosse",
+    "city": "La Crosse",
+    "state": "WI",
+    "email_url": "uwlax.edu"
+  },
+  {
+    "college_name": "University of Wisconsin - Madison",
+    "city": "Madison",
+    "state": "WI",
+    "email_url": "wisc.edu"
+  },
+  {
+    "college_name": "University of Wisconsin - Oshkosh",
+    "city": "Oshkosh",
+    "state": "WI",
+    "email_url": "uwosh.edu"
+  },
+  {
+    "college_name": "University of Wisconsin - Parkside",
+    "city": "Kenosha",
+    "state": "WI",
+    "email_url": "uwp.edu"
+  },
+  {
+    "college_name": "University of Wisconsin - Platteville",
+    "city": "Platteville",
+    "state": "WI",
+    "email_url": "uwplatt.edu"
+  },
+  {
+    "college_name": "University of Wisconsin - River Falls",
+    "city": "River Falls",
+    "state": "WI",
+    "email_url": "uwrf.edu"
+  },
+  {
+    "college_name": "University of Wisconsin - Stevens Point",
+    "city": "Stevens Point",
+    "state": "WI",
+    "email_url": "uwsp.edu"
+  },
+  {
+    "college_name": "University of Wisconsin - Stout",
+    "city": "Menomonie",
+    "state": "WI",
+    "email_url": "uwstout.edu"
+  },
+  {
+    "college_name": "University of Wisconsin - Superior",
+    "city": "Superior",
+    "state": "WI",
+    "email_url": "uwsuper.edu"
+  },
+  {
+    "college_name": "University of Wisconsin - Whitewater",
+    "city": "Whitewater",
+    "state": "WI",
+    "email_url": "uww.edu"
+  },
+  {
+    "college_name": "University of Wisconsin Colleges",
+    "city": "Madison",
+    "state": "WI",
+    "email_url": "uwc.edu"
+  },
+  {
+    "college_name": "University of Wyoming",
+    "city": "Laramie",
+    "state": "WY",
+    "email_url": "uwyo.edu"
+  },
+  {
+    "college_name": "Upper Iowa University",
+    "city": "Fayette",
+    "state": "IA",
+    "email_url": "uiu.edu"
+  },
+  {
+    "college_name": "Urban College of Boston",
+    "city": "Boston",
+    "state": "MA",
+    "email_url": "urbancollege.edu"
+  },
+  {
+    "college_name": "Urbana University",
+    "city": "Urbana",
+    "state": "OH",
+    "email_url": "urbana.edu"
+  },
+  {
+    "college_name": "Ursinus College",
+    "city": "Collegeville",
+    "state": "PA",
+    "email_url": "ursinus.edu"
+  },
+  {
+    "college_name": "Ursuline College",
+    "city": "Pepper Pike",
+    "state": "OH",
+    "email_url": "ursuline.edu"
+  },
+  {
+    "college_name": "Utah State University",
+    "city": "Logan",
+    "state": "UT",
+    "email_url": "usu.edu"
+  },
+  {
+    "college_name": "Utah Valley University",
+    "city": "Orem",
+    "state": "UT",
+    "email_url": "uvu.edu"
+  },
+  {
+    "college_name": "Utica College",
+    "city": "Utica",
+    "state": "NY",
+    "email_url": "utica.edu"
+  },
+  {
+    "college_name": "Valdosta State University",
+    "city": "Valdosta",
+    "state": "GA",
+    "email_url": "valdosta.edu"
+  },
+  {
+    "college_name": "Valley City State University",
+    "city": "Valley City",
+    "state": "ND",
+    "email_url": "vcsu.edu"
+  },
+  {
+    "college_name": "Valley Forge Military College",
+    "city": "Wayne",
+    "state": "PA",
+    "email_url": "college.vfmac.edu"
+  },
+  {
+    "college_name": "Valparaiso University",
+    "city": "Valparaiso",
+    "state": "IN",
+    "email_url": "valpo.edu"
+  },
+  {
+    "college_name": "Vanderbilt University",
+    "city": "Nashville",
+    "state": "TN",
+    "email_url": "vanderbilt.edu"
+  },
+  {
+    "college_name": "VanderCook College of Music",
+    "city": "Chicago",
+    "state": "IL",
+    "email_url": "vandercook.edu"
+  },
+  {
+    "college_name": "Vanguard University of Southern California",
+    "city": "Costa Mesa",
+    "state": "CA",
+    "email_url": "vanguard.edu"
+  },
+  {
+    "college_name": "Vassar College",
+    "city": "Poughkeepsie",
+    "state": "NY",
+    "email_url": "vassar.edu"
+  },
+  {
+    "college_name": "Vennard College",
+    "city": "University Park",
+    "state": "IA",
+    "email_url": "vennard.edu"
+  },
+  {
+    "college_name": "Ventura College",
+    "city": "Ventura",
+    "state": "CA",
+    "email_url": "venturacollege.edu"
+  },
+  {
+    "college_name": "Vernon College",
+    "city": "Vernon",
+    "state": "TX",
+    "email_url": "vernoncollege.edu"
+  },
+  {
+    "college_name": "Victoria College",
+    "city": "Victoria",
+    "state": "TX",
+    "email_url": "victoriacollege.edu"
+  },
+  {
+    "college_name": "Victory University",
+    "city": "Memphis",
+    "state": "TN",
+    "email_url": "victory.edu"
+  },
+  {
+    "college_name": "Villanova University",
+    "city": "Villanova",
+    "state": "PA",
+    "email_url": "villanova.edu"
+  },
+  {
+    "college_name": "Vincennes University",
+    "city": "Vincennes",
+    "state": "IN",
+    "email_url": "vinu.edu"
+  },
+  {
+    "college_name": "Virginia Baptist College",
+    "city": "Fredericksburg",
+    "state": "VA",
+    "email_url": "vbc.edu"
+  },
+  {
+    "college_name": "Virginia College - Birmingham",
+    "city": "Birmingham",
+    "state": "AL",
+    "email_url": "vc.edu"
+  },
+  {
+    "college_name": "Virginia Commonwealth University",
+    "city": "Richmond",
+    "state": "VA",
+    "email_url": "vcu.edu"
+  },
+  {
+    "college_name": "Virginia Intermont College",
+    "city": "Bristol",
+    "state": "VA",
+    "email_url": "vic.edu"
+  },
+  {
+    "college_name": "Virginia Marti College of Art and Design",
+    "city": "Lakewood",
+    "state": "OH",
+    "email_url": "vmced.edu"
+  },
+  {
+    "college_name": "Virginia State University",
+    "city": "Petersburg",
+    "state": "VA",
+    "email_url": "vsu.edu"
+  },
+  {
+    "college_name": "Virginia Union University",
+    "city": "Richmond",
+    "state": "VA",
+    "email_url": "vuu.edu"
+  },
+  {
+    "college_name": "Virginia University of Lynchburg",
+    "city": "Lynchburg",
+    "state": "VA",
+    "email_url": "vul.edu"
+  },
+  {
+    "college_name": "Virginia Wesleyan College",
+    "city": "Norfolk",
+    "state": "VA",
+    "email_url": "vwc.edu"
+  },
+  {
+    "college_name": "Viterbo University",
+    "city": "La Crosse",
+    "state": "WI",
+    "email_url": "viterbo.edu"
+  },
+  {
+    "college_name": "Wagner College",
+    "city": "Staten Island",
+    "state": "NY",
+    "email_url": "wagner.edu"
+  },
+  {
+    "college_name": "Wake Forest University",
+    "city": "Winston Salem",
+    "state": "NC",
+    "email_url": "wfu.edu"
+  },
+  {
+    "college_name": "Walden University",
+    "city": "Minneapolis",
+    "state": "MN",
+    "email_url": "waldenu.edu"
+  },
+  {
+    "college_name": "Walla Walla University",
+    "city": "College Place",
+    "state": "WA",
+    "email_url": "wallawalla.edu"
+  },
+  {
+    "college_name": "Walsh University",
+    "city": "North Canton",
+    "state": "OH",
+    "email_url": "walsh.edu"
+  },
+  {
+    "college_name": "Warner Pacific College",
+    "city": "Portland",
+    "state": "OR",
+    "email_url": "warnerpacific.edu"
+  },
+  {
+    "college_name": "Warner University",
+    "city": "Lake Wales",
+    "state": "FL",
+    "email_url": "warner.edu"
+  },
+  {
+    "college_name": "Washburn University of Topeka",
+    "city": "Topeka",
+    "state": "KS",
+    "email_url": "washburn.edu"
+  },
+  {
+    "college_name": "Washington & Jefferson College",
+    "city": "Washington",
+    "state": "PA",
+    "email_url": "washjeff.edu"
+  },
+  {
+    "college_name": "Washington Adventist University",
+    "city": "Takoma Park",
+    "state": "MD",
+    "email_url": "wau.edu"
+  },
+  {
+    "college_name": "Washington and Lee University",
+    "city": "Lexington",
+    "state": "VA",
+    "email_url": "wlu.edu"
+  },
+  {
+    "college_name": "Washington College",
+    "city": "Chestertown",
+    "state": "MD",
+    "email_url": "washcoll.edu"
+  },
+  {
+    "college_name": "Washington State University",
+    "city": "Pullman",
+    "state": "WA",
+    "email_url": "wsu.edu"
+  },
+  {
+    "college_name": "Washington Theological Union",
+    "city": "Washington",
+    "state": "DC",
+    "email_url": "wtu.edu"
+  },
+  {
+    "college_name": "Washington University in St Louis",
+    "city": "Saint Louis",
+    "state": "MO",
+    "email_url": "wustl.edu"
+  },
+  {
+    "college_name": "Washington University of Virginia",
+    "city": "Annandale",
+    "state": "VA",
+    "email_url": "wuv.edu"
+  },
+  {
+    "college_name": "Waycross College",
+    "city": "Waycross",
+    "state": "GA",
+    "email_url": "waycross.edu"
+  },
+  {
+    "college_name": "Wayland Baptist University",
+    "city": "Plainview",
+    "state": "TX",
+    "email_url": "wbu.edu"
+  },
+  {
+    "college_name": "Wayne State College",
+    "city": "Wayne",
+    "state": "NE",
+    "email_url": "wsc.edu"
+  },
+  {
+    "college_name": "Wayne State University",
+    "city": "Detroit",
+    "state": "MI",
+    "email_url": "wayne.edu"
+  },
+  {
+    "college_name": "Waynesburg University",
+    "city": "Waynesburg",
+    "state": "PA",
+    "email_url": "waynesburg.edu"
+  },
+  {
+    "college_name": "Webber International University",
+    "city": "Babson Park",
+    "state": "FL",
+    "email_url": "webber.edu"
+  },
+  {
+    "college_name": "Weber State University",
+    "city": "Ogden",
+    "state": "UT",
+    "email_url": "weber.edu"
+  },
+  {
+    "college_name": "Webster University",
+    "city": "Saint Louis",
+    "state": "MO",
+    "email_url": "webster.edu"
+  },
+  {
+    "college_name": "Wellesley College",
+    "city": "Wellesley",
+    "state": "MA",
+    "email_url": "wellesley.edu"
+  },
+  {
+    "college_name": "Wentworth Institute of Technology",
+    "city": "Boston",
+    "state": "MA",
+    "email_url": "wit.edu"
+  },
+  {
+    "college_name": "Wesley College",
+    "city": "Dover",
+    "state": "DE",
+    "email_url": "wesley.edu"
+  },
+  {
+    "college_name": "Wesleyan College",
+    "city": "Macon",
+    "state": "GA",
+    "email_url": "wesleyancollege.edu"
+  },
+  {
+    "college_name": "Wesleyan University",
+    "city": "Middletown",
+    "state": "CT",
+    "email_url": "wesleyan.edu"
+  },
+  {
+    "college_name": "West Chester University of Pennsylvania",
+    "city": "West Chester",
+    "state": "PA",
+    "email_url": "wcupa.edu"
+  },
+  {
+    "college_name": "West Coast Baptist College",
+    "city": "Lancaster",
+    "state": "CA",
+    "email_url": "wcbc.edu"
+  },
+  {
+    "college_name": "West Liberty University",
+    "city": "West Liberty",
+    "state": "WV",
+    "email_url": "westliberty.edu"
+  },
+  {
+    "college_name": "West Texas A&M University",
+    "city": "Canyon",
+    "state": "TX",
+    "email_url": "wtamu.edu"
+  },
+  {
+    "college_name": "West Virginia State University",
+    "city": "Institute",
+    "state": "WV",
+    "email_url": "wvstateu.edu"
+  },
+  {
+    "college_name": "West Virginia University",
+    "city": "Morgantown",
+    "state": "WV",
+    "email_url": "wvu.edu"
+  },
+  {
+    "college_name": "West Virginia University - Parkersburg",
+    "city": "Parkersburg",
+    "state": "WV",
+    "email_url": "wvup.edu"
+  },
+  {
+    "college_name": "West Virginia Wesleyan College",
+    "city": "Buckhannon",
+    "state": "WV",
+    "email_url": "wvwc.edu"
+  },
+  {
+    "college_name": "Western Connecticut State University",
+    "city": "Danbury",
+    "state": "CT",
+    "email_url": "wcsu.edu"
+  },
+  {
+    "college_name": "Western Governors University",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "email_url": "wgu.edu"
+  },
+  {
+    "college_name": "Western Illinois University",
+    "city": "Macomb",
+    "state": "IL",
+    "email_url": "wiu.edu"
+  },
+  {
+    "college_name": "Western Kentucky University",
+    "city": "Bowling Green",
+    "state": "KY",
+    "email_url": "wku.edu"
+  },
+  {
+    "college_name": "Western Michigan University",
+    "city": "Kalamazoo",
+    "state": "MI",
+    "email_url": "wmich.edu"
+  },
+  {
+    "college_name": "Western Nevada College",
+    "city": "Carson City",
+    "state": "NV",
+    "email_url": "wnc.edu"
+  },
+  {
+    "college_name": "Western New England University",
+    "city": "Springfield",
+    "state": "MA",
+    "email_url": "wnec.edu"
+  },
+  {
+    "college_name": "Western New Mexico University",
+    "city": "Silver City",
+    "state": "NM",
+    "email_url": "wnmu.edu"
+  },
+  {
+    "college_name": "Western Oklahoma State College",
+    "city": "Altus",
+    "state": "OK",
+    "email_url": "wosc.edu"
+  },
+  {
+    "college_name": "Western Oregon University",
+    "city": "Monmouth",
+    "state": "OR",
+    "email_url": "wou.edu"
+  },
+  {
+    "college_name": "Western State College of Colorado",
+    "city": "Gunnison",
+    "state": "CO",
+    "email_url": "western.edu"
+  },
+  {
+    "college_name": "Western Texas College",
+    "city": "Snyder",
+    "state": "TX",
+    "email_url": "wtc.edu"
+  },
+  {
+    "college_name": "Western Washington University",
+    "city": "Bellingham",
+    "state": "WA",
+    "email_url": "wwu.edu"
+  },
+  {
+    "college_name": "Westfield State University",
+    "city": "Westfield",
+    "state": "MA",
+    "email_url": "wsc.ma.edu"
+  },
+  {
+    "college_name": "Westminster College",
+    "city": "Fulton",
+    "state": "MO",
+    "email_url": "westminster-mo.edu"
+  },
+  {
+    "college_name": "Westmont College",
+    "city": "Santa Barbara",
+    "state": "CA",
+    "email_url": "westmont.edu"
+  },
+  {
+    "college_name": "Westwood College - Long Beach",
+    "city": "Long Beach",
+    "state": "CA",
+    "email_url": "westwood.edu"
+  },
+  {
+    "college_name": "Wheaton College",
+    "city": "Wheaton",
+    "state": "IL",
+    "email_url": "wheaton.edu"
+  },
+  {
+    "college_name": "Wheeling Jesuit University",
+    "city": "Wheeling",
+    "state": "WV",
+    "email_url": "wju.edu"
+  },
+  {
+    "college_name": "Wheelock College",
+    "city": "Boston",
+    "state": "MA",
+    "email_url": "wheelock.edu"
+  },
+  {
+    "college_name": "Whitman College",
+    "city": "Walla Walla",
+    "state": "WA",
+    "email_url": "whitman.edu"
+  },
+  {
+    "college_name": "Whittier College",
+    "city": "Whittier",
+    "state": "CA",
+    "email_url": "whittier.edu"
+  },
+  {
+    "college_name": "Whitworth University",
+    "city": "Spokane",
+    "state": "WA",
+    "email_url": "whitworth.edu"
+  },
+  {
+    "college_name": "Wichita State University",
+    "city": "Wichita",
+    "state": "KS",
+    "email_url": "wichita.edu"
+  },
+  {
+    "college_name": "Widener University",
+    "city": "Chester",
+    "state": "PA",
+    "email_url": "widener.edu"
+  },
+  {
+    "college_name": "Wilberforce University",
+    "city": "Wilberforce",
+    "state": "OH",
+    "email_url": "wilberforce.edu"
+  },
+  {
+    "college_name": "Wiley College",
+    "city": "Marshall",
+    "state": "TX",
+    "email_url": "wileyc.edu"
+  },
+  {
+    "college_name": "Wilkes University",
+    "city": "Wilkes-Barre",
+    "state": "PA",
+    "email_url": "wilkes.edu"
+  },
+  {
+    "college_name": "William Howard Taft University",
+    "city": "Denver",
+    "state": "CO",
+    "email_url": "taftu.edu"
+  },
+  {
+    "college_name": "William Tyndale College",
+    "city": "Farmington Hills",
+    "state": "MI",
+    "email_url": "williamtyndale.edu"
+  },
+  {
+    "college_name": "Williams Baptist College",
+    "city": "Walnut Ridge",
+    "state": "AR",
+    "email_url": "wbcoll.edu"
+  },
+  {
+    "college_name": "Williams College",
+    "city": "Williamstown",
+    "state": "MA",
+    "email_url": "williams.edu"
+  },
+  {
+    "college_name": "Williamson College of The Trades",
+    "city": "Media",
+    "state": "PA",
+    "email_url": "williamson.edu"
+  },
+  {
+    "college_name": "Williston State College",
+    "city": "Williston",
+    "state": "ND",
+    "email_url": "wsc.nodak.edu"
+  },
+  {
+    "college_name": "Wilmington College",
+    "city": "Wilmington",
+    "state": "OH",
+    "email_url": "wilmington.edu"
+  },
+  {
+    "college_name": "Wilmington University",
+    "city": "New Castle",
+    "state": "DE",
+    "email_url": "wilmu.edu"
+  },
+  {
+    "college_name": "Wilson College",
+    "city": "Chambersburg",
+    "state": "PA",
+    "email_url": "wilson.edu"
+  },
+  {
+    "college_name": "Wingate University",
+    "city": "Wingate",
+    "state": "NC",
+    "email_url": "wingate.edu"
+  },
+  {
+    "college_name": "Winona State University",
+    "city": "Winona",
+    "state": "MN",
+    "email_url": "winona.edu"
+  },
+  {
+    "college_name": "Winston-Salem State University",
+    "city": "Winston-Salem",
+    "state": "NC",
+    "email_url": "wssu.edu"
+  },
+  {
+    "college_name": "Winthrop University",
+    "city": "Rock Hill",
+    "state": "SC",
+    "email_url": "winthrop.edu"
+  },
+  {
+    "college_name": "Wisconsin Lutheran College",
+    "city": "Milwaukee",
+    "state": "WI",
+    "email_url": "wlc.edu"
+  },
+  {
+    "college_name": "Wittenberg University",
+    "city": "Springfield",
+    "state": "OH",
+    "email_url": "wittenberg.edu"
+  },
+  {
+    "college_name": "Woodbury College",
+    "city": "Montpelier",
+    "state": "VT",
+    "email_url": "woodbury-college.edu"
+  },
+  {
+    "college_name": "Woodbury University",
+    "city": "Burbank",
+    "state": "CA",
+    "email_url": "woodbury.edu"
+  },
+  {
+    "college_name": "Worcester Polytechnic Institute",
+    "city": "Worcester",
+    "state": "MA",
+    "email_url": "wpi.edu"
+  },
+  {
+    "college_name": "Worcester State University",
+    "city": "Worcester",
+    "state": "MA",
+    "email_url": "worcester.edu"
+  },
+  {
+    "college_name": "Wright State University",
+    "city": "Dayton",
+    "state": "OH",
+    "email_url": "wright.edu"
+  },
+  {
+    "college_name": "Xavier University",
+    "city": "Cincinnati",
+    "state": "OH",
+    "email_url": "xavier.edu"
+  },
+  {
+    "college_name": "Xavier University of Louisiana",
+    "city": "New Orleans",
+    "state": "LA",
+    "email_url": "xula.edu"
+  },
+  {
+    "college_name": "Yale University",
+    "city": "New Haven",
+    "state": "CT",
+    "email_url": "yale.edu"
+  },
+  {
+    "college_name": "Yellowstone Christian College",
+    "city": "Billings",
+    "state": "MT",
+    "email_url": "yellowstonechristian.edu"
+  },
+  {
+    "college_name": "Yeshiva University",
+    "city": "New York",
+    "state": "NY",
+    "email_url": "yu.edu"
+  },
+  {
+    "college_name": "York College",
+    "city": "Jamaica",
+    "state": "NY",
+    "email_url": "york.cuny.edu"
+  },
+  {
+    "college_name": "York College of Pennsylvania",
+    "city": "York",
+    "state": "PA",
+    "email_url": "ycp.edu"
+  },
+  {
+    "college_name": "Young Harris College",
+    "city": "Young Harris",
+    "state": "GA",
+    "email_url": "yhc.edu"
+  },
+  {
+    "college_name": "Youngstown State University",
+    "city": "Youngstown",
+    "state": "OH",
+    "email_url": "ysu.edu"
+  }
+]

@@ -1,0 +1,6867 @@
+[
+  {
+    "value": "Princeton University",
+    "label": "princeton university princeton.edu",
+    "rank": 1
+  },
+  {
+    "value": "Harvard University",
+    "label": "harvard university harvard.edu",
+    "rank": 2
+  },
+  {
+    "value": "University of Chicago",
+    "label": "university of chicago uchicago.edu",
+    "rank": 3
+  },
+  {
+    "value": "Yale University",
+    "label": "yale university yale.edu",
+    "rank": 4
+  },
+  {
+    "value": "Columbia University",
+    "label": "columbia university columbia.edu",
+    "rank": 5
+  },
+  {
+    "value": "Stanford University",
+    "label": "stanford university stanford.edu",
+    "rank": 6
+  },
+  {
+    "value": "Massachusetts Institute of Technology",
+    "label": "massachusetts institute of technology mit.edu",
+    "rank": 7
+  },
+  {
+    "value": "Duke University",
+    "label": "duke university duke.edu",
+    "rank": 8
+  },
+  {
+    "value": "University of Pennsylvania",
+    "label": "university of pennsylvania upenn.edu",
+    "rank": 9
+  },
+  {
+    "value": "Johns Hopkins University",
+    "label": "johns hopkins university jhu.edu",
+    "rank": 10
+  },
+  {
+    "value": "California Institute of Technology",
+    "label": "california institute of technology caltech.edu",
+    "rank": 12
+  },
+  {
+    "value": "Dartmouth College",
+    "label": "dartmouth college dartmouth.edu",
+    "rank": 12
+  },
+  {
+    "value": "Northwestern University",
+    "label": "northwestern university northwestern.edu",
+    "rank": 13
+  },
+  {
+    "value": "Brown University",
+    "label": "brown university brown.edu",
+    "rank": 14
+  },
+  {
+    "value": "Cornell University",
+    "label": "cornell university cornell.edu",
+    "rank": 15
+  },
+  {
+    "value": "Rice University",
+    "label": "rice university rice.edu",
+    "rank": 16
+  },
+  {
+    "value": "University of Notre Dame",
+    "label": "university of notre dame nd.edu",
+    "rank": 17
+  },
+  {
+    "value": "Vanderbilt University",
+    "label": "vanderbilt university vanderbilt.edu",
+    "rank": 17
+  },
+  {
+    "value": "Washington University in St Louis",
+    "label": "washington university in st louis wustl.edu",
+    "rank": 18
+  },
+  {
+    "value": "Emory University",
+    "label": "emory university emory.edu",
+    "rank": 19
+  },
+  {
+    "value": "Georgetown University",
+    "label": "georgetown university georgetown.edu",
+    "rank": 20
+  },
+  {
+    "value": "University of California - Berkeley",
+    "label": "university of california -  berkeley berkeley.edu",
+    "rank": 21
+  },
+  {
+    "value": "University of Southern California",
+    "label": "university of southern california usc.edu",
+    "rank": 22
+  },
+  {
+    "value": "Carnegie Mellon University",
+    "label": "carnegie mellon university cmu.edu",
+    "rank": 23
+  },
+  {
+    "value": "University of California - Los Angeles",
+    "label": "university of california - los angeles ucla.edu",
+    "rank": 24
+  },
+  {
+    "value": "Tufts University",
+    "label": "tufts university tufts.edu",
+    "rank": 25
+  },
+  {
+    "value": "University of Virginia",
+    "label": "university of virginia virginia.edu",
+    "rank": 25
+  },
+  {
+    "value": "University of Michigan - Ann Arbor",
+    "label": "university of michigan - ann arbor umich.edu",
+    "rank": 26
+  },
+  {
+    "value": "Wake Forest University",
+    "label": "wake forest university wfu.edu",
+    "rank": 27
+  },
+  {
+    "value": "University of North Carolina - Chapel Hill",
+    "label": "university of north carolina - chapel hill unc.edu",
+    "rank": 28
+  },
+  {
+    "value": "Boston Baptist College",
+    "label": "boston baptist college boston.edu",
+    "rank": 29
+  },
+  {
+    "value": "College of William and Mary",
+    "label": "college of william and mary wm.edu",
+    "rank": 30
+  },
+  {
+    "value": "Rochester Institute of Technology",
+    "label": "rochester institute of technology rit.edu",
+    "rank": 31
+  },
+  {
+    "value": "Brandeis University",
+    "label": "brandeis university brandeis.edu",
+    "rank": 32
+  },
+  {
+    "value": "Georgia Institute of Technology",
+    "label": "georgia institute of technology  gatech.edu",
+    "rank": 33
+  },
+  {
+    "value": "New York University",
+    "label": "new york university nyu.edu",
+    "rank": 34
+  },
+  {
+    "value": "Case Western Reserve University",
+    "label": "case western reserve university case.edu",
+    "rank": 35
+  },
+  {
+    "value": "Boston University",
+    "label": "boston university bu.edu",
+    "rank": 36
+  },
+  {
+    "value": "University of California - Santa Barbara",
+    "label": "university of california - santa barbara ucsb.edu",
+    "rank": 36
+  },
+  {
+    "value": "Rensselaer Polytechnic Institute",
+    "label": "rensselaer polytechnic institute rpi.edu",
+    "rank": 37
+  },
+  {
+    "value": "Tulane University",
+    "label": "tulane university tulane.edu",
+    "rank": 38
+  },
+  {
+    "value": "University of California - Irvine",
+    "label": "university of california - irvine uci.edu",
+    "rank": 38
+  },
+  {
+    "value": "Lehigh University",
+    "label": "lehigh university lehigh.edu",
+    "rank": 39
+  },
+  {
+    "value": "University of California - Davis",
+    "label": "university of california - davis ucdavis.edu",
+    "rank": 40
+  },
+  {
+    "value": "University of California - San Diego",
+    "label": "university of california - san diego ucsd.edu",
+    "rank": 41
+  },
+  {
+    "value": "University of Illinois - Urbana-Champaign",
+    "label": "university of illinois - urbana-champaign uiuc.edu",
+    "rank": 42
+  },
+  {
+    "value": "University of Miami",
+    "label": "university of miami miami.edu",
+    "rank": 43
+  },
+  {
+    "value": "University of Wisconsin - Madison",
+    "label": "university of wisconsin - madison wisc.edu",
+    "rank": 43
+  },
+  {
+    "value": "Pennsylvania State University",
+    "label": "pennsylvania state university psu.edu",
+    "rank": 44
+  },
+  {
+    "value": "Pepperdine University",
+    "label": "pepperdine university pepperdine.edu",
+    "rank": 45
+  },
+  {
+    "value": "University of Florida",
+    "label": "university of florida ufl.edu",
+    "rank": 47
+  },
+  {
+    "value": "Villanova University",
+    "label": "villanova university villanova.edu",
+    "rank": 48
+  },
+  {
+    "value": "Ohio State University",
+    "label": "ohio state university osu.edu",
+    "rank": 49
+  },
+  {
+    "value": "University of Washington",
+    "label": "university of washington washington.edu",
+    "rank": 50
+  },
+  {
+    "value": "George Washington University",
+    "label": "george washington university gwu.edu",
+    "rank": 51
+  },
+  {
+    "value": "Southern Methodist University",
+    "label": "southern methodist university smu.edu",
+    "rank": 51
+  },
+  {
+    "value": "University of Georgia",
+    "label": "university of georgia uga.edu",
+    "rank": 52
+  },
+  {
+    "value": "University of Texas - Austin",
+    "label": "university of texas - austin utexas.edu",
+    "rank": 53
+  },
+  {
+    "value": "Fordham University",
+    "label": "fordham university fordham.edu",
+    "rank": 54
+  },
+  {
+    "value": "Purdue University",
+    "label": "purdue university purdue.edu",
+    "rank": 55
+  },
+  {
+    "value": "Syracuse University",
+    "label": "syracuse university syr.edu",
+    "rank": 56
+  },
+  {
+    "value": "University of Connecticut",
+    "label": "university of connecticut uconn.edu",
+    "rank": 57
+  },
+  {
+    "value": "University of Maryland - College Park",
+    "label": "university of maryland - college park umd.edu",
+    "rank": 58
+  },
+  {
+    "value": "Clemson University",
+    "label": "clemson university clemson.edu",
+    "rank": 59
+  },
+  {
+    "value": "Worcester Polytechnic Institute",
+    "label": "worcester polytechnic institute wpi.edu",
+    "rank": 59
+  },
+  {
+    "value": "Brigham Young University",
+    "label": "brigham young university byu.edu",
+    "rank": 60
+  },
+  {
+    "value": "Yeshiva University",
+    "label": "yeshiva university yu.edu",
+    "rank": 60
+  },
+  {
+    "value": "University of Pittsburgh",
+    "label": "university of pittsburgh  pitt.edu",
+    "rank": 61
+  },
+  {
+    "value": "Rutgers University",
+    "label": "rutgers university rutgers.edu",
+    "rank": 62
+  },
+  {
+    "value": "Baylor University",
+    "label": "baylor university baylor.edu",
+    "rank": 63
+  },
+  {
+    "value": "Stevens Institute of Technology",
+    "label": "stevens institute of technology stevens.edu",
+    "rank": 64
+  },
+  {
+    "value": "University of Minnesota - Twin Cities",
+    "label": "university of minnesota - twin cities www1.umn.edutwincities/index.php",
+    "rank": 65
+  },
+  {
+    "value": "American University",
+    "label": "american university american.edu",
+    "rank": 66
+  },
+  {
+    "value": "Clark University",
+    "label": "clark university clarku.edu",
+    "rank": 66
+  },
+  {
+    "value": "Texas A&M University - College Station",
+    "label": "texas a&m university tamu.edu",
+    "rank": 67
+  },
+  {
+    "value": "University of Massachusetts - Amherst",
+    "label": "university of massachusetts amherst umass.edu",
+    "rank": 68
+  },
+  {
+    "value": "Miami University",
+    "label": "miami university muohio.edu",
+    "rank": 69
+  },
+  {
+    "value": "University of California - Santa Cruz",
+    "label": "university of california - santa cruz ucsc.edu",
+    "rank": 70
+  },
+  {
+    "value": "University of Delaware",
+    "label": "university of delaware udel.edu",
+    "rank": 71
+  },
+  {
+    "value": "Colorado School of Mines",
+    "label": "colorado school of mines mines.edu",
+    "rank": 73
+  },
+  {
+    "value": "Michigan State University",
+    "label": "michigan state university msu.edu",
+    "rank": 74
+  },
+  {
+    "value": "Texas Christian University",
+    "label": "texas christian university tcu.edu",
+    "rank": 75
+  },
+  {
+    "value": "University of Iowa",
+    "label": "university of iowa uiowa.edu",
+    "rank": 76
+  },
+  {
+    "value": "SUNY - Albany",
+    "label": "suny - albany albany.edu",
+    "rank": 77
+  },
+  {
+    "value": "Indiana University",
+    "label": "indiana university  iu.edu",
+    "rank": 79
+  },
+  {
+    "value": "Marquette University",
+    "label": "marquette university marquette.edu",
+    "rank": 80
+  },
+  {
+    "value": "University of Denver",
+    "label": "university of denver du.edu",
+    "rank": 81
+  },
+  {
+    "value": "University of San Diego",
+    "label": "university of san diego sandiego.edu",
+    "rank": 82
+  },
+  {
+    "value": "University of Tulsa",
+    "label": "university of tulsa utulsa.edu",
+    "rank": 83
+  },
+  {
+    "value": "Florida State University",
+    "label": "florida state university fsu.edu",
+    "rank": 84
+  },
+  {
+    "value": "Abilene Christian University",
+    "label": "abilene christian university acu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Abraham Baldwin Agricultural College",
+    "label": "abraham baldwin agricultural college abac.edu",
+    "rank": 85
+  },
+  {
+    "value": "Adelphi University",
+    "label": "adelphi university adelphi.edu",
+    "rank": 85
+  },
+  {
+    "value": "Adler University",
+    "label": "adler university adler.edu",
+    "rank": 85
+  },
+  {
+    "value": "Alabama A & M University",
+    "label": "alabama a & m university aamu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Alabama State University",
+    "label": "alabama state university alasu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Alaska Pacific University",
+    "label": "alaska pacific university alaskapacific.edu",
+    "rank": 85
+  },
+  {
+    "value": "Albertus Magnus College",
+    "label": "albertus magnus college albertus.edu",
+    "rank": 85
+  },
+  {
+    "value": "Albion College",
+    "label": "albion college albion.edu",
+    "rank": 85
+  },
+  {
+    "value": "Albright College",
+    "label": "albright college albright.edu",
+    "rank": 85
+  },
+  {
+    "value": "Alcorn State University",
+    "label": "alcorn state university alcorn.edu",
+    "rank": 85
+  },
+  {
+    "value": "Alfred University",
+    "label": "alfred university alfred.edu",
+    "rank": 85
+  },
+  {
+    "value": "Allan Hancock College",
+    "label": "allan hancock college hancockcollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Allegheny College",
+    "label": "allegheny college allegheny.edu",
+    "rank": 85
+  },
+  {
+    "value": "Allen University",
+    "label": "allen university allenuniversity.edu",
+    "rank": 85
+  },
+  {
+    "value": "Alvernia University",
+    "label": "alvernia university alvernia.edu",
+    "rank": 85
+  },
+  {
+    "value": "Amberton University",
+    "label": "amberton university amberton.edu",
+    "rank": 85
+  },
+  {
+    "value": "American Baptist College",
+    "label": "american baptist college abcnash.edu",
+    "rank": 85
+  },
+  {
+    "value": "American Indian College",
+    "label": "american indian college aicag.edu",
+    "rank": 85
+  },
+  {
+    "value": "American Jewish University",
+    "label": "american jewish university aju.edu",
+    "rank": 85
+  },
+  {
+    "value": "American National University - Salem",
+    "label": "american national university - salem ncbt.edu",
+    "rank": 85
+  },
+  {
+    "value": "American Sentinel University",
+    "label": "american sentinel university americansentinel.edu",
+    "rank": 85
+  },
+  {
+    "value": "Amherst College",
+    "label": "amherst college amherst.edu",
+    "rank": 85
+  },
+  {
+    "value": "Anaheim University",
+    "label": "anaheim university anaheim.edu",
+    "rank": 85
+  },
+  {
+    "value": "Angelo State University",
+    "label": "angelo state university angelo.edu",
+    "rank": 85
+  },
+  {
+    "value": "Appalachian Bible College",
+    "label": "appalachian bible college abc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Arcadia University",
+    "label": "arcadia university arcadia.edu",
+    "rank": 85
+  },
+  {
+    "value": "Arizona Christian University",
+    "label": "arizona christian university swcaz.edu",
+    "rank": 85
+  },
+  {
+    "value": "Arizona College",
+    "label": "arizona college arizonacollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Arizona State University",
+    "label": "arizona state university asu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Arkansas Northeastern College",
+    "label": "arkansas northeastern college anc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Arkansas State University",
+    "label": "arkansas state university astate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Arkansas State University - Beebe",
+    "label": "arkansas state university - beebe asub.edu",
+    "rank": 85
+  },
+  {
+    "value": "Arkansas State University - Newport",
+    "label": "arkansas state university - newport asun.edu",
+    "rank": 85
+  },
+  {
+    "value": "Arkansas State University - Mountain Home",
+    "label": "arkansas state university - mountain home asumh.edu",
+    "rank": 85
+  },
+  {
+    "value": "Arkansas Tech University",
+    "label": "arkansas tech university atu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Arlington Baptist College",
+    "label": "arlington baptist college arlingtonbaptistcollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Armstrong State University",
+    "label": "armstrong state university armstrong.edu",
+    "rank": 85
+  },
+  {
+    "value": "ASA College",
+    "label": "asa college asa.edu",
+    "rank": 85
+  },
+  {
+    "value": "Ashland University",
+    "label": "ashland university ashland.edu",
+    "rank": 85
+  },
+  {
+    "value": "Aspen University",
+    "label": "aspen university aspen.edu",
+    "rank": 85
+  },
+  {
+    "value": "Assumption College",
+    "label": "assumption college assumption.edu",
+    "rank": 85
+  },
+  {
+    "value": "Athenaeum of Ohio",
+    "label": "athenaeum of ohio athenaeum.edu",
+    "rank": 85
+  },
+  {
+    "value": "Athens State University",
+    "label": "athens state university athens.edu",
+    "rank": 85
+  },
+  {
+    "value": "Atlanta College of Art",
+    "label": "atlanta college of art aca.edu",
+    "rank": 85
+  },
+  {
+    "value": "Atlanta Metropolitan State College",
+    "label": "atlanta metropolitan state college atlm.peachnet.edu",
+    "rank": 85
+  },
+  {
+    "value": "Atlantic Union College",
+    "label": "atlantic union college auc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Atlantic University",
+    "label": "atlantic university atlanticuniv.edu",
+    "rank": 85
+  },
+  {
+    "value": "Auburn University",
+    "label": "auburn university  auburn.edu",
+    "rank": 85
+  },
+  {
+    "value": "Auburn University-Montgomery",
+    "label": "auburn university-montgomery aum.edu",
+    "rank": 85
+  },
+  {
+    "value": "Augsburg College",
+    "label": "augsburg college augsburg.edu",
+    "rank": 85
+  },
+  {
+    "value": "Augusta State University",
+    "label": "augusta state university aug.edu",
+    "rank": 85
+  },
+  {
+    "value": "Augustana College",
+    "label": "augustana college augustana.edu",
+    "rank": 85
+  },
+  {
+    "value": "Augustana University",
+    "label": "augustana university augie.edu",
+    "rank": 85
+  },
+  {
+    "value": "Aurora University",
+    "label": "aurora university aurora.edu",
+    "rank": 85
+  },
+  {
+    "value": "Austin Peay State University",
+    "label": "austin peay state university apsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Averett University",
+    "label": "averett university averett.edu",
+    "rank": 85
+  },
+  {
+    "value": "Avila University",
+    "label": "avila university avila.edu",
+    "rank": 85
+  },
+  {
+    "value": "Azusa Pacific University",
+    "label": "azusa pacific university apu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Babson College",
+    "label": "babson college babson.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bacone College",
+    "label": "bacone college bacone.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bainbridge State College",
+    "label": "bainbridge state college bainbridge.edu",
+    "rank": 85
+  },
+  {
+    "value": "Baker College",
+    "label": "baker college baker.edu",
+    "rank": 85
+  },
+  {
+    "value": "Baker University",
+    "label": "baker university bakeru.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bakersfield College",
+    "label": "bakersfield college bakersfieldcollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Ball State University",
+    "label": "ball state university bsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Baltimore Hebrew University Inc",
+    "label": "baltimore hebrew university inc bhu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Baltimore International College",
+    "label": "baltimore international college bic.edu",
+    "rank": 85
+  },
+  {
+    "value": "Banner College-Arlington",
+    "label": "banner college-arlington chubbinstitute.edu",
+    "rank": 85
+  },
+  {
+    "value": "Baptist University of the Americas",
+    "label": "baptist university of the americas bua.edu",
+    "rank": 85
+  },
+  {
+    "value": "Barclay College",
+    "label": "barclay college barclaycollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bard College",
+    "label": "bard college bard.edu",
+    "rank": 85
+  },
+  {
+    "value": "Barnard College",
+    "label": "barnard college barnard.edu",
+    "rank": 85
+  },
+  {
+    "value": "Barry University",
+    "label": "barry university barry.edu",
+    "rank": 85
+  },
+  {
+    "value": "Barton College",
+    "label": "barton college barton.edu",
+    "rank": 85
+  },
+  {
+    "value": "Baruch College",
+    "label": "baruch college baruch.cuny.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bastyr University",
+    "label": "bastyr university bastyr.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bates College",
+    "label": "bates college bates.edu",
+    "rank": 85
+  },
+  {
+    "value": "Baton Rouge College",
+    "label": "baton rouge college brc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bay Path University",
+    "label": "bay path university baypath.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bay State College",
+    "label": "bay state college baystate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Beacon College",
+    "label": "beacon college beaconcollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Beacon University",
+    "label": "beacon university beacon.edu",
+    "rank": 85
+  },
+  {
+    "value": "Beal College",
+    "label": "beal college bealcollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Becker College",
+    "label": "becker college beckercollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Belhaven University",
+    "label": "belhaven university belhaven.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bellevue University",
+    "label": "bellevue university bellevue.edu",
+    "rank": 85
+  },
+  {
+    "value": "Belmont Abbey College",
+    "label": "belmont abbey college belmontabbeycollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Belmont University",
+    "label": "belmont university belmont.edu",
+    "rank": 85
+  },
+  {
+    "value": "Benedict College",
+    "label": "benedict college benedict.edu",
+    "rank": 85
+  },
+  {
+    "value": "Benedictine College",
+    "label": "benedictine college benedictine.edu",
+    "rank": 85
+  },
+  {
+    "value": "Benedictine University",
+    "label": "benedictine university ben.edu",
+    "rank": 85
+  },
+  {
+    "value": "Benjamin Franklin Institute of Technology",
+    "label": "benjamin franklin institute of technology bfit.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bennett College for Women",
+    "label": "bennett college for women bennett.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bennington College",
+    "label": "bennington college bennington.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bentley University",
+    "label": "bentley university bentley.edu",
+    "rank": 85
+  },
+  {
+    "value": "Berea College",
+    "label": "berea college berea.edu",
+    "rank": 85
+  },
+  {
+    "value": "Berkeley College",
+    "label": "berkeley college berkeleycollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Berklee College of Music",
+    "label": "berklee college of music berklee.edu",
+    "rank": 85
+  },
+  {
+    "value": "Berry College",
+    "label": "berry college berry.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bethany College",
+    "label": "bethany college bethanylb.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bethany Lutheran College",
+    "label": "bethany lutheran college blc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bethany University",
+    "label": "bethany university bethany.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bethel College",
+    "label": "bethel college bethelcollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bethel University",
+    "label": "bethel university bethel.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bethesda University",
+    "label": "bethesda university buc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bethune - Cookman University",
+    "label": "bethune - cookman university bethune.cookman.edu",
+    "rank": 85
+  },
+  {
+    "value": "Biola University",
+    "label": "biola university biola.edu",
+    "rank": 85
+  },
+  {
+    "value": "Birmingham Southern College",
+    "label": "birmingham southern college bsc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bismarck State College",
+    "label": "bismarck state college bismarckstate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bloomfield College",
+    "label": "bloomfield college bloomfield.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bloomsburg University of Pennsylvania",
+    "label": "bloomsburg university of pennsylvania bloomu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Blue Cliff College - Gulfport",
+    "label": "blue cliff college - gulfport bluecliffcollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Blue Mountain College",
+    "label": "blue mountain college bmc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bluefield College",
+    "label": "bluefield college bluefield.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bluefield State College",
+    "label": "bluefield state college bluefieldstate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bluffton University",
+    "label": "bluffton university bluffton.edu",
+    "rank": 85
+  },
+  {
+    "value": "Boise Bible College",
+    "label": "boise bible college boisebible.edu",
+    "rank": 85
+  },
+  {
+    "value": "Boise State University",
+    "label": "boise state university boisestate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Boston College",
+    "label": "boston college bc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bowdoin College",
+    "label": "bowdoin college bowdoin.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bowie State University",
+    "label": "bowie state university bowiestate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bowling Green State University",
+    "label": "bowling green state university bgsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bradley University",
+    "label": "bradley university bradley.edu",
+    "rank": 85
+  },
+  {
+    "value": "Briarcliffe College",
+    "label": "briarcliffe college briarcliffe.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bridgewater College",
+    "label": "bridgewater college bridgewater.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bridgewater State University",
+    "label": "bridgewater state university bridgew.edu",
+    "rank": 85
+  },
+  {
+    "value": "Brigham Young University - Hawaii",
+    "label": "brigham young university - hawaii byuh.edu",
+    "rank": 85
+  },
+  {
+    "value": "Brooklyn College",
+    "label": "brooklyn college  brooklyn.cuny.edu",
+    "rank": 85
+  },
+  {
+    "value": "Brooks College",
+    "label": "brooks college brookscollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bryan College",
+    "label": "bryan college bryan.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bryant and Stratton College",
+    "label": "bryant and stratton college bryantstratton.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bryant University",
+    "label": "bryant university bryant.edu",
+    "rank": 85
+  },
+  {
+    "value": "Bucknell University",
+    "label": "bucknell university bucknell.edu",
+    "rank": 85
+  },
+  {
+    "value": "Buena Vista University",
+    "label": "buena vista university bvu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Butler University",
+    "label": "butler university butler.edu",
+    "rank": 85
+  },
+  {
+    "value": "Caldwell University",
+    "label": "caldwell university caldwell.edu",
+    "rank": 85
+  },
+  {
+    "value": "California Baptist University",
+    "label": "california baptist university calbaptist.edu",
+    "rank": 85
+  },
+  {
+    "value": "California Christian College",
+    "label": "california christian college calchristiancollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "California Coast University",
+    "label": "california coast university calcoast.edu",
+    "rank": 85
+  },
+  {
+    "value": "California Intercontinental University",
+    "label": "california intercontinental university caluniversity.edu",
+    "rank": 85
+  },
+  {
+    "value": "California Lutheran University",
+    "label": "california lutheran university callutheran.edu",
+    "rank": 85
+  },
+  {
+    "value": "California Northstate University",
+    "label": "california northstate university cnsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "California Polytechnic State University",
+    "label": "california polytechnic state university calpoly.edu",
+    "rank": 85
+  },
+  {
+    "value": "California State Polytechnic University - Pomona",
+    "label": "california state polytechnic university - pomona cpp.edu",
+    "rank": 85
+  },
+  {
+    "value": "Cal State  - Bakersfield",
+    "label": "cal state  - bakersfield csub.edu",
+    "rank": 85
+  },
+  {
+    "value": "Cal State  - Channel Islands",
+    "label": "cal state  - channel islands csuci.edu",
+    "rank": 85
+  },
+  {
+    "value": "Cal State  - Chico",
+    "label": "cal state  - chico csuchico.edu",
+    "rank": 85
+  },
+  {
+    "value": "Cal State  - Dominguez Hills",
+    "label": "cal state  - dominguez hills csudh.edu",
+    "rank": 85
+  },
+  {
+    "value": "Cal State  - East Bay",
+    "label": "cal state  - east bay csueastbay.edu",
+    "rank": 85
+  },
+  {
+    "value": "Cala State  - Fresno",
+    "label": "cala state  - fresno fresnostate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Cal State  - Fullerton",
+    "label": "cal state  - fullerton fullerton.edu",
+    "rank": 85
+  },
+  {
+    "value": "Cal State  - Long Beach",
+    "label": "cal state  - long beach csulb.edu",
+    "rank": 85
+  },
+  {
+    "value": "Cal State  - Los Angeles",
+    "label": "cal state  - los angeles calstatela.edu",
+    "rank": 85
+  },
+  {
+    "value": "Cal State  - Monterey Bay",
+    "label": "cal state  - monterey bay csumb.edu",
+    "rank": 85
+  },
+  {
+    "value": "Cal State  - Northridge",
+    "label": "cal state  - northridge csun.edu",
+    "rank": 85
+  },
+  {
+    "value": "Cal State  - Sacramento",
+    "label": "cal state  - sacramento csus.edu",
+    "rank": 85
+  },
+  {
+    "value": "Cal State  - San Bernardino",
+    "label": "cal state  - san bernardino csusb.edu",
+    "rank": 85
+  },
+  {
+    "value": "Cal State  - San Marcos",
+    "label": "cal state  - san marcos csusm.edu",
+    "rank": 85
+  },
+  {
+    "value": "Cal State  - Stanislaus",
+    "label": "cal state  - stanislaus csustan.edu",
+    "rank": 85
+  },
+  {
+    "value": "Cal University of Pennsylvania",
+    "label": "cal university of pennsylvania calu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Calvary University",
+    "label": "calvary university calvary.edu",
+    "rank": 85
+  },
+  {
+    "value": "Cameron University",
+    "label": "cameron university cameron.edu",
+    "rank": 85
+  },
+  {
+    "value": "Campbell University",
+    "label": "campbell university campbell.edu",
+    "rank": 85
+  },
+  {
+    "value": "Canada College",
+    "label": "canada college canadacollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Canisius College",
+    "label": "canisius college canisius.edu",
+    "rank": 85
+  },
+  {
+    "value": "Capella University",
+    "label": "capella university capella.edu",
+    "rank": 85
+  },
+  {
+    "value": "Capital University",
+    "label": "capital university capital.edu",
+    "rank": 85
+  },
+  {
+    "value": "Cardean University",
+    "label": "cardean university cardean.edu",
+    "rank": 85
+  },
+  {
+    "value": "Carleton College",
+    "label": "carleton college carleton.edu",
+    "rank": 85
+  },
+  {
+    "value": "Carlow University",
+    "label": "carlow university carlow.edu",
+    "rank": 85
+  },
+  {
+    "value": "Carolina Christian College",
+    "label": "carolina christian college carolina.edu",
+    "rank": 85
+  },
+  {
+    "value": "Carrington College",
+    "label": "carrington college carrington.edu",
+    "rank": 85
+  },
+  {
+    "value": "Carroll College",
+    "label": "carroll college carroll.edu",
+    "rank": 85
+  },
+  {
+    "value": "Carroll University",
+    "label": "carroll university carrollu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Carson-Newman University",
+    "label": "carson-newman university cn.edu",
+    "rank": 85
+  },
+  {
+    "value": "Carthage College",
+    "label": "carthage college carthage.edu",
+    "rank": 85
+  },
+  {
+    "value": "Carver College",
+    "label": "carver college carver.edu",
+    "rank": 85
+  },
+  {
+    "value": "Casper College",
+    "label": "casper college caspercollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Castleton State College",
+    "label": "castleton state college castleton.edu",
+    "rank": 85
+  },
+  {
+    "value": "Cedarville University",
+    "label": "cedarville university cedarville.edu",
+    "rank": 85
+  },
+  {
+    "value": "Centenary College of Louisiana",
+    "label": "centenary college of louisiana centenary.edu",
+    "rank": 85
+  },
+  {
+    "value": "Centenary University",
+    "label": "centenary university centenarycollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Central Baptist College",
+    "label": "central baptist college cbc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Central Bible College",
+    "label": "central bible college cbcag.edu",
+    "rank": 85
+  },
+  {
+    "value": "Central Christian College of Kansas",
+    "label": "central christian college of kansas centralchristian.edu",
+    "rank": 85
+  },
+  {
+    "value": "Central Methodist University",
+    "label": "central methodist university centralmethodist.edu",
+    "rank": 85
+  },
+  {
+    "value": "Central Michigan University",
+    "label": "central michigan university cmich.edu",
+    "rank": 85
+  },
+  {
+    "value": "Central State University",
+    "label": "central state university centralstate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Central Washington University",
+    "label": "central washington university cwu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Cerritos College",
+    "label": "cerritos college cerritos.edu",
+    "rank": 85
+  },
+  {
+    "value": "Chadron State College",
+    "label": "chadron state college csc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Chaffey College",
+    "label": "chaffey college chaffey.edu",
+    "rank": 85
+  },
+  {
+    "value": "Chaminade University of Honolulu",
+    "label": "chaminade university of honolulu chaminade.edu",
+    "rank": 85
+  },
+  {
+    "value": "Champlain College",
+    "label": "champlain college champlain.edu",
+    "rank": 85
+  },
+  {
+    "value": "Chapman University",
+    "label": "chapman university chapman.edu",
+    "rank": 85
+  },
+  {
+    "value": "Charleston Southern University",
+    "label": "charleston southern university csuniv.edu",
+    "rank": 85
+  },
+  {
+    "value": "Charter Oak State College",
+    "label": "charter oak state college cosc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Chase College",
+    "label": "chase college chase.edu",
+    "rank": 85
+  },
+  {
+    "value": "Chatfield College",
+    "label": "chatfield college chatfield.edu",
+    "rank": 85
+  },
+  {
+    "value": "Chesapeake College",
+    "label": "chesapeake college chesapeake.edu",
+    "rank": 85
+  },
+  {
+    "value": "Chicago State University",
+    "label": "chicago state university csu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Christian Brothers University",
+    "label": "christian brothers university cbu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Claremont Lincoln University",
+    "label": "claremont lincoln university claremontlincoln.edu",
+    "rank": 85
+  },
+  {
+    "value": "Claremont McKenna College",
+    "label": "claremont mckenna college claremontmckenna.edu",
+    "rank": 85
+  },
+  {
+    "value": "Clarendon College",
+    "label": "clarendon college clarendoncollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Clarion University of Pennsylvania",
+    "label": "clarion university of pennsylvania clarion.edu",
+    "rank": 85
+  },
+  {
+    "value": "Clark Atlanta University",
+    "label": "clark atlanta university cau.edu",
+    "rank": 85
+  },
+  {
+    "value": "Clarke University",
+    "label": "clarke university clarke.edu",
+    "rank": 85
+  },
+  {
+    "value": "Clarks Summit University",
+    "label": "clarks summit university clarkssummitu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Clarkson University",
+    "label": "clarkson university clarkson.edu",
+    "rank": 85
+  },
+  {
+    "value": "Clayton  State University",
+    "label": "clayton  state university clayton.edu",
+    "rank": 85
+  },
+  {
+    "value": "Clearwater Christian College",
+    "label": "clearwater christian college clearwater.edu",
+    "rank": 85
+  },
+  {
+    "value": "Cleveland State University",
+    "label": "cleveland state university csuohio.edu",
+    "rank": 85
+  },
+  {
+    "value": "Coastal Bend College",
+    "label": "coastal bend college coastalbend.edu",
+    "rank": 85
+  },
+  {
+    "value": "Coastal Carolina University",
+    "label": "coastal carolina university coastal.edu",
+    "rank": 85
+  },
+  {
+    "value": "Colby College",
+    "label": "colby college colby.edu",
+    "rank": 85
+  },
+  {
+    "value": "Colby-Sawyer College",
+    "label": "colby-sawyer college colby-sawyer.edu",
+    "rank": 85
+  },
+  {
+    "value": "Coleman University",
+    "label": "coleman university coleman.edu",
+    "rank": 85
+  },
+  {
+    "value": "Colgate University",
+    "label": "colgate university colgate.edu",
+    "rank": 85
+  },
+  {
+    "value": "College of Alameda",
+    "label": "college of alameda peralta.edu",
+    "rank": 85
+  },
+  {
+    "value": "College of Biblical Studies-Houston",
+    "label": "college of biblical studies-houston cbshouston.edu",
+    "rank": 85
+  },
+  {
+    "value": "College of Central Florida",
+    "label": "college of central florida cf.edu",
+    "rank": 85
+  },
+  {
+    "value": "College of Charleston",
+    "label": "college of charleston cofc.edu",
+    "rank": 85
+  },
+  {
+    "value": "College of DuPage",
+    "label": "college of dupage cod.edu",
+    "rank": 85
+  },
+  {
+    "value": "College of Eastern Utah",
+    "label": "college of eastern utah ceu.edu",
+    "rank": 85
+  },
+  {
+    "value": "College of Idaho",
+    "label": "college of idaho collegeofidaho.edu",
+    "rank": 85
+  },
+  {
+    "value": "College of Menominee Nation",
+    "label": "college of menominee nation menominee.edu",
+    "rank": 85
+  },
+  {
+    "value": "College of Mount Saint Vincent",
+    "label": "college of mount saint vincent mountsaintvincent.edu",
+    "rank": 85
+  },
+  {
+    "value": "The College of New Jersey",
+    "label": "the college of new jersey tcnj.edu",
+    "rank": 85
+  },
+  {
+    "value": "The College of New Rochelle",
+    "label": "the college of new rochelle cnr.edu",
+    "rank": 85
+  },
+  {
+    "value": "College of Our Lady of the Elms",
+    "label": "college of our lady of the elms elms.edu",
+    "rank": 85
+  },
+  {
+    "value": "College of Saint Benedict",
+    "label": "college of saint benedict csbsju.edu",
+    "rank": 85
+  },
+  {
+    "value": "College of Saint Elizabeth",
+    "label": "college of saint elizabeth cse.edu",
+    "rank": 85
+  },
+  {
+    "value": "College of Saint Mary",
+    "label": "college of saint mary csm.edu",
+    "rank": 85
+  },
+  {
+    "value": "College of Saint Scholastica",
+    "label": "college of saint scholastica css.edu",
+    "rank": 85
+  },
+  {
+    "value": "College of San Mateo",
+    "label": "college of san mateo collegeofsanmateo.edu",
+    "rank": 85
+  },
+  {
+    "value": "College of Southern Idaho",
+    "label": "college of southern idaho csi.edu",
+    "rank": 85
+  },
+  {
+    "value": "College of Southern Maryland",
+    "label": "college of southern maryland csmd.edu",
+    "rank": 85
+  },
+  {
+    "value": "College of Southern Nevada",
+    "label": "college of southern nevada csn.edu",
+    "rank": 85
+  },
+  {
+    "value": "College of St Joseph",
+    "label": "college of st joseph csj.edu",
+    "rank": 85
+  },
+  {
+    "value": "College of Staten Island",
+    "label": "college of staten island  csi.cuny.edu",
+    "rank": 85
+  },
+  {
+    "value": "College of the Albemarle",
+    "label": "college of the albemarle albemarle.edu",
+    "rank": 85
+  },
+  {
+    "value": "College of the Atlantic",
+    "label": "college of the atlantic coa.edu",
+    "rank": 85
+  },
+  {
+    "value": "College of the Canyons",
+    "label": "college of the canyons canyons.edu",
+    "rank": 85
+  },
+  {
+    "value": "College of the Desert",
+    "label": "college of the desert collegeofthedesert.edu",
+    "rank": 85
+  },
+  {
+    "value": "College of the Holy Cross",
+    "label": "college of the holy cross holycross.edu",
+    "rank": 85
+  },
+  {
+    "value": "College of the Ozarks",
+    "label": "college of the ozarks cofo.edu",
+    "rank": 85
+  },
+  {
+    "value": "College of the Redwoods",
+    "label": "college of the redwoods redwoods.edu",
+    "rank": 85
+  },
+  {
+    "value": "College of the Sequoias",
+    "label": "college of the sequoias cos.edu",
+    "rank": 85
+  },
+  {
+    "value": "College of the Siskiyous",
+    "label": "college of the siskiyous siskiyous.edu",
+    "rank": 85
+  },
+  {
+    "value": "College of Visual Arts",
+    "label": "college of visual arts cva.edu",
+    "rank": 85
+  },
+  {
+    "value": "CollegeAmerica - Denver",
+    "label": "collegeamerica - denver collegeamerica.edu",
+    "rank": 85
+  },
+  {
+    "value": "Colorado College",
+    "label": "colorado college coloradocollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Colorado Mesa University",
+    "label": "colorado mesa university coloradomesa.edu",
+    "rank": 85
+  },
+  {
+    "value": "Colorado State University",
+    "label": "colorado state university colostate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Colorado State University - Pueblo",
+    "label": "colorado state university - pueblo colostate-pueblo.edu",
+    "rank": 85
+  },
+  {
+    "value": "Columbia Southern University",
+    "label": "columbia southern university columbiasouthern.edu",
+    "rank": 85
+  },
+  {
+    "value": "Columbus State University",
+    "label": "columbus state university columbusstate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Concord University",
+    "label": "concord university concord.edu",
+    "rank": 85
+  },
+  {
+    "value": "Concordia College",
+    "label": "concordia college cord.edu",
+    "rank": 85
+  },
+  {
+    "value": "Concordia University",
+    "label": "concordia university cuaa.edu",
+    "rank": 85
+  },
+  {
+    "value": "Concordia University - Austin",
+    "label": "concordia university - austin concordia.edu",
+    "rank": 85
+  },
+  {
+    "value": "Concordia University Chicago",
+    "label": "concordia university chicago cuchicago.edu",
+    "rank": 85
+  },
+  {
+    "value": "Concordia University Irvine",
+    "label": "concordia university irvine cui.edu",
+    "rank": 85
+  },
+  {
+    "value": "Concordia University Wisconsin",
+    "label": "concordia university wisconsin cuw.edu",
+    "rank": 85
+  },
+  {
+    "value": "Concordia University, St. Paul",
+    "label": "concordia university, st. paul csp.edu",
+    "rank": 85
+  },
+  {
+    "value": "Coppin State University",
+    "label": "coppin state university coppin.edu",
+    "rank": 85
+  },
+  {
+    "value": "Corban University",
+    "label": "corban university corban.edu",
+    "rank": 85
+  },
+  {
+    "value": "Corcoran College of Art and Design",
+    "label": "corcoran college of art and design corcoran.edu",
+    "rank": 85
+  },
+  {
+    "value": "Cottey College",
+    "label": "cottey college cottey.edu",
+    "rank": 85
+  },
+  {
+    "value": "Creighton University",
+    "label": "creighton university creighton.edu",
+    "rank": 85
+  },
+  {
+    "value": "Culinary Institute of America",
+    "label": "culinary institute of america culinary.edu",
+    "rank": 85
+  },
+  {
+    "value": "Curry College",
+    "label": "curry college curry.edu",
+    "rank": 85
+  },
+  {
+    "value": "Dakota State University",
+    "label": "dakota state university dsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Dakota Wesleyan University",
+    "label": "dakota wesleyan university dwu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Dallas Baptist University",
+    "label": "dallas baptist university dbu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Dallas Christian College",
+    "label": "dallas christian college dallas.edu",
+    "rank": 85
+  },
+  {
+    "value": "Dalton State College",
+    "label": "dalton state college daltonstate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Daniel Webster College",
+    "label": "daniel webster college dwc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Darton State College",
+    "label": "darton state college darton.edu",
+    "rank": 85
+  },
+  {
+    "value": "Davenport University",
+    "label": "davenport university davenport.edu",
+    "rank": 85
+  },
+  {
+    "value": "Davidson College",
+    "label": "davidson college www2.davidson.eduindex.asp",
+    "rank": 85
+  },
+  {
+    "value": "Davis & Elkins College",
+    "label": "davis & elkins college dewv.edu",
+    "rank": 85
+  },
+  {
+    "value": "Davis College",
+    "label": "davis college davisny.edu",
+    "rank": 85
+  },
+  {
+    "value": "Daytona State College",
+    "label": "daytona state college daytonastate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Delaware College of Art and Design",
+    "label": "delaware college of art and design dcad.edu",
+    "rank": 85
+  },
+  {
+    "value": "Delaware State University",
+    "label": "delaware state university desu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Delta State University",
+    "label": "delta state university deltastate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Denison University",
+    "label": "denison university denison.edu",
+    "rank": 85
+  },
+  {
+    "value": "DePaul University",
+    "label": "depaul university depaul.edu",
+    "rank": 85
+  },
+  {
+    "value": "DePauw University",
+    "label": "depauw university depauw.edu",
+    "rank": 85
+  },
+  {
+    "value": "Design Institute of San Diego",
+    "label": "design institute of san diego disd.edu",
+    "rank": 85
+  },
+  {
+    "value": "DeVry University",
+    "label": "devry university devry.edu",
+    "rank": 85
+  },
+  {
+    "value": "Dixie State university",
+    "label": "dixie state university dixie.edu",
+    "rank": 85
+  },
+  {
+    "value": "Dominican University",
+    "label": "dominican university dom.edu",
+    "rank": 85
+  },
+  {
+    "value": "Dominican University of California",
+    "label": "dominican university of california dominican.edu",
+    "rank": 85
+  },
+  {
+    "value": "Dongguk University - Los Angeles",
+    "label": "dongguk university - los angeles dula.edu",
+    "rank": 85
+  },
+  {
+    "value": "Drake University",
+    "label": "drake university drake.edu",
+    "rank": 85
+  },
+  {
+    "value": "Drew University",
+    "label": "drew university drew.edu",
+    "rank": 85
+  },
+  {
+    "value": "Drexel University",
+    "label": "drexel university drexel.edu",
+    "rank": 85
+  },
+  {
+    "value": "Drury University",
+    "label": "drury university drury.edu",
+    "rank": 85
+  },
+  {
+    "value": "Duquesne University",
+    "label": "duquesne university duq.edu",
+    "rank": 85
+  },
+  {
+    "value": "East Carolina University",
+    "label": "east carolina university ecu.edu",
+    "rank": 85
+  },
+  {
+    "value": "East Central College",
+    "label": "east central college eastcentral.edu",
+    "rank": 85
+  },
+  {
+    "value": "East Central University",
+    "label": "east central university ecok.edu",
+    "rank": 85
+  },
+  {
+    "value": "East Georgia State College",
+    "label": "east georgia state college ega.edu",
+    "rank": 85
+  },
+  {
+    "value": "East Stroudsburg University of Pennsylvania",
+    "label": "east stroudsburg university of pennsylvania esu.edu",
+    "rank": 85
+  },
+  {
+    "value": "East Tennessee State University",
+    "label": "east tennessee state university etsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "East Texas Baptist University",
+    "label": "east texas baptist university etbu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Eastern Connecticut State University",
+    "label": "eastern connecticut state university easternct.edu",
+    "rank": 85
+  },
+  {
+    "value": "Eastern Illinois University",
+    "label": "eastern illinois university eiu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Eastern Kentucky University",
+    "label": "eastern kentucky university eku.edu",
+    "rank": 85
+  },
+  {
+    "value": "Eastern Michigan University",
+    "label": "eastern michigan university emich.edu",
+    "rank": 85
+  },
+  {
+    "value": "Eastern Nazarene College",
+    "label": "eastern nazarene college enc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Eastern New Mexico University",
+    "label": "eastern new mexico university enmu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Eastern New Mexico University - Roswell",
+    "label": "eastern new mexico university - roswell roswell.enmu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Eastern Oklahoma State College",
+    "label": "eastern oklahoma state college eosc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Eastern Oregon University",
+    "label": "eastern oregon university eou.edu",
+    "rank": 85
+  },
+  {
+    "value": "Eastern University",
+    "label": "eastern university eastern.edu",
+    "rank": 85
+  },
+  {
+    "value": "Eastern Washington University",
+    "label": "eastern washington university ewu.edu",
+    "rank": 85
+  },
+  {
+    "value": "East-West University",
+    "label": "east-west university eastwest.edu",
+    "rank": 85
+  },
+  {
+    "value": "Ecclesia College",
+    "label": "ecclesia college ecollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Eckerd College",
+    "label": "eckerd college eckerd.edu",
+    "rank": 85
+  },
+  {
+    "value": "Edinboro University of Pennsylvania",
+    "label": "edinboro university of pennsylvania edinboro.edu",
+    "rank": 85
+  },
+  {
+    "value": "Elizabethtown College",
+    "label": "elizabethtown college etown.edu",
+    "rank": 85
+  },
+  {
+    "value": "Ellis University",
+    "label": "ellis university ellis.edu",
+    "rank": 85
+  },
+  {
+    "value": "Elmhurst College",
+    "label": "elmhurst college elmhurst.edu",
+    "rank": 85
+  },
+  {
+    "value": "Elmira College",
+    "label": "elmira college elmira.edu",
+    "rank": 85
+  },
+  {
+    "value": "Elon University",
+    "label": "elon university elon.edu",
+    "rank": 85
+  },
+  {
+    "value": "Embry-Riddle  University",
+    "label": "embry-riddle  university  erau.edu",
+    "rank": 85
+  },
+  {
+    "value": "Emerson College",
+    "label": "emerson college emerson.edu",
+    "rank": 85
+  },
+  {
+    "value": "Emmanuel College",
+    "label": "emmanuel college ec.edu",
+    "rank": 85
+  },
+  {
+    "value": "Empire College",
+    "label": "empire college empcol.edu",
+    "rank": 85
+  },
+  {
+    "value": "Emporia State University",
+    "label": "emporia state university emporia.edu",
+    "rank": 85
+  },
+  {
+    "value": "Fairfield University",
+    "label": "fairfield university fairfield.edu",
+    "rank": 85
+  },
+  {
+    "value": "Fairleigh Dickinson University",
+    "label": "fairleigh dickinson university fdu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Fairmont State University",
+    "label": "fairmont state university fairmontstate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Fashion Institute of Technology",
+    "label": "fashion institute of technology fitnyc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Faulkner University",
+    "label": "faulkner university faulkner.edu",
+    "rank": 85
+  },
+  {
+    "value": "Fayetteville State University",
+    "label": "fayetteville state university uncfsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Ferrum College",
+    "label": "ferrum college ferrum.edu",
+    "rank": 85
+  },
+  {
+    "value": "FIDM/Fashion Institute of Design & Merchandising",
+    "label": "fidm/fashion institute of design & merchandising fidm.edu",
+    "rank": 85
+  },
+  {
+    "value": "Fisher College",
+    "label": "fisher college fisher.edu",
+    "rank": 85
+  },
+  {
+    "value": "Fisk University",
+    "label": "fisk university fisk.edu",
+    "rank": 85
+  },
+  {
+    "value": "Fitchburg State University",
+    "label": "fitchburg state university fsc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Florida Atlantic University",
+    "label": "florida atlantic university fau.edu",
+    "rank": 85
+  },
+  {
+    "value": "Florida College",
+    "label": "florida college floridacollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Florida Gulf Coast University",
+    "label": "florida gulf coast university fgcu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Florida Institute of Technology - Melbourne",
+    "label": "florida institute of technology - melbourne fit.edu",
+    "rank": 85
+  },
+  {
+    "value": "Florida International University",
+    "label": "florida international university fiu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Florida Memorial University",
+    "label": "florida memorial university fmuniv.edu",
+    "rank": 85
+  },
+  {
+    "value": "Florida National University",
+    "label": "florida national university fnu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Florida Southern College",
+    "label": "florida southern college flsouthern.edu",
+    "rank": 85
+  },
+  {
+    "value": "Florida SouthWestern State College",
+    "label": "florida southwestern state college edison.edu",
+    "rank": 85
+  },
+  {
+    "value": "Florida State College - Jacksonville",
+    "label": "florida state college - jacksonville fscj.edu",
+    "rank": 85
+  },
+  {
+    "value": "Fortis College",
+    "label": "fortis college fortiscollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Framingham State University",
+    "label": "framingham state university framingham.edu",
+    "rank": 85
+  },
+  {
+    "value": "Francis Marion University",
+    "label": "francis marion university fmarion.edu",
+    "rank": 85
+  },
+  {
+    "value": "Franklin Pierce University",
+    "label": "franklin pierce university fpc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Franklin University",
+    "label": "franklin university franklin.edu",
+    "rank": 85
+  },
+  {
+    "value": "Fresno Pacific University",
+    "label": "fresno pacific university fresno.edu",
+    "rank": 85
+  },
+  {
+    "value": "Frostburg State University",
+    "label": "frostburg state university frostburg.edu",
+    "rank": 85
+  },
+  {
+    "value": "Fullerton College",
+    "label": "fullerton college fullcoll.edu",
+    "rank": 85
+  },
+  {
+    "value": "Furman University",
+    "label": "furman university furman.edu",
+    "rank": 85
+  },
+  {
+    "value": "Gainesville State College",
+    "label": "gainesville state college gc.peachnet.edu",
+    "rank": 85
+  },
+  {
+    "value": "George Mason University",
+    "label": "george mason university gmu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Georgia Christian University",
+    "label": "georgia christian university gcuniv.edu",
+    "rank": 85
+  },
+  {
+    "value": "Georgia College and State University",
+    "label": "georgia college and state university gcsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Georgia Southern University",
+    "label": "georgia southern university georgiasouthern.edu",
+    "rank": 85
+  },
+  {
+    "value": "Georgia Southwestern State University",
+    "label": "georgia southwestern state university gsw.edu",
+    "rank": 85
+  },
+  {
+    "value": "Georgia State University",
+    "label": "georgia state university gsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Georgian Court University",
+    "label": "georgian court university georgian.edu",
+    "rank": 85
+  },
+  {
+    "value": "Gettysburg College",
+    "label": "gettysburg college gettysburg.edu",
+    "rank": 85
+  },
+  {
+    "value": "Golden Gate University",
+    "label": "golden gate university ggu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Goldey-Beacom College",
+    "label": "goldey-beacom college gbc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Gonzaga University",
+    "label": "gonzaga university gonzaga.edu",
+    "rank": 85
+  },
+  {
+    "value": "Grambling State University",
+    "label": "grambling state university gram.edu",
+    "rank": 85
+  },
+  {
+    "value": "Grand Canyon University",
+    "label": "grand canyon university gcu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Grand Valley State University",
+    "label": "grand valley state university gvsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Grayson College",
+    "label": "grayson college grayson.edu",
+    "rank": 85
+  },
+  {
+    "value": "Great Lakes Institute of Technology",
+    "label": "great lakes institute of technology glit.edu",
+    "rank": 85
+  },
+  {
+    "value": "Hampton University",
+    "label": "hampton university hamptonu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Harding University",
+    "label": "harding university harding.edu",
+    "rank": 85
+  },
+  {
+    "value": "Harvey Mudd College",
+    "label": "harvey mudd college hmc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Haskell Indian Nations University",
+    "label": "haskell indian nations university haskell.edu",
+    "rank": 85
+  },
+  {
+    "value": "Haverford College",
+    "label": "haverford college haverford.edu",
+    "rank": 85
+  },
+  {
+    "value": "Hawaii Pacific University",
+    "label": "hawaii pacific university hpu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Hawaii Technology Institute",
+    "label": "hawaii technology institute hti.edu",
+    "rank": 85
+  },
+  {
+    "value": "Hebrew College",
+    "label": "hebrew college hebrewcollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Hebrew Theological College",
+    "label": "hebrew theological college htcnet.edu",
+    "rank": 85
+  },
+  {
+    "value": "Heidelberg University",
+    "label": "heidelberg university heidelberg.edu",
+    "rank": 85
+  },
+  {
+    "value": "Helena College University of Montana",
+    "label": "helena college university of montana umhelena.edu",
+    "rank": 85
+  },
+  {
+    "value": "High Point University",
+    "label": "high point university highpoint.edu",
+    "rank": 85
+  },
+  {
+    "value": "Highline College",
+    "label": "highline college highline.edu",
+    "rank": 85
+  },
+  {
+    "value": "Hilbert College",
+    "label": "hilbert college hilbert.edu",
+    "rank": 85
+  },
+  {
+    "value": "Hill College",
+    "label": "hill college hillcollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Hiram College",
+    "label": "hiram college hiram.edu",
+    "rank": 85
+  },
+  {
+    "value": "Hiwassee College",
+    "label": "hiwassee college hiwassee.edu",
+    "rank": 85
+  },
+  {
+    "value": "Hobart & William Smith Colleges",
+    "label": "hobart & william smith colleges hws.edu",
+    "rank": 85
+  },
+  {
+    "value": "Hobe Sound Bible College",
+    "label": "hobe sound bible college hsbc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Hocking College",
+    "label": "hocking college hocking.edu",
+    "rank": 85
+  },
+  {
+    "value": "Hodges University",
+    "label": "hodges university hodges.edu",
+    "rank": 85
+  },
+  {
+    "value": "Hofstra University",
+    "label": "hofstra university hofstra.edu",
+    "rank": 85
+  },
+  {
+    "value": "Hope International University",
+    "label": "hope international university hiu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Houghton College",
+    "label": "houghton college houghton.edu",
+    "rank": 85
+  },
+  {
+    "value": "Houston Baptist University",
+    "label": "houston baptist university hbu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Howard College",
+    "label": "howard college howardcollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Howard Payne University",
+    "label": "howard payne university hputx.edu",
+    "rank": 85
+  },
+  {
+    "value": "Howard University",
+    "label": "howard university howard.edu",
+    "rank": 85
+  },
+  {
+    "value": "Humboldt State University",
+    "label": "humboldt state university humboldt.edu",
+    "rank": 85
+  },
+  {
+    "value": "Humphreys College",
+    "label": "humphreys college humphreys.edu",
+    "rank": 85
+  },
+  {
+    "value": "Hunter College",
+    "label": "hunter college  hunter.cuny.edu",
+    "rank": 85
+  },
+  {
+    "value": "Huntingdon College",
+    "label": "huntingdon college huntingdon.edu",
+    "rank": 85
+  },
+  {
+    "value": "Huntington University",
+    "label": "huntington university huntington.edu",
+    "rank": 85
+  },
+  {
+    "value": "Huntsville Bible College",
+    "label": "huntsville bible college hbc1.edu",
+    "rank": 85
+  },
+  {
+    "value": "Hussian College",
+    "label": "hussian college hussianart.edu",
+    "rank": 85
+  },
+  {
+    "value": "Husson University",
+    "label": "husson university husson.edu",
+    "rank": 85
+  },
+  {
+    "value": "Huston-Tillotson University",
+    "label": "huston-tillotson university htu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Idaho State University",
+    "label": "idaho state university isu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Illinois College",
+    "label": "illinois college ic.edu",
+    "rank": 85
+  },
+  {
+    "value": "Illinois Institute of Technology",
+    "label": "illinois institute of technology iit.edu",
+    "rank": 85
+  },
+  {
+    "value": "Illinois State University",
+    "label": "illinois state university ilstu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Illinois Wesleyan University",
+    "label": "illinois wesleyan university iwu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Immaculata University",
+    "label": "immaculata university immaculata.edu",
+    "rank": 85
+  },
+  {
+    "value": "Independence University",
+    "label": "independence university independence.edu",
+    "rank": 85
+  },
+  {
+    "value": "Indian River State College",
+    "label": "indian river state college irsc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Indiana Institute of Technology",
+    "label": "indiana institute of technology indianatech.edu",
+    "rank": 85
+  },
+  {
+    "value": "Indiana State University",
+    "label": "indiana state university indstate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Indiana University - Purdue University Fort Wayne",
+    "label": "indiana university - purdue university fort wayne ipfw.edu",
+    "rank": 85
+  },
+  {
+    "value": "Indiana University - Purdue University Indianapolis",
+    "label": "indiana university - purdue university indianapolis iupui.edu",
+    "rank": 85
+  },
+  {
+    "value": "Indiana University - East",
+    "label": "indiana university - east iue.edu",
+    "rank": 85
+  },
+  {
+    "value": "Indiana University - Kokomo",
+    "label": "indiana university - kokomo iu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Indiana University - Northwest",
+    "label": "indiana university - northwest iu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Indiana University of Pennsylvania",
+    "label": "indiana university of pennsylvania iup.edu",
+    "rank": 85
+  },
+  {
+    "value": "Indiana University - South Bend",
+    "label": "indiana university - south bend iu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Indiana University - Southeast",
+    "label": "indiana university - southeast iu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Indiana Wesleyan University",
+    "label": "indiana wesleyan university indwes.edu",
+    "rank": 85
+  },
+  {
+    "value": "Iona College",
+    "label": "iona college iona.eduhome.aspx",
+    "rank": 85
+  },
+  {
+    "value": "Iowa State University",
+    "label": "iowa state university iastate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Iowa Wesleyan University",
+    "label": "iowa wesleyan university iwc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Irish American University",
+    "label": "irish american university iamu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Ithaca College",
+    "label": "ithaca college ithaca.edu",
+    "rank": 85
+  },
+  {
+    "value": "Jackson State University",
+    "label": "jackson state university jsums.edu",
+    "rank": 85
+  },
+  {
+    "value": "Jacksonville State University",
+    "label": "jacksonville state university jsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Jacksonville University",
+    "label": "jacksonville university ju.edu",
+    "rank": 85
+  },
+  {
+    "value": "James A Rhodes State College",
+    "label": "james a rhodes state college rhodesstate.edu",
+    "rank": 85
+  },
+  {
+    "value": "James Madison University",
+    "label": "james madison university jmu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Jarvis Christian College",
+    "label": "jarvis christian college jarvis.edu",
+    "rank": 85
+  },
+  {
+    "value": "Jefferson College",
+    "label": "jefferson college jeffco.edu",
+    "rank": 85
+  },
+  {
+    "value": "John A Gupton College",
+    "label": "john a gupton college guptoncollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "John A Logan College",
+    "label": "john a logan college jalc.edu",
+    "rank": 85
+  },
+  {
+    "value": "John Brown University",
+    "label": "john brown university jbu.edu",
+    "rank": 85
+  },
+  {
+    "value": "John Carroll University",
+    "label": "john carroll university jcu.edu",
+    "rank": 85
+  },
+  {
+    "value": "John Wesley University",
+    "label": "john wesley university laureluniversity.edu",
+    "rank": 85
+  },
+  {
+    "value": "Johnson & Wales University",
+    "label": "johnson & wales university jwu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Johnson C Smith University",
+    "label": "johnson c smith university jcsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Johnson University",
+    "label": "johnson university jbc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Kansas Christian College",
+    "label": "kansas christian college metropolitancollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Kansas City Art Institute",
+    "label": "kansas city art institute kcai.edu",
+    "rank": 85
+  },
+  {
+    "value": "Kansas State University",
+    "label": "kansas state university k-state.edu",
+    "rank": 85
+  },
+  {
+    "value": "Kansas Wesleyan University",
+    "label": "kansas wesleyan university kwu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Kaskaskia College",
+    "label": "kaskaskia college kaskaskia.edu",
+    "rank": 85
+  },
+  {
+    "value": "Kean University",
+    "label": "kean university kean.edu",
+    "rank": 85
+  },
+  {
+    "value": "Keene State College",
+    "label": "keene state college keene.edu",
+    "rank": 85
+  },
+  {
+    "value": "Keiser University",
+    "label": "keiser university keiseruniversity.edu",
+    "rank": 85
+  },
+  {
+    "value": "Kennesaw State University",
+    "label": "kennesaw state university kennesaw.edu",
+    "rank": 85
+  },
+  {
+    "value": "Kent State University",
+    "label": "kent state university kent.edu",
+    "rank": 85
+  },
+  {
+    "value": "Kentucky Mountain Bible College",
+    "label": "kentucky mountain bible college kmbc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Kentucky State University",
+    "label": "kentucky state university kysu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Kentucky Wesleyan College",
+    "label": "kentucky wesleyan college kwc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Kenyon College",
+    "label": "kenyon college kenyon.edu",
+    "rank": 85
+  },
+  {
+    "value": "Kettering College",
+    "label": "kettering college kcma.edu",
+    "rank": 85
+  },
+  {
+    "value": "Kettering University",
+    "label": "kettering university kettering.edu",
+    "rank": 85
+  },
+  {
+    "value": "Keuka College",
+    "label": "keuka college keuka.edu",
+    "rank": 85
+  },
+  {
+    "value": "Keystone College",
+    "label": "keystone college keystone.edu",
+    "rank": 85
+  },
+  {
+    "value": "Kilgore College",
+    "label": "kilgore college kilgore.edu",
+    "rank": 85
+  },
+  {
+    "value": "King University",
+    "label": "king university king.edu",
+    "rank": 85
+  },
+  {
+    "value": "La Salle University",
+    "label": "la salle university lasalle.edu",
+    "rank": 85
+  },
+  {
+    "value": "La Sierra University",
+    "label": "la sierra university lasierra.edu",
+    "rank": 85
+  },
+  {
+    "value": "Laboure College",
+    "label": "laboure college laboure.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lackawanna College",
+    "label": "lackawanna college lackawanna.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lafayette College",
+    "label": "lafayette college lafayette.edu",
+    "rank": 85
+  },
+  {
+    "value": "LaGrange College",
+    "label": "lagrange college lagrange.edu",
+    "rank": 85
+  },
+  {
+    "value": "Laguna College of Art and Design",
+    "label": "laguna college of art and design lcad.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lake Washington Institute of Technology",
+    "label": "lake washington institute of technology lwtech.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lamar Institute of Technology",
+    "label": "lamar institute of technology lit.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lamar State College - Orange",
+    "label": "lamar state college - orange lsco.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lamar State College - Port Arthur",
+    "label": "lamar state college - port arthur pa.lamar.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lamar University",
+    "label": "lamar university lamar.edu",
+    "rank": 85
+  },
+  {
+    "value": "Langston University",
+    "label": "langston university lunet.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lasell College",
+    "label": "lasell college lasell.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lawrence University",
+    "label": "lawrence university lawrence.edu",
+    "rank": 85
+  },
+  {
+    "value": "Le Cordon Bleu College of Culinary Art - Portland",
+    "label": "le cordon bleu college of culinary art - portland wci.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lee University",
+    "label": "lee university leeuniversity.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lees-McRae College",
+    "label": "lees-mcrae college lmc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lehman College",
+    "label": "lehman college  lehman.cuny.edu",
+    "rank": 85
+  },
+  {
+    "value": "LeMoyne-Owen College",
+    "label": "lemoyne-owen college loc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lenoir-Rhyne University",
+    "label": "lenoir-rhyne university lr.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lesley University",
+    "label": "lesley university lesley.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lewis & Clark College",
+    "label": "lewis & clark college lclark.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lewis University",
+    "label": "lewis university lewisu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lewis-Clark State College",
+    "label": "lewis-clark state college lcsc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Liberty University",
+    "label": "liberty university liberty.edu",
+    "rank": 85
+  },
+  {
+    "value": "LIM College",
+    "label": "lim college limcollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Limestone College",
+    "label": "limestone college limestone.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lincoln Christian University",
+    "label": "lincoln christian university lincolnchristian.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lincoln College",
+    "label": "lincoln college lincolncollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lincoln College of New England",
+    "label": "lincoln college of new england lincolncollegene.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lincoln Memorial University",
+    "label": "lincoln memorial university lmunet.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lincoln University",
+    "label": "lincoln university lincolnuca.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lindenwood University",
+    "label": "lindenwood university lindenwood.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lindsey Wilson College",
+    "label": "lindsey wilson college lindsey.edu",
+    "rank": 85
+  },
+  {
+    "value": "Linfield College",
+    "label": "linfield college linfield.edu",
+    "rank": 85
+  },
+  {
+    "value": "Linfield College-Portland Campus",
+    "label": "linfield college-portland campus linfield.eduportland",
+    "rank": 85
+  },
+  {
+    "value": "Lipscomb University",
+    "label": "lipscomb university lipscomb.edu",
+    "rank": 85
+  },
+  {
+    "value": "Longwood University",
+    "label": "longwood university longwood.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lorenzo Walker Institute of Technology",
+    "label": "lorenzo walker institute of technology lwit.edu",
+    "rank": 85
+  },
+  {
+    "value": "Los Angeles Harbor College",
+    "label": "los angeles harbor college lahc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Los Angeles Mission College",
+    "label": "los angeles mission college lamission.edu",
+    "rank": 85
+  },
+  {
+    "value": "Los Angeles Southwest College",
+    "label": "los angeles southwest college lasc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Louisburg College",
+    "label": "louisburg college louisburg.edu",
+    "rank": 85
+  },
+  {
+    "value": "Louisiana College",
+    "label": "louisiana college lacollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Louisiana State University - Alexandria",
+    "label": "louisiana state university - alexandria lsua.edu",
+    "rank": 85
+  },
+  {
+    "value": "Louisiana State University - Eunice",
+    "label": "louisiana state university - eunice lsue.edu",
+    "rank": 85
+  },
+  {
+    "value": "Louisiana State University - Shreveport",
+    "label": "louisiana state university - shreveport lsus.edu",
+    "rank": 85
+  },
+  {
+    "value": "Louisiana State University and A&M College",
+    "label": "louisiana state university and a&m college lsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Louisiana Tech University",
+    "label": "louisiana tech university latech.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lourdes University",
+    "label": "lourdes university lourdes.edu",
+    "rank": 85
+  },
+  {
+    "value": "Loyola Marymount University",
+    "label": "loyola marymount university lmu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Loyola University Maryland",
+    "label": "loyola university maryland loyola.edu",
+    "rank": 85
+  },
+  {
+    "value": "Loyola University New Orleans",
+    "label": "loyola university new orleans loyno.edu",
+    "rank": 85
+  },
+  {
+    "value": "Loyola University of Chicago",
+    "label": "loyola university of chicago luc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lubbock Christian University",
+    "label": "lubbock christian university lcu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Luther College",
+    "label": "luther college luther.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lycoming College",
+    "label": "lycoming college lycoming.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lynchburg College",
+    "label": "lynchburg college lynchburg.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lyndon State College",
+    "label": "lyndon state college lyndonstate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lynn University",
+    "label": "lynn university lynn.edu",
+    "rank": 85
+  },
+  {
+    "value": "Lyon College",
+    "label": "lyon college lyon.edu",
+    "rank": 85
+  },
+  {
+    "value": "Macalester College",
+    "label": "macalester college macalester.edu",
+    "rank": 85
+  },
+  {
+    "value": "MacMurray College",
+    "label": "macmurray college mac.edu",
+    "rank": 85
+  },
+  {
+    "value": "Macon State College",
+    "label": "macon state college maconstate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Madonna University",
+    "label": "madonna university madonna.edu",
+    "rank": 85
+  },
+  {
+    "value": "Magdalen College",
+    "label": "magdalen college magdalen.edu",
+    "rank": 85
+  },
+  {
+    "value": "Magnolia Bible College",
+    "label": "magnolia bible college magnolia.edu",
+    "rank": 85
+  },
+  {
+    "value": "Maharishi University of Management",
+    "label": "maharishi university of management mum.edu",
+    "rank": 85
+  },
+  {
+    "value": "Maine College of Art",
+    "label": "maine college of art meca.edu",
+    "rank": 85
+  },
+  {
+    "value": "Malone University",
+    "label": "malone university malone.edu",
+    "rank": 85
+  },
+  {
+    "value": "Manchester University",
+    "label": "manchester university manchester.edu",
+    "rank": 85
+  },
+  {
+    "value": "Manhattan College",
+    "label": "manhattan college manhattan.edu",
+    "rank": 85
+  },
+  {
+    "value": "Manor College",
+    "label": "manor college manor.edu",
+    "rank": 85
+  },
+  {
+    "value": "Marian University",
+    "label": "marian university marian.edu",
+    "rank": 85
+  },
+  {
+    "value": "Marietta College",
+    "label": "marietta college marietta.edu",
+    "rank": 85
+  },
+  {
+    "value": "Marist College",
+    "label": "marist college marist.edu",
+    "rank": 85
+  },
+  {
+    "value": "Marshall B. Ketchum University",
+    "label": "marshall b. ketchum university ketchum.edu",
+    "rank": 85
+  },
+  {
+    "value": "Marshall University",
+    "label": "marshall university marshall.edu",
+    "rank": 85
+  },
+  {
+    "value": "Martin Luther College",
+    "label": "martin luther college mlc-wels.edu",
+    "rank": 85
+  },
+  {
+    "value": "Martin Methodist College",
+    "label": "martin methodist college martinmethodist.edu",
+    "rank": 85
+  },
+  {
+    "value": "Martin University",
+    "label": "martin university martin.edu",
+    "rank": 85
+  },
+  {
+    "value": "Mary Baldwin College",
+    "label": "mary baldwin college mbc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Marygrove College",
+    "label": "marygrove college marygrove.edu",
+    "rank": 85
+  },
+  {
+    "value": "Maryland Institute College of Art",
+    "label": "maryland institute college of art mica.edu",
+    "rank": 85
+  },
+  {
+    "value": "Marylhurst University",
+    "label": "marylhurst university marylhurst.edu",
+    "rank": 85
+  },
+  {
+    "value": "Marymount California University",
+    "label": "marymount california university marymountcalifornia.edu",
+    "rank": 85
+  },
+  {
+    "value": "Marymount Manhattan College",
+    "label": "marymount manhattan college mmm.edu",
+    "rank": 85
+  },
+  {
+    "value": "Marymount University",
+    "label": "marymount university marymount.edu",
+    "rank": 85
+  },
+  {
+    "value": "Maryville College",
+    "label": "maryville college maryvillecollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Maryville University of Saint Louis",
+    "label": "maryville university of saint louis maryville.edu",
+    "rank": 85
+  },
+  {
+    "value": "Marywood University",
+    "label": "marywood university marywood.edu",
+    "rank": 85
+  },
+  {
+    "value": "Massachusetts College of Art and Design",
+    "label": "massachusetts college of art and design massart.edu",
+    "rank": 85
+  },
+  {
+    "value": "Massachusetts College of Liberal Arts",
+    "label": "massachusetts college of liberal arts mcla.edu",
+    "rank": 85
+  },
+  {
+    "value": "Mayville State University",
+    "label": "mayville state university mayvillestate.edu",
+    "rank": 85
+  },
+  {
+    "value": "McDaniel College",
+    "label": "mcdaniel college mcdaniel.edu",
+    "rank": 85
+  },
+  {
+    "value": "McIntosh College",
+    "label": "mcintosh college mcintoshcollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "McKendree University",
+    "label": "mckendree university mckendree.edu",
+    "rank": 85
+  },
+  {
+    "value": "McKinley College",
+    "label": "mckinley college mckinleycollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "McMurry University",
+    "label": "mcmurry university mcm.edu",
+    "rank": 85
+  },
+  {
+    "value": "McNeese State University",
+    "label": "mcneese state university mcneese.edu",
+    "rank": 85
+  },
+  {
+    "value": "McPherson College",
+    "label": "mcpherson college mcpherson.edu",
+    "rank": 85
+  },
+  {
+    "value": "MCPHS University",
+    "label": "mcphs university mcphs.edu",
+    "rank": 85
+  },
+  {
+    "value": "Medaille College",
+    "label": "medaille college medaille.edu",
+    "rank": 85
+  },
+  {
+    "value": "Medgar Evers College",
+    "label": "medgar evers college  mec.cuny.edu",
+    "rank": 85
+  },
+  {
+    "value": "MedQuest College",
+    "label": "medquest college medquestcollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Memphis College of Art",
+    "label": "memphis college of art mca.edu",
+    "rank": 85
+  },
+  {
+    "value": "Mendocino College",
+    "label": "mendocino college mendocinocollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Menlo College",
+    "label": "menlo college menlo.edu",
+    "rank": 85
+  },
+  {
+    "value": "Mercer University",
+    "label": "mercer university mercer.edu",
+    "rank": 85
+  },
+  {
+    "value": "Mercy College",
+    "label": "mercy college mercy.edu",
+    "rank": 85
+  },
+  {
+    "value": "Mercy College of Ohio",
+    "label": "mercy college of ohio mercycollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Mercyhurst University",
+    "label": "mercyhurst university mercyhurst.edu",
+    "rank": 85
+  },
+  {
+    "value": "Meredith College",
+    "label": "meredith college meredith.edu",
+    "rank": 85
+  },
+  {
+    "value": "Meridian University",
+    "label": "meridian university meridianuniversity.edu",
+    "rank": 85
+  },
+  {
+    "value": "Messiah College",
+    "label": "messiah college messiah.edu",
+    "rank": 85
+  },
+  {
+    "value": "Methodist University",
+    "label": "methodist university methodist.edu",
+    "rank": 85
+  },
+  {
+    "value": "Metropolitan College of New York",
+    "label": "metropolitan college of new york mcny.edu",
+    "rank": 85
+  },
+  {
+    "value": "Metropolitan State University",
+    "label": "metropolitan state university metrostate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Metropolitan State University of Denver",
+    "label": "metropolitan state university of denver mscd.edu",
+    "rank": 85
+  },
+  {
+    "value": "Miami International University of Art and Design",
+    "label": "miami international university of art and design artinstitutes.edumiami/",
+    "rank": 85
+  },
+  {
+    "value": "Michigan Technological University",
+    "label": "michigan technological university mtu.edu",
+    "rank": 85
+  },
+  {
+    "value": "MidAmerica Nazarene University",
+    "label": "midamerica nazarene university mnu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Mid-Atlantic Christian University",
+    "label": "mid-atlantic christian university macuniversity.edu",
+    "rank": 85
+  },
+  {
+    "value": "Mid-Continent University",
+    "label": "mid-continent university midcontinent.edu",
+    "rank": 85
+  },
+  {
+    "value": "Middle Georgia College",
+    "label": "middle georgia college mgc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Middle Tennessee State University",
+    "label": "middle tennessee state university mtsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Middlebury College",
+    "label": "middlebury college middlebury.edu",
+    "rank": 85
+  },
+  {
+    "value": "Midland College",
+    "label": "midland college midland.edu",
+    "rank": 85
+  },
+  {
+    "value": "Midland University",
+    "label": "midland university mlc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Midway University",
+    "label": "midway university midway.edu",
+    "rank": 85
+  },
+  {
+    "value": "Midwest University",
+    "label": "midwest university midwest.edu",
+    "rank": 85
+  },
+  {
+    "value": "Midwestern State University",
+    "label": "midwestern state university mwsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Midwestern University",
+    "label": "midwestern university midwestern.edu",
+    "rank": 85
+  },
+  {
+    "value": "Midwives College of Utah",
+    "label": "midwives college of utah midwifery.edu",
+    "rank": 85
+  },
+  {
+    "value": "Milwaukee Institute of Art Design",
+    "label": "milwaukee institute of art design miad.edu",
+    "rank": 85
+  },
+  {
+    "value": "Mineral Area College",
+    "label": "mineral area college mineralarea.edu",
+    "rank": 85
+  },
+  {
+    "value": "Minneapolis College of Art and Design",
+    "label": "minneapolis college of art and design mcad.edu",
+    "rank": 85
+  },
+  {
+    "value": "Minnesota State University - Moorhead",
+    "label": "minnesota state university - moorhead mnstate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Minot State University",
+    "label": "minot state university minotstateu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Miracosta College",
+    "label": "miracosta college miracosta.edu",
+    "rank": 85
+  },
+  {
+    "value": "Misericordia University",
+    "label": "misericordia university misericordia.edu",
+    "rank": 85
+  },
+  {
+    "value": "Mississippi College",
+    "label": "mississippi college mc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Mississippi State University",
+    "label": "mississippi state university msstate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Mississippi University for Women",
+    "label": "mississippi university for women muw.edu",
+    "rank": 85
+  },
+  {
+    "value": "Mississippi Valley State University",
+    "label": "mississippi valley state university mvsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Missouri Baptist University",
+    "label": "missouri baptist university mobap.edu",
+    "rank": 85
+  },
+  {
+    "value": "Missouri Southern State University",
+    "label": "missouri southern state university mssu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Missouri State University",
+    "label": "missouri state university missouristate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Missouri State University - West Plains",
+    "label": "missouri state university - west plains wp.smsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Missouri Tech",
+    "label": "missouri tech motech.edu",
+    "rank": 85
+  },
+  {
+    "value": "Missouri Valley College",
+    "label": "missouri valley college moval.edu",
+    "rank": 85
+  },
+  {
+    "value": "Missouri Western State University",
+    "label": "missouri western state university missouriwestern.edu",
+    "rank": 85
+  },
+  {
+    "value": "Monmouth College",
+    "label": "monmouth college monm.edu",
+    "rank": 85
+  },
+  {
+    "value": "Monmouth University",
+    "label": "monmouth university monmouth.edu",
+    "rank": 85
+  },
+  {
+    "value": "Montana Bible College",
+    "label": "montana bible college montanabiblecollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Montana State University - Billings",
+    "label": "montana state university - billings msubillings.edu",
+    "rank": 85
+  },
+  {
+    "value": "Montana State University - Bozeman",
+    "label": "montana state university - bozeman montana.edu",
+    "rank": 85
+  },
+  {
+    "value": "Montana State University - Great Falls College of Technology",
+    "label": "montana state university - great falls college of technology msugf.edu",
+    "rank": 85
+  },
+  {
+    "value": "Montana State University - Northern",
+    "label": "montana state university - northern msun.edu",
+    "rank": 85
+  },
+  {
+    "value": "Montana Tech of the University of Montana",
+    "label": "montana tech of the university of montana mtech.edu",
+    "rank": 85
+  },
+  {
+    "value": "Montclair State University",
+    "label": "montclair state university montclair.edu",
+    "rank": 85
+  },
+  {
+    "value": "Montgomery College",
+    "label": "montgomery college montgomerycollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Montreat College",
+    "label": "montreat college montreat.edu",
+    "rank": 85
+  },
+  {
+    "value": "Montserrat College of Art",
+    "label": "montserrat college of art montserrat.edu",
+    "rank": 85
+  },
+  {
+    "value": "Moore College of Art and Design",
+    "label": "moore college of art and design moore.edu",
+    "rank": 85
+  },
+  {
+    "value": "Moorpark College",
+    "label": "moorpark college moorparkcollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Moravian College",
+    "label": "moravian college moravian.edu",
+    "rank": 85
+  },
+  {
+    "value": "Morehead State University",
+    "label": "morehead state university moreheadstate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Morehouse College",
+    "label": "morehouse college morehouse.edu",
+    "rank": 85
+  },
+  {
+    "value": "Morgan State University",
+    "label": "morgan state university morgan.edu",
+    "rank": 85
+  },
+  {
+    "value": "Morrison Institute of Technology",
+    "label": "morrison institute of technology morrison.tec.il.us",
+    "rank": 85
+  },
+  {
+    "value": "Morthland College",
+    "label": "morthland college morthland.edu",
+    "rank": 85
+  },
+  {
+    "value": "Morton College",
+    "label": "morton college morton.edu",
+    "rank": 85
+  },
+  {
+    "value": "Mount Ida College",
+    "label": "mount ida college mountida.edu",
+    "rank": 85
+  },
+  {
+    "value": "Mount Washington College",
+    "label": "mount washington college hesser.edu",
+    "rank": 85
+  },
+  {
+    "value": "Mountain State University",
+    "label": "mountain state university mountainstate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Murray State College",
+    "label": "murray state college mscok.edu",
+    "rank": 85
+  },
+  {
+    "value": "Murray State University",
+    "label": "murray state university murraystate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Nebraska Wesleyan University",
+    "label": "nebraska wesleyan university nebrwesleyan.edu",
+    "rank": 85
+  },
+  {
+    "value": "Neumann University",
+    "label": "neumann university neumann.edu",
+    "rank": 85
+  },
+  {
+    "value": "Nevada State College - Henderson",
+    "label": "nevada state college - henderson nsc.nevada.edu",
+    "rank": 85
+  },
+  {
+    "value": "New England College",
+    "label": "new england college nec.edu",
+    "rank": 85
+  },
+  {
+    "value": "New England Culinary Institute",
+    "label": "new england culinary institute neci.edu",
+    "rank": 85
+  },
+  {
+    "value": "New England Culinary Institute - Essex",
+    "label": "new england culinary institute - essex neci.edu",
+    "rank": 85
+  },
+  {
+    "value": "New England Institute of Technology",
+    "label": "new england institute of technology neit.edu",
+    "rank": 85
+  },
+  {
+    "value": "New Hampshire Institute of Art",
+    "label": "new hampshire institute of art nhia.edu",
+    "rank": 85
+  },
+  {
+    "value": "New Jersey City University",
+    "label": "new jersey city university njcu.edu",
+    "rank": 85
+  },
+  {
+    "value": "New Jersey Institute of Technology",
+    "label": "new jersey institute of technology njit.edu",
+    "rank": 85
+  },
+  {
+    "value": "New Mexico Highlands University",
+    "label": "new mexico highlands university nmhu.edu",
+    "rank": 85
+  },
+  {
+    "value": "New Mexico State University",
+    "label": "new mexico state university nmsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "New York Institute of Art and Design",
+    "label": "new york institute of art and design sheffield.edu",
+    "rank": 85
+  },
+  {
+    "value": "New York Institute of Technology",
+    "label": "new york institute of technology  nyit.edu",
+    "rank": 85
+  },
+  {
+    "value": "Newbury College",
+    "label": "newbury college newbury.edu",
+    "rank": 85
+  },
+  {
+    "value": "Newman University",
+    "label": "newman university newmanu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Nicholls State University",
+    "label": "nicholls state university nicholls.edu",
+    "rank": 85
+  },
+  {
+    "value": "Norfolk State University",
+    "label": "norfolk state university nsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "North Carolina A & T State University",
+    "label": "north carolina a & t state university ncat.edu",
+    "rank": 85
+  },
+  {
+    "value": "North Carolina State University",
+    "label": "north carolina state nc state university ncsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "North Carolina Wesleyan College",
+    "label": "north carolina wesleyan college ncwc.edu",
+    "rank": 85
+  },
+  {
+    "value": "North Central College",
+    "label": "north central college northcentralcollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "North Central Missouri College",
+    "label": "north central missouri college ncmissouri.edu",
+    "rank": 85
+  },
+  {
+    "value": "North Central State College",
+    "label": "north central state college ncstatecollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "North Central Texas College",
+    "label": "north central texas college nctc.edu",
+    "rank": 85
+  },
+  {
+    "value": "North Central University",
+    "label": "north central university northcentral.edu",
+    "rank": 85
+  },
+  {
+    "value": "North Park University",
+    "label": "north park university northpark.edu",
+    "rank": 85
+  },
+  {
+    "value": "Northcentral University",
+    "label": "northcentral university ncu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Northeastern Illinois University",
+    "label": "northeastern illinois university neiu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Northeastern State University",
+    "label": "northeastern state university nsuok.edu",
+    "rank": 85
+  },
+  {
+    "value": "Northeastern University",
+    "label": "northeastern university northeastern.edu",
+    "rank": 85
+  },
+  {
+    "value": "Northern Arizona University",
+    "label": "northern arizona university nau.edu",
+    "rank": 85
+  },
+  {
+    "value": "Northern Illinois University",
+    "label": "northern illinois university niu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Northern Kentucky University",
+    "label": "northern kentucky university nku.edu",
+    "rank": 85
+  },
+  {
+    "value": "Northern Michigan University",
+    "label": "northern michigan university nmu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Northern State University",
+    "label": "northern state university northern.edu",
+    "rank": 85
+  },
+  {
+    "value": "Northland College",
+    "label": "northland college northland.edu",
+    "rank": 85
+  },
+  {
+    "value": "Northwest Missouri State University",
+    "label": "northwest missouri state university nwmissouri.edu",
+    "rank": 85
+  },
+  {
+    "value": "Northwest Nazarene University",
+    "label": "northwest nazarene university nnu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Northwest University",
+    "label": "northwest university northwestu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Northwest Vista College",
+    "label": "northwest vista college alamo.edunvc",
+    "rank": 85
+  },
+  {
+    "value": "Northwestern College",
+    "label": "northwestern college nwciowa.edu",
+    "rank": 85
+  },
+  {
+    "value": "Northwestern Michigan College",
+    "label": "northwestern michigan college nmc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Northwestern Oklahoma State University",
+    "label": "northwestern oklahoma state university nwosu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Northwestern Polytechnic University",
+    "label": "northwestern polytechnic university npu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Northwestern State University of Louisiana",
+    "label": "northwestern state university of louisiana nsula.edu",
+    "rank": 85
+  },
+  {
+    "value": "Northwood University",
+    "label": "northwood university northwood.edu",
+    "rank": 85
+  },
+  {
+    "value": "Norwich University",
+    "label": "norwich university norwich.edu",
+    "rank": 85
+  },
+  {
+    "value": "Nova Southeastern University",
+    "label": "nova southeastern university nova.edu",
+    "rank": 85
+  },
+  {
+    "value": "Oakland University",
+    "label": "oakland university oakland.edu",
+    "rank": 85
+  },
+  {
+    "value": "Oberlin College",
+    "label": "oberlin college oberlin.edu",
+    "rank": 85
+  },
+  {
+    "value": "Occidental College",
+    "label": "occidental college oxy.edu",
+    "rank": 85
+  },
+  {
+    "value": "Ohio Christian University",
+    "label": "ohio christian university ohiochristian.edu",
+    "rank": 85
+  },
+  {
+    "value": "Ohio College of Massotherapy Inc",
+    "label": "ohio college of massotherapy inc ocm.edu",
+    "rank": 85
+  },
+  {
+    "value": "Ohio Dominican University",
+    "label": "ohio dominican university ohiodominican.edu",
+    "rank": 85
+  },
+  {
+    "value": "Ohio Northern University",
+    "label": "ohio northern university onu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Ohio Valley University",
+    "label": "ohio valley university ovc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Ohio Wesleyan University",
+    "label": "ohio wesleyan university owu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Oklahoma Baptist University",
+    "label": "oklahoma baptist university okbu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Oklahoma Christian University",
+    "label": "oklahoma christian university oc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Oklahoma City University",
+    "label": "oklahoma city university okcu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Oklahoma Panhandle State University",
+    "label": "oklahoma panhandle state university opsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Oklahoma State University",
+    "label": "oklahoma state university pio.okstate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Oklahoma State University - Oklahoma City",
+    "label": "oklahoma state university - oklahoma city osuokc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Oklahoma Wesleyan University",
+    "label": "oklahoma wesleyan university okwu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Old Dominion University",
+    "label": "old dominion university odu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Oral Roberts University",
+    "label": "oral roberts university oru.edu",
+    "rank": 85
+  },
+  {
+    "value": "Oregon College of Art and Craft",
+    "label": "oregon college of art and craft ocac.edu",
+    "rank": 85
+  },
+  {
+    "value": "Oregon Institute of Technology",
+    "label": "oregon institute of technology oit.edu",
+    "rank": 85
+  },
+  {
+    "value": "Otis College of Art and Design",
+    "label": "otis college of art and design otis.edu",
+    "rank": 85
+  },
+  {
+    "value": "Ottawa University",
+    "label": "ottawa university ottawa.edu",
+    "rank": 85
+  },
+  {
+    "value": "Otterbein University",
+    "label": "otterbein university otterbein.edu",
+    "rank": 85
+  },
+  {
+    "value": "Oxnard College",
+    "label": "oxnard college oxnardcollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Pace University",
+    "label": "pace university pace.edu",
+    "rank": 85
+  },
+  {
+    "value": "Pacific Islands University",
+    "label": "pacific islands university piu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Pacific Lutheran University",
+    "label": "pacific lutheran university plu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Pacific Northwest College of Art",
+    "label": "pacific northwest college of art pnca.edu",
+    "rank": 85
+  },
+  {
+    "value": "Pacific Oaks College",
+    "label": "pacific oaks college pacificoaks.edu",
+    "rank": 85
+  },
+  {
+    "value": "Pacific Rim Christian University",
+    "label": "pacific rim christian university pacrim.edu",
+    "rank": 85
+  },
+  {
+    "value": "Pacific States University",
+    "label": "pacific states university psuca.edu",
+    "rank": 85
+  },
+  {
+    "value": "Pacific Union College",
+    "label": "pacific union college puc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Pacific University",
+    "label": "pacific university pacificu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Palm Beach Atlantic University - West Palm Beach",
+    "label": "palm beach atlantic university - west palm beach pba.edu",
+    "rank": 85
+  },
+  {
+    "value": "Palo Alto University",
+    "label": "palo alto university paloaltou.edu",
+    "rank": 85
+  },
+  {
+    "value": "Peirce College",
+    "label": "peirce college peirce.edu",
+    "rank": 85
+  },
+  {
+    "value": "Pennsylvania College of Art and Design",
+    "label": "pennsylvania college of art and design pcad.edu",
+    "rank": 85
+  },
+  {
+    "value": "Pennsylvania College of Technology",
+    "label": "pennsylvania college of technology pct.edu",
+    "rank": 85
+  },
+  {
+    "value": "Pennsylvania Institute of Technology",
+    "label": "pennsylvania institute of technology pit.edu",
+    "rank": 85
+  },
+  {
+    "value": "Pensacola State College",
+    "label": "pensacola state college pjc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Perelandra College",
+    "label": "perelandra college perelandra.edu",
+    "rank": 85
+  },
+  {
+    "value": "Philadelphia University",
+    "label": "philadelphia university philau.edu",
+    "rank": 85
+  },
+  {
+    "value": "Piedmont College",
+    "label": "piedmont college piedmont.edu",
+    "rank": 85
+  },
+  {
+    "value": "Piedmont International University",
+    "label": "piedmont international university piedmontu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Pierce College",
+    "label": "pierce college pierce.ctc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Pittsburg State University",
+    "label": "pittsburg state university pittstate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Plymouth State University",
+    "label": "plymouth state university plymouth.edu",
+    "rank": 85
+  },
+  {
+    "value": "Polk State College",
+    "label": "polk state college polk.edu",
+    "rank": 85
+  },
+  {
+    "value": "Polytechnic Institute of New York University",
+    "label": "polytechnic institute of new york university poly.edu",
+    "rank": 85
+  },
+  {
+    "value": "Pomona College",
+    "label": "pomona college pomona.edu",
+    "rank": 85
+  },
+  {
+    "value": "Post University",
+    "label": "post university post.edu",
+    "rank": 85
+  },
+  {
+    "value": "Prairie State College",
+    "label": "prairie state college prairiestate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Pratt Institute",
+    "label": "pratt institute pratt.edu",
+    "rank": 85
+  },
+  {
+    "value": "Presbyterian College",
+    "label": "presbyterian college presby.edu",
+    "rank": 85
+  },
+  {
+    "value": "Providence College",
+    "label": "providence college providence.edu",
+    "rank": 85
+  },
+  {
+    "value": "Purdue University - North Central",
+    "label": "purdue university - north central pnc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Purdue University Calumet",
+    "label": "purdue university calumet calumet.purdue.edu",
+    "rank": 85
+  },
+  {
+    "value": "Queens College",
+    "label": "queens college  qc.cuny.edu",
+    "rank": 85
+  },
+  {
+    "value": "Quincy University",
+    "label": "quincy university quincy.edu",
+    "rank": 85
+  },
+  {
+    "value": "Quinnipiac University",
+    "label": "quinnipiac university quinnipiac.edu",
+    "rank": 85
+  },
+  {
+    "value": "Radford University",
+    "label": "radford university radford.edu",
+    "rank": 85
+  },
+  {
+    "value": "Randall University",
+    "label": "randall university hc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Reed College",
+    "label": "reed college reed.edu",
+    "rank": 85
+  },
+  {
+    "value": "Regent University",
+    "label": "regent university regent.edu",
+    "rank": 85
+  },
+  {
+    "value": "Regis College",
+    "label": "regis college regiscollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Regis University",
+    "label": "regis university regis.edu",
+    "rank": 85
+  },
+  {
+    "value": "Reinhardt University",
+    "label": "reinhardt university reinhardt.edu",
+    "rank": 85
+  },
+  {
+    "value": "Rhode Island College",
+    "label": "rhode island college ric.edu",
+    "rank": 85
+  },
+  {
+    "value": "Rhode Island School of Design",
+    "label": "rhode island school of design risd.edu",
+    "rank": 85
+  },
+  {
+    "value": "Rider University",
+    "label": "rider university rider.edu",
+    "rank": 85
+  },
+  {
+    "value": "Robert Morris University",
+    "label": "robert morris university rmu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Robert Morris University - Illinois",
+    "label": "robert morris university - illinois robertmorris.edu",
+    "rank": 85
+  },
+  {
+    "value": "Roberts Wesleyan College",
+    "label": "roberts wesleyan college roberts.edu",
+    "rank": 85
+  },
+  {
+    "value": "Rockefeller University",
+    "label": "rockefeller university rockefeller.edu",
+    "rank": 85
+  },
+  {
+    "value": "Roger Williams University",
+    "label": "roger williams university rwu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Rogers State University",
+    "label": "rogers state university rsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Rollins College",
+    "label": "rollins college rollins.edu",
+    "rank": 85
+  },
+  {
+    "value": "Roosevelt University",
+    "label": "roosevelt university roosevelt.edu",
+    "rank": 85
+  },
+  {
+    "value": "Sacred Heart University",
+    "label": "sacred heart university sacredheart.edu",
+    "rank": 85
+  },
+  {
+    "value": "Saint Ambrose University",
+    "label": "saint ambrose university sau.edu",
+    "rank": 85
+  },
+  {
+    "value": "Saint Anselm College",
+    "label": "saint anselm college anselm.edu",
+    "rank": 85
+  },
+  {
+    "value": "Saint Augustine's University",
+    "label": "saint augustine's university st-aug.edu",
+    "rank": 85
+  },
+  {
+    "value": "Saint Cloud State University",
+    "label": "saint cloud state university stcloudstate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Saint Francis University",
+    "label": "saint francis university francis.edu",
+    "rank": 85
+  },
+  {
+    "value": "Saint Gregory's University",
+    "label": "saint gregory's university stgregorys.edu",
+    "rank": 85
+  },
+  {
+    "value": "Saint John Fisher College",
+    "label": "saint john fisher college sjfc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Saint Johns University",
+    "label": "saint johns university csbsju.edu",
+    "rank": 85
+  },
+  {
+    "value": "Saint Joseph's University",
+    "label": "saint joseph's university sju.edu",
+    "rank": 85
+  },
+  {
+    "value": "Saint Leo University",
+    "label": "saint leo university saintleo.edu",
+    "rank": 85
+  },
+  {
+    "value": "Saint Louis Christian College",
+    "label": "saint louis christian college slchristian.edu",
+    "rank": 85
+  },
+  {
+    "value": "Saint Louis University",
+    "label": "saint louis university slu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Saint Martin's University",
+    "label": "saint martin's university stmartin.edu",
+    "rank": 85
+  },
+  {
+    "value": "Saint Mary's College",
+    "label": "saint mary's college saintmarys.edu",
+    "rank": 85
+  },
+  {
+    "value": "Saint Michaels College",
+    "label": "saint michaels college smcvt.edu",
+    "rank": 85
+  },
+  {
+    "value": "Saint Paul's College",
+    "label": "saint paul's college saintpauls.edu",
+    "rank": 85
+  },
+  {
+    "value": "Saint Peter's University",
+    "label": "saint peter's university spc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Saint Thomas University",
+    "label": "saint thomas university stu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Saint Xavier University",
+    "label": "saint xavier university sxu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Salem International University",
+    "label": "salem international university salemu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Salem State University",
+    "label": "salem state university salemstate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Salve Regina University",
+    "label": "salve regina university salve.edu",
+    "rank": 85
+  },
+  {
+    "value": "San Diego State University",
+    "label": "san diego state university sdsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "San Francisco Art Institute",
+    "label": "san francisco art institute sfai.edu",
+    "rank": 85
+  },
+  {
+    "value": "San Francisco Conservatory of Music",
+    "label": "san francisco conservatory of music sfcm.edu",
+    "rank": 85
+  },
+  {
+    "value": "San Francisco State University",
+    "label": "san francisco state university sfsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "San Jose State University",
+    "label": "san jose state university sjsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Santa Clara University",
+    "label": "santa clara university scu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Santa Fe College",
+    "label": "santa fe college sfcollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Santa Fe University of Art and Design",
+    "label": "santa fe university of art and design csf.edu",
+    "rank": 85
+  },
+  {
+    "value": "Savannah College of Art and Design",
+    "label": "savannah college of art and design scad.edu",
+    "rank": 85
+  },
+  {
+    "value": "Savannah State University",
+    "label": "savannah state university savannahstate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Saybrook University",
+    "label": "saybrook university saybrook.edu",
+    "rank": 85
+  },
+  {
+    "value": "Schreiner University",
+    "label": "schreiner university schreiner.edu",
+    "rank": 85
+  },
+  {
+    "value": "Seattle Pacific University",
+    "label": "seattle pacific university spu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Seattle University",
+    "label": "seattle university seattleu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Selma University",
+    "label": "selma university selmauniversity.edu",
+    "rank": 85
+  },
+  {
+    "value": "Seminole State College",
+    "label": "seminole state college sscok.edu",
+    "rank": 85
+  },
+  {
+    "value": "Seminole State College of Florida",
+    "label": "seminole state college of florida seminolestate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Seton Hall University",
+    "label": "seton hall university shu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Shawnee State University",
+    "label": "shawnee state university shawnee.edu",
+    "rank": 85
+  },
+  {
+    "value": "Siena College",
+    "label": "siena college siena.edu",
+    "rank": 85
+  },
+  {
+    "value": "Siena Heights University",
+    "label": "siena heights university sienaheights.edu",
+    "rank": 85
+  },
+  {
+    "value": "Sierra College",
+    "label": "sierra college sierracollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Sierra Nevada College",
+    "label": "sierra nevada college sierranevada.edu",
+    "rank": 85
+  },
+  {
+    "value": "Simmons College",
+    "label": "simmons college simmons.edu",
+    "rank": 85
+  },
+  {
+    "value": "Simpson College",
+    "label": "simpson college simpson.edu",
+    "rank": 85
+  },
+  {
+    "value": "Simpson University",
+    "label": "simpson university simpsonu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Sinte Gleska University",
+    "label": "sinte gleska university sintegleska.edu",
+    "rank": 85
+  },
+  {
+    "value": "Slippery Rock University",
+    "label": "slippery rock university  sru.edu",
+    "rank": 85
+  },
+  {
+    "value": "Smith College",
+    "label": "smith college smith.edu",
+    "rank": 85
+  },
+  {
+    "value": "Snow College",
+    "label": "snow college snow.edu",
+    "rank": 85
+  },
+  {
+    "value": "Sofia University",
+    "label": "sofia university sofia.edu",
+    "rank": 85
+  },
+  {
+    "value": "Sonoma State University",
+    "label": "sonoma state university sonoma.edu",
+    "rank": 85
+  },
+  {
+    "value": "South Carolina State University",
+    "label": "south carolina state university scsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "South Dakota State University",
+    "label": "south dakota state university www3.sdstate.edu",
+    "rank": 85
+  },
+  {
+    "value": "South Florida Bible College",
+    "label": "south florida bible college sfbc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Southern Connecticut State University",
+    "label": "southern connecticut state university southernct.edu",
+    "rank": 85
+  },
+  {
+    "value": "Southern Illinois University Carbondale",
+    "label": "southern illinois university carbondale siuc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Southern Illinois University - Edwardsville",
+    "label": "southern illinois university - edwardsville siue.edu",
+    "rank": 85
+  },
+  {
+    "value": "Southern Methodist College",
+    "label": "southern methodist college smcollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Southern Nazarene University",
+    "label": "southern nazarene university snu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Southern New Hampshire University",
+    "label": "southern new hampshire university snhu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Southern Oregon University",
+    "label": "southern oregon university sou.edu",
+    "rank": 85
+  },
+  {
+    "value": "Southern Polytechnic State University",
+    "label": "southern polytechnic state university spsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Southern University - New Orleans",
+    "label": "southern university - new orleans suno.edu",
+    "rank": 85
+  },
+  {
+    "value": "Southern University - Shreveport",
+    "label": "southern university - shreveport susla.edu",
+    "rank": 85
+  },
+  {
+    "value": "Southern University and A & M College",
+    "label": "southern university and a & m college subr.edu",
+    "rank": 85
+  },
+  {
+    "value": "Southern Utah University",
+    "label": "southern utah university suu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Southern Vermont College",
+    "label": "southern vermont college svc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Southern Virginia University",
+    "label": "southern virginia university southernvirginia.edu",
+    "rank": 85
+  },
+  {
+    "value": "Southern Wesleyan University",
+    "label": "southern wesleyan university swu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Southwest Applied Technology College",
+    "label": "southwest applied technology college swatc.tec.ut.us",
+    "rank": 85
+  },
+  {
+    "value": "Southwest Baptist University",
+    "label": "southwest baptist university sbuniv.edu",
+    "rank": 85
+  },
+  {
+    "value": "Southwest Minnesota State University",
+    "label": "southwest minnesota state university smsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Southwest University",
+    "label": "southwest university southwest.edu",
+    "rank": 85
+  },
+  {
+    "value": "Southwestern Christian University",
+    "label": "southwestern christian university swcu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Southwestern Illinois College",
+    "label": "southwestern illinois college swic.edu",
+    "rank": 85
+  },
+  {
+    "value": "Southwestern Indian Polytechnic Institute",
+    "label": "southwestern indian polytechnic institute sipi.bia.edu",
+    "rank": 85
+  },
+  {
+    "value": "Southwestern Michigan College",
+    "label": "southwestern michigan college swmich.edu",
+    "rank": 85
+  },
+  {
+    "value": "Southwestern Oklahoma State University",
+    "label": "southwestern oklahoma state university swosu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Southwestern University",
+    "label": "southwestern university southwestern.edu",
+    "rank": 85
+  },
+  {
+    "value": "Spalding University",
+    "label": "spalding university spalding.edu",
+    "rank": 85
+  },
+  {
+    "value": "Spencerian College - Louisville",
+    "label": "spencerian college - louisville spencerian.edu",
+    "rank": 85
+  },
+  {
+    "value": "Spring Arbor University",
+    "label": "spring arbor university arbor.edu",
+    "rank": 85
+  },
+  {
+    "value": "Springfield College",
+    "label": "springfield college springfieldcollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "St Vincent's College",
+    "label": "st vincent's college stvincentscollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "St. Bonaventure University",
+    "label": "st. bonaventure university sbu.edu",
+    "rank": 85
+  },
+  {
+    "value": "St. Catherine University",
+    "label": "st. catherine university stkate.edu",
+    "rank": 85
+  },
+  {
+    "value": "St. Edward's University",
+    "label": "st. edward's university stedwards.edu",
+    "rank": 85
+  },
+  {
+    "value": "St. Francis College",
+    "label": "st. francis college sfc.edu",
+    "rank": 85
+  },
+  {
+    "value": "St. John's College",
+    "label": "st. john's college sjc.edu",
+    "rank": 85
+  },
+  {
+    "value": "St. John's University",
+    "label": "st. john's university stjohns.edu",
+    "rank": 85
+  },
+  {
+    "value": "St. Lawrence University",
+    "label": "st. lawrence university stlawu.edu",
+    "rank": 85
+  },
+  {
+    "value": "St. Luke's College",
+    "label": "st. luke's college stlukescollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "St. Mary's College of Maryland",
+    "label": "st. mary's college of maryland smcm.edu",
+    "rank": 85
+  },
+  {
+    "value": "St. Mary's University",
+    "label": "st. mary's university stmarytx.edu",
+    "rank": 85
+  },
+  {
+    "value": "St. Petersburg College",
+    "label": "st. petersburg college spcollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "St. Philip's College",
+    "label": "st. philip's college alamo.eduspc",
+    "rank": 85
+  },
+  {
+    "value": "St. Thomas Aquinas College",
+    "label": "st. thomas aquinas college stac.edu",
+    "rank": 85
+  },
+  {
+    "value": "Stephens College",
+    "label": "stephens college stephens.edu",
+    "rank": 85
+  },
+  {
+    "value": "Sterling College",
+    "label": "sterling college sterling.edu",
+    "rank": 85
+  },
+  {
+    "value": "Stetson University",
+    "label": "stetson university stetson.edu",
+    "rank": 85
+  },
+  {
+    "value": "Stevenson University",
+    "label": "stevenson university stevenson.edu",
+    "rank": 85
+  },
+  {
+    "value": "Stockton University",
+    "label": "stockton university stockton.edu",
+    "rank": 85
+  },
+  {
+    "value": "Stone Child College",
+    "label": "stone child college stonechild.edu",
+    "rank": 85
+  },
+  {
+    "value": "Stonehill College",
+    "label": "stonehill college stonehill.edu",
+    "rank": 85
+  },
+  {
+    "value": "Strayer University",
+    "label": "strayer university strayer.edu",
+    "rank": 85
+  },
+  {
+    "value": "Suffolk University",
+    "label": "suffolk university suffolk.edu",
+    "rank": 85
+  },
+  {
+    "value": "SUNY - Binghamton",
+    "label": "suny - binghamton binghamton.edu",
+    "rank": 85
+  },
+  {
+    "value": "SUNY - Buffalo",
+    "label": "suny - buffalo buffalo.edu",
+    "rank": 85
+  },
+  {
+    "value": "SUNY - Fredonia",
+    "label": "suny - fredonia fredonia.edu",
+    "rank": 85
+  },
+  {
+    "value": "SUNY - Buffalo State",
+    "label": "suny - buffalo state buffalostate.edu",
+    "rank": 85
+  },
+  {
+    "value": "SUNY - Brockport",
+    "label": "suny - brockport brockport.edu",
+    "rank": 85
+  },
+  {
+    "value": "SUNY - Cortland",
+    "label": "suny - cortland cortland.edu",
+    "rank": 85
+  },
+  {
+    "value": "SUNY - Geneseo",
+    "label": "suny - geneseo geneseo.edu",
+    "rank": 85
+  },
+  {
+    "value": "SUNY - New Paltz",
+    "label": "suny - new paltz newpaltz.edu",
+    "rank": 85
+  },
+  {
+    "value": "SUNY - Old Westbury",
+    "label": "suny - old westbury oldwestbury.edu",
+    "rank": 85
+  },
+  {
+    "value": "SUNY - Oswego",
+    "label": "suny - oswego oswego.edu",
+    "rank": 85
+  },
+  {
+    "value": "SUNY - Plattsburgh",
+    "label": "suny - plattsburgh plattsburgh.edu",
+    "rank": 85
+  },
+  {
+    "value": "SUNY - Oneonta",
+    "label": "suny - oneonta oneonta.edu",
+    "rank": 85
+  },
+  {
+    "value": "SUNY - Polytechnic Institute",
+    "label": "suny - polytechnic institute sunypoly.edu",
+    "rank": 85
+  },
+  {
+    "value": "SUNY - Potsdam",
+    "label": "suny - potsdam potsdam.edu",
+    "rank": 85
+  },
+  {
+    "value": "SUNY - Purchase",
+    "label": "suny - purchase purchase.edu",
+    "rank": 85
+  },
+  {
+    "value": "SUNY - Stony Brook",
+    "label": "suny - stony brook sunysb.edu",
+    "rank": 85
+  },
+  {
+    "value": "Susquehanna University",
+    "label": "susquehanna university susqu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Taft College",
+    "label": "taft college taftcollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Talladega College",
+    "label": "talladega college talladega.edu",
+    "rank": 85
+  },
+  {
+    "value": "Taylor University",
+    "label": "taylor university taylor.edu",
+    "rank": 85
+  },
+  {
+    "value": "Teachers College of Columbia University",
+    "label": "teachers college of columbia university tc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Temple University",
+    "label": "temple university temple.edu",
+    "rank": 85
+  },
+  {
+    "value": "Tennessee State University",
+    "label": "tennessee state university tnstate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Tennessee Technological University",
+    "label": "tennessee technological university tntech.edu",
+    "rank": 85
+  },
+  {
+    "value": "Tennessee Temple University",
+    "label": "tennessee temple university tntemple.edu",
+    "rank": 85
+  },
+  {
+    "value": "Tennessee Wesleyan University",
+    "label": "tennessee wesleyan university twcnet.edu",
+    "rank": 85
+  },
+  {
+    "value": "Texarkana College",
+    "label": "texarkana college texarkanacollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Texas A&M International University",
+    "label": "texas a&m international university tamiu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Texas A&M University - Commerce",
+    "label": "texas a&m university - commerce tamuc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Texas A&M University - Kingsville",
+    "label": "texas a&m university - kingsville tamuk.edu",
+    "rank": 85
+  },
+  {
+    "value": "Texas A&M University - Texarkana",
+    "label": "texas a&m university - texarkana tamut.edu",
+    "rank": 85
+  },
+  {
+    "value": "Texas College",
+    "label": "texas college texascollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Texas Lutheran University",
+    "label": "texas lutheran university tlu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Texas Southern University",
+    "label": "texas southern university tsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Texas Southmost College",
+    "label": "texas southmost college utb.edu",
+    "rank": 85
+  },
+  {
+    "value": "Texas State University",
+    "label": "texas state university txstate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Texas Tech University",
+    "label": "texas tech university ttu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Texas Wesleyan University",
+    "label": "texas wesleyan university txwes.edu",
+    "rank": 85
+  },
+  {
+    "value": "Texas Woman's University",
+    "label": "texas woman's university twu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Thaddeus Stevens College of Technology",
+    "label": "thaddeus stevens college of technology stevenscollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "The Art Institute of Atlanta",
+    "label": "the art institute of atlanta artinstitutes.eduatlanta/",
+    "rank": 85
+  },
+  {
+    "value": "The Art Institute of Colorado",
+    "label": "the art institute of colorado aic.artinstitutes.edu",
+    "rank": 85
+  },
+  {
+    "value": "The Art Institute of Fort Lauderdale Inc",
+    "label": "the art institute of fort lauderdale inc aifl.edu",
+    "rank": 85
+  },
+  {
+    "value": "The Art Institute of Houston",
+    "label": "the art institute of houston artinstitutes.eduhouston/",
+    "rank": 85
+  },
+  {
+    "value": "The Art Institute of New York City",
+    "label": "the art institute of new york city ainyc.artinstitute.edu",
+    "rank": 85
+  },
+  {
+    "value": "The Art Institute of Philadelphia",
+    "label": "the art institute of philadelphia aiph.artinstitutes.edu",
+    "rank": 85
+  },
+  {
+    "value": "The Art Institute of Phoenix",
+    "label": "the art institute of phoenix aipx.aii.edu",
+    "rank": 85
+  },
+  {
+    "value": "The Art Institute of Pittsburgh",
+    "label": "the art institute of pittsburgh artinstitutes.edu",
+    "rank": 85
+  },
+  {
+    "value": "The Art Institute of Portland",
+    "label": "the art institute of portland aipd.artinstitutes.edu",
+    "rank": 85
+  },
+  {
+    "value": "The Art Institute of Seattle",
+    "label": "the art institute of seattle ais.edu",
+    "rank": 85
+  },
+  {
+    "value": "The Art Institute of York",
+    "label": "the art institute of york artinstitutes.eduyork",
+    "rank": 85
+  },
+  {
+    "value": "The Citadel",
+    "label": "the citadel citadel.edu",
+    "rank": 85
+  },
+  {
+    "value": "The College of Saint Rose",
+    "label": "the college of saint rose strose.edu",
+    "rank": 85
+  },
+  {
+    "value": "The King's College",
+    "label": "the king's college tkc.edu",
+    "rank": 85
+  },
+  {
+    "value": "The King's University",
+    "label": "the king's university tku.edu",
+    "rank": 85
+  },
+  {
+    "value": "The New England Conservatory of Music",
+    "label": "the new england conservatory of music necmusic.edu",
+    "rank": 85
+  },
+  {
+    "value": "The New York Conservatory for Dramatic Arts",
+    "label": "the new york conservatory for dramatic arts sft.edu",
+    "rank": 85
+  },
+  {
+    "value": "The University of Alabama",
+    "label": "the university of alabama ua.edu",
+    "rank": 85
+  },
+  {
+    "value": "The University of Findlay",
+    "label": "the university of findlay findlay.edu",
+    "rank": 85
+  },
+  {
+    "value": "The University of Montana",
+    "label": "the university of montana umt.edu",
+    "rank": 85
+  },
+  {
+    "value": "The University of Montana - Western",
+    "label": "the university of montana - western umwestern.edu",
+    "rank": 85
+  },
+  {
+    "value": "The University of Tampa",
+    "label": "the university of tampa ut.edu",
+    "rank": 85
+  },
+  {
+    "value": "The University of Tennessee - Chattanooga",
+    "label": "the university of tennessee - chattanooga utc.edu",
+    "rank": 85
+  },
+  {
+    "value": "The University of Tennessee - Knoxville",
+    "label": "the university of tennessee - knoxville tennessee.edu",
+    "rank": 85
+  },
+  {
+    "value": "The University of Tennessee - Martin",
+    "label": "the university of tennessee - martin utm.edu",
+    "rank": 85
+  },
+  {
+    "value": "The University of Texas - Arlington",
+    "label": "the university of texas - arlington uta.edu",
+    "rank": 85
+  },
+  {
+    "value": "The University of Texas - Dallas",
+    "label": "the university of texas - dallas utdallas.edu",
+    "rank": 85
+  },
+  {
+    "value": "The University of Texas - El Paso",
+    "label": "the university of texas - el paso utep.edu",
+    "rank": 85
+  },
+  {
+    "value": "The University of Texas - San Antonio",
+    "label": "the university of texas - san antonio utsa.edu",
+    "rank": 85
+  },
+  {
+    "value": "The University of Texas of the Permian Basin",
+    "label": "the university of texas of the permian basin utpb.edu",
+    "rank": 85
+  },
+  {
+    "value": "The University of Texas Rio Grande Valley",
+    "label": "the university of texas rio grande valley utpa.edu",
+    "rank": 85
+  },
+  {
+    "value": "The University of the Arts",
+    "label": "the university of the arts uarts.edu",
+    "rank": 85
+  },
+  {
+    "value": "The University of the South",
+    "label": "the university of the south sewanee.edu",
+    "rank": 85
+  },
+  {
+    "value": "The University of Virginia's College - Wise",
+    "label": "the university of virginia's college - wise uvawise.edu",
+    "rank": 85
+  },
+  {
+    "value": "The University of West Florida",
+    "label": "the university of west florida uwf.edu",
+    "rank": 85
+  },
+  {
+    "value": "The University of West Los Angeles",
+    "label": "the university of west los angeles uwla.edu",
+    "rank": 85
+  },
+  {
+    "value": "The Youngstown College of Massotherapy",
+    "label": "the youngstown college of massotherapy ycm.edu",
+    "rank": 85
+  },
+  {
+    "value": "Thomas Aquinas College",
+    "label": "thomas aquinas college thomasaquinas.edu",
+    "rank": 85
+  },
+  {
+    "value": "Thomas College",
+    "label": "thomas college thomas.edu",
+    "rank": 85
+  },
+  {
+    "value": "Thomas Edison State University",
+    "label": "thomas edison state university tesu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Thomas Jefferson University",
+    "label": "thomas jefferson university jefferson.edu",
+    "rank": 85
+  },
+  {
+    "value": "Thomas More College",
+    "label": "thomas more college thomasmore.edu",
+    "rank": 85
+  },
+  {
+    "value": "Thomas University",
+    "label": "thomas university thomasu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Touro College",
+    "label": "touro college touro.edu",
+    "rank": 85
+  },
+  {
+    "value": "Towson University",
+    "label": "towson university towson.edu",
+    "rank": 85
+  },
+  {
+    "value": "Transylvania University",
+    "label": "transylvania university transy.edu",
+    "rank": 85
+  },
+  {
+    "value": "Trinity Baptist College",
+    "label": "trinity baptist college tbc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Trinity Bible College",
+    "label": "trinity bible college trinitybiblecollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Trinity Christian College",
+    "label": "trinity christian college trnty.edu",
+    "rank": 85
+  },
+  {
+    "value": "Trinity College",
+    "label": "trinity college trincoll.edu",
+    "rank": 85
+  },
+  {
+    "value": "Trinity College of Florida",
+    "label": "trinity college of florida trinitycollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Trinity International University",
+    "label": "trinity international university tiu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Trinity Lutheran College",
+    "label": "trinity lutheran college tlc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Trinity University",
+    "label": "trinity university trinity.edu",
+    "rank": 85
+  },
+  {
+    "value": "Trinity Washington University",
+    "label": "trinity washington university trinitydc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Tri-State Bible College",
+    "label": "tri-state bible college tsbc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Troy University",
+    "label": "troy university troy.edu",
+    "rank": 85
+  },
+  {
+    "value": "Truett McConnell University",
+    "label": "truett mcconnell university truett.edu",
+    "rank": 85
+  },
+  {
+    "value": "Truman State University",
+    "label": "truman state university truman.edu",
+    "rank": 85
+  },
+  {
+    "value": "Union University",
+    "label": "union university uu.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Akron",
+    "label": "university of akron uakron.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Akron - Wayne College",
+    "label": "university of akron - wayne college wayne.uakron.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Alabama - Birmingham",
+    "label": "university of alabama - birmingham uab.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Alabama - Huntsville",
+    "label": "university of alabama - huntsville uah.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Alaska - Anchorage",
+    "label": "university of alaska - anchorage uaa.alaska.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Alaska - Fairbanks",
+    "label": "university of alaska - fairbanks uaf.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Alaska - Southeast",
+    "label": "university of alaska - southeast uas.alaska.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Antelope Valley",
+    "label": "university of antelope valley uav.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Arizona",
+    "label": "university of arizona arizona.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Arkansas - Fayetteville",
+    "label": "university of arkansas - fayetteville uark.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Arkansas - Little Rock",
+    "label": "university of arkansas - little rock ualr.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Arkansas - Monticello",
+    "label": "university of arkansas - monticello uamont.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Arkansas - Pine Bluff",
+    "label": "university of arkansas - pine bluff uapb.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Arkansas - Fort Smith",
+    "label": "university of arkansas - fort smith uafortsmith.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Atlanta",
+    "label": "university of atlanta uofa.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Baltimore",
+    "label": "university of baltimore ubalt.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Bridgeport",
+    "label": "university of bridgeport bridgeport.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of California - Riverside",
+    "label": "university of california - riverside ucr.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of California - San Francisco",
+    "label": "university of california - san francisco ucsf.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Central Arkansas",
+    "label": "university of central arkansas uca.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Central Florida",
+    "label": "university of central florida ucf.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Central Missouri",
+    "label": "university of central missouri ucmo.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Central Oklahoma",
+    "label": "university of central oklahoma uco.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Charleston",
+    "label": "university of charleston ucwv.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Cincinnati",
+    "label": "university of cincinnati uc.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Cincinnati - Blue Ash College",
+    "label": "university of cincinnati - blue ash college rwc.uc.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Cincinnati - Clermont College",
+    "label": "university of cincinnati - clermont college clc.uc.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Colorado - Boulder",
+    "label": "university of colorado - boulder colorado.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Colorado - Colorado Springs",
+    "label": "university of colorado - colorado springs uccs.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Colorado - Denver",
+    "label": "university of colorado - denver cudenver.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Dallas",
+    "label": "university of dallas udallas.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Dayton",
+    "label": "university of dayton udayton.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Detroit Mercy",
+    "label": "university of detroit mercy udmercy.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Dubuque",
+    "label": "university of dubuque dbq.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Evansville",
+    "label": "university of evansville evansville.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Fort Lauderdale",
+    "label": "university of fort lauderdale uftl.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Great Falls",
+    "label": "university of great falls ugf.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Hartford",
+    "label": "university of hartford hartford.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Hawaii - Hilo",
+    "label": "university of hawaii - hilo hilo.hawaii.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Hawaii - Manoa",
+    "label": "university of hawaii - manoa manoa.hawaii.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Hawaii - West Oahu",
+    "label": "university of hawaii - west oahu westoahu.hawaii.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Houston",
+    "label": "university of houston uh.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Houston - Clear Lake",
+    "label": "university of houston - clear lake uhcl.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Houston - Downtown",
+    "label": "university of houston - downtown uhd.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Houston - Victoria",
+    "label": "university of houston - victoria uhv.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Idaho",
+    "label": "university of idaho uidaho.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Illinois - Chicago",
+    "label": "university of illinois - chicago uic.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Illinois - Springfield",
+    "label": "university of illinois - springfield uis.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Indianapolis",
+    "label": "university of indianapolis uindy.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Jamestown",
+    "label": "university of jamestown jc.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Kansas",
+    "label": "university of kansas ku.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Kentucky",
+    "label": "university of kentucky uky.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of La Verne",
+    "label": "university of la verne ulv.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Louisiana - Lafayette",
+    "label": "university of louisiana - lafayette louisiana.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Louisiana - Monroe",
+    "label": "university of louisiana - monroe ulm.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Louisville",
+    "label": "university of louisville louisville.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Maine",
+    "label": "university of maine umaine.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Maine - Augusta",
+    "label": "university of maine - augusta uma.maine.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Maine - Farmington",
+    "label": "university of maine - farmington umf.maine.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Maine - Fort Kent",
+    "label": "university of maine - fort kent umfk.maine.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Maine - Machias",
+    "label": "university of maine - machias umm.maine.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Maine - Presque Isle",
+    "label": "university of maine - presque isle umpi.maine.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Mary",
+    "label": "university of mary umary.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Mary Hardin-Baylor",
+    "label": "university of mary hardin-baylor umhb.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Mary Washington",
+    "label": "university of mary washington umw.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Maryland - Baltimore",
+    "label": "university of maryland - baltimore umaryland.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Maryland - Baltimore County",
+    "label": "university of maryland - baltimore county umbc.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Maryland - Eastern Shore",
+    "label": "university of maryland - eastern shore umes.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Maryland - University College",
+    "label": "university of maryland - university college umuc.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Massachusetts - Boston",
+    "label": "university of massachusetts - boston umb.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Massachusetts - Dartmouth",
+    "label": "university of massachusetts - dartmouth umassd.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Massachusetts - Lowell",
+    "label": "university of massachusetts - lowell uml.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Massachusetts - Worcester",
+    "label": "university of massachusetts - worcester umassmed.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Memphis",
+    "label": "university of memphis memphis.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Michigan - Dearborn",
+    "label": "university of michigan - dearborn umd.umich.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Michigan - Flint",
+    "label": "university of michigan - flint umflint.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Minnesota - Crookston",
+    "label": "university of minnesota - crookston crk.umn.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Minnesota - Duluth",
+    "label": "university of minnesota - duluth d.umn.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Minnesota - Morris",
+    "label": "university of minnesota - morris mrs.umn.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Mississippi",
+    "label": "university of mississippi olemiss.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Missouri - Columbia",
+    "label": "university of missouri - columbia missouri.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Missouri - Kansas City",
+    "label": "university of missouri - kansas city umkc.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Missouri - St Louis",
+    "label": "university of missouri - st louis umsl.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Mobile",
+    "label": "university of mobile umobile.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Montevallo",
+    "label": "university of montevallo montevallo.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Mount Olive",
+    "label": "university of mount olive moc.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Mount Union",
+    "label": "university of mount union mountunion.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Nebraska - Kearney",
+    "label": "university of nebraska - kearney unk.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Nebraska - Lincoln",
+    "label": "university of nebraska - lincoln unl.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Nebraska - Omaha",
+    "label": "university of nebraska - omaha unomaha.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Nevada - Las Vegas",
+    "label": "university of nevada - las vegas unlv.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Nevada - Reno",
+    "label": "university of nevada - reno unr.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of New England",
+    "label": "university of new england une.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of New Hampshire",
+    "label": "university of new hampshire unh.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of New Haven",
+    "label": "university of new haven newhaven.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of New Mexico",
+    "label": "university of new mexico unm.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of New Orleans",
+    "label": "university of new orleans uno.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of North Alabama",
+    "label": "university of north alabama una.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of North Carolina - Asheville",
+    "label": "university of north carolina - asheville unca.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of North Carolina - Greensboro",
+    "label": "university of north carolina - greensboro uncg.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of North Carolina - Pembroke",
+    "label": "university of north carolina - pembroke uncp.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of North Carolina - Wilmington",
+    "label": "university of north carolina - wilmington uncw.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of North Dakota",
+    "label": "university of north dakota und.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of North Florida",
+    "label": "university of north florida unf.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of North Texas",
+    "label": "university of north texas unt.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Northern Colorado",
+    "label": "university of northern colorado unco.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Northern Iowa",
+    "label": "university of northern iowa uni.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Northern Virginia",
+    "label": "university of northern virginia unva.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Northwestern - St. Paul",
+    "label": "university of northwestern - st. paul nwc.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Northwestern Ohio",
+    "label": "university of northwestern ohio unoh.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Oklahoma",
+    "label": "university of oklahoma ou.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Oregon",
+    "label": "university of oregon uoregon.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Phoenix",
+    "label": "university of phoenix phoenix.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Pikeville",
+    "label": "university of pikeville pc.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Pittsburgh - Bradford",
+    "label": "university of pittsburgh - bradford upb.pitt.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Pittsburgh - Johnstown",
+    "label": "university of pittsburgh - johnstown upj.pitt.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Pittsburgh - Titusville",
+    "label": "university of pittsburgh - titusville upt.pitt.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Portland",
+    "label": "university of portland up.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Puget Sound",
+    "label": "university of puget sound ups.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Redlands",
+    "label": "university of redlands redlands.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Rhode Island",
+    "label": "university of rhode island uri.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Richmond",
+    "label": "university of richmond richmond.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Rochester",
+    "label": "university of rochester rochester.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Saint Francis - Fort Wayne",
+    "label": "university of saint francis - fort wayne sf.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Saint Joseph",
+    "label": "university of saint joseph sjc.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Saint Mary",
+    "label": "university of saint mary stmary.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of San Francisco",
+    "label": "university of san francisco usfca.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Scranton",
+    "label": "university of scranton scranton.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Sioux Falls",
+    "label": "university of sioux falls usiouxfalls.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of South Alabama",
+    "label": "university of south alabama usouthal.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of South Carolina - Aiken",
+    "label": "university of south carolina - aiken usca.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of South Carolina - Beaufort",
+    "label": "university of south carolina - beaufort uscb.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of South Carolina - Columbia",
+    "label": "university of south carolina - columbia sc.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of South Carolina Upstate",
+    "label": "university of south carolina upstate uscupstate.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of South Dakota",
+    "label": "university of south dakota usd.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of South Florida",
+    "label": "university of south florida usf.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Southern Indiana",
+    "label": "university of southern indiana usi.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Southern Maine",
+    "label": "university of southern maine usm.maine.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Southern Mississippi",
+    "label": "university of southern mississippi usm.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of St. Francis",
+    "label": "university of st. francis stfrancis.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of St. Thomas",
+    "label": "university of st. thomas stthomas.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Texas - Tyler",
+    "label": "university of texas - tyler uttyler.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of the Cumberlands",
+    "label": "university of the cumberlands ucumberlands.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of the District of Columbia",
+    "label": "university of the district of columbia udc.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of the Incarnate Word",
+    "label": "university of the incarnate word uiw.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of the Pacific",
+    "label": "university of the pacific pacific.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of the Potomac",
+    "label": "university of the potomac potomac.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of the Rockies",
+    "label": "university of the rockies rockies.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of the Southwest",
+    "label": "university of the southwest usw.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of the West",
+    "label": "university of the west uwest.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Toledo",
+    "label": "university of toledo utoledo.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Utah",
+    "label": "university of utah utah.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Vermont",
+    "label": "university of vermont uvm.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of West Alabama",
+    "label": "university of west alabama uwa.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of West Georgia",
+    "label": "university of west georgia westga.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Western States",
+    "label": "university of western states wschiro.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Wisconsin - Eau Claire",
+    "label": "university of wisconsin - eau claire uwec.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Wisconsin - Green Bay",
+    "label": "university of wisconsin - green bay uwgb.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Wisconsin - La Crosse",
+    "label": "university of wisconsin - la crosse uwlax.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Wisconsin - Oshkosh",
+    "label": "university of wisconsin - oshkosh uwosh.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Wisconsin - Parkside",
+    "label": "university of wisconsin - parkside uwp.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Wisconsin - Platteville",
+    "label": "university of wisconsin - platteville uwplatt.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Wisconsin - River Falls",
+    "label": "university of wisconsin - river falls uwrf.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Wisconsin - Stevens Point",
+    "label": "university of wisconsin - stevens point uwsp.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Wisconsin - Stout",
+    "label": "university of wisconsin - stout uwstout.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Wisconsin - Superior",
+    "label": "university of wisconsin - superior uwsuper.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Wisconsin - Whitewater",
+    "label": "university of wisconsin - whitewater uww.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Wisconsin Colleges",
+    "label": "university of wisconsin colleges uwc.edu",
+    "rank": 85
+  },
+  {
+    "value": "University of Wyoming",
+    "label": "university of wyoming uwyo.edu",
+    "rank": 85
+  },
+  {
+    "value": "Upper Iowa University",
+    "label": "upper iowa university uiu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Urban College of Boston",
+    "label": "urban college of boston urbancollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Urbana University",
+    "label": "urbana university urbana.edu",
+    "rank": 85
+  },
+  {
+    "value": "Ursinus College",
+    "label": "ursinus college ursinus.edu",
+    "rank": 85
+  },
+  {
+    "value": "Ursuline College",
+    "label": "ursuline college ursuline.edu",
+    "rank": 85
+  },
+  {
+    "value": "Utah State University",
+    "label": "utah state university usu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Utah Valley University",
+    "label": "utah valley university uvu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Utica College",
+    "label": "utica college utica.edu",
+    "rank": 85
+  },
+  {
+    "value": "Valdosta State University",
+    "label": "valdosta state university valdosta.edu",
+    "rank": 85
+  },
+  {
+    "value": "Valley City State University",
+    "label": "valley city state university vcsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Valley Forge Military College",
+    "label": "valley forge military college college.vfmac.edu",
+    "rank": 85
+  },
+  {
+    "value": "Valparaiso University",
+    "label": "valparaiso university valpo.edu",
+    "rank": 85
+  },
+  {
+    "value": "VanderCook College of Music",
+    "label": "vandercook college of music vandercook.edu",
+    "rank": 85
+  },
+  {
+    "value": "Vanguard University of Southern California",
+    "label": "vanguard university of southern california vanguard.edu",
+    "rank": 85
+  },
+  {
+    "value": "Vassar College",
+    "label": "vassar college vassar.edu",
+    "rank": 85
+  },
+  {
+    "value": "Vennard College",
+    "label": "vennard college vennard.edu",
+    "rank": 85
+  },
+  {
+    "value": "Ventura College",
+    "label": "ventura college venturacollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Vernon College",
+    "label": "vernon college vernoncollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Victoria College",
+    "label": "victoria college victoriacollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Victory University",
+    "label": "victory university victory.edu",
+    "rank": 85
+  },
+  {
+    "value": "Vincennes University",
+    "label": "vincennes university vinu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Virginia Baptist College",
+    "label": "virginia baptist college vbc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Virginia College - Birmingham",
+    "label": "virginia college - birmingham vc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Virginia Commonwealth University",
+    "label": "virginia commonwealth university vcu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Virginia Intermont College",
+    "label": "virginia intermont college vic.edu",
+    "rank": 85
+  },
+  {
+    "value": "Virginia Marti College of Art and Design",
+    "label": "virginia marti college of art and design vmced.edu",
+    "rank": 85
+  },
+  {
+    "value": "Virginia State University",
+    "label": "virginia state university vsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Virginia Union University",
+    "label": "virginia union university vuu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Virginia University of Lynchburg",
+    "label": "virginia university of lynchburg vul.edu",
+    "rank": 85
+  },
+  {
+    "value": "Virginia Wesleyan College",
+    "label": "virginia wesleyan college vwc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Viterbo University",
+    "label": "viterbo university viterbo.edu",
+    "rank": 85
+  },
+  {
+    "value": "Wagner College",
+    "label": "wagner college wagner.edu",
+    "rank": 85
+  },
+  {
+    "value": "Walden University",
+    "label": "walden university waldenu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Walla Walla University",
+    "label": "walla walla university wallawalla.edu",
+    "rank": 85
+  },
+  {
+    "value": "Walsh University",
+    "label": "walsh university walsh.edu",
+    "rank": 85
+  },
+  {
+    "value": "Warner Pacific College",
+    "label": "warner pacific college warnerpacific.edu",
+    "rank": 85
+  },
+  {
+    "value": "Warner University",
+    "label": "warner university warner.edu",
+    "rank": 85
+  },
+  {
+    "value": "Washburn University of Topeka",
+    "label": "washburn university of topeka washburn.edu",
+    "rank": 85
+  },
+  {
+    "value": "Washington & Jefferson College",
+    "label": "washington & jefferson college washjeff.edu",
+    "rank": 85
+  },
+  {
+    "value": "Washington Adventist University",
+    "label": "washington adventist university wau.edu",
+    "rank": 85
+  },
+  {
+    "value": "Washington and Lee University",
+    "label": "washington and lee university wlu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Washington College",
+    "label": "washington college washcoll.edu",
+    "rank": 85
+  },
+  {
+    "value": "Washington State University",
+    "label": "washington state university wsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Washington Theological Union",
+    "label": "washington theological union wtu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Washington University of Virginia",
+    "label": "washington university of virginia wuv.edu",
+    "rank": 85
+  },
+  {
+    "value": "Waycross College",
+    "label": "waycross college waycross.edu",
+    "rank": 85
+  },
+  {
+    "value": "Wayland Baptist University",
+    "label": "wayland baptist university wbu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Wayne State College",
+    "label": "wayne state college wsc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Wayne State University",
+    "label": "wayne state university wayne.edu",
+    "rank": 85
+  },
+  {
+    "value": "Waynesburg University",
+    "label": "waynesburg university waynesburg.edu",
+    "rank": 85
+  },
+  {
+    "value": "Webber International University",
+    "label": "webber international university webber.edu",
+    "rank": 85
+  },
+  {
+    "value": "Weber State University",
+    "label": "weber state university weber.edu",
+    "rank": 85
+  },
+  {
+    "value": "Webster University",
+    "label": "webster university webster.edu",
+    "rank": 85
+  },
+  {
+    "value": "Wellesley College",
+    "label": "wellesley college wellesley.edu",
+    "rank": 85
+  },
+  {
+    "value": "Wentworth Institute of Technology",
+    "label": "wentworth institute of technology wit.edu",
+    "rank": 85
+  },
+  {
+    "value": "Wesley College",
+    "label": "wesley college wesley.edu",
+    "rank": 85
+  },
+  {
+    "value": "Wesleyan College",
+    "label": "wesleyan college wesleyancollege.edu",
+    "rank": 85
+  },
+  {
+    "value": "Wesleyan University",
+    "label": "wesleyan university wesleyan.edu",
+    "rank": 85
+  },
+  {
+    "value": "West Chester University of Pennsylvania",
+    "label": "west chester university of pennsylvania wcupa.edu",
+    "rank": 85
+  },
+  {
+    "value": "West Coast Baptist College",
+    "label": "west coast baptist college wcbc.edu",
+    "rank": 85
+  },
+  {
+    "value": "West Liberty University",
+    "label": "west liberty university westliberty.edu",
+    "rank": 85
+  },
+  {
+    "value": "West Texas A&M University",
+    "label": "west texas a&m university wtamu.edu",
+    "rank": 85
+  },
+  {
+    "value": "West Virginia State University",
+    "label": "west virginia state university wvstateu.edu",
+    "rank": 85
+  },
+  {
+    "value": "West Virginia University",
+    "label": "west virginia university wvu.edu",
+    "rank": 85
+  },
+  {
+    "value": "West Virginia University - Parkersburg",
+    "label": "west virginia university - parkersburg wvup.edu",
+    "rank": 85
+  },
+  {
+    "value": "West Virginia Wesleyan College",
+    "label": "west virginia wesleyan college wvwc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Western Connecticut State University",
+    "label": "western connecticut state university wcsu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Western Governors University",
+    "label": "western governors university wgu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Western Illinois University",
+    "label": "western illinois university wiu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Western Kentucky University",
+    "label": "western kentucky university wku.edu",
+    "rank": 85
+  },
+  {
+    "value": "Western Michigan University",
+    "label": "western michigan university wmich.edu",
+    "rank": 85
+  },
+  {
+    "value": "Western Nevada College",
+    "label": "western nevada college wnc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Western New England University",
+    "label": "western new england university wnec.edu",
+    "rank": 85
+  },
+  {
+    "value": "Western New Mexico University",
+    "label": "western new mexico university wnmu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Western Oklahoma State College",
+    "label": "western oklahoma state college wosc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Western Oregon University",
+    "label": "western oregon university wou.edu",
+    "rank": 85
+  },
+  {
+    "value": "Western State College of Colorado",
+    "label": "western state college of colorado western.edu",
+    "rank": 85
+  },
+  {
+    "value": "Western Texas College",
+    "label": "western texas college wtc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Western Washington University",
+    "label": "western washington university wwu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Westfield State University",
+    "label": "westfield state university wsc.ma.edu",
+    "rank": 85
+  },
+  {
+    "value": "Westminster College",
+    "label": "westminster college westminster-mo.edu",
+    "rank": 85
+  },
+  {
+    "value": "Westmont College",
+    "label": "westmont college westmont.edu",
+    "rank": 85
+  },
+  {
+    "value": "Westwood College - Long Beach",
+    "label": "westwood college - long beach westwood.edu",
+    "rank": 85
+  },
+  {
+    "value": "Wheaton College",
+    "label": "wheaton college wheaton.edu",
+    "rank": 85
+  },
+  {
+    "value": "Wheeling Jesuit University",
+    "label": "wheeling jesuit university wju.edu",
+    "rank": 85
+  },
+  {
+    "value": "Wheelock College",
+    "label": "wheelock college wheelock.edu",
+    "rank": 85
+  },
+  {
+    "value": "Whitman College",
+    "label": "whitman college whitman.edu",
+    "rank": 85
+  },
+  {
+    "value": "Whittier College",
+    "label": "whittier college whittier.edu",
+    "rank": 85
+  },
+  {
+    "value": "Whitworth University",
+    "label": "whitworth university whitworth.edu",
+    "rank": 85
+  },
+  {
+    "value": "Wichita State University",
+    "label": "wichita state university wichita.edu",
+    "rank": 85
+  },
+  {
+    "value": "Widener University",
+    "label": "widener university widener.edu",
+    "rank": 85
+  },
+  {
+    "value": "Wilberforce University",
+    "label": "wilberforce university wilberforce.edu",
+    "rank": 85
+  },
+  {
+    "value": "Wiley College",
+    "label": "wiley college wileyc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Wilkes University",
+    "label": "wilkes university wilkes.edu",
+    "rank": 85
+  },
+  {
+    "value": "William Howard Taft University",
+    "label": "william howard taft university taftu.edu",
+    "rank": 85
+  },
+  {
+    "value": "William Tyndale College",
+    "label": "william tyndale college williamtyndale.edu",
+    "rank": 85
+  },
+  {
+    "value": "Williams Baptist College",
+    "label": "williams baptist college wbcoll.edu",
+    "rank": 85
+  },
+  {
+    "value": "Williams College",
+    "label": "williams college williams.edu",
+    "rank": 85
+  },
+  {
+    "value": "Williamson College of The Trades",
+    "label": "williamson college of the trades williamson.edu",
+    "rank": 85
+  },
+  {
+    "value": "Williston State College",
+    "label": "williston state college wsc.nodak.edu",
+    "rank": 85
+  },
+  {
+    "value": "Wilmington College",
+    "label": "wilmington college wilmington.edu",
+    "rank": 85
+  },
+  {
+    "value": "Wilmington University",
+    "label": "wilmington university wilmu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Wilson College",
+    "label": "wilson college wilson.edu",
+    "rank": 85
+  },
+  {
+    "value": "Wingate University",
+    "label": "wingate university wingate.edu",
+    "rank": 85
+  },
+  {
+    "value": "Winona State University",
+    "label": "winona state university winona.edu",
+    "rank": 85
+  },
+  {
+    "value": "Winston-Salem State University",
+    "label": "winston-salem state university wssu.edu",
+    "rank": 85
+  },
+  {
+    "value": "Winthrop University",
+    "label": "winthrop university winthrop.edu",
+    "rank": 85
+  },
+  {
+    "value": "Wisconsin Lutheran College",
+    "label": "wisconsin lutheran college wlc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Wittenberg University",
+    "label": "wittenberg university wittenberg.edu",
+    "rank": 85
+  },
+  {
+    "value": "Woodbury College",
+    "label": "woodbury college woodbury-college.edu",
+    "rank": 85
+  },
+  {
+    "value": "Woodbury University",
+    "label": "woodbury university woodbury.edu",
+    "rank": 85
+  },
+  {
+    "value": "Worcester State University",
+    "label": "worcester state university worcester.edu",
+    "rank": 85
+  },
+  {
+    "value": "Wright State University",
+    "label": "wright state university wright.edu",
+    "rank": 85
+  },
+  {
+    "value": "Xavier University",
+    "label": "xavier university xavier.edu",
+    "rank": 85
+  },
+  {
+    "value": "Xavier University of Louisiana",
+    "label": "xavier university of louisiana xula.edu",
+    "rank": 85
+  },
+  {
+    "value": "Yellowstone Christian College",
+    "label": "yellowstone christian college yellowstonechristian.edu",
+    "rank": 85
+  },
+  {
+    "value": "York College",
+    "label": "york college york.cuny.edu",
+    "rank": 85
+  },
+  {
+    "value": "York College of Pennsylvania",
+    "label": "york college of pennsylvania ycp.edu",
+    "rank": 85
+  },
+  {
+    "value": "Young Harris College",
+    "label": "young harris college yhc.edu",
+    "rank": 85
+  },
+  {
+    "value": "Youngstown State University",
+    "label": "youngstown state university ysu.edu",
+    "rank": 85
+  }
+]
