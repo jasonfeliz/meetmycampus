@@ -6,14 +6,16 @@ $profileInfo = get_profile_info($_COOKIE['user_id']);
 $profileAvatar = strtoupper(substr($userFirstName,0,1). substr($userLastName, 0,1));
 $pageTitle = "Settings";
 include('inc/main-header-test.php');
-
+$setting = "you are amazing, jason felix"
 ?>
+
+
 <div class="main-content" style="background: #fff;">
 	<div class="favorites-list jumbotron"">
 		<div class="container">
 			<div class="jumbotron-header-bar">
 				<div>
-					<h2>Profile Settings</h2>
+					<h2>Community Settings</h2>
 				</div>				
 			</div><!-- end jumbotron header bar -->
 		</div><!-- end container -->
