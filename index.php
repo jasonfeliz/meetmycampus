@@ -10,8 +10,7 @@ if (isset($_COOKIE['user_id'])) {
 }
 require_once("inc/header.php");
 ?>
-lets do some branching in github!
-some changes tho.....
+
 <body id="page-top">
 
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
