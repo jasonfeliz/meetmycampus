@@ -11,7 +11,6 @@ if (isset($_COOKIE['user_id'])) {
 require_once("inc/header.php");
 ?>
 
-<body>I am awesomeeeeeeeeeeee</body>
 
 <body id="page-top">
 

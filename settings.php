@@ -15,7 +15,7 @@ $setting = "you are amazing, jason felix"
 		<div class="container">
 			<div class="jumbotron-header-bar">
 				<div>
-					<h2>Community Settings</h2>
+					<h2>Profile Settings</h2>
 				</div>				
 			</div><!-- end jumbotron header bar -->
 		</div><!-- end container -->
