@@ -76,7 +76,7 @@
 
                                 <div>
                                   <label>Welcome Message:</label>
-                                  <textarea name="community_message" placeholder="Welcome your potential subcribers with a kind-hearted message" value="<?php if (isset($_SESSION['create_error_message'])) { echo $_SESSION['community_message']; session_unset();session_destroy();} ?>"></textarea>                               
+                                  <textarea name="community_message" placeholder="Welcome your potential subcribers with a cool message" value="<?php if (isset($_SESSION['create_error_message'])) { echo $_SESSION['community_message']; session_unset();session_destroy();} ?>"></textarea>                               
                                 </div>
                                 <div>
                                   <label>Description:</label>
