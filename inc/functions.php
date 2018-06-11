@@ -1,6 +1,5 @@
 <?php
 
-be awesome......
 require_once('connection.php');
 //creates users
 function create_user($university,$firstName,$lastName,$userName,$collegeEmail,$token){
