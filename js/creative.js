@@ -99,7 +99,8 @@ $ (function() {
         appendTo: $('#signUpForm'),
         select: function(event, ui) { 
             $("#user-major").val(ui.item.value);
-            $("#major-id").val(ui.item.label);}
+            $("#major-id").val(ui.item.label);
+        }
     }).autocomplete( "instance" )._renderItem = function( ul, item ) {
       return $( "<li>" ).append( "<div>" + item.value + "</div>" ).appendTo( ul );
     };
@@ -510,4 +511,31 @@ $('.report-btn').click(function(){
     $('#reportYes').attr({'data-type':_type,'data-id':_id})
 })
 
+$('.edit_discussion').click(function(){
+    $('#edit_forum_popup').fadeIn(250);
+})
+
+$('.edit_reply, .edit_comment').click(function(){
+    _id = "#"+$(this).data("info") + $(this).data("id");
+    _reply = $(_id).text();
+    $(_id).hide(0);
+    $(_id).siblings().show();
+    $(_id).next().text(_reply)
+    $(_id).next().focus()
+})
+
+$('.cancel_button').click(function(){
+    _id = "#"+$(this).data("info") + $(this).data("id");
+    $(_id).fadeIn();
+    _reply = $(_id).text();
+    $(_id).next().val(_reply)
+    if ($(this).data('info')=="d_comment_edit_" || $(this).data('info')=="c_comment_edit_") {
+        $('.area_comment').hide(0);
+        $('.edit_buttons').hide(0)
+    }else{
+        $(_id).siblings().hide(0);
+    }
+    
+
+})
 

@@ -616,4 +616,60 @@ $('#reportYes').click(function(){
 	});	
 })
 
+$('#save_change').click(function(){
+    var _info = $(this).data('info');
+    var _id = $(this).data('id');
+	var _data = $("#edit_form").serialize();
+	var splitData = _data.split('&');
+	$.ajax({
+		type: "POST",
+		url: 'procedures/doEditForum.php',
+		data: $("#edit_form").serialize() + '&info='+_info + '&id='+_id,
+		success: function(result) {
+
+			if (result == 'success') {
+				$('#edit_forum_popup').fadeOut(250);
+				$('.edit-forum').css('box-shadow',"0 0px 12px 1px #786eff");
+				$('#forum_title').html(decodeURIComponent(splitData[0].split('=')[1].replace(/\+/g, '%20')).replace(/\n/g, "<br />"))
+				$('#forum_post').html(decodeURIComponent(splitData[1].split('=')[1].replace(/\+/g, '%20')).replace(/\n/g, "<br />"))
+				setTimeout(changeBoxShadow,4000)
+				function changeBoxShadow(){
+					$('.edit-forum').css('box-shadow','0 1px 4px rgba(0,0,0,0.20)');
+				}
+				
+			}
+
+		}
+	});		
+})
+
+
+$('.save_button').click(function(){
+	var $id = $(this).data("id");
+    var _id = "#"+$(this).data("info") + $(this).data("id");
+    var _info = $(this).data("type");
+    $(_id).fadeIn();
+    $(_id).text($(_id).next().val());
+    _reply = $(_id).text();
+ 	$.ajax({
+		type: "POST",
+		url: 'procedures/doEditForum.php',
+		data: {'reply':_reply,'id':$id, 'info':_info,'update_post':_reply,'update_title':"none"},
+		success: function(result) {
+			if (result == 'success') {
+				$(_id).next().val(_reply)
+			    if (_info == "edit_comment" || _info == "edit_c_comment") {
+			        $('.edit_text_area').hide(0);
+			        $('.edit_buttons').hide(0);
+			    }else{
+			    	$(_id).siblings().hide(0);
+			    }
+				
+			}
+
+		}
+	});
+    
+
+})
 
