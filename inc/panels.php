@@ -1,28 +1,6 @@
         <section class="left-side-panel">
         		<div>
-        		<?php if(isset($_GET['d_room'])): ?>
-        			<h5 class="side-nav-heading">Discussion Rooms</h5>
-        			<ul class="universal-side-nav-list side-nav-recent">
-        				<li>
-        					<a href="#d_c"> <?php echo $collegeAbrev; ?> Community <?php echo '<span>' . count(get_all_discussions($collegeId,'community','all')). ' Posts</span>'; ?></a>
-        				</li>
-        				<li>
-        					<a href="#d_f">Freshmen <?php echo '<span>' . count(get_all_discussions($collegeId,'freshmen','all')). ' Posts</span>'; ?></a>
-        				</li>
-         				<li>
-        					<a href="#d_ug">Undergrads <?php echo '<span>' . count(get_all_discussions($collegeId,'undergrads','all')). ' Posts</span>'; ?></a>
-        				</li>
-        				<li>
-        					<a href="#d_gs">Grad Students <?php echo '<span>' . count(get_all_discussions($collegeId,'grad_students','all')). ' Posts</span>'; ?></a>
-        				</li>
-         				<li>
-        					<a href="#d_a">Admissions <?php echo '<span>' . count(get_all_discussions($collegeId,'admissions','all')). ' Posts</span>'; ?></a>
-        				</li>
-        				<li>
-        					<a href="#d_gi">Getting In <?php echo $collegeAbrev .' '. '<span>' . count(get_all_discussions($collegeId,'getting_in','all')). ' Posts</span>'; ?></a>
-        				</li>
-        			</ul>
-        		<?php elseif(isset($_GET['e_type'])):  ?>
+        		<?php if(isset($_GET['e_type'])):  ?>
         			<h5 class="side-nav-heading">Meetup Rooms</h5>
         			<ul class="universal-side-nav-list side-nav-recent">
         				<li>

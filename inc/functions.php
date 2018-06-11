@@ -7,12 +7,12 @@ function create_user($university,$firstName,$lastName,$userName,$collegeEmail,$t
 
 		try{
 			$connect->beginTransaction();
-			$stmt = $connect->prepare("SELECT college_id FROM collegeList WHERE uni_name = ?");
+			$stmt = $connect->prepare("SELECT college_id FROM colleges WHERE uni_name = ?");
 			$stmt->bindParam(1,$university,PDO::PARAM_STR);
 			$stmt->execute();
 			$collegeId = $stmt->fetch(PDO::FETCH_ASSOC)['college_id'];
 
-			$stmt = $connect->prepare("INSERT INTO collegestudent(`firstName`,`lastName`,`userName`,`email`, `token`, `collegeId`)  VALUES(?,?,?,?,?,?)");
+			$stmt = $connect->prepare("INSERT INTO college_student(`firstName`,`lastName`,`userName`,`email`, `token`, `collegeId`)  VALUES(?,?,?,?,?,?)");
 			$stmt->bindParam(1,$firstName,PDO::PARAM_STR);
 			$stmt->bindParam(2,$lastName,PDO::PARAM_STR);
 			$stmt->bindParam(3,$userName,PDO::PARAM_STR);
@@ -103,17 +103,17 @@ function update_community($communityId,$categoryId,$communityName,$communityMess
 		throw $e;
 	}	
 }
-function create_major($collegeId,$majorId,$majorName,$message){
+function create_major($collegeId,$majorId,$majorName){
 
 	global $connect;
 
 		try{
 			$connect->beginTransaction();
-			$stmt = $connect->prepare("INSERT INTO majors(`majorList_id`,`college_id`,`category_id`,`community_name`,`community_message`)  VALUES(?,?,23,?,?)");
+			// TODO - MAJORS WILL BE REMOVED CHANGE TO COMMUNITIES
+			$stmt = $connect->prepare("INSERT INTO majors(`majorList_id`,`college_id`,`category_id`,`community_name`)  VALUES(?,?,23,?)");
 			$stmt->bindParam(1,$majorId,PDO::PARAM_INT);
 			$stmt->bindParam(2,$collegeId,PDO::PARAM_INT);
 			$stmt->bindParam(3,$majorName,PDO::PARAM_STR);
-			$stmt->bindParam(4,$message,PDO::PARAM_STR);
 			$stmt->execute();
 			$connect->commit();
 			return true;;
@@ -122,17 +122,16 @@ function create_major($collegeId,$majorId,$majorName,$message){
 		}
 
 }
-function create_discussion($discussionRoomId,$discussionTopicId,$collegeId,$userId,$discussionTitle,$discussionPost){
+function create_discussion($discussionTopicId,$collegeId,$userId,$discussionTitle,$discussionPost){
 	global $connect;
 		try{
 			$connect->beginTransaction();
-			$stmt = $connect->prepare("INSERT INTO discussion_post(`discussion_room_id`,`d_topic_id`,`college_id`, `student_id`, `discussion_title`,`discussion_post`)  VALUES(?,?,?,?,?,?)");
-			$stmt->bindParam(1,$discussionRoomId,PDO::PARAM_INT);
-			$stmt->bindParam(2,$discussionTopicId,PDO::PARAM_INT);
-			$stmt->bindParam(3,$collegeId,PDO::PARAM_INT);
-			$stmt->bindParam(4,$userId,PDO::PARAM_INT);
-			$stmt->bindParam(5,$discussionTitle,PDO::PARAM_STR);
-			$stmt->bindParam(6,$discussionPost,PDO::PARAM_STR);
+			$stmt = $connect->prepare("INSERT INTO discussion_post(`d_topic_id`,`college_id`, `student_id`, `discussion_title`,`discussion_post`)  VALUES(?,?,?,?,?)");
+			$stmt->bindParam(1,$discussionTopicId,PDO::PARAM_INT);
+			$stmt->bindParam(2,$collegeId,PDO::PARAM_INT);
+			$stmt->bindParam(3,$userId,PDO::PARAM_INT);
+			$stmt->bindParam(4,$discussionTitle,PDO::PARAM_STR);
+			$stmt->bindParam(5,$discussionPost,PDO::PARAM_STR);
 			$stmt->execute();
 			$connect->commit();
 
@@ -151,11 +150,10 @@ function create_community_discussion($collegeId,$communityId=NULL,$majorId=NULL,
 	if (!is_null($communityId)) {
 		try{
 			$connect->beginTransaction();
-			$stmt = $connect->prepare("INSERT INTO community_discussions(`college_id`,`community_id`, `student_id`,`c_discussion_post`)  VALUES(?,?,?,?)");
-			$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
-			$stmt->bindParam(2,$communityId,PDO::PARAM_INT);
-			$stmt->bindParam(3,$userId,PDO::PARAM_INT);
-			$stmt->bindParam(4,$discussionPost,PDO::PARAM_STR);
+			$stmt = $connect->prepare("INSERT INTO community_discussions(`community_id`, `student_id`,`c_discussion_post`)  VALUES(?,?,?)");
+			$stmt->bindParam(1,$communityId,PDO::PARAM_INT);
+			$stmt->bindParam(2,$userId,PDO::PARAM_INT);
+			$stmt->bindParam(3,$discussionPost,PDO::PARAM_STR);
 			$stmt->execute();
 			$connect->commit();
 
@@ -171,11 +169,10 @@ function create_community_discussion($collegeId,$communityId=NULL,$majorId=NULL,
 	}elseif(!is_null($majorId)){
 		try{
 			$connect->beginTransaction();
-			$stmt = $connect->prepare("INSERT INTO community_discussions(`college_id`,`major_id`, `student_id`,`c_discussion_post`)  VALUES(?,?,?,?)");
-			$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
-			$stmt->bindParam(2,$majorId,PDO::PARAM_INT);
-			$stmt->bindParam(3,$userId,PDO::PARAM_INT);
-			$stmt->bindParam(4,$discussionPost,PDO::PARAM_STR);
+			$stmt = $connect->prepare("INSERT INTO community_discussions(`major_id`, `student_id`,`c_discussion_post`)  VALUES(?,?,?)");
+			$stmt->bindParam(1,$majorId,PDO::PARAM_INT);
+			$stmt->bindParam(2,$userId,PDO::PARAM_INT);
+			$stmt->bindParam(3,$discussionPost,PDO::PARAM_STR);
 			$stmt->execute();
 			$connect->commit();
 
@@ -191,12 +188,11 @@ function create_community_discussion($collegeId,$communityId=NULL,$majorId=NULL,
 	}elseif(!is_null($storyId)){
 		try{
 			$connect->beginTransaction();
-			$stmt = $connect->prepare("INSERT INTO community_discussions(`college_id`,`community_id`, `student_id`,`c_discussion_title`,`c_discussion_post`)  VALUES(?,?,?,?,?)");
-			$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
-			$stmt->bindParam(2,$storyId,PDO::PARAM_INT);
-			$stmt->bindParam(3,$userId,PDO::PARAM_INT);
-			$stmt->bindParam(4,$discussionTitle,PDO::PARAM_STR);
-			$stmt->bindParam(5,$discussionPost,PDO::PARAM_STR);
+			$stmt = $connect->prepare("INSERT INTO community_discussions(`community_id`, `student_id`,`c_discussion_title`,`c_discussion_post`)  VALUES(?,?,?,?)");
+			$stmt->bindParam(1,$storyId,PDO::PARAM_INT);
+			$stmt->bindParam(2,$userId,PDO::PARAM_INT);
+			$stmt->bindParam(3,$discussionTitle,PDO::PARAM_STR);
+			$stmt->bindParam(4,$discussionPost,PDO::PARAM_STR);
 			$stmt->execute();
 			$connect->commit();
 
@@ -211,12 +207,92 @@ function create_community_discussion($collegeId,$communityId=NULL,$majorId=NULL,
 		}
 	}
 }
+function edit_discussion($discussionTitle,$discussionPost,$editInfo,$discussionId){
+	global $connect;
+	if ($editInfo == "edit_discussion") {
+		try {
+	    	$connect->beginTransaction();
+	    	$stmt = $connect->prepare("UPDATE discussion_post SET discussion_title = ?, discussion_post = ? WHERE d_post_id = ? ");
+	    	$stmt->bindParam(1,$discussionTitle,PDO::PARAM_STR);
+	    	$stmt->bindParam(2,$discussionPost,PDO::PARAM_STR);
+	    	$stmt->bindParam(3,$discussionId,PDO::PARAM_INT);
+			$stmt->execute();
+			$connect->commit();
+			return true;
+		} catch (Exception $e) {
+			throw $e;
+		}
+	}elseif ($editInfo == "edit_c_discussion") {
+		try {
+	    	$connect->beginTransaction();
+	    	$stmt = $connect->prepare("UPDATE community_discussions SET c_discussion_title = ?, c_discussion_post = ? WHERE c_discussion_id = ?");
+	    	$stmt->bindParam(1,$discussionTitle,PDO::PARAM_STR);
+	    	$stmt->bindParam(2,$discussionPost,PDO::PARAM_STR);
+	    	$stmt->bindParam(3,$discussionId,PDO::PARAM_INT);
+			$stmt->execute();
+			$connect->commit();
+			return true;			
+		} catch (Exception $e) {
+			throw $e;
+		}
+
+	}elseif ($editInfo == "edit_reply") {
+		try {
+	    	$connect->beginTransaction();
+	    	$stmt = $connect->prepare("UPDATE discussion_replies SET reply_post = ? WHERE d_reply_id = ?");
+	    	$stmt->bindParam(1,$discussionPost,PDO::PARAM_STR);
+	    	$stmt->bindParam(2,$discussionId,PDO::PARAM_INT);
+			$stmt->execute();
+			$connect->commit();
+			return true;			
+		} catch (Exception $e) {
+			throw $e;
+		}
+	}elseif ($editInfo == "edit_c_reply") {
+		try {
+	    	$connect->beginTransaction();
+	    	$stmt = $connect->prepare("UPDATE c_discussion_replies SET  reply_post = ? WHERE c_discussion_reply_id = ?");
+	    	$stmt->bindParam(1,$discussionPost,PDO::PARAM_STR);
+	    	$stmt->bindParam(2,$discussionId,PDO::PARAM_INT);
+			$stmt->execute();
+			$connect->commit();
+			return true;			
+		} catch (Exception $e) {
+			throw $e;
+		}
+	}elseif ($editInfo == "edit_comment") {
+		try {
+	    	$connect->beginTransaction();
+	    	$stmt = $connect->prepare("UPDATE discussion_r_replies SET r_reply_post = ? WHERE r_reply_id = ?");
+	    	$stmt->bindParam(1,$discussionPost,PDO::PARAM_STR);
+	    	$stmt->bindParam(2,$discussionId,PDO::PARAM_INT);
+			$stmt->execute();
+			$connect->commit();
+			return true;			
+		} catch (Exception $e) {
+			throw $e;
+		}
+	}elseif ($editInfo == "edit_c_comment") {
+		try {
+	    	$connect->beginTransaction();
+	    	$stmt = $connect->prepare("UPDATE c_discussion_r_reply SET  r_reply_post = ? WHERE r_reply_id = ?");
+	    	$stmt->bindParam(1,$discussionPost,PDO::PARAM_STR);
+	    	$stmt->bindParam(2,$discussionId,PDO::PARAM_INT);
+			$stmt->execute();
+			$connect->commit();
+			return true;			
+		} catch (Exception $e) {
+			throw $e;
+		}
+	}
+}
 //creates event
 function create_event($eventTypeId,$collegeId,$userId,$communityId,$eventTypeB,$eventTitle,$eventDescription,$eventLocation,$eventDate,$eventTime){
 	global $connect;
 	if (is_null($communityId)) {
 		try{
 			$connect->beginTransaction();
+			// TODO - REMOVE SCHOOL WIDE EVENTS AND REPLACE WITH TRENDING/RECENT EVENTS
 			$stmt = $connect->prepare("INSERT INTO events(`event_type_id`, `college_id`, `student_id`, `event_access`, `event_title`, `event_description`, `event_location`, `event_date`, `event_time`)  VALUES(?,?,?,?,?,?,?,?,?)");
 			$stmt->bindParam(1,$eventTypeId,PDO::PARAM_INT);
 			$stmt->bindParam(2,$collegeId,PDO::PARAM_INT);
@@ -566,7 +642,7 @@ function is_student($userId,$collegeId){
 		
 	try {
 		$connect->beginTransaction();
-		$stmt = $connect->prepare("SELECT id FROM collegestudent WHERE id = ? AND collegeId = ?");
+		$stmt = $connect->prepare("SELECT id FROM college_student WHERE id = ? AND collegeId = ?");
 		$stmt->bindParam(1,$userId,PDO::PARAM_INT);
 		$stmt->bindParam(2,$collegeId,PDO::PARAM_INT);
 		$stmt->execute();
@@ -769,15 +845,15 @@ function is_creator($type,$userId,$id){
 
 
 //show discussions + events
-function showDiscussion($collegeId,$discussionTopicId =NULL,$dRoom){
+function showDiscussion($collegeId,$discussionTopicId =NULL){
 		global $userId;
 		global $loggedIn;
 		global $collegeAbrev;
 		global $urlCollegeName;
 		if(!is_null($discussionTopicId)){
-			$discussionsList = get_all_discussions($collegeId,$dRoom,$discussionTopicId);
+			$discussionsList = get_all_discussions($collegeId,$discussionTopicId);
 		}else{
-			$discussionsList = get_all_discussions($collegeId,$dRoom,'all');
+			$discussionsList = get_all_discussions($collegeId,'all');
 		}
 		if(!$loggedIn){
 			$userId = 0;
@@ -785,7 +861,7 @@ function showDiscussion($collegeId,$discussionTopicId =NULL,$dRoom){
 		$content = "";
 		if(!empty($discussionsList)){
 				foreach ($discussionsList as $key) {
-					$replies = get_all_discussion_replies($collegeId,$key['d_post_id']);
+					$replies = get_all_discussion_replies($key['d_post_id']);
 					if (count($replies)==0){
 						$replyCount =  count($replies)." Replies";
 					}elseif(count($replies)==1){
@@ -876,18 +952,17 @@ function showMeetups($meetupRoom){
 		return $content;
 }
 //add comments to event
-function add_event_comments($collegeId,$communityId = NULL, $eventId, $studentId, $eventComment){
+function add_event_comments($communityId = NULL, $eventId, $studentId, $eventComment){
 	global $connect;
 
 	if (!is_null($communityId)) {
 			try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("INSERT INTO event_comments(`college_id`,`community_id`,`event_id`,`student_id`, `comment`)  VALUES(?,?,?,?,?)");
-				$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
-				$stmt->bindParam(2,$communityId,PDO::PARAM_INT);
-				$stmt->bindParam(3,$eventId,PDO::PARAM_INT);
-				$stmt->bindParam(4,$studentId,PDO::PARAM_INT);
-				$stmt->bindParam(5,$eventComment,PDO::PARAM_STR);
+				$stmt = $connect->prepare("INSERT INTO event_comments(`community_id`,`event_id`,`student_id`, `comment`)  VALUES(?,?,?,?)");
+				$stmt->bindParam(1,$communityId,PDO::PARAM_INT);
+				$stmt->bindParam(2,$eventId,PDO::PARAM_INT);
+				$stmt->bindParam(3,$studentId,PDO::PARAM_INT);
+				$stmt->bindParam(4,$eventComment,PDO::PARAM_STR);
 				$stmt->execute();
 				$connect->commit();
 				return true;
@@ -897,11 +972,10 @@ function add_event_comments($collegeId,$communityId = NULL, $eventId, $studentId
 	}else{
 			try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("INSERT INTO event_comments(`college_id`,`event_id`,`student_id`, `comment`)  VALUES(?,?,?,?)");
-				$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
-				$stmt->bindParam(2,$eventId,PDO::PARAM_INT);
-				$stmt->bindParam(3,$studentId,PDO::PARAM_INT);
-				$stmt->bindParam(4,$eventComment,PDO::PARAM_STR);
+				$stmt = $connect->prepare("INSERT INTO event_comments(`event_id`,`student_id`, `comment`)  VALUES(?,?,?)");
+				$stmt->bindParam(1,$eventId,PDO::PARAM_INT);
+				$stmt->bindParam(2,$studentId,PDO::PARAM_INT);
+				$stmt->bindParam(3,$eventComment,PDO::PARAM_STR);
 				$stmt->execute();
 				$connect->commit();
 				return true;
@@ -913,17 +987,16 @@ function add_event_comments($collegeId,$communityId = NULL, $eventId, $studentId
 
 
 //add replies to discussions
-function add_reply($collegeId, $communityId = null, $majorId = null, $discussionId, $userId, $replyPost){
+function add_reply($communityId = null, $majorId = null, $discussionId, $userId, $replyPost){
 	global $connect;
 
 	if (is_null($communityId) && is_null($majorId)) {
 		try{
 			$connect->beginTransaction();
-			$stmt = $connect->prepare("INSERT INTO discussion_replies(`college_id`, `discussion_id`, `student_id`, `reply_post`)  VALUES(?,?,?,?)");
-			$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
-			$stmt->bindParam(2,$discussionId,PDO::PARAM_INT);
-			$stmt->bindParam(3,$userId,PDO::PARAM_INT);
-			$stmt->bindParam(4,$replyPost,PDO::PARAM_STR);
+			$stmt = $connect->prepare("INSERT INTO discussion_replies(`discussion_id`, `student_id`, `reply_post`)  VALUES(?,?,?)");
+			$stmt->bindParam(1,$discussionId,PDO::PARAM_INT);
+			$stmt->bindParam(2,$userId,PDO::PARAM_INT);
+			$stmt->bindParam(3,$replyPost,PDO::PARAM_STR);
 			$stmt->execute();
 			$connect->commit();
 			return true;
@@ -933,12 +1006,10 @@ function add_reply($collegeId, $communityId = null, $majorId = null, $discussion
 	}elseif (!is_null($communityId) && is_null($majorId)) {
 		try{
 			$connect->beginTransaction();
-			$stmt = $connect->prepare("INSERT INTO c_discussion_replies(`college_id`, `community_id`, `c_discussion_id`, `student_id`, `reply_post`)  VALUES(?,?,?,?,?)");
-			$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
-			$stmt->bindParam(2,$communityId,PDO::PARAM_INT);
-			$stmt->bindParam(3,$discussionId,PDO::PARAM_INT);
-			$stmt->bindParam(4,$userId,PDO::PARAM_INT);
-			$stmt->bindParam(5,$replyPost,PDO::PARAM_STR);
+			$stmt = $connect->prepare("INSERT INTO c_discussion_replies(`c_discussion_id`, `student_id`, `reply_post`)  VALUES(?,?,?)");
+			$stmt->bindParam(1,$discussionId,PDO::PARAM_INT);
+			$stmt->bindParam(2,$userId,PDO::PARAM_INT);
+			$stmt->bindParam(3,$replyPost,PDO::PARAM_STR);
 			$stmt->execute();
 			$connect->commit();
 			return true;
@@ -948,12 +1019,10 @@ function add_reply($collegeId, $communityId = null, $majorId = null, $discussion
 	}elseif (!is_null($majorId) && is_null($communityId)) {
 		try{
 			$connect->beginTransaction();
-			$stmt = $connect->prepare("INSERT INTO c_discussion_replies(`college_id`, `major_id`, `c_discussion_id`, `student_id`, `reply_post`)  VALUES(?,?,?,?,?)");
-			$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
-			$stmt->bindParam(2,$majorId,PDO::PARAM_INT);
-			$stmt->bindParam(3,$discussionId,PDO::PARAM_INT);
-			$stmt->bindParam(4,$userId,PDO::PARAM_INT);
-			$stmt->bindParam(5,$replyPost,PDO::PARAM_STR);
+			$stmt = $connect->prepare("INSERT INTO c_discussion_replies(`c_discussion_id`, `student_id`, `reply_post`)  VALUES(?,?,?)");
+			$stmt->bindParam(1,$discussionId,PDO::PARAM_INT);
+			$stmt->bindParam(2,$userId,PDO::PARAM_INT);
+			$stmt->bindParam(3,$replyPost,PDO::PARAM_STR);
 			$stmt->execute();
 			$connect->commit();
 			return true;
@@ -965,17 +1034,14 @@ function add_reply($collegeId, $communityId = null, $majorId = null, $discussion
 
 
 //add comments to discussion replies
-function add_reply_comments($dReplyId,$collegeId,$discussionId, $studentId, $rReplyPost){
+function add_reply_comments($dReplyId, $studentId, $rReplyPost){
 	global $connect;
-
 	try{
 		$connect->beginTransaction();
-		$stmt = $connect->prepare("INSERT INTO discussion_r_replies(`d_reply_id`, `college_id`, `discussion_id`, `student_id`, `r_reply_post`)  VALUES(?,?,?,?,?)");
+		$stmt = $connect->prepare("INSERT INTO discussion_r_replies(`d_reply_id`, `student_id`, `r_reply_post`)  VALUES(?,?,?)");
 		$stmt->bindParam(1,$dReplyId,PDO::PARAM_INT);
-		$stmt->bindParam(2,$collegeId,PDO::PARAM_INT);
-		$stmt->bindParam(3,$discussionId,PDO::PARAM_INT);
-		$stmt->bindParam(4,$studentId,PDO::PARAM_INT);
-		$stmt->bindParam(5,$rReplyPost,PDO::PARAM_STR);
+		$stmt->bindParam(2,$studentId,PDO::PARAM_INT);
+		$stmt->bindParam(3,$rReplyPost,PDO::PARAM_STR);
 		$stmt->execute();
 		$connect->commit();
 		return true;
@@ -984,41 +1050,20 @@ function add_reply_comments($dReplyId,$collegeId,$discussionId, $studentId, $rRe
 	}	
 }
 
-function add_c_reply_comments($dReplyId, $collegeId, $communityId = NULL, $majorId = NULL, $discussionId, $studentId, $rReplyPost){
+function add_c_reply_comments($dReplyId,$studentId, $rReplyPost){
 	global $connect;
-	if (!is_null($communityId)) {
 		try{
 			$connect->beginTransaction();
-			$stmt = $connect->prepare("INSERT INTO c_discussion_r_reply(`c_discussion_reply_id`, `college_id`, `community_id`,`c_discussion_id`, `student_id`, `r_reply_post`)  VALUES(?,?,?,?,?,?)");
+			$stmt = $connect->prepare("INSERT INTO c_discussion_r_reply(`c_discussion_reply_id`,`student_id`, `r_reply_post`)  VALUES(?,?,?)");
 			$stmt->bindParam(1,$dReplyId,PDO::PARAM_INT);
-			$stmt->bindParam(2,$collegeId,PDO::PARAM_INT);
-			$stmt->bindParam(3,$communityId,PDO::PARAM_INT);
-			$stmt->bindParam(4,$discussionId,PDO::PARAM_INT);
-			$stmt->bindParam(5,$studentId,PDO::PARAM_INT);
-			$stmt->bindParam(6,$rReplyPost,PDO::PARAM_STR);
+			$stmt->bindParam(2,$studentId,PDO::PARAM_INT);
+			$stmt->bindParam(3,$rReplyPost,PDO::PARAM_STR);
 			$stmt->execute();
 			$connect->commit();
 			return true;
 		}catch(Exception $e){
 			throw $e;
 		}
-	}elseif(!is_null($majorId)){
-		try{
-			$connect->beginTransaction();
-			$stmt = $connect->prepare("INSERT INTO c_discussion_r_reply(`c_discussion_reply_id`, `college_id`, `major_id`,`c_discussion_id`, `student_id`, `r_reply_post`)  VALUES(?,?,?,?,?,?)");
-			$stmt->bindParam(1,$dReplyId,PDO::PARAM_INT);
-			$stmt->bindParam(2,$collegeId,PDO::PARAM_INT);
-			$stmt->bindParam(3,$majorId,PDO::PARAM_INT);
-			$stmt->bindParam(4,$discussionId,PDO::PARAM_INT);
-			$stmt->bindParam(5,$studentId,PDO::PARAM_INT);
-			$stmt->bindParam(6,$rReplyPost,PDO::PARAM_STR);
-			$stmt->execute();
-			$connect->commit();
-			return true;
-		}catch(Exception $e){
-			throw $e;
-		}
-	}
 }
 
 
@@ -1059,6 +1104,9 @@ function new_vote($discussionId,$userId,$action){
 			$connect->beginTransaction();
 	        $stmt = $connect->prepare("INSERT INTO discussion_vote(`discussion_id`,`student_id`,`vote`) VALUES(?,?,-1)");
 	        $stmt->bindParam(1,$discussionId,PDO::PARAM_INT);
+	    
+	
+
 	        $stmt->bindParam(2,$userId,PDO::PARAM_INT);
 	        $return = $stmt->execute();
 			$connect->commit();
@@ -1216,7 +1264,7 @@ function delete_user($userId){
 	global $connect;
 	try{
 		$connect->beginTransaction();
-		$stmt = $connect->prepare("DELETE FROM collegestudent WHERE id = ?");
+		$stmt = $connect->prepare("DELETE FROM college_student WHERE id = ?");
 		$stmt->bindParam(1,$userId,PDO::PARAM_INT);
 		$return = $stmt->execute();
 		$connect->commit();
@@ -1230,7 +1278,7 @@ function update_user($userId,$collegeId,$email,$username,$majorId){
 	global $connect;
 	try {
 		$connect->beginTransaction();
-		$stmt = $connect->prepare("UPDATE collegestudent SET collegeId = ?, email = ?, username = ? WHERE id = ?");
+		$stmt = $connect->prepare("UPDATE college_student SET collegeId = ?, email = ?, username = ? WHERE id = ?");
 		$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
 		$stmt->bindParam(2,$email,PDO::PARAM_STR);
 		$stmt->bindParam(3,$username,PDO::PARAM_STR);
@@ -1251,7 +1299,7 @@ function update_password($userId,$hashed){
 	global $connect;
 	try {
 		$connect->beginTransaction();
-		$stmt = $connect->prepare("UPDATE collegestudent SET token = ? WHERE id = ?");
+		$stmt = $connect->prepare("UPDATE college_student SET token = ? WHERE id = ?");
 		$stmt->bindParam(1,$hashed,PDO::PARAM_STR);
 		$stmt->bindParam(2,$userId,PDO::PARAM_INT);
 		$stmt->execute();
@@ -1281,7 +1329,7 @@ function setResetCode($userId,$resetCode) {
 	global $connect;
 	try{
 		$connect->beginTransaction();
-        $stmt = $connect->prepare("INSERT INTO resetPassword(`id`,`reset_code`) VALUES(?,?)");
+        $stmt = $connect->prepare("INSERT INTO reset_password(`id`,`reset_code`) VALUES(?,?)");
         $stmt->bindParam(1,$userId,PDO::PARAM_INT);
         $stmt->bindParam(2,$resetCode,PDO::PARAM_STR);
 		$return = $stmt->execute();
@@ -1297,7 +1345,7 @@ function get_all_users(){
 	try{
 		$connect->beginTransaction();
 			$stmt = $connect->prepare("SELECT firstName, lastName, userName, email, uni_name AS university
-													  FROM collegestudent INNER JOIN collegeList ON collegestudent.collegeid = collegeList.college_id");
+													  FROM college_student INNER JOIN colleges ON college_student.collegeid = colleges.college_id");
 			$stmt->execute();
 			$connect->commit();
 			return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -1311,7 +1359,7 @@ function get_all_other_users($userId){
 	try{
 		$connect->beginTransaction();
 			$stmt = $connect->prepare("SELECT id, firstName, lastName, userName email, uni_name AS university
-													  FROM collegestudent INNER JOIN university ON collegestudent.universityID = university.universityID WHERE id <> ?");
+													  FROM college_student INNER JOIN colleges ON college_student.universityID = university.universityID WHERE id <> ?");
 			$stmt->bindParam(1,$userId,PDO::PARAM_INT);
 			$stmt->execute();
 			$connect->commit();
@@ -1327,8 +1375,8 @@ function get_students($collegeId,$userId=NULL){
 		try{
 			$connect->beginTransaction();
 				$stmt = $connect->prepare("SELECT id,firstName, lastName, userName, email, uni_name 
-														  FROM collegestudent INNER JOIN collegeList ON collegestudent.collegeId = collegeList.college_id
-														  WHERE collegeList.college_id = ?");
+														  FROM college_student INNER JOIN colleges ON college_student.collegeId = colleges.college_id
+														  WHERE colleges.college_id = ?");
 				$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
 				$stmt->execute();
 				$connect->commit();
@@ -1341,8 +1389,8 @@ function get_students($collegeId,$userId=NULL){
 		try{
 			$connect->beginTransaction();
 				$stmt = $connect->prepare("SELECT id,firstName, lastName, userName, email, uni_name 
-														  FROM collegestudent INNER JOIN collegeList ON collegestudent.collegeId = collegeList.college_id
-														  WHERE collegeList.college_id = ? AND id <> ?");
+														  FROM college_student INNER JOIN colleges ON college_student.collegeId = colleges.college_id
+														  WHERE colleges.college_id = ? AND id <> ?");
 				$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
 				$stmt->bindParam(2,$userId,PDO::PARAM_INT);
 				$stmt->execute();
@@ -1359,7 +1407,7 @@ function get_school_info($university){
 	global $connect;
 	try{
 			$connect->beginTransaction();
-			$stmt = $connect->prepare("SELECT * FROM collegeList WHERE uni_name = ?");
+			$stmt = $connect->prepare("SELECT * FROM colleges WHERE uni_name = ?");
 			$stmt->bindParam(1,$university,PDO::PARAM_STR);
 			$stmt->execute();
 			$connect->commit();
@@ -1457,8 +1505,8 @@ function get_community($communityId,$collegeId){
 	global $connect;
 	try{
 			$connect->beginTransaction();
-			$stmt = $connect->prepare("SELECT communities.community_id, communities.category_id, categories.category,collegestudent.userName,community_name,community_message,community_category,community_description,community_type,community_color,date_created  FROM communities 
-										INNER JOIN collegestudent ON communities.creator_id = collegestudent.id
+			$stmt = $connect->prepare("SELECT communities.community_id, communities.category_id, categories.category,college_student.userName,community_name,community_message,community_category,community_description,community_type,community_color,date_created  FROM communities 
+										INNER JOIN college_student ON communities.creator_id = college_student.id
 	                                    INNER JOIN categories ON communities.category_id =  categories.category_id
 										WHERE community_id = ?");
 			$stmt->bindParam(1,$communityId,PDO::PARAM_INT);
@@ -1474,8 +1522,8 @@ function get_community_members($communityId){
 	global $connect;
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT community_members.student_id,collegestudent.id,collegestudent.firstName,collegestudent.lastName, userName FROM community_members 
-											INNER JOIN collegestudent ON community_members.student_id = collegestudent.id
+				$stmt = $connect->prepare("SELECT community_members.student_id,college_student.id,college_student.firstName,college_student.lastName, userName FROM community_members 
+											INNER JOIN college_student ON community_members.student_id = college_student.id
 											WHERE community_id = ? AND status = 1");
 				$stmt->bindParam(1,$communityId,PDO::PARAM_INT);
 				$stmt->execute();
@@ -1490,8 +1538,8 @@ function get_community_admins($communityId){
 	global $connect;
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT community_admins.student_id, collegestudent.id,userName FROM community_admins 
-											INNER JOIN collegestudent ON community_admins.student_id = collegestudent.id
+				$stmt = $connect->prepare("SELECT community_admins.student_id, college_student.id,userName FROM community_admins 
+											INNER JOIN college_student ON community_admins.student_id = college_student.id
 											WHERE community_id = ?");
 				$stmt->bindParam(1,$communityId,PDO::PARAM_INT);
 				$stmt->execute();
@@ -1508,7 +1556,7 @@ function get_community_request($communityId,$status=NULL){
 			try {
 				$connect->beginTransaction();
 				$stmt = $connect->prepare("SELECT firstName, lastName, userName, student_id FROM community_members
-											INNER JOIN collegestudent ON  community_members.student_id = collegestudent.id
+											INNER JOIN college_student ON  community_members.student_id = college_student.id
 										 WHERE community_id = ? AND status = 2");
 				$stmt->bindParam(1,$communityId,PDO::PARAM_INT);
 				$stmt->execute();
@@ -1597,7 +1645,7 @@ function get_majors_list($search){
 	$searchString = '%'.$search.'%';
 	try{
 			$connect->beginTransaction();
-			$stmt = $connect->prepare("SELECT majorList_id as label, major as value FROM majorsLists WHERE major LIKE ?
+			$stmt = $connect->prepare("SELECT majorList_id as label, major as value FROM majors_list WHERE major LIKE ?
 										ORDER BY LOCATE(?, major)");
 			$stmt->bindParam(1,$searchString,PDO::PARAM_STR);
 			$stmt->bindParam(2,$search,PDO::PARAM_STR);
@@ -1616,7 +1664,7 @@ function search_communities($search,$collegeId){
 			$connect->beginTransaction();
 			$stmt = $connect->prepare("SELECT * FROM communities 
 										INNER JOIN categories ON communities.category_id =  categories.category_id
-										WHERE community_name LIKE ? OR community_description LIKE ? OR community_message LIKE ? OR categories.category LIKE ? AND college_id = ? ORDER BY LOCATE(?, community_name)");
+										WHERE (community_name LIKE ? OR community_description LIKE ? OR community_message LIKE ? OR categories.category LIKE ?) AND (college_id = ?) ORDER BY LOCATE(?, community_name)");
 			$stmt->bindParam(1,$searchString,PDO::PARAM_STR);
 			$stmt->bindParam(2,$searchString,PDO::PARAM_STR);
 			$stmt->bindParam(3,$searchString,PDO::PARAM_STR);
@@ -1638,7 +1686,7 @@ function search_discussion($search,$collegeId){
 			$connect->beginTransaction();
 			$stmt = $connect->prepare("SELECT * FROM discussion_post 
 										INNER JOIN discussion_topics ON discussion_post.d_topic_id = discussion_topics.discussion_topic_id
-										WHERE discussion_title LIKE ? OR discussion_post LIKE ? OR discussion_topics.discussion_topic LIKE ? AND college_id = ?
+										WHERE (discussion_title LIKE ? OR discussion_post LIKE ? OR discussion_topics.discussion_topic LIKE ?) AND (college_id = ?)
 										ORDER BY LOCATE(?, discussion_title)");
 			$stmt->bindParam(1,$searchString,PDO::PARAM_STR);
 			$stmt->bindParam(2,$searchString,PDO::PARAM_STR);
@@ -1657,8 +1705,8 @@ function get_major_members($majorId){
 	global $connect;
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT profile_about_me.student_id,collegestudent.id, userName FROM profile_about_me 
-											INNER JOIN collegestudent ON profile_about_me.student_id = collegestudent.id
+				$stmt = $connect->prepare("SELECT profile_about_me.student_id,college_student.id, userName FROM profile_about_me 
+											INNER JOIN college_student ON profile_about_me.student_id = college_student.id
 											WHERE major_id = ?");
 				$stmt->bindParam(1,$majorId,PDO::PARAM_INT);
 				$stmt->execute();
@@ -1694,16 +1742,13 @@ function get_topic($topicId){
 		throw $e;
 	}
 }
-function get_all_discussions($collegeId,$dRoom,$discussionTopic){
+function get_all_discussions($collegeId,$discussionTopic){
 	global $connect;
 	if ($discussionTopic == "all") {
-		if ($dRoom == 'community') {
 			try{
 					$connect->beginTransaction();
-					$stmt = $connect->prepare("SELECT d_post_id, student_id, discussion_room, userName, discussion_title, discussion_post, post_date FROM discussion_post 
-												INNER JOIN collegestudent ON discussion_post.student_id = collegestudent.id
-		                                        INNER JOIN discussion_room ON discussion_post.discussion_room_id = 				
-		                                        discussion_room.discussion_room_id 
+					$stmt = $connect->prepare("SELECT d_post_id, student_id, userName, discussion_title, discussion_post, post_date FROM discussion_post 
+												INNER JOIN college_student ON discussion_post.student_id = college_student.id		                             
 												WHERE college_id = ?");
 					$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
 					$stmt->execute();
@@ -1712,36 +1757,15 @@ function get_all_discussions($collegeId,$dRoom,$discussionTopic){
 			}catch(Exception $e){
 				throw $e;
 			}
-		}else{
-			try{
-					$connect->beginTransaction();
-					$stmt = $connect->prepare("SELECT d_post_id, student_id, discussion_room, userName, discussion_title, discussion_post, post_date FROM discussion_post 
-												INNER JOIN collegestudent ON discussion_post.student_id = collegestudent.id
-		                                        INNER JOIN discussion_room ON discussion_post.discussion_room_id = 				
-		                                        discussion_room.discussion_room_id 
-												WHERE college_id = ? AND discussion_room.discussion_room = ?");
-					$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
-					$stmt->bindParam(2,$dRoom,PDO::PARAM_STR);
-					$stmt->execute();
-					$connect->commit();
-					return $stmt->fetchAll(PDO::FETCH_ASSOC);
-			}catch(Exception $e){
-				throw $e;
-			}			
-		}
-
 	}else{
 		try{
 				$discussionTopic = intval($discussionTopic);
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT d_post_id, student_id, discussion_room, userName, discussion_title, discussion_post, post_date FROM discussion_post 
-											INNER JOIN collegestudent ON discussion_post.student_id = collegestudent.id
-	                                        INNER JOIN discussion_room ON discussion_post.discussion_room_id = 				
-	                                        discussion_room.discussion_room_id 
-											WHERE college_id = ? AND discussion_room.discussion_room = ? AND d_topic_id = ?");
+				$stmt = $connect->prepare("SELECT d_post_id, student_id, userName, discussion_title, discussion_post, post_date FROM discussion_post 
+											INNER JOIN college_student ON discussion_post.student_id = college_student.id
+											WHERE college_id = ? AND d_topic_id = ?");
 				$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
-				$stmt->bindParam(2,$dRoom,PDO::PARAM_STR);
-				$stmt->bindParam(3,$discussionTopic,PDO::PARAM_INT);
+				$stmt->bindParam(2,$discussionTopic,PDO::PARAM_INT);
 				$stmt->execute();
 				$connect->commit();
 				return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -1756,7 +1780,7 @@ function get_discussion($collegeId,$discussionId,$dTopic=NULL){
 		try{
 				$connect->beginTransaction();
 				$stmt = $connect->prepare("SELECT d_post_id,discussion_post,discussion_title, userName, discussion_post.student_id,post_date FROM discussion_post 
-											INNER JOIN collegestudent ON discussion_post.student_id = collegestudent.id
+											INNER JOIN college_student ON discussion_post.student_id = college_student.id
 											WHERE college_id=? AND d_post_id = ?");
 				$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
 				$stmt->bindParam(2,$discussionId,PDO::PARAM_INT);
@@ -1770,15 +1794,14 @@ function get_discussion($collegeId,$discussionId,$dTopic=NULL){
 		}
 	
 }
-function get_all_discussion_replies($collegeId, $discussionId){
+function get_all_discussion_replies($discussionId){
 	global $connect;
 	try{
 			$connect->beginTransaction();
 			$stmt = $connect->prepare("SELECT d_reply_id, discussion_replies.student_id, userName, reply_post, discussion_replies.post_date FROM discussion_replies 
-										INNER JOIN collegestudent ON discussion_replies.student_id = collegestudent.id
-										WHERE discussion_replies.college_id = ? AND discussion_id = ? ORDER BY post_date DESC");
-			$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
-			$stmt->bindParam(2,$discussionId,PDO::PARAM_INT);
+										INNER JOIN college_student ON discussion_replies.student_id = college_student.id
+										WHERE discussion_id = ? ORDER BY post_date DESC");
+			$stmt->bindParam(1,$discussionId,PDO::PARAM_INT);
 			$stmt->execute();
 			$connect->commit();
 			return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -1786,16 +1809,14 @@ function get_all_discussion_replies($collegeId, $discussionId){
 		throw $e;
 	}
 }
-function get_all_discussion_r_replies($collegeId,$discussionId,$discussionReplyId){
+function get_all_discussion_r_replies($discussionId,$discussionReplyId){
 	global $connect;
 	try{
 			$connect->beginTransaction();
 			$stmt = $connect->prepare("SELECT r_reply_id, d_reply_id, student_id, userName, r_reply_post, post_date FROM discussion_r_replies 
-										INNER JOIN collegestudent ON discussion_r_replies.student_id = collegestudent.id
-										WHERE  college_id = ? AND discussion_id = ? AND d_reply_id = ? ORDER BY post_date ASC");
-			$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
-			$stmt->bindParam(2,$discussionId,PDO::PARAM_INT);
-			$stmt->bindParam(3,$discussionReplyId,PDO::PARAM_INT);
+										INNER JOIN college_student ON discussion_r_replies.student_id = college_student.id
+										WHERE d_reply_id = ? ORDER BY post_date ASC");
+			$stmt->bindParam(1,$discussionReplyId,PDO::PARAM_INT);
 			$stmt->execute();
 			$connect->commit();
 			return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -1810,7 +1831,7 @@ function get_all_events($collegeId,$eType = NULL,$communityId = NULL){
 			try{
 					$connect->beginTransaction();
 					$stmt = $connect->prepare("SELECT event_id, community_id,event_type, student_id, event_access, event_title, event_description, event_location, event_address, event_date, event_time, event_photo, date_created FROM events
-												INNER JOIN collegestudent ON events.student_id = collegestudent.id
+												INNER JOIN college_student ON events.student_id = college_student.id
 		                                        INNER JOIN event_type ON events.event_type_id =  event_type.event_type_id 
 												WHERE college_id = ?");
 					$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
@@ -1824,7 +1845,7 @@ function get_all_events($collegeId,$eType = NULL,$communityId = NULL){
 			try{
 					$connect->beginTransaction();
 					$stmt = $connect->prepare("SELECT event_id, community_id,event_type, student_id, event_access, event_title, event_description, event_location, event_address, event_date, event_time, event_photo, date_created FROM events
-												INNER JOIN collegestudent ON events.student_id = collegestudent.id
+												INNER JOIN college_student ON events.student_id = college_student.id
 		                                        INNER JOIN event_type ON events.event_type_id =  event_type.event_type_id 
 												WHERE college_id = ? AND event_type.event_type= ?");
 					$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
@@ -1840,7 +1861,7 @@ function get_all_events($collegeId,$eType = NULL,$communityId = NULL){
 		try{
 				$connect->beginTransaction();
 				$stmt = $connect->prepare("SELECT event_id,community_id, student_id, event_access, event_title, event_description, event_location, event_address, event_date, event_time, event_photo, date_created FROM events
-											INNER JOIN collegestudent ON events.student_id = collegestudent.id
+											INNER JOIN college_student ON events.student_id = college_student.id
 											INNER JOIN event_type ON events.event_type_id =  event_type.event_type_id
 											WHERE college_id = ? AND event_type.event_type= ? AND community_id= ?");
 				$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
@@ -1856,7 +1877,7 @@ function get_all_events($collegeId,$eType = NULL,$communityId = NULL){
 		try{
 				$connect->beginTransaction();
 				$stmt = $connect->prepare("SELECT event_id,community_id, student_id, event_access, event_title, event_description, event_location, event_address, event_date, event_time, event_photo, date_created FROM events
-											INNER JOIN collegestudent ON events.student_id = collegestudent.id
+											INNER JOIN college_student ON events.student_id = college_student.id
 											WHERE college_id = ? AND community_id= ?");
 				$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
 				$stmt->bindParam(2,$communityId,PDO::PARAM_INT);
@@ -1874,8 +1895,8 @@ function get_event($collegeId,$communityId = NULL,$eventId){
 	if (!is_null($communityId)) {
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT event_id,event_type.event_type,communities.community_id, communities.community_name,communities.category_id,communities.community_category, userName, collegestudent.id, event_access, event_title, event_description, event_location, event_address, event_date, event_time, event_photo, events.date_created FROM events 
-											INNER JOIN collegestudent ON events.student_id = collegestudent.id
+				$stmt = $connect->prepare("SELECT event_id,event_type.event_type,communities.community_id, communities.community_name,communities.category_id,communities.community_category, userName, college_student.id, event_access, event_title, event_description, event_location, event_address, event_date, event_time, event_photo, events.date_created FROM events 
+											INNER JOIN college_student ON events.student_id = college_student.id
 		                                    INNER JOIN communities ON events.community_id =  communities.community_id
 		                                    INNER JOIN event_type ON events.event_type_id =  event_type.event_type_id
 											WHERE events.college_id=? AND events.community_id = ?  AND event_id = ?");
@@ -1892,8 +1913,8 @@ function get_event($collegeId,$communityId = NULL,$eventId){
 	}else{
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT  community_id, event_id, userName, collegestudent.id, event_type.event_type,event_access, event_title, event_description, event_location, event_address, event_date, event_time, event_photo, events.date_created FROM events 
-											INNER JOIN collegestudent ON events.student_id = collegestudent.id
+				$stmt = $connect->prepare("SELECT  community_id, event_id, userName, college_student.id, event_type.event_type,event_access, event_title, event_description, event_location, event_address, event_date, event_time, event_photo, events.date_created FROM events 
+											INNER JOIN college_student ON events.student_id = college_student.id
 											INNER JOIN event_type ON events.event_type_id = event_type.event_type_id
 											WHERE events.college_id=? AND event_id = ?");
 				$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
@@ -1912,8 +1933,8 @@ function event_attendees($eventId){
 	global $connect;
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT event_attendees.student_id,collegestudent.id, userName FROM event_attendees 
-											INNER JOIN collegestudent ON event_attendees.student_id = collegestudent.id
+				$stmt = $connect->prepare("SELECT event_attendees.student_id,college_student.id, userName FROM event_attendees 
+											INNER JOIN college_student ON event_attendees.student_id = college_student.id
 											WHERE event_id = ?");
 				$stmt->bindParam(1,$eventId,PDO::PARAM_INT);
 				$stmt->execute();
@@ -1924,15 +1945,14 @@ function event_attendees($eventId){
 		}
 
 }
-function get_event_comments($collegeId, $eventId){
+function get_event_comments($eventId){
 	global $connect;
 	try{
 			$connect->beginTransaction();
 			$stmt = $connect->prepare("SELECT e_comment_id,userName, student_id, comment, post_date  FROM event_comments
-										INNER JOIN collegestudent ON event_comments.student_id = collegestudent.id
-										WHERE college_id = ? AND event_id=? ORDER BY post_date ASC");
-			$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
-			$stmt->bindParam(2,$eventId,PDO::PARAM_INT);
+										INNER JOIN college_student ON event_comments.student_id = college_student.id
+										WHERE event_id=? ORDER BY post_date ASC");
+			$stmt->bindParam(1,$eventId,PDO::PARAM_INT);
 			$stmt->execute();
 			$connect->commit();
 			return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -1946,8 +1966,8 @@ function get_all_reviews($collegeId,$category = NULL,$ratings = NULL){
 	if (!is_null($category)) {
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT review_id, student_id, collegestudent.userName, review_ratings.rating, reviews_categories.review_category,review_description, date_created FROM reviews
-											INNER JOIN collegestudent ON reviews.student_id = collegestudent.id
+				$stmt = $connect->prepare("SELECT review_id, student_id, college_student.userName, review_ratings.rating, reviews_categories.review_category,review_description, date_created FROM reviews
+											INNER JOIN college_student ON reviews.student_id = college_student.id
 											INNER JOIN review_ratings ON reviews.review_rating_id = review_ratings.rating_id
 	                                        INNER JOIN reviews_categories ON reviews.review_category_id =  reviews_categories.review_category_id
 											WHERE college_id = ? AND reviews_categories.review_category_id= ?");
@@ -1962,8 +1982,8 @@ function get_all_reviews($collegeId,$category = NULL,$ratings = NULL){
 	}elseif(!is_null($ratings)){
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT review_id, student_id, collegestudent.userName, review_ratings.rating, reviews_categories.review_category,review_description, date_created FROM reviews
-											INNER JOIN collegestudent ON reviews.student_id = collegestudent.id
+				$stmt = $connect->prepare("SELECT review_id, student_id, college_student.userName, review_ratings.rating, reviews_categories.review_category,review_description, date_created FROM reviews
+											INNER JOIN college_student ON reviews.student_id = college_student.id
 											INNER JOIN review_ratings ON reviews.review_rating_id = review_ratings.rating_id
 	                                        INNER JOIN reviews_categories ON reviews.review_category_id =  reviews_categories.review_category_id
 											WHERE college_id = ? AND review_ratings.rating_id = ?");
@@ -1978,8 +1998,8 @@ function get_all_reviews($collegeId,$category = NULL,$ratings = NULL){
 	}else{
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT review_id, student_id, collegestudent.userName, review_ratings.rating, reviews_categories.review_category,review_description, date_created FROM reviews
-											INNER JOIN collegestudent ON reviews.student_id = collegestudent.id
+				$stmt = $connect->prepare("SELECT review_id, student_id, college_student.userName, review_ratings.rating, reviews_categories.review_category,review_description, date_created FROM reviews
+											INNER JOIN college_student ON reviews.student_id = college_student.id
 											INNER JOIN review_ratings ON reviews.review_rating_id = review_ratings.rating_id
 	                                        INNER JOIN reviews_categories ON reviews.review_category_id =  reviews_categories.review_category_id
 											WHERE college_id = ?");
@@ -1998,9 +2018,10 @@ function get_all_community_discussions($communityId = NULL, $majorId = NULL,$sto
 	if (!is_null($communityId)) {
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT c_discussion_id, student_id, userName, c_discussion_post, post_date FROM community_discussions 
-											INNER JOIN collegestudent ON community_discussions.student_id = collegestudent.id
-											WHERE community_id = ? ORDER BY post_date DESC");
+				$stmt = $connect->prepare("SELECT c_discussion_id, student_id, userName, c_discussion_post, post_date FROM community_discussions
+											INNER JOIN college_student ON community_discussions.student_id = college_student.id 
+											INNER JOIN communities JOIN colleges ON community_discussions.community_id = communities.community_id AND communities.college_id = colleges.college_id 
+											WHERE community_discussions.community_id = ? ORDER BY post_date DESC");
 				$stmt->bindParam(1,$communityId,PDO::PARAM_INT);
 				$stmt->execute();
 				$connect->commit();
@@ -2012,7 +2033,8 @@ function get_all_community_discussions($communityId = NULL, $majorId = NULL,$sto
 		try{
 				$connect->beginTransaction();
 				$stmt = $connect->prepare("SELECT c_discussion_id, student_id, userName, c_discussion_post, post_date FROM community_discussions 
-											INNER JOIN collegestudent ON community_discussions.student_id = collegestudent.id
+											INNER JOIN college_student ON community_discussions.student_id = college_student.id 
+											INNER JOIN communities JOIN colleges ON community_discussions.community_id = communities.community_id AND communities.college_id = colleges.college_id 
 											WHERE major_id = ? ORDER BY post_date DESC");
 				$stmt->bindParam(1,$majorId,PDO::PARAM_INT);
 				$stmt->execute();
@@ -2025,7 +2047,9 @@ function get_all_community_discussions($communityId = NULL, $majorId = NULL,$sto
 		try{
 				$connect->beginTransaction();
 				$stmt = $connect->prepare("SELECT c_discussion_id, student_id, c_discussion_title, c_discussion_post, post_date FROM community_discussions 
-											WHERE community_id = ? ORDER BY post_date DESC");
+											INNER JOIN college_student ON community_discussions.student_id = college_student.id 
+											INNER JOIN communities JOIN colleges ON community_discussions.community_id = communities.community_id AND communities.college_id = colleges.college_id 
+											WHERE community_discussions.community_id = ? ORDER BY post_date DESC");
 				$stmt->bindParam(1,$storyId,PDO::PARAM_INT);
 				$stmt->execute();
 				$connect->commit();
@@ -2042,8 +2066,8 @@ function get_community_discussion($communityId = NULL, $majorId = NULL, $storyId
 	if (!is_null($communityId)) {
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT collegestudent.userName, student_id, c_discussion_post, post_date  FROM community_discussions
-											INNER JOIN collegestudent ON community_discussions.student_id = collegestudent.id
+				$stmt = $connect->prepare("SELECT college_student.userName, student_id, c_discussion_post, post_date  FROM community_discussions
+											INNER JOIN college_student ON community_discussions.student_id = college_student.id
 											WHERE community_id = ? AND c_discussion_id=?");
 				$stmt->bindParam(1,$communityId,PDO::PARAM_INT);
 				$stmt->bindParam(2,$c_discussion_id,PDO::PARAM_INT);
@@ -2057,8 +2081,8 @@ function get_community_discussion($communityId = NULL, $majorId = NULL, $storyId
 	}elseif(!is_null($majorId)){
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT collegestudent.userName, student_id, c_discussion_post, post_date  FROM community_discussions
-											INNER JOIN collegestudent ON community_discussions.student_id = collegestudent.id
+				$stmt = $connect->prepare("SELECT college_student.userName, student_id, c_discussion_post, post_date  FROM community_discussions
+											INNER JOIN college_student ON community_discussions.student_id = college_student.id
 											WHERE major_id = ? AND c_discussion_id=?");
 				$stmt->bindParam(1,$majorId,PDO::PARAM_INT);
 				$stmt->bindParam(2,$c_discussion_id,PDO::PARAM_INT);
@@ -2086,85 +2110,44 @@ function get_community_discussion($communityId = NULL, $majorId = NULL, $storyId
 	}
 
 }
-function get_all_community_discussion_replies($collegeId, $communityId = NULL, $majorId = NULL,$c_discussion_id){
+function get_all_community_discussion_replies($c_discussion_id){
 	global $connect;
-	if (!is_null($communityId)) {
 		try{
 				$connect->beginTransaction();
 				$stmt = $connect->prepare("SELECT c_discussion_reply_id, student_id, userName, reply_post, post_date FROM c_discussion_replies 
-											INNER JOIN collegestudent ON c_discussion_replies.student_id = collegestudent.id
-											WHERE community_id = ? AND college_id = ? AND c_discussion_id = ? ORDER BY post_date DESC");
-				$stmt->bindParam(1,$communityId,PDO::PARAM_INT);
-				$stmt->bindParam(2,$collegeId,PDO::PARAM_INT);
-				$stmt->bindParam(3,$c_discussion_id,PDO::PARAM_INT);
+											INNER JOIN college_student ON c_discussion_replies.student_id = college_student.id
+											WHERE c_discussion_id = ? ORDER BY post_date DESC");
+				$stmt->bindParam(1,$c_discussion_id,PDO::PARAM_INT);
 				$stmt->execute();
 				$connect->commit();
 				return $stmt->fetchAll(PDO::FETCH_ASSOC);
 		}catch(Exception $e){
 			throw $e;
 		}
-	}elseif(!is_null($majorId)){
-		try{
-				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT c_discussion_reply_id, student_id, userName, reply_post, post_date FROM c_discussion_replies 
-											INNER JOIN collegestudent ON c_discussion_replies.student_id = collegestudent.id
-											WHERE major_id = ? AND college_id = ? AND c_discussion_id = ? ORDER BY post_date DESC");
-				$stmt->bindParam(1,$majorId,PDO::PARAM_INT);
-				$stmt->bindParam(2,$collegeId,PDO::PARAM_INT);
-				$stmt->bindParam(3,$c_discussion_id,PDO::PARAM_INT);
-				$stmt->execute();
-				$connect->commit();
-				return $stmt->fetchAll(PDO::FETCH_ASSOC);
-		}catch(Exception $e){
-			throw $e;
-		}
-	}
 
 }
-function get_all_community_discussion_r_replies($collegeId, $communityId = NULL, $majorId = NULL, $c_discussion_id,$c_discussion_reply_id){
+function get_all_community_discussion_r_replies($c_discussion_reply_id){
 	global $connect;
-	if (!is_null($communityId)) {
 		try{
 				$connect->beginTransaction();
 				$stmt = $connect->prepare("SELECT r_reply_id, c_discussion_reply_id, student_id, userName, r_reply_post, post_date FROM c_discussion_r_reply 
-											INNER JOIN collegestudent ON c_discussion_r_reply.student_id = collegestudent.id
-											WHERE community_id = ? AND college_id = ? AND c_discussion_id = ? AND c_discussion_reply_id = ? ORDER BY post_date ASC");
-				$stmt->bindParam(1,$communityId,PDO::PARAM_INT);
-				$stmt->bindParam(2,$collegeId,PDO::PARAM_INT);
-				$stmt->bindParam(3,$c_discussion_id,PDO::PARAM_INT);
-				$stmt->bindParam(4,$c_discussion_reply_id,PDO::PARAM_INT);
+											INNER JOIN college_student ON c_discussion_r_reply.student_id = college_student.id
+											WHERE c_discussion_reply_id = ? ORDER BY post_date ASC");
+				$stmt->bindParam(1,$c_discussion_reply_id,PDO::PARAM_INT);
 				$stmt->execute();
 				$connect->commit();
 				return $stmt->fetchAll(PDO::FETCH_ASSOC);
 		}catch(Exception $e){
 			throw $e;
 		}
-	}elseif(!is_null($majorId)){
-		try{
-				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT r_reply_id, c_discussion_reply_id, student_id, userName, r_reply_post, post_date FROM c_discussion_r_reply 
-											INNER JOIN collegestudent ON c_discussion_r_reply.student_id = collegestudent.id
-											WHERE major_id = ? AND college_id = ? AND c_discussion_id = ? AND c_discussion_reply_id = ? ORDER BY post_date ASC");
-				$stmt->bindParam(1,$majorId,PDO::PARAM_INT);
-				$stmt->bindParam(2,$collegeId,PDO::PARAM_INT);
-				$stmt->bindParam(3,$c_discussion_id,PDO::PARAM_INT);
-				$stmt->bindParam(4,$c_discussion_reply_id,PDO::PARAM_INT);
-				$stmt->execute();
-				$connect->commit();
-				return $stmt->fetchAll(PDO::FETCH_ASSOC);
-		}catch(Exception $e){
-			throw $e;
-		}
-	}
-
 }
 function get_profile_info($studentId){
 	global $connect;
 	try{
 			$connect->beginTransaction();
 			$stmt = $connect->prepare("SELECT id, collegeid, uni_name,firstName,lastName,userName, email,about,gender,location,grad_year,major_id,major,question_1,question_2,question_3  FROM profile_about_me 
-										INNER JOIN collegestudent JOIN collegeList ON profile_about_me.student_id = collegestudent.id AND collegestudent.collegeId = collegeList.college_id
-										INNER JOIN majorsLists ON profile_about_me.major_id = majorsLists.majorList_id
+										INNER JOIN college_student JOIN colleges ON profile_about_me.student_id = college_student.id AND college_student.collegeId = colleges.college_id
+										INNER JOIN majors_list ON profile_about_me.major_id = majors_list.majorList_id
 										WHERE profile_about_me.student_id = ?");
 			$stmt->bindParam(1,$studentId,PDO::PARAM_INT);
 			$stmt->execute();
@@ -2181,7 +2164,7 @@ function get_interests($studentId){
 			$connect->beginTransaction();
 			$stmt = $connect->prepare("SELECT uni_name,interests.category_id, category, css_style  FROM interests
 										INNER JOIN categories ON interests.category_id = categories.category_id 
-										INNER JOIN collegestudent JOIN collegeList ON interests.student_id = collegestudent.id AND collegestudent.collegeId = collegeList.college_id
+										INNER JOIN college_student JOIN colleges ON interests.student_id = college_student.id AND college_student.collegeId = colleges.college_id
 										WHERE student_id = ?");
 			$stmt->bindParam(1,$studentId,PDO::PARAM_INT);
 			$stmt->execute();
@@ -2198,7 +2181,7 @@ function get_user_communities($studentId,$all=null){
 		try{
 				$connect->beginTransaction();
 				$stmt = $connect->prepare("SELECT uni_name,community_members.community_id, community_name, category_id,community_category,community_color  FROM community_members
-											INNER JOIN communities JOIN collegeList ON community_members.community_id = communities.community_id AND communities.college_id = collegeList.college_id
+											INNER JOIN communities JOIN colleges ON community_members.community_id = communities.community_id AND communities.college_id = colleges.college_id
 											WHERE student_id = ? AND status = 1");
 				$stmt->bindParam(1,$studentId,PDO::PARAM_INT);
 				$stmt->execute();
@@ -2212,7 +2195,7 @@ function get_user_communities($studentId,$all=null){
 		try{
 				$connect->beginTransaction();
 				$stmt = $connect->prepare("SELECT uni_name,community_members.community_id, community_name, category_id,community_category,community_color  FROM community_members
-											INNER JOIN communities JOIN collegeList ON community_members.community_id = communities.community_id AND communities.college_id = collegeList.college_id
+											INNER JOIN communities JOIN colleges ON community_members.community_id = communities.community_id AND communities.college_id = colleges.college_id
 											WHERE student_id = ?");
 				$stmt->bindParam(1,$studentId,PDO::PARAM_INT);
 				$stmt->execute();
@@ -2231,7 +2214,7 @@ function get_user_info($userId){
 	try{
 			$connect->beginTransaction();
 			$stmt = $connect->prepare("SELECT id,firstName, lastName, userName, email, token, verified, uni_name AS university
-													  FROM collegestudent INNER JOIN collegeList ON collegestudent.collegeId = collegeList.college_id WHERE id=?");
+													  FROM college_student INNER JOIN colleges ON college_student.collegeId = colleges.college_id WHERE id=?");
 			$stmt->bindParam(1,$userId,PDO::PARAM_INT);
 			$stmt->execute();
 			$connect->commit();
@@ -2246,7 +2229,7 @@ function get_user_count($collegeId = NULL, $communityId = NULL, $eventId = NULL)
 	if (!is_null($collegeId)) {
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT COUNT(*) FROM collegestudent WHERE collegeId = ?");
+				$stmt = $connect->prepare("SELECT COUNT(*) FROM college_student WHERE collegeId = ?");
 				$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
 				$stmt->execute();
 				$connect->commit();
@@ -2454,7 +2437,9 @@ function get_top_communities($collegeId){
 				$stmt = $connect->query($sql);
 				$result = $stmt->fetchColumn();
 				$count += intval($result);
-				$sql = "SELECT COUNT(*)  FROM c_discussion_replies WHERE community_id = $commId";
+				$sql = "SELECT COUNT(*)  FROM c_discussion_replies 
+					INNER JOIN community_discussions JOIN communities  ON c_discussion_replies.c_discussion_id = community_discussions.c_discussion_id AND community_discussions.community_id = communities.community_id
+					WHERE communities.community_id = $commId";
 				$stmt = $connect->query($sql);
 				$result = $stmt->fetchColumn();
 				$count += intval($result);
@@ -2508,8 +2493,8 @@ function get_followed_schools($userId,$collegeId=NULL){
 	if (is_null($collegeId)) {
 		try{
 			$sql = "SELECT uni_name,school_followers.college_id FROM school_followers
-					INNER JOIN collegeList ON school_followers.college_id = collegeList.college_id
-					INNER JOIN collegestudent ON school_followers.user_id = collegestudent.id
+					INNER JOIN colleges ON school_followers.college_id = colleges.college_id
+					INNER JOIN college_student ON school_followers.user_id = college_student.id
 					 WHERE user_id = ?";
 			$stmt = $connect->prepare($sql);
 			$stmt->bindParam(1,$userId,PDO::PARAM_INT);
@@ -2521,8 +2506,8 @@ function get_followed_schools($userId,$collegeId=NULL){
 	}else{
 		try{
 			$sql = "SELECT uni_name,school_followers.college_id FROM school_followers
-					INNER JOIN collegeList ON school_followers.college_id = collegeList.college_id
-					INNER JOIN collegestudent ON school_followers.user_id = collegestudent.id
+					INNER JOIN colleges ON school_followers.college_id = colleges.college_id
+					INNER JOIN college_student ON school_followers.user_id = college_student.id
 					 WHERE user_id = ? AND school_followers.college_id = ?";
 			$stmt = $connect->prepare($sql);
 			$stmt->bindParam(1,$userId,PDO::PARAM_INT);
@@ -2557,8 +2542,8 @@ function get_liked_discussions($userId){
 	if (!empty(array_filter($liked_discussions))) {
 		try{
 			$sqlStr = "SELECT uni_name,d_post_id,discussion_post.college_id,discussion_title,discussion_post,discussion_post.student_id,username,post_date FROM discussion_post 
-				INNER JOIN collegestudent ON discussion_post.student_id = collegestudent.id 
-				INNER JOIN collegeList ON discussion_post.college_id = collegeList.college_id WHERE ";
+				INNER JOIN college_student ON discussion_post.student_id = college_student.id 
+				INNER JOIN colleges ON discussion_post.college_id = colleges.college_id WHERE ";
 			$sqlStr .= "d_post_id IN ('" . implode("', '", $liked_discussions) . "')";
 			$stmt = $connect->query($sqlStr);
 			return $stmt->fetchAll(PDO::FETCH_ASSOC); 
@@ -2574,10 +2559,10 @@ function get_liked_community_discussions($userId){
 	global $connect;
 	if (!empty(array_filter($liked_discussions))) {
 		try{
-			$sqlStr = "SELECT uni_name,community_id,c_discussion_id,community_discussions.college_id,major_id,c_discussion_title,c_discussion_post,photo,community_discussions.student_id,username,post_date FROM community_discussions 
-				INNER JOIN collegestudent ON community_discussions.student_id = collegestudent.id 
-				INNER JOIN collegeList ON community_discussions.college_id = collegeList.college_id WHERE ";
-			$sqlStr .= "c_discussion_id IN ('" . implode("', '", $liked_discussions) . "')";
+			$sqlStr = "SELECT uni_name,community_discussions.community_id,c_discussion_id,colleges.college_id,major_id,c_discussion_title,c_discussion_post,photo,community_discussions.student_id,username,post_date FROM community_discussions 
+				INNER JOIN college_student ON community_discussions.student_id = college_student.id 
+				INNER JOIN communities JOIN colleges ON community_discussions.community_id = communities.community_id AND communities.college_id = colleges.college_id WHERE "; 
+			$sqlStr .= "c_discussion_id IN ('" . implode("', '", array_filter($liked_discussions)) . "')";
 			$stmt = $connect->query($sqlStr);
 			return $stmt->fetchAll(PDO::FETCH_ASSOC); 
 		}catch(Exception $e){
@@ -2593,7 +2578,7 @@ function get_liked_events($userId){
 	if (!empty(array_filter($liked_events))) {
 		try{
 			$sqlStr = "SELECT uni_name,community_id,event_id,event_title,event_description,event_date,event_location,event_photo FROM events 
-				INNER JOIN collegeList ON events.college_id = collegeList.college_id WHERE ";
+				INNER JOIN colleges ON events.college_id = colleges.college_id WHERE ";
 			$sqlStr .= "event_id IN ('" . implode("', '", $liked_events) . "')";
 			$stmt = $connect->query($sqlStr);
 			return $stmt->fetchAll(PDO::FETCH_ASSOC); 
@@ -2647,7 +2632,7 @@ function findUserByEmail($userEmail){
 	global $connect;
 	  try{
 		$connect->beginTransaction();
-	      $query = "SELECT * FROM collegestudent WHERE email = ?";
+	      $query = "SELECT * FROM college_student WHERE email = ?";
 	      $stmt = $connect->prepare($query);
 	       $stmt->bindParam(1,$userEmail);
 	      $stmt->execute();
@@ -2661,7 +2646,7 @@ function findUserById($userId){
 	global $connect;
 	  try{
 	  	$connect->beginTransaction();
-	      $query = "SELECT * FROM collegestudent WHERE id = ?";
+	      $query = "SELECT * FROM college_student WHERE id = ?";
 	      $stmt = $connect->prepare($query);
 	       $stmt->bindParam(1,$userId);
 	      $stmt->execute();
@@ -2741,7 +2726,7 @@ function getVerifiedStatus($userId){
 	global $connect;
 	try{
 		$connect->beginTransaction();
-	 	 $results = $connect->prepare("SELECT verified FROM collegestudent WHERE id = ?");
+	 	 $results = $connect->prepare("SELECT verified FROM college_student WHERE id = ?");
 	 	 $results->bindParam(1,$userId,PDO::PARAM_INT);
 	  	 $results->execute();
 	  	 $connect->commit();
@@ -2770,7 +2755,7 @@ function getResetCode($userId){
 	global $connect;
 	try{
 		$connect->beginTransaction();
-		$results = $connect->prepare("SELECT reset_code FROM resetPassword WHERE id = ?");
+		$results = $connect->prepare("SELECT reset_code FROM reset_password(WHERE id = ?");
 		$results->bindParam(1,$userId,PDO::PARAM_STR);
 		$results->execute();
 		$connect->commit();
@@ -2785,7 +2770,7 @@ function updateVeriStatus($userId,$yes){
 	global $connect;
 	try{
 		$connect->beginTransaction();
-		$stmt = $connect->prepare("UPDATE collegestudent SET verified = ? WHERE id = ?");
+		$stmt = $connect->prepare("UPDATE college_student SET verified = ? WHERE id = ?");
 		$stmt->bindParam(1,$yes,PDO::PARAM_STR);
 		$stmt->bindParam(2,$userId,PDO::PARAM_INT);
 		$return = $stmt->execute();
@@ -2815,7 +2800,7 @@ function updateResetCode($userId,$resetCode){
 	global $connect;
 	try{
 		$connect->beginTransaction();
-        $stmt = $connect->prepare("UPDATE resetPassword SET reset_code = ? WHERE id = ?");
+        $stmt = $connect->prepare("UPDATE reset_password SET reset_code = ? WHERE id = ?");
 		$stmt->bindParam(1,$resetCode,PDO::PARAM_INT);
 		$stmt->bindParam(2,$userId,PDO::PARAM_INT);
 		$return = $stmt->execute();
@@ -2830,7 +2815,7 @@ function updatePassword($userId,$hashed){
 	global $connect;
 	try{
 		$connect->beginTransaction();
-		$stmt = $connect->prepare("UPDATE collegestudent SET token = ? WHERE id = ?");
+		$stmt = $connect->prepare("UPDATE college_student SET token = ? WHERE id = ?");
 		$stmt->bindParam(1,$hashed,PDO::PARAM_STR);
 		$stmt->bindParam(2,$userId,PDO::PARAM_INT);
 		$return = $stmt->execute();
@@ -2858,7 +2843,7 @@ function deleteResetCode($userId){
 	global $connect;
 	try{
 		$connect->beginTransaction();
-		$stmt = $connect->prepare("DELETE FROM resetPassword WHERE id = ?");
+		$stmt = $connect->prepare("DELETE FROM reset_password WHERE id = ?");
 		$stmt->bindParam(1,$userId,PDO::PARAM_INT);
 		$return = $stmt->execute();
 		$connect->commit();

@@ -48,9 +48,9 @@
 
 												foreach ($cDiscussions as $key) {
 													if ($communityConstant || $storyConstant) {
-														$replies = get_all_community_discussion_replies($collegeId, $communityId, NULL,$key['c_discussion_id']);
+														$replies = get_all_community_discussion_replies($key['c_discussion_id']);
 													}elseif($majorConstant){
-														$replies = get_all_community_discussion_replies($collegeId, NULL,$communityId, $key['c_discussion_id']);
+														$replies = get_all_community_discussion_replies($key['c_discussion_id']);
 													}
 													
 													if (count($replies)==0){

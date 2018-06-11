@@ -14,18 +14,7 @@
                             <div class="modal-body">
                               <div>
                                 <?php if(isset($_SESSION['create_error_message'])){ echo '<p  class="submitError">' . $_SESSION['create_error_message'] . '</p>'; } ?>
-                              </div>  
-                                <div>
-                                  <label>Discussion Room:</label>
-                                    <select name="discussion-room-id">
-                                        <option value="1" selected><?php echo $collegeAbrev; ?> Community</option>
-                                        <option value="2">Freshmen Unite</option>
-                                        <option value="3">Undergrads</option>
-                                        <option value="4">Grad Students</option>
-                                        <option value="5">Admissions</option>
-                                        <option value="6">Getting into <?php echo $collegeAbrev?></option>
-                                    </select>                              
-                                </div>                     
+                              </div>                     
                               <div>
                                   <label>Select a Topic:</label>
                                   <?php 

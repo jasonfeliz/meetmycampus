@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <title><?php echo "Meet My Campus - " . $pageTitle; ?></title>
-    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="icon" type="image/png" href="img/logo/logo.png">
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
@@ -49,7 +49,7 @@
 <header class="bg-primary">
     <nav id="" class="main-nav-header main-container">
         <ul class="nav-list">
-            <li><a class="" href="index.php" ><img class="logo" src="img/logo3.gif"></a></li>
+            <li><a class="" href="index.php" ><img class="logo" src="img/logo/logo3.gif"></a></li>
             <li class="sm-screen-search">
                 <div>
                     <form method="GET" action="search.php">

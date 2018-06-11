@@ -22,7 +22,7 @@
 						</div>			
 					</div>
 			        <h4 class="banner-school-name"><?php echo $community['community_name'];?></h4>
-			        <p class="community-info"><?php echo ucfirst($community['community_message']); ?></p>
+			        <p class="community-info"><?php echo "Connect and discuss the latest topics and trends with " . ucfirst($community['community_name']) . " majors " ; ?></p>
 				<?php 
 					$buttonName = '';
 					if (!$loggedIn) {
