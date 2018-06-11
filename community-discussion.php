@@ -14,7 +14,7 @@ if (!empty($_GET['community_id'])) {
 	}
 	$communityConstant = TRUE;
 	$studentCount = intval(get_user_count(NULL,$communityId,NULL));
-	$replies = get_all_community_discussion_replies($collegeId, $communityId, NULL, $discussionId);
+	$replies = get_all_community_discussion_replies($discussionId);
 	if($community['community_category'] == 'group'){
 		$communityConstant = TRUE;
 		$majorConstant = FALSE;
@@ -36,7 +36,7 @@ if (!empty($_GET['community_id'])) {
    		$_SESSION['system_error_message'] = "could not retrieve discussion";
     	redirect("error_page.php");
 	}
-	$replies = get_all_community_discussion_replies($collegeId, null, $communityId, $discussionId);
+	$replies = get_all_community_discussion_replies($discussionId);
 }
 if (!empty($_GET['c_discussion_id'])) {
 	$discussionId = intval(trim(filter_input(INPUT_GET, 'c_discussion_id' ,FILTER_SANITIZE_STRING)));
@@ -61,14 +61,13 @@ require_once('inc/main-header-test.php');
 		<?php include('inc/community-banner.php');?>
 		<div class="sub-main-content">
 			<?php include('inc/main-post-reply.php');?>
-			<?php include('inc/sub-post-reply.php');?>
 			<?php include('inc/community-panels.php');?>
 			<section class="school-home-body" id="school-home-body">
 				<div style="margin: 10px 0">
 					<a style="color: #ea7363;font-weight: 600;" href="javascript:history.go(-1);"><i class="fa fa-angle-left fa-lg" aria-hidden="true" style="font-size: 1.75em;margin-right: 5px;"></i>Back</a>
 				</div>
 					<div class="content-body">
-										<div class="forum-item">
+										<div class="forum-item  edit-forum">
 											<?php if(!$storyConstant): ?>
 											<div class="discussion-first-section">
 												<div><?php if (count($replies)==0){echo "No Replies";}elseif(count($replies)==1){echo count($replies)." Reply"; }else{echo count($replies)." Replies";} ?></div>
@@ -115,7 +114,7 @@ require_once('inc/main-header-test.php');
 														<i id="downvote-<?php echo $discussionId;?>" class="fa fa-sort-down fa-2x vote-button <?php echo $down ?>" aria-hidden="true" onclick="c_vote(<?php echo $discussionId . ', ' . $userId;?> , this)"></i>
 													</div>
 
-													<p><?php echo nl2br($discussion['c_discussion_post']); ?></p>
+													<p id="forum_post"><?php echo nl2br($discussion['c_discussion_post']); ?></p>
 												</div>	
 												<div style="align-items: center;">
 													<div class="forum-item-btns">
@@ -140,7 +139,7 @@ require_once('inc/main-header-test.php');
 													$remove = "";
 													$isCreator = is_creator('c_discussion',$userId,$discussionId);
 													if ($isCreator) {
-														$remove = '<li class="ellipsis-button" onclick="removeItem(\'c_discussion\','.$discussionId.')">Remove Discussion</li><li>Edit Discussion</li>';
+														$remove = '<li class="ellipsis-button" onclick="removeItem(\'c_discussion\','.$discussionId.')">Remove Discussion</li><li class="edit_discussion">Edit Discussion</li>';
 													}
 													?>
 													<?php if($loggedIn): ?>
@@ -173,17 +172,17 @@ require_once('inc/main-header-test.php');
 													$remove = "";
 													$isCreator = is_creator('c_discussion_reply',$userId,$key['c_discussion_reply_id']);
 													if ($isCreator) {
-														$remove = '<li class="ellipsis-button" onclick="removeItem(\'c_discussion_reply\','.$key['c_discussion_reply_id'].')">Remove reply</li><li>Edit Reply</li>';
+														$remove = '<li class="ellipsis-button" onclick="removeItem(\'c_discussion_reply\','.$key['c_discussion_reply_id'].')">Remove reply</li><li class="edit_reply" data-info="c_reply_edit_" data-id="'.$key['c_discussion_reply_id'].'">Edit Reply</li>';
 													}
 												$content = '<li class="forum-item">';
 												$content .= '<div class="discussion-third-section">';
 												$content .= '<div><a href="profile.php?profile_id=' . $key['student_id'] . '">' .'@'. $key['userName'] . '</a><span> - '.$postTime.'</span></div>';
-												$content .= '<div><p>' . nl2br($key['reply_post']) .'</p></div>';
+												$content .= '<div style="display:block;position:relative"><p id="c_reply_edit_'.$key['c_discussion_reply_id'].'">' . nl2br($key['reply_post']) .'</p><textarea class="edit_text_area"></textarea><div class="edit_buttons"><button class="cancel_button" data-info="c_reply_edit_" data-id="'.$key['c_discussion_reply_id'].'">Cancel</button><button class="save_button" data-info="c_reply_edit_" data-id="'.$key['c_discussion_reply_id'].'" data-type="edit_c_reply">Save</button></div></div>';
 												$content .= '<div style="align-items: center;"><div class="forum-item-btns"><i class="fa fa-ellipsis-h" id="ellipsis-cdr-'.$key['c_discussion_reply_id'].'" aria-hidden="true" onclick="showEllipsis(this)"></i><div class="ellipsis-menu"><ul><li data-type="c_post_reply" data-id="'.$key['c_discussion_reply_id'].'" class="ellipsis-button report-btn">Report</li>'.$remove.'</ul></div></div></div>';
 												if ($communityConstant) {
-													$rReplies = get_all_community_discussion_r_replies($collegeId, $communityId, NULL,$discussionId,$key['c_discussion_reply_id']);
+													$rReplies = get_all_community_discussion_r_replies($key['c_discussion_reply_id']);
 												}elseif($majorConstant){
-													$rReplies = get_all_community_discussion_r_replies($collegeId, NULL,$communityId, $discussionId,$key['c_discussion_reply_id']);
+													$rReplies = get_all_community_discussion_r_replies($key['c_discussion_reply_id']);
 												}
 												$content .= '<div><ul class="discussion-reply-list" id="discussion-reply-list-' .$key['c_discussion_reply_id']. '">';
 												if (!empty($rReplies)) {
@@ -193,9 +192,9 @@ require_once('inc/main-header-test.php');
 														$remove = "";
 														$isCreator = is_creator('c_discussion_reply_comment',$userId,$key2['r_reply_id']);
 														if ($isCreator) {
-															$remove = '<li class="ellipsis-button" onclick="removeItem(\'c_discussion_reply_comment\','.$key2['r_reply_id'].')">Remove comment</li><li>Edit Comment</li>';
+															$remove = '<li class="ellipsis-button" onclick="removeItem(\'c_discussion_reply_comment\','.$key2['r_reply_id'].')">Remove comment</li><li class="edit_comment" data-info="c_comment_edit_" data-id="'.$key2['r_reply_id'].'">Edit Comment</li>';
 														}
-														$content .= '<li class="discussion-reply-list-item"><a href="profile.php?profile_id='.$key2['student_id'] . '" class="reply-link">' . '@' . $key2['userName'] . '</a><span> - '.$postTime.'</span><i class="fa fa-ellipsis-h" id="ellipsis-cdrr-'.$key2['r_reply_id'].'" aria-hidden="true" onclick="showEllipsis(this)" style="position:absolute;right:15px;"></i><div class="ellipsis-menu"><ul><li data-type="c_post_reply_comment" data-id="'.$key2['r_reply_id'].'" class="ellipsis-button report-btn">Report</li>'.$remove.'</ul></div><p>'. $key2['r_reply_post']. '</p></li>';
+														$content .= '<li class="discussion-reply-list-item"><a href="profile.php?profile_id='.$key2['student_id'] . '" class="reply-link">' . '@' . $key2['userName'] . '</a><span> - '.$postTime.'</span><i class="fa fa-ellipsis-h" id="ellipsis-cdrr-'.$key2['r_reply_id'].'" aria-hidden="true" onclick="showEllipsis(this)" style="position:absolute;right:15px;"></i><div class="ellipsis-menu"><ul><li data-type="c_post_reply_comment" data-id="'.$key2['r_reply_id'].'" class="ellipsis-button report-btn">Report</li>'.$remove.'</ul></div><p id="c_comment_edit_'.$key2['r_reply_id'].'">'. $key2['r_reply_post']. '</p><textarea class="edit_text_area area_comment"></textarea><div class="edit_buttons"><button class="cancel_button" data-info="c_comment_edit_" data-id="'.$key2['r_reply_id'].'">Cancel</button><button class="save_button" data-info="c_comment_edit_" data-id="'.$key2['r_reply_id'].'" data-type="edit_c_comment">Save</button></div></li>';
 													}
 													
 												}
@@ -230,7 +229,42 @@ require_once('inc/main-header-test.php');
 			</section>	<!-- end sschool home body -->		
 		</div> <!-- end sub content -->
 	</div>  <!-- end main content -->
+       <div id="edit_forum_popup" class="modal" <?php if (isset($_SESSION['edit_error_message'])) { echo 'style="display:block"'; } ?>>
+                <div class="modal-content">
+                    <span class="close">&times;</span>  
 
+                    <div class="modal-content-body">
+                         <form method="POST" action="" onsubmit="return false;" id="edit_form">
+                          <div class="modal-header">
+                            <h4>Edit Discussion</h4>
+                          </div> 
+                            <div class="modal-body">
+                              <div>
+                                <?php if(isset($_SESSION['edit_error_message'])){ echo '<p  class="submitError">' . $_SESSION['edit_error_message'] . '</p>'; } ?>
+                              </div>                     
+
+                                <div class="modalInput">
+                                  <label>Discussion Title:</label>
+                                  <input type="text" name="update_title" placeholder="What are we talking about today?" value="<?php if (isset($_SESSION['edit_error_message'])) { echo $_SESSION['discussion-title']; }else{ echo "blank"; } ?>">                              
+                                </div>
+
+                                <div class="modalInput">
+                                  <textarea name="update_post" placeholder="What's on your mind?" value="<?php if (isset($_SESSION['edit_error_message'])) { echo $_SESSION['discussion-post']; session_unset();session_destroy();}?>"><?php echo $discussion['c_discussion_post']; ?></textarea>                               
+                                </div>
+                                <div style="display:none">
+                                        <label for="address">Address</label></th>
+                                        <input type="text" id="address" name="address" />
+                                        <p>Please leave this field blank</p></td>
+                                </div>
+ 
+                                <div>
+                                  <button type="submit" class="signInButton" id="save_change" data-info="edit_c_discussion" data-id="<?php echo $discussionId; ?>">Save Changes</button>
+                                </div>                            
+                              </div>              
+                        </form>               
+                    </div><!-- /modal-content-body end -->
+                </div><!-- /modal-content end -->
+         </div><!-- /modal end --> 
 <?php
 include('inc/universal-nav.php');
 ?>

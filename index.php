@@ -20,7 +20,7 @@ require_once("inc/header.php");
             <div class="header-links nav navbar-nav">
                 <ul class="logo-left-side">
                     <li class="">
-                            <a class="page-scroll" href="#page-top"><img class="logo" src="img/logo3.gif"></a>
+                            <a class="page-scroll" href="#page-top"><img class="logo" src="img/logo/logo3.gif"></a>
                     </li>
                 </ul>
                 <ul class="navbar-nav nav collapse navbar-collapse">
@@ -115,7 +115,7 @@ require_once("inc/header.php");
             <div class="modal-content">
                 <div class="modal-content-header">
                     <span class="close">&times;</span>
-                    <img class="logo" src="img/logo4.gif">              
+                    <img class="logo" src="img/logo/logo4.gif">              
                 </div><!-- /.modal-content-header end -->
 
                 <div class="modalContentBodySignIn">
@@ -152,7 +152,7 @@ require_once("inc/header.php");
         ?>
         <div class="header-content">
             <div class="header-content-inner ">
-                <img src="img/mmc_font.png">
+                <img src="img/logo/mmc_font.png">
                 <h1 id="homeHeading">Join the best place to discover your campus!</h1>
                 <div class="header-content-inner-form border-color">
                     <p>Discover. Create. Collaborate.</p>

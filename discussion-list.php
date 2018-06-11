@@ -1,7 +1,7 @@
 <?php
 require_once('inc/bootstrap.php');
 require_once('inc/start.php');
-setcookie('d_room', '', time()-(365*24*60*60),'/','localhost');
+
 $discussionTopicId = NULL;
 if (!empty($_GET['discussion_topic_id'])) {
 	$discussionTopicId = trim(filter_input(INPUT_GET, 'discussion_topic_id', FILTER_SANITIZE_STRING));
@@ -57,34 +57,10 @@ include('inc/main-header-test.php');
 									?>
 									<div id="d_c" class="active">
 										<ul class="forum-list" id="discussion-list">
-											<?php echo showDiscussion(227,$discussionTopicId,'community');?>
+											<?php echo showDiscussion($collegeId,$discussionTopicId);?>
 										</ul>
 									</div>
-									<div id="d_f">
-										<ul class="forum-list" id="discussion-list">
-											<?php echo showDiscussion(227,$discussionTopicId,'freshmen');?>
-										</ul>
-									</div>
-									<div id="d_ug">
-										<ul class="forum-list" id="discussion-list">
-											<?php echo showDiscussion(227,$discussionTopicId,'undergrads');?>
-										</ul>
-									</div>
-									<div id="d_gs">
-										<ul class="forum-list" id="discussion-list">
-											<?php echo showDiscussion(227,$discussionTopicId,'grad_students');?>
-										</ul>
-									</div>
-									<div id="d_a">
-										<ul class="forum-list" id="discussion-list">
-											<?php echo showDiscussion(227,$discussionTopicId,'admissions');?>
-										</ul>
-									</div>
-									<div id="d_gi">
-										<ul class="forum-list" id="discussion-list">
-											<?php echo showDiscussion(227,$discussionTopicId,'getting_in');?>
-										</ul>
-									</div>
+
 
 									<div>
 

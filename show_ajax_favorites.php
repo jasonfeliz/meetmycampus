@@ -95,7 +95,7 @@ if (isset($_POST['fav_type'])) {
 						$content .= '</div><div class="forum-main">';
 						$content .= '<ul class="forum-item-header">';
 						if (!is_null($key['major_id'])) {
-							$replies = get_all_community_discussion_replies($key['college_id'], NULL,$key['major_id'], $key['c_discussion_id']);
+							$replies = get_all_community_discussion_replies($key['c_discussion_id']);
 							if (count($replies)==0){
 								$replyCount =  count($replies)." Replies";
 							}elseif(count($replies)==1){
@@ -109,7 +109,7 @@ if (isset($_POST['fav_type'])) {
 							$content .= '<div class="forum-post-body"><a href="community-discussion.php?school_name=' .$urlCollegeName ;
 							$content .= '&major_id=' . $key['major_id'] . '&c_discussion_id=' . $key['c_discussion_id'] . '"><p class="forum-title community-forum">' . nl2br($key['c_discussion_post']) . '</p></a></div>';
 						}elseif(!is_null($key['c_discussion_title'])){
-							$replies = get_all_community_discussion_replies($key['college_id'],$key['community_id'],NULL, $key['c_discussion_id']);
+							$replies = get_all_community_discussion_replies($key['c_discussion_id']);
 							if (count($replies)==0){
 								$replyCount =  count($replies)." Replies";
 							}elseif(count($replies)==1){
@@ -123,7 +123,7 @@ if (isset($_POST['fav_type'])) {
 							$content .= '<div class="forum-post-body"><a href="community-discussion.php?school_name=' .$urlCollegeName ;
 							$content .= '&community_id=' . $key['community_id'] . '&c_discussion_id=' . $key['c_discussion_id'] . '"><p class="forum-title community-forum">'. nl2br($key['c_discussion_title']) .'</p><p class="forum-title community-forum">' . nl2br($key['c_discussion_post']) . '</p></a></div>';
 						}else{
-							$replies = get_all_community_discussion_replies($key['college_id'],$key['community_id'],NULL, $key['c_discussion_id']);
+							$replies = get_all_community_discussion_replies($key['c_discussion_id']);
 							if (count($replies)==0){
 								$replyCount =  count($replies)." Replies";
 							}elseif(count($replies)==1){
@@ -142,7 +142,7 @@ if (isset($_POST['fav_type'])) {
 				}
 				if(!empty($liked_discussions)){
 					foreach ($liked_discussions as $key) {
-						$replies = get_all_discussion_replies($collegeId,$key['d_post_id']);
+						$replies = get_all_discussion_replies($key['d_post_id']);
 						if (count($replies)==0){
 							$replyCount =  count($replies)." Replies";
 						}elseif(count($replies)==1){

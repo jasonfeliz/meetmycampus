@@ -129,7 +129,7 @@ require_once('inc/main-header-test.php');
 					<h4 style="padding-bottom: 5px;margin-bottom:5px;border-bottom:solid 1px rgba(0,0,0,.2);">Comments</h4>
 					<ul class="comment-list" id="event-comments-list">
 						<?php
-							$eventComments = get_event_comments($collegeId, $eventId);
+							$eventComments = get_event_comments($eventId);
 							if (!empty($eventComments)) {
 								foreach ($eventComments as $key) {
 								$postTime = post_time($key['post_date']);

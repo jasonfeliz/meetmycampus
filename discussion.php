@@ -18,7 +18,7 @@ if (!empty($_GET['discussion_id'])) {
     redirect("error_page.php");
 }
 
-$replies = get_all_discussion_replies($collegeId,$discussionId);
+$replies = get_all_discussion_replies($discussionId);
 $postTime = post_time($discussion['post_date']);
 $pageTitle = $collegeName . 'Discussion';
 include('inc/main-header-test.php');
@@ -28,7 +28,6 @@ include('inc/main-header-test.php');
 		<?php include('inc/school-nav.php');?>
 		<div class="sub-main-content">
 			<?php include('inc/main-post-reply.php');?>
-			<?php include('inc/sub-post-reply.php');?>
 			<?php include('inc/panels.php');?>
 			<section class="school-home-body" id="school-home-body">
 				<div>
@@ -36,12 +35,12 @@ include('inc/main-header-test.php');
 				</div>
 				
 					<div class="content-body">
-										<div class="forum-item">
+										<div class="forum-item edit-forum">
 											<div class="discussion-first-section">
 												<div><?php if (count($replies)==0){echo "No Replies";}elseif(count($replies)==1){echo count($replies)." Reply"; }else{echo count($replies)." Replies";} ?></div>
 											</div>
 											<div class="discussion-second-section">
-												<p><?php echo nl2br($discussion['discussion_title']); ?></p>
+												<p id="forum_title"><?php echo nl2br($discussion['discussion_title']); ?></p>
 											</div>
 											<div class="discussion-third-section" id="discussion-forum-item-<?php echo $discussionId; ?>">
 												<div>
@@ -75,7 +74,7 @@ include('inc/main-header-test.php');
 														<i id="downvote-<?php echo $discussionId;?>" class="fa fa-sort-down fa-2x vote-button <?php echo $down ?>" aria-hidden="true" onclick="vote(<?php echo $discussionId . ', ' . $userId;?> , this)"></i>
 													</div>
 
-													<p><?php echo $discussion['discussion_post']; ?></p>
+													<p id="forum_post"><?php echo nl2br($discussion['discussion_post']); ?></p>
 												</div>	
 												<div style="align-items: center;">
 													<div class="forum-item-btns">
@@ -89,7 +88,7 @@ include('inc/main-header-test.php');
 													$remove = "";
 													$isCreator = is_creator('discussion',$userId,$discussionId);
 													if ($isCreator) {
-														$remove = '<li class="ellipsis-button" onclick="removeItem(\'discussion\','.$discussionId.')">Remove Discussion</li><li>Edit Discussion</li>';
+														$remove = '<li class="ellipsis-button" onclick="removeItem(\'discussion\','.$discussionId.')">Remove Discussion</li><li class="edit_discussion">Edit Discussion</li>';
 													}
 													?>
 														<i class="fa fa-heart-o" <?php echo $color;?> aria-hidden="true" id="discussion-<?php echo $discussionId;?>" onclick="doFavorites('discussion', <?php echo $discussionId . ', ' . $userId;?> , this)"></i>
@@ -108,7 +107,7 @@ include('inc/main-header-test.php');
 
 										</div>
 									<div class="discussion-reply-header">
-										<h3>Replies</h3>
+										<h3>Replies to: <span> <?php echo nl2br($discussion['discussion_title']) ?></span></h3>
 									</div>
 									<ul class="forum-list" id="show-replies">
 										<?php 
@@ -118,16 +117,15 @@ include('inc/main-header-test.php');
 													$remove = "";
 													$isCreator = is_creator('discussion_reply',$userId,$key['d_reply_id']);
 													if ($isCreator) {
-														$remove = '<li class="ellipsis-button" onclick="removeItem(\'discussion_reply\','.$key['d_reply_id'].')">Remove reply</li><li>Edit Reply</li>';
+														$remove = '<li class="ellipsis-button" onclick="removeItem(\'discussion_reply\','.$key['d_reply_id'].')">Remove reply</li><li class="edit_reply" data-info="d_reply_edit_" data-id="'.$key['d_reply_id'].'">Edit Reply</li>';
 													}
 												$content = '<li class="forum-item">';
-												$content .= '<div class="discussion-second-section"><p>' . 'RE: ' . nl2br($discussion['discussion_title']) . '</p></div>';
 												$content .= '<div class="discussion-third-section">';
 												$content .= '<div><a href="profile.php?profile_id=' . $key['student_id'] . '">' .'@'. $key['userName'] . '</a><span> - ' .$postTime .'</span></div>';
-												$content .= '<div><p>' . nl2br($key['reply_post']) .'</p></div>';
+												$content .= '<div style="display:block;position:relative"><p id="d_reply_edit_'.$key['d_reply_id'].'">' . nl2br($key['reply_post']) .'</p><textarea class="edit_text_area"></textarea><div class="edit_buttons"><button class="cancel_button" data-info="d_reply_edit_" data-id="'.$key['d_reply_id'].'">Cancel</button><button class="save_button" data-info="d_reply_edit_" data-id="'.$key['d_reply_id'].'" data-type="edit_reply">Save</button></div></div>';
 												$content .= '<div style="align-items: center;"><div class="forum-item-btns"><i class="fa fa-ellipsis-h" id="ellipsis-cdr-'.$key['d_reply_id'].'" aria-hidden="true" onclick="showEllipsis(this)"></i><div class="ellipsis-menu"><ul><li data-type="post_reply" data-id="'.$key['d_reply_id'].'" class="ellipsis-button report-btn">Report</li>'.$remove.'</ul></div></div></div>';
 												$content .= '<div><ul class="discussion-reply-list" id="discussion-reply-list-' .$key['d_reply_id']. '">';
-												$rReplies = get_all_discussion_r_replies($collegeId, $discussionId,$key['d_reply_id']);
+												$rReplies = get_all_discussion_r_replies($discussionId,$key['d_reply_id']);
 												if (!empty($rReplies)) {
 													
 													foreach ($rReplies as $key2) {
@@ -135,9 +133,9 @@ include('inc/main-header-test.php');
 														$remove = "";
 														$isCreator = is_creator('discussion_reply_comment',$userId,$key2['r_reply_id']);
 														if ($isCreator) {
-															$remove = '<li class="ellipsis-button" onclick="removeItem(\'discussion_reply_comment\','.$key2['r_reply_id'].')">Remove comment</li><li>Edit Comment</li>';
+															$remove = '<li class="ellipsis-button" onclick="removeItem(\'discussion_reply_comment\','.$key2['r_reply_id'].')">Remove comment</li><li class="edit_comment" data-info="d_comment_edit_" data-id="'.$key2['r_reply_id'].'">Edit Comment</li>';
 														}
-														$content .= '<li class="discussion-reply-list-item"><a href="profile.php?profile_id='.$key2['student_id'] . '" class="reply-link">' . '@' . $key2['userName'] . '</a><span> - ' . $postTime. '</span><i class="fa fa-ellipsis-h" id="ellipsis-cdrr-'.$key2['r_reply_id'].'" aria-hidden="true" onclick="showEllipsis(this)" style="position:absolute;right:15px;"></i><div class="ellipsis-menu"><ul><li data-type="post_reply_comment" data-id="'.$key2['r_reply_id'].'" class="ellipsis-button report-btn">Report</li>'.$remove.'</ul></div><p>'. $key2['r_reply_post']. '</p></li>';
+														$content .= '<li class="discussion-reply-list-item"><a href="profile.php?profile_id='.$key2['student_id'] . '" class="reply-link">' . '@' . $key2['userName'] . '</a><span> - ' . $postTime. '</span><i class="fa fa-ellipsis-h" id="ellipsis-cdrr-'.$key2['r_reply_id'].'" aria-hidden="true" onclick="showEllipsis(this)" style="position:absolute;right:15px;"></i><div class="ellipsis-menu"><ul><li data-type="post_reply_comment" data-id="'.$key2['r_reply_id'].'" class="ellipsis-button report-btn">Report</li>'.$remove.'</ul></div><p id="d_comment_edit_'.$key2['r_reply_id'].'">'. $key2['r_reply_post']. '</p><textarea class="edit_text_area area_comment"></textarea><div class="edit_buttons"><button class="cancel_button" data-info="d_comment_edit_" data-id="'.$key2['r_reply_id'].'">Cancel</button><button class="save_button" data-info="d_comment_edit_" data-id="'.$key2['r_reply_id'].'" data-type="edit_comment">Save</button></div></li>';
 													}
 													
 												}
@@ -161,6 +159,42 @@ include('inc/main-header-test.php');
 										?>
 									
 									</ul>
+       <div id="edit_forum_popup" class="modal" <?php if (isset($_SESSION['edit_error_message'])) { echo 'style="display:block"'; } ?>>
+                <div class="modal-content">
+                    <span class="close">&times;</span>  
+
+                    <div class="modal-content-body">
+                         <form method="POST" action="" onsubmit="return false;" id="edit_form">
+                          <div class="modal-header">
+                            <h4>Edit Discussion</h4>
+                          </div> 
+                            <div class="modal-body">
+                              <div>
+                                <?php if(isset($_SESSION['edit_error_message'])){ echo '<p  class="submitError">' . $_SESSION['edit_error_message'] . '</p>'; } ?>
+                              </div>                     
+
+                                <div class="modalInput">
+                                  <label>Discussion Title:</label>
+                                  <input type="text" name="update_title" placeholder="What are we talking about today?" value="<?php if (isset($_SESSION['edit_error_message'])) { echo $_SESSION['discussion-title']; }else{ echo nl2br($discussion['discussion_title']); } ?>">                              
+                                </div>
+
+                                <div class="modalInput">
+                                  <textarea name="update_post" placeholder="What's on your mind?" value="<?php if (isset($_SESSION['edit_error_message'])) { echo $_SESSION['discussion-post']; session_unset();session_destroy();}?>"><?php echo $discussion['discussion_post']; ?></textarea>                               
+                                </div>
+                                <div style="display:none">
+                                        <label for="address">Address</label></th>
+                                        <input type="text" id="address" name="address" />
+                                        <p>Please leave this field blank</p></td>
+                                </div>
+ 
+                                <div>
+                                  <button type="submit" class="signInButton" id="save_change" data-info="edit_discussion" data-id="<?php echo $discussionId; ?>">Save Changes</button>
+                                </div>                            
+                              </div>              
+                        </form>               
+                    </div><!-- /modal-content-body end -->
+                </div><!-- /modal-content end -->
+         </div><!-- /modal end --> 
 
 					</div><!-- end content body -->
 			</section>	<!-- end sschool home body -->		
