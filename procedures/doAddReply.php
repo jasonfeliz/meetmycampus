@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 	if (!isset($_POST['community-id']) && !isset($_POST['major-id'])) {
 		$discussionTitle = trim(filter_input(INPUT_POST,"discussion-title",FILTER_SANITIZE_STRING));
 		
-		$addReply = add_reply($collegeId, null, null, $discussionId, $userId, $replyPost);
+		$addReply = add_reply(null, null, $discussionId, $userId, $replyPost);
 		if($addReply){
 			$content = '<li class="forum-item">';
 			$content .= '<div class="discussion-second-section"><p>' . $discussionTitle . '</p></div>';
@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 									
 	}else if(isset($_POST['community-id'])){
 		$communityId = trim(filter_input(INPUT_POST,"community-id",FILTER_SANITIZE_NUMBER_INT));
-		$addReply = add_reply($collegeId, $communityId, null, $discussionId, $userId, $replyPost);
+		$addReply = add_reply($communityId, null, $discussionId, $userId, $replyPost);
 
 		if($addReply){
 			$content = '<li class="forum-item">';
@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 		}	
 	}elseif(isset($_POST['major-id'])){
 		$majorId = trim(filter_input(INPUT_POST,"major-id",FILTER_SANITIZE_NUMBER_INT));
-		$addReply = add_reply($collegeId, null, $majorId, $discussionId, $userId, $replyPost);
+		$addReply = add_reply(null, $majorId, $discussionId, $userId, $replyPost);
 
 		if($addReply){
 			$content = '<li class="forum-item">';

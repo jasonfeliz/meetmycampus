@@ -12,9 +12,9 @@ if (isset($_POST['add-event-comment'])) {
 	$username = trim(filter_input(INPUT_POST,"username",FILTER_SANITIZE_STRING));
 	
 	if ($communityId) {
- 		$addEvent = add_event_comments($collegeId,$communityId, $eventId, $studentId, $eventComment);
+ 		$addEvent = add_event_comments($communityId, $eventId, $studentId, $eventComment);
 	}elseif(!$communityId){
-		$addEvent = add_event_comments($collegeId, NULL, $eventId, $studentId, $eventComment);		
+		$addEvent = add_event_comments(NULL, $eventId, $studentId, $eventComment);		
 	}
 
 	if($addEvent){
