@@ -52,7 +52,7 @@ if (!empty($schoolInfo)) {
 	$categories = get_all_categories();
 	$communities = get_all_communities($collegeId,NULL);
 	$stories = get_all_stories($collegeId,NULL);
-	$majors = get_all_majors($collegeId);
+	$majors = get_all_majors($collegeId,NULL); //TO-DO
 	$studentCount = intval(get_user_count($collegeId,NULL,NULL));
 	$communityCount = intval(count(get_all_communities($collegeId,NULL)));
 }elseif(!empty($_GET['profile_id'])){

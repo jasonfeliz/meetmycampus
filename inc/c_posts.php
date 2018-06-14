@@ -18,40 +18,29 @@
 								}
 
 							}
-							 if($storyConstant): 
-								echo '<div class="filter-box" id="reviews-filter">';
-								echo '<select>';
-								echo '<option>Most Recent</option><option>Most Upvotes</option>';
-								echo '</select></div>';
-								echo '<button'. $onClick3 . '> + Write a Story</button>';
-
-							else:
+							$writePost = "+ Create Post";
+							if($storyConstant){
+								$writePost = "+ Write Story";
+							}
 								echo '<div id="reviews-filter">';
 								echo '<select>';
 								echo '<option>Most Recent</option><option>Most Upvotes</option>';
 								echo '</select></div>';	
-								echo '<div><button' . $onClick3 . '> + Create Post</button></div>';							
-							endif;
+								echo '<div><button' . $onClick3 . '>'.$writePost.'</button></div>';							
 							?>
 								
 						</div>	
 						<ul class="forum-list" id="forum-list">
 										<?php 
 											if ($communityConstant) {
-												$cDiscussions = get_all_community_discussions($communityId,NULL,NULL);
-											}elseif($majorConstant){
-												$cDiscussions = get_all_community_discussions(NULL,$communityId,NULL);
+												$cDiscussions = get_all_community_discussions($communityId,NULL);
 											}elseif($storyConstant){
-												$cDiscussions = get_all_community_discussions(NULL,NULL,$communityId);
+												$cDiscussions = get_all_community_discussions(NULL,$communityId);
 											}
 											if (!empty($cDiscussions)) {
 
 												foreach ($cDiscussions as $key) {
-													if ($communityConstant || $storyConstant) {
-														$replies = get_all_community_discussion_replies($key['c_discussion_id']);
-													}elseif($majorConstant){
-														$replies = get_all_community_discussion_replies($key['c_discussion_id']);
-													}
+													$replies = get_all_community_discussion_replies($key['c_discussion_id']);
 													
 													if (count($replies)==0){
 														$replyCount =  count($replies)." Replies";
@@ -107,8 +96,6 @@
 													}
 													if ($communityConstant) {
 														$content .= '&community_id=' . $communityId . '&c_discussion_id=' . $key['c_discussion_id'] . '"><p class="forum-title community-forum">' . nl2br($key['c_discussion_post']) . '</p></a></div>';
-													}elseif($majorConstant){
-														$content .= '&major_id=' . $communityId . '&c_discussion_id=' . $key['c_discussion_id'] . '"><p class="forum-title community-forum">' . nl2br($key['c_discussion_post']) . '</p></a></div>';
 													}elseif($storyConstant)	{
 														$content .= '&community_id=' . $communityId . '&c_discussion_id=' . $key['c_discussion_id'] . '"><p class="forum-title community-forum">'. nl2br($key['c_discussion_title']) .'</p><p class="forum-title community-forum">' . nl2br($key['c_discussion_post']) . '</p></a></div>';
 													}											

@@ -48,6 +48,8 @@ function create_community($collegeId,$categoryId,$userId,$communityName,$communi
 	global $connect;
 	if ($categoryId == 21) {
 		$communityCategory = "story";
+	}elseif($categoryId == 23){
+		$communityCategory = "majors";
 	}else{
 		$communityCategory = "group";
 	}
@@ -104,22 +106,21 @@ function update_community($communityId,$categoryId,$communityName,$communityMess
 	}	
 }
 function create_major($collegeId,$majorId,$majorName){
-
 	global $connect;
+		$createCom = create_community($collegeId,23,38,$majorName,NULL,NULL,'public','#5a626f');
 
 		try{
 			$connect->beginTransaction();
-			// TODO - MAJORS WILL BE REMOVED CHANGE TO COMMUNITIES
-			$stmt = $connect->prepare("INSERT INTO majors(`majorList_id`,`college_id`,`category_id`,`community_name`)  VALUES(?,?,23,?)");
+			$stmt = $connect->prepare("INSERT INTO majors(`majorList_id`,`college_id`)  VALUES(?,?)");
 			$stmt->bindParam(1,$majorId,PDO::PARAM_INT);
 			$stmt->bindParam(2,$collegeId,PDO::PARAM_INT);
-			$stmt->bindParam(3,$majorName,PDO::PARAM_STR);
 			$stmt->execute();
 			$connect->commit();
-			return true;;
 		}catch(Exception $e){
 			throw $e;
 		}
+
+		return $createCom['community_id'];
 
 }
 function create_discussion($discussionTopicId,$collegeId,$userId,$discussionTitle,$discussionPost){
@@ -145,32 +146,13 @@ function create_discussion($discussionTopicId,$collegeId,$userId,$discussionTitl
 			throw $e;
 		}
 }
-function create_community_discussion($collegeId,$communityId=NULL,$majorId=NULL,$storyId=NULL,$userId,$discussionTitle,$discussionPost){
+function create_community_discussion($communityId=NULL,$storyId=NULL,$userId,$discussionTitle,$discussionPost){
 	global $connect;
 	if (!is_null($communityId)) {
 		try{
 			$connect->beginTransaction();
 			$stmt = $connect->prepare("INSERT INTO community_discussions(`community_id`, `student_id`,`c_discussion_post`)  VALUES(?,?,?)");
 			$stmt->bindParam(1,$communityId,PDO::PARAM_INT);
-			$stmt->bindParam(2,$userId,PDO::PARAM_INT);
-			$stmt->bindParam(3,$discussionPost,PDO::PARAM_STR);
-			$stmt->execute();
-			$connect->commit();
-
-			$connect->beginTransaction();
-			$stmt = $connect->prepare("SELECT c_discussion_id FROM community_discussions WHERE `student_id` = ? order by post_date desc limit 1;");
-			$stmt->bindParam(1,$userId,PDO::PARAM_INT);
-			$stmt->execute();
-			$connect->commit();			
-			return $stmt->fetch(PDO::FETCH_ASSOC);
-		}catch(Exception $e){
-			throw $e;
-		}
-	}elseif(!is_null($majorId)){
-		try{
-			$connect->beginTransaction();
-			$stmt = $connect->prepare("INSERT INTO community_discussions(`major_id`, `student_id`,`c_discussion_post`)  VALUES(?,?,?)");
-			$stmt->bindParam(1,$majorId,PDO::PARAM_INT);
 			$stmt->bindParam(2,$userId,PDO::PARAM_INT);
 			$stmt->bindParam(3,$discussionPost,PDO::PARAM_STR);
 			$stmt->execute();
@@ -987,10 +969,10 @@ function add_event_comments($communityId = NULL, $eventId, $studentId, $eventCom
 
 
 //add replies to discussions
-function add_reply($communityId = null, $majorId = null, $discussionId, $userId, $replyPost){
+function add_reply($communityId = null, $discussionId, $userId, $replyPost){
 	global $connect;
 
-	if (is_null($communityId) && is_null($majorId)) {
+	if (is_null($communityId)) {
 		try{
 			$connect->beginTransaction();
 			$stmt = $connect->prepare("INSERT INTO discussion_replies(`discussion_id`, `student_id`, `reply_post`)  VALUES(?,?,?)");
@@ -1003,20 +985,7 @@ function add_reply($communityId = null, $majorId = null, $discussionId, $userId,
 		}catch(Exception $e){
 			throw $e;
 		}
-	}elseif (!is_null($communityId) && is_null($majorId)) {
-		try{
-			$connect->beginTransaction();
-			$stmt = $connect->prepare("INSERT INTO c_discussion_replies(`c_discussion_id`, `student_id`, `reply_post`)  VALUES(?,?,?)");
-			$stmt->bindParam(1,$discussionId,PDO::PARAM_INT);
-			$stmt->bindParam(2,$userId,PDO::PARAM_INT);
-			$stmt->bindParam(3,$replyPost,PDO::PARAM_STR);
-			$stmt->execute();
-			$connect->commit();
-			return true;
-		}catch(Exception $e){
-			throw $e;
-		}
-	}elseif (!is_null($majorId) && is_null($communityId)) {
+	}else{
 		try{
 			$connect->beginTransaction();
 			$stmt = $connect->prepare("INSERT INTO c_discussion_replies(`c_discussion_id`, `student_id`, `reply_post`)  VALUES(?,?,?)");
@@ -1475,7 +1444,7 @@ function get_all_communities($collegeId,$categoryId = NULL){
 	if (is_null($categoryId)) {
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT * FROM communities WHERE college_id = ?");
+				$stmt = $connect->prepare("SELECT * FROM communities WHERE college_id = ? AND community_category <> 'majors'");
 				$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
 				$stmt->execute();
 				$connect->commit();
@@ -1488,7 +1457,7 @@ function get_all_communities($collegeId,$categoryId = NULL){
 				$connect->beginTransaction();
 				$stmt = $connect->prepare("SELECT * FROM communities 
 											INNER JOIN categories ON communities.category_id =  categories.category_id
-											WHERE college_id = ? AND communities.category_id = ? LIMIT 6");
+											WHERE college_id = ? AND communities.category_id = ?  AND community_category <> 'majors' LIMIT 6");
 				$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
 				$stmt->bindParam(2,$categoryId,PDO::PARAM_INT);
 				$stmt->execute();
@@ -1524,7 +1493,7 @@ function get_community_members($communityId){
 				$connect->beginTransaction();
 				$stmt = $connect->prepare("SELECT community_members.student_id,college_student.id,college_student.firstName,college_student.lastName, userName FROM community_members 
 											INNER JOIN college_student ON community_members.student_id = college_student.id
-											WHERE community_id = ? AND status = 1");
+											WHERE community_id = ? AND status = 1 AND student_id <> 38");
 				$stmt->bindParam(1,$communityId,PDO::PARAM_INT);
 				$stmt->execute();
 				$connect->commit();
@@ -1610,17 +1579,33 @@ function get_all_stories($collegeId,$categoryId=NULL){
 
 }
 
-function get_all_majors($collegeId){
+function get_all_majors($collegeId,$categoryId=NULL){
 	global $connect;
-	try{
-			$connect->beginTransaction();
-			$stmt = $connect->prepare("SELECT * FROM majors WHERE college_id = ?");
-			$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
-			$stmt->execute();
-			$connect->commit();
-			return $stmt->fetchAll(PDO::FETCH_ASSOC);
-	}catch(Exception $e){
-		throw $e;
+	if (is_null($categoryId)) {
+		try{
+				$connect->beginTransaction();
+				$stmt = $connect->prepare("SELECT * FROM communities WHERE college_id = ? AND community_category = 'majors'");
+				$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
+				$stmt->execute();
+				$connect->commit();
+				return $stmt->fetchAll(PDO::FETCH_ASSOC);
+		}catch(Exception $e){
+			throw $e;
+		}
+	}else{
+		try{
+				$connect->beginTransaction();
+				$stmt = $connect->prepare("SELECT * FROM communities 
+											INNER JOIN categories ON communities.category_id =  categories.category_id
+											WHERE college_id = ? AND communities.category_id = ? AND community_category = 'majors' LIMIT 6");
+				$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
+				$stmt->bindParam(2,$categoryId,PDO::PARAM_INT);
+				$stmt->execute();
+				$connect->commit();
+				return $stmt->fetchAll(PDO::FETCH_ASSOC);
+		}catch(Exception $e){
+			throw $e;
+		}	
 	}
 }
 function get_major($collegeId,$majorId){
@@ -2013,7 +1998,7 @@ function get_all_reviews($collegeId,$category = NULL,$ratings = NULL){
 	}
 
 }
-function get_all_community_discussions($communityId = NULL, $majorId = NULL,$storyId =NULL){
+function get_all_community_discussions($communityId = NULL,$storyId =NULL){
 	global $connect;
 	if (!is_null($communityId)) {
 		try{
@@ -2029,20 +2014,6 @@ function get_all_community_discussions($communityId = NULL, $majorId = NULL,$sto
 		}catch(Exception $e){
 			throw $e;
 		}
-	}elseif(!is_null($majorId)){
-		try{
-				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT c_discussion_id, student_id, userName, c_discussion_post, post_date FROM community_discussions 
-											INNER JOIN college_student ON community_discussions.student_id = college_student.id 
-											INNER JOIN communities JOIN colleges ON community_discussions.community_id = communities.community_id AND communities.college_id = colleges.college_id 
-											WHERE major_id = ? ORDER BY post_date DESC");
-				$stmt->bindParam(1,$majorId,PDO::PARAM_INT);
-				$stmt->execute();
-				$connect->commit();
-				return $stmt->fetchAll(PDO::FETCH_ASSOC);
-		}catch(Exception $e){
-			throw $e;
-		}	
 	}elseif(!is_null($storyId)){
 		try{
 				$connect->beginTransaction();
@@ -2061,7 +2032,7 @@ function get_all_community_discussions($communityId = NULL, $majorId = NULL,$sto
 
 }
 
-function get_community_discussion($communityId = NULL, $majorId = NULL, $storyId = NULL,$c_discussion_id){
+function get_community_discussion($communityId = NULL, $storyId = NULL,$c_discussion_id){
 	global $connect;
 	if (!is_null($communityId)) {
 		try{
@@ -2078,21 +2049,6 @@ function get_community_discussion($communityId = NULL, $majorId = NULL, $storyId
 		}catch(Exception $e){
 			throw $e;
 		}
-	}elseif(!is_null($majorId)){
-		try{
-				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT college_student.userName, student_id, c_discussion_post, post_date  FROM community_discussions
-											INNER JOIN college_student ON community_discussions.student_id = college_student.id
-											WHERE major_id = ? AND c_discussion_id=?");
-				$stmt->bindParam(1,$majorId,PDO::PARAM_INT);
-				$stmt->bindParam(2,$c_discussion_id,PDO::PARAM_INT);
-				$stmt->execute();
-				$connect->commit();
-				return $stmt->fetch(PDO::FETCH_ASSOC);
-
-		}catch(Exception $e){
-			throw $e;
-		}	
 	}elseif(!is_null($storyId)){
 		try{
 				$connect->beginTransaction();

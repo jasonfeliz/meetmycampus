@@ -13,17 +13,11 @@ if (!empty($_GET['community_id'])) {
    		$_SESSION['system_error_message'] = "could not retrieve community";
     	redirect("error_page.php");
 	}
-	if (!$communityCat) {
+	if (!$communityCat || $communityCat != $community['community_category']) {
 		$_SESSION['error_page_message'] = "Due to a disturbance in the force, this page couldn't be found.";
-   		$_SESSION['system_error_message'] = "could not retrieve cat";
+   		$_SESSION['system_error_message'] = "could not retrieve category";
     	redirect("error_page.php");
-	}
-
-	$checkMember = is_member($userId,$communityId,null);
-	if ($community['community_type'] == "private" && !$checkMember) {
-		$privateCommunity = TRUE;
-	}
-	if($communityCat == 'group'){
+	}elseif($communityCat == 'group'){
 		$communityConstant = TRUE;
 		$majorConstant = FALSE;
 		$storyConstant = FALSE;		
@@ -31,20 +25,18 @@ if (!empty($_GET['community_id'])) {
 		$communityConstant = FALSE;
 		$majorConstant = FALSE;
 		$storyConstant = TRUE;	
+	}elseif($communityCat == 'majors'){
+		$communityConstant = TRUE;
+		$majorConstant = TRUE;
+		$storyConstant = FALSE;	
 	}
 
-	$studentCount = intval(get_user_count(NULL,$communityId,NULL));
-}elseif (!empty($_GET['major_id'])) {
-	$majorConstant = TRUE;
-	$communityConstant = FALSE;
-	$storyConstant = FALSE;
-	$communityId = intval(trim(filter_input(INPUT_GET, 'major_id' ,FILTER_SANITIZE_STRING)));
-	$community = get_major($collegeId,$communityId);
-	if (!$community) {
-		$_SESSION['error_page_message'] = "Due to a disturbance in the force, this page couldn't be found.";
-   		$_SESSION['system_error_message'] = "could not retrieve major";
-    	redirect("error_page.php");
+	$checkMember = is_member($userId,$communityId,null);
+	if ($community['community_type'] == "private" && !$checkMember) {
+		$privateCommunity = TRUE;
 	}
+
+
 	$studentCount = intval(get_user_count(NULL,$communityId,NULL));
 }else{
 		$_SESSION['error_page_message'] = "Due to a disturbance in the force, this page couldn't be found.";
@@ -117,7 +109,9 @@ require_once('inc/main-header-test.php');
 									<div class="about-description">
 										<h4 class="home-header">Description</h4>
 										<p><?php 
-										if(is_null($community['community_description'])){
+										if ($majorConstant) {
+											echo "Connect and discuss the latest topics and trends with " . $community['community_name'] . " majors ".$collegeAbrev;
+										}elseif(is_null($community['community_description'])){
 											echo "No Description";
 										} else{
 											echo nl2br($community['community_description']);
@@ -149,7 +143,7 @@ require_once('inc/main-header-test.php');
 								</div>	
 								<div>
 									<?php
-						            if ($communityConstant) {
+						            if ($communityConstant && !$majorConstant) {
 						                $content = '<h5 class="side-nav-heading">Admin(' . count(get_community_admins($communityId)) .')</h5>';
 						                $content .= '<ul class="universal-side-nav-list side-nav-follow">';
 
@@ -178,23 +172,20 @@ require_once('inc/main-header-test.php');
 						                echo $content;
 						            }
 						            ?>
-						           <h5 class="side-nav-heading">Subscribers(
+						           <h5 class="side-nav-heading">
 						            <?php 
-						            if($communityConstant){
-						                echo count(get_community_members($communityId));
-						            }elseif ($majorConstant) {
-						                echo count(get_major_members(intval($community['majorList_id'])));
-						            }
+						          		if ($communityConstant) {
+						                	echo 'Subscribers('. count(get_community_members($communityId)) .')';
+						                }
 						            ?>
-						            )</h5>
+						            </h5>
 						            <ul class="universal-side-nav-list side-nav-follow">                 
 						            <?php
 						            $members = "";
 						            if ($communityConstant) {
-						                $members = get_community_members($communityId);
-						            }elseif($majorConstant){
-						                $members = get_major_members(intval($community['majorList_id']));
+						            	$members = get_community_members($communityId);
 						            }
+						            
 						            if (!empty($members)) {
 						                foreach ($members as $key) {
 						                        $follow = "";
@@ -213,7 +204,12 @@ require_once('inc/main-header-test.php');
 						                    echo $content;
 						                }
 						            }else{
-						                echo '<li style="padding:10px;">No members '. '@' .$community['community_name'] . '</li>';
+						            	if ($storyConstant) {
+						            		 echo '';
+						            	}else{
+						            		echo '<li style="padding:10px;">No members '. '@' .$community['community_name'] . '</li>';
+						            	}
+						                
 						            }
 
 						            ?> 

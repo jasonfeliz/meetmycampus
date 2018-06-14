@@ -23,31 +23,24 @@ if (!empty($_GET['community_id'])) {
 		$communityConstant = FALSE;
 		$majorConstant = FALSE;
 		$storyConstant = TRUE;	
+	}elseif($community['community_category'] == 'majors'){
+		$communityConstant = FALSE;
+		$majorConstant = TRUE;
+		$storyConstant = FALSE;	
 	}
-}elseif (!empty($_GET['major_id'])) {
-	$majorConstant = TRUE;
-	$communityConstant = FALSE;
-	$storyConstant = FALSE;
-	$communityId = intval(trim(filter_input(INPUT_GET, 'major_id' ,FILTER_SANITIZE_STRING)));
-	$discussionId = intval(trim(filter_input(INPUT_GET, 'c_discussion_id' ,FILTER_SANITIZE_STRING)));
-	$community = get_major($collegeId,$communityId);
-	if (!$community) {
-		$_SESSION['error_page_message'] = "Due to a disturbance in the force, this page couldn't be found.";
-   		$_SESSION['system_error_message'] = "could not retrieve discussion";
-    	redirect("error_page.php");
-	}
-	$replies = get_all_community_discussion_replies($discussionId);
 }
 if (!empty($_GET['c_discussion_id'])) {
 	$discussionId = intval(trim(filter_input(INPUT_GET, 'c_discussion_id' ,FILTER_SANITIZE_STRING)));
 	if ($communityConstant) {
-		$discussion = get_community_discussion($communityId,NULL,NULL,$discussionId);
-	}elseif($majorConstant){
-		$discussion = get_community_discussion(NULL,$communityId,NULL,$discussionId);
+		$discussion = get_community_discussion($communityId,NULL,$discussionId);
 	}elseif($storyConstant){
-		$discussion = get_community_discussion(NULL,NULL,$communityId,$discussionId);
+		$discussion = get_community_discussion(NULL,$communityId,$discussionId);
 	}
 	
+}else{
+	$_SESSION['error_page_message'] = "Due to a disturbance in the force, this page couldn't be found.";
+   	$_SESSION['system_error_message'] = "could not retrieve discussion";
+	redirect("error_page.php");
 }
 
 
@@ -181,8 +174,6 @@ require_once('inc/main-header-test.php');
 												$content .= '<div style="align-items: center;"><div class="forum-item-btns"><i class="fa fa-ellipsis-h" id="ellipsis-cdr-'.$key['c_discussion_reply_id'].'" aria-hidden="true" onclick="showEllipsis(this)"></i><div class="ellipsis-menu"><ul><li data-type="c_post_reply" data-id="'.$key['c_discussion_reply_id'].'" class="ellipsis-button report-btn">Report</li>'.$remove.'</ul></div></div></div>';
 												if ($communityConstant) {
 													$rReplies = get_all_community_discussion_r_replies($key['c_discussion_reply_id']);
-												}elseif($majorConstant){
-													$rReplies = get_all_community_discussion_r_replies($key['c_discussion_reply_id']);
 												}
 												$content .= '<div><ul class="discussion-reply-list" id="discussion-reply-list-' .$key['c_discussion_reply_id']. '">';
 												if (!empty($rReplies)) {
@@ -203,11 +194,7 @@ require_once('inc/main-header-test.php');
 												$content .= '<form method="POST" action="" id="add-reply-comment-'. $key['c_discussion_reply_id'] .'" onsubmit="addReplyComment('.$key['c_discussion_reply_id'] . '); return false;">';
 												$content .= '<input type="text" name="community-r-reply-post" placeholder="Add Comment" '.$disableComment.'>';
 												$content .= '<input type="hidden" name="college-id" value="' . $collegeId . '">';
-												if ($communityConstant) {
-													$content .= '<input type="hidden" name="community-id"  value="' . $communityId . '">';
-												}elseif($majorConstant){
-													$content .= '<input type="hidden" name="major-id"  value="' . $communityId . '">';
-												}
+												$content .= '<input type="hidden" name="community-id"  value="' . $communityId . '">';
 												$content .= '<input type="hidden" name="discussion-id"  value="' . $discussionId . '">';
 												$content .= '<input type="hidden" name="discussion-reply-id"  value="' . $key['c_discussion_reply_id'] . '">';
 												$content .= '<input type="hidden" name="student-id" value="' . $userId .'">';

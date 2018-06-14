@@ -5,7 +5,7 @@
 	                <form method="POST" action="procedures/doCreateCommunityPost.php?school_name=<?php echo $urlCollegeName; ?>"> 
 	                    <div class="modal-body">
 
-		                   <?php if($communityConstant || $majorConstant):?>
+		                   <?php if($communityConstant):?>
 			                    <div class="modal-header" style="margin-bottom: 30px;">
 			                    	<h4 class="">Create A Post</h4>
 			                    </div>		                  
@@ -31,8 +31,6 @@
 		                        <?php if($communityConstant): ?>
 		                            <input type="hidden" name="community-id" value="<?php echo $communityId; ?>">
 		                            <input type="hidden" name="category-id" value="<?php echo $categoryId; ?>">
-		                        <?php  elseif($majorConstant):   ?>
-		                            <input type="hidden" name="major-id" value="<?php echo $communityId; ?>"> 
 		                        <?php endif; ?>                   		
 			                    </div>		      
 	                        <?php elseif($storyConstant): ?>

@@ -161,21 +161,7 @@ function addReplyCommunity(collegeUrl,communityId,discussionId){
 	     }
 	});
 }
-function addReplyMajor(collegeUrl,majorId,discussionId){
-	var id = '#' + $(id).attr('id');
-	$.ajax({
-	     type: "POST",
-	     url: 'procedures/doAddReply.php?school_name='+collegeUrl,
-	     data: $("#reply-form").serialize() + '&discussion-id='+discussionId+ '&major-id='+majorId,
-	     success: function(data) {
-	     	 $('#createCommunityModal').hide();
-	         $('#show-replies').prepend(data);
-	         $('li.forum-item:first').hide().fadeIn(1500);
-	         $('li.forum-item:first').css("border", "solid 3px #DF7367");
 
-	     }
-	});
-}
 function addReplyComment(id){
 
 	$.ajax({

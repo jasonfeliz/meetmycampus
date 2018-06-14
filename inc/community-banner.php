@@ -1,4 +1,4 @@
-			<section <?php if($majorConstant){echo 'class="banner-community-home majors-group"';}else{echo 'class="banner-community-home" style="background-color:' .$community['community_color'] . '"';} ?>>
+			<section <?php echo 'class="banner-community-home" style="background-color:' .$community['community_color'] . '"'; ?> >
 	
 			    <div class="banner-school-content">
 					<?php
@@ -22,7 +22,16 @@
 						</div>			
 					</div>
 			        <h4 class="banner-school-name"><?php echo $community['community_name'];?></h4>
-			        <p class="community-info"><?php echo "Connect and discuss the latest topics and trends with " . ucfirst($community['community_name']) . " majors " ; ?></p>
+
+			        <p class="community-info">
+                        <?php 
+                            if ($majorConstant) {
+                                echo  "Connect and discuss the latest topics and trends with " . $community['community_name'] . " majors ".$collegeAbrev;
+                            }else{
+                                echo $community['community_message'];
+                            }
+                        ?>         
+                    </p>
 				<?php 
 					$buttonName = '';
 					if (!$loggedIn) {
@@ -41,9 +50,7 @@
 					}
 				?>
 				<?php  
-					if ($communityConstant){
-						echo '<button id="join-button" ' . $onClick .'> ' . $buttonName . '</button>';
-					}
+					echo '<button id="join-button" ' . $onClick .'> ' . $buttonName . '</button>';
 				 ?>
 
 			    </div>

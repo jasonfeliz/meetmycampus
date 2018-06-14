@@ -18,7 +18,6 @@ if (!empty($_GET['community_id']) && !empty($_GET['event_id'])) {
     	redirect("error_page.php");
 	}
 	$communityConstant = TRUE;
-	$majorConstant = FALSE;
 	$studentCount = intval(get_user_count(NULL,$communityId,NULL));
 
 }elseif(empty($_GET['community_id']) && !empty($_GET['event_id'])){

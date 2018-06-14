@@ -24,10 +24,9 @@
 										if ($_GET['b_filter'] == 'majors') {
 											if(!empty($majors)){
 												foreach ($majors as $key){
-														$content = 	'<li>';
-														$content.=	'<a href="community.php?school_name='. $urlCollegeName . '&major_id=' . $key['major_id'] . '" class="majors-group list-thumbnail">';
-														$content.= '<img src="img/community5.png">';
-														$content.= '<h5>'.$key['community_name']. '</h5></a></li>';
+												$content =	'<li><a href="community.php?school_name='. $urlCollegeName . '&community_id=' . $key['community_id'] . '&community_cat=' . $key['community_category'] . '" class="list-thumbnail" style="background-color:' . $key['community_color'] . ';" >';
+												$content.= '<img src="img/community5.png">';
+												$content.= '<h5>'.$key['community_name']. '</h5></a></li>';
 														echo $content;
 												}
 											exit();

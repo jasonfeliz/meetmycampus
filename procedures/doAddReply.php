@@ -1,7 +1,7 @@
 <?php
 require_once('../inc/bootstrap.php');
 require_once('../inc/start.php');
-$replyPost  = $discussionId = $major = $communityId = $communityId  = $addReply = $discussionTitle = "";
+$replyPost  = $discussionId = $majorId = $communityId = $communityId  = $addReply = $discussionTitle = "";
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
 	$replyPost = trim(filter_input(INPUT_POST,"discussion-reply",FILTER_SANITIZE_STRING));
 	$discussionId = trim(filter_input(INPUT_POST,"discussion-id",FILTER_SANITIZE_NUMBER_INT));
@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 	if (!isset($_POST['community-id']) && !isset($_POST['major-id'])) {
 		$discussionTitle = trim(filter_input(INPUT_POST,"discussion-title",FILTER_SANITIZE_STRING));
 		
-		$addReply = add_reply(null, null, $discussionId, $userId, $replyPost);
+		$addReply = add_reply(null, $discussionId, $userId, $replyPost);
 		if($addReply){
 			$content = '<li class="forum-item">';
 			$content .= '<div class="discussion-second-section"><p>' . $discussionTitle . '</p></div>';
@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 									
 	}else if(isset($_POST['community-id'])){
 		$communityId = trim(filter_input(INPUT_POST,"community-id",FILTER_SANITIZE_NUMBER_INT));
-		$addReply = add_reply($communityId, null, $discussionId, $userId, $replyPost);
+		$addReply = add_reply($communityId, $discussionId, $userId, $replyPost);
 
 		if($addReply){
 			$content = '<li class="forum-item">';
@@ -35,21 +35,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 			$content .= '<div><p>' .$replyPost .'</p></div>';
 			$content .= '<div style="align-items: center;"><div class="forum-item-btns"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div></div>';
 			echo $content;		
-		}else{
-			echo 'Something Went Wrong!';
-
-		}	
-	}elseif(isset($_POST['major-id'])){
-		$majorId = trim(filter_input(INPUT_POST,"major-id",FILTER_SANITIZE_NUMBER_INT));
-		$addReply = add_reply(null, $majorId, $discussionId, $userId, $replyPost);
-
-		if($addReply){
-			$content = '<li class="forum-item">';
-			$content .= '<div class="discussion-third-section">';
-			$content .= '<div><a href="profile.php?profile_id=' . $userId . '">' .'@'. $userName . '</a><span> - Just now</span></div>';
-			$content .= '<div><p>' .$replyPost .'</p></div>';
-			$content .= '<div style="align-items: center;"><div class="forum-item-btns"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div></div>';
-			echo $content;			
 		}else{
 			echo 'Something Went Wrong!';
 

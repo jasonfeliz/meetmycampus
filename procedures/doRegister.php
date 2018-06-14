@@ -1,7 +1,7 @@
 <?php
 require_once('../inc/bootstrap.php');
 
-$collegeEmail = $university = $password = $firstName = $lastName = $hashed = $userName = $userMajor = $majorId = "";
+$collegeEmail = $university = $password = $firstName = $lastName = $hashed = $userName = $userMajor = $majorId = $createMajor = "";
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -76,13 +76,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             redirect('../index.php');
     }
 
-        $checkMajor = check_major($enteredSchool['college_id'],$majorId);
-        if (empty($checkMajor)) {
-          $message =   "Connect and discuss the latest topics and trends with " . $userMajor . " majors @".$university;
-          create_major($enteredSchool['college_id'],$majorId,$userMajor,$message);
-        }
+
 
         $createUser = create_user($university,$firstName,$lastName,$userName,$collegeEmail,$hashed);
+        $checkMajor = check_major($enteredSchool['college_id'],$majorId);
+        if (empty($checkMajor)) {
+
+          $message =   "Connect and discuss the latest topics and trends with " . $userMajor . " majors @".$university;
+          $createMajor = create_major($enteredSchool['college_id'],$majorId,$userMajor,$message);
+          join_community($createMajor,$createUser['id'],1);
+
+        }else{
+
+          try{
+            $connect->beginTransaction();
+            $sql = "SELECT community_id FROM communities WHERE community_name = ? AND college_id = ?";
+            $stmt = $connect->prepare($sql);
+            $stmt->bindParam(1,$userMajor,PDO::PARAM_STR);
+            $stmt->bindParam(2,$enteredSchool['college_id'],PDO::PARAM_INT);
+            $stmt->execute();
+            $connect->commit();
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            join_community($result['community_id'],$createUser['id'],1);
+          }catch(Exception $e){
+            throw $e;
+          }
+          
+        }
+
         follow_school($enteredSchool['college_id'],$createUser['id']);
         if(!empty($createUser)){
               $createProfile = create_profile($createUser['id'],$majorId);
