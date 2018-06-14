@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 11, 2018 at 04:54 PM
+-- Generation Time: Jun 14, 2018 at 09:11 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 5.6.31
 
@@ -21,71 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `meetmycampus`
 --
-CREATE DATABASE IF NOT EXISTS `meetmycampus` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `meetmycampus`;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `c_discussion_r_reply`
---
-
-CREATE TABLE `c_discussion_r_reply` (
-  `r_reply_id` int(10) UNSIGNED NOT NULL,
-  `c_discussion_reply_id` int(10) UNSIGNED NOT NULL,
-  `student_id` int(10) UNSIGNED DEFAULT NULL,
-  `r_reply_post` varchar(4096) NOT NULL,
-  `post_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `c_discussion_r_reply`
---
-
-INSERT INTO `c_discussion_r_reply` (`r_reply_id`, `c_discussion_reply_id`, `student_id`, `r_reply_post`, `post_date`) VALUES
-(1, 1, 35, 'So saddddddddddd...........', '2017-12-12 11:32:14'),
-(2, 1, 37, 'I know, right? I\'m officially done making sandwiches. It\'s tv dinners and mac & Cheese till I graduate.', '2017-12-12 11:54:23'),
-(3, 3, 35, 'thank you very much!', '2018-02-10 23:32:24'),
-(10, 11, 42, 'not that hard!', '2018-03-14 13:35:36'),
-(11, 1, 39, 'I love tv dinners!', '2018-05-05 11:58:14'),
-(12, 15, 35, 'hey @rmiller294333', '2018-05-30 19:42:34'),
-(13, 19, 35, 'hello!', '2018-06-07 08:32:51'),
-(14, 15, 35, 'hey man!', '2018-06-07 08:35:23'),
-(15, 20, 35, 'of course!!!!', '2018-06-07 11:33:12'),
-(16, 19, 35, 'hey!!!!!!!!', '2018-06-07 11:40:01'),
-(17, 21, 35, 'really??', '2018-06-07 12:54:12'),
-(18, 22, 35, 'nooooo', '2018-06-07 12:57:58');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `c_discussion_replies`
---
-
-CREATE TABLE `c_discussion_replies` (
-  `c_discussion_reply_id` int(10) UNSIGNED NOT NULL,
-  `c_discussion_id` int(10) UNSIGNED NOT NULL,
-  `student_id` int(10) UNSIGNED DEFAULT NULL,
-  `reply_post` varchar(4096) NOT NULL,
-  `post_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `c_discussion_replies`
---
-
-INSERT INTO `c_discussion_replies` (`c_discussion_reply_id`, `c_discussion_id`, `student_id`, `reply_post`, `post_date`) VALUES
-(1, 2, 37, 'Happens to me all the time in my doorm room. Smh', '2017-12-12 10:19:01'),
-(3, 3, 37, 'Definitely take Intro to Finance with Professor Sternberg', '2018-01-08 11:35:22'),
-(11, 12, 35, 'very hard!', '2018-02-27 19:20:05'),
-(13, 14, 35, 'hello to you!', '2018-03-13 09:39:51'),
-(14, 12, 42, 'Its hard but very rewarding!', '2018-03-14 13:35:27'),
-(15, 2, 39, 'hello all!', '2018-04-25 11:47:19'),
-(16, 2, 35, 'hey! we&#39;re the millers', '2018-06-04 19:54:43'),
-(19, 2, 35, 'yalll', '2018-06-06 21:45:11'),
-(20, 19, 35, 'do we rule?!!?', '2018-06-07 11:32:53'),
-(21, 20, 35, 'nada!', '2018-06-07 12:54:05'),
-(22, 21, 35, 'yesss', '2018-06-07 12:57:52');
 
 -- --------------------------------------------------------
 
@@ -131,43 +66,6 @@ INSERT INTO `categories` (`category_id`, `category`, `css_style`) VALUES
 (25, 'Greek life', 'greek-thumbnail'),
 (26, 'Parties', 'parties-thumbnail'),
 (27, 'Getting Into', 'gettingIn-thumbnail');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `college_student`
---
-
-CREATE TABLE `college_student` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `firstName` varchar(100) DEFAULT NULL,
-  `lastName` varchar(100) DEFAULT NULL,
-  `username` varchar(20) DEFAULT NULL,
-  `email` varchar(100) DEFAULT NULL,
-  `token` varchar(100) DEFAULT NULL,
-  `verified` varchar(255) DEFAULT 'no',
-  `dateSignedUp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `collegeId` int(11) UNSIGNED DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `college_student`
---
-
-INSERT INTO `college_student` (`id`, `firstName`, `lastName`, `username`, `email`, `token`, `verified`, `dateSignedUp`, `collegeId`) VALUES
-(35, 'jason', 'feliz', 'arkham', 'arkham@harvard.edu', '$2y$10$KThv2Ly1HG4/suvsfj0EPuyKbRzzGSASZuubO.m1PFzLSNMmk3aVC', 'yes', '2017-11-22 07:38:40', 227),
-(36, 'mike', 'jordan', 'mikejordan', 'mj@unc.edu', '$2y$10$z6C2J3w6/M6cwCRNbIU9ZOjmFWfPGsENua24Boro9wgKtPZDxiose', 'yes', '2017-11-22 18:23:35', 598),
-(37, 'Nathan', 'Miranda', 'brandnate', 'nate@harvard.edu', '$2y$10$xuezjjtws2ZraNX4c1NwouqMlA2c2zPGMuU.U7PetUuJ50sgCr5lO', 'yes', '2017-12-12 20:06:03', 227),
-(38, NULL, NULL, 'Anonymous', NULL, NULL, 'yes', '2018-01-08 23:52:30', NULL),
-(39, 'Reggie', 'Miller', 'rmiler294333', 'rmiller@harvard.edu', '$2y$10$l7w4i6GwVQpYDNwfxHsFseHxGl7zhG631oy86VSd3fKWenW7AH.wa', 'no', '2018-03-14 05:24:11', 227),
-(40, 'Mark', 'Jackson', 'mjackson', 'mjackson@harvard.edu', '$2y$10$I1Oqx7pUjw4pnNwyHdmNCOUwxegDlXQ2eG.hZvVEEUAyCatfFVl2K', 'no', '2018-03-14 05:28:58', 227),
-(41, 'Rik', 'Smit', 'rSmit', 'rsmit@harvard.edu', '$2y$10$pA/Na9UPB/mooxJGBymzreqFHFauFWldFQm4JEWiL2srCqV0APF4W', 'no', '2018-03-14 05:29:46', 227),
-(42, 'Bartolo', 'Colon', 'bColon', 'bColon@harvard.edu', '$2y$10$PB1vdkVOc0aX.lcwzWM5Ce3sNxDHp4xnFNk0QfBhXSMYb3iHi9uWG', 'no', '2018-03-14 21:23:54', 227),
-(43, 'Jim', 'Halper', 'jhalper', 'jhalper@harvard.edu', '$2y$10$JP0SaA8DngHpZiZlfklE0ebl25m885yHHZfCx57OXTuIZ.9NUr9OG', 'no', '2018-03-14 21:46:32', 227),
-(44, 'Dwight', 'Schrute', 'schrutefarms', 'dschrute@harvard.edu', '$2y$10$OZEIhBCqdr6g2T9UQZitzOTGOQn3h9WwnZE0DVaHdkQifCl63xsT2', 'no', '2018-03-14 21:48:17', 227),
-(45, 'Michael', 'Jackson', 'mjackson1', 'mj1@harvard.edu', '$2y$10$7H9gMKLO0bbrdhX8Qvs2q.pw9Q2DCi0YXF85IYydgfwxY/knU8BhC', 'no', '2018-03-19 00:54:16', 227),
-(46, 'Josh', 'Hendrick', 'jhendrick', 'jh@harvard.edu', '$2y$10$7p7H7NM.dx/tVbm.RmPKeOH4Xm8S0pR3AHj8W/DpyIC3iiZOJBTpe', 'no', '2018-03-19 00:56:30', 227),
-(47, 'Luis', 'Felix', 'lfeliz', 'lfelix@harvard.edu', '$2y$10$k/asIv022.uPVjHudPra6Oxa/tUOurZeAcEWum4a35shNSmHPekfW', 'no', '2018-03-25 07:05:17', 227);
 
 -- --------------------------------------------------------
 
@@ -899,6 +797,46 @@ INSERT INTO `colleges` (`college_id`, `uni_name`, `city`, `state`, `email_url`, 
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `college_student`
+--
+
+CREATE TABLE `college_student` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `firstName` varchar(100) DEFAULT NULL,
+  `lastName` varchar(100) DEFAULT NULL,
+  `username` varchar(20) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `token` varchar(100) DEFAULT NULL,
+  `verified` varchar(255) DEFAULT 'no',
+  `dateSignedUp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `collegeId` int(11) UNSIGNED DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `college_student`
+--
+
+INSERT INTO `college_student` (`id`, `firstName`, `lastName`, `username`, `email`, `token`, `verified`, `dateSignedUp`, `collegeId`) VALUES
+(35, 'jason', 'feliz', 'arkham', 'arkham@harvard.edu', '$2y$10$KThv2Ly1HG4/suvsfj0EPuyKbRzzGSASZuubO.m1PFzLSNMmk3aVC', 'yes', '2017-11-22 07:38:40', 227),
+(36, 'mike', 'jordan', 'mikejordan', 'mj@unc.edu', '$2y$10$z6C2J3w6/M6cwCRNbIU9ZOjmFWfPGsENua24Boro9wgKtPZDxiose', 'yes', '2017-11-22 18:23:35', 598),
+(37, 'Nathan', 'Miranda', 'brandnate', 'nate@harvard.edu', '$2y$10$xuezjjtws2ZraNX4c1NwouqMlA2c2zPGMuU.U7PetUuJ50sgCr5lO', 'yes', '2017-12-12 20:06:03', 227),
+(38, NULL, NULL, 'Anonymous', NULL, NULL, 'yes', '2018-01-08 23:52:30', NULL),
+(39, 'Reggie', 'Miller', 'rmiler294333', 'rmiller@harvard.edu', '$2y$10$l7w4i6GwVQpYDNwfxHsFseHxGl7zhG631oy86VSd3fKWenW7AH.wa', 'no', '2018-03-14 05:24:11', 227),
+(40, 'Mark', 'Jackson', 'mjackson', 'mjackson@harvard.edu', '$2y$10$I1Oqx7pUjw4pnNwyHdmNCOUwxegDlXQ2eG.hZvVEEUAyCatfFVl2K', 'no', '2018-03-14 05:28:58', 227),
+(41, 'Rik', 'Smit', 'rSmit', 'rsmit@harvard.edu', '$2y$10$pA/Na9UPB/mooxJGBymzreqFHFauFWldFQm4JEWiL2srCqV0APF4W', 'no', '2018-03-14 05:29:46', 227),
+(42, 'Bartolo', 'Colon', 'bColon', 'bColon@harvard.edu', '$2y$10$PB1vdkVOc0aX.lcwzWM5Ce3sNxDHp4xnFNk0QfBhXSMYb3iHi9uWG', 'no', '2018-03-14 21:23:54', 227),
+(43, 'Jim', 'Halper', 'jhalper', 'jhalper@harvard.edu', '$2y$10$JP0SaA8DngHpZiZlfklE0ebl25m885yHHZfCx57OXTuIZ.9NUr9OG', 'no', '2018-03-14 21:46:32', 227),
+(44, 'Dwight', 'Schrute', 'schrutefarms', 'dschrute@harvard.edu', '$2y$10$OZEIhBCqdr6g2T9UQZitzOTGOQn3h9WwnZE0DVaHdkQifCl63xsT2', 'no', '2018-03-14 21:48:17', 227),
+(45, 'Michael', 'Jackson', 'mjackson1', 'mj1@harvard.edu', '$2y$10$7H9gMKLO0bbrdhX8Qvs2q.pw9Q2DCi0YXF85IYydgfwxY/knU8BhC', 'no', '2018-03-19 00:54:16', 227),
+(46, 'Josh', 'Hendrick', 'jhendrick', 'jh@harvard.edu', '$2y$10$7p7H7NM.dx/tVbm.RmPKeOH4Xm8S0pR3AHj8W/DpyIC3iiZOJBTpe', 'no', '2018-03-19 00:56:30', 227),
+(47, 'Luis', 'Felix', 'lfeliz', 'lfelix@harvard.edu', '$2y$10$k/asIv022.uPVjHudPra6Oxa/tUOurZeAcEWum4a35shNSmHPekfW', 'no', '2018-03-25 07:05:17', 227),
+(49, 'Mike', 'Jones', 'mjones', 'mjones1@harvard.edu', '$2y$10$nrE.or1bmayeTvAkOmSHS.vlgVgOFnj1pQjoSPtJuA0rV2nNeK9am', 'no', '2018-06-14 14:42:19', 227),
+(51, 'Rob', 'Yu', 'robyu', 'robyu@harvard.edu', '$2y$10$veKt8.ugTkbnV/OR0ZuBrOcivicLzU4b0qFJSgkdCCQZ.f1W7caK2', 'no', '2018-06-14 14:45:25', 227),
+(52, 'Mary', 'Jane', 'maryjane', 'maryjane@harvard.edu', '$2y$10$.CdC6qyDY8E55ibBSfcXde.ocugbGgPYXLSBQH5yt74Fm0tgpG0se', 'no', '2018-06-14 17:00:19', 227);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `communities`
 --
 
@@ -931,7 +869,10 @@ INSERT INTO `communities` (`community_id`, `college_id`, `category_id`, `creator
 (22, 227, 6, 35, 'Vegan Athletes @Harvard', NULL, 'Join our community if you would like to connect with vegan athletes on campus.', 'group', 'public', '#7baf86', NULL, '2018-04-04 19:10:00'),
 (23, 227, 12, 35, 'LGBTQ @Harvard', 'Harvard&#39;s home for Lesbian, Gay, Bisexual, Transgender, Queer Community! Join the movement!!!!!', 'Meet and Discuss with LGBTQ advocates @Harvard!', 'group', 'public', '#ffbdbd', '2018-05-19 06:32:21', '2018-04-13 14:51:46'),
 (24, 227, 1, 39, 'miller test', NULL, 'miller test', 'group', 'private', '#DF7367', '2018-05-08 08:20:33', '2018-04-25 15:45:59'),
-(25, 227, 2, 39, 'miller test 2', 'join millers test', 'miller test 2', 'group', 'private', '#5a626f', '2018-05-16 13:32:08', '2018-04-25 19:38:14');
+(25, 227, 2, 39, 'miller test 2', 'join millers test', 'miller test 2', 'group', 'private', '#5a626f', '2018-05-16 13:32:08', '2018-04-25 19:38:14'),
+(27, 227, 23, 38, 'Finance', NULL, NULL, 'majors', 'public', '#5a626f', NULL, '2018-06-14 14:21:31'),
+(29, 227, 23, 38, 'Anthropology', NULL, NULL, 'majors', 'public', '#5a626f', NULL, '2018-06-14 14:45:25'),
+(31, 227, 23, 38, 'Mathematics', NULL, NULL, 'majors', 'public', '#5a626f', NULL, '2018-06-14 17:00:19');
 
 -- --------------------------------------------------------
 
@@ -958,7 +899,44 @@ INSERT INTO `community_admins` (`admin_id`, `community_id`, `student_id`, `admin
 (11, 22, 35, 2, '2018-04-04 19:10:00'),
 (12, 23, 35, 2, '2018-04-13 14:51:46'),
 (13, 24, 39, 2, '2018-04-25 15:45:59'),
-(14, 25, 39, 2, '2018-04-25 19:38:14');
+(14, 25, 39, 2, '2018-04-25 19:38:14'),
+(16, 29, 38, 2, '2018-06-14 14:45:25'),
+(17, 31, 38, 2, '2018-06-14 17:00:19');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `community_discussions`
+--
+
+CREATE TABLE `community_discussions` (
+  `c_discussion_id` int(10) UNSIGNED NOT NULL,
+  `community_id` int(10) UNSIGNED DEFAULT NULL,
+  `major_id` int(10) UNSIGNED DEFAULT NULL,
+  `student_id` int(10) UNSIGNED DEFAULT NULL,
+  `c_discussion_title` varchar(1024) DEFAULT NULL,
+  `c_discussion_post` varchar(4086) NOT NULL,
+  `photo` varchar(64) DEFAULT NULL,
+  `post_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `community_discussions`
+--
+
+INSERT INTO `community_discussions` (`c_discussion_id`, `community_id`, `major_id`, `student_id`, `c_discussion_title`, `c_discussion_post`, `photo`, `post_date`) VALUES
+(1, 1, NULL, 35, NULL, 'Who else has had to deal with people stealing your sandswich at work? Especially the most amazing thanksgiving sandhwich....smh', NULL, '2017-12-10 08:31:02'),
+(2, 1, NULL, 35, NULL, 'Hey Guys,\r\n\r\nJust had the most amazing sandwich ever get robbed from me at work. I even left a note. I got Ross&#39;ed  today. :-(', NULL, '2017-12-11 14:58:27'),
+(3, NULL, 2, 35, NULL, 'Need some recommendations for Finance classes for this upcoming Spring semester???????', NULL, '2018-01-03 12:12:25'),
+(4, 2, NULL, 38, 'Off-campus living.....', 'A single, tiny room with shared bath could cost $800-$900+. One woman was offering a tiny section of attic which could only be accessed through a bathroom- no fan or air conditioner, for $750!!! Many of the landlords my friends and I have dealt with are charlatans. They see students as cash cows and take advantage of them. I\'ve heard many horror stories. There should be a law against what those so-called landlords do, especially considering they don\'t report the additional income to the IRS.', NULL, '2018-01-10 11:00:56'),
+(12, NULL, 2, 35, NULL, 'Is Finance hard @harvard?', NULL, '2018-02-15 13:05:34'),
+(17, 9, NULL, 42, 'hold my beer.....', 'hello,\r\n\r\nhold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, \r\n\r\n\r\nhold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, \r\n\r\n\r\n\r\nhold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, \r\n\r\nhold my beer, \r\n\r\n\r\nhold my beer, \r\nJason', NULL, '2018-04-04 07:49:42'),
+(18, 24, NULL, 35, NULL, 'Hello Miller Test!\r\n\r\nHow are you doing today?', NULL, '2018-04-25 23:27:29'),
+(19, 4, NULL, 35, NULL, 'Whats up, rulers of the galaxy?!', NULL, '2018-06-07 11:32:43'),
+(20, 1, NULL, 35, NULL, 'nothing...!!', NULL, '2018-06-07 12:54:00'),
+(21, 25, NULL, 35, NULL, 'no wayyy', NULL, '2018-06-07 12:57:47'),
+(22, 1, NULL, 35, NULL, 'oh yeaaa...', NULL, '2018-06-13 21:05:32'),
+(23, 9, NULL, 35, 'yes', 'let say yes to everyting', NULL, '2018-06-14 10:34:14');
 
 -- --------------------------------------------------------
 
@@ -994,40 +972,9 @@ INSERT INTO `community_discussion_vote` (`c_vote_id`, `c_discussion_id`, `studen
 (22, 2, 39, 1),
 (23, 17, 35, 1),
 (24, 19, 35, 1),
-(25, 20, 35, 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `community_discussions`
---
-
-CREATE TABLE `community_discussions` (
-  `c_discussion_id` int(10) UNSIGNED NOT NULL,
-  `community_id` int(10) UNSIGNED DEFAULT NULL,
-  `major_id` int(10) UNSIGNED DEFAULT NULL,
-  `student_id` int(10) UNSIGNED DEFAULT NULL,
-  `c_discussion_title` varchar(1024) DEFAULT NULL,
-  `c_discussion_post` varchar(4086) NOT NULL,
-  `photo` varchar(64) DEFAULT NULL,
-  `post_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `community_discussions`
---
-
-INSERT INTO `community_discussions` (`c_discussion_id`, `community_id`, `major_id`, `student_id`, `c_discussion_title`, `c_discussion_post`, `photo`, `post_date`) VALUES
-(1, 1, NULL, 35, NULL, 'Who else has had to deal with people stealing your sandswich at work? Especially the most amazing thanksgiving sandhwich....smh', NULL, '2017-12-10 08:31:02'),
-(2, 1, NULL, 35, NULL, 'Hey Guys,\r\n\r\nJust had the most amazing sandwich ever get robbed from me at work. I even left a note. I got Ross&#39;ed  today. :-(', NULL, '2017-12-11 14:58:27'),
-(3, NULL, 2, 35, NULL, 'Need some recommendations for Finance classes for this upcoming Spring semester???????', NULL, '2018-01-03 12:12:25'),
-(4, 2, NULL, 38, 'Off-campus living.....', 'A single, tiny room with shared bath could cost $800-$900+. One woman was offering a tiny section of attic which could only be accessed through a bathroom- no fan or air conditioner, for $750!!! Many of the landlords my friends and I have dealt with are charlatans. They see students as cash cows and take advantage of them. I\'ve heard many horror stories. There should be a law against what those so-called landlords do, especially considering they don\'t report the additional income to the IRS.', NULL, '2018-01-10 11:00:56'),
-(12, NULL, 2, 35, NULL, 'Is Finance hard @harvard?', NULL, '2018-02-15 13:05:34'),
-(17, 9, NULL, 42, 'hold my beer.....', 'hello,\r\n\r\nhold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, \r\n\r\n\r\nhold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, \r\n\r\n\r\n\r\nhold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, \r\n\r\nhold my beer, \r\n\r\n\r\nhold my beer, \r\nJason', NULL, '2018-04-04 07:49:42'),
-(18, 24, NULL, 35, NULL, 'Hello Miller Test!\r\n\r\nHow are you doing today?', NULL, '2018-04-25 23:27:29'),
-(19, 4, NULL, 35, NULL, 'Whats up, rulers of the galaxy?!', NULL, '2018-06-07 11:32:43'),
-(20, 1, NULL, 35, NULL, 'nothing...!!', NULL, '2018-06-07 12:54:00'),
-(21, 25, NULL, 35, NULL, 'no wayyy', NULL, '2018-06-07 12:57:47');
+(25, 20, 35, 1),
+(26, 22, 35, 1),
+(27, 23, 35, 1);
 
 -- --------------------------------------------------------
 
@@ -1069,7 +1016,76 @@ INSERT INTO `community_members` (`community_member_id`, `community_id`, `student
 (100, 25, 35, 1, NULL, '2018-05-08 15:48:21'),
 (101, 23, 35, 1, NULL, '2018-05-09 18:16:28'),
 (102, 25, 41, 1, NULL, '2018-05-22 18:35:54'),
-(103, 24, 35, 2, 'no', '2018-06-07 14:47:22');
+(103, 24, 35, 2, 'no', '2018-06-07 14:47:22'),
+(105, 9, 35, 1, NULL, '2018-06-14 14:03:41'),
+(106, 27, 35, 1, NULL, '2018-06-14 14:25:48'),
+(111, 29, 51, 1, NULL, '2018-06-14 14:45:25'),
+(112, 31, 38, 1, NULL, '2018-06-14 17:00:19'),
+(113, 31, 52, 1, NULL, '2018-06-14 17:00:19');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `c_discussion_replies`
+--
+
+CREATE TABLE `c_discussion_replies` (
+  `c_discussion_reply_id` int(10) UNSIGNED NOT NULL,
+  `c_discussion_id` int(10) UNSIGNED NOT NULL,
+  `student_id` int(10) UNSIGNED DEFAULT NULL,
+  `reply_post` varchar(4096) NOT NULL,
+  `post_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `c_discussion_replies`
+--
+
+INSERT INTO `c_discussion_replies` (`c_discussion_reply_id`, `c_discussion_id`, `student_id`, `reply_post`, `post_date`) VALUES
+(1, 2, 37, 'Happens to me all the time in my doorm room. Smh', '2017-12-12 10:19:01'),
+(3, 3, 37, 'Definitely take Intro to Finance with Professor Sternberg', '2018-01-08 11:35:22'),
+(11, 12, 35, 'very hard!', '2018-02-27 19:20:05'),
+(13, 14, 35, 'hello to you!', '2018-03-13 09:39:51'),
+(14, 12, 42, 'Its hard but very rewarding!', '2018-03-14 13:35:27'),
+(15, 2, 39, 'hello all!', '2018-04-25 11:47:19'),
+(16, 2, 35, 'hey! we&#39;re the millers', '2018-06-04 19:54:43'),
+(19, 2, 35, 'yalll', '2018-06-06 21:45:11'),
+(20, 19, 35, 'do we rule?!!?', '2018-06-07 11:32:53'),
+(21, 20, 35, 'nada!', '2018-06-07 12:54:05'),
+(22, 21, 35, 'yesss', '2018-06-07 12:57:52'),
+(23, 22, 35, 'niceee', '2018-06-13 21:05:39');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `c_discussion_r_reply`
+--
+
+CREATE TABLE `c_discussion_r_reply` (
+  `r_reply_id` int(10) UNSIGNED NOT NULL,
+  `c_discussion_reply_id` int(10) UNSIGNED NOT NULL,
+  `student_id` int(10) UNSIGNED DEFAULT NULL,
+  `r_reply_post` varchar(4096) NOT NULL,
+  `post_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `c_discussion_r_reply`
+--
+
+INSERT INTO `c_discussion_r_reply` (`r_reply_id`, `c_discussion_reply_id`, `student_id`, `r_reply_post`, `post_date`) VALUES
+(1, 1, 35, 'So saddddddddddd...........', '2017-12-12 11:32:14'),
+(2, 1, 37, 'I know, right? I\'m officially done making sandwiches. It\'s tv dinners and mac & Cheese till I graduate.', '2017-12-12 11:54:23'),
+(3, 3, 35, 'thank you very much!', '2018-02-10 23:32:24'),
+(10, 11, 42, 'not that hard!', '2018-03-14 13:35:36'),
+(11, 1, 39, 'I love tv dinners!', '2018-05-05 11:58:14'),
+(12, 15, 35, 'hey @rmiller294333', '2018-05-30 19:42:34'),
+(13, 19, 35, 'hello!', '2018-06-07 08:32:51'),
+(14, 15, 35, 'hey man!', '2018-06-07 08:35:23'),
+(15, 20, 35, 'of course!!!!', '2018-06-07 11:33:12'),
+(16, 19, 35, 'hey!!!!!!!!', '2018-06-07 11:40:01'),
+(17, 21, 35, 'really??!', '2018-06-07 12:54:12'),
+(18, 22, 35, 'nooooo', '2018-06-07 12:57:58');
 
 -- --------------------------------------------------------
 
@@ -1098,28 +1114,6 @@ INSERT INTO `discussion_post` (`d_post_id`, `d_topic_id`, `college_id`, `student
 -- --------------------------------------------------------
 
 --
--- Table structure for table `discussion_r_replies`
---
-
-CREATE TABLE `discussion_r_replies` (
-  `r_reply_id` int(10) UNSIGNED NOT NULL,
-  `d_reply_id` int(10) UNSIGNED DEFAULT NULL,
-  `student_id` int(10) UNSIGNED DEFAULT NULL,
-  `r_reply_post` varchar(4096) NOT NULL,
-  `post_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `discussion_r_replies`
---
-
-INSERT INTO `discussion_r_replies` (`r_reply_id`, `d_reply_id`, `student_id`, `r_reply_post`, `post_date`) VALUES
-(36, 14, 35, 'Thanks so much for your reply. Computer Science was on my list. Will def keep my options open!!', '2018-06-06 14:00:30'),
-(39, 16, 35, 'awesome!!', '2018-06-07 12:39:18');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `discussion_replies`
 --
 
@@ -1139,6 +1133,28 @@ INSERT INTO `discussion_replies` (`d_reply_id`, `discussion_id`, `student_id`, `
 (14, 9, 37, 'Great question.\r\n\r\nI had the same issues when I was a freshmen. I&#39;m a Computer Science major. I picked CS because I have been interested in programming since middle school. It was my first love and it made sense for me. Also, I did some research about which jobs will be highest in demand, and software engineers were at the top of the list. The research helped me make my final decisions and I haven&#39;t regretted once. My advice for you would be to choose something you loved doing as a kid, whether that was video games or playing sports. Also, do some research on the subjects you&#39;re interested in. You&#39;d be surprise how many subjects could be obselete in the near future.', '2018-06-06 13:59:07'),
 (15, 15, 35, 'dslknnkdklnmmewdkwn3', '2018-06-07 12:28:05'),
 (16, 15, 35, 'ffgg', '2018-06-07 12:38:44');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `discussion_r_replies`
+--
+
+CREATE TABLE `discussion_r_replies` (
+  `r_reply_id` int(10) UNSIGNED NOT NULL,
+  `d_reply_id` int(10) UNSIGNED DEFAULT NULL,
+  `student_id` int(10) UNSIGNED DEFAULT NULL,
+  `r_reply_post` varchar(4096) NOT NULL,
+  `post_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `discussion_r_replies`
+--
+
+INSERT INTO `discussion_r_replies` (`r_reply_id`, `d_reply_id`, `student_id`, `r_reply_post`, `post_date`) VALUES
+(36, 14, 35, 'Thanks so much for your reply. Computer Science was on my list. Will def keep my options open!!', '2018-06-06 14:00:30'),
+(39, 16, 35, 'awesome!!', '2018-06-07 12:39:18');
 
 -- --------------------------------------------------------
 
@@ -1255,6 +1271,37 @@ INSERT INTO `email_newsletter` (`sign_up_id`, `email`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `events`
+--
+
+CREATE TABLE `events` (
+  `event_id` int(10) UNSIGNED NOT NULL,
+  `event_type_id` int(10) UNSIGNED NOT NULL,
+  `college_id` int(10) UNSIGNED NOT NULL,
+  `student_id` int(10) UNSIGNED DEFAULT NULL,
+  `community_id` int(10) UNSIGNED DEFAULT NULL,
+  `event_access` varchar(32) DEFAULT NULL,
+  `event_title` varchar(256) DEFAULT NULL,
+  `event_description` varchar(512) DEFAULT NULL,
+  `event_location` varchar(256) DEFAULT NULL,
+  `event_address` varchar(256) DEFAULT NULL,
+  `event_date` date DEFAULT NULL,
+  `event_time` time DEFAULT NULL,
+  `event_photo` varchar(128) NOT NULL,
+  `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `events`
+--
+
+INSERT INTO `events` (`event_id`, `event_type_id`, `college_id`, `student_id`, `community_id`, `event_access`, `event_title`, `event_description`, `event_location`, `event_address`, `event_date`, `event_time`, `event_photo`, `date_created`) VALUES
+(4, 1, 227, 35, 1, 'public', 'Coffee and Study', 'Who wants to meetup for coffee and study for final exams. Leave comments below or DM me', 'Starbucks on Mass Ave.', '', '2017-12-08', '06:00:00', '', '2017-12-08 09:49:38'),
+(6, 6, 227, 44, NULL, 'public', 'Wall Street movie night', 'finance junkies watching wall street movies all night', 'dorm', NULL, '2018-04-14', '13:30:00', '', '2018-03-14 18:06:21');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `event_attendees`
 --
 
@@ -1331,37 +1378,6 @@ INSERT INTO `event_type` (`event_type_id`, `event_type`, `event_type_photo`) VAL
 -- --------------------------------------------------------
 
 --
--- Table structure for table `events`
---
-
-CREATE TABLE `events` (
-  `event_id` int(10) UNSIGNED NOT NULL,
-  `event_type_id` int(10) UNSIGNED NOT NULL,
-  `college_id` int(10) UNSIGNED NOT NULL,
-  `student_id` int(10) UNSIGNED DEFAULT NULL,
-  `community_id` int(10) UNSIGNED DEFAULT NULL,
-  `event_access` varchar(32) DEFAULT NULL,
-  `event_title` varchar(256) DEFAULT NULL,
-  `event_description` varchar(512) DEFAULT NULL,
-  `event_location` varchar(256) DEFAULT NULL,
-  `event_address` varchar(256) DEFAULT NULL,
-  `event_date` date DEFAULT NULL,
-  `event_time` time DEFAULT NULL,
-  `event_photo` varchar(128) NOT NULL,
-  `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `events`
---
-
-INSERT INTO `events` (`event_id`, `event_type_id`, `college_id`, `student_id`, `community_id`, `event_access`, `event_title`, `event_description`, `event_location`, `event_address`, `event_date`, `event_time`, `event_photo`, `date_created`) VALUES
-(4, 1, 227, 35, 1, 'public', 'Coffee and Study', 'Who wants to meetup for coffee and study for final exams. Leave comments below or DM me', 'Starbucks on Mass Ave.', '', '2017-12-08', '06:00:00', '', '2017-12-08 09:49:38'),
-(6, 6, 227, 44, NULL, 'public', 'Wall Street movie night', 'finance junkies watching wall street movies all night', 'dorm', NULL, '2018-04-14', '13:30:00', '', '2018-03-14 18:06:21');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `favorites`
 --
 
@@ -1400,7 +1416,9 @@ INSERT INTO `favorites` (`favorite_id`, `user_id`, `c_discussion_id`, `community
 (104, 35, 18, NULL, NULL, NULL),
 (105, 35, 19, NULL, NULL, NULL),
 (106, 35, NULL, NULL, 15, NULL),
-(107, 35, 20, NULL, NULL, NULL);
+(107, 35, 20, NULL, NULL, NULL),
+(108, 35, 22, NULL, NULL, NULL),
+(109, 35, 23, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1437,7 +1455,8 @@ INSERT INTO `friend_followers` (`follower_id`, `user_id`, `friend_id`) VALUES
 (34, 39, 39),
 (35, 39, 40),
 (36, 39, 35),
-(45, 35, 37);
+(45, 35, 37),
+(46, 35, 35);
 
 -- --------------------------------------------------------
 
@@ -1482,21 +1501,17 @@ INSERT INTO `interests` (`interest_id`, `category_id`, `student_id`) VALUES
 CREATE TABLE `majors` (
   `major_id` int(10) UNSIGNED NOT NULL,
   `majorList_id` int(10) UNSIGNED DEFAULT NULL,
-  `college_id` int(10) UNSIGNED DEFAULT NULL,
-  `category_id` int(10) UNSIGNED NOT NULL DEFAULT '23',
-  `community_name` varchar(32) DEFAULT NULL
+  `college_id` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `majors`
 --
 
-INSERT INTO `majors` (`major_id`, `majorList_id`, `college_id`, `category_id`, `community_name`) VALUES
-(2, 210, 227, 23, 'Finance'),
-(3, 242, 227, 23, 'Marketing'),
-(4, 832, 227, 23, 'Criminal Justice/Law Enforcement'),
-(5, 150, 354, 23, 'Microbiology and Immunology'),
-(6, 292, 227, 23, 'Computer Science');
+INSERT INTO `majors` (`major_id`, `majorList_id`, `college_id`) VALUES
+(2, 210, 227),
+(7, 1112, 227),
+(9, 900, 227);
 
 -- --------------------------------------------------------
 
@@ -2789,7 +2804,10 @@ INSERT INTO `profile_about_me` (`profile_id`, `major_id`, `student_id`, `about`,
 (9, 210, 44, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (10, 242, 45, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (11, 242, 46, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(12, 832, 47, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(12, 832, 47, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(13, 292, 49, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(14, 1112, 51, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(15, 900, 52, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -2825,28 +2843,6 @@ CREATE TABLE `reset_password` (
   `id` int(10) UNSIGNED DEFAULT NULL,
   `reset_code` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `review_ratings`
---
-
-CREATE TABLE `review_ratings` (
-  `rating_id` int(10) UNSIGNED NOT NULL,
-  `rating` varchar(32) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `review_ratings`
---
-
-INSERT INTO `review_ratings` (`rating_id`, `rating`) VALUES
-(1, 'Awesome'),
-(2, 'Very Good'),
-(3, 'Eh, Average'),
-(4, 'Kinda Bad'),
-(5, 'Horrible');
 
 -- --------------------------------------------------------
 
@@ -2908,6 +2904,28 @@ INSERT INTO `reviews_categories` (`review_category_id`, `review_category`) VALUE
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `review_ratings`
+--
+
+CREATE TABLE `review_ratings` (
+  `rating_id` int(10) UNSIGNED NOT NULL,
+  `rating` varchar(32) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `review_ratings`
+--
+
+INSERT INTO `review_ratings` (`rating_id`, `rating`) VALUES
+(1, 'Awesome'),
+(2, 'Very Good'),
+(3, 'Eh, Average'),
+(4, 'Kinda Bad'),
+(5, 'Horrible');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `school_followers`
 --
 
@@ -2940,7 +2958,10 @@ INSERT INTO `school_followers` (`school_follower_id`, `user_id`, `college_id`, `
 (33, 39, 394, '2018-04-25 13:49:37'),
 (34, 39, 227, '2018-04-26 14:20:09'),
 (35, 39, 227, '2018-05-05 11:58:58'),
-(36, 35, 221, '2018-05-30 20:13:55');
+(36, 35, 221, '2018-05-30 20:13:55'),
+(38, 49, 227, '2018-06-14 10:42:19'),
+(39, 51, 227, '2018-06-14 10:45:25'),
+(40, 52, 227, '2018-06-14 13:00:19');
 
 -- --------------------------------------------------------
 
@@ -2974,26 +2995,16 @@ INSERT INTO `verification` (`id`, `verification_code`) VALUES
 --
 
 --
--- Indexes for table `c_discussion_r_reply`
---
-ALTER TABLE `c_discussion_r_reply`
-  ADD PRIMARY KEY (`r_reply_id`),
-  ADD KEY `c_discussion_r_reply_ibfk_5` (`student_id`),
-  ADD KEY `c_discussion_reply_id` (`c_discussion_reply_id`);
-
---
--- Indexes for table `c_discussion_replies`
---
-ALTER TABLE `c_discussion_replies`
-  ADD PRIMARY KEY (`c_discussion_reply_id`),
-  ADD KEY `c_discussion_replies_ibfk_4` (`student_id`),
-  ADD KEY `c_discussion_id` (`c_discussion_id`);
-
---
 -- Indexes for table `categories`
 --
 ALTER TABLE `categories`
   ADD PRIMARY KEY (`category_id`);
+
+--
+-- Indexes for table `colleges`
+--
+ALTER TABLE `colleges`
+  ADD PRIMARY KEY (`college_id`);
 
 --
 -- Indexes for table `college_student`
@@ -3003,20 +3014,14 @@ ALTER TABLE `college_student`
   ADD KEY `collegestudent_ibfk_2` (`collegeId`);
 
 --
--- Indexes for table `colleges`
---
-ALTER TABLE `colleges`
-  ADD PRIMARY KEY (`college_id`);
-
---
 -- Indexes for table `communities`
 --
 ALTER TABLE `communities`
   ADD PRIMARY KEY (`community_id`),
   ADD UNIQUE KEY `community_name` (`community_name`),
-  ADD KEY `communities_ibfk_1` (`college_id`),
   ADD KEY `communities_ibfk_2` (`category_id`),
-  ADD KEY `communities_ibfk_4` (`creator_id`);
+  ADD KEY `communities_ibfk_4` (`creator_id`),
+  ADD KEY `communities_ibfk_1` (`college_id`);
 
 --
 -- Indexes for table `community_admins`
@@ -3025,14 +3030,6 @@ ALTER TABLE `community_admins`
   ADD PRIMARY KEY (`admin_id`),
   ADD KEY `community_admins_ibfk_1` (`community_id`),
   ADD KEY `community_admins_ibfk_2` (`student_id`);
-
---
--- Indexes for table `community_discussion_vote`
---
-ALTER TABLE `community_discussion_vote`
-  ADD PRIMARY KEY (`c_vote_id`),
-  ADD KEY `community_discussion_vote_ibfk_1` (`c_discussion_id`),
-  ADD KEY `community_discussion_vote_ibfk_2` (`student_id`);
 
 --
 -- Indexes for table `community_discussions`
@@ -3044,12 +3041,36 @@ ALTER TABLE `community_discussions`
   ADD KEY `community_discussions_ibfk_3` (`major_id`);
 
 --
+-- Indexes for table `community_discussion_vote`
+--
+ALTER TABLE `community_discussion_vote`
+  ADD PRIMARY KEY (`c_vote_id`),
+  ADD KEY `community_discussion_vote_ibfk_1` (`c_discussion_id`),
+  ADD KEY `community_discussion_vote_ibfk_2` (`student_id`);
+
+--
 -- Indexes for table `community_members`
 --
 ALTER TABLE `community_members`
   ADD PRIMARY KEY (`community_member_id`),
   ADD KEY `community_members_ibfk_1` (`community_id`),
   ADD KEY `community_members_ibfk_2` (`student_id`);
+
+--
+-- Indexes for table `c_discussion_replies`
+--
+ALTER TABLE `c_discussion_replies`
+  ADD PRIMARY KEY (`c_discussion_reply_id`),
+  ADD KEY `c_discussion_replies_ibfk_4` (`student_id`),
+  ADD KEY `c_discussion_id` (`c_discussion_id`);
+
+--
+-- Indexes for table `c_discussion_r_reply`
+--
+ALTER TABLE `c_discussion_r_reply`
+  ADD PRIMARY KEY (`r_reply_id`),
+  ADD KEY `c_discussion_r_reply_ibfk_5` (`student_id`),
+  ADD KEY `c_discussion_reply_id` (`c_discussion_reply_id`);
 
 --
 -- Indexes for table `discussion_post`
@@ -3061,20 +3082,20 @@ ALTER TABLE `discussion_post`
   ADD KEY `discussion_post_ibfk_3` (`college_id`);
 
 --
--- Indexes for table `discussion_r_replies`
---
-ALTER TABLE `discussion_r_replies`
-  ADD PRIMARY KEY (`r_reply_id`),
-  ADD KEY `discussion_r_replies_ibfk_6` (`d_reply_id`),
-  ADD KEY `discussion_r_replies_ibfk_9` (`student_id`);
-
---
 -- Indexes for table `discussion_replies`
 --
 ALTER TABLE `discussion_replies`
   ADD PRIMARY KEY (`d_reply_id`),
   ADD KEY `discussion_replies_ibfk_5` (`discussion_id`),
   ADD KEY `discussion_replies_ibfk_6` (`student_id`);
+
+--
+-- Indexes for table `discussion_r_replies`
+--
+ALTER TABLE `discussion_r_replies`
+  ADD PRIMARY KEY (`r_reply_id`),
+  ADD KEY `discussion_r_replies_ibfk_6` (`d_reply_id`),
+  ADD KEY `discussion_r_replies_ibfk_9` (`student_id`);
 
 --
 -- Indexes for table `discussion_topics`
@@ -3095,6 +3116,16 @@ ALTER TABLE `discussion_vote`
 --
 ALTER TABLE `email_newsletter`
   ADD PRIMARY KEY (`sign_up_id`);
+
+--
+-- Indexes for table `events`
+--
+ALTER TABLE `events`
+  ADD PRIMARY KEY (`event_id`),
+  ADD KEY `events_ibfk_1` (`event_type_id`),
+  ADD KEY `events_ibfk_3` (`student_id`),
+  ADD KEY `events_ibfk_4` (`community_id`),
+  ADD KEY `events_ibfk_2` (`college_id`);
 
 --
 -- Indexes for table `event_attendees`
@@ -3118,16 +3149,6 @@ ALTER TABLE `event_comments`
 --
 ALTER TABLE `event_type`
   ADD PRIMARY KEY (`event_type_id`);
-
---
--- Indexes for table `events`
---
-ALTER TABLE `events`
-  ADD PRIMARY KEY (`event_id`),
-  ADD KEY `events_ibfk_1` (`event_type_id`),
-  ADD KEY `events_ibfk_2` (`college_id`),
-  ADD KEY `events_ibfk_3` (`student_id`),
-  ADD KEY `events_ibfk_4` (`community_id`);
 
 --
 -- Indexes for table `favorites`
@@ -3161,9 +3182,8 @@ ALTER TABLE `interests`
 --
 ALTER TABLE `majors`
   ADD PRIMARY KEY (`major_id`),
-  ADD KEY `majors_ibfk_1` (`college_id`),
-  ADD KEY `majors_ibfk_2` (`category_id`),
-  ADD KEY `majors_ibfk_3` (`majorList_id`);
+  ADD KEY `majors_ibfk_3` (`majorList_id`),
+  ADD KEY `majors_ibfk_1` (`college_id`);
 
 --
 -- Indexes for table `majors_list`
@@ -3182,8 +3202,8 @@ ALTER TABLE `notifications`
 --
 ALTER TABLE `profile_about_me`
   ADD PRIMARY KEY (`profile_id`),
-  ADD KEY `profile_about_me_ibfk_2` (`major_id`),
-  ADD KEY `profile_about_me_ibfk_1` (`student_id`);
+  ADD KEY `profile_about_me_ibfk_1` (`student_id`),
+  ADD KEY `profile_about_me_ibfk_2` (`major_id`);
 
 --
 -- Indexes for table `report_content`
@@ -3198,26 +3218,26 @@ ALTER TABLE `reset_password`
   ADD KEY `id` (`id`);
 
 --
--- Indexes for table `review_ratings`
---
-ALTER TABLE `review_ratings`
-  ADD PRIMARY KEY (`rating_id`);
-
---
 -- Indexes for table `reviews`
 --
 ALTER TABLE `reviews`
   ADD PRIMARY KEY (`review_id`),
   ADD KEY `reviews_ibfk_10` (`review_rating_id`),
   ADD KEY `reviews_ibfk_11` (`student_id`),
-  ADD KEY `reviews_ibfk_8` (`college_id`),
-  ADD KEY `reviews_ibfk_9` (`review_category_id`);
+  ADD KEY `reviews_ibfk_9` (`review_category_id`),
+  ADD KEY `reviews_ibfk_8` (`college_id`);
 
 --
 -- Indexes for table `reviews_categories`
 --
 ALTER TABLE `reviews_categories`
   ADD PRIMARY KEY (`review_category_id`);
+
+--
+-- Indexes for table `review_ratings`
+--
+ALTER TABLE `review_ratings`
+  ADD PRIMARY KEY (`rating_id`);
 
 --
 -- Indexes for table `school_followers`
@@ -3232,70 +3252,70 @@ ALTER TABLE `school_followers`
 --
 
 --
--- AUTO_INCREMENT for table `c_discussion_r_reply`
---
-ALTER TABLE `c_discussion_r_reply`
-  MODIFY `r_reply_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
---
--- AUTO_INCREMENT for table `c_discussion_replies`
---
-ALTER TABLE `c_discussion_replies`
-  MODIFY `c_discussion_reply_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
---
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
   MODIFY `category_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
---
--- AUTO_INCREMENT for table `college_student`
---
-ALTER TABLE `college_student`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 --
 -- AUTO_INCREMENT for table `colleges`
 --
 ALTER TABLE `colleges`
   MODIFY `college_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=706;
 --
+-- AUTO_INCREMENT for table `college_student`
+--
+ALTER TABLE `college_student`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+--
 -- AUTO_INCREMENT for table `communities`
 --
 ALTER TABLE `communities`
-  MODIFY `community_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `community_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 --
 -- AUTO_INCREMENT for table `community_admins`
 --
 ALTER TABLE `community_admins`
-  MODIFY `admin_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
---
--- AUTO_INCREMENT for table `community_discussion_vote`
---
-ALTER TABLE `community_discussion_vote`
-  MODIFY `c_vote_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `admin_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `community_discussions`
 --
 ALTER TABLE `community_discussions`
-  MODIFY `c_discussion_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `c_discussion_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+--
+-- AUTO_INCREMENT for table `community_discussion_vote`
+--
+ALTER TABLE `community_discussion_vote`
+  MODIFY `c_vote_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 --
 -- AUTO_INCREMENT for table `community_members`
 --
 ALTER TABLE `community_members`
-  MODIFY `community_member_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
+  MODIFY `community_member_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
+--
+-- AUTO_INCREMENT for table `c_discussion_replies`
+--
+ALTER TABLE `c_discussion_replies`
+  MODIFY `c_discussion_reply_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+--
+-- AUTO_INCREMENT for table `c_discussion_r_reply`
+--
+ALTER TABLE `c_discussion_r_reply`
+  MODIFY `r_reply_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `discussion_post`
 --
 ALTER TABLE `discussion_post`
   MODIFY `d_post_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
--- AUTO_INCREMENT for table `discussion_r_replies`
---
-ALTER TABLE `discussion_r_replies`
-  MODIFY `r_reply_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
---
 -- AUTO_INCREMENT for table `discussion_replies`
 --
 ALTER TABLE `discussion_replies`
   MODIFY `d_reply_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+--
+-- AUTO_INCREMENT for table `discussion_r_replies`
+--
+ALTER TABLE `discussion_r_replies`
+  MODIFY `r_reply_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 --
 -- AUTO_INCREMENT for table `discussion_topics`
 --
@@ -3312,6 +3332,11 @@ ALTER TABLE `discussion_vote`
 ALTER TABLE `email_newsletter`
   MODIFY `sign_up_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
+-- AUTO_INCREMENT for table `events`
+--
+ALTER TABLE `events`
+  MODIFY `event_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
 -- AUTO_INCREMENT for table `event_attendees`
 --
 ALTER TABLE `event_attendees`
@@ -3327,20 +3352,15 @@ ALTER TABLE `event_comments`
 ALTER TABLE `event_type`
   MODIFY `event_type_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
--- AUTO_INCREMENT for table `events`
---
-ALTER TABLE `events`
-  MODIFY `event_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
---
 -- AUTO_INCREMENT for table `favorites`
 --
 ALTER TABLE `favorites`
-  MODIFY `favorite_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=108;
+  MODIFY `favorite_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
 --
 -- AUTO_INCREMENT for table `friend_followers`
 --
 ALTER TABLE `friend_followers`
-  MODIFY `follower_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `follower_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 --
 -- AUTO_INCREMENT for table `interests`
 --
@@ -3350,7 +3370,7 @@ ALTER TABLE `interests`
 -- AUTO_INCREMENT for table `majors`
 --
 ALTER TABLE `majors`
-  MODIFY `major_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `major_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `majors_list`
 --
@@ -3365,17 +3385,12 @@ ALTER TABLE `notifications`
 -- AUTO_INCREMENT for table `profile_about_me`
 --
 ALTER TABLE `profile_about_me`
-  MODIFY `profile_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `profile_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `report_content`
 --
 ALTER TABLE `report_content`
   MODIFY `report_content_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
---
--- AUTO_INCREMENT for table `review_ratings`
---
-ALTER TABLE `review_ratings`
-  MODIFY `rating_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `reviews`
 --
@@ -3387,26 +3402,18 @@ ALTER TABLE `reviews`
 ALTER TABLE `reviews_categories`
   MODIFY `review_category_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
+-- AUTO_INCREMENT for table `review_ratings`
+--
+ALTER TABLE `review_ratings`
+  MODIFY `rating_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
 -- AUTO_INCREMENT for table `school_followers`
 --
 ALTER TABLE `school_followers`
-  MODIFY `school_follower_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `school_follower_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 --
 -- Constraints for dumped tables
 --
-
---
--- Constraints for table `c_discussion_r_reply`
---
-ALTER TABLE `c_discussion_r_reply`
-  ADD CONSTRAINT `c_discussion_r_reply_ibfk_1` FOREIGN KEY (`c_discussion_reply_id`) REFERENCES `c_discussion_replies` (`c_discussion_reply_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `c_discussion_replies`
---
-ALTER TABLE `c_discussion_replies`
-  ADD CONSTRAINT `c_discussion_replies_ibfk_4` FOREIGN KEY (`student_id`) REFERENCES `college_student` (`id`) ON DELETE SET NULL,
-  ADD CONSTRAINT `c_discussion_replies_ibfk_6` FOREIGN KEY (`c_discussion_id`) REFERENCES `community_discussions` (`c_discussion_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `college_student`
@@ -3418,7 +3425,7 @@ ALTER TABLE `college_student`
 -- Constraints for table `communities`
 --
 ALTER TABLE `communities`
-  ADD CONSTRAINT `communities_ibfk_1` FOREIGN KEY (`college_id`) REFERENCES `collegeList` (`college_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `communities_ibfk_1` FOREIGN KEY (`college_id`) REFERENCES `colleges` (`college_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `communities_ibfk_2` FOREIGN KEY (`category_id`) REFERENCES `categories` (`category_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `communities_ibfk_4` FOREIGN KEY (`creator_id`) REFERENCES `college_student` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
@@ -3430,19 +3437,19 @@ ALTER TABLE `community_admins`
   ADD CONSTRAINT `community_admins_ibfk_2` FOREIGN KEY (`student_id`) REFERENCES `college_student` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `community_discussion_vote`
---
-ALTER TABLE `community_discussion_vote`
-  ADD CONSTRAINT `community_discussion_vote_ibfk_1` FOREIGN KEY (`c_discussion_id`) REFERENCES `community_discussions` (`c_discussion_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `community_discussion_vote_ibfk_2` FOREIGN KEY (`student_id`) REFERENCES `college_student` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
 -- Constraints for table `community_discussions`
 --
 ALTER TABLE `community_discussions`
   ADD CONSTRAINT `community_discussions_ibfk_1` FOREIGN KEY (`community_id`) REFERENCES `communities` (`community_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `community_discussions_ibfk_2` FOREIGN KEY (`student_id`) REFERENCES `college_student` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `community_discussions_ibfk_3` FOREIGN KEY (`major_id`) REFERENCES `majors` (`major_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `community_discussion_vote`
+--
+ALTER TABLE `community_discussion_vote`
+  ADD CONSTRAINT `community_discussion_vote_ibfk_1` FOREIGN KEY (`c_discussion_id`) REFERENCES `community_discussions` (`c_discussion_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `community_discussion_vote_ibfk_2` FOREIGN KEY (`student_id`) REFERENCES `college_student` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `community_members`
@@ -3452,12 +3459,32 @@ ALTER TABLE `community_members`
   ADD CONSTRAINT `community_members_ibfk_2` FOREIGN KEY (`student_id`) REFERENCES `college_student` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+-- Constraints for table `c_discussion_replies`
+--
+ALTER TABLE `c_discussion_replies`
+  ADD CONSTRAINT `c_discussion_replies_ibfk_4` FOREIGN KEY (`student_id`) REFERENCES `college_student` (`id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `c_discussion_replies_ibfk_6` FOREIGN KEY (`c_discussion_id`) REFERENCES `community_discussions` (`c_discussion_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `c_discussion_r_reply`
+--
+ALTER TABLE `c_discussion_r_reply`
+  ADD CONSTRAINT `c_discussion_r_reply_ibfk_1` FOREIGN KEY (`c_discussion_reply_id`) REFERENCES `c_discussion_replies` (`c_discussion_reply_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Constraints for table `discussion_post`
 --
 ALTER TABLE `discussion_post`
   ADD CONSTRAINT `discussion_post_ibfk_2` FOREIGN KEY (`student_id`) REFERENCES `college_student` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `discussion_post_ibfk_3` FOREIGN KEY (`college_id`) REFERENCES `colleges` (`college_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `discussion_post_ibfk_4` FOREIGN KEY (`d_topic_id`) REFERENCES `discussion_topics` (`discussion_topic_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `discussion_replies`
+--
+ALTER TABLE `discussion_replies`
+  ADD CONSTRAINT `discussion_replies_ibfk_5` FOREIGN KEY (`discussion_id`) REFERENCES `discussion_post` (`d_post_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `discussion_replies_ibfk_6` FOREIGN KEY (`student_id`) REFERENCES `college_student` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `discussion_r_replies`
@@ -3469,18 +3496,20 @@ ALTER TABLE `discussion_r_replies`
   ADD CONSTRAINT `discussion_r_replies_ibfk_9` FOREIGN KEY (`student_id`) REFERENCES `college_student` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `discussion_replies`
---
-ALTER TABLE `discussion_replies`
-  ADD CONSTRAINT `discussion_replies_ibfk_5` FOREIGN KEY (`discussion_id`) REFERENCES `discussion_post` (`d_post_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `discussion_replies_ibfk_6` FOREIGN KEY (`student_id`) REFERENCES `college_student` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
 -- Constraints for table `discussion_vote`
 --
 ALTER TABLE `discussion_vote`
   ADD CONSTRAINT `discussion_vote_ibfk_1` FOREIGN KEY (`discussion_id`) REFERENCES `discussion_post` (`d_post_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `discussion_vote_ibfk_2` FOREIGN KEY (`student_id`) REFERENCES `college_student` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `events`
+--
+ALTER TABLE `events`
+  ADD CONSTRAINT `events_ibfk_1` FOREIGN KEY (`event_type_id`) REFERENCES `event_type` (`event_type_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `events_ibfk_2` FOREIGN KEY (`college_id`) REFERENCES `colleges` (`college_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `events_ibfk_3` FOREIGN KEY (`student_id`) REFERENCES `college_student` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `events_ibfk_4` FOREIGN KEY (`community_id`) REFERENCES `communities` (`community_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `event_attendees`
@@ -3496,15 +3525,6 @@ ALTER TABLE `event_comments`
   ADD CONSTRAINT `event_comments_ibfk_2` FOREIGN KEY (`community_id`) REFERENCES `communities` (`community_id`) ON DELETE CASCADE,
   ADD CONSTRAINT `event_comments_ibfk_3` FOREIGN KEY (`student_id`) REFERENCES `college_student` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `event_comments_ibfk_4` FOREIGN KEY (`event_id`) REFERENCES `events` (`event_id`) ON DELETE CASCADE;
-
---
--- Constraints for table `events`
---
-ALTER TABLE `events`
-  ADD CONSTRAINT `events_ibfk_1` FOREIGN KEY (`event_type_id`) REFERENCES `event_type` (`event_type_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `events_ibfk_2` FOREIGN KEY (`college_id`) REFERENCES `collegeList` (`college_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `events_ibfk_3` FOREIGN KEY (`student_id`) REFERENCES `college_student` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `events_ibfk_4` FOREIGN KEY (`community_id`) REFERENCES `communities` (`community_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `favorites`
@@ -3534,16 +3554,15 @@ ALTER TABLE `interests`
 -- Constraints for table `majors`
 --
 ALTER TABLE `majors`
-  ADD CONSTRAINT `majors_ibfk_1` FOREIGN KEY (`college_id`) REFERENCES `collegeList` (`college_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `majors_ibfk_2` FOREIGN KEY (`category_id`) REFERENCES `categories` (`category_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `majors_ibfk_3` FOREIGN KEY (`majorList_id`) REFERENCES `majorsLists` (`majorList_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `majors_ibfk_1` FOREIGN KEY (`college_id`) REFERENCES `colleges` (`college_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `majors_ibfk_3` FOREIGN KEY (`majorList_id`) REFERENCES `majors_list` (`majorList_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `profile_about_me`
 --
 ALTER TABLE `profile_about_me`
   ADD CONSTRAINT `profile_about_me_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `college_student` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `profile_about_me_ibfk_2` FOREIGN KEY (`major_id`) REFERENCES `majorsLists` (`majorList_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `profile_about_me_ibfk_2` FOREIGN KEY (`major_id`) REFERENCES `majors_list` (`majorList_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `reset_password`
@@ -3555,16 +3574,16 @@ ALTER TABLE `reset_password`
 -- Constraints for table `reviews`
 --
 ALTER TABLE `reviews`
-  ADD CONSTRAINT `reviews_ibfk_1` FOREIGN KEY (`college_id`) REFERENCES `collegeList` (`college_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `reviews_ibfk_1` FOREIGN KEY (`college_id`) REFERENCES `colleges` (`college_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `reviews_ibfk_10` FOREIGN KEY (`review_rating_id`) REFERENCES `review_ratings` (`rating_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `reviews_ibfk_11` FOREIGN KEY (`student_id`) REFERENCES `college_student` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `reviews_ibfk_2` FOREIGN KEY (`review_category_id`) REFERENCES `reviews_categories` (`review_category_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `reviews_ibfk_3` FOREIGN KEY (`college_id`) REFERENCES `collegeList` (`college_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `reviews_ibfk_3` FOREIGN KEY (`college_id`) REFERENCES `colleges` (`college_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `reviews_ibfk_4` FOREIGN KEY (`review_category_id`) REFERENCES `reviews_categories` (`review_category_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `reviews_ibfk_5` FOREIGN KEY (`college_id`) REFERENCES `collegeList` (`college_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `reviews_ibfk_6` FOREIGN KEY (`college_id`) REFERENCES `collegeList` (`college_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `reviews_ibfk_5` FOREIGN KEY (`college_id`) REFERENCES `colleges` (`college_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `reviews_ibfk_6` FOREIGN KEY (`college_id`) REFERENCES `colleges` (`college_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `reviews_ibfk_7` FOREIGN KEY (`review_category_id`) REFERENCES `reviews_categories` (`review_category_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `reviews_ibfk_8` FOREIGN KEY (`college_id`) REFERENCES `collegeList` (`college_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `reviews_ibfk_8` FOREIGN KEY (`college_id`) REFERENCES `colleges` (`college_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `reviews_ibfk_9` FOREIGN KEY (`review_category_id`) REFERENCES `reviews_categories` (`review_category_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
@@ -3572,496 +3591,8 @@ ALTER TABLE `reviews`
 --
 ALTER TABLE `school_followers`
   ADD CONSTRAINT `school_followers_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `college_student` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `school_followers_ibfk_2` FOREIGN KEY (`college_id`) REFERENCES `collegeList` (`college_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `school_followers_ibfk_3` FOREIGN KEY (`college_id`) REFERENCES `collegeList` (`college_id`) ON DELETE CASCADE ON UPDATE CASCADE;
---
--- Database: `phpmyadmin`
---
-CREATE DATABASE IF NOT EXISTS `phpmyadmin` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
-USE `phpmyadmin`;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pma__bookmark`
---
-
-CREATE TABLE `pma__bookmark` (
-  `id` int(11) NOT NULL,
-  `dbase` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `user` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `label` varchar(255) CHARACTER SET utf8 NOT NULL DEFAULT '',
-  `query` text COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Bookmarks';
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pma__central_columns`
---
-
-CREATE TABLE `pma__central_columns` (
-  `db_name` varchar(64) COLLATE utf8_bin NOT NULL,
-  `col_name` varchar(64) COLLATE utf8_bin NOT NULL,
-  `col_type` varchar(64) COLLATE utf8_bin NOT NULL,
-  `col_length` text COLLATE utf8_bin,
-  `col_collation` varchar(64) COLLATE utf8_bin NOT NULL,
-  `col_isNull` tinyint(1) NOT NULL,
-  `col_extra` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `col_default` text COLLATE utf8_bin
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Central list of columns';
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pma__column_info`
---
-
-CREATE TABLE `pma__column_info` (
-  `id` int(5) UNSIGNED NOT NULL,
-  `db_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `table_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `column_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `comment` varchar(255) CHARACTER SET utf8 NOT NULL DEFAULT '',
-  `mimetype` varchar(255) CHARACTER SET utf8 NOT NULL DEFAULT '',
-  `transformation` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `transformation_options` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `input_transformation` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `input_transformation_options` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Column information for phpMyAdmin';
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pma__designer_settings`
---
-
-CREATE TABLE `pma__designer_settings` (
-  `username` varchar(64) COLLATE utf8_bin NOT NULL,
-  `settings_data` text COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Settings related to Designer';
-
---
--- Dumping data for table `pma__designer_settings`
---
-
-INSERT INTO `pma__designer_settings` (`username`, `settings_data`) VALUES
-('root', '{\"angular_direct\":\"direct\",\"snap_to_grid\":\"off\",\"relation_lines\":\"true\"}');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pma__export_templates`
---
-
-CREATE TABLE `pma__export_templates` (
-  `id` int(5) UNSIGNED NOT NULL,
-  `username` varchar(64) COLLATE utf8_bin NOT NULL,
-  `export_type` varchar(10) COLLATE utf8_bin NOT NULL,
-  `template_name` varchar(64) COLLATE utf8_bin NOT NULL,
-  `template_data` text COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Saved export templates';
-
---
--- Dumping data for table `pma__export_templates`
---
-
-INSERT INTO `pma__export_templates` (`id`, `username`, `export_type`, `template_name`, `template_data`) VALUES
-(1, 'root', 'database', 'mmc_v3', '{\"quick_or_custom\":\"quick\",\"what\":\"sql\",\"structure_or_data_forced\":\"0\",\"table_select[]\":[\"categories\",\"collegeList\",\"collegestudent\",\"communities\",\"community_admins\",\"community_discussions\",\"community_discussion_vote\",\"community_members\",\"c_discussion_replies\",\"c_discussion_r_reply\",\"discussion_post\",\"discussion_replies\",\"discussion_room\",\"discussion_r_replies\",\"discussion_topics\",\"discussion_vote\",\"events\",\"event_attendees\",\"event_comments\",\"event_type\",\"favorites\",\"interests\",\"majors\",\"majorsLists\",\"notifications\",\"profile_about_me\",\"resetpassword\",\"reviews\",\"reviews_categories\",\"review_ratings\",\"school_followers\",\"university\",\"verification\"],\"table_structure[]\":[\"categories\",\"collegeList\",\"collegestudent\",\"communities\",\"community_admins\",\"community_discussions\",\"community_discussion_vote\",\"community_members\",\"c_discussion_replies\",\"c_discussion_r_reply\",\"discussion_post\",\"discussion_replies\",\"discussion_room\",\"discussion_r_replies\",\"discussion_topics\",\"discussion_vote\",\"events\",\"event_attendees\",\"event_comments\",\"event_type\",\"favorites\",\"interests\",\"majors\",\"majorsLists\",\"notifications\",\"profile_about_me\",\"resetpassword\",\"reviews\",\"reviews_categories\",\"review_ratings\",\"school_followers\",\"university\",\"verification\"],\"table_data[]\":[\"categories\",\"collegeList\",\"collegestudent\",\"communities\",\"community_admins\",\"community_discussions\",\"community_discussion_vote\",\"community_members\",\"c_discussion_replies\",\"c_discussion_r_reply\",\"discussion_post\",\"discussion_replies\",\"discussion_room\",\"discussion_r_replies\",\"discussion_topics\",\"discussion_vote\",\"events\",\"event_attendees\",\"event_comments\",\"event_type\",\"favorites\",\"interests\",\"majors\",\"majorsLists\",\"notifications\",\"profile_about_me\",\"resetpassword\",\"reviews\",\"reviews_categories\",\"review_ratings\",\"school_followers\",\"university\",\"verification\"],\"output_format\":\"sendit\",\"filename_template\":\"@DATABASE@\",\"remember_template\":\"on\",\"charset\":\"utf-8\",\"compression\":\"none\",\"maxsize\":\"\",\"phparray_structure_or_data\":\"data\",\"odt_structure_or_data\":\"structure_and_data\",\"odt_relation\":\"something\",\"odt_comments\":\"something\",\"odt_mime\":\"something\",\"odt_columns\":\"something\",\"odt_null\":\"NULL\",\"pdf_report_title\":\"\",\"pdf_structure_or_data\":\"structure_and_data\",\"latex_caption\":\"something\",\"latex_structure_or_data\":\"structure_and_data\",\"latex_structure_caption\":\"Structure of table @TABLE@\",\"latex_structure_continued_caption\":\"Structure of table @TABLE@ (continued)\",\"latex_structure_label\":\"tab:@TABLE@-structure\",\"latex_relation\":\"something\",\"latex_comments\":\"something\",\"latex_mime\":\"something\",\"latex_columns\":\"something\",\"latex_data_caption\":\"Content of table @TABLE@\",\"latex_data_continued_caption\":\"Content of table @TABLE@ (continued)\",\"latex_data_label\":\"tab:@TABLE@-data\",\"latex_null\":\"\\\\textit{NULL}\",\"csv_separator\":\",\",\"csv_enclosed\":\"\\\"\",\"csv_escaped\":\"\\\"\",\"csv_terminated\":\"AUTO\",\"csv_null\":\"NULL\",\"csv_structure_or_data\":\"data\",\"ods_null\":\"NULL\",\"ods_structure_or_data\":\"data\",\"json_structure_or_data\":\"data\",\"mediawiki_structure_or_data\":\"structure_and_data\",\"mediawiki_caption\":\"something\",\"mediawiki_headers\":\"something\",\"htmlword_structure_or_data\":\"structure_and_data\",\"htmlword_null\":\"NULL\",\"excel_null\":\"NULL\",\"excel_columns\":\"something\",\"excel_edition\":\"win\",\"excel_structure_or_data\":\"data\",\"sql_include_comments\":\"something\",\"sql_header_comment\":\"\",\"sql_use_transaction\":\"something\",\"sql_compatibility\":\"NONE\",\"sql_structure_or_data\":\"structure_and_data\",\"sql_create_table\":\"something\",\"sql_auto_increment\":\"something\",\"sql_create_view\":\"something\",\"sql_procedure_function\":\"something\",\"sql_create_trigger\":\"something\",\"sql_backquotes\":\"something\",\"sql_type\":\"INSERT\",\"sql_insert_syntax\":\"both\",\"sql_max_query_size\":\"50000\",\"sql_hex_for_binary\":\"something\",\"sql_utc_time\":\"something\",\"texytext_structure_or_data\":\"structure_and_data\",\"texytext_null\":\"NULL\",\"yaml_structure_or_data\":\"data\",\"xml_structure_or_data\":\"data\",\"xml_export_events\":\"something\",\"xml_export_functions\":\"something\",\"xml_export_procedures\":\"something\",\"xml_export_tables\":\"something\",\"xml_export_triggers\":\"something\",\"xml_export_views\":\"something\",\"xml_export_contents\":\"something\",\"codegen_structure_or_data\":\"data\",\"codegen_format\":\"0\",\"\":null,\"lock_tables\":null,\"as_separate_files\":null,\"csv_removeCRLF\":null,\"csv_columns\":null,\"ods_columns\":null,\"json_pretty_print\":null,\"htmlword_columns\":null,\"excel_removeCRLF\":null,\"sql_dates\":null,\"sql_relation\":null,\"sql_mime\":null,\"sql_disable_fk\":null,\"sql_views_as_tables\":null,\"sql_metadata\":null,\"sql_create_database\":null,\"sql_drop_table\":null,\"sql_if_not_exists\":null,\"sql_truncate\":null,\"sql_delayed\":null,\"sql_ignore\":null,\"texytext_columns\":null}'),
-(2, 'root', 'database', 'db', '{\"quick_or_custom\":\"quick\",\"what\":\"sql\",\"structure_or_data_forced\":\"0\",\"table_select[]\":[\"categories\",\"collegeList\",\"collegestudent\",\"communities\",\"community_admins\",\"community_discussions\",\"community_discussion_vote\",\"community_members\",\"c_discussion_replies\",\"c_discussion_r_reply\",\"discussion_post\",\"discussion_replies\",\"discussion_room\",\"discussion_r_replies\",\"discussion_topics\",\"discussion_vote\",\"email_newsletter\",\"events\",\"event_attendees\",\"event_comments\",\"event_type\",\"favorites\",\"friend_followers\",\"interests\",\"majors\",\"majorsLists\",\"notifications\",\"profile_about_me\",\"report_content\",\"resetpassword\",\"reviews\",\"reviews_categories\",\"review_ratings\",\"school_followers\",\"university\",\"verification\"],\"table_structure[]\":[\"categories\",\"collegeList\",\"collegestudent\",\"communities\",\"community_admins\",\"community_discussions\",\"community_discussion_vote\",\"community_members\",\"c_discussion_replies\",\"c_discussion_r_reply\",\"discussion_post\",\"discussion_replies\",\"discussion_room\",\"discussion_r_replies\",\"discussion_topics\",\"discussion_vote\",\"email_newsletter\",\"events\",\"event_attendees\",\"event_comments\",\"event_type\",\"favorites\",\"friend_followers\",\"interests\",\"majors\",\"majorsLists\",\"notifications\",\"profile_about_me\",\"report_content\",\"resetpassword\",\"reviews\",\"reviews_categories\",\"review_ratings\",\"school_followers\",\"university\",\"verification\"],\"table_data[]\":[\"categories\",\"collegeList\",\"collegestudent\",\"communities\",\"community_admins\",\"community_discussions\",\"community_discussion_vote\",\"community_members\",\"c_discussion_replies\",\"c_discussion_r_reply\",\"discussion_post\",\"discussion_replies\",\"discussion_room\",\"discussion_r_replies\",\"discussion_topics\",\"discussion_vote\",\"email_newsletter\",\"events\",\"event_attendees\",\"event_comments\",\"event_type\",\"favorites\",\"friend_followers\",\"interests\",\"majors\",\"majorsLists\",\"notifications\",\"profile_about_me\",\"report_content\",\"resetpassword\",\"reviews\",\"reviews_categories\",\"review_ratings\",\"school_followers\",\"university\",\"verification\"],\"output_format\":\"sendit\",\"filename_template\":\"@DATABASE@\",\"remember_template\":\"on\",\"charset\":\"utf-8\",\"compression\":\"none\",\"maxsize\":\"\",\"phparray_structure_or_data\":\"data\",\"odt_structure_or_data\":\"structure_and_data\",\"odt_relation\":\"something\",\"odt_comments\":\"something\",\"odt_mime\":\"something\",\"odt_columns\":\"something\",\"odt_null\":\"NULL\",\"pdf_report_title\":\"\",\"pdf_structure_or_data\":\"structure_and_data\",\"latex_caption\":\"something\",\"latex_structure_or_data\":\"structure_and_data\",\"latex_structure_caption\":\"Structure of table @TABLE@\",\"latex_structure_continued_caption\":\"Structure of table @TABLE@ (continued)\",\"latex_structure_label\":\"tab:@TABLE@-structure\",\"latex_relation\":\"something\",\"latex_comments\":\"something\",\"latex_mime\":\"something\",\"latex_columns\":\"something\",\"latex_data_caption\":\"Content of table @TABLE@\",\"latex_data_continued_caption\":\"Content of table @TABLE@ (continued)\",\"latex_data_label\":\"tab:@TABLE@-data\",\"latex_null\":\"\\\\textit{NULL}\",\"csv_separator\":\",\",\"csv_enclosed\":\"\\\"\",\"csv_escaped\":\"\\\"\",\"csv_terminated\":\"AUTO\",\"csv_null\":\"NULL\",\"csv_structure_or_data\":\"data\",\"ods_null\":\"NULL\",\"ods_structure_or_data\":\"data\",\"json_structure_or_data\":\"data\",\"mediawiki_structure_or_data\":\"structure_and_data\",\"mediawiki_caption\":\"something\",\"mediawiki_headers\":\"something\",\"htmlword_structure_or_data\":\"structure_and_data\",\"htmlword_null\":\"NULL\",\"excel_null\":\"NULL\",\"excel_columns\":\"something\",\"excel_edition\":\"win\",\"excel_structure_or_data\":\"data\",\"sql_include_comments\":\"something\",\"sql_header_comment\":\"\",\"sql_use_transaction\":\"something\",\"sql_compatibility\":\"NONE\",\"sql_structure_or_data\":\"structure_and_data\",\"sql_create_table\":\"something\",\"sql_auto_increment\":\"something\",\"sql_create_view\":\"something\",\"sql_procedure_function\":\"something\",\"sql_create_trigger\":\"something\",\"sql_backquotes\":\"something\",\"sql_type\":\"INSERT\",\"sql_insert_syntax\":\"both\",\"sql_max_query_size\":\"50000\",\"sql_hex_for_binary\":\"something\",\"sql_utc_time\":\"something\",\"texytext_structure_or_data\":\"structure_and_data\",\"texytext_null\":\"NULL\",\"yaml_structure_or_data\":\"data\",\"xml_structure_or_data\":\"data\",\"xml_export_events\":\"something\",\"xml_export_functions\":\"something\",\"xml_export_procedures\":\"something\",\"xml_export_tables\":\"something\",\"xml_export_triggers\":\"something\",\"xml_export_views\":\"something\",\"xml_export_contents\":\"something\",\"codegen_structure_or_data\":\"data\",\"codegen_format\":\"0\",\"\":null,\"lock_tables\":null,\"as_separate_files\":null,\"csv_removeCRLF\":null,\"csv_columns\":null,\"ods_columns\":null,\"json_pretty_print\":null,\"htmlword_columns\":null,\"excel_removeCRLF\":null,\"sql_dates\":null,\"sql_relation\":null,\"sql_mime\":null,\"sql_disable_fk\":null,\"sql_views_as_tables\":null,\"sql_metadata\":null,\"sql_create_database\":null,\"sql_drop_table\":null,\"sql_if_not_exists\":null,\"sql_truncate\":null,\"sql_delayed\":null,\"sql_ignore\":null,\"texytext_columns\":null}');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pma__favorite`
---
-
-CREATE TABLE `pma__favorite` (
-  `username` varchar(64) COLLATE utf8_bin NOT NULL,
-  `tables` text COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Favorite tables';
-
---
--- Dumping data for table `pma__favorite`
---
-
-INSERT INTO `pma__favorite` (`username`, `tables`) VALUES
-('root', '[{\"db\":\"meetmycampus\",\"table\":\"verification\"},{\"db\":\"meetmycampus\",\"table\":\"university\"},{\"db\":\"meetmycampus\",\"table\":\"resetpassword\"},{\"db\":\"meetmycampus\",\"table\":\"collegestudent\"},{\"db\":\"meetmycampus\",\"table\":\"collegeList\"}]');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pma__history`
---
-
-CREATE TABLE `pma__history` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `username` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `db` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `table` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `timevalue` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `sqlquery` text COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='SQL history for phpMyAdmin';
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pma__navigationhiding`
---
-
-CREATE TABLE `pma__navigationhiding` (
-  `username` varchar(64) COLLATE utf8_bin NOT NULL,
-  `item_name` varchar(64) COLLATE utf8_bin NOT NULL,
-  `item_type` varchar(64) COLLATE utf8_bin NOT NULL,
-  `db_name` varchar(64) COLLATE utf8_bin NOT NULL,
-  `table_name` varchar(64) COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Hidden items of navigation tree';
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pma__pdf_pages`
---
-
-CREATE TABLE `pma__pdf_pages` (
-  `db_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `page_nr` int(10) UNSIGNED NOT NULL,
-  `page_descr` varchar(50) CHARACTER SET utf8 NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='PDF relation pages for phpMyAdmin';
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pma__recent`
---
-
-CREATE TABLE `pma__recent` (
-  `username` varchar(64) COLLATE utf8_bin NOT NULL,
-  `tables` text COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Recently accessed tables';
-
---
--- Dumping data for table `pma__recent`
---
-
-INSERT INTO `pma__recent` (`username`, `tables`) VALUES
-('root', '[{\"db\":\"meetmycampus\",\"table\":\"community_discussions\"},{\"db\":\"meetmycampus\",\"table\":\"c_discussion_replies\"},{\"db\":\"meetmycampus\",\"table\":\"discussion_post\"},{\"db\":\"meetmycampus\",\"table\":\"discussion_replies\"},{\"db\":\"meetmycampus\",\"table\":\"c_discussion_r_reply\"},{\"db\":\"information_schema\",\"table\":\"FILES\"},{\"db\":\"information_schema\",\"table\":\"INNODB_SYS_TABLES\"},{\"db\":\"information_schema\",\"table\":\"APPLICABLE_ROLES\"},{\"db\":\"information_schema\",\"table\":\"ALL_PLUGINS\"},{\"db\":\"information_schema\",\"table\":\"ENGINES\"}]');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pma__relation`
---
-
-CREATE TABLE `pma__relation` (
-  `master_db` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `master_table` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `master_field` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `foreign_db` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `foreign_table` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `foreign_field` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Relation table';
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pma__savedsearches`
---
-
-CREATE TABLE `pma__savedsearches` (
-  `id` int(5) UNSIGNED NOT NULL,
-  `username` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `db_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `search_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `search_data` text COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Saved searches';
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pma__table_coords`
---
-
-CREATE TABLE `pma__table_coords` (
-  `db_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `table_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `pdf_page_number` int(11) NOT NULL DEFAULT '0',
-  `x` float UNSIGNED NOT NULL DEFAULT '0',
-  `y` float UNSIGNED NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Table coordinates for phpMyAdmin PDF output';
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pma__table_info`
---
-
-CREATE TABLE `pma__table_info` (
-  `db_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `table_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `display_field` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Table information for phpMyAdmin';
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pma__table_uiprefs`
---
-
-CREATE TABLE `pma__table_uiprefs` (
-  `username` varchar(64) COLLATE utf8_bin NOT NULL,
-  `db_name` varchar(64) COLLATE utf8_bin NOT NULL,
-  `table_name` varchar(64) COLLATE utf8_bin NOT NULL,
-  `prefs` text COLLATE utf8_bin NOT NULL,
-  `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Tables'' UI preferences';
-
---
--- Dumping data for table `pma__table_uiprefs`
---
-
-INSERT INTO `pma__table_uiprefs` (`username`, `db_name`, `table_name`, `prefs`, `last_update`) VALUES
-('root', 'meetmycampus', 'collegestudent', '{\"CREATE_TIME\":\"2017-11-21 17:05:21\",\"col_visib\":[\"1\",\"1\",\"1\",\"1\",\"1\",\"1\",\"1\",\"1\",\"1\",\"1\"]}', '2017-11-21 22:11:53'),
-('root', 'meetmycampus', 'communities', '{\"sorted_col\":\"`community_id` ASC\"}', '2018-03-23 14:06:36'),
-('root', 'meetmycampus', 'community_discussions', '{\"sorted_col\":\"`c_discussion_id` ASC\",\"CREATE_TIME\":\"2018-01-10 10:49:26\",\"col_visib\":[\"1\",\"1\",\"1\",\"1\",\"1\",\"1\",\"1\",\"1\"]}', '2018-02-15 18:05:15'),
-('root', 'meetmycampus', 'discussion_r_replies', '{\"sorted_col\":\"`r_reply_id` ASC\"}', '2018-02-23 23:10:24'),
-('root', 'meetmycampus', 'interests', '{\"sorted_col\":\"`interests`.`interest_id` ASC\"}', '2018-01-13 01:30:15');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pma__tracking`
---
-
-CREATE TABLE `pma__tracking` (
-  `db_name` varchar(64) COLLATE utf8_bin NOT NULL,
-  `table_name` varchar(64) COLLATE utf8_bin NOT NULL,
-  `version` int(10) UNSIGNED NOT NULL,
-  `date_created` datetime NOT NULL,
-  `date_updated` datetime NOT NULL,
-  `schema_snapshot` text COLLATE utf8_bin NOT NULL,
-  `schema_sql` text COLLATE utf8_bin,
-  `data_sql` longtext COLLATE utf8_bin,
-  `tracking` set('UPDATE','REPLACE','INSERT','DELETE','TRUNCATE','CREATE DATABASE','ALTER DATABASE','DROP DATABASE','CREATE TABLE','ALTER TABLE','RENAME TABLE','DROP TABLE','CREATE INDEX','DROP INDEX','CREATE VIEW','ALTER VIEW','DROP VIEW') COLLATE utf8_bin DEFAULT NULL,
-  `tracking_active` int(1) UNSIGNED NOT NULL DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Database changes tracking for phpMyAdmin';
-
---
--- Dumping data for table `pma__tracking`
---
-
-INSERT INTO `pma__tracking` (`db_name`, `table_name`, `version`, `date_created`, `date_updated`, `schema_snapshot`, `schema_sql`, `data_sql`, `tracking`, `tracking_active`) VALUES
-('meetmycampus', 'events', 1, '2017-12-13 01:13:55', '2018-03-13 14:25:11', 'a:2:{s:7:\"COLUMNS\";a:14:{i:0;a:8:{s:5:\"Field\";s:8:\"event_id\";s:4:\"Type\";s:16:\"int(10) unsigned\";s:9:\"Collation\";N;s:4:\"Null\";s:2:\"NO\";s:3:\"Key\";s:3:\"PRI\";s:7:\"Default\";N;s:5:\"Extra\";s:14:\"auto_increment\";s:7:\"Comment\";s:0:\"\";}i:1;a:8:{s:5:\"Field\";s:13:\"event_type_id\";s:4:\"Type\";s:16:\"int(10) unsigned\";s:9:\"Collation\";N;s:4:\"Null\";s:2:\"NO\";s:3:\"Key\";s:3:\"MUL\";s:7:\"Default\";N;s:5:\"Extra\";s:0:\"\";s:7:\"Comment\";s:0:\"\";}i:2;a:8:{s:5:\"Field\";s:10:\"college_id\";s:4:\"Type\";s:16:\"int(10) unsigned\";s:9:\"Collation\";N;s:4:\"Null\";s:2:\"NO\";s:3:\"Key\";s:3:\"MUL\";s:7:\"Default\";N;s:5:\"Extra\";s:0:\"\";s:7:\"Comment\";s:0:\"\";}i:3;a:8:{s:5:\"Field\";s:10:\"student_id\";s:4:\"Type\";s:16:\"int(10) unsigned\";s:9:\"Collation\";N;s:4:\"Null\";s:2:\"NO\";s:3:\"Key\";s:3:\"MUL\";s:7:\"Default\";N;s:5:\"Extra\";s:0:\"\";s:7:\"Comment\";s:0:\"\";}i:4;a:8:{s:5:\"Field\";s:12:\"community_id\";s:4:\"Type\";s:16:\"int(10) unsigned\";s:9:\"Collation\";N;s:4:\"Null\";s:3:\"YES\";s:3:\"Key\";s:3:\"MUL\";s:7:\"Default\";N;s:5:\"Extra\";s:0:\"\";s:7:\"Comment\";s:0:\"\";}i:5;a:8:{s:5:\"Field\";s:12:\"event_access\";s:4:\"Type\";s:11:\"varchar(32)\";s:9:\"Collation\";s:17:\"latin1_swedish_ci\";s:4:\"Null\";s:2:\"NO\";s:3:\"Key\";s:0:\"\";s:7:\"Default\";N;s:5:\"Extra\";s:0:\"\";s:7:\"Comment\";s:0:\"\";}i:6;a:8:{s:5:\"Field\";s:11:\"event_title\";s:4:\"Type\";s:12:\"varchar(256)\";s:9:\"Collation\";s:17:\"latin1_swedish_ci\";s:4:\"Null\";s:2:\"NO\";s:3:\"Key\";s:0:\"\";s:7:\"Default\";N;s:5:\"Extra\";s:0:\"\";s:7:\"Comment\";s:0:\"\";}i:7;a:8:{s:5:\"Field\";s:17:\"event_description\";s:4:\"Type\";s:12:\"varchar(512)\";s:9:\"Collation\";s:17:\"latin1_swedish_ci\";s:4:\"Null\";s:2:\"NO\";s:3:\"Key\";s:0:\"\";s:7:\"Default\";N;s:5:\"Extra\";s:0:\"\";s:7:\"Comment\";s:0:\"\";}i:8;a:8:{s:5:\"Field\";s:14:\"event_location\";s:4:\"Type\";s:12:\"varchar(256)\";s:9:\"Collation\";s:17:\"latin1_swedish_ci\";s:4:\"Null\";s:2:\"NO\";s:3:\"Key\";s:0:\"\";s:7:\"Default\";N;s:5:\"Extra\";s:0:\"\";s:7:\"Comment\";s:0:\"\";}i:9;a:8:{s:5:\"Field\";s:13:\"event_address\";s:4:\"Type\";s:12:\"varchar(256)\";s:9:\"Collation\";s:17:\"latin1_swedish_ci\";s:4:\"Null\";s:2:\"NO\";s:3:\"Key\";s:0:\"\";s:7:\"Default\";N;s:5:\"Extra\";s:0:\"\";s:7:\"Comment\";s:0:\"\";}i:10;a:8:{s:5:\"Field\";s:10:\"event_date\";s:4:\"Type\";s:4:\"date\";s:9:\"Collation\";N;s:4:\"Null\";s:2:\"NO\";s:3:\"Key\";s:0:\"\";s:7:\"Default\";N;s:5:\"Extra\";s:0:\"\";s:7:\"Comment\";s:0:\"\";}i:11;a:8:{s:5:\"Field\";s:10:\"event_time\";s:4:\"Type\";s:4:\"time\";s:9:\"Collation\";N;s:4:\"Null\";s:2:\"NO\";s:3:\"Key\";s:0:\"\";s:7:\"Default\";N;s:5:\"Extra\";s:0:\"\";s:7:\"Comment\";s:0:\"\";}i:12;a:8:{s:5:\"Field\";s:11:\"event_photo\";s:4:\"Type\";s:12:\"varchar(128)\";s:9:\"Collation\";s:17:\"latin1_swedish_ci\";s:4:\"Null\";s:2:\"NO\";s:3:\"Key\";s:0:\"\";s:7:\"Default\";N;s:5:\"Extra\";s:0:\"\";s:7:\"Comment\";s:0:\"\";}i:13;a:8:{s:5:\"Field\";s:12:\"date_created\";s:4:\"Type\";s:9:\"timestamp\";s:9:\"Collation\";N;s:4:\"Null\";s:2:\"NO\";s:3:\"Key\";s:0:\"\";s:7:\"Default\";s:17:\"CURRENT_TIMESTAMP\";s:5:\"Extra\";s:0:\"\";s:7:\"Comment\";s:0:\"\";}}s:7:\"INDEXES\";a:5:{i:0;a:13:{s:5:\"Table\";s:6:\"events\";s:10:\"Non_unique\";s:1:\"0\";s:8:\"Key_name\";s:7:\"PRIMARY\";s:12:\"Seq_in_index\";s:1:\"1\";s:11:\"Column_name\";s:8:\"event_id\";s:9:\"Collation\";s:1:\"A\";s:11:\"Cardinality\";s:1:\"0\";s:8:\"Sub_part\";N;s:6:\"Packed\";N;s:4:\"Null\";s:0:\"\";s:10:\"Index_type\";s:5:\"BTREE\";s:7:\"Comment\";s:0:\"\";s:13:\"Index_comment\";s:0:\"\";}i:1;a:13:{s:5:\"Table\";s:6:\"events\";s:10:\"Non_unique\";s:1:\"1\";s:8:\"Key_name\";s:13:\"event_type_id\";s:12:\"Seq_in_index\";s:1:\"1\";s:11:\"Column_name\";s:13:\"event_type_id\";s:9:\"Collation\";s:1:\"A\";s:11:\"Cardinality\";s:1:\"0\";s:8:\"Sub_part\";N;s:6:\"Packed\";N;s:4:\"Null\";s:0:\"\";s:10:\"Index_type\";s:5:\"BTREE\";s:7:\"Comment\";s:0:\"\";s:13:\"Index_comment\";s:0:\"\";}i:2;a:13:{s:5:\"Table\";s:6:\"events\";s:10:\"Non_unique\";s:1:\"1\";s:8:\"Key_name\";s:10:\"college_id\";s:12:\"Seq_in_index\";s:1:\"1\";s:11:\"Column_name\";s:10:\"college_id\";s:9:\"Collation\";s:1:\"A\";s:11:\"Cardinality\";s:1:\"0\";s:8:\"Sub_part\";N;s:6:\"Packed\";N;s:4:\"Null\";s:0:\"\";s:10:\"Index_type\";s:5:\"BTREE\";s:7:\"Comment\";s:0:\"\";s:13:\"Index_comment\";s:0:\"\";}i:3;a:13:{s:5:\"Table\";s:6:\"events\";s:10:\"Non_unique\";s:1:\"1\";s:8:\"Key_name\";s:10:\"student_id\";s:12:\"Seq_in_index\";s:1:\"1\";s:11:\"Column_name\";s:10:\"student_id\";s:9:\"Collation\";s:1:\"A\";s:11:\"Cardinality\";s:1:\"0\";s:8:\"Sub_part\";N;s:6:\"Packed\";N;s:4:\"Null\";s:0:\"\";s:10:\"Index_type\";s:5:\"BTREE\";s:7:\"Comment\";s:0:\"\";s:13:\"Index_comment\";s:0:\"\";}i:4;a:13:{s:5:\"Table\";s:6:\"events\";s:10:\"Non_unique\";s:1:\"1\";s:8:\"Key_name\";s:12:\"community_id\";s:12:\"Seq_in_index\";s:1:\"1\";s:11:\"Column_name\";s:12:\"community_id\";s:9:\"Collation\";s:1:\"A\";s:11:\"Cardinality\";s:1:\"0\";s:8:\"Sub_part\";N;s:6:\"Packed\";N;s:4:\"Null\";s:3:\"YES\";s:10:\"Index_type\";s:5:\"BTREE\";s:7:\"Comment\";s:0:\"\";s:13:\"Index_comment\";s:0:\"\";}}}', '# log 2017-12-13 01:13:55 root\nDROP TABLE IF EXISTS `events`;\n# log 2017-12-13 01:13:55 root\n\nCREATE TABLE `events` (\n  `event_id` int(10) UNSIGNED NOT NULL,\n  `event_type_id` int(10) UNSIGNED NOT NULL,\n  `college_id` int(10) UNSIGNED NOT NULL,\n  `student_id` int(10) UNSIGNED NOT NULL,\n  `community_id` int(10) UNSIGNED DEFAULT NULL,\n  `event_access` varchar(32) NOT NULL,\n  `event_title` varchar(256) NOT NULL,\n  `event_description` varchar(512) NOT NULL,\n  `event_location` varchar(256) NOT NULL,\n  `event_address` varchar(256) NOT NULL,\n  `event_date` date NOT NULL,\n  `event_time` time NOT NULL,\n  `event_photo` varchar(128) NOT NULL,\n  `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP\n) ENGINE=InnoDB DEFAULT CHARSET=latin1;\n\n# log 2018-01-08 18:58:51 root\nALTER TABLE `events` CHANGE `event_id` `event_id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT, CHANGE `student_id` `student_id` INT(10) UNSIGNED NULL, CHANGE `community_id` `community_id` INT(10) UNSIGNED NULL DEFAULT NULL, CHANGE `event_access` `event_access` VARCHAR(32) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL, CHANGE `event_title` `event_title` VARCHAR(256) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL, CHANGE `event_description` `event_description` VARCHAR(512) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL, CHANGE `event_location` `event_location` VARCHAR(256) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL, CHANGE `event_address` `event_address` VARCHAR(256) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL, CHANGE `event_date` `event_date` DATE NULL, CHANGE `event_time` `event_time` TIME NULL, CHANGE `date_created` `date_created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP;\n# log 2018-03-13 14:25:10 root\nALTER TABLE `events` DROP FOREIGN KEY `events_ibfk_1`;\n# log 2018-03-13 14:25:10 root\nALTER TABLE `events` ADD  CONSTRAINT `events_ibfk_1` FOREIGN KEY (`event_type_id`) REFERENCES `event_type`(`event_type_id`) ON DELETE CASCADE ON UPDATE CASCADE;\n# log 2018-03-13 14:25:10 root\nALTER TABLE `events` DROP FOREIGN KEY `events_ibfk_2`;\n# log 2018-03-13 14:25:10 root\nALTER TABLE `events` ADD  CONSTRAINT `events_ibfk_2` FOREIGN KEY (`college_id`) REFERENCES `collegeList`(`college_id`) ON DELETE CASCADE ON UPDATE CASCADE;\n# log 2018-03-13 14:25:10 root\nALTER TABLE `events` DROP FOREIGN KEY `events_ibfk_3`;\n# log 2018-03-13 14:25:10 root\nALTER TABLE `events` ADD  CONSTRAINT `events_ibfk_3` FOREIGN KEY (`student_id`) REFERENCES `collegestudent`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;\n# log 2018-03-13 14:25:10 root\nALTER TABLE `events` DROP FOREIGN KEY `events_ibfk_4`;\n# log 2018-03-13 14:25:11 root\nALTER TABLE `events` ADD  CONSTRAINT `events_ibfk_4` FOREIGN KEY (`community_id`) REFERENCES `communities`(`community_id`) ON DELETE CASCADE ON UPDATE CASCADE;', '\n\n# log 2017-12-13 03:33:34 root\nINSERT INTO `events` (`event_id`, `event_type_id`, `college_id`, `student_id`, `community_id`, `event_access`, `event_title`, `event_description`, `event_location`, `event_address`, `event_date`, `event_time`, `event_photo`, `date_created`) VALUES (NULL, \'1\', \'227\', \'35\', \'1\', \'public\', \'Coffee and Study\', \'Who wants to meetup for coffee and study for final exams. Leave comments below or DM me\', \'Starbucks on Mass Ave.\', \'\', \'2017-12-08\', \'06:00:00\', \'\', \'2017-12-08 04:49:38\');\n\n# log 2018-01-26 18:38:29 root\nUPDATE `events` SET `event_title` = \'Poker Night\', `event_description` = \'Join us for a friendly game of Poker. Leave comments below or DM me\', `event_location` = \'DM for details\', `event_date` = \'2018-1-28\', `event_time` = \'09:00:00\', `date_created` = \'2018-01-26 00:00:00\' WHERE `events`.`event_id` = 3;\n\n# log 2018-02-14 20:48:39 root\nDELETE FROM `events` WHERE `events`.`event_id` = 6;\n\n# log 2018-02-14 20:48:46 root\nDELETE FROM `events` WHERE `events`.`event_id` = 5;\n\n# log 2018-02-14 22:16:38 root\nDELETE FROM `events` WHERE `events`.`event_id` = 7 LIMIT 1;\n# log 2018-02-14 22:16:38 root\nDELETE FROM `events` WHERE `events`.`event_id` = 8 LIMIT 1;\n# log 2018-02-14 22:16:38 root\nDELETE FROM `events` WHERE `events`.`event_id` = 9 LIMIT 1;\n# log 2018-02-14 22:18:14 root\nDELETE FROM `events` WHERE `events`.`event_id` = 10 LIMIT 1;\n# log 2018-02-14 22:18:14 root\nDELETE FROM `events` WHERE `events`.`event_id` = 11 LIMIT 1;', 'UPDATE,INSERT,DELETE,TRUNCATE,CREATE TABLE,ALTER TABLE,RENAME TABLE,DROP TABLE,CREATE INDEX,DROP INDEX', 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pma__userconfig`
---
-
-CREATE TABLE `pma__userconfig` (
-  `username` varchar(64) COLLATE utf8_bin NOT NULL,
-  `timevalue` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `config_data` text COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='User preferences storage for phpMyAdmin';
-
---
--- Dumping data for table `pma__userconfig`
---
-
-INSERT INTO `pma__userconfig` (`username`, `timevalue`, `config_data`) VALUES
-('root', '2017-10-21 01:54:47', '{\"collation_connection\":\"utf8mb4_unicode_ci\"}');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pma__usergroups`
---
-
-CREATE TABLE `pma__usergroups` (
-  `usergroup` varchar(64) COLLATE utf8_bin NOT NULL,
-  `tab` varchar(64) COLLATE utf8_bin NOT NULL,
-  `allowed` enum('Y','N') COLLATE utf8_bin NOT NULL DEFAULT 'N'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='User groups with configured menu items';
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pma__users`
---
-
-CREATE TABLE `pma__users` (
-  `username` varchar(64) COLLATE utf8_bin NOT NULL,
-  `usergroup` varchar(64) COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Users and their assignments to user groups';
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `pma__bookmark`
---
-ALTER TABLE `pma__bookmark`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `pma__central_columns`
---
-ALTER TABLE `pma__central_columns`
-  ADD PRIMARY KEY (`db_name`,`col_name`);
-
---
--- Indexes for table `pma__column_info`
---
-ALTER TABLE `pma__column_info`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `db_name` (`db_name`,`table_name`,`column_name`);
-
---
--- Indexes for table `pma__designer_settings`
---
-ALTER TABLE `pma__designer_settings`
-  ADD PRIMARY KEY (`username`);
-
---
--- Indexes for table `pma__export_templates`
---
-ALTER TABLE `pma__export_templates`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `u_user_type_template` (`username`,`export_type`,`template_name`);
-
---
--- Indexes for table `pma__favorite`
---
-ALTER TABLE `pma__favorite`
-  ADD PRIMARY KEY (`username`);
-
---
--- Indexes for table `pma__history`
---
-ALTER TABLE `pma__history`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `username` (`username`,`db`,`table`,`timevalue`);
-
---
--- Indexes for table `pma__navigationhiding`
---
-ALTER TABLE `pma__navigationhiding`
-  ADD PRIMARY KEY (`username`,`item_name`,`item_type`,`db_name`,`table_name`);
-
---
--- Indexes for table `pma__pdf_pages`
---
-ALTER TABLE `pma__pdf_pages`
-  ADD PRIMARY KEY (`page_nr`),
-  ADD KEY `db_name` (`db_name`);
-
---
--- Indexes for table `pma__recent`
---
-ALTER TABLE `pma__recent`
-  ADD PRIMARY KEY (`username`);
-
---
--- Indexes for table `pma__relation`
---
-ALTER TABLE `pma__relation`
-  ADD PRIMARY KEY (`master_db`,`master_table`,`master_field`),
-  ADD KEY `foreign_field` (`foreign_db`,`foreign_table`);
-
---
--- Indexes for table `pma__savedsearches`
---
-ALTER TABLE `pma__savedsearches`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `u_savedsearches_username_dbname` (`username`,`db_name`,`search_name`);
-
---
--- Indexes for table `pma__table_coords`
---
-ALTER TABLE `pma__table_coords`
-  ADD PRIMARY KEY (`db_name`,`table_name`,`pdf_page_number`);
-
---
--- Indexes for table `pma__table_info`
---
-ALTER TABLE `pma__table_info`
-  ADD PRIMARY KEY (`db_name`,`table_name`);
-
---
--- Indexes for table `pma__table_uiprefs`
---
-ALTER TABLE `pma__table_uiprefs`
-  ADD PRIMARY KEY (`username`,`db_name`,`table_name`);
-
---
--- Indexes for table `pma__tracking`
---
-ALTER TABLE `pma__tracking`
-  ADD PRIMARY KEY (`db_name`,`table_name`,`version`);
-
---
--- Indexes for table `pma__userconfig`
---
-ALTER TABLE `pma__userconfig`
-  ADD PRIMARY KEY (`username`);
-
---
--- Indexes for table `pma__usergroups`
---
-ALTER TABLE `pma__usergroups`
-  ADD PRIMARY KEY (`usergroup`,`tab`,`allowed`);
-
---
--- Indexes for table `pma__users`
---
-ALTER TABLE `pma__users`
-  ADD PRIMARY KEY (`username`,`usergroup`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `pma__bookmark`
---
-ALTER TABLE `pma__bookmark`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `pma__column_info`
---
-ALTER TABLE `pma__column_info`
-  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `pma__export_templates`
---
-ALTER TABLE `pma__export_templates`
-  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `pma__history`
---
-ALTER TABLE `pma__history`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `pma__pdf_pages`
---
-ALTER TABLE `pma__pdf_pages`
-  MODIFY `page_nr` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `pma__savedsearches`
---
-ALTER TABLE `pma__savedsearches`
-  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT;--
--- Database: `se_mit`
---
-CREATE DATABASE IF NOT EXISTS `se_mit` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `se_mit`;
---
--- Database: `test`
---
-CREATE DATABASE IF NOT EXISTS `test` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `test`;
+  ADD CONSTRAINT `school_followers_ibfk_2` FOREIGN KEY (`college_id`) REFERENCES `colleges` (`college_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `school_followers_ibfk_3` FOREIGN KEY (`college_id`) REFERENCES `colleges` (`college_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
