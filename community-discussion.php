@@ -31,12 +31,7 @@ if (!empty($_GET['community_id'])) {
 }
 if (!empty($_GET['c_discussion_id'])) {
 	$discussionId = intval(trim(filter_input(INPUT_GET, 'c_discussion_id' ,FILTER_SANITIZE_STRING)));
-	if ($communityConstant) {
-		$discussion = get_community_discussion($communityId,NULL,$discussionId);
-	}elseif($storyConstant){
-		$discussion = get_community_discussion(NULL,$communityId,$discussionId);
-	}
-	
+	$discussion = get_community_discussion($communityId,$discussionId);
 }else{
 	$_SESSION['error_page_message'] = "Due to a disturbance in the force, this page couldn't be found.";
    	$_SESSION['system_error_message'] = "could not retrieve discussion";
@@ -61,16 +56,12 @@ require_once('inc/main-header-test.php');
 				</div>
 					<div class="content-body">
 										<div class="forum-item  edit-forum">
-											<?php if(!$storyConstant): ?>
 											<div class="discussion-first-section">
 												<div><?php if (count($replies)==0){echo "No Replies";}elseif(count($replies)==1){echo count($replies)." Reply"; }else{echo count($replies)." Replies";} ?></div>
 											</div>
-										<?php endif; ?>
-											<?php if($storyConstant): ?>
 												<div class="discussion-second-section">
 													<p><?php echo nl2br($discussion['c_discussion_title']); ?> </p>
 												</div>
-											<?php endif;  ?>
 											<div class="discussion-third-section" id="c-discussion-forum-item-<?php echo $discussionId; ?>">
 												<div>
 													<?php

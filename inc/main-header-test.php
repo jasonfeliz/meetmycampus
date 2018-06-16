@@ -9,7 +9,7 @@
     <meta name="description" content="College communities. Best college social network. Explore Campus Life. Find out what real students are saying about their schools. Explore college life. Discover cool events or communities on campus. Connect with students. College ratings,reviews,discussion forums,Q&A">
     <meta name="author" content="">
 
-    <title><?php echo "Meet My Campus - " . $pageTitle; ?></title>
+    <title><?php echo "Meet My Campus | " . $pageTitle; ?></title>
     <link rel="icon" type="image/png" href="img/logo/logo.png">
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">

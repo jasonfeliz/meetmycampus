@@ -95,7 +95,7 @@
 														$content .= '<div class="forum-post-body"><a href="community-discussion.php?school_name=' .$urlCollegeName ;														
 													}
 													if ($communityConstant) {
-														$content .= '&community_id=' . $communityId . '&c_discussion_id=' . $key['c_discussion_id'] . '"><p class="forum-title community-forum">' . nl2br($key['c_discussion_post']) . '</p></a></div>';
+														$content .= '&community_id=' . $communityId . '&c_discussion_id=' . $key['c_discussion_id'] . '"><p class="forum-title community-forum">' . nl2br($key['c_discussion_title']) . '</p></a></div>';
 													}elseif($storyConstant)	{
 														$content .= '&community_id=' . $communityId . '&c_discussion_id=' . $key['c_discussion_id'] . '"><p class="forum-title community-forum">'. nl2br($key['c_discussion_title']) .'</p><p class="forum-title community-forum">' . nl2br($key['c_discussion_post']) . '</p></a></div>';
 													}											

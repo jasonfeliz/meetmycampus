@@ -16,7 +16,11 @@
 	                            <div class="modal-body">
 	                              <div>
 	                                <?php if(isset($_SESSION['create_error_message2'])){ echo '<p  class="submitError">' . $_SESSION['create_error_message2'] . '</p>'; } ?>
-	                              </div> 	                            
+	                              </div> 	 
+	                                <div>
+	                                  <label>Discussion Title:</label>
+	                                  <input type="text" name="discussion-title" placeholder="What is the title of your discussion?" value="<?php if (isset($_SESSION['create_error_message2'])) { echo $_SESSION['discussion-title']; } ?>">                    
+	                                </div>		                                                   
 	                                <div>
 	                                  <textarea name="discussion-post" placeholder="What's on your mind?" value="<?php if (isset($_SESSION['create_error_message2'])) { echo $_SESSION['discussion-post']; session_unset();session_destroy(); } ?>"></textarea>                           
 	                                </div>
@@ -28,10 +32,8 @@
 		                            <div>
 		                                <button type="submit" class="signInButton">Post Discussion</button>
 		                            </div> 
-		                        <?php if($communityConstant): ?>
 		                            <input type="hidden" name="community-id" value="<?php echo $communityId; ?>">
 		                            <input type="hidden" name="category-id" value="<?php echo $categoryId; ?>">
-		                        <?php endif; ?>                   		
 			                    </div>		      
 	                        <?php elseif($storyConstant): ?>
 	                            <div class="modal-body">
@@ -56,7 +58,7 @@
 		                            <div>
 		                                <button type="submit" class="signInButton">Post Story</button>
 		                            </div>     
-		                            <input type="hidden" name="story-id" value="<?php echo $communityId; ?>">
+		                            <input type="hidden" name="community-id" value="<?php echo $communityId; ?>">
 		                            <input type="hidden" name="category-id" value="<?php echo $categoryId; ?>">               		
 			                    </div>	
 	                         <?php endif; ?>       		 

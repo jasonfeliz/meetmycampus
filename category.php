@@ -10,12 +10,11 @@ if(!empty($_GET['category_id'])){
 		$_SESSION['error_page_message'] = "Due to a disturbance in the force, this page couldn't be found.";
    		$_SESSION['system_error_message'] = "could not retrieve category";
     	redirect("error_page.php");
-	}if ($categoryId == '23') {
-		$majorConstant = TRUE;
+	}
+	$categoryCommunities = get_category_communities($categoryId, $collegeId);
+	if ($categoryId == '23') {
 		$communityCatCount = intval(count($majors));
 	}else{
-		$majorConstant = FALSE;
-		$categoryCommunities = get_category_communities($categoryId, $collegeId);
 		$communityCatCount = intval(count(get_all_communities($collegeId,$categoryId)));
 	}
 	

@@ -146,32 +146,13 @@ function create_discussion($discussionTopicId,$collegeId,$userId,$discussionTitl
 			throw $e;
 		}
 }
-function create_community_discussion($communityId=NULL,$storyId=NULL,$userId,$discussionTitle,$discussionPost){
+function create_community_discussion($communityId,$userId,$discussionTitle,$discussionPost){
 	global $connect;
-	if (!is_null($communityId)) {
-		try{
-			$connect->beginTransaction();
-			$stmt = $connect->prepare("INSERT INTO community_discussions(`community_id`, `student_id`,`c_discussion_post`)  VALUES(?,?,?)");
-			$stmt->bindParam(1,$communityId,PDO::PARAM_INT);
-			$stmt->bindParam(2,$userId,PDO::PARAM_INT);
-			$stmt->bindParam(3,$discussionPost,PDO::PARAM_STR);
-			$stmt->execute();
-			$connect->commit();
 
-			$connect->beginTransaction();
-			$stmt = $connect->prepare("SELECT c_discussion_id FROM community_discussions WHERE `student_id` = ? order by post_date desc limit 1;");
-			$stmt->bindParam(1,$userId,PDO::PARAM_INT);
-			$stmt->execute();
-			$connect->commit();			
-			return $stmt->fetch(PDO::FETCH_ASSOC);
-		}catch(Exception $e){
-			throw $e;
-		}
-	}elseif(!is_null($storyId)){
 		try{
 			$connect->beginTransaction();
 			$stmt = $connect->prepare("INSERT INTO community_discussions(`community_id`, `student_id`,`c_discussion_title`,`c_discussion_post`)  VALUES(?,?,?,?)");
-			$stmt->bindParam(1,$storyId,PDO::PARAM_INT);
+			$stmt->bindParam(1,$communityId,PDO::PARAM_INT);
 			$stmt->bindParam(2,$userId,PDO::PARAM_INT);
 			$stmt->bindParam(3,$discussionTitle,PDO::PARAM_STR);
 			$stmt->bindParam(4,$discussionPost,PDO::PARAM_STR);
@@ -187,8 +168,8 @@ function create_community_discussion($communityId=NULL,$storyId=NULL,$userId,$di
 		}catch(Exception $e){
 			throw $e;
 		}
-	}
 }
+
 function edit_discussion($discussionTitle,$discussionPost,$editInfo,$discussionId){
 	global $connect;
 	if ($editInfo == "edit_discussion") {
@@ -2003,7 +1984,7 @@ function get_all_community_discussions($communityId = NULL,$storyId =NULL){
 	if (!is_null($communityId)) {
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT c_discussion_id, student_id, userName, c_discussion_post, post_date FROM community_discussions
+				$stmt = $connect->prepare("SELECT c_discussion_id,c_discussion_title, student_id, userName, c_discussion_post, post_date FROM community_discussions
 											INNER JOIN college_student ON community_discussions.student_id = college_student.id 
 											INNER JOIN communities JOIN colleges ON community_discussions.community_id = communities.community_id AND communities.college_id = colleges.college_id 
 											WHERE community_discussions.community_id = ? ORDER BY post_date DESC");
@@ -2032,12 +2013,11 @@ function get_all_community_discussions($communityId = NULL,$storyId =NULL){
 
 }
 
-function get_community_discussion($communityId = NULL, $storyId = NULL,$c_discussion_id){
+function get_community_discussion($communityId,$c_discussion_id){
 	global $connect;
-	if (!is_null($communityId)) {
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT college_student.userName, student_id, c_discussion_post, post_date  FROM community_discussions
+				$stmt = $connect->prepare("SELECT college_student.userName,c_discussion_title, student_id, c_discussion_post, post_date  FROM community_discussions
 											INNER JOIN college_student ON community_discussions.student_id = college_student.id
 											WHERE community_id = ? AND c_discussion_id=?");
 				$stmt->bindParam(1,$communityId,PDO::PARAM_INT);
@@ -2049,22 +2029,7 @@ function get_community_discussion($communityId = NULL, $storyId = NULL,$c_discus
 		}catch(Exception $e){
 			throw $e;
 		}
-	}elseif(!is_null($storyId)){
-		try{
-				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT  c_discussion_title,c_discussion_post, post_date  FROM community_discussions
-											WHERE community_id = ? AND c_discussion_id=?");
-				$stmt->bindParam(1,$storyId,PDO::PARAM_INT);
-				$stmt->bindParam(2,$c_discussion_id,PDO::PARAM_INT);
-				$stmt->execute();
-				$connect->commit();
-				return $stmt->fetch(PDO::FETCH_ASSOC);
-
-		}catch(Exception $e){
-			throw $e;
-		}	
-	}
-
+	
 }
 function get_all_community_discussion_replies($c_discussion_id){
 	global $connect;
