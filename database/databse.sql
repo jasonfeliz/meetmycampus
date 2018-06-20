@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 14, 2018 at 09:11 PM
+-- Generation Time: Jun 20, 2018 at 08:29 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 5.6.31
 
@@ -862,7 +862,7 @@ CREATE TABLE `communities` (
 INSERT INTO `communities` (`community_id`, `college_id`, `category_id`, `creator_id`, `community_name`, `community_description`, `community_message`, `community_category`, `community_type`, `community_color`, `last_update`, `date_created`) VALUES
 (1, 227, 20, 35, 'Ross&#39;s Sandwich', 'This community is more than just caring about saving stolen sandwiches at work, school, or even your own apartment. It&#39;s about honoring Ross&#39;s sandwich.\r\n\r\nWe dedicate our community to you, Ross Geller.\r\n\r\nPivottttttttttt', 'Welcome to the community dedicated to honor Ross&#39; Sandwich', 'group', 'public', '#DF7367', '2018-05-18 05:10:26', '2017-12-03 15:05:59'),
 (2, 227, 21, 35, '@Harvard Rants', NULL, 'The best place to anonymously rant about Harvard.', 'story', 'public', '#477bd2', NULL, '2018-01-08 18:13:32'),
-(4, 227, 14, 35, 'techies @harvard!', 'Nerding out....', 'we are nerds and we will rule the world. Wait, we already do! haha', 'group', 'public', '#a1a9c1', '2018-05-21 16:09:43', '2018-02-14 02:22:24'),
+(4, 227, 14, 35, 'techies @harvard!', 'Nerding out....', 'we are nerds and we will rule the world. Wait, we already do! haha', 'group', 'public', '#46baac', '2018-06-20 11:32:50', '2018-02-14 02:22:24'),
 (9, 227, 21, 35, 'Sex, Drugs, and Alcohol!', NULL, 'We want the best, most outrageous party stories!', 'story', 'public', '#7baf86', NULL, '2018-02-15 18:07:38'),
 (10, 394, 10, 35, 'art fans @princeton', NULL, 'we love art', 'group', 'public', '#ffcc2c', NULL, '2018-02-16 19:10:36'),
 (20, 262, 9, 35, 'Wildcat Venture Club', NULL, 'Learn venture capitalist techniques', 'group', 'private', '#a1a9c1', '2018-05-08 11:53:25', '2018-03-26 19:47:35'),
@@ -925,18 +925,19 @@ CREATE TABLE `community_discussions` (
 --
 
 INSERT INTO `community_discussions` (`c_discussion_id`, `community_id`, `major_id`, `student_id`, `c_discussion_title`, `c_discussion_post`, `photo`, `post_date`) VALUES
-(1, 1, NULL, 35, NULL, 'Who else has had to deal with people stealing your sandswich at work? Especially the most amazing thanksgiving sandhwich....smh', NULL, '2017-12-10 08:31:02'),
-(2, 1, NULL, 35, NULL, 'Hey Guys,\r\n\r\nJust had the most amazing sandwich ever get robbed from me at work. I even left a note. I got Ross&#39;ed  today. :-(', NULL, '2017-12-11 14:58:27'),
+(1, 1, NULL, 35, 'Who else has had to deal with people stealing your sandswich at work? Especially the most amazing thanksgiving sandhwich....smh', 'Who else has had to deal with people stealing your sandswich at work? Especially the most amazing thanksgiving sandhwich....smh', NULL, '2017-12-10 08:31:02'),
+(2, 1, NULL, 35, 'stolen sandwich......', 'Hey Guys,\r\n\r\nJust had the most amazing sandwich ever get robbed from me at work. I even left a note. I got Ross&#39;ed  today. :-(', NULL, '2017-12-11 14:58:27'),
 (3, NULL, 2, 35, NULL, 'Need some recommendations for Finance classes for this upcoming Spring semester???????', NULL, '2018-01-03 12:12:25'),
 (4, 2, NULL, 38, 'Off-campus living.....', 'A single, tiny room with shared bath could cost $800-$900+. One woman was offering a tiny section of attic which could only be accessed through a bathroom- no fan or air conditioner, for $750!!! Many of the landlords my friends and I have dealt with are charlatans. They see students as cash cows and take advantage of them. I\'ve heard many horror stories. There should be a law against what those so-called landlords do, especially considering they don\'t report the additional income to the IRS.', NULL, '2018-01-10 11:00:56'),
 (12, NULL, 2, 35, NULL, 'Is Finance hard @harvard?', NULL, '2018-02-15 13:05:34'),
 (17, 9, NULL, 42, 'hold my beer.....', 'hello,\r\n\r\nhold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, \r\n\r\n\r\nhold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, \r\n\r\n\r\n\r\nhold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, \r\n\r\nhold my beer, \r\n\r\n\r\nhold my beer, \r\nJason', NULL, '2018-04-04 07:49:42'),
 (18, 24, NULL, 35, NULL, 'Hello Miller Test!\r\n\r\nHow are you doing today?', NULL, '2018-04-25 23:27:29'),
-(19, 4, NULL, 35, NULL, 'Whats up, rulers of the galaxy?!', NULL, '2018-06-07 11:32:43'),
-(20, 1, NULL, 35, NULL, 'nothing...!!', NULL, '2018-06-07 12:54:00'),
+(19, 4, NULL, 35, 'Whats up, rulers of the galaxy?!', 'Whats up, rulers of the galaxy?!', NULL, '2018-06-07 11:32:43'),
 (21, 25, NULL, 35, NULL, 'no wayyy', NULL, '2018-06-07 12:57:47'),
-(22, 1, NULL, 35, NULL, 'oh yeaaa...', NULL, '2018-06-13 21:05:32'),
-(23, 9, NULL, 35, 'yes', 'let say yes to everyting', NULL, '2018-06-14 10:34:14');
+(23, 9, NULL, 35, 'yes', 'let say yes to everyting', NULL, '2018-06-14 10:34:14'),
+(24, 1, NULL, 35, 'yea man', 'yeamann', NULL, '2018-06-15 10:41:43'),
+(26, 1, NULL, 35, 'asd', 'asdasdsad', NULL, '2018-06-15 10:56:07'),
+(27, 27, NULL, 35, 'first finance post', 'this is my first finance post!', NULL, '2018-06-16 12:22:13');
 
 -- --------------------------------------------------------
 
@@ -972,9 +973,8 @@ INSERT INTO `community_discussion_vote` (`c_vote_id`, `c_discussion_id`, `studen
 (22, 2, 39, 1),
 (23, 17, 35, 1),
 (24, 19, 35, 1),
-(25, 20, 35, 1),
-(26, 22, 35, 1),
-(27, 23, 35, 1);
+(27, 23, 35, 1),
+(28, 26, 35, 1);
 
 -- --------------------------------------------------------
 
@@ -1016,12 +1016,13 @@ INSERT INTO `community_members` (`community_member_id`, `community_id`, `student
 (100, 25, 35, 1, NULL, '2018-05-08 15:48:21'),
 (101, 23, 35, 1, NULL, '2018-05-09 18:16:28'),
 (102, 25, 41, 1, NULL, '2018-05-22 18:35:54'),
-(103, 24, 35, 2, 'no', '2018-06-07 14:47:22'),
 (105, 9, 35, 1, NULL, '2018-06-14 14:03:41'),
 (106, 27, 35, 1, NULL, '2018-06-14 14:25:48'),
 (111, 29, 51, 1, NULL, '2018-06-14 14:45:25'),
 (112, 31, 38, 1, NULL, '2018-06-14 17:00:19'),
-(113, 31, 52, 1, NULL, '2018-06-14 17:00:19');
+(113, 31, 52, 1, NULL, '2018-06-14 17:00:19'),
+(114, 2, 35, 1, NULL, '2018-06-20 16:29:30'),
+(115, 24, 35, 2, 'no', '2018-06-20 17:31:38');
 
 -- --------------------------------------------------------
 
@@ -1051,9 +1052,8 @@ INSERT INTO `c_discussion_replies` (`c_discussion_reply_id`, `c_discussion_id`, 
 (16, 2, 35, 'hey! we&#39;re the millers', '2018-06-04 19:54:43'),
 (19, 2, 35, 'yalll', '2018-06-06 21:45:11'),
 (20, 19, 35, 'do we rule?!!?', '2018-06-07 11:32:53'),
-(21, 20, 35, 'nada!', '2018-06-07 12:54:05'),
 (22, 21, 35, 'yesss', '2018-06-07 12:57:52'),
-(23, 22, 35, 'niceee', '2018-06-13 21:05:39');
+(24, 26, 35, 'xcscsdfsd', '2018-06-15 11:11:35');
 
 -- --------------------------------------------------------
 
@@ -1084,8 +1084,8 @@ INSERT INTO `c_discussion_r_reply` (`r_reply_id`, `c_discussion_reply_id`, `stud
 (14, 15, 35, 'hey man!', '2018-06-07 08:35:23'),
 (15, 20, 35, 'of course!!!!', '2018-06-07 11:33:12'),
 (16, 19, 35, 'hey!!!!!!!!', '2018-06-07 11:40:01'),
-(17, 21, 35, 'really??!', '2018-06-07 12:54:12'),
-(18, 22, 35, 'nooooo', '2018-06-07 12:57:58');
+(18, 22, 35, 'nooooo', '2018-06-07 12:57:58'),
+(19, 24, 35, 'asasdasd', '2018-06-16 12:15:48');
 
 -- --------------------------------------------------------
 
@@ -1416,8 +1416,6 @@ INSERT INTO `favorites` (`favorite_id`, `user_id`, `c_discussion_id`, `community
 (104, 35, 18, NULL, NULL, NULL),
 (105, 35, 19, NULL, NULL, NULL),
 (106, 35, NULL, NULL, 15, NULL),
-(107, 35, 20, NULL, NULL, NULL),
-(108, 35, 22, NULL, NULL, NULL),
 (109, 35, 23, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
@@ -1490,7 +1488,8 @@ INSERT INTO `interests` (`interest_id`, `category_id`, `student_id`) VALUES
 (37, 3, 39),
 (38, 5, 39),
 (39, 7, 39),
-(40, 3, 35);
+(40, 3, 35),
+(41, 4, 35);
 
 -- --------------------------------------------------------
 
@@ -3270,7 +3269,7 @@ ALTER TABLE `college_student`
 -- AUTO_INCREMENT for table `communities`
 --
 ALTER TABLE `communities`
-  MODIFY `community_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `community_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 --
 -- AUTO_INCREMENT for table `community_admins`
 --
@@ -3280,27 +3279,27 @@ ALTER TABLE `community_admins`
 -- AUTO_INCREMENT for table `community_discussions`
 --
 ALTER TABLE `community_discussions`
-  MODIFY `c_discussion_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `c_discussion_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 --
 -- AUTO_INCREMENT for table `community_discussion_vote`
 --
 ALTER TABLE `community_discussion_vote`
-  MODIFY `c_vote_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `c_vote_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 --
 -- AUTO_INCREMENT for table `community_members`
 --
 ALTER TABLE `community_members`
-  MODIFY `community_member_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
+  MODIFY `community_member_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=116;
 --
 -- AUTO_INCREMENT for table `c_discussion_replies`
 --
 ALTER TABLE `c_discussion_replies`
-  MODIFY `c_discussion_reply_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `c_discussion_reply_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT for table `c_discussion_r_reply`
 --
 ALTER TABLE `c_discussion_r_reply`
-  MODIFY `r_reply_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `r_reply_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT for table `discussion_post`
 --
@@ -3365,7 +3364,7 @@ ALTER TABLE `friend_followers`
 -- AUTO_INCREMENT for table `interests`
 --
 ALTER TABLE `interests`
-  MODIFY `interest_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `interest_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 --
 -- AUTO_INCREMENT for table `majors`
 --
