@@ -223,7 +223,7 @@ require_once('inc/main-header-test.php');
 
                                 <div class="modalInput">
                                   <label>Discussion Title:</label>
-                                  <input type="text" name="update_title" placeholder="What are we talking about today?" value="<?php if (isset($_SESSION['edit_error_message'])) { echo $_SESSION['discussion-title']; }else{ echo "blank"; } ?>">                              
+                                  <input type="text" name="update_title" placeholder="What are we talking about today?" value="<?php if (isset($_SESSION['edit_error_message'])) { echo $_SESSION['discussion-title']; }else{  echo nl2br($discussion['c_discussion_title']); } ?>">                              
                                 </div>
 
                                 <div class="modalInput">
