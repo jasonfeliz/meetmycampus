@@ -35,10 +35,18 @@ if ($loggedIn && empty($_GET['school_name'])) {
 	if(!empty($_GET['profile_id'])){
 			$profileId = intval(trim(filter_input(INPUT_GET, 'profile_id', FILTER_SANITIZE_STRING)));
 	}
+	if(empty($schoolInfo)){
+	    $_SESSION['school_search'] = $universitySearched;
+	    redirect("search_college.php");
+	}
 }elseif (!empty($_GET['school_name'])) {
 	$universitySearched = trim(filter_input(INPUT_GET, 'school_name', FILTER_SANITIZE_STRING));
 	$schoolInfo = get_school_info($universitySearched);
 	$studentList = get_students($schoolInfo['college_id'],null);
+	if(empty($schoolInfo)){
+	    $_SESSION['school_search'] = $universitySearched;
+	    redirect("search_college.php");
+	}
 }
 
 if (!empty($schoolInfo)) {

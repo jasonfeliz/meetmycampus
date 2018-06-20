@@ -30,7 +30,7 @@ $pageTitle = "Oops! An Error Occurred...";
 <div class="error-page-body">
       <h2 class="error-page-header">Oops! An error has occured...</h2>
       <div>
-        <img src="img/svg/yoda.svg" class="yoda"/>
+        <img src="img/yoda.svg" class="yoda"/>
       </div>
       <div class="error-page-content">
         
