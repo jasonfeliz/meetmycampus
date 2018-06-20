@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			echo "success";
 		}
     }elseif ($editInfo == "edit_c_discussion") {
-    	$edit = edit_discussion(NULL,$discussionPost,$editInfo,$discussionId); // set discussion to null for now until I update commmunity forun format
+    	$edit = edit_discussion($discussionTitle,$discussionPost,$editInfo,$discussionId); // set discussion to null for now until I update commmunity forun format
 		if($edit){
 			echo "success";
 		}

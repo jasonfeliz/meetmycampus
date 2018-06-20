@@ -493,7 +493,7 @@ function anchorWatch() {
 setInterval(anchorWatch,0);
 
 
-$('.home-header-section input').focus(function(){
+$('.home-header-section input, .browse-heading input').focus(function(){
     $('.search-overlay').fadeIn(500);
     $('.search-overlay input').focus();
     $(this).blur();

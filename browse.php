@@ -34,6 +34,15 @@ include('inc/main-header-test.php');
 			<?php include('inc/panels.php');?>
 			<section class="school-home-body" id="school-home-body">
 					<div class="content-body">
+    				<div class="search-overlay">
+    					<div>
+    						<input type="text" name="search_community" placeholder="Search Communities" onkeyup="search_community(this.value,<?php echo $collegeId . ", '". $urlCollegeName . "' "; ?>)">
+    						<span class="closeSearch">X</span>
+    					</div> 
+    					<div  id="search_results_c">
+
+    					</div>   					
+    				</div>
 						<div class="communities-list">
 							<section>
 							<?php 

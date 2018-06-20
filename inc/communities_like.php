@@ -13,9 +13,12 @@
 												echo'<script>window.location.href = "home.php?school_name=' . $urlCollegeName . '";</script>';
 											}
 										}else{
-												echo 	"<h4>Communities  " . $collegeAbrev . "</h4>";
+												echo 	'<h4>Communities  ' . $collegeAbrev . '</h4><div><input type="text" name="community_search" placeholder="Search communities"></div>';
 											}
 									?>
+										
+											
+										
 									</div>			
 								</div><!-- end main-heading -->
 								<ul class="communities-list-item">
