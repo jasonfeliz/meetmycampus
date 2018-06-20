@@ -825,12 +825,10 @@ function showDiscussion($collegeId,$discussionTopicId =NULL){
 		if(!empty($discussionsList)){
 				foreach ($discussionsList as $key) {
 					$replies = get_all_discussion_replies($key['d_post_id']);
-					if (count($replies)==0){
-						$replyCount =  count($replies)." Replies";
-					}elseif(count($replies)==1){
-						$replyCount = count($replies)." Reply"; 
+					if(count($replies)==1){
+						$replyCount = count($replies)." reply"; 
 					}else{
-						$replyCount = count($replies)." Replies";
+						$replyCount = count($replies)." replies";
 					}
 					$checkFav = check_favorite($key['d_post_id'], $userId, 'discussion');
 					if($checkFav){
@@ -862,7 +860,7 @@ function showDiscussion($collegeId,$discussionTopicId =NULL){
 					$content .= '<i id="downvote-'. $key['d_post_id'] .'" class="fa fa-sort-down fa-2x vote-button ' . $down . '" aria-hidden="true" onclick="vote('. $key['d_post_id'] .', ' . $userId .',this)"></i></div>';
 					$content .= '<div class="forum-main"><div class="forum-post-body">';
 					$content .= '<a href="discussion.php?school_name='. $urlCollegeName . '&discussion_id='. $key['d_post_id'].'"><p class="forum-title">' . $key['discussion_title'] . '</p></a></div>';
-					$content .= '<ul  class="forum-item-list"><li><a href="profile.php?profile_id='.$key['student_id'] . '">@' . $key['userName'] . '</a><span> - '. $postTime .'</span></li>';
+					$content .= '<ul  class="forum-item-header"><li><span>Posted by: </span><a href="profile.php?profile_id='.$key['student_id'] . '">@' . $key['userName'] . '</a><span> - '. $postTime .'</span></li>';
 					$content .= '<li class="forum-item-btns"><span class="fa">' . $replyCount . '</span><i class="fa fa-heart-o" ' . $color . ' aria-hidden="true" id="discussion-'. $key['d_post_id'] . '" onclick="doFavorites(\'discussion\',' . $key['d_post_id'] . ', ' .$userId . ', this)"></i><i class="fa fa-ellipsis-h" id="ellipsis-cd-'.$key['d_post_id'].'" aria-hidden="true" onclick="showEllipsis(this)"></i><div class="ellipsis-menu"><ul><li data-type="post" data-id="'.$key['d_post_id'].'" class="ellipsis-button report-btn">Report</li>'.$remove.'</ul></div></li></ul>';
 					$content .= '</div></li>';
 				}
