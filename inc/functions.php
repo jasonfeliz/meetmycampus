@@ -1621,6 +1621,23 @@ function get_majors_list($search){
 		throw $e;
 	}
 }
+function search_schools($search){
+	global $connect;
+	$searchString = '%'.$search.'%';
+	try{
+			$connect->beginTransaction();
+			$stmt = $connect->prepare("SELECT * FROM colleges 
+										WHERE uni_name LIKE ? ORDER BY LOCATE(?, uni_name)");
+			$stmt->bindParam(1,$searchString,PDO::PARAM_STR);
+			$stmt->bindParam(2,$searchString,PDO::PARAM_STR);
+			$stmt->execute();
+			$connect->commit();
+			return $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+	}catch(Exception $e){
+		throw $e;
+	}
+}
 function search_communities($search,$collegeId){
 	global $connect;
 	$searchString = '%'.$search.'%';
