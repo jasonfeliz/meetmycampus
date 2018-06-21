@@ -9,8 +9,7 @@ if(!$loggedIn){
 	$disableComment = 'disabled';
 	$userId = 0;
 }
-
-if ($loggedIn){
+ if ($loggedIn){
 	$userId = $_COOKIE['user_id'];
 	$userInfo = get_user_info($userId);
 	$userFirstName = ucfirst($userInfo['firstName']);
@@ -42,7 +41,6 @@ if ($loggedIn && empty($_GET['school_name'])) {
 }elseif (!empty($_GET['school_name'])) {
 	$universitySearched = trim(filter_input(INPUT_GET, 'school_name', FILTER_SANITIZE_STRING));
 	$schoolInfo = get_school_info($universitySearched);
-	$studentList = get_students($schoolInfo['college_id'],null);
 	if(empty($schoolInfo)){
 	    $_SESSION['school_search'] = $universitySearched;
 	    redirect("search_college.php");
@@ -65,6 +63,8 @@ if (!empty($schoolInfo)) {
 	$communityCount = intval(count(get_all_communities($collegeId,NULL)));
 }elseif(!empty($_GET['profile_id'])){
 		$profileId = intval(trim(filter_input(INPUT_GET, 'profile_id', FILTER_SANITIZE_STRING)));
+}elseif(isset($_SESSION['search_status'])){
+		echo "";
 }else {
     $_SESSION['error_page_message'] = "Due to a disturbance in the force, this page couldn't be found.";
     $_SESSION['system_error_message'] = "could not retrieve school info";
