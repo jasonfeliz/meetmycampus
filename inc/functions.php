@@ -33,7 +33,7 @@ function create_profile($userId,$majorId){
 
 		try{
 			$connect->beginTransaction();
-			$stmt = $connect->prepare("INSERT INTO profile_about_me(`student_id`,`major_id`)  VALUES(?,?)");
+			$stmt = $connect->prepare("INSERT INTO user_profile(`student_id`,`major_id`)  VALUES(?,?)");
 			$stmt->bindParam(1,$userId,PDO::PARAM_INT);
 			$stmt->bindParam(2,$majorId,PDO::PARAM_INT);
 			$stmt->execute();
@@ -1233,7 +1233,7 @@ function update_user($userId,$collegeId,$email,$username,$majorId){
 		$stmt->bindParam(4,$userId,PDO::PARAM_INT);
 		$stmt->execute();
 
-		$stmt = $connect->prepare("UPDATE profile_about_me SET major_id = ? WHERE student_id = ?");
+		$stmt = $connect->prepare("UPDATE user_profile SET major_id = ? WHERE student_id = ?");
 		$stmt->bindParam(1,$majorId,PDO::PARAM_INT);
 		$stmt->bindParam(2,$userId,PDO::PARAM_INT);
 		$stmt->execute();
@@ -1686,8 +1686,8 @@ function get_major_members($majorId){
 	global $connect;
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT profile_about_me.student_id,college_student.id, userName FROM profile_about_me 
-											INNER JOIN college_student ON profile_about_me.student_id = college_student.id
+				$stmt = $connect->prepare("SELECT user_profile.student_id,college_student.id, userName FROM user_profile 
+											INNER JOIN college_student ON user_profile.student_id = college_student.id
 											WHERE major_id = ?");
 				$stmt->bindParam(1,$majorId,PDO::PARAM_INT);
 				$stmt->execute();
@@ -2081,10 +2081,10 @@ function get_profile_info($studentId){
 	global $connect;
 	try{
 			$connect->beginTransaction();
-			$stmt = $connect->prepare("SELECT id, collegeid, uni_name,firstName,lastName,userName, email,about,gender,location,grad_year,major_id,major,question_1,question_2,question_3  FROM profile_about_me 
-										INNER JOIN college_student JOIN colleges ON profile_about_me.student_id = college_student.id AND college_student.collegeId = colleges.college_id
-										INNER JOIN majors_list ON profile_about_me.major_id = majors_list.majorList_id
-										WHERE profile_about_me.student_id = ?");
+			$stmt = $connect->prepare("SELECT id, collegeid, uni_name,firstName,lastName,userName, email,about,gender,location,grad_year,major_id,major  FROM user_profile 
+										INNER JOIN college_student JOIN colleges ON user_profile.student_id = college_student.id AND college_student.collegeId = colleges.college_id
+										INNER JOIN majors_list ON user_profile.major_id = majors_list.majorList_id
+										WHERE user_profile.student_id = ?");
 			$stmt->bindParam(1,$studentId,PDO::PARAM_INT);
 			$stmt->execute();
 			$connect->commit();

@@ -577,6 +577,11 @@ overflow: scroll;
 
 
 /*buttons*/
+.action-btn{
+  font-weight: 700 !important;
+  font-family: 'Quicksand', sans-serif !important;
+  text-transform: uppercase !important;
+}
 .btn-group > .btn{
   width: 130px !important;
 }
@@ -619,6 +624,16 @@ header.bg-primary{
 }
 .jumbotron{
   background-color:  #313133;
+}
+.jumbotron-header-bar{
+      padding-top: 15px;
+    position: relative;
+}
+.profile-ellipsis {
+  color:#fff;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 .overlay {
   height: 100%;
@@ -1466,29 +1481,33 @@ border:solid 4px #4445467a;
 }
 
 @media (min-width: 1024px){
- .settings-avatar{
-  width: 40%;
-  max-width: 375px;
-  margin: 0 auto;
- } 
-.account-settings input,
-.settings-avatar button,
-.settings-new-password input {
-  font-size: 13px;
-}
-.settings-input > div, 
-.settings-new-password > div {
-    width: 55%;
-    max-width: 490px;
+   .settings-avatar{
+    width: 40%;
+    max-width: 375px;
     margin: 0 auto;
+   } 
+  .account-settings input,
+  .settings-avatar button,
+  .settings-new-password input {
+    font-size: 13px;
+  }
+  .settings-input > div, 
+  .settings-new-password > div {
+      width: 55%;
+      max-width: 490px;
+      margin: 0 auto;
+  }
+  .modal-body > div > select,
+  .modal-body > div > input,
+  .modal-body > div > textarea{
+    font-size: 13px;
+  }
 }
-.modal-body > div > select,
-.modal-body > div > input,
-.modal-body > div > textarea{
-  font-size: 13px;
+@media (min-width: 1280px){
+  .profile-ellipsis {
+    right: unset;
+  }
 }
-}
-
 /* Verification Page */
 .veriWindow {
   width: 330px;
