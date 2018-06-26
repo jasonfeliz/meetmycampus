@@ -1,5 +1,5 @@
 
-<div class="community-action-button">
+						<div class="community-action-button">
 							<?php
 							$onClick2 = $onClick3 = ' onclick="not_signed_in_modal()" ';
 							if($loggedIn){
@@ -28,8 +28,8 @@
 								echo '</select></div>';	
 								echo '<div><button' . $onClick3 . '>'.$writePost.'</button></div>';							
 							?>
-								
 						</div>	
+
 						<ul class="forum-list" id="forum-list">
 										<?php 
 											if ($communityConstant) {

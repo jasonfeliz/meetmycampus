@@ -1730,7 +1730,7 @@ function get_all_discussions($collegeId,$discussionTopic){
 					$connect->beginTransaction();
 					$stmt = $connect->prepare("SELECT d_post_id, discussion_post.student_id, userName, discussion_title, discussion_post, post_date FROM discussion_post 
 												INNER JOIN college_student ON discussion_post.student_id = college_student.id		                             
-												WHERE college_id = ?");
+												WHERE discussion_post.college_id = ?");
 					$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
 					$stmt->execute();
 					$connect->commit();
@@ -1859,7 +1859,7 @@ function get_all_events($collegeId,$eType = NULL,$communityId = NULL){
 				$connect->beginTransaction();
 				$stmt = $connect->prepare("SELECT event_id,community_id, student_id, event_access, event_title, event_description, event_location, event_address, event_date, event_time, event_photo, date_created FROM events
 											INNER JOIN college_student ON events.student_id = college_student.id
-											WHERE college_id = ? AND community_id= ?");
+											WHERE events.college_id = ? AND community_id= ?");
 				$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
 				$stmt->bindParam(2,$communityId,PDO::PARAM_INT);
 				$stmt->execute();
