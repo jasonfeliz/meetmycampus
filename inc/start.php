@@ -12,8 +12,8 @@ if(!$loggedIn){
  if ($loggedIn){
 	$userId = $_COOKIE['user_id'];
 	$userInfo = get_user_info($userId);
-	$userFirstName = ucfirst($userInfo['firstName']);
-	$userLastName =  ucfirst($userInfo['lastName']);
+	$userFirstName = ucfirst($userInfo['first_name']);
+	$userLastName =  ucfirst($userInfo['last_name']);
 	$userAbbrev = strtoupper(substr($userFirstName,0,1). substr($userLastName, 0,1));
 	$userName = $userInfo['userName'];
 	$userEmail = $userInfo['email'];

@@ -9,16 +9,6 @@ if (isset($_GET['b_type'])){
 		$browseFile = 'inc/categories.php';
 	}elseif ($_GET['b_type'] == "communities") {
 		$browseFile = 'inc/communities_like.php';
-	}elseif ($_GET['b_type'] == "explore_colleges") {
-		$browseFile = 'inc/colleges.php';
-	}elseif ($_GET['b_type'] == "discover_communities") {
-		$browseFile = 'inc/discover_communities.php';
-	}elseif ($_GET['b_type'] == "discussions") {
-		$browseFile = 'inc/discover_discussions.php';
-	}elseif ($_GET['b_type'] == "nearby_students") {
-		$browseFile = 'inc/discover_students.php';
-	}elseif ($_GET['b_type'] == "nearby_events") {
-		$browseFile = 'inc/discover_events.php';
 	}else{
 		redirect('home.php');
 	}

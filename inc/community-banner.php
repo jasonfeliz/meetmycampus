@@ -144,7 +144,7 @@
                                     if ($getRequest) {
                                         $content = "";
                                         foreach ($getRequest as $key) {
-                                            $userAbbrev = strtoupper(substr($key['firstName'],0,1). substr($key['lastName'], 0,1));
+                                            $userAbbrev = strtoupper(substr($key['first_name'],0,1). substr($key['last_name'], 0,1));
                                             $content .= '<li id="request-'.$key['student_id'].'">';
                                             $content .= '<div><a href="profile.php?profile_id='.$key['student_id'].'"><h4 class="profile-abbrev" style="margin-right:10px;">'.$userAbbrev.'</h4></a>';
                                             $content .= '<a href="profile.php?profile_id='.$key['student_id'].'" class="connect-list-item-name">@'.$key['userName'].'</a></div>';

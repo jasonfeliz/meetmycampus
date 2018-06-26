@@ -2,7 +2,7 @@
 require_once('inc/bootstrap.php');
 require_once('inc/start.php');
 $profileInfo = get_profile_info($profileId);
-$profileAvatar = strtoupper(substr($profileInfo['firstName'],0,1). substr($profileInfo['lastName'], 0,1));
+$profileAvatar = strtoupper(substr($profileInfo['first_name'],0,1). substr($profileInfo['last_name'], 0,1));
 if (!$profileInfo) {
 		$_SESSION['error_page_message'] = "Due to a disturbance in the force, this page couldn't be found.";
    		$_SESSION['system_error_message'] = "could not retrieve profile";

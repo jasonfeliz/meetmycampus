@@ -33,9 +33,7 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css">
     <!-- Theme CSS -->
     <link href="css/mainStyles.css" rel="stylesheet">
-    <link href="css/explore.css" rel="stylesheet">
      <link href="css/profile.css" rel="stylesheet">
-     <link href="css/messages.css" rel="stylesheet">
 <!--     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
