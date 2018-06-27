@@ -325,35 +325,7 @@ function create_review($collegeId,$reviewCategoryId,$ratingId,$userId,$reviewDes
 			throw $e;
 		}	
 }
-//adds 
-function add_favorite($typeId, $userId, $favoriteType){
-	global $connect;
-	switch ($favoriteType) {
-		case 'community-discussion':
-			$x = 'c_discussion_id';
-			break;
-		case 'community':
-			$x = 'community_id';
-			break;
-		case 'discussion':
-			$x = 'discussion_id';
-			break;
-		case 'event':
-			$x = 'event_id';
-			break;
-	}
-		try {
-			$connect->beginTransaction();
-			$stmt = $connect->prepare("INSERT INTO favorites(`user_id`,`$x`) VALUES(?,?)");
-			$stmt->bindParam(1,$userId, PDO::PARAM_INT);
-			$stmt->bindParam(2,$typeId,PDO::PARAM_INT);
-			$stmt->execute();
-			$connect->commit();
-			return true;			
-		} catch (Exception $e) {
-			throw $e;
-		}
-}
+
 function check_interest($categoryId,$userId){
 	global $connect;
 		try {
@@ -384,25 +356,12 @@ function check_major($collegeId,$majorId){
 }
 function check_favorite($typeId, $userId, $favoriteType){
 	global $connect;
-	switch ($favoriteType) {
-		case 'community-discussion':
-			$x = 'c_discussion_id';
-			break;
-		case 'community':
-			$x = 'community_id';
-			break;
-		case 'discussion':
-			$x = 'discussion_id';
-			break;
-		case 'event':
-			$x = 'event_id';
-			break;
-	}
 		try {
 			$connect->beginTransaction();
-			$stmt = $connect->prepare("SELECT favorite_id from favorites WHERE user_id = ? AND $x = ?");
+			$stmt = $connect->prepare("SELECT favorite_id from favorites WHERE user_id = ? AND favorite_type = ? AND type_id = ?");
 			$stmt->bindParam(1,$userId, PDO::PARAM_INT);
-			$stmt->bindParam(2,$typeId,PDO::PARAM_INT);
+			$stmt->bindParam(2,$favoriteType,PDO::PARAM_STR);
+			$stmt->bindParam(3,$typeId,PDO::PARAM_INT);
 			$stmt->execute();
 			$connect->commit();
 			return $stmt->fetch(PDO::FETCH_ASSOC);			
@@ -410,27 +369,31 @@ function check_favorite($typeId, $userId, $favoriteType){
 			throw $e;
 		}
 }
-function delete_favorite($typeId, $userId, $favoriteType){
+//adds 
+function add_favorite($typeId, $userId, $favoriteType){
 	global $connect;
-	switch ($favoriteType) {
-		case 'community-discussion':
-			$x = 'c_discussion_id';
-			break;
-		case 'community':
-			$x = 'community_id';
-			break;
-		case 'discussion':
-			$x = 'discussion_id';
-			break;
-		case 'event':
-			$x = 'event_id';
-			break;
-	}
 		try {
 			$connect->beginTransaction();
-			$stmt = $connect->prepare("DELETE FROM `favorites`  WHERE user_id = ? AND $x = ?");
+			$stmt = $connect->prepare("INSERT INTO favorites(`user_id`,`favorite_type`,`type_id`) VALUES(?,?,?)");
 			$stmt->bindParam(1,$userId, PDO::PARAM_INT);
-			$stmt->bindParam(2,$typeId,PDO::PARAM_INT);
+			$stmt->bindParam(2,$favoriteType,PDO::PARAM_STR);
+			$stmt->bindParam(3,$typeId,PDO::PARAM_INT);
+			$stmt->execute();
+			$connect->commit();
+			return true;			
+		} catch (Exception $e) {
+			throw $e;
+		}
+}
+
+function delete_favorite($typeId, $userId, $favoriteType){
+	global $connect;
+		try {
+			$connect->beginTransaction();
+			$stmt = $connect->prepare("DELETE FROM `favorites`  WHERE user_id = ? AND favorite_type = ? AND type_id = ?");
+			$stmt->bindParam(1,$userId, PDO::PARAM_INT);
+			$stmt->bindParam(2,$favoriteType,PDO::PARAM_STR);
+			$stmt->bindParam(3,$typeId,PDO::PARAM_INT);
 			$stmt->execute();
 			$connect->commit();
 			return true;			
@@ -1763,7 +1726,7 @@ function get_discussion($collegeId,$discussionId,$dTopic=NULL){
 				$connect->beginTransaction();
 				$stmt = $connect->prepare("SELECT d_post_id,discussion_post,discussion_title, userName, discussion_post.student_id,post_date FROM discussion_post 
 											INNER JOIN college_student ON discussion_post.student_id = college_student.id
-											WHERE college_id=? AND d_post_id = ?");
+											WHERE discussion_post.college_id=? AND d_post_id = ?");
 				$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
 				$stmt->bindParam(2,$discussionId,PDO::PARAM_INT);
 
@@ -2400,26 +2363,14 @@ function get_category_count($categoryId){
 	}
 }
 // get user's favorites
-function get_user_favorites($userId){
+function get_user_favorites($userId, $favoriteType){
 	global $connect;
 	try{
-		$sql = "SELECT * FROM favorites WHERE user_id = $userId";
-		$stmt = $connect->query($sql);
-		$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-		$array = array();
-		if (!empty($result)) {
-			foreach ($result as $key) {
-					$array['community_id'][] = $key['community_id'];
-					$array['discussion_id'][] = $key['discussion_id'];
-					$array['c_discussion_id'][] = $key['c_discussion_id'];
-					$array['event_id'][] = $key['event_id'];
-			}
-
-		return $array;
-		}else{
-			return false;
-		}
-
+		$sql = "SELECT * FROM favorites WHERE user_id = $userId AND favorite_type = ?";
+		$stmt = $connect->prepare($sql);
+		$stmt->bindParam(1,$favoriteType,PDO::PARAM_INT);
+		$stmt->execute();
+		return $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}catch(Exception $e){
 		throw $e;
 	}
@@ -2473,56 +2424,43 @@ function get_followed_member($userId,$friendId){
 }
 //get liked communities
 
-function get_liked_discussions($userId){
-	$liked_discussions = get_user_favorites($userId)['discussion_id'];
+function get_liked_discussions($userId,$typeId){
 	global $connect;
-	if (!empty(array_filter($liked_discussions))) {
 		try{
 			$sqlStr = "SELECT uni_name,d_post_id,discussion_post.college_id,discussion_title,discussion_post,discussion_post.student_id,username,post_date FROM discussion_post 
 				INNER JOIN college_student ON discussion_post.student_id = college_student.id 
-				INNER JOIN colleges ON discussion_post.college_id = colleges.college_id WHERE ";
-			$sqlStr .= "d_post_id IN ('" . implode("', '", $liked_discussions) . "')";
+				INNER JOIN colleges ON discussion_post.college_id = colleges.college_id WHERE student_id = $userId AND d_post_id = $typeId";
 			$stmt = $connect->query($sqlStr);
 			return $stmt->fetchAll(PDO::FETCH_ASSOC); 
 		}catch(Exception $e){
 			throw $e;
 		} 
-	}
-
 }
 //get like community discussions
-function get_liked_community_discussions($userId){
-	$liked_discussions = get_user_favorites($userId)['c_discussion_id'];
+function get_liked_community_discussions($userId,$typeId){
 	global $connect;
-	if (!empty(array_filter($liked_discussions))) {
 		try{
-			$sqlStr = "SELECT uni_name,community_discussions.community_id,c_discussion_id,colleges.college_id,major_id,c_discussion_title,c_discussion_post,photo,community_discussions.student_id,username,post_date FROM community_discussions 
+			$sqlStr = "SELECT uni_name,community_discussions.community_id,c_discussion_id,colleges.college_id,c_discussion_title,c_discussion_post,photo,community_discussions.student_id,username,post_date FROM community_discussions 
 				INNER JOIN college_student ON community_discussions.student_id = college_student.id 
-				INNER JOIN communities JOIN colleges ON community_discussions.community_id = communities.community_id AND communities.college_id = colleges.college_id WHERE "; 
-			$sqlStr .= "c_discussion_id IN ('" . implode("', '", array_filter($liked_discussions)) . "')";
+				INNER JOIN communities JOIN colleges ON community_discussions.community_id = communities.community_id AND communities.college_id = colleges.college_id WHERE student_id = $userId AND c_discussion_id = $typeId "; 
 			$stmt = $connect->query($sqlStr);
 			return $stmt->fetchAll(PDO::FETCH_ASSOC); 
 		}catch(Exception $e){
 			throw $e;
 		} 
-	}
 
 }
 //get liked events
-function get_liked_events($userId){
-	$liked_events = get_user_favorites($userId)['event_id'];
+function get_liked_events($userId,$typeId){
 	global $connect;
-	if (!empty(array_filter($liked_events))) {
 		try{
 			$sqlStr = "SELECT uni_name,community_id,event_id,event_title,event_description,event_date,event_location,event_photo FROM events 
-				INNER JOIN colleges ON events.college_id = colleges.college_id WHERE ";
-			$sqlStr .= "event_id IN ('" . implode("', '", $liked_events) . "')";
+				INNER JOIN colleges ON events.college_id = colleges.college_id WHERE student_id = $userId AND event_id = $typeId";
 			$stmt = $connect->query($sqlStr);
 			return $stmt->fetchAll(PDO::FETCH_ASSOC); 
 		}catch(Exception $e){
 			throw $e;
 		} 
-	}
 
 }
 
