@@ -32,6 +32,7 @@
 
 						<ul class="forum-list" id="forum-list">
 										<?php 
+										$content = "";
 											if ($communityConstant) {
 												$cDiscussions = get_all_community_discussions($communityId,NULL);
 											}elseif($storyConstant){
@@ -74,33 +75,27 @@
 														$remove = '<li class="ellipsis-button" onclick="removeItem(\'c_discussion\','.$key['c_discussion_id'].')">Remove Discussion</li><li>Edit Discussion</li>';
 													}
 													$postTime = post_time($key['post_date']);
-													$content = '<li class="forum-item" id="c-discussion-forum-item-' .  $key['c_discussion_id'] . '">';
+													$content .= '<li class="forum-item" id="c-discussion-forum-item-' .  $key['c_discussion_id'] . '">';
 													$content .= '<div class="forum-post-vote">';
 													$content .= '<i id="upvote-'. $key['c_discussion_id'] .'" class="fa fa-sort-up fa-2x vote-button '. $up .'" aria-hidden="true" onclick="c_vote('. $key['c_discussion_id'] .', ' . $userId .',this)"></i>';
 													$content .= '<div id="vote-count-' . $key['c_discussion_id'] . '" class="vote-count">'. $totalVotes .'</div>';
 													$content .= '<i id="downvote-'. $key['c_discussion_id'] .'" class="fa fa-sort-down fa-2x vote-button ' . $down . '" aria-hidden="true" onclick="c_vote('. $key['c_discussion_id'] .', ' . $userId .',this)"></i>';
 													$content .= '</div><div class="forum-main">';
-													if ($communityConstant) {
-														$content .= '<div class="forum-post-body"><a href="community-discussion.php?school_name=' .$urlCollegeName . '&community_id=' . $communityId . '&c_discussion_id=' . $key['c_discussion_id'] . '"><p class="forum-title community-forum">' . nl2br($key['c_discussion_title']) . '</p></a></div>';
-													}elseif($storyConstant)	{
-														$content .= '<div class="forum-post-body"><a href="community-discussion.php?school_name=' .$urlCollegeName.'&community_id=' . $communityId . '&c_discussion_id=' . $key['c_discussion_id'] . '"><p class="forum-title community-forum">'. nl2br($key['c_discussion_title']) .'</p><p class="forum-title community-forum">' . nl2br($key['c_discussion_post']) . '</p></a></div>';
-													}		
-																										$content .= '<ul class="forum-item-header">';
+													$content .= '<div class="forum-post-body"><a href="community-discussion.php?school_name=' .$urlCollegeName . '&community_id=' . $communityId . '&c_discussion_id=' . $key['c_discussion_id'] . '"><p class="forum-title community-forum">' . nl2br($key['c_discussion_title']) . '</p></a></div>';
+														$content .= '<ul class="forum-item-header">';
 													if ($storyConstant) {
 														$content .= '<li>Anonymous - '. $postTime.'</li>';
-														$content .= '<li class="forum-item-btns"><i class="fa fa-heart-o" ' . $color . ' aria-hidden="true" id="c-discussion-'. $key['c_discussion_id'] . '" onclick="doFavorites(\'community_discussion\',' . $key['c_discussion_id'] . ', ' .$userId . ', this)"></i><i class="fa fa-ellipsis-h" id="ellipsis-cd-'.$key['c_discussion_id'].'" aria-hidden="true" onclick="showEllipsis(this)"></i><div class="ellipsis-menu"><ul><li class="ellipsis-button">Report</li>'.$remove.'</ul></div></li>';
-														$content .= '</ul>';
 													}else{
 														$content .= '<li><span>Posted by: </span><a href="profile.php?profile_id=' . $key['student_id'] . '" class="forum-username">' . '@'.$key['userName'] . '</a><span> - '. $postTime.'</span></li>';
-														$content .= '<li class="forum-item-btns"><span class="fa">'. $replyCount .'</span><i class="fa fa-heart-o" ' . $color . ' aria-hidden="true" id="c-discussion-'. $key['c_discussion_id'] . '" onclick="doFavorites(\'community_discussion\',' . $key['c_discussion_id'] . ', ' .$userId . ', this)"></i><i class="fa fa-ellipsis-h" id="ellipsis-cd-'.$key['c_discussion_id'].'" aria-hidden="true" onclick="showEllipsis(this)"></i><div class="ellipsis-menu"><ul><li data-type="c_post" data-id="'.$key['c_discussion_id'].'" class="ellipsis-button report-btn">Report</li>'.$remove.'</ul></div></li>';
+													}
+													$content .= '<li class="forum-item-btns"><span class="fa">'. $replyCount .'</span><i class="fa fa-heart-o" ' . $color . ' aria-hidden="true" id="c-discussion-'. $key['c_discussion_id'] . '" onclick="doFavorites(\'community_discussion\',' . $key['c_discussion_id'] . ', ' .$userId . ', this)"></i><i class="fa fa-ellipsis-h" id="ellipsis-cd-'.$key['c_discussion_id'].'" aria-hidden="true" onclick="showEllipsis(this)"></i><div class="ellipsis-menu"><ul><li data-type="c_post" data-id="'.$key['c_discussion_id'].'" class="ellipsis-button report-btn">Report</li>'.$remove.'</ul></div></li>';
 														$content .= '</ul>';
 													}									
 													$content .= '<div></li>';
-													echo $content;
-												}
+													
 											}else {
-												echo '<div class="private-section"> <h3 style="padding:20px;">Be the first to start a discussion ' . '@' .$community['community_name'] . '</h3></div>';
+												$content =  '<div class="private-section"> <h3 style="padding:20px;">Be the first to start a discussion ' . '@' .$community['community_name'] . '</h3></div>';
 											}
-
+											echo $content;
 										?>
 						</ul>

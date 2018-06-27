@@ -102,21 +102,15 @@ function showDiscussionRoom(collegeName,discussionRoom){
 }
 
 function showFavoriteType(id){
-        var favId = $(id).attr('id');
-        params =  "fav_type=" + favId;
-        request = new ajaxRequest();
-        request.open("POST", "show_ajax_favorites.php", true);
-     	request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-		request.onreadystatechange = function(){
-			if (this.readyState == 4){
-				if (this.status == 200){
-				    if (this.responseText != null){
-				        $('#fav-list').html(this.responseText)
-				    }else alert("Ajax error: No data received")
-				}else alert( "Ajax error: " + this.statusText)
-			}
-		}
-		request.send(params);
+       var favId = $(id).attr('id');
+ 	$.ajax({
+	     type: "POST",
+	     url: 'show_ajax_favorites.php',
+	     data: {'fav_type': favId},
+	     success: function(result) {
+	     	$('#fav-list').html(result);
+	     }
+	});
 }
 
 function addEventComment(){

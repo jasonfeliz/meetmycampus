@@ -1,27 +1,5 @@
         <section class="left-side-panel">
         		<div>
-        		<?php if(isset($_GET['e_type'])):  ?>
-        			<h5 class="side-nav-heading">Meetup Rooms</h5>
-        			<ul class="universal-side-nav-list side-nav-recent">
-        				<li>
-        					<a href="#e_c"> <?php echo $collegeAbrev; ?> Community</a>
-        				</li>
-        				<li>
-        					<a href="#e_rc">Recreation + Sports</a>
-        				</li>
-         				<li>
-        					<a href="#e_ac">Academics + Career</a>
-        				</li>
-        				<li>
-        					<a href="#e_sl">Student Life</a>
-        				</li>
-         				<li>
-        					<a href="#e_le">Local Events</a>
-        				</li>
-        			</ul>
-        		<?php endif ?>
-        		</div>
-        		<div>
         			<h5 class="side-nav-heading">Popular Forum Topics</h5>
 				<?php
 					$popularTopic = get_popular_forum_topic($collegeId);

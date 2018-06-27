@@ -1778,7 +1778,7 @@ function get_all_events($collegeId,$eType = NULL,$communityId = NULL){
 					$stmt = $connect->prepare("SELECT event_id, community_id,event_type, student_id, event_access, event_title, event_description, event_location, event_address, event_date, event_time, event_photo, date_created FROM events
 												INNER JOIN college_student ON events.student_id = college_student.id
 		                                        INNER JOIN event_type ON events.event_type_id =  event_type.event_type_id 
-												WHERE college_id = ?");
+												WHERE events.college_id = ?");
 					$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
 					$stmt->execute();
 					$connect->commit();
@@ -1792,7 +1792,7 @@ function get_all_events($collegeId,$eType = NULL,$communityId = NULL){
 					$stmt = $connect->prepare("SELECT event_id, community_id,event_type, student_id, event_access, event_title, event_description, event_location, event_address, event_date, event_time, event_photo, date_created FROM events
 												INNER JOIN college_student ON events.student_id = college_student.id
 		                                        INNER JOIN event_type ON events.event_type_id =  event_type.event_type_id 
-												WHERE college_id = ? AND event_type.event_type= ?");
+												WHERE events.college_id = ? AND event_type.event_type= ?");
 					$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
 					$stmt->bindParam(2,$eType,PDO::PARAM_STR);
 					$stmt->execute();
@@ -1808,7 +1808,7 @@ function get_all_events($collegeId,$eType = NULL,$communityId = NULL){
 				$stmt = $connect->prepare("SELECT event_id,community_id, student_id, event_access, event_title, event_description, event_location, event_address, event_date, event_time, event_photo, date_created FROM events
 											INNER JOIN college_student ON events.student_id = college_student.id
 											INNER JOIN event_type ON events.event_type_id =  event_type.event_type_id
-											WHERE college_id = ? AND event_type.event_type= ? AND community_id= ?");
+											WHERE events.college_id = ? AND event_type.event_type= ? AND community_id= ?");
 				$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
 				$stmt->bindParam(2,$eType,PDO::PARAM_STR);
 				$stmt->bindParam(3,$communityId,PDO::PARAM_INT);
@@ -1931,7 +1931,7 @@ function get_all_reviews($collegeId,$category = NULL,$ratings = NULL){
 											INNER JOIN college_student ON reviews.student_id = college_student.id
 											INNER JOIN review_ratings ON reviews.review_rating_id = review_ratings.rating_id
 	                                        INNER JOIN reviews_categories ON reviews.review_category_id =  reviews_categories.review_category_id
-											WHERE college_id = ? AND review_ratings.rating_id = ?");
+											WHERE reviews.college_id = ? AND review_ratings.rating_id = ?");
 				$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
 				$stmt->bindParam(2,$ratings,PDO::PARAM_INT);
 				$stmt->execute();
@@ -1947,7 +1947,7 @@ function get_all_reviews($collegeId,$category = NULL,$ratings = NULL){
 											INNER JOIN college_student ON reviews.student_id = college_student.id
 											INNER JOIN review_ratings ON reviews.review_rating_id = review_ratings.rating_id
 	                                        INNER JOIN reviews_categories ON reviews.review_category_id =  reviews_categories.review_category_id
-											WHERE college_id = ?");
+											WHERE reviews.college_id = ?");
 				$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
 				$stmt->execute();
 				$connect->commit();
@@ -2442,7 +2442,7 @@ function get_liked_community_discussions($userId,$typeId){
 		try{
 			$sqlStr = "SELECT uni_name,community_discussions.community_id,c_discussion_id,colleges.college_id,c_discussion_title,c_discussion_post,photo,community_discussions.student_id,username,post_date FROM community_discussions 
 				INNER JOIN college_student ON community_discussions.student_id = college_student.id 
-				INNER JOIN communities JOIN colleges ON community_discussions.community_id = communities.community_id AND communities.college_id = colleges.college_id WHERE student_id = $userId AND c_discussion_id = $typeId "; 
+				INNER JOIN communities JOIN colleges ON community_discussions.community_id = communities.community_id AND communities.college_id = colleges.college_id WHERE c_discussion_id = $typeId "; 
 			$stmt = $connect->query($sqlStr);
 			return $stmt->fetchAll(PDO::FETCH_ASSOC); 
 		}catch(Exception $e){
@@ -2455,7 +2455,7 @@ function get_liked_events($userId,$typeId){
 	global $connect;
 		try{
 			$sqlStr = "SELECT uni_name,community_id,event_id,event_title,event_description,event_date,event_location,event_photo FROM events 
-				INNER JOIN colleges ON events.college_id = colleges.college_id WHERE student_id = $userId AND event_id = $typeId";
+				INNER JOIN colleges ON events.college_id = colleges.college_id WHERE event_id = $typeId";
 			$stmt = $connect->query($sqlStr);
 			return $stmt->fetchAll(PDO::FETCH_ASSOC); 
 		}catch(Exception $e){
