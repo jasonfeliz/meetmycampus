@@ -505,7 +505,7 @@ function join_community($communityId,$userId,$status){
 	global $connect;
 	$read = NULL;
 	if ($status == 2) {
-		$read = 'no';
+		$read = 0;
 	}
 		try {
 			$connect->beginTransaction();
@@ -1480,7 +1480,7 @@ function get_community_request($communityId,$status=NULL){
 		}else{
 			try {
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT COUNT(*) FROM community_members WHERE community_id = ? AND status = 2 AND is_read = 'no'");
+				$stmt = $connect->prepare("SELECT COUNT(*) FROM community_members WHERE community_id = ? AND status = 2 AND is_read = 0");
 				$stmt->bindParam(1,$communityId,PDO::PARAM_INT);
 				$stmt->execute();
 				$connect->commit();

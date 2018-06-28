@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			global $connect;
 			try{
 				$connect->beginTransaction();
-		        $stmt = $connect->prepare("UPDATE community_members SET is_read = NULL WHERE community_id = ?");
+		        $stmt = $connect->prepare("UPDATE community_members SET is_read = 0 WHERE community_id = ?");
 				$stmt->bindParam(1,$id,PDO::PARAM_INT);
 				$return = $stmt->execute();
 				$connect->commit();
