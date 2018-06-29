@@ -128,7 +128,7 @@ require_once('inc/main-header-test.php');
 													?>
 													<?php if($loggedIn): ?>
 
-														<i class="fa fa-heart-o" <?php echo $color;?> aria-hidden="true" id="c-discussion-<?php echo $discussionId;?>" onclick="doFavorites('community-discussion', <?php echo $discussionId . ', ' . $userId;?> , this)"></i>
+														<i class="fa fa-heart-o" <?php echo $color;?> aria-hidden="true" id="c-discussion-<?php echo $discussionId;?>" onclick="doFavorites('community_discussion', <?php echo $discussionId . ', ' . $userId;?> , this)"></i>
 													<?php endif; ?>
 														<i class="fa fa-ellipsis-h" id="ellipsis-cd-<?php echo $discussionId; ?>" aria-hidden="true" onclick="showEllipsis(this)"></i>
 														<div class="ellipsis-menu">
