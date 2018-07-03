@@ -1591,9 +1591,13 @@ function search_schools($search){
 	try{
 			$connect->beginTransaction();
 			$stmt = $connect->prepare("SELECT * FROM colleges 
-										WHERE uni_name LIKE ? ORDER BY LOCATE(?, uni_name)");
+										WHERE uni_name LIKE ? OR uni_abrev LIKE ? OR email_url LIKE ? OR city LIKE ? OR state LIKE ? ORDER BY LOCATE(?, uni_name)");
 			$stmt->bindParam(1,$searchString,PDO::PARAM_STR);
 			$stmt->bindParam(2,$searchString,PDO::PARAM_STR);
+			$stmt->bindParam(3,$searchString,PDO::PARAM_STR);
+			$stmt->bindParam(4,$searchString,PDO::PARAM_STR);
+			$stmt->bindParam(5,$searchString,PDO::PARAM_STR);
+			$stmt->bindParam(6,$searchString,PDO::PARAM_STR);
 			$stmt->execute();
 			$connect->commit();
 			return $stmt->fetchAll(PDO::FETCH_ASSOC);
