@@ -81,9 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $createUser = create_user($university,$firstName,$lastName,$userName,$collegeEmail,$hashed);
         $checkMajor = check_major($enteredSchool['college_id'],$majorId);
         if (empty($checkMajor)) {
-
-          $message =   "Connect and discuss the latest topics and trends with " . $userMajor . " majors @".$university;
-          $createMajor = create_major($enteredSchool['college_id'],$majorId,$userMajor,$message);
+          $createMajor = create_major($enteredSchool['college_id'],$majorId,$userMajor);
           join_community($createMajor,$createUser['id'],1);
 
         }else{

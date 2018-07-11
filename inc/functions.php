@@ -76,8 +76,11 @@ function create_community($collegeId,$categoryId,$userId,$communityName,$communi
 			$connect->commit();			
 			$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-			join_community($result['community_id'],$result['creator_id'],1);
-			add_community_admin($result['community_id'],$result['creator_id'],2);
+			if ($userId != 38) {
+				join_community($result['community_id'],$result['creator_id'],1);
+				add_community_admin($result['community_id'],$result['creator_id'],2);
+			}
+
 
 			return $result;
 		}catch(Exception $e){
