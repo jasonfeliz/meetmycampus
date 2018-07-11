@@ -503,7 +503,7 @@ function add_community_admin($communityId,$userId,$adminLevel){
 }
 function join_community($communityId,$userId,$status){
 	global $connect;
-	$read = NULL;
+	$read = 1;
 	if ($status == 2) {
 		$read = 0;
 	}

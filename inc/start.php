@@ -1,5 +1,5 @@
 <?php
-
+ob_start();
 $loggedIn = $categories = $userSchool  = $urlCollegeName = $userFirstName = $userLastName = $userName = $userEmail = $communityId = $categoryId = $userId = $userInfo= $majorConstant = $storyConstant = $communityConstant = $getVar = $onClick = $disableComment = $userAbbrev = "";
 $_SESSION['redirect_location'] =  $_SERVER["REQUEST_URI"];
 
