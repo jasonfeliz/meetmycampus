@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 28, 2018 at 05:33 PM
+-- Generation Time: Jul 11, 2018 at 09:48 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 5.6.31
 
@@ -832,7 +832,16 @@ INSERT INTO `college_student` (`id`, `first_name`, `last_name`, `username`, `ema
 (47, 'Luis', 'Felix', 'lfeliz', 'lfelix@harvard.edu', '$2y$10$k/asIv022.uPVjHudPra6Oxa/tUOurZeAcEWum4a35shNSmHPekfW', 'no', '2018-03-25 07:05:17', 227),
 (49, 'Mike', 'Jones', 'mjones', 'mjones1@harvard.edu', '$2y$10$nrE.or1bmayeTvAkOmSHS.vlgVgOFnj1pQjoSPtJuA0rV2nNeK9am', 'no', '2018-06-14 14:42:19', 227),
 (51, 'Rob', 'Yu', 'robyu', 'robyu@harvard.edu', '$2y$10$veKt8.ugTkbnV/OR0ZuBrOcivicLzU4b0qFJSgkdCCQZ.f1W7caK2', 'no', '2018-06-14 14:45:25', 227),
-(52, 'Mary', 'Jane', 'maryjane', 'maryjane@harvard.edu', '$2y$10$.CdC6qyDY8E55ibBSfcXde.ocugbGgPYXLSBQH5yt74Fm0tgpG0se', 'no', '2018-06-14 17:00:19', 227);
+(52, 'Mary', 'Jane', 'maryjane', 'maryjane@harvard.edu', '$2y$10$.CdC6qyDY8E55ibBSfcXde.ocugbGgPYXLSBQH5yt74Fm0tgpG0se', 'no', '2018-06-14 17:00:19', 227),
+(53, 'Bruce', 'Wayne', 'brucewayneee', 'bruce@harvard.edu', '$2y$10$H7Bp25Uy.hc/bCwv0dQkvOnYNfkg1vALT08SBzdfnIg9dokWI7tXa', 'no', '2018-07-11 17:15:32', 227),
+(54, 'Bruce', 'Wayne', 'brucewayneee2', 'bruce2@harvard.edu', '$2y$10$G3m0UyfYpFp3i2X0eBd7du14Lq8Xm0ddeF9gkH8cLEPG7M70aW7WW', 'no', '2018-07-11 17:38:44', 227),
+(55, 'robin', 'nest', 'robin', 'robin@harvard.edu', '$2y$10$8VStzRq2l.ZzZ/tSR3NNEutus11hymJDDfQrcU.YJmPewgG5x8fU2', 'no', '2018-07-11 17:41:23', 227),
+(56, 'the', 'joker', 'thejoker', 'joker@harvard.edu', '$2y$10$V1mfiqWhC5W1CGPDtciPEOYhlzZ7JEO03/DF8gokZamiljokzYvvq', 'no', '2018-07-11 17:44:50', 227),
+(57, 'Mark', 'Jones', 'markjones', 'markjones@harvard.edu', '$2y$10$/bj7iAV4qq9IDUPZ52M59u8RE2wuFS1GlWpOT/IXS7X3snTQc4Dcq', 'no', '2018-07-11 18:19:03', 227),
+(58, 'Mark', 'Jones', 'markjones1', 'markjones1@harvard.edu', '$2y$10$brmbpZHLs6FavWbINOhb6Oy0FUz7xUfMWNHshcKNPc1r.74zxxIme', 'no', '2018-07-11 18:31:18', 227),
+(59, 'Carlos', 'Martinez', 'carlos', 'carlos@harvard.edu', '$2y$10$V.aVHQfsQyDSqVSlEbfr0ea131XoxLN4xBXYNDeKe1UfPMRlAaHke', 'no', '2018-07-11 18:52:58', 227),
+(60, 'Luis', 'Miguel', 'luismiguel', 'luismiguel@harvard.edu', '$2y$10$/F1qJhyzSMgsZI3eDcrr7OzUklgvvkAgKJ.Aw/hRvUXUNoZewHrR2', 'no', '2018-07-11 18:54:40', 227),
+(61, 'Miguel', 'Cairo', 'miguelcario', 'miguelc@harvard.edu', '$2y$10$aeO7IH.48RGicBSklt7SaeDGLf0WsFWZf8JyFeZL/WjDZzA1ASE2.', 'no', '2018-07-11 19:09:06', 227);
 
 -- --------------------------------------------------------
 
@@ -845,7 +854,7 @@ CREATE TABLE `communities` (
   `college_id` int(10) UNSIGNED DEFAULT NULL,
   `category_id` int(10) UNSIGNED DEFAULT NULL,
   `creator_id` int(10) UNSIGNED DEFAULT NULL,
-  `community_name` varchar(256) DEFAULT NULL,
+  `community_name` varchar(256) NOT NULL,
   `community_description` varchar(2048) DEFAULT NULL,
   `community_message` varchar(512) DEFAULT NULL,
   `community_category` varchar(32) DEFAULT NULL,
@@ -872,7 +881,11 @@ INSERT INTO `communities` (`community_id`, `college_id`, `category_id`, `creator
 (25, 227, 2, 39, 'miller test 2', 'join millers test', 'miller test 2', 'group', 'private', '#5a626f', '2018-05-16 13:32:08', '2018-04-25 19:38:14'),
 (27, 227, 23, 38, 'Finance', NULL, NULL, 'majors', 'public', '#5a626f', NULL, '2018-06-14 14:21:31'),
 (29, 227, 23, 38, 'Anthropology', NULL, NULL, 'majors', 'public', '#5a626f', NULL, '2018-06-14 14:45:25'),
-(31, 227, 23, 38, 'Mathematics', NULL, NULL, 'majors', 'public', '#5a626f', NULL, '2018-06-14 17:00:19');
+(31, 227, 23, 38, 'Mathematics', NULL, NULL, 'majors', 'public', '#5a626f', NULL, '2018-06-14 17:00:19'),
+(32, 262, 23, 38, 'Computer Science', NULL, NULL, 'majors', 'public', '#5a626f', NULL, '2018-06-28 17:24:00'),
+(36, 227, 23, 38, 'Psychology', NULL, NULL, 'majors', 'public', '#5a626f', NULL, '2018-07-11 17:38:44'),
+(42, 227, 23, 38, 'Computer Science', NULL, NULL, 'majors', 'public', '#5a626f', NULL, '2018-07-11 18:54:40'),
+(43, 227, 23, 38, 'Electrical Engineering', NULL, NULL, 'majors', 'public', '#5a626f', NULL, '2018-07-11 19:09:06');
 
 -- --------------------------------------------------------
 
@@ -901,7 +914,9 @@ INSERT INTO `community_admins` (`admin_id`, `community_id`, `student_id`, `admin
 (13, 24, 39, 2, '2018-04-25 15:45:59'),
 (14, 25, 39, 2, '2018-04-25 19:38:14'),
 (16, 29, 38, 2, '2018-06-14 14:45:25'),
-(17, 31, 38, 2, '2018-06-14 17:00:19');
+(17, 31, 38, 2, '2018-06-14 17:00:19'),
+(19, 36, 38, 2, '2018-07-11 17:38:44'),
+(20, 42, 38, 2, '2018-07-11 18:54:40');
 
 -- --------------------------------------------------------
 
@@ -913,8 +928,8 @@ CREATE TABLE `community_discussions` (
   `c_discussion_id` int(10) UNSIGNED NOT NULL,
   `community_id` int(10) UNSIGNED DEFAULT NULL,
   `student_id` int(10) UNSIGNED DEFAULT NULL,
-  `c_discussion_title` varchar(1024) DEFAULT NULL,
-  `c_discussion_post` varchar(4086) NOT NULL,
+  `c_discussion_title` text,
+  `c_discussion_post` text NOT NULL,
   `photo` varchar(64) DEFAULT NULL,
   `post_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -928,12 +943,12 @@ INSERT INTO `community_discussions` (`c_discussion_id`, `community_id`, `student
 (2, 1, 35, 'stolen sandwich......', 'Hey Guys,\r\n\r\nJust had the most amazing sandwich ever get robbed from me at work. I even left a note. I got Ross&#39;ed  today. :-(', NULL, '2017-12-11 14:58:27'),
 (4, 2, 38, 'Off-campus living.....', 'A single, tiny room with shared bath could cost $800-$900+. One woman was offering a tiny section of attic which could only be accessed through a bathroom- no fan or air conditioner, for $750!!! Many of the landlords my friends and I have dealt with are charlatans. They see students as cash cows and take advantage of them. I\'ve heard many horror stories. There should be a law against what those so-called landlords do, especially considering they don\'t report the additional income to the IRS.', NULL, '2018-01-10 11:00:56'),
 (17, 9, 42, 'hold my beer.....', 'hello,\r\n\r\nhold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, \r\n\r\n\r\nhold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, \r\n\r\n\r\n\r\nhold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, hold my beer, \r\n\r\nhold my beer, \r\n\r\n\r\nhold my beer, \r\nJason', NULL, '2018-04-04 07:49:42'),
-(18, 24, 35, NULL, 'Hello Miller Test!\r\n\r\nHow are you doing today?', NULL, '2018-04-25 23:27:29'),
 (19, 4, 35, 'Whats up, rulers of the galaxy?!', 'Whats up, rulers of the galaxy?!', NULL, '2018-06-07 11:32:43'),
 (21, 25, 35, NULL, 'no wayyy', NULL, '2018-06-07 12:57:47'),
 (23, 9, 35, 'yes', 'let say yes to everyting', NULL, '2018-06-14 10:34:14'),
 (27, 27, 35, 'first finance post', 'this is my first finance post!', NULL, '2018-06-16 12:22:13'),
-(28, 23, 35, 'test', 'This is just a test. \r\n\r\nDon&#39;t panick. We are not here to hurt you. We&#39;re here to take over your life....', NULL, '2018-06-22 01:18:35');
+(28, 23, 35, 'test', 'This is just a test. \r\n\r\nDon&#39;t panick. We are not here to hurt you. We&#39;re here to take over your life....', NULL, '2018-06-22 01:18:35'),
+(29, 25, 39, 'test', 'hello,\r\n\r\nthis is a test\r\n\r\nThank you,\r\nTester', NULL, '2018-06-28 11:40:33');
 
 -- --------------------------------------------------------
 
@@ -966,7 +981,9 @@ INSERT INTO `community_discussion_vote` (`c_vote_id`, `c_discussion_id`, `studen
 (22, 2, 39, 1),
 (23, 17, 35, 1),
 (24, 19, 35, 1),
-(27, 23, 35, 1);
+(27, 23, 35, 1),
+(29, 19, 39, 1),
+(30, 1, 39, 1);
 
 -- --------------------------------------------------------
 
@@ -1013,8 +1030,13 @@ INSERT INTO `community_members` (`community_member_id`, `community_id`, `student
 (112, 31, 38, 1, 0, '2018-06-14 17:00:19'),
 (113, 31, 52, 1, 0, '2018-06-14 17:00:19'),
 (114, 2, 35, 1, 0, '2018-06-20 16:29:30'),
-(116, 25, 35, 2, 0, '2018-06-21 02:32:34'),
-(118, 24, 35, 1, 1, '2018-06-27 19:13:53');
+(116, 25, 35, 1, 0, '2018-06-21 02:32:34'),
+(118, 24, 35, 1, 1, '2018-06-27 19:13:53'),
+(119, 20, 39, 2, 0, '2018-06-29 01:22:46'),
+(121, 36, 38, 1, 1, '2018-07-11 17:38:44'),
+(122, 36, 54, 1, 1, '2018-07-11 17:38:44'),
+(123, 42, 38, 1, 1, '2018-07-11 18:54:40'),
+(124, 43, 61, 1, 1, '2018-07-11 19:09:06');
 
 -- --------------------------------------------------------
 
@@ -1083,8 +1105,8 @@ CREATE TABLE `discussion_post` (
   `d_topic_id` int(10) UNSIGNED DEFAULT NULL,
   `college_id` int(10) UNSIGNED DEFAULT NULL,
   `student_id` int(10) UNSIGNED DEFAULT NULL,
-  `discussion_title` varchar(1024) DEFAULT NULL,
-  `discussion_post` varchar(4096) DEFAULT NULL,
+  `discussion_title` text,
+  `discussion_post` text,
   `post_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -1094,7 +1116,7 @@ CREATE TABLE `discussion_post` (
 
 INSERT INTO `discussion_post` (`d_post_id`, `d_topic_id`, `college_id`, `student_id`, `discussion_title`, `discussion_post`, `post_date`) VALUES
 (9, 23, 227, 35, 'What is you major and why did you pick it?', 'Hello, \r\n\r\nI&#39;m looking for some serious feedback as to what your majors are and why did you pick it? I&#39;m a freshmen at Harvard, and I&#39;m still undecided what my major is going to be. I&#39;m leaning towards the sciences but for sure I&#39;m keeping my options open. I will consider all replies. \r\n\r\nThanks!', '2018-06-05 19:09:48'),
-(15, 34, 227, 35, 'dsfsf', 'sdfsdffd', '2018-06-07 15:48:06');
+(16, 24, 227, 35, 'Admissions', 'Does anyone know when the deadline for applications are??', '2018-07-10 21:02:55');
 
 -- --------------------------------------------------------
 
@@ -1115,9 +1137,7 @@ CREATE TABLE `discussion_replies` (
 --
 
 INSERT INTO `discussion_replies` (`d_reply_id`, `discussion_id`, `student_id`, `reply_post`, `post_date`) VALUES
-(14, 9, 37, 'Great question.\r\n\r\nI had the same issues when I was a freshmen. I&#39;m a Computer Science major. I picked CS because I have been interested in programming since middle school. It was my first love and it made sense for me. Also, I did some research about which jobs will be highest in demand, and software engineers were at the top of the list. The research helped me make my final decisions and I haven&#39;t regretted once. My advice for you would be to choose something you loved doing as a kid, whether that was video games or playing sports. Also, do some research on the subjects you&#39;re interested in. You&#39;d be surprise how many subjects could be obselete in the near future.', '2018-06-06 13:59:07'),
-(15, 15, 35, 'dslknnkdklnmmewdkwn3', '2018-06-07 12:28:05'),
-(16, 15, 35, 'ffgg', '2018-06-07 12:38:44');
+(14, 9, 37, 'Great question.\r\n\r\nI had the same issues when I was a freshmen. I&#39;m a Computer Science major. I picked CS because I have been interested in programming since middle school. It was my first love and it made sense for me. Also, I did some research about which jobs will be highest in demand, and software engineers were at the top of the list. The research helped me make my final decisions and I haven&#39;t regretted once. My advice for you would be to choose something you loved doing as a kid, whether that was video games or playing sports. Also, do some research on the subjects you&#39;re interested in. You&#39;d be surprise how many subjects could be obselete in the near future.', '2018-06-06 13:59:07');
 
 -- --------------------------------------------------------
 
@@ -1138,8 +1158,7 @@ CREATE TABLE `discussion_r_replies` (
 --
 
 INSERT INTO `discussion_r_replies` (`r_reply_id`, `d_reply_id`, `student_id`, `r_reply_post`, `post_date`) VALUES
-(36, 14, 35, 'Thanks so much for your reply. Computer Science was on my list. Will def keep my options open!!', '2018-06-06 14:00:30'),
-(39, 16, 35, 'awesome!!', '2018-06-07 12:39:18');
+(36, 14, 35, 'Thanks so much for your reply. Computer Science was on my list. Will def keep my options open!!', '2018-06-06 14:00:30');
 
 -- --------------------------------------------------------
 
@@ -1223,7 +1242,7 @@ CREATE TABLE `discussion_vote` (
 INSERT INTO `discussion_vote` (`vote_id`, `discussion_id`, `student_id`, `vote`) VALUES
 (23, 9, 35, 1),
 (24, 9, 37, 1),
-(25, 15, 35, -1);
+(26, 16, 35, 1);
 
 -- --------------------------------------------------------
 
@@ -1388,7 +1407,19 @@ INSERT INTO `favorites` (`favorite_id`, `user_id`, `favorite_type`, `type_id`) V
 (122, 35, 'community_discussion', 27),
 (123, 35, 'community_discussion', 4),
 (124, 35, 'event', 4),
-(125, 35, 'event', 6);
+(125, 35, 'event', 6),
+(126, 39, 'community_discussion', 18),
+(128, 39, 'community_discussion', 2),
+(129, 39, 'community_discussion', 1),
+(130, 39, 'community_discussion', 19),
+(131, 39, 'community_discussion', 17),
+(132, 39, 'discussion', 9),
+(133, 35, 'community_discussion', 18),
+(134, 35, 'community_discussion', 29),
+(135, 35, 'discussion', 16),
+(136, 61, 'community_discussion', 2),
+(137, 61, 'discussion', 9),
+(138, 61, 'discussion', 16);
 
 -- --------------------------------------------------------
 
@@ -1420,13 +1451,13 @@ INSERT INTO `friend_followers` (`follower_id`, `user_id`, `friend_id`) VALUES
 (23, 39, 37),
 (24, 39, 47),
 (27, 39, 41),
-(30, 39, 42),
 (34, 39, 39),
 (35, 39, 40),
 (36, 39, 35),
 (46, 35, 35),
 (53, 35, 37),
-(54, 35, 41);
+(54, 35, 41),
+(55, 39, 42);
 
 -- --------------------------------------------------------
 
@@ -1461,7 +1492,9 @@ INSERT INTO `interests` (`interest_id`, `category_id`, `student_id`) VALUES
 (38, 5, 39),
 (39, 7, 39),
 (40, 3, 35),
-(41, 4, 35);
+(41, 4, 35),
+(43, 6, 39),
+(44, 2, 39);
 
 -- --------------------------------------------------------
 
@@ -1482,7 +1515,10 @@ CREATE TABLE `majors` (
 INSERT INTO `majors` (`major_id`, `major_list_id`, `college_id`) VALUES
 (2, 210, 227),
 (7, 1112, 227),
-(9, 900, 227);
+(9, 900, 227),
+(10, 1101, 227),
+(11, 292, 227),
+(12, 1224, 227);
 
 -- --------------------------------------------------------
 
@@ -1902,7 +1938,6 @@ INSERT INTO `majors_list` (`major_list_id`, `major`) VALUES
 (400, 'Music Teacher Education'),
 (401, 'Physical Education Teaching and Coaching'),
 (402, 'Physics Teacher Education'),
-(403, 'Psychology '),
 (404, 'Reading Teacher Education'),
 (405, 'Sales and Marketing Operations/Marketing and Distribution Teacher Education'),
 (406, 'School Librarian/School Library Media Specialist'),
@@ -2722,7 +2757,8 @@ INSERT INTO `majors_list` (`major_list_id`, `major`) VALUES
 (1220, 'Digital Arts'),
 (1221, 'Visual and Performing Arts'),
 (1222, 'Undeclared'),
-(1223, 'Aeronautical Engineering');
+(1223, 'Aeronautical Engineering'),
+(1224, 'Electrical Engineering');
 
 -- --------------------------------------------------------
 
@@ -2895,7 +2931,10 @@ INSERT INTO `school_followers` (`school_follower_id`, `user_id`, `college_id`, `
 (36, 35, 221, '2018-05-30 20:13:55'),
 (38, 49, 227, '2018-06-14 10:42:19'),
 (39, 51, 227, '2018-06-14 10:45:25'),
-(40, 52, 227, '2018-06-14 13:00:19');
+(40, 52, 227, '2018-06-14 13:00:19'),
+(41, 54, 227, '2018-07-11 13:38:44'),
+(42, 60, 227, '2018-07-11 14:54:40'),
+(43, 61, 227, '2018-07-11 15:09:06');
 
 -- --------------------------------------------------------
 
@@ -2932,7 +2971,10 @@ INSERT INTO `user_profile` (`profile_id`, `major_id`, `student_id`, `about`, `ge
 (12, 832, 47, NULL, NULL, NULL, '', NULL),
 (13, 292, 49, NULL, NULL, NULL, '', NULL),
 (14, 1112, 51, NULL, NULL, NULL, '', NULL),
-(15, 900, 52, NULL, NULL, NULL, '', NULL);
+(15, 900, 52, NULL, NULL, NULL, '', NULL),
+(16, 1101, 54, NULL, NULL, NULL, '', NULL),
+(17, 292, 60, NULL, NULL, NULL, '', NULL),
+(18, 1224, 61, NULL, NULL, NULL, '', NULL);
 
 -- --------------------------------------------------------
 
@@ -2989,7 +3031,6 @@ ALTER TABLE `college_student`
 --
 ALTER TABLE `communities`
   ADD PRIMARY KEY (`community_id`),
-  ADD UNIQUE KEY `community_name` (`community_name`),
   ADD KEY `communities_ibfk_2` (`category_id`),
   ADD KEY `communities_ibfk_4` (`creator_id`),
   ADD KEY `communities_ibfk_1` (`college_id`);
@@ -3231,32 +3272,32 @@ ALTER TABLE `colleges`
 -- AUTO_INCREMENT for table `college_student`
 --
 ALTER TABLE `college_student`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 --
 -- AUTO_INCREMENT for table `communities`
 --
 ALTER TABLE `communities`
-  MODIFY `community_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `community_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 --
 -- AUTO_INCREMENT for table `community_admins`
 --
 ALTER TABLE `community_admins`
-  MODIFY `admin_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `admin_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `community_discussions`
 --
 ALTER TABLE `community_discussions`
-  MODIFY `c_discussion_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `c_discussion_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 --
 -- AUTO_INCREMENT for table `community_discussion_vote`
 --
 ALTER TABLE `community_discussion_vote`
-  MODIFY `c_vote_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `c_vote_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT for table `community_members`
 --
 ALTER TABLE `community_members`
-  MODIFY `community_member_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
+  MODIFY `community_member_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=125;
 --
 -- AUTO_INCREMENT for table `c_discussion_replies`
 --
@@ -3271,7 +3312,7 @@ ALTER TABLE `c_discussion_r_reply`
 -- AUTO_INCREMENT for table `discussion_post`
 --
 ALTER TABLE `discussion_post`
-  MODIFY `d_post_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `d_post_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `discussion_replies`
 --
@@ -3291,7 +3332,7 @@ ALTER TABLE `discussion_topics`
 -- AUTO_INCREMENT for table `discussion_vote`
 --
 ALTER TABLE `discussion_vote`
-  MODIFY `vote_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `vote_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 --
 -- AUTO_INCREMENT for table `email_newsletter`
 --
@@ -3301,7 +3342,7 @@ ALTER TABLE `email_newsletter`
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `event_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `event_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `event_attendees`
 --
@@ -3321,27 +3362,27 @@ ALTER TABLE `event_type`
 -- AUTO_INCREMENT for table `favorites`
 --
 ALTER TABLE `favorites`
-  MODIFY `favorite_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=126;
+  MODIFY `favorite_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=139;
 --
 -- AUTO_INCREMENT for table `friend_followers`
 --
 ALTER TABLE `friend_followers`
-  MODIFY `follower_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `follower_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 --
 -- AUTO_INCREMENT for table `interests`
 --
 ALTER TABLE `interests`
-  MODIFY `interest_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `interest_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 --
 -- AUTO_INCREMENT for table `majors`
 --
 ALTER TABLE `majors`
-  MODIFY `major_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `major_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `majors_list`
 --
 ALTER TABLE `majors_list`
-  MODIFY `major_list_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1224;
+  MODIFY `major_list_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1225;
 --
 -- AUTO_INCREMENT for table `notifications`
 --
@@ -3371,12 +3412,12 @@ ALTER TABLE `review_ratings`
 -- AUTO_INCREMENT for table `school_followers`
 --
 ALTER TABLE `school_followers`
-  MODIFY `school_follower_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `school_follower_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 --
 -- AUTO_INCREMENT for table `user_profile`
 --
 ALTER TABLE `user_profile`
-  MODIFY `profile_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `profile_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- Constraints for dumped tables
 --
