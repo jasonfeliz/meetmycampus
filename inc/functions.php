@@ -1215,7 +1215,7 @@ function update_user($userId,$collegeId,$email,$username,$majorId,$about){
 		$connect->commit();
 		return true;		
 	} catch (Exception $e) {
-		
+		throw $e;
 	}
 }
 function update_password($userId,$hashed){
@@ -1229,7 +1229,7 @@ function update_password($userId,$hashed){
 		$connect->commit();
 		return true;		
 	} catch (Exception $e) {
-		
+		throw $e;
 	}
 }
 function setVeriCode($userId,$veriCode) {

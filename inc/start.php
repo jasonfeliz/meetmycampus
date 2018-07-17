@@ -11,14 +11,14 @@ if(!$loggedIn){
 }
  if ($loggedIn){
 	$userId = $_COOKIE['user_id'];
-	$userInfo = get_user_info($userId);
-	$userFirstName = ucfirst($userInfo['first_name']);
-	$userLastName =  ucfirst($userInfo['last_name']);
-	$userAbbrev = strtoupper(substr($userFirstName,0,1). substr($userLastName, 0,1));
-	$userName = $userInfo['userName'];
-	$userEmail = $userInfo['email'];
-	$userSchool = $userInfo['university'];
-
+	$userInfo = new User($connect,$_COOKIE['user_id']);
+	$userFullName = $userInfo->get_full_name();
+	$userAbbrev = $userInfo->get_abbrevated_name();
+	$userName = $userInfo->get_username();
+	$userEmail = $userInfo->get_user_email();
+	$userSchool = $userInfo->get_user_school();
+	$userType = $userInfo->get_user_type();
+	$userDeletedStatus = $userInfo->is_deleted();
 }
 $universitySearched = $userSchoolName = "";
 if ($loggedIn && empty($_GET['school_name'])) {
