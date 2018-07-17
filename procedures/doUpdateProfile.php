@@ -1,18 +1,19 @@
 <?php 
 require_once('../inc/bootstrap.php');
 require_once('../inc/start.php');
-$newUserName = $newMajorId = $newEmail = $newCollege = $newMajor = $oldPassword = $newPassword = $confirmPassword = "";
+$newUserName = $newMajorId = $newEmail = $newCollege = $newMajor = $oldPassword = $newPassword = $confirmPassword = $about = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (isset($_POST['profile'])) {
+      $about = urldecode(trim(filter_input(INPUT_POST,"ud-about",FILTER_SANITIZE_STRING))); 
       $newUserName = urldecode(trim(filter_input(INPUT_POST,"ud-username",FILTER_SANITIZE_STRING)));
       $newMajor = urldecode(trim(filter_input(INPUT_POST,"ud-major",FILTER_SANITIZE_STRING)));
       $newMajorId = trim(filter_input(INPUT_POST,"ud-major-id",FILTER_SANITIZE_NUMBER_INT));
       $newEmail = urldecode(trim(filter_input(INPUT_POST,"ud-email",FILTER_SANITIZE_EMAIL)));
       $newCollege = urldecode(trim(filter_input(INPUT_POST,"ud-university",FILTER_SANITIZE_STRING)));
 
-      if ($newUserName == "" || $newMajor == "" || $newEmail == "" || $newCollege == "") {
-        $_SESSION['settings_error'] = "Please fill in the required fields: Username, Major, Email, University";
+      if ($newUserName == "" || $newMajor == "" || $newEmail == "" || $newCollege == "" || $about == "") {
+        $_SESSION['settings_error'] = "Please fill in the required fields: Username, Major, Email, University, About";
         redirect('../settings.php');
       }
 
@@ -38,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           create_major($enteredSchool['college_id'],$newMajorId,$newMajor,$message);
         }
 
-        $updateUser = update_user($userId,$enteredSchool['college_id'],$newEmail,$newUserName,$newMajorId);
+        $updateUser = update_user($userId,$enteredSchool['college_id'],$newEmail,$newUserName,$newMajorId,$about);
         follow_school($enteredSchool['college_id'],$userId);
 
         $_SESSION['settings_success'] = "Your settings have been successfully saved!";

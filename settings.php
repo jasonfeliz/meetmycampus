@@ -76,6 +76,10 @@ include('inc/main-header-test.php');
 							<input type="text" name="ud-university" id="ud-university" value="<?php echo $userSchool; ?>" readonly>
 						</div>
 						<div>
+							<label>About</label>
+							<textarea  name="ud-about" id="ud-about" value="<?php echo $profileInfo['about']; ?>"><?php echo $profileInfo['about']; ?></textarea>
+						</div>
+						<div>
 
 	                        <div style="display:none">
 	                                <label for="address">Address</label></th>

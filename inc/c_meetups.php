@@ -1,6 +1,12 @@
 
 <?php
-			
+					if($privateCommunity){
+						echo "<header class='private-section'>
+						 		<h1>Oh Snap!</h1>
+						 		<p>This is a private community. Only it's members have access to discussions and meetups. Send a request to join this community by clicking the 'Join Community' button above. </p>
+						 		<i class='fa fa-user-secret fa-5x'></i>
+						 	</header>";
+					}else{
 							$onClick2 = ' onclick="not_signed_in_modal()" ';
 							if($loggedIn){
 								$check = is_member($userId,$communityId,null);
@@ -43,4 +49,5 @@
 									
 									$content .= '</ul>';
 									echo $content;
+						}
 ?>

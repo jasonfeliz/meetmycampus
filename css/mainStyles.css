@@ -105,6 +105,7 @@ h1,h2,h3,h4,h5 {
   color:#747474;
   margin:50px auto 0 auto;
   width:75%;
+  text-align: center;
 }
 .private-section h1{
   margin-bottom: 10px !important;
@@ -1415,7 +1416,8 @@ border:solid 4px #4445467a;
 }
 .account-settings input,
 .settings-avatar button,
-.settings-new-password input {
+.settings-new-password input,
+.account-settings textarea {
   margin-bottom: 10px;
   padding: 13px 10px;
   width: 100%;
@@ -1426,7 +1428,8 @@ border:solid 4px #4445467a;
   line-height: 1.35;
   font-size: 16px;
 }
-.account-settings input:focus{
+.account-settings input:focus,
+.account-settings textarea:focus{
   border-color: #ea7363;
   outline: none;
 }
@@ -1480,6 +1483,10 @@ border:solid 4px #4445467a;
   color:rgba(0,0,0,.5);
 }
 
+.ellipsis-button {
+  color: rgba(0,0,0,.5);
+}
+
 @media (min-width: 1024px){
    .settings-avatar{
     width: 40%;
@@ -1488,7 +1495,8 @@ border:solid 4px #4445467a;
    } 
   .account-settings input,
   .settings-avatar button,
-  .settings-new-password input {
+  .settings-new-password input,
+  .account-settings textarea  {
     font-size: 13px;
   }
   .settings-input > div, 

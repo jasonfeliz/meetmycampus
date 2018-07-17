@@ -423,13 +423,21 @@ function unfollow_school($collegeId,$userId){
 function follow_school($collegeId,$userId){
 	global $connect;
 		try {
+			//check if user is already following school
 			$connect->beginTransaction();
-			$stmt = $connect->prepare("INSERT INTO school_followers(`user_id`,`college_id`) VALUES(?,?)");
-			$stmt->bindParam(1,$userId, PDO::PARAM_INT);
-			$stmt->bindParam(2,$collegeId,PDO::PARAM_INT);
-			$stmt->execute();
-			$connect->commit();
-			return true;			
+			$stmt = $connect->query("SELECT school_follower_id FROM school_followers WHERE user_id = '$userId' AND college_id = '$collegeId'");
+			$connect->commit();	
+
+			$result = $stmt->fetch(PDO::FETCH_ASSOC);
+			// if result is empty(user not following school) then add user to follow school
+			if (empty($result)) {
+				$connect->beginTransaction();
+				$stmt = $connect->prepare("INSERT INTO school_followers(`user_id`,`college_id`) VALUES(?,?)");
+				$stmt->bindParam(1,$userId, PDO::PARAM_INT);
+				$stmt->bindParam(2,$collegeId,PDO::PARAM_INT);
+				$stmt->execute();
+				$connect->commit();
+			}
 		} catch (Exception $e) {
 			throw $e;
 		}
@@ -1188,7 +1196,7 @@ function delete_user($userId){
   	}
 }
 //update user 
-function update_user($userId,$collegeId,$email,$username,$majorId){
+function update_user($userId,$collegeId,$email,$username,$majorId,$about){
 	global $connect;
 	try {
 		$connect->beginTransaction();
@@ -1199,9 +1207,10 @@ function update_user($userId,$collegeId,$email,$username,$majorId){
 		$stmt->bindParam(4,$userId,PDO::PARAM_INT);
 		$stmt->execute();
 
-		$stmt = $connect->prepare("UPDATE user_profile SET major_id = ? WHERE student_id = ?");
+		$stmt = $connect->prepare("UPDATE user_profile SET major_id = ?,about = ? WHERE student_id = ?");
 		$stmt->bindParam(1,$majorId,PDO::PARAM_INT);
-		$stmt->bindParam(2,$userId,PDO::PARAM_INT);
+		$stmt->bindParam(2,$about,PDO::PARAM_STR);
+		$stmt->bindParam(3,$userId,PDO::PARAM_INT);
 		$stmt->execute();
 		$connect->commit();
 		return true;		
@@ -2120,7 +2129,7 @@ function get_user_info($userId){
 	global $connect;
 	try{
 			$connect->beginTransaction();
-			$stmt = $connect->prepare("SELECT id,first_name, last_name, userName, email, token, verified, uni_name AS university
+			$stmt = $connect->prepare("SELECT id,first_name, last_name, userName, email, token, uni_name AS university
 													  FROM college_student INNER JOIN colleges ON college_student.college_id = colleges.college_id WHERE id=?");
 			$stmt->bindParam(1,$userId,PDO::PARAM_INT);
 			$stmt->execute();
@@ -2431,12 +2440,12 @@ function get_followed_member($userId,$friendId){
 }
 //get liked communities
 
-function get_liked_discussions($userId,$typeId){
+function get_liked_discussions($typeId){
 	global $connect;
 		try{
 			$sqlStr = "SELECT uni_name,d_post_id,discussion_post.college_id,discussion_title,discussion_post,discussion_post.student_id,username,post_date FROM discussion_post 
 				INNER JOIN college_student ON discussion_post.student_id = college_student.id 
-				INNER JOIN colleges ON discussion_post.college_id = colleges.college_id WHERE student_id = $userId AND d_post_id = $typeId";
+				INNER JOIN colleges ON discussion_post.college_id = colleges.college_id WHERE d_post_id = $typeId";
 			$stmt = $connect->query($sqlStr);
 			return $stmt->fetchAll(PDO::FETCH_ASSOC); 
 		}catch(Exception $e){
@@ -2444,7 +2453,7 @@ function get_liked_discussions($userId,$typeId){
 		} 
 }
 //get like community discussions
-function get_liked_community_discussions($userId,$typeId){
+function get_liked_community_discussions($typeId){
 	global $connect;
 		try{
 			$sqlStr = "SELECT uni_name,community_discussions.community_id,c_discussion_id,colleges.college_id,c_discussion_title,c_discussion_post,photo,community_discussions.student_id,username,post_date FROM community_discussions 
@@ -2604,20 +2613,6 @@ function sendResetPasswordEmail($user,$resetCode){
 }
 
 
-function getVerifiedStatus($userId){
-	global $connect;
-	try{
-		$connect->beginTransaction();
-	 	 $results = $connect->prepare("SELECT verified FROM college_student WHERE id = ?");
-	 	 $results->bindParam(1,$userId,PDO::PARAM_INT);
-	  	 $results->execute();
-	  	 $connect->commit();
-	  	 return $results->fetch(PDO::FETCH_ASSOC);
-  	}catch(Exception $e){
-  	  	throw $e;
-  	}
-
-}
 
 function getVeriCode($userId){
 	global $connect;
@@ -2648,20 +2643,7 @@ function getResetCode($userId){
 }
 
 
-function updateVeriStatus($userId,$yes){
-	global $connect;
-	try{
-		$connect->beginTransaction();
-		$stmt = $connect->prepare("UPDATE college_student SET verified = ? WHERE id = ?");
-		$stmt->bindParam(1,$yes,PDO::PARAM_STR);
-		$stmt->bindParam(2,$userId,PDO::PARAM_INT);
-		$return = $stmt->execute();
-		$connect->commit();
-		return $return;
-  	}catch(Exception $e){
-  	  	throw $e;
-  	}
-}
+
 
 function updateVeriCode($userId,$veriCode){
 	global $connect;

@@ -56,12 +56,62 @@ if (isset($_POST['fav_type'])) {
 		echo $content;
 	}elseif($favType == 'fav-discussions'){
 				$content = '<div class="communities-list-header"><h5>Discussions I like</h5></div><ul class="forum-list" id="forum-list">';
-				$get_community_discussions = get_user_favorites($userId,'community_discussion');
 				$get_discussions = get_user_favorites($userId,'discussion');
+				if(!empty($get_discussions)){
+					foreach ($get_discussions as $key) {
+						$liked_discussions = get_liked_discussions($key['type_id']);
+						foreach ($liked_discussions as $key) {
+							$replies = get_all_discussion_replies($key['d_post_id']);
+							if (count($replies)==0){
+								$replyCount =  count($replies)." Replies";
+							}elseif(count($replies)==1){
+								$replyCount = count($replies)." Reply"; 
+							}else{
+								$replyCount = count($replies)." Replies";
+							}
+							$checkFav = check_favorite($key['d_post_id'], $userId, 'discussion');
+							if($checkFav){
+								$color = "style='color: #DF7367;'";
+							}else{
+								$color = "";
+							}
+							$totalVotes = get_total_votes($key['d_post_id']);
+							if (!$totalVotes) {
+								$totalVotes = 0;
+							}
+							$up = $down = '';
+							$checkVote = get_vote($key['d_post_id'],$userId);{
+								if ($checkVote['vote'] == 1) {
+									$up = 'active-vote';
+								}elseif ($checkVote['vote'] == -1) {
+									$down = 'active-vote';
+								}
+							}
+							$postTime = post_time($key['post_date']);
+							$remove = "";
+							$isCreator = is_creator('discussion',$userId,$key['d_post_id']);
+							if ($isCreator) {
+								$remove = '<li class="ellipsis-button" onclick="removeItem(\'discussion\','.$key['d_post_id'].')">Remove Discussion</li>';
+							}
+							$content .= '<li class="forum-item" id="discussion-forum-item-' . $key['d_post_id'] . '">';
+							$content .= '<div class="forum-post-vote">';
+							$content .= '<i id="upvote-'. $key['d_post_id'] .'" class="fa fa-sort-up fa-2x vote-button '. $up .'" aria-hidden="true" onclick="vote('. $key['d_post_id'] .', ' . $userId .',this)"></i>';
+							$content .= '<div id="vote-count-' . $key['d_post_id'] . '" class="vote-count">'. $totalVotes .'</div>';
+							$content .= '<i id="downvote-'. $key['d_post_id'] .'" class="fa fa-sort-down fa-2x vote-button ' . $down . '" aria-hidden="true" onclick="vote('. $key['d_post_id'] .', ' . $userId .',this)"></i></div>';
+							$content .= '<div class="forum-main"><div class="forum-post-body">';
+							$content .= '<a href="discussion.php?school_name='. $collegeName . '&discussion_id='. $key['d_post_id'].'"><p>' . $key['discussion_title'] . '</p></a></div>';
+							$content .= '<ul  class="forum-item-list"><li><a href="profile.php?profile_id='.$key['student_id'] . '">@' . $key['username'] . '</a><span> - '. $postTime .'</span></li>';
+							$content .= '<li class="forum-item-btns"><span class="fa">' . $replyCount . '</span><i class="fa fa-heart-o" ' . $color . ' aria-hidden="true" id="discussion-'. $key['d_post_id'] . '" onclick="doFavorites(\'discussion\',' . $key['d_post_id'] . ', ' .$userId . ', this)"></i><i class="fa fa-ellipsis-h" id="ellipsis-cd-'.$key['d_post_id'].'" aria-hidden="true" onclick="showEllipsis(this)"></i><div class="ellipsis-menu"><ul><li class="ellipsis-button">Report</li>'.$remove.'</ul></div></li></ul>';
+							$content .= '</div></li>';
+						}
 
+					}
+
+				}
+				$get_community_discussions = get_user_favorites($userId,'community_discussion');
 				if (!empty($get_community_discussions)) {
 					foreach ($get_community_discussions as $key) {
-						$liked_community_discussions = get_liked_community_discussions($userId,$key['type_id']);
+						$liked_community_discussions = get_liked_community_discussions($key['type_id']);
 						foreach ($liked_community_discussions as $key) {
 							$checkFav = check_favorite($key['c_discussion_id'], $userId, 'community_discussion');
 							if($checkFav){
@@ -114,57 +164,8 @@ if (isset($_POST['fav_type'])) {
 													
 					}
 				}
-				if(!empty($get_discussions)){
-					foreach ($get_discussions as $key) {
-						$liked_discussions = get_liked_discussions($userId,$key['type_id']);
-						foreach ($liked_discussions as $key) {
-							$replies = get_all_discussion_replies($key['d_post_id']);
-							if (count($replies)==0){
-								$replyCount =  count($replies)." Replies";
-							}elseif(count($replies)==1){
-								$replyCount = count($replies)." Reply"; 
-							}else{
-								$replyCount = count($replies)." Replies";
-							}
-							$checkFav = check_favorite($key['d_post_id'], $userId, 'discussion');
-							if($checkFav){
-								$color = "style='color: #DF7367;'";
-							}else{
-								$color = "";
-							}
-							$totalVotes = get_total_votes($key['d_post_id']);
-							if (!$totalVotes) {
-								$totalVotes = 0;
-							}
-							$up = $down = '';
-							$checkVote = get_vote($key['d_post_id'],$userId);{
-								if ($checkVote['vote'] == 1) {
-									$up = 'active-vote';
-								}elseif ($checkVote['vote'] == -1) {
-									$down = 'active-vote';
-								}
-							}
-							$postTime = post_time($key['post_date']);
-							$remove = "";
-							$isCreator = is_creator('discussion',$userId,$key['d_post_id']);
-							if ($isCreator) {
-								$remove = '<li class="ellipsis-button" onclick="removeItem(\'discussion\','.$key['d_post_id'].')">Remove Discussion</li>';
-							}
-							$content .= '<li class="forum-item" id="discussion-forum-item-' . $key['d_post_id'] . '">';
-							$content .= '<div class="forum-post-vote">';
-							$content .= '<i id="upvote-'. $key['d_post_id'] .'" class="fa fa-sort-up fa-2x vote-button '. $up .'" aria-hidden="true" onclick="vote('. $key['d_post_id'] .', ' . $userId .',this)"></i>';
-							$content .= '<div id="vote-count-' . $key['d_post_id'] . '" class="vote-count">'. $totalVotes .'</div>';
-							$content .= '<i id="downvote-'. $key['d_post_id'] .'" class="fa fa-sort-down fa-2x vote-button ' . $down . '" aria-hidden="true" onclick="vote('. $key['d_post_id'] .', ' . $userId .',this)"></i></div>';
-							$content .= '<div class="forum-main"><div class="forum-post-body">';
-							$content .= '<a href="discussion.php?school_name='. $collegeName . '&discussion_id='. $key['d_post_id'].'"><p>' . $key['discussion_title'] . '</p></a></div>';
-							$content .= '<ul  class="forum-item-list"><li><a href="profile.php?profile_id='.$key['student_id'] . '">@' . $key['username'] . '</a><span> - '. $postTime .'</span></li>';
-							$content .= '<li class="forum-item-btns"><span class="fa">' . $replyCount . '</span><i class="fa fa-heart-o" ' . $color . ' aria-hidden="true" id="discussion-'. $key['d_post_id'] . '" onclick="doFavorites(\'discussion\',' . $key['d_post_id'] . ', ' .$userId . ', this)"></i><i class="fa fa-ellipsis-h" id="ellipsis-cd-'.$key['d_post_id'].'" aria-hidden="true" onclick="showEllipsis(this)"></i><div class="ellipsis-menu"><ul><li class="ellipsis-button">Report</li>'.$remove.'</ul></div></li></ul>';
-							$content .= '</div></li>';
-						}
 
-					}
-
-				}if(empty($liked_community_discussions) && empty($liked_discussions)){
+				if(empty($liked_community_discussions) && empty($liked_discussions)){
 					$content = '<h4 style="padding:20px;">You do not have any favorite discussions.</h4>';
 				}
 				$content .= '</ul>';

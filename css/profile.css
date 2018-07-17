@@ -57,14 +57,19 @@
   transition: all 0.25s;
   font-size: 10px;
 }
-.profile-first-section > .profile-buttons > li:first-child {
+.profile-buttons > li >a {
+	color: #52d2bd;
+}
+.profile-first-section > .profile-buttons > li:first-child{
 	background: #52d2bd;
 	border-color: #52d2bd;
 	color: #fff;
 	margin-right: 10px;
 }
 .profile-buttons > li:hover,
-.profile-buttons > li:focus{
+.profile-buttons > li:focus,
+.profile-buttons > li:hover >a ,
+.profile-buttons > li:focus >a {
 	color: #fff;
 	background: #52d2bd;
 	border-color: #52d2bd;

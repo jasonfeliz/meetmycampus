@@ -18,10 +18,17 @@ include('inc/main-header-test.php');
 			<div class="container">
 				<div class="jumbotron-header-bar profile-jumbotron">
 					<div>
-						<div class="profile-ellipsis">
-							<i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i>
-						</div>
-	
+						<?php if ($userId != $profileId): ?>
+							<div class="profile-ellipsis">
+								<i class="fa fa-ellipsis-h fa-lg" aria-hidden="true" id="<?php echo $profileId; ?>" onclick="showEllipsis(this)"></i>
+								<div class="ellipsis-menu">
+									<ul>
+										<li data-type="report_profile" data-id="<?php echo $profileId; ?>" class="ellipsis-button report-btn">Report</li>
+										<li data-type="block_profile" data-id="<?php echo $profileId; ?>" class="ellipsis-button">Block User</li>
+									</ul>
+								</div>
+							</div>
+						<?php endif; ?>
 						<h2><?php echo '@'.$profileInfo['userName'] ?></h2>
 							<div>
 								<ul class="profile-buttons">
@@ -40,7 +47,7 @@ include('inc/main-header-test.php');
 							            	$content .= '<li class="action-btn" id="messageBtn" style="">Message</li>';
 							            	$content .= '<li class="action-btn" id="follow_id" '.$follow.'>'.$status.' </li>';
 							            }else{
-							            	$content .= '<li class="action-btn" style="">Edit Profile</li>';
+							            	$content .= '<li class="action-btn" style=""><a href="settings.php" >Edit Profile</a></li>';
 							            }
 
 							            echo $content;

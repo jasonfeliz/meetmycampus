@@ -87,16 +87,7 @@ require_once('inc/main-header-test.php');
 				</div>
 			<div class="content-body">
 
-				<? if($privateCommunity): ?>
-				 	<div class="private-section">
-				 		<h1>Hello Ninja!</h1>
-				 		<p>This is a private community. Only it's members have access to discussions and meetups. Send a request to join this community by clicking the "Join Community" button above. </p>
-				 		<i class="fa fa-user-secret fa-5x"></i>
-				 	</div>
-				 	
 
-
-				<? else: ?>
 				<style type="text/css">
 
 				</style>
@@ -216,9 +207,9 @@ require_once('inc/main-header-test.php');
 						            </ul>
 								</div>
 							</div>
+							
 						</div>
 				</section>
-			<?php endif;?>
 			</div>
 		</section>
 	</div>

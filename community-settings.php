@@ -11,6 +11,16 @@ if (!empty($_GET['c_id'])) {
 	if (!$community || !$isCreator) {
     	redirect("home.php");
 	}
+  try {
+    $stmt = $connect->query("SELECT uni_name FROM communities 
+                            INNER JOIN colleges ON communities.college_id = colleges.college_id 
+                            WHERE  community_id = '$communityId'");
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    $collegeUrl = urlencode($result['uni_name']);
+  } catch (Exception $e) {
+    throw $e;
+  }
+  
 }else{
 	redirect("home.php");
 }
@@ -32,6 +42,9 @@ include('inc/main-header-test.php');
 	</div><!-- end jumbotron -->
 
 	<div class="community-settings-body">
+              <div style="margin: 10px 0">
+                <a style="color: #ea7363;font-weight: 600;font-size: 1.15em;" href="community.php?school_name=<?php echo $collegeUrl . '&category_id='.$community['category_id']. '&community_id='.$communityId . '&community_cat=group'?>"><i class="fa fa-angle-left fa-lg" aria-hidden="true" style="font-size: 1.75em;margin-right: 5px;"></i>Community Home</a>
+              </div>
 							 <?php 
 							 if (isset($_SESSION['settings_error'])) {
 							 	echo '<div><p class="submitError">'.$_SESSION['settings_error'].'</p></div>';
