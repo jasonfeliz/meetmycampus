@@ -1956,6 +1956,23 @@ function get_all_reviews($collegeId,$category = NULL,$ratings = NULL){
 		}catch(Exception $e){
 			throw $e;
 		}
+	}elseif(!is_null($ratings) && !is_null($category)){
+		try{
+				$connect->beginTransaction();
+				$stmt = $connect->prepare("SELECT review_id, student_id, college_student.userName, review_ratings.rating, reviews_categories.review_category,review_description, date_created FROM reviews
+											INNER JOIN college_student ON reviews.student_id = college_student.id
+											INNER JOIN review_ratings ON reviews.review_rating_id = review_ratings.rating_id
+	                                        INNER JOIN reviews_categories ON reviews.review_category_id =  reviews_categories.review_category_id
+											WHERE reviews.college_id = ? AND review_ratings.rating_id = ? AND reviews_categories.review_category_id= ?");
+				$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
+				$stmt->bindParam(2,$ratings,PDO::PARAM_INT);
+				$stmt->bindParam(3,$category,PDO::PARAM_INT);
+				$stmt->execute();
+				$connect->commit();
+				return $stmt->fetchAll(PDO::FETCH_ASSOC);
+		}catch(Exception $e){
+			throw $e;
+		}
 	}else{
 		try{
 				$connect->beginTransaction();

@@ -155,6 +155,39 @@ class User {
 			throw $e;
 		}
 	}
+
+	public function get_followed_schools($collegeId = NULL){
+		$connect = $this->connect;
+		if (is_null($collegeId)) {
+			try{
+				$sql = "SELECT uni_name,school_followers.college_id FROM school_followers
+						INNER JOIN colleges ON school_followers.college_id = colleges.college_id
+						INNER JOIN college_student ON school_followers.user_id = college_student.id
+						 WHERE user_id = ?";
+				$stmt = $connect->prepare($sql);
+				$stmt->bindParam(1,$this->user['id'],PDO::PARAM_INT);
+				$stmt->execute();
+				return $stmt->fetchAll(PDO::FETCH_ASSOC);
+			}catch(Exception $e){
+				throw $e;
+			} 
+		}else{
+			try{
+				$sql = "SELECT uni_name,school_followers.college_id FROM school_followers
+						INNER JOIN colleges ON school_followers.college_id = colleges.college_id
+						INNER JOIN college_student ON school_followers.user_id = college_student.id
+						 WHERE user_id = ? AND school_followers.college_id = ?";
+				$stmt = $connect->prepare($sql);
+				$stmt->bindParam(1,$this->user['id'],PDO::PARAM_INT);
+				$stmt->bindParam(2,$collegeId,PDO::PARAM_INT);
+				$stmt->execute();
+				return $stmt->fetch(PDO::FETCH_ASSOC);
+			}catch(Exception $e){
+				throw $e;
+			} 	
+		}
+	}
+
 	public function update_user($collegeId,$email,$username,$majorId,$about){
 		$connect = $this->connect;
 		try {
