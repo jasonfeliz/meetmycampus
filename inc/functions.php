@@ -2614,20 +2614,6 @@ function sendResetPasswordEmail($user,$resetCode){
 
 
 
-function getVeriCode($userId){
-	global $connect;
-	try{
-		$connect->beginTransaction();
-		$results = $connect->prepare("SELECT id, verification_code FROM verification WHERE id = ?");
-		$results->bindParam(1,$userId,PDO::PARAM_STR);
-		$results->execute();
-		$connect->commit();
-		return $results->fetch(PDO::FETCH_ASSOC);
-  	}catch(Exception $e){
-  	  	throw $e;
-  	}
-}
-
 function getResetCode($userId){
 	global $connect;
 	try{
