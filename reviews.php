@@ -124,7 +124,7 @@ include('inc/main-header-test.php');
 										</ul>
 											<div id="review-item">
 												<?php
-												$reviews = get_all_reviews($collegeId,null,null);
+												$reviews = $schoolInfo->get_all_reviews(null,null);
 												
 												if (!empty($reviews)) {
 													foreach ($reviews as $key) {

@@ -25,7 +25,7 @@
 			    </div>
 			        <ul class="banner-school-info-list">
 			        	<li>
-			        		<h5><?php echo $collegeCity.", ".$collegeState; ?></h5>
+			        		<h5><?php echo $collegeLocation; ?></h5>
 			        	</li>
 			        	<li>
 			        		<h5><?php if($studentCount==1){echo $studentCount . ' Student';}else{echo $studentCount. ' Students';}?></h5>

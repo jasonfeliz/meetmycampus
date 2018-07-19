@@ -40,9 +40,9 @@
 										<?php 
 										$content = "";
 											if ($communityConstant) {
-												$cDiscussions = get_all_community_discussions($communityId,NULL);
+												$cDiscussions = $community_obj->get_community_discussions("all");
 											}elseif($storyConstant){
-												$cDiscussions = get_all_community_discussions(NULL,$communityId);
+												$cDiscussions = $community_obj->get_community_discussions('stories');
 											}
 											if (!empty($cDiscussions)) {
 

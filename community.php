@@ -7,7 +7,9 @@ if (!empty($_GET['community_id'])) {
 	$communityId = intval(trim(filter_input(INPUT_GET, 'community_id' ,FILTER_SANITIZE_STRING)));
 	$categoryId = intval(trim(filter_input(INPUT_GET, 'category_id' ,FILTER_SANITIZE_STRING)));
 	$communityCat = trim(filter_input(INPUT_GET, 'community_cat' ,FILTER_SANITIZE_STRING));
-	$community = get_community($communityId,$collegeId);	
+	$community_obj = new Community($connect,$communityId,$userId);
+	$community = $community_obj->get_community();
+	
 	if (!$community) {
 		$_SESSION['error_page_message'] = "Due to a disturbance in the force, this page couldn't be found.";
    		$_SESSION['system_error_message'] = "could not retrieve community";
@@ -31,7 +33,7 @@ if (!empty($_GET['community_id'])) {
 		$storyConstant = FALSE;	
 	}
 
-	$checkMember = is_member($userId,$communityId,null);
+	$checkMember = $community_obj->is_member(null);
 	if ($community['community_type'] == "private" && !$checkMember) {
 		$privateCommunity = TRUE;
 	}
@@ -54,7 +56,7 @@ require_once('inc/main-header-test.php');
 	<?php 
 
 	if ($community['community_type'] == "private") {
-		$checkAdmin = is_admin($userId,$communityId);
+		$checkAdmin = $community_obj->is_admin();
 		if ($checkAdmin) {
 			if (isset($_SESSION['cid-'.$communityId])) {
 				$_SESSION['cid-'.$communityId] = ++$_SESSION['cid-'.$communityId];
@@ -62,7 +64,7 @@ require_once('inc/main-header-test.php');
 				$_SESSION['cid-'.$communityId] = 1;
 			}
 
-			$newRequests = intval(get_community_request($communityId,'new'));
+			$newRequests = intval($community_obj->get_community_request('new'));
 				if ($_SESSION['cid-'.$communityId] == 1 || $newRequests > 0) {
 					echo '<div id="c-requests-message" class="message-bar"><h4 class="message-header" id=request-id-'.$communityId.' onclick="openCommunityRequest('.$communityId.')">'.$newRequests . ' New Join Requests'.'</h4><span id="removeX">x</span></div>';
 				}
@@ -124,7 +126,7 @@ require_once('inc/main-header-test.php');
 				        						<a href="category.php?school_name=<?php echo $urlCollegeName; ?>&category_id=<?php echo $community['category_id']; ?>" style="color:<?php echo $community['community_color']; ?>"><h5 style="font-weight: bold;"><?php echo preg_replace('/\s+/', '', $community['category']); ?></h5></a>
 											</li>
 											<li>
-												<div><?php echo count(get_community_members($communityId)); ?> Community subscribers</div>
+												<div><?php echo count($community_obj->get_community_members()); ?> Community subscribers</div>
 											</li>
 											<li>
 												<div>Created on: <span><?php echo post_time($community['date_created']); ?><span></div>
@@ -135,10 +137,12 @@ require_once('inc/main-header-test.php');
 								<div>
 									<?php
 						            if ($communityConstant && !$majorConstant) {
-						                $content = '<h5 class="side-nav-heading">Admin(' . count(get_community_admins($communityId)) .')</h5>';
+						            	$admins = $community_obj->get_community_admins();
+
+						                $content = '<h5 class="side-nav-heading">Admin(' . count($admins) .')</h5>';
 						                $content .= '<ul class="universal-side-nav-list side-nav-follow">';
 
-						                $admins = get_community_admins($communityId);
+						                
 						                if (!empty($admins)) {
 						                    foreach ($admins as $key) {
 						                        $follow = "";
@@ -151,7 +155,7 @@ require_once('inc/main-header-test.php');
 						                            }
 						                        }
 						                        $content .= '<li>';
-						                        $content .= '<a href="profile.php?profile_id=' . $key['student_id']. '">' . '@' . $key['userName'] .'</a> ';
+						                        $content .= '<a href="profile.php?profile_id=' . $key['student_id']. '">' . '@' . $key['username'] .'</a> ';
 						                        $content .= '<p id=follow-id-a-'.$key['student_id'].' '. $follow.'>'.$status.'</p>';
 						                        $content .= '<li>';
 						                    }
@@ -166,7 +170,7 @@ require_once('inc/main-header-test.php');
 						           <h5 class="side-nav-heading">
 						            <?php 
 						          		if ($communityConstant) {
-						                	echo 'Subscribers('. count(get_community_members($communityId)) .')';
+						                	echo 'Subscribers('. count($community_obj->get_community_members()) .')';
 						                }
 						            ?>
 						            </h5>
@@ -174,7 +178,7 @@ require_once('inc/main-header-test.php');
 						            <?php
 						            $members = "";
 						            if ($communityConstant) {
-						            	$members = get_community_members($communityId);
+						            	$members = $community_obj->get_community_members();
 						            }
 						            
 						            if (!empty($members)) {
@@ -189,7 +193,7 @@ require_once('inc/main-header-test.php');
 						                            }
 						                        }
 						                        $content = '<li>';
-						                        $content .= '<a href="profile.php?profile_id=' . $key['student_id']. '">' . '@' . $key['userName'] .'</a> ';
+						                        $content .= '<a href="profile.php?profile_id=' . $key['student_id']. '">' . '@' . $key['username'] .'</a> ';
 						                        $content .= '<p id=follow-id-b-'.$key['student_id'].' '. $follow.'>'.$status.'</p>';
 						                        $content .= '<li>';
 						                    echo $content;

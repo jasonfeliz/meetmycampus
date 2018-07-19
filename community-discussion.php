@@ -6,7 +6,8 @@ $getVar =  $_SERVER["REQUEST_URI"];
 if (!empty($_GET['community_id'])) {
 	$communityId = intval(trim(filter_input(INPUT_GET, 'community_id' ,FILTER_SANITIZE_STRING)));
 	$discussionId = intval(trim(filter_input(INPUT_GET, 'c_discussion_id' ,FILTER_SANITIZE_STRING)));
-	$community = get_community($communityId,$collegeId);
+	$community_obj = new Community($connect,$communityId,$userId);
+	$community = $community_obj->get_community();
 	if (!$community) {
 		$_SESSION['error_page_message'] = "Due to a disturbance in the force, this page couldn't be found.";
    		$_SESSION['system_error_message'] = "could not retrieve discussion";

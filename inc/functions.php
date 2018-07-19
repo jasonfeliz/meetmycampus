@@ -1446,7 +1446,7 @@ function get_community_members($communityId){
 	global $connect;
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT community_members.student_id,college_student.id,college_student.first_name,college_student.last_name, userName FROM community_members 
+				$stmt = $connect->prepare("SELECT community_members.student_id,college_student.first_name,college_student.last_name, username FROM community_members 
 											INNER JOIN college_student ON community_members.student_id = college_student.id
 											WHERE community_id = ? AND status = 1 AND student_id <> 38");
 				$stmt->bindParam(1,$communityId,PDO::PARAM_INT);
@@ -1931,7 +1931,7 @@ function get_all_reviews($collegeId,$category = NULL,$ratings = NULL){
 											INNER JOIN college_student ON reviews.student_id = college_student.id
 											INNER JOIN review_ratings ON reviews.review_rating_id = review_ratings.rating_id
 	                                        INNER JOIN reviews_categories ON reviews.review_category_id =  reviews_categories.review_category_id
-											WHERE college_id = ? AND reviews_categories.review_category_id= ?");
+											WHERE reviews.college_id = ? AND reviews_categories.review_category_id= ?");
 				$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
 				$stmt->bindParam(2,$category,PDO::PARAM_INT);
 				$stmt->execute();

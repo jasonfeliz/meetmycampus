@@ -57,7 +57,7 @@ include('inc/main-header-test.php');
 									?>
 									<div id="d_c" class="active">
 										<ul class="forum-list" id="discussion-list">
-											<?php echo showDiscussion($collegeId,$discussionTopicId);?>
+											<?php echo $schoolInfo->showDiscussions($discussionTopicId);?>
 										</ul>
 									</div>
 

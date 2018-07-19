@@ -4,7 +4,7 @@
 					<?php
 						$remove ="";
 						$isCreator = is_creator('community',$userId,$communityId);
-                        $checkAdmin = is_admin($userId,$communityId);
+                        $checkAdmin = $community_obj->is_admin($userId);
 						if ($isCreator) {
 							$remove = '<li class="ellipsis-button" style="text-transform: capitalize;" onclick="removeItem(\'community\','.$communityId.')">Delete Community</li><li class="ellipsis-button" style="text-transform: capitalize;" ><a href=community-settings.php?c_id='.$communityId .'> Community Settings</a></li>';
 						}
@@ -38,8 +38,8 @@
 						$buttonName =  'Join Community';
 					}elseif($loggedIn){
 						$onClick = ' onclick="joinCommunity('.$communityId .', '. $userId . ', '. "'" . $urlCollegeName . "'".',1)" ';
-						$check = is_member($userId,$communityId,'yes');
-						$check2 = is_member($userId,$communityId,null);
+						$check = $community_obj->is_member('yes');
+						$check2 = $community_obj->is_member(null);
 						if ($check) {
 							$buttonName =  'Pending';
 						}elseif($check2){
@@ -140,7 +140,7 @@
                             <div class="modal-body" style="margin-bottom: 0;padding: 20px 0">
                             		<ul class="c-request-list">
                                     <?php
-                                    $getRequest = get_community_request($communityId,NULL);
+                                    $getRequest = $community_obj->get_community_requests(NULL);
                                     if ($getRequest) {
                                         $content = "";
                                         foreach ($getRequest as $key) {

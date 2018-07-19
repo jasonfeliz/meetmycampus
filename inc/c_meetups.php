@@ -26,7 +26,7 @@
 
 								echo '<div class="community-action-button"><div><button' . $onClick2 . '> + Create Meetup</button></div></div>';								
 
-									$eventsList = get_all_events($collegeId,null,$communityId );
+									$eventsList = $community_obj->get_community_events();
 									if(!empty($eventsList)){
 										foreach ($eventsList as $key) {
 													$checkFav = check_favorite($key['event_id'], $userId, 'event');

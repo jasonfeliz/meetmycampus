@@ -11,26 +11,28 @@ if(!$loggedIn){
 }
  if ($loggedIn){
 	$userId = $_COOKIE['user_id'];
-	$userInfo = new User($connect,$_COOKIE['user_id']);
-	$userFullName = $userInfo->get_full_name();
-	$userAbbrev = $userInfo->get_abbrevated_name();
-	$userName = $userInfo->get_username();
-	$userEmail = $userInfo->get_user_email();
-	$userSchool = $userInfo->get_user_school();
-	$userType = $userInfo->get_user_type();
-	$userDeletedStatus = $userInfo->is_deleted();
+	$userObj = new User($connect,$_COOKIE['user_id']);
+	$userDeletedStatus = $userObj->is_deleted();
+	$userFullName = $userObj->get_full_name();
+	$userAbbrev = $userObj->get_abbrevated_name();
+	$userInfo = $userObj->get_user_info();
+	$userName = $userInfo['username'];
+	$userEmail = $userInfo['email'];
+	$userSchool = $userInfo['uni_name'];
+	$userType = $userInfo['user_type'];
+	
 }
 $universitySearched = $userSchoolName = "";
 if ($loggedIn && empty($_GET['school_name'])) {
-	$schoolInfo = get_school_info($userSchool);
-	$studentList = get_students($schoolInfo['college_id'],$_COOKIE['user_id']);
+	$schoolInfo = new College($connect,NULL,$userSchool);
+	$studentList = $schoolInfo->get_students();
 	if(!empty($_GET['profile_id'])){
 			$profileId = intval(trim(filter_input(INPUT_GET, 'profile_id', FILTER_SANITIZE_STRING)));
 	}
 }elseif ($loggedIn && !empty($_GET['school_name'])) {
 	$universitySearched = trim(filter_input(INPUT_GET, 'school_name', FILTER_SANITIZE_STRING));
-	$schoolInfo = get_school_info($universitySearched);
-	$studentList = get_students($schoolInfo['college_id'],$_COOKIE['user_id']);
+	$schoolInfo = new College($connect,NULL,$universitySearched);
+	$studentList = $schoolInfo->get_students();
 	if(!empty($_GET['profile_id'])){
 			$profileId = intval(trim(filter_input(INPUT_GET, 'profile_id', FILTER_SANITIZE_STRING)));
 	}
@@ -40,7 +42,7 @@ if ($loggedIn && empty($_GET['school_name'])) {
 	}
 }elseif (!empty($_GET['school_name'])) {
 	$universitySearched = trim(filter_input(INPUT_GET, 'school_name', FILTER_SANITIZE_STRING));
-	$schoolInfo = get_school_info($universitySearched);
+	$schoolInfo = new College($connect,NULL,$universitySearched);
 	if(empty($schoolInfo)){
 	    $_SESSION['school_search'] = $universitySearched;
 	    redirect("search_college.php");
@@ -48,19 +50,19 @@ if ($loggedIn && empty($_GET['school_name'])) {
 }
 
 if (!empty($schoolInfo)) {
-	$collegeId = $schoolInfo['college_id'];
-	$collegeName = $schoolInfo['uni_name'];
-	$urlCollegeName = urlencode($schoolInfo['uni_name']);
-	$collegeCity = $schoolInfo['city'];
-	$collegeState = $schoolInfo['state'];
-	$collegeUrl = $schoolInfo['email_url'];
-	$collegeAbrev = '@'.ucfirst($schoolInfo['uni_abrev']);
+	$collegeId = $schoolInfo->get_school_id();
+	$collegeName = $schoolInfo->get_school_name();
+	$urlCollegeName = urlencode($schoolInfo->get_school_name());
+	$collegeLocation = $schoolInfo->get_school_location();
+	$collegeUrl = $schoolInfo->get_school_url();
+	$collegeAbrev = $schoolInfo->get_school_abbrev();
 	$categories = get_all_categories();
-	$communities = get_all_communities($collegeId,NULL);
-	$stories = get_all_stories($collegeId,NULL);
-	$majors = get_all_majors($collegeId,NULL); //TO-DO
-	$studentCount = intval(get_user_count($collegeId,NULL,NULL));
-	$communityCount = intval(count(get_all_communities($collegeId,NULL)));
+	$communities = $schoolInfo->get_all_communities(NULL,NULL);
+	$stories = $schoolInfo->get_all_stories();
+	$majors = $schoolInfo->get_all_majors(); //TO-DO
+	$students = $schoolInfo->get_students();
+	$studentCount = intval(count($students));
+	$communityCount = intval(count($communities));
 }elseif(!empty($_GET['profile_id'])){
 		$profileId = intval(trim(filter_input(INPUT_GET, 'profile_id', FILTER_SANITIZE_STRING)));
 }elseif(isset($_SESSION['search_status'])){
@@ -70,4 +72,7 @@ if (!empty($schoolInfo)) {
     $_SESSION['system_error_message'] = "could not retrieve school info";
     redirect("error_page.php");
 }
+// echo '<pre>';
+// print_r($communities);exit;
+// echo '</pre>';
 ?>

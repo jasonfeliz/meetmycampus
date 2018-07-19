@@ -1,6 +1,6 @@
 <?php 
 class User {
-	private $userId;
+	private $user;
 	private $connect;
 
 	//construct
@@ -18,6 +18,9 @@ class User {
 		}catch(Exception $e){
 			throw $e;
 		}
+	}
+	public function get_user_info(){
+		return $this->user;
 	}
 	public function get_user_id(){
 		return $this->user['id'];
