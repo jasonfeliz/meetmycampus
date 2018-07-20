@@ -43,7 +43,7 @@ if ($loggedIn && empty($_GET['school_name'])) {
 }elseif (!empty($_GET['school_name'])) {
 	$universitySearched = trim(filter_input(INPUT_GET, 'school_name', FILTER_SANITIZE_STRING));
 	$schoolInfo = new College($connect,NULL,$universitySearched);
-	if(empty($schoolInfo)){
+	if(empty($schoolInfo->get_school_id())){
 	    $_SESSION['school_search'] = $universitySearched;
 	    redirect("search_college.php");
 	}

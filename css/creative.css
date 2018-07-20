@@ -921,13 +921,14 @@ body {
     border: solid 1px rgb(206, 81, 81);
     overflow: hidden;
     border-radius: 10px;
-    margin: 17% auto; /* 15% from the top and centered */
-    width: 330px; /* Could be more or less, depending on screen size */
+    margin: 10px auto; /* 15% from the top and centered */
+    width: 95%; /* Could be more or less, depending on screen size */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatecenter;
     -webkit-animation-duration: .15s;
     animation-name: animatecenter;
     animation-duration: .15s
+    z-index:1000;
 }
 .message{
   position: relative;
@@ -1094,7 +1095,9 @@ body {
   background: #594b82;
   color: #fff;
 }
-
+input{
+  font-size: 16px !important;
+}
 .collegeForm input, 
 .highSchoolForm input,
 .collegeForm select, 
@@ -1103,7 +1106,7 @@ body {
   width: 100%;
   margin-bottom: 5px;
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-  padding: 15px 12px;
+  padding: 10px;
   background: #fbfbfb;
   border-radius: 5px;
   border: solid 1px #dadada;
@@ -1248,4 +1251,10 @@ font-weight: bold;
   }
 
 
+}
+
+@media (min-width: 1280px){
+  input{
+  font-size: 13px !important;
+}
 }

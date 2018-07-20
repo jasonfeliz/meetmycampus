@@ -2339,7 +2339,7 @@ function get_popular_forum_topic($collegeId){
 		$topicId = $key['discussion_topic_id'];
 		global $connect;
 		try{
-				$sql = "SELECT COUNT(*)  FROM discussion_post WHERE college_id = $collegeId AND d_topic_id = $topicId";
+				$sql = "SELECT COUNT(*)  FROM discussion_post WHERE college_id = '$collegeId' AND d_topic_id = '$topicId'";
 				$stmt = $connect->query($sql);
 				$result = $stmt->fetchColumn();
 				$array[$key['discussion_topic_id']] = intval($result);

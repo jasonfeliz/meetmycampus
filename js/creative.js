@@ -94,7 +94,7 @@ $ (function() {
     
     $("#user-major").autocomplete({
         delay: 200,
-        minLength: 3,
+        minLength: 5,
         source: 'procedures/doSearch.php',
         appendTo: $('#signUpForm'),
         select: function(event, ui) { 

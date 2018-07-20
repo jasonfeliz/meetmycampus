@@ -84,6 +84,17 @@ if (isset($_GET['term'])) {
 	$content .= '</ul>';
 
 	echo $content;
+}elseif (isset($_GET['search_school'])){
+	$term = trim(filter_input(INPUT_GET, 'search_community' ,FILTER_SANITIZE_STRING));
+
+	$return_arr = array();
+	$searchResults = search_school($term); 
+		    foreach ($searchResults as $key => $value) {
+		    	$return_arr[$key] =  $value;
+		    }
+
+	// Toss back results as json encoded array. 
+	echo json_encode($return_arr);
 }
 
 ?>
