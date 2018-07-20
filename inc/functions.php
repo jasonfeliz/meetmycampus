@@ -1,7 +1,7 @@
 <?php
 require_once('connection.php');
 //creates users
-function create_user($university,$firstName,$lastName,$userName,$collegeEmail,$token){
+function create_user($university,$firstName,$lastName,$userName,$collegeEmail,$token,$userType){
 
 	global $connect;
 
@@ -12,13 +12,14 @@ function create_user($university,$firstName,$lastName,$userName,$collegeEmail,$t
 			$stmt->execute();
 			$collegeId = $stmt->fetch(PDO::FETCH_ASSOC)['college_id'];
 
-			$stmt = $connect->prepare("INSERT INTO college_student(`first_name`,`last_name`,`userName`,`email`, `token`, `college_id`)  VALUES(?,?,?,?,?,?)");
+			$stmt = $connect->prepare("INSERT INTO college_student(`first_name`,`last_name`,`userName`,`email`, `token`, `college_id`,'user_type','deleted')  VALUES(?,?,?,?,?,?,?,0)");
 			$stmt->bindParam(1,$firstName,PDO::PARAM_STR);
 			$stmt->bindParam(2,$lastName,PDO::PARAM_STR);
 			$stmt->bindParam(3,$userName,PDO::PARAM_STR);
 			$stmt->bindParam(4,$collegeEmail,PDO::PARAM_STR);
 			$stmt->bindParam(5,$token,PDO::PARAM_STR);
 			$stmt->bindParam(6,$collegeId,PDO::PARAM_INT);
+			$stmt->bindParam(7,$userType,PDO::PARAM_STR);
 			$stmt->execute();
 			$connect->commit();
 			return findUserByEmail($collegeEmail);

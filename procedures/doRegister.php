@@ -78,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-        $createUser = create_user($university,$firstName,$lastName,$userName,$collegeEmail,$hashed);
+        $createUser = create_user($university,$firstName,$lastName,$userName,$collegeEmail,$hashed,'college_student');
         $checkMajor = check_major($enteredSchool['college_id'],$majorId);
         if (empty($checkMajor)) {
           $createMajor = create_major($enteredSchool['college_id'],$majorId,$userMajor);
