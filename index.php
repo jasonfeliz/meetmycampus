@@ -81,11 +81,6 @@ require_once("inc/header.php");
                                 <label for="">Username</label>
                                 <input type="text" name="userName" placeholder="Choose a username">                               
                             </div>
-                            <div>
-                                <label for="">Major</label>
-                                <input type="text" name="userMajor" id="user-major" placeholder="Your Major">   
-                                <input type="hidden" name="majorId" id="major-id" value=''>                              
-                            </div>
                             <div id="emailSchool" class="emailSchool">
                                 <label for="">Email</label>
                                 <input type="email" name="userCollegeEmail" placeholder="Email (Must be a valid .edu email)">
@@ -103,7 +98,7 @@ require_once("inc/header.php");
                                 <input type="text" id="address" name="address" />
                                 <p>Please leave this field blank</p></td>
                         </div>
-                        <button type="submit" id="signUpButton" class="signUpButton">Sign Up</button>
+                        <button type="submit" id="signUpButton" class="signUpButton" name="basic_registration">Sign Up</button>
                         <p class="signUpAgreement">By clicking Sign Up, you are agreeing to our <span><a href="privacy.php">Privacy Policy </a> and <a href="terms.php">Terms & Conditions </a></span></p>
 
 

@@ -12,7 +12,7 @@ function create_user($university,$firstName,$lastName,$userName,$collegeEmail,$t
 			$stmt->execute();
 			$collegeId = $stmt->fetch(PDO::FETCH_ASSOC)['college_id'];
 
-			$stmt = $connect->prepare("INSERT INTO college_student(`first_name`,`last_name`,`userName`,`email`, `token`, `college_id`,'user_type','deleted')  VALUES(?,?,?,?,?,?,?,0)");
+			$stmt = $connect->prepare("INSERT INTO college_student(`first_name`,`last_name`,`userName`,`email`, `token`, `college_id`,`user_type`,`deleted`,`verified`)  VALUES(?,?,?,?,?,?,?,0,0)");
 			$stmt->bindParam(1,$firstName,PDO::PARAM_STR);
 			$stmt->bindParam(2,$lastName,PDO::PARAM_STR);
 			$stmt->bindParam(3,$userName,PDO::PARAM_STR);
@@ -28,7 +28,7 @@ function create_user($university,$firstName,$lastName,$userName,$collegeEmail,$t
 		}
 
 }
-function create_profile($userId,$majorId){
+function create_profile($userId,$majorId=NULL){
 
 	global $connect;
 
@@ -2079,9 +2079,8 @@ function get_profile_info($studentId){
 	global $connect;
 	try{
 			$connect->beginTransaction();
-			$stmt = $connect->prepare("SELECT id, colleges.college_id, uni_name,first_name,last_name,userName, email,about,gender,location_city,location_state,grad_year,major_id,major  FROM user_profile 
+			$stmt = $connect->prepare("SELECT id, colleges.college_id, uni_name,first_name,last_name,userName, email,about,gender,location_city,location_state,grad_year,major_id  FROM user_profile 
 										INNER JOIN college_student JOIN colleges ON user_profile.student_id = college_student.id AND college_student.college_id = colleges.college_id
-										INNER JOIN majors_list ON user_profile.major_id = majors_list.major_list_id
 										WHERE user_profile.student_id = ?");
 			$stmt->bindParam(1,$studentId,PDO::PARAM_INT);
 			$stmt->execute();
@@ -2541,13 +2540,27 @@ function findUserByEmail($userEmail){
 	global $connect;
 	  try{
 		$connect->beginTransaction();
-	      $query = "SELECT * FROM college_student WHERE email = ?";
+	      $query = "SELECT email FROM college_student WHERE email = ?";
 	      $stmt = $connect->prepare($query);
 	       $stmt->bindParam(1,$userEmail);
 	      $stmt->execute();
 	      $connect->commit();
 	      return $stmt->fetch(PDO::FETCH_ASSOC);
-	  }catch(\Exception $e){
+	  }catch(Exception $e){
+	    throw $e;
+	  }
+}
+function check_username($username){
+	global $connect;
+	  try{
+		$connect->beginTransaction();
+	      $query = "SELECT username FROM college_student WHERE username = ?";
+	      $stmt = $connect->prepare($query);
+	       $stmt->bindParam(1,$username);
+	      $stmt->execute();
+	      $connect->commit();
+	      return $stmt->fetch(PDO::FETCH_ASSOC);
+	  }catch(Exception $e){
 	    throw $e;
 	  }
 }
@@ -2561,7 +2574,7 @@ function findUserById($userId){
 	      $stmt->execute();
 	      $connect->commit();
 	      return $stmt->fetch(PDO::FETCH_ASSOC);
-	  }catch(\Exception $e){
+	  }catch(Exception $e){
 	    throw $e;
 	  }
 }

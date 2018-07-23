@@ -78,7 +78,7 @@ include('inc/main-header-test.php');
 									</li>
 									<li>
 										<h5>College: <span><?php echo $profileInfo['uni_name'] ?></span></h5>
-										<h5>Major: <span><?php echo $profileInfo['major'] ?></span></h5>
+										<!-- <h5>Major: <span><?php //echo $profileInfo['major'] //?></span></h5> -->
 										<h5>Grad Year: <span><?php echo $profileInfo['grad_year'] ?></span></h5>
 										<h5>Gender: <span><?php echo $profileInfo['gender'] ?></span></h5>
 										<h5>From: <span><?php echo $profileInfo['location_city'] . ', ' . $profileInfo['location_state']?></span></h5>

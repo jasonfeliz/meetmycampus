@@ -38,11 +38,6 @@ require_once('inc/mainHeader.php');
                                     <label for="">Username</label>
                                     <input class="signInInput"  type="text" name="userName" placeholder="Choose a username">                               
                                 </div>
-                                <div>
-                                    <label for="">Major</label>
-                                    <input type="text" class="signInInput" name="userMajor" id="user-major" placeholder="Your Major">   
-                                    <input type="hidden" name="majorId" id="major-id" value=''>                              
-                                </div>
                                 <div id="emailSchool" class="emailSchool">
                                     <label for="">Email</label>
                                     <input  class="signInInput" type="email" name="userCollegeEmail" placeholder="Email (Must be a valid .edu email)">
