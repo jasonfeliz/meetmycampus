@@ -77,13 +77,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         follow_school($enteredSchool['college_id'],$createUser['id']);
         if(!empty($createUser)){
               $createProfile = create_profile($createUser['id'],NULL);
+              setcookie('username',$userName,time()+860000,'/', 'localhost'); 
               setcookie('user_id',$createUser['id'],time()+860000,'/', 'localhost');
-              if (isset($_SESSION['redirect_location'])) {
-                    $redirect = $_SESSION['redirect_location'];
-                    redirect($redirect);
-              }else{
-                redirect('../home.php');
-              }
+              redirect('../build-profile.php');
         }
 }
 

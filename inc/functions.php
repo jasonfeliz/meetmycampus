@@ -2540,7 +2540,7 @@ function findUserByEmail($userEmail){
 	global $connect;
 	  try{
 		$connect->beginTransaction();
-	      $query = "SELECT email FROM college_student WHERE email = ?";
+	      $query = "SELECT * FROM college_student WHERE email = ?";
 	      $stmt = $connect->prepare($query);
 	       $stmt->bindParam(1,$userEmail);
 	      $stmt->execute();

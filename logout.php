@@ -2,6 +2,7 @@
 session_start();
 
 setcookie('user_id', '', time()-(365*24*60*60),'/','localhost');
+setcookie('username', '', time()-(365*24*60*60),'/','localhost');
 
  session_unset();
  session_destroy();

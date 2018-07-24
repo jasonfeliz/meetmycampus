@@ -1563,7 +1563,7 @@ input[name="sixDigitCode"],
 input[name="sixDigitCode"]:focus, 
 input[name="forgotEmail"]:focus,
  input[name="newPassword"]:focus{
-  border-color: #594b82;
+  border-color: #3f3f63;
     border-radius: 100px;
 }
 button[type="submit"],
@@ -1616,7 +1616,8 @@ ul.footer-links li a:hover{
   padding: 40px 10px;
   border: solid 1px #ea7363;
   border-radius: 5px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.20);
+  box-shadow: 0 0 15px 10px rgba(234, 114, 98, 0.30);
+  background: #fff;
 }
 label {
   display: block;
@@ -1632,7 +1633,8 @@ label {
 }
 
 
-.signInInput{
+.signInInput,
+.form_input{
   width: 100%;
    margin-bottom: 5px;
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
@@ -1644,10 +1646,21 @@ label {
     -webkit-appearance: none;
     -moz-appearance: none;
 }
-.signInInput:focus {
-  border-color: #594b82;
+.signInInput:focus,
+.form_input:focus {
+  border-color: #3f3f63;
   background: #fff;
   border-radius: 100px;
+}
+.form_input:focus{
+  border-radius: 5px;
+}
+
+textarea.form_input{
+  height: 95px;
+}
+select.form_input{
+  width: unset;
 }
 .signInButton {
   width: 100%;

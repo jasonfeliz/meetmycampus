@@ -99,7 +99,6 @@ $ (function() {
         appendTo: $('#signUpForm'),
         select: function(event, ui) { 
             $("#user-major").val(ui.item.value);
-            $("#major-id").val(ui.item.label);
         }
     }).autocomplete( "instance" )._renderItem = function( ul, item ) {
       return $( "<li>" ).append( "<div>" + item.value + "</div>" ).appendTo( ul );

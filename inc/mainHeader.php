@@ -37,8 +37,8 @@
     <![endif]-->
 
 </head>
-<body id="page-top" style="margin: 0;">
+<body id="page-top" style="margin: 0;background:#3f3f63;" >
 
-    <nav id="" class="" style="text-align: center;padding: 10px 0; background: #c74444;">
+    <nav id="" class="" style="text-align: center;padding: 10px 0; background: #3f3f63;">
         <a class="" href="index.php" ><img style="height: 50px;width: 50px;" class="logo" src="img/logo4.gif"></a>
     </nav>
