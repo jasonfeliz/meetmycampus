@@ -33,7 +33,7 @@ setcookie('username','arkham',time()+860000,'/', 'localhost');
                                     <textarea class="form_input" name="profile_bio" placeholder="Write a short bio about yourself" value="<?php if (isset($_SESSION['error_message'])) { echo $_SESSION['bio'];} ?>"></textarea>
                                 </div>
                                 <div id="" class="">
-                                    <input  class="form_input" type="text" name="major" id="user_major" placeholder="Major">                           
+                                    <input  class="form_input" type="text" name="major" id="user-major" placeholder="Major">                           
                                 </div>
 	                            <div style="text-align: left;">
 	                                <select class="form_input"  type="number" name="grad_year" placeholder="Grad Year">    
@@ -62,13 +62,13 @@ setcookie('username','arkham',time()+860000,'/', 'localhost');
 	                                    <option value="2000">2000</option>
 	                                </select>                       
 	                            </div>
-
+                                <div style="margin-top: 15px;">
+                                    <label style="margin-bottom: 10px;">Where are you from?</label>
+                                    <input class="form_input"  type="text" name="location" placeholder="City, State">      
+                                </div>
                             </div>
 
-                            <div style="margin-top: 15px;">
-                                <label style="margin-bottom: 10px;">Where are you from?</label>
-                               	<input class="form_input"  type="text" name="location" placeholder="City, State">      
-                            </div>
+
                             <div style="display:none">
                                     <label for="address">Address</label></th>
                                     <input type="text" name="address" />
