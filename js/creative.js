@@ -94,7 +94,7 @@ $ (function() {
     
     $("#user-major").autocomplete({
         delay: 200,
-        minLength: 5,
+        minLength: 4,
         source: 'procedures/doSearch.php',
         appendTo: $('#signUpForm'),
         select: function(event, ui) { 
@@ -537,4 +537,24 @@ $('.cancel_button').click(function(){
     
 
 })
+
+//back and next button to go through steps of building profile
+$('.continue_btn').click(function(){
+    var activeId = $('.active_dialogue').attr('id');
+    $('#'+activeId).removeClass('active_dialogue');
+    $('#'+activeId).next().addClass('active_dialogue');
+})
+
+$('.back_btn').click(function(){
+    var activeId = $('.active_dialogue').attr('id');
+    $('#'+activeId).removeClass('active_dialogue');
+    $('#'+activeId).prev().addClass('active_dialogue');
+})
+
+
+
+
+
+
+
 

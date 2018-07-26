@@ -5,6 +5,9 @@ $collegeEmail = $university = $password = $firstName = $lastName = $hashed = $us
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if ($_POST['setup_account']) {
+    echo 'account setup';
+  }else{
     $firstName = trim(filter_input(INPUT_POST,"firstName",FILTER_SANITIZE_STRING));
     $lastName = trim(filter_input(INPUT_POST,"lastName",FILTER_SANITIZE_STRING));
     $userName = trim(filter_input(INPUT_POST,"userName",FILTER_SANITIZE_STRING));
@@ -81,6 +84,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               setcookie('user_id',$createUser['id'],time()+860000,'/', 'localhost');
               redirect('../build-profile.php');
         }
+  }
+
 }
 
 ?>

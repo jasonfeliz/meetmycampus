@@ -1610,7 +1610,7 @@ ul.footer-links li a:hover{
 }
 /*signin page */
 .signInBody {
-  width: 330px;
+  width: 92%;
   margin: 9% auto;
   text-align: center;
   padding: 40px 10px;
@@ -1645,6 +1645,7 @@ label {
   outline: none;    
     -webkit-appearance: none;
     -moz-appearance: none;
+    font-size: 16px;
 }
 .signInInput:focus,
 .form_input:focus {
@@ -1713,6 +1714,16 @@ select.form_input{
   border-color: #ea7363;
 }
 
+#short_bio,
+#profile_interests,
+#suggested_communities{
+  display: none;
+}
+.active_dialogue {
+  display: block !important;
+}
+
+
 @media (min-width: 768px){
   
   hr {
@@ -1735,7 +1746,7 @@ select.form_input{
   margin-right: 20px;
 }
   .signInBody {
-    width: 485px;
+    width: 600px;
     margin: 6% auto;
     padding: 45px 20px;
   }
@@ -1773,6 +1784,10 @@ select.form_input{
 }
 .category-subBox p {
   margin:auto;
+}
+.form_input,
+.signInInput{
+  font-size: 14px;
 }
 }
 @media (min-width: 1280px){

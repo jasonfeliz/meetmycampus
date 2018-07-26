@@ -11,16 +11,16 @@ setcookie('username','arkham',time()+860000,'/', 'localhost');
              <div class="signInBody">
                         <div>
                             <p class="campusFont">Welcome, <?php echo $_COOKIE['username']; ?>!</p>
-                        </div>
-                    <div style="margin: 15px 0;color:#DF7367;font-weight: bold;text-transform: uppercase; ">
-                         Step 1 of 3
-                    </div>          
+                        </div>          
                     <div style="margin: 15px 0;">
                          We need a little bit of information to get your account set up.
                     </div>
 
                     <form id="signUpForm" method="POST" action="procedures/doRegister.php"> 
-                            <div id="" class="">
+                            <div id="short_bio" class="active_dialogue">
+                                <div style="margin: 15px 0;color:#DF7367;font-weight: bold;text-transform: uppercase; ">
+                                     Step 1 of 3
+                                </div>
                             	<label style="margin-bottom: 10px;">Bio</label>
                                 <?php 
                                     if (isset($_SESSION['error_message'])) {
@@ -64,18 +64,59 @@ setcookie('username','arkham',time()+860000,'/', 'localhost');
 	                            </div>
                                 <div style="margin-top: 15px;">
                                     <label style="margin-bottom: 10px;">Where are you from?</label>
-                                    <input class="form_input"  type="text" name="location" placeholder="City, State">      
+                                    <input class="form_input"  type="text" name="location" id="location_search" placeholder="City, State">      
                                 </div>
+                                
+                                <button type="button" class="continue_btn dialogue_btn">Next&gt;</button>                                                             
                             </div>
 
-
+                            <div id="profile_interests" class="">
+                                <div style="margin: 15px 0;color:#DF7367;font-weight: bold;text-transform: uppercase; ">
+                                     Step 2 of 3
+                                </div>
+                                <div>
+                                    <?php 
+                                    $userId = 35;
+                                    $urlCollegeName = "Harvard+University";
+                                    $collegeId = 227;
+                                        $categories = get_all_categories();
+                                        if (!empty($categories)) {
+                                            foreach ($categories as $key){
+                                                    $interestStatus = "Follow";
+                                                    $getCatFollowers = get_category_count($key['category_id']);
+                                                    $checkInterest = check_interest($key['category_id'],$userId);
+                                                    if ($checkInterest) {
+                                                        $interestStatus = "Unfollow";
+                                                    }
+                                                    echo    '<li class="main-thumbnail ' . $key["css_style"] . '">';
+                                                    echo    '<div class="overlay"></div>';
+                                                    echo    '<a href="category.php?school_name='. $urlCollegeName . '&category_id='. $key['category_id'] . '"' . ' class="category-thumbnail-title" target="_blank">' .  $key['category'] . '</a>';
+                                                    echo '<div class="category-subBox"><div><p>'.$getCatFollowers.' Followers </p><button type="button" id="category-'.$key['category_id'].'" onclick="addInterest('.$userId.', '. $key['category_id'] .',this)">'.$interestStatus.'</button></div></div></li>';
+                                            }
+                                        }
+                                     ?>
+                                </div>
+                                <button type="button" class="back_btn dialogue_btn">&lt;Back</button> 
+                                <button type="button" class="continue_btn dialogue_btn">Next&gt;</button> 
+                            </div>
+                            <div id="suggested_communities">
+                                <div style="margin: 15px 0;color:#DF7367;font-weight: bold;text-transform: uppercase; ">
+                                     Step 3 of 3
+                                </div>
+                                <div>
+                                    <?php 
+                                        // $suggestedCommunities = get_suggested_communities($collegeId);
+                                     ?>
+                                </div>
+                                <button type="button" class="back_btn dialogue_btn">&lt;Back</button> 
+                                <input type="submit" class="dialogue_btn" name="setup_account" value="Set up Account">
+                            </div>
                             <div style="display:none">
                                     <label for="address">Address</label></th>
                                     <input type="text" name="address" />
                                     <p>Please leave this field blank</p></td>
                             </div>
-                            <button  id="signUpButton" class="signInButton">Continue</button>
+
                     </form>               
             </div>
-
 <?php require_once('inc/universal-nav.php'); ?>
