@@ -101,6 +101,19 @@ h1,h2,h3,h4,h5 {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
+
+
+.profile_categories_list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.profile_categories_list > .main-thumbnail{
+  margin: 3px auto;
+    width: 49.5%;
+}
+.profile_categories_list > .main-thumbnail:hover{
+  cursor: pointer;
+}
 .private-section{
   color:#747474;
   margin:50px auto 0 auto;
@@ -564,6 +577,9 @@ overflow: scroll;
 .tabs > div.active > div > div > div:last-child{
   box-shadow: none;
 }
+.profile_categories_list > .main-thumbnail{
+    width: 24.5%;
+}
 }/*end of media query*/
 
 @media (min-width: 1280px){
@@ -785,7 +801,8 @@ border-radius: 100px;
   border-radius: 100px;
 }
 /*categories thumbnail*/
-  .category-thumbnail-title{
+  .category-thumbnail-title,
+  input[type=checkbox].category-thumbnail-title + label{
     position: relative;
     color: #fff; 
     font-size: .85em;
@@ -793,12 +810,35 @@ border-radius: 100px;
     padding: 30px;
     text-align: center;
     font-family: 'Quicksand', 'Helvetica Neue', Arial, sans-serif;
-    font-size: 1.35em;
+    font-size: 1.05em;
       overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
   }
 .category-thumbnail-title:hover{
   color: #cacaca;
+  cursor: pointer;
+}
+input[type=checkbox].category-thumbnail-title {
+    display:none;
+}
+input[type=checkbox].category-thumbnail-title + label:hover{
+  cursor:pointer;
+}
+
+input[type=checkbox].category-thumbnail-title:checked + label {
+    background-color: #ea726280;
+    position: relative;
+    color: #fff; 
+    font-size: .85em;
+    display: block;
+    padding: 30px;
+    text-align: center;
+    font-family: 'Quicksand', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.05em;
+      overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .main-thumbnail {
   position: relative;
@@ -816,6 +856,7 @@ border-radius: 100px;
 
 .main-thumbnail > .overlay {
   border-radius: 2px;
+
 }
 
 .campus-thumbnail{
@@ -1746,7 +1787,7 @@ select.form_input{
   margin-right: 20px;
 }
   .signInBody {
-    width: 600px;
+    width: 750px;
     margin: 6% auto;
     padding: 45px 20px;
   }

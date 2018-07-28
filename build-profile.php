@@ -6,11 +6,18 @@ require_once('inc/mainHeader.php');
 //     redirect('index.php');
 //  }
 setcookie('username','arkham',time()+860000,'/', 'localhost');
+$userId = 51;
+$user_obj = new User($connect,$userId);
+$username = $user_obj->get_username();
+$userInterests = $user_obj->get_user_interests();
+$urlCollegeName = urlencode($user_obj->get_user_school());
+$collegeId = 227;
+
  ?>
 
              <div class="signInBody">
                         <div>
-                            <p class="campusFont">Welcome, <?php echo $_COOKIE['username']; ?>!</p>
+                            <p class="campusFont">Welcome, <?php echo $username; ?>!</p>
                         </div>          
                     <div style="margin: 15px 0;">
                          We need a little bit of information to get your account set up.
@@ -74,13 +81,15 @@ setcookie('username','arkham',time()+860000,'/', 'localhost');
                                 <div style="margin: 15px 0;color:#DF7367;font-weight: bold;text-transform: uppercase; ">
                                      Step 2 of 3
                                 </div>
+                                <div style="margin: 15px 0;font-size:13px;font-weight: bold;text-align: left;">
+                                    Please follow at least 6 interests to stay connected with your favorite communities!
+                                </div>
                                 <div>
                                     <?php 
-                                    $userId = 35;
-                                    $urlCollegeName = "Harvard+University";
-                                    $collegeId = 227;
+
                                         $categories = get_all_categories();
                                         if (!empty($categories)) {
+                                            echo "<ul class='profile_categories_list'>";
                                             foreach ($categories as $key){
                                                     $interestStatus = "Follow";
                                                     $getCatFollowers = get_category_count($key['category_id']);
@@ -90,14 +99,54 @@ setcookie('username','arkham',time()+860000,'/', 'localhost');
                                                     }
                                                     echo    '<li class="main-thumbnail ' . $key["css_style"] . '">';
                                                     echo    '<div class="overlay"></div>';
-                                                    echo    '<a href="category.php?school_name='. $urlCollegeName . '&category_id='. $key['category_id'] . '"' . ' class="category-thumbnail-title" target="_blank">' .  $key['category'] . '</a>';
-                                                    echo '<div class="category-subBox"><div><p>'.$getCatFollowers.' Followers </p><button type="button" id="category-'.$key['category_id'].'" onclick="addInterest('.$userId.', '. $key['category_id'] .',this)">'.$interestStatus.'</button></div></div></li>';
+                                                    echo    '<input type="checkbox" name="check_list[]" class="category-thumbnail-title" id="checkbox_input_'.$key['category_id'].'" value="'.  $key['category_id'].'">';
+                                                    echo    '<label for="checkbox_input_'.$key['category_id'].'">'.$key['category'].'</label>';
+                                                    echo '<div class="category-subBox"><div><p>'.$getCatFollowers.' Followers </p></div></div></li>';
                                             }
+                                            echo "</ul>";
                                         }
                                      ?>
                                 </div>
+                                <script>
+                                           var array = [];
+                                           var count = 0;
+
+                                           $('input[type=checkbox].category-thumbnail-title').click(function(){
+                                             var id = $(this).val();
+                                             if (!array.includes(id)) {
+                                                array.push(id)
+                                             }else{
+                                                for( var i = 0; i <= array.length-1; i++){ 
+                                                   if ( array[i] === id) {
+                                                     array.splice(i, 1); 
+                                                   }
+                                                }
+                                             }
+                                             console.log(array.length);
+                                             if (array.length >= 6) {
+                                                $('#continue_btn_enable').prop('disabled',false);
+                                             }else{
+                                                $('#continue_btn_enable').prop('disabled',true);
+                                             }  
+                                             $('#continue_btn_enable').click(function(){
+                                                var data_str = array.join(",");
+                                                console.log(data_str);
+                                                $.ajax({
+                                                    type:"POST",
+                                                    url:"procedures/doBuildProfile.php",
+                                                    data: {'data_array': data_str},
+                                                    success: function(result){
+                                                        document.write(result);
+                                                    }
+                                                })
+                                             }) 
+                                           });
+
+
+
+                                </script>
                                 <button type="button" class="back_btn dialogue_btn">&lt;Back</button> 
-                                <button type="button" class="continue_btn dialogue_btn">Next&gt;</button> 
+                                <button type="button" id="continue_btn_enable" class="continue_btn dialogue_btn" disabled >Next&gt;</button> 
                             </div>
                             <div id="suggested_communities">
                                 <div style="margin: 15px 0;color:#DF7367;font-weight: bold;text-transform: uppercase; ">

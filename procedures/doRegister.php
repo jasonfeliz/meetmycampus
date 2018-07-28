@@ -7,6 +7,11 @@ $collegeEmail = $university = $password = $firstName = $lastName = $hashed = $us
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if ($_POST['setup_account']) {
     echo 'account setup';
+    echo "<pre>";
+    foreach ($_POST['check_list'] as $key) {
+      echo 'key:' . $key.'<br>';
+    }
+    echo "</pre>";
   }else{
     $firstName = trim(filter_input(INPUT_POST,"firstName",FILTER_SANITIZE_STRING));
     $lastName = trim(filter_input(INPUT_POST,"lastName",FILTER_SANITIZE_STRING));

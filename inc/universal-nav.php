@@ -62,7 +62,7 @@
                     </div><!-- /modal-content-body end -->
                 </div><!-- /modal-content end -->
          </div><!-- /modal end --> 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="vendor/dropzone.js"></script>
 
@@ -89,7 +89,7 @@
         }
 
     </script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoEpM9sCpbSwwzmVfbe_XMyi-NV3aFM4w&sensor=false&libraries=places&callback=activatePlacesSearch"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoEpM9sCpbSwwzmVfbe_XMyi-NV3aFM4w&libraries=places&callback=activatePlacesSearch"></script>
     <script src="js/uploadPreview.min.js"></script>
     <script src="js/ajax.js"></script>
     <script type="text/javascript">

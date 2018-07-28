@@ -42,7 +42,7 @@ include('inc/main-header-test.php');
 		
 								</div>
 								<div class="communities-list-header">
-									<h5>Browse by Categories:</h4>
+									<h5>Explore by Categories:</h4>
 									<a href="browse.php?school_name=<?php echo $urlCollegeName ?>&b_type=categories">Browse All</a>			
 								</div>
 										
