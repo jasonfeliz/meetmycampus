@@ -161,11 +161,8 @@ class Community{
 		}catch(Exception $e){
 			throw $e;
 		}
-		if (!empty($results)) {
 			return $results;
-		}else{
-			return false;
-		}
+
 	}
 
 	public function get_community_discussions($string){

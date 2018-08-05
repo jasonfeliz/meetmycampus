@@ -60,7 +60,9 @@ class College {
 		if (is_null($categoryId)) {
 			try{
 					$connect->beginTransaction();
-					$stmt = $connect->prepare("SELECT * FROM communities WHERE college_id = ? AND community_category <> 'majors' AND community_id <> ?");
+					$stmt = $connect->prepare("SELECT * FROM communities 
+												INNER JOIN categories ON communities.category_id = categories.category_id
+												WHERE college_id = ? AND community_category <> 'majors' AND community_id <> ?");
 					$stmt->bindParam(1,$this->college['college_id'],PDO::PARAM_INT);
 					$stmt->bindParam(2,$communityId,PDO::PARAM_INT);
 					$stmt->execute();
@@ -91,6 +93,27 @@ class College {
 			return false;
 		}
 	}
+
+	public function get_category_communities($categoryId){
+		$connect = $this->connect;
+		try{
+				$connect->beginTransaction();
+				$stmt = $connect->prepare("SELECT * FROM communities 
+											INNER JOIN categories ON communities.category_id = categories.category_id
+											WHERE communities.category_id = ? AND college_id = ? AND community_category <> 'majors'");
+				$stmt->bindParam(1,$categoryId,PDO::PARAM_INT);
+				$stmt->bindParam(2,$this->college['college_id'],PDO::PARAM_INT);
+				$stmt->execute();
+				$connect->commit();
+				$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		}catch(Exception $e){
+			throw $e;
+		}
+			
+		return $results;
+
+	}
+
 	public function get_students(){
 		$connect = $this->connect;
 			try{
@@ -159,7 +182,7 @@ class College {
 		if ($topicId == "all") {
 				try{
 						$connect->beginTransaction();
-						$stmt = $connect->prepare("SELECT d_post_id, discussion_post.student_id, userName, discussion_title, discussion_post, post_date FROM discussion_post 
+						$stmt = $connect->prepare("SELECT d_post_id, discussion_post.student_id, userName, discussion_title, discussion_post, post_date,discussion_photo FROM discussion_post
 													INNER JOIN college_student ON discussion_post.student_id = college_student.id		                             
 													WHERE discussion_post.college_id = ?");
 						$stmt->bindParam(1,$this->college['college_id'],PDO::PARAM_INT);
@@ -173,7 +196,7 @@ class College {
 			try{
 					$topicId = intval($topicId);
 					$connect->beginTransaction();
-					$stmt = $connect->prepare("SELECT d_post_id, discussion_post.student_id, userName, discussion_title, discussion_post, post_date FROM discussion_post 
+					$stmt = $connect->prepare("SELECT d_post_id, discussion_post.student_id, userName, discussion_title, discussion_post, post_date,discussion_photo FROM discussion_post 
 												INNER JOIN college_student ON discussion_post.student_id = college_student.id
 												WHERE discussion_post.college_id = ? AND d_topic_id = ?");
 					$stmt->bindParam(1,$this->college['college_id'],PDO::PARAM_INT);

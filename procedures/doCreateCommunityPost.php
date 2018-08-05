@@ -1,7 +1,7 @@
 <?php 
 require_once('../inc/bootstrap.php');
 require_once('../inc/start.php');
-$discussionPost = $communityId = $storyId = $discussionTitle = "";
+$discussionPost = $communityId = $storyId = $discussionTitle = $communityDiscussionPhoto = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (isset($_POST['community-id'])) {
     $discussionPost = trim(filter_input(INPUT_POST,"discussion-post",FILTER_SANITIZE_STRING));
@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           redirect('../discussion-list.php?school_name='. $urlCollegeName);
     }
 
-    $result = create_community_discussion($communityId,$userId,$discussionTitle,$discussionPost);
+    $result = create_community_discussion($communityId,$userId,$discussionTitle,$discussionPost,$communityDiscussionPhoto);
 
     if ($result) {
       redirect('../community-discussion.php?school_name='. $urlCollegeName . '&community_id=' . $communityId  .'&c_discussion_id=' . $result['c_discussion_id']);

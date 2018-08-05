@@ -11,7 +11,9 @@ $user_obj = new User($connect,$userId);
 $username = $user_obj->get_username();
 $userInterests = $user_obj->get_user_interests();
 $urlCollegeName = urlencode($user_obj->get_user_school());
+$collegeName = $user_obj->get_user_school();
 $collegeId = 227;
+
 
  ?>
 
@@ -82,7 +84,7 @@ $collegeId = 227;
                                      Step 2 of 3
                                 </div>
                                 <div style="margin: 15px 0;font-size:13px;font-weight: bold;text-align: left;">
-                                    Please follow at least 6 interests to stay connected with your favorite communities!
+                                    Select at least 6 interests to stay connected with your favorite communities!
                                 </div>
                                 <div>
                                     <?php 
@@ -108,43 +110,41 @@ $collegeId = 227;
                                      ?>
                                 </div>
                                 <script>
+                                            //empty array. Filled with values from the checkboxes
                                            var array = [];
-                                           var count = 0;
 
-                                           $('input[type=checkbox].category-thumbnail-title').click(function(){
-                                             var id = $(this).val();
-                                             if (!array.includes(id)) {
-                                                array.push(id)
+                                           //user checks/unchecks an interests
+                                           //get value, then checks if value is in array
+                                           //if not, push value into array. if its already in array(because its been selected), remove value from array using splice function
+                                           $('input[type=checkbox].category-thumbnail-title').click(function(){ 
+                                            
+                                             var value = $(this).val();
+                                             if (!array.includes(value)) {
+                                                array.push(value);
+                                                document.cookie = "data_array="+ array +"; expires=Thu, 18 Dec 2030 12:00:00 UTC; path=/";
                                              }else{
                                                 for( var i = 0; i <= array.length-1; i++){ 
-                                                   if ( array[i] === id) {
+                                                   if ( array[i] === value) {
                                                      array.splice(i, 1); 
                                                    }
                                                 }
+                                                document.cookie = "data_array="+ array +"; expires=Thu, 18 Dec 2030 12:00:00 UTC; path=/";
                                              }
                                              console.log(array.length);
+
+                                             //if the length of the array is >= 6 then enable the continue button, else keep it disabled.
                                              if (array.length >= 6) {
                                                 $('#continue_btn_enable').prop('disabled',false);
+                                                
                                              }else{
                                                 $('#continue_btn_enable').prop('disabled',true);
-                                             }  
-                                             $('#continue_btn_enable').click(function(){
-                                                var data_str = array.join(",");
-                                                console.log(data_str);
-                                                $.ajax({
-                                                    type:"POST",
-                                                    url:"procedures/doBuildProfile.php",
-                                                    data: {'data_array': data_str},
-                                                    success: function(result){
-                                                        document.write(result);
-                                                    }
-                                                })
-                                             }) 
+                                             }   
                                            });
 
 
 
                                 </script>
+
                                 <button type="button" class="back_btn dialogue_btn">&lt;Back</button> 
                                 <button type="button" id="continue_btn_enable" class="continue_btn dialogue_btn" disabled >Next&gt;</button> 
                             </div>
@@ -152,10 +152,11 @@ $collegeId = 227;
                                 <div style="margin: 15px 0;color:#DF7367;font-weight: bold;text-transform: uppercase; ">
                                      Step 3 of 3
                                 </div>
-                                <div>
-                                    <?php 
-                                        // $suggestedCommunities = get_suggested_communities($collegeId);
-                                     ?>
+                                <div style="margin: 15px 0;font-size:13px;font-weight: bold;text-align: left;">
+                                    Join some communities <?php echo '@'.$collegeName; ?> and see where you fit in!
+                                </div>
+                                <div id="load_suggested_communities">
+
                                 </div>
                                 <button type="button" class="back_btn dialogue_btn">&lt;Back</button> 
                                 <input type="submit" class="dialogue_btn" name="setup_account" value="Set up Account">

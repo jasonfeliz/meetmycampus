@@ -81,7 +81,6 @@ require_once('inc/main-header-test.php');
 		<?php include('inc/community-panels.php');?>
 		<?php include('inc/create-post.php');?>
 		<?php include('inc/create-c-event.php');?>
-		<?php include('inc/send-message.php');?>
 
 		<section <?php if($storyConstant){echo 'class="school-home-body-story"';}else{ echo 'class="school-home-body"';}?> id="school-home-body">
 				<div style="margin: 10px 0">

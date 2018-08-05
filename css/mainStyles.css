@@ -1764,7 +1764,47 @@ select.form_input{
   display: block !important;
 }
 
+.sc_list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.sc_list:after {
+  content: "";
+  flex: auto;
+}
 
+.sc_list_card{
+  width: 49%;
+  margin: 5px auto;
+  border: solid 1px;
+  border-radius: 4px;
+  box-shadow: 0 0px 1px 1px rgba(0,0,0,.1);
+}
+
+.sc_card_banner > img{
+  width:100px;
+}
+.sc_card_info{
+  padding: 5px 5px 10px 5px;
+  font-size: .85em;
+  text-align: left;
+}
+.sc_card_info > a{
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 7px;
+  color: rgba(0,0,0,.65);
+}
+.sc_card_info > div{
+  color: rgba(0,0,0,.4);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.sc_card_info > div div:first-child{
+  margin-right: auto;
+}
 @media (min-width: 768px){
   
   hr {
@@ -1830,8 +1870,13 @@ select.form_input{
 .signInInput{
   font-size: 14px;
 }
+.sc_list_card{
+  width: 33%;
 }
 @media (min-width: 1280px){
+  .sc_list_card{
+  width: 24.5%;
+}
   .modal-content{
     width: 32%;
   }

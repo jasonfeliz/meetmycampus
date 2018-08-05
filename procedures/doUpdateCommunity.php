@@ -1,7 +1,7 @@
 <?php 
 require_once('../inc/bootstrap.php');
 require_once('../inc/start.php');
-$communityColor = $categoryId = $communityName = $communityMessage = $communityType =  $communityId = $communityDescription = "";
+$communityColor = $categoryId = $communityName = $communityMessage = $communityType =  $communityId = $communityDescription = $communityPhoto = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$communityColor = trim(filter_input(INPUT_POST,"community_color",FILTER_SANITIZE_STRING));
 	$categoryId = intval(trim(filter_input(INPUT_POST,"category_id",FILTER_SANITIZE_STRING)));
@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $date = date("Y-m-d h:i:s");
-    $result = update_community($communityId,$categoryId,$communityName,$communityMessage,$communityDescription,$communityType,$communityColor,$date);
+    $result = update_community($communityId,$categoryId,$communityName,$communityMessage,$communityDescription,$communityType,$communityColor,$date,$communityPhoto);
     if ($result) {
     	$_SESSION['settings_success'] = "Community settings has been successfully updated";
     	redirect('../community-settings.php?c_id='.$communityId);

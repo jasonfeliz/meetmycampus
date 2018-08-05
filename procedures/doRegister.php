@@ -5,13 +5,23 @@ $collegeEmail = $university = $password = $firstName = $lastName = $hashed = $us
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if ($_POST['setup_account']) {
-    echo 'account setup';
-    echo "<pre>";
-    foreach ($_POST['check_list'] as $key) {
-      echo 'key:' . $key.'<br>';
+  if (isset($_POST['setup_account'])) {
+      echo 'account setup';
+      echo "<pre>";
+      foreach ($_POST['check_list'] as $key) {
+        echo 'key:' . $key.'<br>';
+      }
+      echo "</pre>";
+  }elseif(isset($_POST['data_array'])){
+    $content = 'values from checkboxes';
+    $returnArray = trim(filter_input(INPUT_POST,'data_array',FILTER_SANITIZE_STRING));
+    $array = explode(",",$returnArray);
+    $content .= "<pre>";
+    foreach ($array as $key) {
+      $content .= 'key: ' .$key . "<br>";
     }
-    echo "</pre>";
+    $content .= "</pre>";
+    echo $content;
   }else{
     $firstName = trim(filter_input(INPUT_POST,"firstName",FILTER_SANITIZE_STRING));
     $lastName = trim(filter_input(INPUT_POST,"lastName",FILTER_SANITIZE_STRING));

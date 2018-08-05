@@ -1,7 +1,7 @@
 <?php 
 require_once('../inc/bootstrap.php');
 require_once('../inc/start.php');
-$eventTitle = $eventDescription = $eventTypeId = $eventTypeB = $eventDate = $eventTime = $eventLocation = $communityId = "";
+$eventTitle = $eventDescription = $eventTypeId = $eventTypeB = $eventDate = $eventTime = $eventLocation = $communityId = $eventPhoto = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $communityId = intval(trim(filter_input(INPUT_POST,"community-id",FILTER_SANITIZE_STRING)));
     $eventTitle = trim(filter_input(INPUT_POST,"event-title",FILTER_SANITIZE_STRING));
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       redirect('../events-list.php?school_name='. $urlCollegeName);
     }
 
-    $result = create_event($eventTypeId,$collegeId,$userId,$communityId,$eventTypeB,$eventTitle,$eventDescription,$eventLocation,$eventDate,$eventTime);
+    $result = create_event($eventTypeId,$collegeId,$userId,$communityId,$eventTypeB,$eventTitle,$eventDescription,$eventLocation,$eventDate,$eventTime,$eventPhoto);
     if ($result) {
       if (is_null($communityId)) {
         redirect('../event.php?school_name='. $urlCollegeName . '&event_id=' . $result['event_id']);

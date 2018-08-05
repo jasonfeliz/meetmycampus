@@ -649,7 +649,16 @@ $('.save_button').click(function(){
 
 		}
 	});
-    
-
 })
 
+$('#continue_btn_enable').click(function(){
+ 	$.ajax({
+		type: "POST",
+		url: 'procedures/doBuildProfile.php',
+		data: {'profile_interests': 'true'},
+		success: function(result) {
+			$('#load_suggested_communities').html(result)
+		}
+	});
+
+})
