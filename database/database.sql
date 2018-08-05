@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 11, 2018 at 09:48 PM
+-- Generation Time: Aug 06, 2018 at 01:34 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 5.6.31
 
@@ -807,41 +807,50 @@ CREATE TABLE `college_student` (
   `username` varchar(20) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
   `token` varchar(100) DEFAULT NULL,
-  `verified` varchar(255) DEFAULT 'no',
   `register_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `college_id` int(11) UNSIGNED DEFAULT NULL
+  `college_id` int(11) UNSIGNED DEFAULT NULL,
+  `user_type` varchar(32) NOT NULL,
+  `deleted` int(11) NOT NULL DEFAULT '0',
+  `verified` int(11) NOT NULL DEFAULT '0',
+  `profile_photo` varchar(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `college_student`
 --
 
-INSERT INTO `college_student` (`id`, `first_name`, `last_name`, `username`, `email`, `token`, `verified`, `register_date`, `college_id`) VALUES
-(35, 'jason', 'feliz', 'arkham', 'arkham@harvard.edu', '$2y$10$KThv2Ly1HG4/suvsfj0EPuyKbRzzGSASZuubO.m1PFzLSNMmk3aVC', 'yes', '2017-11-22 07:38:40', 227),
-(36, 'mike', 'jordan', 'mikejordan', 'mj@unc.edu', '$2y$10$z6C2J3w6/M6cwCRNbIU9ZOjmFWfPGsENua24Boro9wgKtPZDxiose', 'yes', '2017-11-22 18:23:35', 598),
-(37, 'Nathan', 'Miranda', 'brandnate', 'nate@harvard.edu', '$2y$10$xuezjjtws2ZraNX4c1NwouqMlA2c2zPGMuU.U7PetUuJ50sgCr5lO', 'yes', '2017-12-12 20:06:03', 227),
-(38, 'blank', 'blank', 'Anonymous', 'blank', 'blank', 'yes', '2018-01-08 23:52:30', 1),
-(39, 'Reggie', 'Miller', 'rmiler294333', 'rmiller@harvard.edu', '$2y$10$l7w4i6GwVQpYDNwfxHsFseHxGl7zhG631oy86VSd3fKWenW7AH.wa', 'no', '2018-03-14 05:24:11', 227),
-(40, 'Mark', 'Jackson', 'mjackson', 'mjackson@harvard.edu', '$2y$10$I1Oqx7pUjw4pnNwyHdmNCOUwxegDlXQ2eG.hZvVEEUAyCatfFVl2K', 'no', '2018-03-14 05:28:58', 227),
-(41, 'Rik', 'Smit', 'rSmit', 'rsmit@harvard.edu', '$2y$10$pA/Na9UPB/mooxJGBymzreqFHFauFWldFQm4JEWiL2srCqV0APF4W', 'no', '2018-03-14 05:29:46', 227),
-(42, 'Bartolo', 'Colon', 'bColon', 'bColon@harvard.edu', '$2y$10$PB1vdkVOc0aX.lcwzWM5Ce3sNxDHp4xnFNk0QfBhXSMYb3iHi9uWG', 'no', '2018-03-14 21:23:54', 227),
-(43, 'Jim', 'Halper', 'jhalper', 'jhalper@harvard.edu', '$2y$10$JP0SaA8DngHpZiZlfklE0ebl25m885yHHZfCx57OXTuIZ.9NUr9OG', 'no', '2018-03-14 21:46:32', 227),
-(44, 'Dwight', 'Schrute', 'schrutefarms', 'dschrute@harvard.edu', '$2y$10$OZEIhBCqdr6g2T9UQZitzOTGOQn3h9WwnZE0DVaHdkQifCl63xsT2', 'no', '2018-03-14 21:48:17', 227),
-(45, 'Michael', 'Jackson', 'mjackson1', 'mj1@harvard.edu', '$2y$10$7H9gMKLO0bbrdhX8Qvs2q.pw9Q2DCi0YXF85IYydgfwxY/knU8BhC', 'no', '2018-03-19 00:54:16', 227),
-(46, 'Josh', 'Hendrick', 'jhendrick', 'jh@harvard.edu', '$2y$10$7p7H7NM.dx/tVbm.RmPKeOH4Xm8S0pR3AHj8W/DpyIC3iiZOJBTpe', 'no', '2018-03-19 00:56:30', 227),
-(47, 'Luis', 'Felix', 'lfeliz', 'lfelix@harvard.edu', '$2y$10$k/asIv022.uPVjHudPra6Oxa/tUOurZeAcEWum4a35shNSmHPekfW', 'no', '2018-03-25 07:05:17', 227),
-(49, 'Mike', 'Jones', 'mjones', 'mjones1@harvard.edu', '$2y$10$nrE.or1bmayeTvAkOmSHS.vlgVgOFnj1pQjoSPtJuA0rV2nNeK9am', 'no', '2018-06-14 14:42:19', 227),
-(51, 'Rob', 'Yu', 'robyu', 'robyu@harvard.edu', '$2y$10$veKt8.ugTkbnV/OR0ZuBrOcivicLzU4b0qFJSgkdCCQZ.f1W7caK2', 'no', '2018-06-14 14:45:25', 227),
-(52, 'Mary', 'Jane', 'maryjane', 'maryjane@harvard.edu', '$2y$10$.CdC6qyDY8E55ibBSfcXde.ocugbGgPYXLSBQH5yt74Fm0tgpG0se', 'no', '2018-06-14 17:00:19', 227),
-(53, 'Bruce', 'Wayne', 'brucewayneee', 'bruce@harvard.edu', '$2y$10$H7Bp25Uy.hc/bCwv0dQkvOnYNfkg1vALT08SBzdfnIg9dokWI7tXa', 'no', '2018-07-11 17:15:32', 227),
-(54, 'Bruce', 'Wayne', 'brucewayneee2', 'bruce2@harvard.edu', '$2y$10$G3m0UyfYpFp3i2X0eBd7du14Lq8Xm0ddeF9gkH8cLEPG7M70aW7WW', 'no', '2018-07-11 17:38:44', 227),
-(55, 'robin', 'nest', 'robin', 'robin@harvard.edu', '$2y$10$8VStzRq2l.ZzZ/tSR3NNEutus11hymJDDfQrcU.YJmPewgG5x8fU2', 'no', '2018-07-11 17:41:23', 227),
-(56, 'the', 'joker', 'thejoker', 'joker@harvard.edu', '$2y$10$V1mfiqWhC5W1CGPDtciPEOYhlzZ7JEO03/DF8gokZamiljokzYvvq', 'no', '2018-07-11 17:44:50', 227),
-(57, 'Mark', 'Jones', 'markjones', 'markjones@harvard.edu', '$2y$10$/bj7iAV4qq9IDUPZ52M59u8RE2wuFS1GlWpOT/IXS7X3snTQc4Dcq', 'no', '2018-07-11 18:19:03', 227),
-(58, 'Mark', 'Jones', 'markjones1', 'markjones1@harvard.edu', '$2y$10$brmbpZHLs6FavWbINOhb6Oy0FUz7xUfMWNHshcKNPc1r.74zxxIme', 'no', '2018-07-11 18:31:18', 227),
-(59, 'Carlos', 'Martinez', 'carlos', 'carlos@harvard.edu', '$2y$10$V.aVHQfsQyDSqVSlEbfr0ea131XoxLN4xBXYNDeKe1UfPMRlAaHke', 'no', '2018-07-11 18:52:58', 227),
-(60, 'Luis', 'Miguel', 'luismiguel', 'luismiguel@harvard.edu', '$2y$10$/F1qJhyzSMgsZI3eDcrr7OzUklgvvkAgKJ.Aw/hRvUXUNoZewHrR2', 'no', '2018-07-11 18:54:40', 227),
-(61, 'Miguel', 'Cairo', 'miguelcario', 'miguelc@harvard.edu', '$2y$10$aeO7IH.48RGicBSklt7SaeDGLf0WsFWZf8JyFeZL/WjDZzA1ASE2.', 'no', '2018-07-11 19:09:06', 227);
+INSERT INTO `college_student` (`id`, `first_name`, `last_name`, `username`, `email`, `token`, `register_date`, `college_id`, `user_type`, `deleted`, `verified`, `profile_photo`) VALUES
+(35, 'jason', 'feliz', 'arkham', 'arkham@harvard.edu', '$2y$10$KThv2Ly1HG4/suvsfj0EPuyKbRzzGSASZuubO.m1PFzLSNMmk3aVC', '2017-11-22 07:38:40', 227, 'college_student', 0, 1, ''),
+(36, 'mike', 'jordan', 'mikejordan', 'mj@unc.edu', '$2y$10$z6C2J3w6/M6cwCRNbIU9ZOjmFWfPGsENua24Boro9wgKtPZDxiose', '2017-11-22 18:23:35', 598, 'college_student', 0, 1, ''),
+(37, 'Nathan', 'Miranda', 'brandnate', 'nate@harvard.edu', '$2y$10$xuezjjtws2ZraNX4c1NwouqMlA2c2zPGMuU.U7PetUuJ50sgCr5lO', '2017-12-12 20:06:03', 227, 'college_student', 0, 1, ''),
+(38, 'blank', 'blank', 'Anonymous', 'blank', 'blank', '2018-01-08 23:52:30', 1, 'college_student', 0, 1, ''),
+(39, 'Reggie', 'Miller', 'rmiler294333', 'rmiller@harvard.edu', '$2y$10$l7w4i6GwVQpYDNwfxHsFseHxGl7zhG631oy86VSd3fKWenW7AH.wa', '2018-03-14 05:24:11', 227, 'college_student', 0, 1, ''),
+(40, 'Mark', 'Jackson', 'mjackson', 'mjackson@harvard.edu', '$2y$10$I1Oqx7pUjw4pnNwyHdmNCOUwxegDlXQ2eG.hZvVEEUAyCatfFVl2K', '2018-03-14 05:28:58', 227, 'college_student', 0, 1, ''),
+(41, 'Rik', 'Smit', 'rSmit', 'rsmit@harvard.edu', '$2y$10$pA/Na9UPB/mooxJGBymzreqFHFauFWldFQm4JEWiL2srCqV0APF4W', '2018-03-14 05:29:46', 227, 'college_student', 0, 1, ''),
+(42, 'Bartolo', 'Colon', 'bColon', 'bColon@harvard.edu', '$2y$10$PB1vdkVOc0aX.lcwzWM5Ce3sNxDHp4xnFNk0QfBhXSMYb3iHi9uWG', '2018-03-14 21:23:54', 227, 'college_student', 0, 1, ''),
+(43, 'Jim', 'Halper', 'jhalper', 'jhalper@harvard.edu', '$2y$10$JP0SaA8DngHpZiZlfklE0ebl25m885yHHZfCx57OXTuIZ.9NUr9OG', '2018-03-14 21:46:32', 227, 'college_student', 0, 1, ''),
+(44, 'Dwight', 'Schrute', 'schrutefarms', 'dschrute@harvard.edu', '$2y$10$OZEIhBCqdr6g2T9UQZitzOTGOQn3h9WwnZE0DVaHdkQifCl63xsT2', '2018-03-14 21:48:17', 227, 'college_student', 0, 1, ''),
+(45, 'Michael', 'Jackson', 'mjackson1', 'mj1@harvard.edu', '$2y$10$7H9gMKLO0bbrdhX8Qvs2q.pw9Q2DCi0YXF85IYydgfwxY/knU8BhC', '2018-03-19 00:54:16', 227, 'college_student', 0, 1, ''),
+(46, 'Josh', 'Hendrick', 'jhendrick', 'jh@harvard.edu', '$2y$10$7p7H7NM.dx/tVbm.RmPKeOH4Xm8S0pR3AHj8W/DpyIC3iiZOJBTpe', '2018-03-19 00:56:30', 227, 'college_student', 0, 1, ''),
+(47, 'Luis', 'Felix', 'lfeliz', 'lfelix@harvard.edu', '$2y$10$k/asIv022.uPVjHudPra6Oxa/tUOurZeAcEWum4a35shNSmHPekfW', '2018-03-25 07:05:17', 227, 'college_student', 0, 1, ''),
+(51, 'Rob', 'Yu', 'robyu', 'robyu@harvard.edu', '$2y$10$veKt8.ugTkbnV/OR0ZuBrOcivicLzU4b0qFJSgkdCCQZ.f1W7caK2', '2018-06-14 14:45:25', 227, 'college_student', 0, 1, ''),
+(52, 'Mary', 'Jane', 'maryjane', 'maryjane@harvard.edu', '$2y$10$.CdC6qyDY8E55ibBSfcXde.ocugbGgPYXLSBQH5yt74Fm0tgpG0se', '2018-06-14 17:00:19', 227, 'college_student', 0, 1, ''),
+(53, 'Bruce', 'Wayne', 'brucewayneee', 'bruce@harvard.edu', '$2y$10$H7Bp25Uy.hc/bCwv0dQkvOnYNfkg1vALT08SBzdfnIg9dokWI7tXa', '2018-07-11 17:15:32', 227, 'college_student', 0, 1, ''),
+(54, 'Bruce', 'Wayne', 'brucewayneee2', 'bruce2@harvard.edu', '$2y$10$G3m0UyfYpFp3i2X0eBd7du14Lq8Xm0ddeF9gkH8cLEPG7M70aW7WW', '2018-07-11 17:38:44', 227, 'college_student', 0, 1, ''),
+(55, 'robin', 'nest', 'robin', 'robin@harvard.edu', '$2y$10$8VStzRq2l.ZzZ/tSR3NNEutus11hymJDDfQrcU.YJmPewgG5x8fU2', '2018-07-11 17:41:23', 227, 'college_student', 1, 1, ''),
+(56, 'the', 'joker', 'thejoker', 'joker@harvard.edu', '$2y$10$V1mfiqWhC5W1CGPDtciPEOYhlzZ7JEO03/DF8gokZamiljokzYvvq', '2018-07-11 17:44:50', 227, 'college_student', 0, 1, ''),
+(57, 'Mark', 'Jones', 'markjones', 'markjones@harvard.edu', '$2y$10$/bj7iAV4qq9IDUPZ52M59u8RE2wuFS1GlWpOT/IXS7X3snTQc4Dcq', '2018-07-11 18:19:03', 227, 'college_student', 0, 1, ''),
+(58, 'Mark', 'Jones', 'markjones1', 'markjones1@harvard.edu', '$2y$10$brmbpZHLs6FavWbINOhb6Oy0FUz7xUfMWNHshcKNPc1r.74zxxIme', '2018-07-11 18:31:18', 227, 'college_student', 0, 1, ''),
+(59, 'Carlos', 'Martinez', 'carlos', 'carlos@harvard.edu', '$2y$10$V.aVHQfsQyDSqVSlEbfr0ea131XoxLN4xBXYNDeKe1UfPMRlAaHke', '2018-07-11 18:52:58', 227, 'college_student', 0, 1, ''),
+(60, 'Luis', 'Miguel', 'luismiguel', 'luismiguel@harvard.edu', '$2y$10$/F1qJhyzSMgsZI3eDcrr7OzUklgvvkAgKJ.Aw/hRvUXUNoZewHrR2', '2018-07-11 18:54:40', 227, 'college_student', 0, 1, ''),
+(61, 'Miguel', 'Cairo', 'miguelcario', 'miguelc@harvard.edu', '$2y$10$aeO7IH.48RGicBSklt7SaeDGLf0WsFWZf8JyFeZL/WjDZzA1ASE2.', '2018-07-11 19:09:06', 227, 'college_student', 0, 1, ''),
+(62, 'Kelly', 'Maine', 'kellymaine', 'kelly@harvard.edu', '$2y$10$yyPtnzJ1jdsMdDCKlW2BM.SrVnmmKc/Tv8eM7V0Wj.iKCNuH/6GT.', '2018-07-19 03:54:07', 227, 'college_student', 0, 1, ''),
+(63, 'test', 'tester', 'tester', 'test@jwu.edu', '$2y$10$vews/EJwZWZOd8O1x2kIyOB5RitRsx2cNBsP2Eb2Bv88rlboJW06C', '2018-07-23 16:13:36', 262, 'college_student', 0, 0, ''),
+(64, 'test', 'test', 'arkham', 'tes@harvard.edu', '$2y$10$UBF5yBTu9DIFZzHLKCddHuXCnGzac2GERf9xguWSIPv5A294h0Wsu', '2018-07-23 16:29:06', 227, 'college_student', 0, 0, ''),
+(65, 'test2', 'tester', 'arkham', 'jrf976@unc.edu', '$2y$10$Llw3J0tB/ibmrNWN7vBoaOfjmByRoR7pYDvzCnDoSSPq9Iw3zJlOu', '2018-07-23 16:35:24', 598, 'college_student', 0, 0, ''),
+(66, 'wdfs', 'sdf', 'dsfdsf', 'sfgddf@jwu.edu', '$2y$10$ZCTS3tO14SAumr2dXbIwzObVYwk4w5AD0JGB62PU8J5Xnna2aHn5.', '2018-07-23 19:09:16', 262, 'college_student', 0, 0, ''),
+(67, 'sdfsdf', 'dfsd', 'dsfsdfdsf', 'fsfsdf@jwu.edu', '$2y$10$dqP7B3TZEpaQyTtYwNheouMJ05nJJphc6zRANwXbsMKLLN3dqiIlC', '2018-07-23 19:11:17', 262, 'college_student', 0, 0, ''),
+(68, 'Jason', 'Feliz', 'jfeliz', 'jrf976@jwu.edu', '$2y$10$r7rIUU/cvM1R9DcnitzfKOhJYV23/CXsL/kufELncunXCXKRA44FK', '2018-07-27 13:40:40', 262, 'college_student', 0, 0, '');
 
 -- --------------------------------------------------------
 
@@ -860,6 +869,7 @@ CREATE TABLE `communities` (
   `community_category` varchar(32) DEFAULT NULL,
   `community_type` varchar(32) DEFAULT NULL,
   `community_color` varchar(128) DEFAULT NULL,
+  `community_photo` varchar(64) NOT NULL,
   `last_update` timestamp NULL DEFAULT NULL,
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -868,24 +878,26 @@ CREATE TABLE `communities` (
 -- Dumping data for table `communities`
 --
 
-INSERT INTO `communities` (`community_id`, `college_id`, `category_id`, `creator_id`, `community_name`, `community_description`, `community_message`, `community_category`, `community_type`, `community_color`, `last_update`, `date_created`) VALUES
-(1, 227, 20, 35, 'Ross&#39;s Sandwich', 'This community is more than just caring about saving stolen sandwiches at work, school, or even your own apartment. It&#39;s about honoring Ross&#39;s sandwich.\r\n\r\nWe dedicate our community to you, Ross Geller.\r\n\r\nPivottttttttttt', 'Welcome to the community dedicated to honor Ross&#39; Sandwich', 'group', 'public', '#DF7367', '2018-05-18 05:10:26', '2017-12-03 15:05:59'),
-(2, 227, 21, 35, '@Harvard Rants', NULL, 'The best place to anonymously rant about Harvard.', 'story', 'public', '#477bd2', NULL, '2018-01-08 18:13:32'),
-(4, 227, 14, 35, 'techies @harvard!', 'Nerding out....', 'we are nerds and we will rule the world. Wait, we already do! haha', 'group', 'public', '#46baac', '2018-06-20 11:32:50', '2018-02-14 02:22:24'),
-(9, 227, 21, 35, 'Sex, Drugs, and Alcohol!', NULL, 'We want the best, most outrageous party stories!', 'story', 'public', '#7baf86', NULL, '2018-02-15 18:07:38'),
-(10, 394, 10, 35, 'art fans @princeton', NULL, 'we love art', 'group', 'public', '#ffcc2c', NULL, '2018-02-16 19:10:36'),
-(20, 262, 9, 35, 'Wildcat Venture Club', NULL, 'Learn venture capitalist techniques', 'group', 'private', '#a1a9c1', '2018-05-08 11:53:25', '2018-03-26 19:47:35'),
-(22, 227, 6, 35, 'Vegan Athletes @Harvard', NULL, 'Join our community if you would like to connect with vegan athletes on campus.', 'group', 'public', '#7baf86', NULL, '2018-04-04 19:10:00'),
-(23, 227, 12, 35, 'LGBTQ @Harvard', 'Harvard&#39;s home for Lesbian, Gay, Bisexual, Transgender, Queer Community! Join the movement!!!!!', 'Meet and Discuss with LGBTQ advocates @Harvard!', 'group', 'public', '#ffbdbd', '2018-05-19 06:32:21', '2018-04-13 14:51:46'),
-(24, 227, 1, 39, 'miller test', NULL, 'miller test', 'group', 'private', '#DF7367', '2018-05-08 08:20:33', '2018-04-25 15:45:59'),
-(25, 227, 2, 39, 'miller test 2', 'join millers test', 'miller test 2', 'group', 'private', '#5a626f', '2018-05-16 13:32:08', '2018-04-25 19:38:14'),
-(27, 227, 23, 38, 'Finance', NULL, NULL, 'majors', 'public', '#5a626f', NULL, '2018-06-14 14:21:31'),
-(29, 227, 23, 38, 'Anthropology', NULL, NULL, 'majors', 'public', '#5a626f', NULL, '2018-06-14 14:45:25'),
-(31, 227, 23, 38, 'Mathematics', NULL, NULL, 'majors', 'public', '#5a626f', NULL, '2018-06-14 17:00:19'),
-(32, 262, 23, 38, 'Computer Science', NULL, NULL, 'majors', 'public', '#5a626f', NULL, '2018-06-28 17:24:00'),
-(36, 227, 23, 38, 'Psychology', NULL, NULL, 'majors', 'public', '#5a626f', NULL, '2018-07-11 17:38:44'),
-(42, 227, 23, 38, 'Computer Science', NULL, NULL, 'majors', 'public', '#5a626f', NULL, '2018-07-11 18:54:40'),
-(43, 227, 23, 38, 'Electrical Engineering', NULL, NULL, 'majors', 'public', '#5a626f', NULL, '2018-07-11 19:09:06');
+INSERT INTO `communities` (`community_id`, `college_id`, `category_id`, `creator_id`, `community_name`, `community_description`, `community_message`, `community_category`, `community_type`, `community_color`, `community_photo`, `last_update`, `date_created`) VALUES
+(1, 227, 20, 35, 'Ross&#39;s Sandwich', 'This community is more than just caring about saving stolen sandwiches at work, school, or even your own apartment. It&#39;s about honoring Ross&#39;s sandwich.\r\n\r\nWe dedicate our community to you, Ross Geller.\r\n\r\nPivottttttttttt', 'Welcome to the community dedicated to honor Ross&#39; Sandwich', 'group', 'public', '#DF7367', '', '2018-05-18 05:10:26', '2017-12-03 15:05:59'),
+(2, 227, 21, 35, '@Harvard Rants', NULL, 'The best place to anonymously rant about Harvard.', 'story', 'public', '#477bd2', '', NULL, '2018-01-08 18:13:32'),
+(4, 227, 14, 35, 'techies @harvard!', 'Nerding out....', 'we are nerds and we will rule the world. Wait, we already do! haha', 'group', 'public', '#46baac', '', '2018-06-20 11:32:50', '2018-02-14 02:22:24'),
+(9, 227, 21, 35, 'Sex, Drugs, and Alcohol!', NULL, 'We want the best, most outrageous party stories!', 'story', 'public', '#7baf86', '', NULL, '2018-02-15 18:07:38'),
+(10, 394, 10, 35, 'art fans @princeton', NULL, 'we love art', 'group', 'public', '#ffcc2c', '', NULL, '2018-02-16 19:10:36'),
+(20, 262, 9, 35, 'Wildcat Venture Club', NULL, 'Learn venture capitalist techniques', 'group', 'private', '#a1a9c1', '', '2018-05-08 11:53:25', '2018-03-26 19:47:35'),
+(22, 227, 6, 35, 'Vegan Athletes @Harvard', NULL, 'Join our community if you would like to connect with vegan athletes on campus.', 'group', 'public', '#7baf86', '', NULL, '2018-04-04 19:10:00'),
+(23, 227, 12, 35, 'LGBTQ @Harvard', 'Harvard&#39;s home for Lesbian, Gay, Bisexual, Transgender, Queer Community! Join the movement!!!!!', 'Meet and Discuss with LGBTQ advocates @Harvard!', 'group', 'public', '#ffbdbd', '', '2018-05-19 06:32:21', '2018-04-13 14:51:46'),
+(24, 227, 1, 39, 'miller test', NULL, 'miller test', 'group', 'private', '#DF7367', '', '2018-05-08 08:20:33', '2018-04-25 15:45:59'),
+(25, 227, 2, 39, 'miller test 2', 'join millers test', 'miller test 2', 'group', 'private', '#5a626f', '', '2018-05-16 13:32:08', '2018-04-25 19:38:14'),
+(27, 227, 23, 38, 'Finance', NULL, NULL, 'majors', 'public', '#5a626f', '', NULL, '2018-06-14 14:21:31'),
+(29, 227, 23, 38, 'Anthropology', NULL, NULL, 'majors', 'public', '#5a626f', '', NULL, '2018-06-14 14:45:25'),
+(31, 227, 23, 38, 'Mathematics', NULL, NULL, 'majors', 'public', '#5a626f', '', NULL, '2018-06-14 17:00:19'),
+(32, 262, 23, 38, 'Computer Science', NULL, NULL, 'majors', 'public', '#5a626f', '', NULL, '2018-06-28 17:24:00'),
+(36, 227, 23, 38, 'Psychology', NULL, NULL, 'majors', 'public', '#5a626f', '', NULL, '2018-07-11 17:38:44'),
+(42, 227, 23, 38, 'Computer Science', NULL, NULL, 'majors', 'public', '#5a626f', '', NULL, '2018-07-11 18:54:40'),
+(43, 227, 23, 38, 'Electrical Engineering', NULL, NULL, 'majors', 'public', '#5a626f', '', NULL, '2018-07-11 19:09:06'),
+(44, 227, 2, 61, 'Students against Trump', 'klndsnkadasdn', 'asdfklnfdlnf', 'group', 'public', '#477bd2', '', '2018-07-12 05:22:57', '2018-07-11 23:21:47'),
+(45, 262, 23, 38, 'Finance', NULL, NULL, 'majors', 'public', '#5a626f', '', NULL, '2018-07-14 00:43:26');
 
 -- --------------------------------------------------------
 
@@ -916,7 +928,8 @@ INSERT INTO `community_admins` (`admin_id`, `community_id`, `student_id`, `admin
 (16, 29, 38, 2, '2018-06-14 14:45:25'),
 (17, 31, 38, 2, '2018-06-14 17:00:19'),
 (19, 36, 38, 2, '2018-07-11 17:38:44'),
-(20, 42, 38, 2, '2018-07-11 18:54:40');
+(20, 42, 38, 2, '2018-07-11 18:54:40'),
+(21, 44, 61, 2, '2018-07-11 23:21:47');
 
 -- --------------------------------------------------------
 
@@ -930,7 +943,7 @@ CREATE TABLE `community_discussions` (
   `student_id` int(10) UNSIGNED DEFAULT NULL,
   `c_discussion_title` text,
   `c_discussion_post` text NOT NULL,
-  `photo` varchar(64) DEFAULT NULL,
+  `community_discussion_photo` varchar(64) DEFAULT NULL,
   `post_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -938,7 +951,7 @@ CREATE TABLE `community_discussions` (
 -- Dumping data for table `community_discussions`
 --
 
-INSERT INTO `community_discussions` (`c_discussion_id`, `community_id`, `student_id`, `c_discussion_title`, `c_discussion_post`, `photo`, `post_date`) VALUES
+INSERT INTO `community_discussions` (`c_discussion_id`, `community_id`, `student_id`, `c_discussion_title`, `c_discussion_post`, `community_discussion_photo`, `post_date`) VALUES
 (1, 1, 35, 'Who else has had to deal with people stealing your sandswich at work? Especially the most amazing thanksgiving sandhwich....smh', 'Who else has had to deal with people stealing your sandswich at work? Especially the most amazing thanksgiving sandhwich....smh', NULL, '2017-12-10 08:31:02'),
 (2, 1, 35, 'stolen sandwich......', 'Hey Guys,\r\n\r\nJust had the most amazing sandwich ever get robbed from me at work. I even left a note. I got Ross&#39;ed  today. :-(', NULL, '2017-12-11 14:58:27'),
 (4, 2, 38, 'Off-campus living.....', 'A single, tiny room with shared bath could cost $800-$900+. One woman was offering a tiny section of attic which could only be accessed through a bathroom- no fan or air conditioner, for $750!!! Many of the landlords my friends and I have dealt with are charlatans. They see students as cash cows and take advantage of them. I\'ve heard many horror stories. There should be a law against what those so-called landlords do, especially considering they don\'t report the additional income to the IRS.', NULL, '2018-01-10 11:00:56'),
@@ -948,7 +961,8 @@ INSERT INTO `community_discussions` (`c_discussion_id`, `community_id`, `student
 (23, 9, 35, 'yes', 'let say yes to everyting', NULL, '2018-06-14 10:34:14'),
 (27, 27, 35, 'first finance post', 'this is my first finance post!', NULL, '2018-06-16 12:22:13'),
 (28, 23, 35, 'test', 'This is just a test. \r\n\r\nDon&#39;t panick. We are not here to hurt you. We&#39;re here to take over your life....', NULL, '2018-06-22 01:18:35'),
-(29, 25, 39, 'test', 'hello,\r\n\r\nthis is a test\r\n\r\nThank you,\r\nTester', NULL, '2018-06-28 11:40:33');
+(29, 25, 39, 'test', 'hello,\r\n\r\nthis is a test\r\n\r\nThank you,\r\nTester', NULL, '2018-06-28 11:40:33'),
+(30, 1, 35, 'escape output', 'i am awesome', NULL, '2018-07-19 12:32:06');
 
 -- --------------------------------------------------------
 
@@ -983,7 +997,9 @@ INSERT INTO `community_discussion_vote` (`c_vote_id`, `c_discussion_id`, `studen
 (24, 19, 35, 1),
 (27, 23, 35, 1),
 (29, 19, 39, 1),
-(30, 1, 39, 1);
+(30, 1, 39, 1),
+(31, 19, 61, 1),
+(32, 2, 61, 1);
 
 -- --------------------------------------------------------
 
@@ -1036,7 +1052,18 @@ INSERT INTO `community_members` (`community_member_id`, `community_id`, `student
 (121, 36, 38, 1, 1, '2018-07-11 17:38:44'),
 (122, 36, 54, 1, 1, '2018-07-11 17:38:44'),
 (123, 42, 38, 1, 1, '2018-07-11 18:54:40'),
-(124, 43, 61, 1, 1, '2018-07-11 19:09:06');
+(124, 43, 61, 1, 1, '2018-07-11 19:09:06'),
+(125, 44, 61, 1, 1, '2018-07-11 23:21:47'),
+(126, 10, 61, 1, 1, '2018-07-11 23:23:29'),
+(127, 1, 61, 1, 1, '2018-07-12 14:18:52'),
+(128, 24, 61, 2, 0, '2018-07-13 06:26:04'),
+(129, 4, 61, 1, 1, '2018-07-13 08:15:11'),
+(130, 36, 62, 1, 1, '2018-07-19 03:54:07'),
+(131, 1, 62, 1, 1, '2018-07-19 03:54:18'),
+(132, 23, 62, 1, 1, '2018-07-19 03:54:31'),
+(133, 44, 62, 1, 1, '2018-07-19 03:55:02'),
+(134, 20, 68, 2, 0, '2018-07-27 13:41:35'),
+(135, 32, 68, 1, 1, '2018-07-27 13:41:49');
 
 -- --------------------------------------------------------
 
@@ -1107,6 +1134,7 @@ CREATE TABLE `discussion_post` (
   `student_id` int(10) UNSIGNED DEFAULT NULL,
   `discussion_title` text,
   `discussion_post` text,
+  `discussion_photo` varchar(64) NOT NULL,
   `post_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -1114,9 +1142,10 @@ CREATE TABLE `discussion_post` (
 -- Dumping data for table `discussion_post`
 --
 
-INSERT INTO `discussion_post` (`d_post_id`, `d_topic_id`, `college_id`, `student_id`, `discussion_title`, `discussion_post`, `post_date`) VALUES
-(9, 23, 227, 35, 'What is you major and why did you pick it?', 'Hello, \r\n\r\nI&#39;m looking for some serious feedback as to what your majors are and why did you pick it? I&#39;m a freshmen at Harvard, and I&#39;m still undecided what my major is going to be. I&#39;m leaning towards the sciences but for sure I&#39;m keeping my options open. I will consider all replies. \r\n\r\nThanks!', '2018-06-05 19:09:48'),
-(16, 24, 227, 35, 'Admissions', 'Does anyone know when the deadline for applications are??', '2018-07-10 21:02:55');
+INSERT INTO `discussion_post` (`d_post_id`, `d_topic_id`, `college_id`, `student_id`, `discussion_title`, `discussion_post`, `discussion_photo`, `post_date`) VALUES
+(9, 23, 227, 35, 'What is you major and why did you pick it?', 'Hello, \r\n\r\nI&#39;m looking for some serious feedback as to what your majors are and why did you pick it? I&#39;m a freshmen at Harvard, and I&#39;m still undecided what my major is going to be. I&#39;m leaning towards the sciences but for sure I&#39;m keeping my options open. I will consider all replies. \r\n\r\nThanks!', '', '2018-06-05 19:09:48'),
+(16, 24, 227, 35, 'Admissions', 'Does anyone know when the deadline for applications are??', '', '2018-07-10 21:02:55'),
+(17, 34, 227, 35, 'aluminii', 'lausdknsdkd', '', '2018-08-05 23:20:53');
 
 -- --------------------------------------------------------
 
@@ -1242,7 +1271,9 @@ CREATE TABLE `discussion_vote` (
 INSERT INTO `discussion_vote` (`vote_id`, `discussion_id`, `student_id`, `vote`) VALUES
 (23, 9, 35, 1),
 (24, 9, 37, 1),
-(26, 16, 35, 1);
+(26, 16, 35, 1),
+(27, 16, 61, 1),
+(28, 9, 61, 1);
 
 -- --------------------------------------------------------
 
@@ -1419,7 +1450,8 @@ INSERT INTO `favorites` (`favorite_id`, `user_id`, `favorite_type`, `type_id`) V
 (135, 35, 'discussion', 16),
 (136, 61, 'community_discussion', 2),
 (137, 61, 'discussion', 9),
-(138, 61, 'discussion', 16);
+(138, 61, 'discussion', 16),
+(140, 61, 'community_discussion', 19);
 
 -- --------------------------------------------------------
 
@@ -1456,8 +1488,11 @@ INSERT INTO `friend_followers` (`follower_id`, `user_id`, `friend_id`) VALUES
 (36, 39, 35),
 (46, 35, 35),
 (53, 35, 37),
-(54, 35, 41),
-(55, 39, 42);
+(55, 39, 42),
+(56, 39, 51),
+(57, 35, 41),
+(58, 62, 35),
+(62, 62, 61);
 
 -- --------------------------------------------------------
 
@@ -1494,7 +1529,17 @@ INSERT INTO `interests` (`interest_id`, `category_id`, `student_id`) VALUES
 (40, 3, 35),
 (41, 4, 35),
 (43, 6, 39),
-(44, 2, 39);
+(44, 2, 39),
+(45, 1, 62),
+(46, 12, 62),
+(47, 6, 62),
+(48, 8, 62),
+(49, 14, 62),
+(51, 24, 62),
+(52, 21, 62),
+(54, 2, 35),
+(55, 1, 35),
+(56, 2, 51);
 
 -- --------------------------------------------------------
 
@@ -1518,7 +1563,8 @@ INSERT INTO `majors` (`major_id`, `major_list_id`, `college_id`) VALUES
 (9, 900, 227),
 (10, 1101, 227),
 (11, 292, 227),
-(12, 1224, 227);
+(12, 1224, 227),
+(13, 210, 262);
 
 -- --------------------------------------------------------
 
@@ -2801,7 +2847,9 @@ INSERT INTO `report_content` (`report_content_id`, `content_type`, `content_id`,
 (3, 'post', 1, 0, ''),
 (4, 'post_reply_comment', 31, 0, ''),
 (5, 'post', 8, 0, ''),
-(6, 'event_comment', 16, 0, '');
+(6, 'event_comment', 16, 0, ''),
+(7, 'report_profile', 39, 0, ''),
+(8, 'report_profile', 41, 0, '');
 
 -- --------------------------------------------------------
 
@@ -2920,21 +2968,18 @@ INSERT INTO `school_followers` (`school_follower_id`, `user_id`, `college_id`, `
 (23, 47, 262, '2018-03-24 23:09:07'),
 (25, 35, 466, '2018-03-29 21:45:30'),
 (27, 39, 227, '2018-04-25 11:26:17'),
-(28, 39, 227, '2018-04-25 11:48:06'),
-(29, 39, 227, '2018-04-25 11:53:03'),
-(30, 39, 227, '2018-04-25 11:53:46'),
-(31, 39, 227, '2018-04-25 12:00:24'),
-(32, 39, 227, '2018-04-25 13:15:21'),
 (33, 39, 394, '2018-04-25 13:49:37'),
-(34, 39, 227, '2018-04-26 14:20:09'),
-(35, 39, 227, '2018-05-05 11:58:58'),
-(36, 35, 221, '2018-05-30 20:13:55'),
-(38, 49, 227, '2018-06-14 10:42:19'),
 (39, 51, 227, '2018-06-14 10:45:25'),
 (40, 52, 227, '2018-06-14 13:00:19'),
 (41, 54, 227, '2018-07-11 13:38:44'),
 (42, 60, 227, '2018-07-11 14:54:40'),
-(43, 61, 227, '2018-07-11 15:09:06');
+(43, 61, 227, '2018-07-11 15:09:06'),
+(44, 61, 394, '2018-07-11 19:24:54'),
+(45, 62, 227, '2018-07-18 23:54:07'),
+(46, 63, 262, '2018-07-23 12:13:36'),
+(47, 64, 227, '2018-07-23 12:29:06'),
+(48, 67, 262, '2018-07-23 15:11:17'),
+(49, 68, 262, '2018-07-27 09:40:40');
 
 -- --------------------------------------------------------
 
@@ -2946,35 +2991,40 @@ CREATE TABLE `user_profile` (
   `profile_id` int(10) UNSIGNED NOT NULL,
   `major_id` int(10) UNSIGNED DEFAULT NULL,
   `student_id` int(10) UNSIGNED DEFAULT NULL,
-  `about` varchar(512) DEFAULT NULL,
+  `about` text,
   `gender` varchar(32) DEFAULT NULL,
   `location_city` varchar(64) DEFAULT NULL,
   `location_state` varchar(10) NOT NULL,
-  `grad_year` year(4) DEFAULT NULL
+  `grad_year` year(4) DEFAULT NULL,
+  `user_photo` varchar(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user_profile`
 --
 
-INSERT INTO `user_profile` (`profile_id`, `major_id`, `student_id`, `about`, `gender`, `location_city`, `location_state`, `grad_year`) VALUES
-(2, 210, 35, 'Avid fan of the New England Patriots, Lover of all things coffee...', 'Male', 'Cranston', 'RI', 2014),
-(3, 242, 37, 'I love driving my range rover all over Cranston...', 'Male', 'Cranston', 'RI', 2018),
-(4, 210, 42, NULL, NULL, NULL, '', NULL),
-(5, 292, 39, NULL, NULL, NULL, '', NULL),
-(6, 210, 40, NULL, NULL, NULL, '', NULL),
-(7, 210, 41, NULL, NULL, NULL, '', NULL),
-(8, 210, 43, NULL, NULL, NULL, '', NULL),
-(9, 210, 44, NULL, NULL, NULL, '', NULL),
-(10, 242, 45, NULL, NULL, NULL, '', NULL),
-(11, 242, 46, NULL, NULL, NULL, '', NULL),
-(12, 832, 47, NULL, NULL, NULL, '', NULL),
-(13, 292, 49, NULL, NULL, NULL, '', NULL),
-(14, 1112, 51, NULL, NULL, NULL, '', NULL),
-(15, 900, 52, NULL, NULL, NULL, '', NULL),
-(16, 1101, 54, NULL, NULL, NULL, '', NULL),
-(17, 292, 60, NULL, NULL, NULL, '', NULL),
-(18, 1224, 61, NULL, NULL, NULL, '', NULL);
+INSERT INTO `user_profile` (`profile_id`, `major_id`, `student_id`, `about`, `gender`, `location_city`, `location_state`, `grad_year`, `user_photo`) VALUES
+(2, 210, 35, 'Avid fan of the New England Patriots, Lover of all things coffee...', 'Male', 'Cranston', 'RI', 2014, ''),
+(3, 242, 37, 'I love driving my range rover all over Cranston...', 'Male', 'Cranston', 'RI', 2018, ''),
+(4, 210, 42, NULL, NULL, NULL, '', NULL, ''),
+(5, 292, 39, 'I use to shoot 3&#39;s for a living. ', NULL, NULL, '', NULL, ''),
+(6, 210, 40, NULL, NULL, NULL, '', NULL, ''),
+(7, 210, 41, NULL, NULL, NULL, '', NULL, ''),
+(8, 210, 43, NULL, NULL, NULL, '', NULL, ''),
+(9, 210, 44, NULL, NULL, NULL, '', NULL, ''),
+(10, 242, 45, NULL, NULL, NULL, '', NULL, ''),
+(11, 242, 46, NULL, NULL, NULL, '', NULL, ''),
+(12, 832, 47, NULL, NULL, NULL, '', NULL, ''),
+(14, 1112, 51, NULL, NULL, NULL, '', NULL, ''),
+(15, 900, 52, NULL, NULL, NULL, '', NULL, ''),
+(16, 1101, 54, NULL, NULL, NULL, '', NULL, ''),
+(17, 292, 60, NULL, NULL, NULL, '', NULL, ''),
+(18, 1224, 61, NULL, NULL, NULL, '', NULL, ''),
+(19, 1101, 62, NULL, NULL, NULL, '', NULL, ''),
+(20, 1101, 63, NULL, NULL, NULL, '', NULL, ''),
+(21, NULL, 64, NULL, NULL, NULL, '', NULL, ''),
+(22, NULL, 67, NULL, NULL, NULL, '', NULL, ''),
+(23, NULL, 68, NULL, NULL, NULL, '', NULL, '');
 
 -- --------------------------------------------------------
 
@@ -3272,32 +3322,32 @@ ALTER TABLE `colleges`
 -- AUTO_INCREMENT for table `college_student`
 --
 ALTER TABLE `college_student`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 --
 -- AUTO_INCREMENT for table `communities`
 --
 ALTER TABLE `communities`
-  MODIFY `community_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `community_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 --
 -- AUTO_INCREMENT for table `community_admins`
 --
 ALTER TABLE `community_admins`
-  MODIFY `admin_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `admin_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 --
 -- AUTO_INCREMENT for table `community_discussions`
 --
 ALTER TABLE `community_discussions`
-  MODIFY `c_discussion_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `c_discussion_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT for table `community_discussion_vote`
 --
 ALTER TABLE `community_discussion_vote`
-  MODIFY `c_vote_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `c_vote_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 --
 -- AUTO_INCREMENT for table `community_members`
 --
 ALTER TABLE `community_members`
-  MODIFY `community_member_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=125;
+  MODIFY `community_member_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=136;
 --
 -- AUTO_INCREMENT for table `c_discussion_replies`
 --
@@ -3312,17 +3362,17 @@ ALTER TABLE `c_discussion_r_reply`
 -- AUTO_INCREMENT for table `discussion_post`
 --
 ALTER TABLE `discussion_post`
-  MODIFY `d_post_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `d_post_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `discussion_replies`
 --
 ALTER TABLE `discussion_replies`
-  MODIFY `d_reply_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `d_reply_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT for table `discussion_r_replies`
 --
 ALTER TABLE `discussion_r_replies`
-  MODIFY `r_reply_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `r_reply_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 --
 -- AUTO_INCREMENT for table `discussion_topics`
 --
@@ -3332,7 +3382,7 @@ ALTER TABLE `discussion_topics`
 -- AUTO_INCREMENT for table `discussion_vote`
 --
 ALTER TABLE `discussion_vote`
-  MODIFY `vote_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `vote_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 --
 -- AUTO_INCREMENT for table `email_newsletter`
 --
@@ -3342,7 +3392,7 @@ ALTER TABLE `email_newsletter`
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `event_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `event_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `event_attendees`
 --
@@ -3362,22 +3412,22 @@ ALTER TABLE `event_type`
 -- AUTO_INCREMENT for table `favorites`
 --
 ALTER TABLE `favorites`
-  MODIFY `favorite_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=139;
+  MODIFY `favorite_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
 --
 -- AUTO_INCREMENT for table `friend_followers`
 --
 ALTER TABLE `friend_followers`
-  MODIFY `follower_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `follower_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 --
 -- AUTO_INCREMENT for table `interests`
 --
 ALTER TABLE `interests`
-  MODIFY `interest_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `interest_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 --
 -- AUTO_INCREMENT for table `majors`
 --
 ALTER TABLE `majors`
-  MODIFY `major_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `major_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `majors_list`
 --
@@ -3392,7 +3442,7 @@ ALTER TABLE `notifications`
 -- AUTO_INCREMENT for table `report_content`
 --
 ALTER TABLE `report_content`
-  MODIFY `report_content_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `report_content_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `reviews`
 --
@@ -3412,12 +3462,12 @@ ALTER TABLE `review_ratings`
 -- AUTO_INCREMENT for table `school_followers`
 --
 ALTER TABLE `school_followers`
-  MODIFY `school_follower_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `school_follower_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 --
 -- AUTO_INCREMENT for table `user_profile`
 --
 ALTER TABLE `user_profile`
-  MODIFY `profile_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `profile_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
 -- Constraints for dumped tables
 --
