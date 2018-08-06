@@ -151,9 +151,9 @@ class Community{
 		$connect = $this->connect;
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT community_members.student_id,college_student.id,college_student.first_name,college_student.last_name, username FROM community_members 
-											INNER JOIN college_student ON community_members.student_id = college_student.id
-											WHERE community_id = ? AND status = 1 AND student_id <> 38");
+				$stmt = $connect->prepare("SELECT community_members.student_id,college_student.id,college_student.first_name,college_student.last_name, username,user_photo FROM community_members 
+											INNER JOIN college_student JOIN user_profile ON community_members.student_id = college_student.id AND college_student.id = user_profile.student_id
+											WHERE community_id = ? AND status = 1 AND community_members.student_id <> 38");
 				$stmt->bindParam(1,$this->community['community_id'],PDO::PARAM_INT);
 				$stmt->execute();
 				$connect->commit();
@@ -171,7 +171,7 @@ class Community{
 		if ($string == "stories") {
 			try{
 					$connect->beginTransaction();
-					$stmt = $connect->prepare("SELECT c_discussion_id, student_id, c_discussion_title, c_discussion_post, post_date FROM community_discussions 
+					$stmt = $connect->prepare("SELECT c_discussion_id, student_id, c_discussion_title, c_discussion_post, post_date,community_discussion_photo FROM community_discussions 
 												INNER JOIN college_student ON community_discussions.student_id = college_student.id 
 												INNER JOIN communities JOIN colleges ON community_discussions.community_id = communities.community_id AND communities.college_id = colleges.college_id 
 												WHERE community_discussions.community_id = ? ORDER BY post_date DESC");
@@ -185,7 +185,7 @@ class Community{
 		}else{
 			try{
 					$connect->beginTransaction();
-					$stmt = $connect->prepare("SELECT c_discussion_id,c_discussion_title, student_id, userName, c_discussion_post, post_date FROM community_discussions
+					$stmt = $connect->prepare("SELECT c_discussion_id,c_discussion_title, student_id, userName, c_discussion_post, post_date,community_discussion_photo FROM community_discussions
 												INNER JOIN college_student ON community_discussions.student_id = college_student.id 
 												INNER JOIN communities JOIN colleges ON community_discussions.community_id = communities.community_id AND communities.college_id = colleges.college_id 
 												WHERE community_discussions.community_id = ? ORDER BY post_date DESC");
@@ -204,7 +204,7 @@ class Community{
 		$connect = $this->connect;
 			try{
 					$connect->beginTransaction();
-					$stmt = $connect->prepare("SELECT event_id,community_id, student_id, event_access, event_title, event_description, event_location, event_address, event_date, event_time, event_photo, date_created FROM events
+					$stmt = $connect->prepare("SELECT event_id,community_id, student_id, event_access, event_title, event_description, event_location, event_address, event_date, event_time, event_photo, date_created,event_photo FROM events
 												INNER JOIN college_student ON events.student_id = college_student.id
 												WHERE community_id= ?");
 					$stmt->bindParam(1,$this->community['community_id'],PDO::PARAM_INT);
