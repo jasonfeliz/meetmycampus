@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 06, 2018 at 01:34 AM
+-- Generation Time: Aug 18, 2018 at 01:15 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 5.6.31
 
@@ -850,7 +850,9 @@ INSERT INTO `college_student` (`id`, `first_name`, `last_name`, `username`, `ema
 (65, 'test2', 'tester', 'arkham', 'jrf976@unc.edu', '$2y$10$Llw3J0tB/ibmrNWN7vBoaOfjmByRoR7pYDvzCnDoSSPq9Iw3zJlOu', '2018-07-23 16:35:24', 598, 'college_student', 0, 0, ''),
 (66, 'wdfs', 'sdf', 'dsfdsf', 'sfgddf@jwu.edu', '$2y$10$ZCTS3tO14SAumr2dXbIwzObVYwk4w5AD0JGB62PU8J5Xnna2aHn5.', '2018-07-23 19:09:16', 262, 'college_student', 0, 0, ''),
 (67, 'sdfsdf', 'dfsd', 'dsfsdfdsf', 'fsfsdf@jwu.edu', '$2y$10$dqP7B3TZEpaQyTtYwNheouMJ05nJJphc6zRANwXbsMKLLN3dqiIlC', '2018-07-23 19:11:17', 262, 'college_student', 0, 0, ''),
-(68, 'Jason', 'Feliz', 'jfeliz', 'jrf976@jwu.edu', '$2y$10$r7rIUU/cvM1R9DcnitzfKOhJYV23/CXsL/kufELncunXCXKRA44FK', '2018-07-27 13:40:40', 262, 'college_student', 0, 0, '');
+(68, 'Jason', 'Feliz', 'jfeliz', 'jrf976@jwu.edu', '$2y$10$r7rIUU/cvM1R9DcnitzfKOhJYV23/CXsL/kufELncunXCXKRA44FK', '2018-07-27 13:40:40', 262, 'college_student', 0, 0, ''),
+(69, 'sdaS', 'Asdad', 'asdsad', 'assdf@harvard.edu', '$2y$10$gcbEwTY4N/N0tFj5FyNQ2OORJ8nmxwUsipcaHQdBtpPTiGi.HguCO', '2018-08-12 06:24:23', 227, 'college_student', 0, 0, ''),
+(70, 'colleen', 'sanchez', 'csanchez', 'csanchez@princeton.edu', '$2y$10$LD3aKn6F8LDi8y6nTVsA/e6r1CLMhNXyc73MUqrMnDvHUl0HZG9Ri', '2018-08-12 06:28:47', 394, 'college_student', 0, 0, '');
 
 -- --------------------------------------------------------
 
@@ -1085,7 +1087,6 @@ CREATE TABLE `c_discussion_replies` (
 
 INSERT INTO `c_discussion_replies` (`c_discussion_reply_id`, `c_discussion_id`, `student_id`, `reply_post`, `post_date`) VALUES
 (1, 2, 37, 'Happens to me all the time in my doorm room. Smh', '2017-12-12 10:19:01'),
-(13, 14, 35, 'hello to you!', '2018-03-13 09:39:51'),
 (15, 2, 39, 'hello all!', '2018-04-25 11:47:19'),
 (16, 2, 35, 'hey! we&#39;re the millers', '2018-06-04 19:54:43'),
 (19, 2, 35, 'yalll', '2018-06-06 21:45:11'),
@@ -1145,7 +1146,8 @@ CREATE TABLE `discussion_post` (
 INSERT INTO `discussion_post` (`d_post_id`, `d_topic_id`, `college_id`, `student_id`, `discussion_title`, `discussion_post`, `discussion_photo`, `post_date`) VALUES
 (9, 23, 227, 35, 'What is you major and why did you pick it?', 'Hello, \r\n\r\nI&#39;m looking for some serious feedback as to what your majors are and why did you pick it? I&#39;m a freshmen at Harvard, and I&#39;m still undecided what my major is going to be. I&#39;m leaning towards the sciences but for sure I&#39;m keeping my options open. I will consider all replies. \r\n\r\nThanks!', '', '2018-06-05 19:09:48'),
 (16, 24, 227, 35, 'Admissions', 'Does anyone know when the deadline for applications are??', '', '2018-07-10 21:02:55'),
-(17, 34, 227, 35, 'aluminii', 'lausdknsdkd', '', '2018-08-05 23:20:53');
+(17, 34, 227, 35, 'aluminii', 'lausdknsdkd', '', '2018-08-05 23:20:53'),
+(18, 2, 394, 70, 'fuck trump', 'he&#39;s a red headed and red face herb', '', '2018-08-12 06:36:45');
 
 -- --------------------------------------------------------
 
@@ -1273,7 +1275,8 @@ INSERT INTO `discussion_vote` (`vote_id`, `discussion_id`, `student_id`, `vote`)
 (24, 9, 37, 1),
 (26, 16, 35, 1),
 (27, 16, 61, 1),
-(28, 9, 61, 1);
+(28, 9, 61, 1),
+(29, 18, 70, 1);
 
 -- --------------------------------------------------------
 
@@ -2886,7 +2889,8 @@ INSERT INTO `reviews` (`review_id`, `college_id`, `review_category_id`, `review_
 (1, 227, 1, 2, 35, 'I\'m so glad I chose Harvard over Yale when I was a young naive 17 year old. The overall experience fulfilled my the high standards I held Harvard to. I recommend any smart students serious about their college education to apply here. Professors here challenge your intelligence and push you beyond boundaries most young students set themselves.', '2017-12-08 15:41:57'),
 (2, 227, 1, 1, 35, 'harvard is great!', '2018-02-14 16:46:13'),
 (3, 227, 3, 2, 35, 'it was good', '2018-02-15 01:00:18'),
-(5, 227, 2, 1, 41, 'Great food on and off campus!', '2018-03-13 21:31:41');
+(5, 227, 2, 1, 41, 'Great food on and off campus!', '2018-03-13 21:31:41'),
+(6, 394, 1, 1, 70, 'this school is full of adventures', '2018-08-12 02:35:30');
 
 -- --------------------------------------------------------
 
@@ -2979,7 +2983,9 @@ INSERT INTO `school_followers` (`school_follower_id`, `user_id`, `college_id`, `
 (46, 63, 262, '2018-07-23 12:13:36'),
 (47, 64, 227, '2018-07-23 12:29:06'),
 (48, 67, 262, '2018-07-23 15:11:17'),
-(49, 68, 262, '2018-07-27 09:40:40');
+(49, 68, 262, '2018-07-27 09:40:40'),
+(50, 69, 227, '2018-08-12 02:24:23'),
+(51, 70, 394, '2018-08-12 02:28:47');
 
 -- --------------------------------------------------------
 
@@ -3024,7 +3030,9 @@ INSERT INTO `user_profile` (`profile_id`, `major_id`, `student_id`, `about`, `ge
 (20, 1101, 63, NULL, NULL, NULL, '', NULL, ''),
 (21, NULL, 64, NULL, NULL, NULL, '', NULL, ''),
 (22, NULL, 67, NULL, NULL, NULL, '', NULL, ''),
-(23, NULL, 68, NULL, NULL, NULL, '', NULL, '');
+(23, NULL, 68, NULL, NULL, NULL, '', NULL, ''),
+(24, NULL, 69, NULL, NULL, NULL, '', NULL, ''),
+(25, NULL, 70, NULL, NULL, NULL, '', NULL, '');
 
 -- --------------------------------------------------------
 
@@ -3123,7 +3131,7 @@ ALTER TABLE `community_members`
 ALTER TABLE `c_discussion_replies`
   ADD PRIMARY KEY (`c_discussion_reply_id`),
   ADD KEY `c_discussion_replies_ibfk_4` (`student_id`),
-  ADD KEY `c_discussion_id` (`c_discussion_id`);
+  ADD KEY `c_discussion_id` (`c_discussion_id`) USING BTREE;
 
 --
 -- Indexes for table `c_discussion_r_reply`
@@ -3322,7 +3330,7 @@ ALTER TABLE `colleges`
 -- AUTO_INCREMENT for table `college_student`
 --
 ALTER TABLE `college_student`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
 --
 -- AUTO_INCREMENT for table `communities`
 --
@@ -3362,7 +3370,7 @@ ALTER TABLE `c_discussion_r_reply`
 -- AUTO_INCREMENT for table `discussion_post`
 --
 ALTER TABLE `discussion_post`
-  MODIFY `d_post_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `d_post_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `discussion_replies`
 --
@@ -3382,7 +3390,7 @@ ALTER TABLE `discussion_topics`
 -- AUTO_INCREMENT for table `discussion_vote`
 --
 ALTER TABLE `discussion_vote`
-  MODIFY `vote_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `vote_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 --
 -- AUTO_INCREMENT for table `email_newsletter`
 --
@@ -3447,7 +3455,7 @@ ALTER TABLE `report_content`
 -- AUTO_INCREMENT for table `reviews`
 --
 ALTER TABLE `reviews`
-  MODIFY `review_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `review_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `reviews_categories`
 --
@@ -3462,12 +3470,12 @@ ALTER TABLE `review_ratings`
 -- AUTO_INCREMENT for table `school_followers`
 --
 ALTER TABLE `school_followers`
-  MODIFY `school_follower_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `school_follower_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 --
 -- AUTO_INCREMENT for table `user_profile`
 --
 ALTER TABLE `user_profile`
-  MODIFY `profile_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `profile_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 --
 -- Constraints for dumped tables
 --
@@ -3518,8 +3526,8 @@ ALTER TABLE `community_members`
 -- Constraints for table `c_discussion_replies`
 --
 ALTER TABLE `c_discussion_replies`
-  ADD CONSTRAINT `c_discussion_replies_ibfk_4` FOREIGN KEY (`student_id`) REFERENCES `college_student` (`id`) ON DELETE SET NULL,
-  ADD CONSTRAINT `c_discussion_replies_ibfk_6` FOREIGN KEY (`c_discussion_id`) REFERENCES `community_discussions` (`c_discussion_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `c_discussion_id` FOREIGN KEY (`c_discussion_id`) REFERENCES `community_discussions` (`c_discussion_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `c_discussion_replies_ibfk_4` FOREIGN KEY (`student_id`) REFERENCES `college_student` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
 -- Constraints for table `c_discussion_r_reply`
