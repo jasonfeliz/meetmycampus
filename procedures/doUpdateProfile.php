@@ -2,7 +2,7 @@
 require_once('../inc/bootstrap.php');
 require_once('../inc/start.php');
 $newUserName = $newMajorId = $newEmail = $newCollege = $newMajor = $oldPassword = $newPassword = $confirmPassword = $about = "";
-
+//TO-DO - UPDATE
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (isset($_POST['profile'])) {
       $about = urldecode(trim(filter_input(INPUT_POST,"ud-about",FILTER_SANITIZE_STRING))); 

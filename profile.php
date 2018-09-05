@@ -1,7 +1,7 @@
 <?php
 require_once('inc/bootstrap.php');
 require_once('inc/start.php');
-$profileInfo = get_profile_info($profileId);
+$profileInfo = $user_obj->get_profile_info();
 $profileAvatar = strtoupper(substr($profileInfo['first_name'],0,1). substr($profileInfo['last_name'], 0,1));
 if (!$profileInfo) {
 		$_SESSION['error_page_message'] = "Due to a disturbance in the force, this page couldn't be found.";
@@ -78,10 +78,9 @@ include('inc/main-header-test.php');
 									</li>
 									<li>
 										<h5>College: <span><?php echo $profileInfo['uni_name'] ?></span></h5>
-										<!-- <h5>Major: <span><?php //echo $profileInfo['major'] //?></span></h5> -->
+										<h5>Major: <span><?php echo $profileInfo['major'] ?></span></h5> 
 										<h5>Grad Year: <span><?php echo $profileInfo['grad_year'] ?></span></h5>
-										<h5>Gender: <span><?php echo $profileInfo['gender'] ?></span></h5>
-										<h5>From: <span><?php echo $profileInfo['location_city'] . ', ' . $profileInfo['location_state']?></span></h5>
+										<h5>From: <span><?php echo $profileInfo['location_state']?></span></h5>
 									</li>
 								</ul>
 							</div>	<!-- end profile-content body -->

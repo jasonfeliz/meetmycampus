@@ -46,19 +46,20 @@ if (isset($_POST['profile_interests'])) {
 	    	if ($i <=20) {
 	    		$content .= '<li class="sc_list_card" style="border-color:'.$key["community_color"].';">
 	    						<div>
-		    						<a href="" target="_blank">
+		    						<a href="javascript:void(0);" onclick="show_popup(\''.htmlspecialchars($key['community_name']).'\',\''.$key['community_color'].'\',\''.htmlspecialchars(rawurlencode($key['community_description'])). '\',\''.htmlspecialchars(rawurlencode($key['community_message'])) . '\')">
 			    						<div class="sc_card_banner list-thumbnail" style="background:'.$key["community_color"].';">
 			    							<img src="img/community5.png">
 			    						</div>
 			    					</a>
 			    				</div>
 		    					<div class="sc_card_info">
-		    							<a href="" target="_blank"><div>'.$key['community_name'].'</div></a>
+		    							<a href="javascript:void(0);" onclick="show_popup(\''.htmlspecialchars($key['community_name']).'\',\''.$key['community_color'].'\',\''.htmlspecialchars(rawurlencode($key['community_description'])). '\',\''.htmlspecialchars(rawurlencode($key['community_message'])) .'\')"><div>'.$key['community_name'].'</div></a>
 		    							<div style="font-style:italic;">'. $key['category'] .'</div>
 		    							<div>
 		    								<div>'. $members. '</div>
-		    								<div>
-		    									<input type="checkbox" value="Join">
+		    								<div class="sc_checkbox">
+		    									<input type="checkbox" id="input_checkbox_'.$key['community_id'].'" name="sc_list[]" value="'.$key['community_id'].'" data-color="'.$key['community_color'].'" data-id="'.$key['community_id'].'">
+		    									<label for="input_checkbox_'.$key['community_id'].'" >Follow</label>
 		    								</div>
 		    							</div>
 		    							
@@ -70,7 +71,25 @@ if (isset($_POST['profile_interests'])) {
 	   	}
         $content .=  '</ul>';
         echo $content;
+        exit;
     }
+}elseif(isset($_POST['profile_step'])) {
+	if ($_POST['profile_step'] == 'profile_interests') {
+		$_SESSION['profile_step'] = $_POST['profile_step'];
+		$_SESSION['bio'] = $_POST['bio'];
+		$_SESSION['major'] = $_POST['major'];
+		$_SESSION['grad_year'] = $_POST['grad_year'];
+		$_SESSION['location'] = $_POST['location'];
+	}elseif($_POST['profile_step'] == 'short_bio'){
+		$_SESSION['profile_step'] = $_POST['short_bio'];
+	}elseif($_POST['profile_step'] == 'suggested_communities'){
+		$_SESSION['profile_step'] = $_POST['profile_step'];
+	}elseif($_POST['profile_step'] == 'back_profile_interests'){
+		$_SESSION['profile_step'] = 'profile_interests';
+	}
+
+
 }
 
- ?>
+?>
+<?php require_once('../inc/universal-nav.php'); ?>

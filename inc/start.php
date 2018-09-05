@@ -11,11 +11,11 @@ if(!$loggedIn){
 }
  if ($loggedIn){
 	$userId = $_COOKIE['user_id'];
-	$userObj = new User($connect,$_COOKIE['user_id']);
-	$userDeletedStatus = $userObj->is_deleted();
-	$userFullName = $userObj->get_full_name();
-	$userAbbrev = $userObj->get_abbrevated_name();
-	$userInfo = $userObj->get_user_info();
+	$user_obj = new User($connect,$_COOKIE['user_id']);
+	$userDeletedStatus = $user_obj->is_deleted();
+	$userFullName = $user_obj->get_full_name();
+	$userAbbrev = $user_obj->get_abbrevated_name();
+	$userInfo = $user_obj->get_user_info();
 	$userName = $userInfo['username'];
 	$userEmail = $userInfo['email'];
 	$userSchool = $userInfo['uni_name'];

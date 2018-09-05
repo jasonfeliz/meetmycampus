@@ -64,7 +64,6 @@
          </div><!-- /modal end --> 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="vendor/dropzone.js"></script>
 
 
     <!-- Bootstrap Core JavaScript -->
@@ -77,19 +76,19 @@
 
     <!-- Theme JavaScript -->
     <script src="js/creative.js"></script>
-    <script type="text/javascript">
+<!--     <script type="text/javascript">
         function activatePlacesSearch(){
-            var input = document.getElementById('location_search');
-            var options = {
-                language: 'en-US',
-                types: ['(cities)'],
-                componentRestrictions: { country: "us" }
-            };
-            var autocomplete = new google.maps.places.Autocomplete(input,options);
+            // var input = document.getElementById('location_search');
+            // var options = {
+            //     language: 'en-US',
+            //     types: ['(cities)'],
+            //     componentRestrictions: { country: "us" }
+            // };
+            // var autocomplete = new google.maps.places.Autocomplete(input,options);
         }
 
     </script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoEpM9sCpbSwwzmVfbe_XMyi-NV3aFM4w&libraries=places&callback=activatePlacesSearch"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoEpM9sCpbSwwzmVfbe_XMyi-NV3aFM4w&libraries=places&callback=activatePlacesSearch"></script> -->
     <script src="js/uploadPreview.min.js"></script>
     <script src="js/ajax.js"></script>
     <script type="text/javascript">

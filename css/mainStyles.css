@@ -805,7 +805,6 @@ border-radius: 100px;
   input[type=checkbox].category-thumbnail-title + label{
     position: relative;
     color: #fff; 
-    font-size: .85em;
     display: block;
     padding: 30px;
     text-align: center;
@@ -815,14 +814,33 @@ border-radius: 100px;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+
+.sc_checkbox > input + label{
+      position: relative;
+    font-size: .8em;
+    font-color:#dadada;
+    display: block;
+    text-align: center;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+      overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: solid 1px #dadada;
+    padding: 5px 15px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
 .category-thumbnail-title:hover{
   color: #cacaca;
   cursor: pointer;
 }
-input[type=checkbox].category-thumbnail-title {
+input[type=checkbox].category-thumbnail-title,
+.sc_checkbox > input {
     display:none;
 }
-input[type=checkbox].category-thumbnail-title + label:hover{
+input[type=checkbox].category-thumbnail-title + label:hover,
+.sc_checkbox > input + label:hover{
   cursor:pointer;
 }
 
@@ -840,6 +858,11 @@ input[type=checkbox].category-thumbnail-title:checked + label {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+.sc_checkbox > input:checked + label{
+  color: red;
+}
+
 .main-thumbnail {
   position: relative;
   background: rgb(95, 96, 140);
@@ -1679,7 +1702,7 @@ label {
   width: 100%;
    margin-bottom: 5px;
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-  padding: 15px 12px;
+  padding: 10px 12px;
   background: #fbfbfb;
   border-radius: 5px;
   border: solid 1px #dadada;
@@ -1687,6 +1710,7 @@ label {
     -webkit-appearance: none;
     -moz-appearance: none;
     font-size: 16px;
+  line-height: 14px;
 }
 .signInInput:focus,
 .form_input:focus {
@@ -1805,6 +1829,107 @@ select.form_input{
 .sc_card_info > div div:first-child{
   margin-right: auto;
 }
+
+#sc_popup{
+  display: none;
+    position: fixed; /* Stay in place */
+    overflow: scroll;
+    z-index: 2000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(82, 82, 82, .75);
+}
+
+.sc_popup_container{
+  position: relative;
+    text-align: center;
+    background-color: #fff;
+    margin: 15% auto 10% auto; /* 15% from the top and centered */
+    width: 90%; /* Could be more or less, depending on screen size */
+    box-shadow: 0 1px 4px rgba(0,0,0,0.20);
+    -webkit-animation-name: animatecenter;
+    -webkit-animation-duration: .15s;
+    animation-name: animatecenter;
+    animation-duration: .15s;
+    border-radius: 7px;
+}
+
+#sc_popup_banner{
+  padding: 25px 10px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+#sc_name{
+      font-family: 'Quicksand', sans-serif;
+      color: #fff;
+      font-size: 20px
+}
+
+#sc_message{
+  font-size: .9em;
+  color: #fff;
+}
+.sc_popup_info{
+  text-align: left;
+  margin-top: 10px;
+  padding: 0 10px;
+}
+#sc_description{
+  padding: 10px;
+}
+#close_popup{
+  position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+}
+.form_error{
+  color: red;
+  margin-bottom: 10px;
+}
+
+.dialogue_btn{
+    border: solid 1px #e07266;
+    padding: 10px 20px;
+    border-radius: 4px;
+    background: #e07266;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.dialogue_btn:hover,
+.dialogue_btn:disabled{
+  border-color: #ffafa6;
+  background: #ffafa6;
+}
+.back_btn{
+float: left;
+}
+.next_btn{
+    float: right;
+
+}
+.error-page-body{
+  background: #fff;
+  padding: 10px;
+}
+.error-page-header{
+  font-size: 20px !important;
+  text-align: center;
+  color: #c74444;
+}
+.yoda{
+    display: block;
+    width: 230px;
+    height: 140px;
+    margin: 20px auto;
+  
+}
 @media (min-width: 768px){
   
   hr {
@@ -1854,6 +1979,9 @@ select.form_input{
   }
 }
 @media (min-width: 1024px){
+  .sc_popup_container{
+    max-width: 500px;
+  }
   .modal-content{
     max-width: 500px;
   }
@@ -1888,15 +2016,10 @@ select.form_input{
   
 }
 
-.error-page-header{
-  font-size: 20px !important;
-}
-.yoda{
-    width: 230px;
-    height: 140px;
-    margin: 20px 0;
-  
-}
+
+
+
+
 @media (min-width: 768px){
   .yoda {
 

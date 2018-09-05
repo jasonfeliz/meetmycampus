@@ -1,5 +1,20 @@
-$ (function() {
-   
+$(function() {
+    //get cookie 
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i <ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $(document).on('click', 'a.page-scroll', function(event) {
         var $anchor = $(this);
@@ -69,6 +84,7 @@ $ (function() {
                 delay: 200,
                 minLength: 2,
                 source: collegeList,
+                autoFocus: true,
                 select: function(event, ui) { 
                     $("#explore-colleges").val(ui.item.value);
                     $("#explore-colleges-form").submit(); }
@@ -84,6 +100,7 @@ $ (function() {
                 delay: 200,
                 minLength: 2,
                 source: collegeListSignUp,
+                autoFocus: true,
                 appendTo: $('#signUpForm'),
                 select: function(event, ui) { 
                     $("#collegeSignUp").val(ui.item.value); }
@@ -94,20 +111,25 @@ $ (function() {
     
     $("#user-major").autocomplete({
         delay: 200,
-        minLength: 4,
+        minLength: 2,
         source: 'procedures/doSearch.php',
+        autoFocus: true,
         appendTo: $('#signUpForm'),
-        select: function(event, ui) { 
-            $("#user-major").val(ui.item.value);
-        }
+        change: function (event, ui) {
+                if (ui.item == null){ 
+                 //here is null if entered value is not match in suggestion list
+                    $(this).val((ui.item ? ui.item.id : ""));
+                }
+            }
     }).autocomplete( "instance" )._renderItem = function( ul, item ) {
       return $( "<li>" ).append( "<div>" + item.value + "</div>" ).appendTo( ul );
     };
 
     $("#ud-major").autocomplete({
         delay: 200,
-        minLength: 3,
+        minLength: 2,
         source: 'procedures/doSearch.php',
+        autoFocus: true,
         appendTo: $('#ud-profile'),
         select: function(event, ui) { 
             $("#ud-major").val(ui.item.value);
@@ -538,22 +560,48 @@ $('.cancel_button').click(function(){
 
 })
 
-//back and next button to go through steps of building profile
-$('.continue_btn').click(function(){
-    var activeId = $('.active_dialogue').attr('id');
-    $('#'+activeId).removeClass('active_dialogue');
-    $('#'+activeId).next().addClass('active_dialogue');
+
+
+function show_popup(communityName,communityColor,communityDescription,communityMessage){
+    var communityDescription = decodeURIComponent(communityDescription.replace(/\+/g, '%20')).replace(/\n/g, "<br />")
+    var communityMessage = decodeURIComponent(communityMessage.replace(/\+/g, '%20')).replace(/\n/g, "<br />")
+    $('#sc_popup').fadeIn(250);
+    $('#sc_popup_banner').css('background-color',communityColor);
+    $('#sc_name').html(communityName)
+    if (communityMessage == "") {
+        $('#sc_message').html("")
+    }else{
+        $('#sc_message').html(communityMessage)
+    }
+    if (communityDescription == "") {
+         $('#sc_description').html("Oops! No Description here")
+    }else{
+        $('#sc_description').html(communityDescription)  
+    }
+    
+}
+
+$('#close_popup').click(function(){
+        $('#sc_popup').fadeOut(250);
+    $('#sc_popup_banner').css('background-color','none');
+    $('#sc_name').html('')
+     $('#sc_message').html('')
+    $('#sc_description').html('')
 })
 
-$('.back_btn').click(function(){
-    var activeId = $('.active_dialogue').attr('id');
-    $('#'+activeId).removeClass('active_dialogue');
-    $('#'+activeId).prev().addClass('active_dialogue');
+
+$('.sc_checkbox > input').change(function(){
+    if (this.checked) {
+        var _color = $(this).data('color');
+        var _id = $(this).data('id')
+        $('label[for="input_checkbox_'+ _id +'"]').css({'border-color':_color, 'color':_color})
+         $('label[for="input_checkbox_'+ _id +'"]').text('unfollow')
+    }else{
+        var _id = $(this).data('id')
+        $('label[for="input_checkbox_'+ _id +'"]').text('follow')
+        $('label[for="input_checkbox_'+ _id +'"]').css({'border-color':'#dadada', 'color':'#dadada'})
+    }
 })
-
-
-
-
 
 
 

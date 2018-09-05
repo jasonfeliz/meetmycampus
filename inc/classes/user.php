@@ -9,7 +9,7 @@ class User {
 		global $connect;
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT id,first_name, last_name, username, email, token, uni_name,user_type,deleted
+				$stmt = $connect->prepare("SELECT id,first_name, last_name, username, email, token, uni_name,user_type,college_student.college_id,deleted
 														  FROM college_student INNER JOIN colleges ON college_student.college_id = colleges.college_id WHERE id=?");
 				$stmt->bindParam(1,$userId,PDO::PARAM_INT);
 				$stmt->execute();
@@ -40,6 +40,9 @@ class User {
 	public function get_user_school(){
 		return $this->user['uni_name'];
 	}
+	public function get_user_school_id(){
+		return $this->user['college_id'];
+	}
 	public function get_user_email(){
 		return $this->user['email'];
 	}
@@ -69,7 +72,7 @@ class User {
 		if (is_null($all)) {
 			try{
 					$connect->beginTransaction();
-					$stmt = $connect->prepare("SELECT uni_name,community_members.community_id, community_name, category_id,community_category,community_color  FROM community_members
+					$stmt = $connect->prepare("SELECT uni_name,community_members.community_id, community_name, category_id,community_category,community_color,community_photo  FROM community_members
 												INNER JOIN communities JOIN colleges ON community_members.community_id = communities.community_id AND communities.college_id = colleges.college_id
 												WHERE student_id = ? AND status = 1");
 					$stmt->bindParam(1,$this->user['id'],PDO::PARAM_INT);
@@ -83,7 +86,7 @@ class User {
 		}else{
 			try{
 					$connect->beginTransaction();
-					$stmt = $connect->prepare("SELECT uni_name,community_members.community_id, community_name, category_id,community_category,community_color  FROM community_members
+					$stmt = $connect->prepare("SELECT uni_name,community_members.community_id, community_name, category_id,community_category,community_color,community_photo  FROM community_members
 												INNER JOIN communities JOIN colleges ON community_members.community_id = communities.community_id AND communities.college_id = colleges.college_id
 												WHERE student_id = ?");
 					$stmt->bindParam(1,$this->user['id'],PDO::PARAM_INT);
@@ -145,7 +148,7 @@ class User {
 		$connect = $this->connect;
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT id, colleges.college_id, uni_name,first_name,last_name,userName, email,about,gender,location_city,location_state,grad_year,major_id,major  FROM user_profile 
+				$stmt = $connect->prepare("SELECT id, colleges.college_id, uni_name,first_name,last_name,userName, email,about,gender,location_state,grad_year,major_id,major,user_photo,profile_build  FROM user_profile 
 											INNER JOIN college_student JOIN colleges ON user_profile.student_id = college_student.id AND college_student.college_id = colleges.college_id
 											INNER JOIN majors_list ON user_profile.major_id = majors_list.major_list_id
 											WHERE user_profile.student_id = ?");

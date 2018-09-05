@@ -1,16 +1,12 @@
 <?php
 require_once('connection.php');
 //creates users
-function create_user($university,$firstName,$lastName,$userName,$collegeEmail,$token,$userType){
+function create_user($collegeId,$firstName,$lastName,$userName,$collegeEmail,$token,$userType){
 
 	global $connect;
 
 		try{
 			$connect->beginTransaction();
-			$stmt = $connect->prepare("SELECT college_id FROM colleges WHERE uni_name = ?");
-			$stmt->bindParam(1,$university,PDO::PARAM_STR);
-			$stmt->execute();
-			$collegeId = $stmt->fetch(PDO::FETCH_ASSOC)['college_id'];
 
 			$stmt = $connect->prepare("INSERT INTO college_student(`first_name`,`last_name`,`userName`,`email`, `token`, `college_id`,`user_type`,`deleted`,`verified`)  VALUES(?,?,?,?,?,?,?,0,0)");
 			$stmt->bindParam(1,$firstName,PDO::PARAM_STR);
@@ -21,22 +17,33 @@ function create_user($university,$firstName,$lastName,$userName,$collegeEmail,$t
 			$stmt->bindParam(6,$collegeId,PDO::PARAM_INT);
 			$stmt->bindParam(7,$userType,PDO::PARAM_STR);
 			$stmt->execute();
+
+			$userId = intval($connect->lastInsertId());
+
+			$stmt = $connect->prepare("INSERT INTO user_profile(`student_id`,`major_id`)  VALUES(?,1222)");
+			$stmt->bindParam(1,$userId,PDO::PARAM_INT);
+			$stmt->execute();
 			$connect->commit();
-			return findUserByEmail($collegeEmail);
+
+			return $userId;
 		}catch(Exception $e){
 			throw $e;
 		}
 
 }
-function create_profile($userId,$majorId=NULL){
+function create_profile($userId, $majorId, $user_bio = "", $user_grad_year = "", $user_location = "", $user_photo = ""){
 
 	global $connect;
 
 		try{
 			$connect->beginTransaction();
-			$stmt = $connect->prepare("INSERT INTO user_profile(`student_id`,`major_id`)  VALUES(?,?)");
-			$stmt->bindParam(1,$userId,PDO::PARAM_INT);
-			$stmt->bindParam(2,$majorId,PDO::PARAM_INT);
+			$connect->prepare("UPDATE user_profile SET major_id = ?, about = ?, grad_year = ?, location_state = ?, user_photo = ?, profile_build = 1  WHERE student_id = ?");			
+			$stmt->bindParam(1,$majorId,PDO::PARAM_INT);
+			$stmt->bindParam(2,$user_bio,PDO::PARAM_STR);
+			$stmt->bindParam(3,$user_grad_year,PDO::PARAM_STR);
+			$stmt->bindParam(4,$user_location,PDO::PARAM_STR);
+			$stmt->bindParam(5,$user_photo,PDO::PARAM_STR);
+			$stmt->bindParam(6,$userId,PDO::PARAM_INT);
 			$stmt->execute();
 			$connect->commit();
 			return true;;
@@ -69,13 +76,14 @@ function create_community($collegeId,$categoryId,$userId,$communityName,$communi
 			$stmt->bindParam(9,$communityColor,PDO::PARAM_STR);
 			$stmt->bindParam(10,$communityPhoto,PDO::PARAM_STR);
 			$stmt->execute();
-			$connect->commit();
 
-			$connect->beginTransaction();
-			$stmt = $connect->prepare("SELECT community_id,community_category,creator_id,community_photo FROM communities WHERE `creator_id` = ? order by date_created desc limit 1");
-			$stmt->bindParam(1,$userId,PDO::PARAM_INT);
+			$community_id = intval($connect->lastInsertId());
+
+			$stmt = $connect->prepare("SELECT * FROM communities WHERE community_id = ?");
+			$stmt->bindParam(1,$community_id,PDO::PARAM_INT);
 			$stmt->execute();
-			$connect->commit();			
+			$connect->commit();	
+					
 			$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 			if ($userId != 38) {
@@ -2085,8 +2093,9 @@ function get_profile_info($studentId){
 	global $connect;
 	try{
 			$connect->beginTransaction();
-			$stmt = $connect->prepare("SELECT id, colleges.college_id, uni_name,first_name,last_name,userName, email,about,gender,location_city,location_state,grad_year,major_id,user_photo  FROM user_profile 
+			$stmt = $connect->prepare("SELECT id, colleges.college_id, uni_name,first_name,last_name,userName, email,about,gender,location_state,grad_year,major_id,user_photo,major,profile_build  FROM user_profile 
 										INNER JOIN college_student JOIN colleges ON user_profile.student_id = college_student.id AND college_student.college_id = colleges.college_id
+										INNER JOIN majors_list ON user_profile.major_id = majors_list.major_list_id
 										WHERE user_profile.student_id = ?");
 			$stmt->bindParam(1,$studentId,PDO::PARAM_INT);
 			$stmt->execute();
