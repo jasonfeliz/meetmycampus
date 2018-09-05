@@ -2,8 +2,9 @@
 require_once('../inc/bootstrap.php');
 
 $collegeEmail = $university = $password = $firstName = $lastName = $hashed = $userName = $userMajor = $majorId = $createMajor = "";
-$user_bio = $user_major = $user_major_id = $user_grad_year = $user_location = $user_interests = $user_communities = $createUser = $collegeId = "";
+$user_bio = $user_major = $user_major_id = $user_grad_year = $user_location = $user_interests = $user_communities = $createUser = $collegeId = $userId = "";
 
+$userId = $_COOKIE['user_id'];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (isset($_POST['setup_account'])) {
@@ -35,7 +36,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->execute();
             // if major is not at the user's school, add it to majors table
             if ($stmt->fetchColumn() == "") {
-              $createdMajorId = create_major($collegeId,$user_major_id,$user_major);          
+              $createdMajorId = create_major($collegeId,$user_major_id,$user_major); 
+              join_community($createdMajorId,$userId,$status)         
             }else{
               
             }
