@@ -6,6 +6,10 @@ $user_bio = $user_major = $user_major_id = $user_grad_year = $user_location = $u
 
 $userId = $_COOKIE['user_id'];
 
+if (isset($_COOKIE['college_id'])) { //check if cookie with user's college id is set
+  $collegeId = intval($_COOKIE['college_id']);
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (isset($_POST['setup_account'])) {
       $user_bio = trim(filter_input(INPUT_POST,"profile_bio",FILTER_SANITIZE_STRING));
@@ -27,34 +31,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
       //if major is in majors lists, then check if major is at user's school
       if ($user_major_id != "") {
-        if (isset($_COOKIE['college_id'])) {
-          $collegeId = intval($_COOKIE['college_id']);
-          try {
-            $stmt = $connect->prepare("SELECT major_id FROM majors_list WHERE major_id = ? and college_id = ?");
-            $stmt->bindParam(1,$user_major_id,PDO::PARAM_INT);
-            $stmt->bindParam(2,$collegeId,PDO::PARAM_INT);
-            $stmt->execute();
-            // if major is not at the user's school, add it to majors table
-            if ($stmt->fetchColumn() == "") {
-              $createdMajorId = create_major($collegeId,$user_major_id,$user_major); 
-              join_community($createdMajorId,$userId,$status)         
-            }else{
+
+          // try {
+          //   $stmt = $connect->prepare("SELECT major_id FROM majors_list WHERE major_id = ? and college_id = ?");
+          //   $stmt->bindParam(1,$user_major_id,PDO::PARAM_INT);
+          //   $stmt->bindParam(2,$collegeId,PDO::PARAM_INT);
+          //   $stmt->execute();
+          //   // if major is not at the user's school, add it to majors table
+          //   //add user to respective major community
+          //   if ($stmt->fetchColumn() == "") {
+          //     $createdMajorId = create_major($collegeId,$user_major_id,$user_major); 
+          //     join_community($createdMajorId,$userId,1);    
+          //   }else{
               
-            }
+          //   }
+          // } catch (Exception $e) {
+          //   throw $e;
+          // }
+
+      }else{              //if the the major is not in the majors list, then add it to list
+
+          try {
+            $stmt = $connect->prepare("INSERT INTO majors_list(`major`) VALUES(?)");
+            $stmt->bindParam(1,$user_major,PDO::PARAM_STR);
+            $stmt->execute();
+
+            $user_major_id = intval($connect->lastInsertId());
+            // $createdMajorId = create_major($collegeId,$user_major_id,$user_major); 
+            // join_community($createdMajorId,$userId,1);    
+
           } catch (Exception $e) {
             throw $e;
           }
-        }else{
-
-        }
-        
-      }else{
 
       }
-      //add user to respective major community
+      
 
       //insert basic profile info(bio,major id, grad year, location) into user_profile table, using create_profile function
-      
+      // create_profile($userId, $user_major_id, $user_bio, $user_grad_year, $user_location, $user_photo);
 
       //loop through interests array, add each category id to interests table with corresponding student id
 
@@ -69,14 +83,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
       // $createProfile = create_profile($_COOKIE['user_id'],NULL);
-      // echo "<pre>";
-      //   echo $user_bio."<br>";
-      //   echo $user_major."<br>";
-      //   echo $user_grad_year."<br>";
-      //   echo $user_location."<br>";
-      //   var_dump($user_interests)."<br>";
-      //   var_dump($user_communities)."<br>";
-      // echo "</pre>";
+      echo "<pre>";
+        echo $user_bio."<br>";
+        echo $user_major."<br>";
+        echo $user_grad_year."<br>";
+        echo $user_location."<br>";
+        echo 'major id = ' . $user_major_id."<br>";
+        print_r($user_interests)."<br>";
+        print_r($user_communities)."<br>";
+      echo "</pre>";
 
   }else{
     $firstName = trim(filter_input(INPUT_POST,"firstName",FILTER_SANITIZE_STRING));
