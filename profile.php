@@ -1,7 +1,9 @@
 <?php
 require_once('inc/bootstrap.php');
 require_once('inc/start.php');
-$profileInfo = $user_obj->get_profile_info();
+
+$profile_user_obj = new User($connect,$profileId);
+$profileInfo = $profile_user_obj->get_profile_info();
 $profileAvatar = strtoupper(substr($profileInfo['first_name'],0,1). substr($profileInfo['last_name'], 0,1));
 if (!$profileInfo) {
 		$_SESSION['error_page_message'] = "Due to a disturbance in the force, this page couldn't be found.";

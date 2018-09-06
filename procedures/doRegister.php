@@ -2,7 +2,8 @@
 require_once('../inc/bootstrap.php');
 
 $collegeEmail = $university = $password = $firstName = $lastName = $hashed = $userName = $userMajor = $majorId = $createMajor = "";
-$user_bio = $user_major = $user_major_id = $user_grad_year = $user_location = $user_interests = $user_communities = $createUser = $collegeId = $userId = "";
+$user_bio = $user_major = $user_major_id = $user_grad_year = $user_location = $user_interests = $user_communities = $createUser = $collegeId = $userId = 
+$user_photo = $result= "";
 
 $userId = $_COOKIE['user_id'];
 
@@ -32,22 +33,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       //if major is in majors lists, then check if major is at user's school
       if ($user_major_id != "") {
 
-          // try {
-          //   $stmt = $connect->prepare("SELECT major_id FROM majors_list WHERE major_id = ? and college_id = ?");
-          //   $stmt->bindParam(1,$user_major_id,PDO::PARAM_INT);
-          //   $stmt->bindParam(2,$collegeId,PDO::PARAM_INT);
-          //   $stmt->execute();
-          //   // if major is not at the user's school, add it to majors table
-          //   //add user to respective major community
-          //   if ($stmt->fetchColumn() == "") {
-          //     $createdMajorId = create_major($collegeId,$user_major_id,$user_major); 
-          //     join_community($createdMajorId,$userId,1);    
-          //   }else{
+          try {
+            $stmt = $connect->prepare("SELECT major_id FROM majors WHERE major_id = ? and college_id = ?");
+            $stmt->bindParam(1,$user_major_id,PDO::PARAM_INT);
+            $stmt->bindParam(2,$collegeId,PDO::PARAM_INT);
+            $stmt->execute();
+            $result = $stmt->fetchColumn();
+            // if major is not at the user's school, add it to majors table
+            //add user to respective major community
+            //TO-DO - DEBUG 
+            if ($result == "") {
+              $createdMajorId = create_major($collegeId,$user_major_id,$user_major); 
+              join_community($createdMajorId,$userId,1);    
+            }else{
               
-          //   }
-          // } catch (Exception $e) {
-          //   throw $e;
-          // }
+            }
+          } catch (Exception $e) {
+            throw $e;
+          }
 
       }else{              //if the the major is not in the majors list, then add it to list
 
@@ -57,8 +60,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->execute();
 
             $user_major_id = intval($connect->lastInsertId());
-            // $createdMajorId = create_major($collegeId,$user_major_id,$user_major); 
-            // join_community($createdMajorId,$userId,1);    
+            $createdMajorId = create_major($collegeId,$user_major_id,$user_major); 
+            join_community($createdMajorId,$userId,1);    
 
           } catch (Exception $e) {
             throw $e;
@@ -68,30 +71,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       
 
       //insert basic profile info(bio,major id, grad year, location) into user_profile table, using create_profile function
-      // create_profile($userId, $user_major_id, $user_bio, $user_grad_year, $user_location, $user_photo);
+      create_profile($userId, $user_major_id, $user_bio, $user_grad_year, $user_location, $user_photo);
 
       //loop through interests array, add each category id to interests table with corresponding student id
+      foreach ($user_interests as $key) {
+        follow_interest(intval($key),$userId);
+      }
 
       //check if user checked off any communities. 
       //if yes, loop through array, add user to each community in array, if no, move on
-
+      if ($user_communities != "") {
+        foreach ($user_communities as $key) {
+          $communityType = get_community(intval($key),$collegeId)['community_type'];
+          if ($communityType = "public") {
+            join_community(intval($key),$userId,1);
+          }elseif($communityType = "private"){
+            join_community(intval($key),$userId,2);
+          }
+        }
+      }
       //set profile_build field name in users_profile table to 1, which means complete
+      $stmt = $connect->prepare("UPDATE user_profile SET profile_build = 1 WHERE student_id = ?");
+      $stmt->bindParam(1,$userId,PDO::PARAM_STR);
+      $stmt->execute();
 
       //kill sessions related to profile builder and kill data array cookie
-
+      setcookie('data_array', '', time()-(365*24*60*60),'/','localhost');
+      session_unset();
+      session_unset();
       //redirect user to home.php 
-
-
-      // $createProfile = create_profile($_COOKIE['user_id'],NULL);
-      echo "<pre>";
-        echo $user_bio."<br>";
-        echo $user_major."<br>";
-        echo $user_grad_year."<br>";
-        echo $user_location."<br>";
-        echo 'major id = ' . $user_major_id."<br>";
-        print_r($user_interests)."<br>";
-        print_r($user_communities)."<br>";
-      echo "</pre>";
+      redirect('../home.php');
 
   }else{
     $firstName = trim(filter_input(INPUT_POST,"firstName",FILTER_SANITIZE_STRING));

@@ -37,7 +37,7 @@ function create_profile($userId, $majorId, $user_bio = "", $user_grad_year = "",
 
 		try{
 			$connect->beginTransaction();
-			$connect->prepare("UPDATE user_profile SET major_id = ?, about = ?, grad_year = ?, location_state = ?, user_photo = ?, profile_build = 1  WHERE student_id = ?");			
+			$stmt = $connect->prepare("UPDATE user_profile SET major_id = ?, about = ?, grad_year = ?, location_state = ?, user_photo = ?, profile_build = 1  WHERE student_id = ?");			
 			$stmt->bindParam(1,$majorId,PDO::PARAM_INT);
 			$stmt->bindParam(2,$user_bio,PDO::PARAM_STR);
 			$stmt->bindParam(3,$user_grad_year,PDO::PARAM_STR);
@@ -121,7 +121,7 @@ function update_community($communityId,$categoryId,$communityName,$communityMess
 }
 function create_major($collegeId,$majorId,$majorName){
 	global $connect;
-		$createCom = create_community($collegeId,23,38,$majorName,NULL,NULL,'public','#5a626f');
+		$createCom = create_community($collegeId,23,38,$majorName,NULL,NULL,'public','#5a626f',"");
 
 		try{
 			$connect->beginTransaction();

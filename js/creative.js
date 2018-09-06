@@ -113,12 +113,12 @@ $(function() {
         delay: 200,
         minLength: 2,
         source: 'procedures/doSearch.php',
-        autoFocus: true,
         appendTo: $('#signUpForm'),
         change: function (event, ui) {
                 if (ui.item == null){ 
                  //here is null if entered value is not match in suggestion list
                     $(this).val((ui.item ? ui.item.id : ""));
+                    $(this).css('border-color','red');
                 }
             }
     }).autocomplete( "instance" )._renderItem = function( ul, item ) {
