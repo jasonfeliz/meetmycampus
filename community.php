@@ -64,7 +64,7 @@ require_once('inc/main-header-test.php');
 				$_SESSION['cid-'.$communityId] = 1;
 			}
 
-			$newRequests = intval($community_obj->get_community_request('new'));
+			$newRequests = intval($community_obj->get_community_requests('new'));
 				if ($_SESSION['cid-'.$communityId] == 1 || $newRequests > 0) {
 					echo '<div id="c-requests-message" class="message-bar"><h4 class="message-header" id=request-id-'.$communityId.' onclick="openCommunityRequest('.$communityId.')">'.$newRequests . ' New Join Requests'.'</h4><span id="removeX">x</span></div>';
 				}

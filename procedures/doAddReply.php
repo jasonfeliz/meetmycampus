@@ -29,6 +29,14 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 		$addReply = add_reply($communityId, $discussionId, $userId, $replyPost);
 
 		if($addReply){
+			$type = "discussion_reply";
+			$user_to_id = intval(get_community_discussion($communityId,$discussionId)['student_id']);
+
+          	$notification_obj = new Notification($connect,$user_to_id);
+          	$notification_obj->setNotification($type, $userId, $communityId, $discussionId, NULL,NULL, NULL);
+
+
+
 			$content = '<li class="forum-item">';
 			$content .= '<div class="discussion-third-section">';
 			$content .= '<div><a href="profile.php?profile_id=' . $userId . '">' .'@'. $userName . '</a><span> - Just now</span></div>';

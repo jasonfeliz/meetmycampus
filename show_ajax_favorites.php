@@ -24,7 +24,7 @@ if (isset($_POST['fav_type'])) {
 		$liked_communities = get_user_communities($userId,true);
 		if(!empty($liked_communities)){
 				foreach ($liked_communities as $key){
-					$content.=	'<li><a href="community.php?school_name='. urlencode($key['uni_name']) . '&category_id=' . $key['category_id'] . '&community_id=' . $key['community_id']. '&community_cat=' . $key['community_category'] .'" class="list-thumbnail" style="background-color:' . $key['community_color'] . ';">';
+					$content.=	'<li><a href="community.php?school_name='. urlencode($key['uni_name']) .  '&community_id=' . $key['community_id']. '&community_cat=' . $key['community_category'] .'" class="list-thumbnail" style="background-color:' . $key['community_color'] . ';">';
 					$content.= '<img src="img/community5.png">';
 					$content.= '<h5>'.$key['community_name']. '</h5></a></li>';
 				}										

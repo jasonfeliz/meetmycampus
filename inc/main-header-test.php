@@ -83,11 +83,25 @@
             </li>
             <li>
             <?php if($loggedIn):?>
+                <?php
+                    //Unread notifications 
+                    $notifications_obj = new Notification($connect, $_COOKIE['user_id']);
+                    $num_notifications = $notifications_obj->getUnreadNumber();
+
+                ?>
                 <ul class="header-icons-list">
                     <li><a href="home.php" class="home-button">Home</a></li>
                     <li><a href="favorites.php"><i class="fa fa-heart fa-lg favorite-btn" aria-hidden="true"></i></a></li>
 <!--                     <li><a href="messages.php"><i class="fa fa-envelope-o fa-lg nav-secondary-btn" aria-hidden="true"></i></a></li> -->
-                    <li><a href="notifications.php"><i class="fa fa-bell-o fa-lg nav-secondary-btn" aria-hidden="true"></i></a></li>
+                    <li>
+                        <a href="notifications.php">
+                            <i class="fa fa-bell-o fa-lg nav-secondary-btn" aria-hidden="true"></i>
+                            <?php
+                            if($num_notifications > 0)
+                             echo '<span class="notification_badge" id="unread_message">' . $num_notifications . '</span>';
+                            ?>
+                        </a>
+                    </li>
                     <li style="border-left: solid 1px #c5c5c53d;"><a href="profile.php?profile_id=<?php echo $userId;  ?>"><h5 class="profile-abbrev"><?php echo $userAbbrev ?></h5></a></li>
                     <li><a href="logout.php">logout</a></li>
                 </ul>

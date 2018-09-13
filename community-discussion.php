@@ -139,7 +139,7 @@ require_once('inc/main-header-test.php');
 															</ul>
 														</div>
 													</div>
-													<button <?php echo $onClick; ?> class="reply-button" id="discussion-reply"><i class="fa fa-reply" aria-hidden="true"></i>Reply</button>	
+													<button <?php echo $onClick; ?> class="reply-button" id="discussion-reply">Reply</button>	
 												</div>
 																						
 											</div>										

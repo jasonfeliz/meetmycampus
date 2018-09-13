@@ -6,7 +6,7 @@ if (!empty($_GET['community_id']) && !empty($_GET['event_id'])) {
 	$communityId = intval(trim(filter_input(INPUT_GET, 'community_id' ,FILTER_SANITIZE_STRING)));
 	$eventId = intval(trim(filter_input(INPUT_GET, 'event_id' ,FILTER_SANITIZE_STRING)));
 	$community = get_community($communityId,$collegeId);
-	$event = get_event($collegeId,$communityId,$eventId);
+	$event = get_event(NULL,$communityId,$eventId);
 	if (!$community) {
 		$_SESSION['error_page_message'] = "Due to a disturbance in the force, this page couldn't be found.";
    		$_SESSION['system_error_message'] = "could not retrieve community";
@@ -171,7 +171,7 @@ require_once('inc/main-header-test.php');
 						<?php 
 						$eventInfo = '';
 						if (!is_null($community)) {
-							$eventInfo .= '<li><h5>Hosted by:</h5><a href="community.php?school_name=' . $urlCollegeName  .'&community_id=' . $event['community_id'] .'&category_id='.$event['category_id'].'&community_cat='.$event['community_category'].'">#' . preg_replace('/\s+/', '', $event['community_name']) . '</a></li>';
+							$eventInfo .= '<li><h5>Hosted by:</h5><a href="community.php?school_name=' . $urlCollegeName  .'&community_id=' . $event['community_id'] .'&community_cat='.$event['community_category'].'">#' . preg_replace('/\s+/', '', $event['community_name']) . '</a></li>';
 							$eventInfo .= '<li><h5>Created by:</h5><a href="profile.php?profile_id=' . $event['id'] .'">@'. $event['userName'] . '</a></li>';
 							echo $eventInfo;
 						}else{

@@ -13,6 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 	if ($check) {
 		$unfollow = unfollow_member($userId,$friendId);
 		if ($unfollow) {
+			$stmt = $connect->query("DELETE FROM notifications WHERE user_to = '$friendId' AND user_from = '$userId' AND type = 'user_followed'  ");
 			echo 'unfollow';
 			exit();
 		}else{
@@ -22,6 +23,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 	}else{
 		$follow = follow_member($userId,$friendId);
 		if ($follow) {
+			$type = "user_followed";
+			$user_to_id = intval($friendId);
+
+        	$notification_obj = new Notification($connect,$user_to_id);
+        	$notification_obj->setNotification($type, $userId, NULL, NULL, NULL,NULL, NULL);
 			echo 'follow';
 			exit();
 		}else{

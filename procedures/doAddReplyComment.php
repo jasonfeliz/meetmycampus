@@ -32,10 +32,25 @@ if (isset($_POST['r-reply-post'])) {
 	$studentId = trim(filter_input(INPUT_POST,"student-id",FILTER_SANITIZE_NUMBER_INT));
 	$username = trim(filter_input(INPUT_POST,"username",FILTER_SANITIZE_STRING));
 		
-	$addReplyComment = add_c_reply_comments($dReplyId, $studentId, $rReplyPost);
+	$addReplyCommentId = intval(add_c_reply_comments($dReplyId, $studentId, $rReplyPost));
 	
 
-	if($addReplyComment){
+	if($addReplyCommentId != ""){
+		$type = "reply_comment";
+		$stmt = $connect->prepare("SELECT c_discussion_replies.student_id,community_discussions.community_id,c_discussion_replies.c_discussion_id FROM c_discussion_r_reply 
+											INNER JOIN c_discussion_replies JOIN community_discussions JOIN communities ON c_discussion_r_reply.c_discussion_reply_id = c_discussion_replies.c_discussion_reply_id AND c_discussion_replies.c_discussion_id = community_discussions.c_discussion_id AND community_discussions.community_id = communities.community_id
+											WHERE r_reply_id = ?");
+		$stmt->bindParam(1,$addReplyCommentId,PDO::PARAM_INT);
+		$stmt->execute();
+		$info = $stmt->fetch(PDO::FETCH_ASSOC);
+
+		$user_to_id = intval($info['student_id']);
+		$community_id = intval($info['community_id']);
+		$discussion_id = intval($info['c_discussion_id']);
+
+        $notification_obj = new Notification($connect,$user_to_id);
+        $notification_obj->setNotification($type, $studentId, $community_id, $discussion_id,$addReplyCommentId,NULL, NULL);
+
 		$comments = '<li class="discussion-reply-list-item">';
 		$comments .= '<a href="profile.php?profile_id='. $studentId . '" class="reply-link">' . '@' . $username . '</a><span> - Just now</span>';
 		$comments .= '<p>'. $rReplyPost . '</p></li>';

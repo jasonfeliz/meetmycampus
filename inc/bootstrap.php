@@ -5,4 +5,5 @@ require_once  'functions.php';
 require_once  'classes/user.php';
 require_once  'classes/college.php';
 require_once  'classes/community_class.php';
+require_once  'classes/notification_class.php';
 ?>
