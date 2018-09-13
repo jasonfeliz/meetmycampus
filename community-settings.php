@@ -43,7 +43,7 @@ include('inc/main-header-test.php');
 
 	<div class="community-settings-body">
               <div style="margin: 10px 0">
-                <a style="color: #ea7363;font-weight: 600;font-size: 1.15em;" href="community.php?school_name=<?php echo $collegeUrl . '&category_id='.$community['category_id']. '&community_id='.$communityId . '&community_cat=group'?>"><i class="fa fa-angle-left fa-lg" aria-hidden="true" style="font-size: 1.75em;margin-right: 5px;"></i>Community Home</a>
+                <a style="color: #ea7363;font-weight: 600;font-size: 1.15em;" href="community.php?school_name=<?php echo $collegeUrl . '&community_id='.$communityId . '&community_cat=group'?>"><i class="fa fa-angle-left fa-lg" aria-hidden="true" style="font-size: 1.75em;margin-right: 5px;"></i>Community Home</a>
               </div>
 							 <?php 
 							 if (isset($_SESSION['settings_error'])) {

@@ -12,9 +12,10 @@ class Community{
 		global $connect;
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT communities.community_id, communities.category_id, categories.category,college_student.userName,community_name,community_message,community_category,community_description,community_type,community_color,date_created  FROM communities 
+				$stmt = $connect->prepare("SELECT communities.community_id, communities.category_id, categories.category,college_student.userName,community_name,community_message,community_category,community_description,community_type,community_color,date_created,uni_name,uni_abrev  FROM communities 
 											INNER JOIN college_student ON communities.creator_id = college_student.id
 		                                    INNER JOIN categories ON communities.category_id =  categories.category_id
+		                                    INNER JOIN colleges ON communities.college_id =  colleges.college_id
 											WHERE community_id = ?");
 				$stmt->bindParam(1,$communityId,PDO::PARAM_INT);
 				$stmt->execute();

@@ -2,8 +2,9 @@
 require_once('inc/bootstrap.php');
 require_once('inc/start.php');
 
-$profileInfo = get_profile_info($_COOKIE['user_id']);
-$profileAvatar = strtoupper(substr($userFirstName,0,1). substr($userLastName, 0,1));
+$profile_user_obj = new User($connect,$_COOKIE['user_id']);
+$profileInfo = $profile_user_obj->get_profile_info();
+$profileAvatar = strtoupper(substr($profileInfo['first_name'],0,1). substr($profileInfo['last_name'], 0,1));
 $pageTitle = "Settings";
 include('inc/main-header-test.php');
 
@@ -57,7 +58,7 @@ include('inc/main-header-test.php');
 						</div>
 						<div>
 							<label>Name</label>
-							<input type="text" name="" value="<?php echo $userFirstName .' '. $userLastName; ?>" disabled>
+							<input type="text" name="" value="<?php echo $userFullName; ?>" disabled>
 						</div>
 						<div>
 							<label>Username</label>

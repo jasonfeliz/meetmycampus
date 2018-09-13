@@ -664,3 +664,37 @@ $('#continue_btn_enable').click(function(){
 })
 
 
+$('.notification_link').click(function(){
+	$id = $(this).data('n-id');
+	$.ajax({
+		type: "POST",
+		url: "notifications.php",
+		data: {'notification_id':$id}
+	})
+})
+
+
+$('.remove_x').click(function(){
+	var id = $(this).siblings("a").data('n-id');
+	var element = $(this).parents('li');
+	$.ajax({
+		type: "POST",
+		url: "notifications.php",
+		data: {'notification_id':id,'remove':'true'},
+		success: function(result){
+			element.fadeOut(1000);
+		}
+	})
+})
+$('#clear_notifications').click(function(){
+	var id = $(this).siblings("a").data('n-id');
+	var element = $(this);
+	$.ajax({
+		type: "POST",
+		url: "notifications.php",
+		data: {'notification_id':'true','clear_all':'true'},
+		success: function(result){
+			$('.notifications_list_item').fadeOut(500);
+		}
+	})
+})

@@ -173,14 +173,11 @@ function create_community_discussion($communityId,$userId,$discussionTitle,$disc
 			$stmt->bindParam(4,$discussionPost,PDO::PARAM_STR);
 			$stmt->bindParam(5,$communityDiscussionPhoto,PDO::PARAM_STR);
 			$stmt->execute();
+			$id = intval($connect->lastInsertId());
 			$connect->commit();
 
-			$connect->beginTransaction();
-			$stmt = $connect->prepare("SELECT c_discussion_id FROM community_discussions WHERE `student_id` = ? order by post_date desc limit 1;");
-			$stmt->bindParam(1,$userId,PDO::PARAM_INT);
-			$stmt->execute();
-			$connect->commit();			
-			return $stmt->fetch(PDO::FETCH_ASSOC);
+					
+			return $id;
 		}catch(Exception $e){
 			throw $e;
 		}
@@ -309,13 +306,13 @@ function create_event($eventTypeId,$collegeId,$userId,$communityId,$eventTypeB,$
 			$stmt->bindParam(8,$eventLocation,PDO::PARAM_STR);
 			$stmt->bindParam(9,$eventDate,PDO::PARAM_STR);
 			$stmt->bindParam(10,$eventTime,PDO::PARAM_STR);
-			$stmt->bindParma(11,$eventPhoto,PDO::PARAM_STR);
+			$stmt->bindParam(11,$eventPhoto,PDO::PARAM_STR);
 			$stmt->execute();
-			$connect->commit();
 
-			$connect->beginTransaction();
-			$stmt = $connect->prepare("SELECT event_id,community_id FROM events WHERE `student_id` = ? order by date_created desc limit 1;");
-			$stmt->bindParam(1,$userId,PDO::PARAM_INT);
+			$id = intval($connect->lastInsertId());
+
+			$stmt = $connect->prepare("SELECT event_id,community_id FROM events WHERE event_id = ?");
+			$stmt->bindParam(1,$id,PDO::PARAM_INT);
 			$stmt->execute();
 			$connect->commit();			
 			return $stmt->fetch(PDO::FETCH_ASSOC);
@@ -996,8 +993,9 @@ function add_c_reply_comments($dReplyId,$studentId, $rReplyPost){
 			$stmt->bindParam(2,$studentId,PDO::PARAM_INT);
 			$stmt->bindParam(3,$rReplyPost,PDO::PARAM_STR);
 			$stmt->execute();
+			$id = intval($connect->lastInsertId());
 			$connect->commit();
-			return true;
+			return $id;;
 		}catch(Exception $e){
 			throw $e;
 		}
@@ -1866,19 +1864,19 @@ function get_all_events($collegeId,$eType = NULL,$communityId = NULL){
 	}
 
 }
-function get_event($collegeId,$communityId = NULL,$eventId){
+function get_event($collegeId=NULL,$communityId = NULL,$eventId){
 	global $connect;
 	if (!is_null($communityId)) {
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT event_id,event_type.event_type,communities.community_id, communities.community_name,communities.category_id,communities.community_category, userName,community_photo, college_student.id, event_access, event_title, event_description, event_location, event_address, event_date, event_time, event_photo, events.date_created FROM events 
+				$stmt = $connect->prepare("SELECT uni_name,events.college_id,event_id,event_type.event_type,communities.community_id, communities.community_name,communities.category_id,communities.community_category, userName,community_photo, college_student.id, event_access, event_title, event_description, event_location, event_address, event_date, event_time, event_photo, events.date_created FROM events 
 											INNER JOIN college_student ON events.student_id = college_student.id
 		                                    INNER JOIN communities ON events.community_id =  communities.community_id
 		                                    INNER JOIN event_type ON events.event_type_id =  event_type.event_type_id
-											WHERE events.college_id=? AND events.community_id = ?  AND event_id = ?");
-				$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
-				$stmt->bindParam(2,$communityId,PDO::PARAM_INT);
-				$stmt->bindParam(3,$eventId,PDO::PARAM_INT);
+		                                    INNER JOIN colleges ON events.college_id =  colleges.college_id
+											WHERE  events.community_id = ?  AND event_id = ?");
+				$stmt->bindParam(1,$communityId,PDO::PARAM_INT);
+				$stmt->bindParam(2,$eventId,PDO::PARAM_INT);
 				$stmt->execute();
 				$connect->commit();
 				return $stmt->fetch(PDO::FETCH_ASSOC);
@@ -2044,9 +2042,10 @@ function get_community_discussion($communityId,$c_discussion_id){
 	global $connect;
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT college_student.userName,c_discussion_title, student_id, c_discussion_post, post_date,community_discussion_photo  FROM community_discussions
-											INNER JOIN college_student ON community_discussions.student_id = college_student.id
-											WHERE community_id = ? AND c_discussion_id=?");
+				$stmt = $connect->prepare("SELECT c_discussion_id, college_student.userName,c_discussion_title, student_id, c_discussion_post, post_date,community_discussion_photo,community_discussions.community_id,community_name,uni_name  FROM community_discussions
+											INNER JOIN college_student JOIN colleges ON community_discussions.student_id = college_student.id AND college_student.college_id = colleges.college_id
+											INNER JOIN communities ON community_discussions.community_id = communities.community_id
+											WHERE community_discussions.community_id = ? AND c_discussion_id=?");
 				$stmt->bindParam(1,$communityId,PDO::PARAM_INT);
 				$stmt->bindParam(2,$c_discussion_id,PDO::PARAM_INT);
 				$stmt->execute();
@@ -2213,32 +2212,71 @@ function get_user_count($collegeId = NULL, $communityId = NULL, $eventId = NULL)
 
 }
 //post time - displays time when a post or event was created
-function post_time($date1){
-    $date2 = time();
-    $diff = abs($date2 - strtotime($date1));
+function post_time($datetime){
+			$date_time_now = date("Y-m-d H:i:s");
+			$start_date = new DateTime($datetime); //Time of post
+			$end_date = new DateTime($date_time_now); //Current time
+			$interval = $start_date->diff($end_date); //Difference between dates 
+			if($interval->y >= 1) {
+				if($interval == 1)
+					$time_message = $interval->y . " year ago"; //1 year ago
+				else 
+					$time_message = $interval->y . " years ago"; //1+ year ago
+			}
+			else if ($interval->m >= 1) {
+				if($interval->d == 0) {
+					$days = " ago";
+				}
+				else if($interval->d == 1) {
+					$days = $interval->d . " day ago";
+				}
+				else {
+					$days = $interval->d . " days ago";
+				}
 
-    $years = floor($diff / (365*60*60*24));
-    $months = floor(($diff - $years * 365*60*60*24) / (30*60*60*24));
-    $weeks = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24)/ (7*60*60*24));
-    $days = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24 - $weeks*7*60*60*24)/ (60*60*24));
-    $hours = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24 - $days*60*60*24)/ (60*60));
-    $minutes = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24 - $days*60*60*24 - $hours*60*60)/ (60));
 
-    if ($years > 0) {
-        return "Over " . $years . " yrs";
-    }elseif($months > 0){
-        return date("M d\, Y \@h:i A",strtotime($date1));
-    }elseif($weeks > 0){
-        return date("M d\, Y \@h:i A",strtotime($date1));
-    }elseif($days > 0){
-        return date("D M d \@h:i A",strtotime($date1));
-    }elseif($hours > 0){
-        return $hours . " hrs ago";
-    }elseif($minutes > 0){
-        return $minutes . "m ago";
-    }else{
-    	return "Just now";
-    }
+				if($interval->m == 1) {
+					$time_message = $interval->m . " month ago";
+				}
+				else {
+					$time_message = $interval->m . " months ago";
+				}
+
+			}
+			else if($interval->d >= 1) {
+				if($interval->d == 1) {
+					$time_message = "Yesterday";
+				}
+				else {
+					$time_message = $interval->d . " days ago";
+				}
+			}
+			else if($interval->h >= 1) {
+				if($interval->h == 1) {
+					$time_message = $interval->h . " hour ago";
+				}
+				else {
+					$time_message = $interval->h . " hours ago";
+				}
+			}
+			else if($interval->i >= 1) {
+				if($interval->i == 1) {
+					$time_message = $interval->i . " minute ago";
+				}
+				else {
+					$time_message = $interval->i . " minutes ago";
+				}
+			}
+			else {
+				if($interval->s < 30) {
+					$time_message = "Just now";
+				}
+				else {
+					$time_message = $interval->s . " seconds ago";
+				}
+			}
+
+			return $time_message;
 }
 //remove functions
 function remove_item($type,$userId,$id){

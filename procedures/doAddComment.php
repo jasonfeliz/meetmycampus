@@ -18,6 +18,7 @@ if (isset($_POST['add-event-comment'])) {
 	}
 
 	if($addEvent){
+
 		$comments = '<li class="comment-list-item">';
 		$comments .= '<a href="profile.php?profile_id=' . $studentId . '" class="reply-link">'. '@'. $username . '</a><span> - Just now</span>';
 		$comments .= '<p>'. $eventComment .'</p>';
