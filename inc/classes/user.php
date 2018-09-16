@@ -148,7 +148,7 @@ class User {
 		$connect = $this->connect;
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT id, colleges.college_id, uni_name,first_name,last_name,userName, email,about,gender,location_state,grad_year,major_id,major,profile_build  FROM user_profile 
+				$stmt = $connect->prepare("SELECT id, colleges.college_id, uni_name,first_name,last_name,userName, email,about,gender,location_state,grad_year,major_id,major,profile_build,profile_id  FROM user_profile 
 											INNER JOIN college_student JOIN colleges ON user_profile.student_id = college_student.id AND college_student.college_id = colleges.college_id
 											INNER JOIN majors_list ON user_profile.major_id = majors_list.major_list_id
 											WHERE user_profile.student_id = ?");

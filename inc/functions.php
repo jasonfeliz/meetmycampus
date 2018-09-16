@@ -1851,7 +1851,7 @@ function get_all_events($collegeId,$eType = NULL,$communityId = NULL){
 		try{
 				$connect->beginTransaction();
 				$stmt = $connect->prepare("SELECT event_id,community_id, student_id, event_access, event_title, event_description, event_location, event_address, event_date, event_time, event_photo, date_created FROM events
-											INNER JOIN college_student ON events.student_id = college_student.id
+										INNER JOIN college_student ON events.student_id = college_student.id
 											WHERE events.college_id = ? AND community_id= ?");
 				$stmt->bindParam(1,$collegeId,PDO::PARAM_INT);
 				$stmt->bindParam(2,$communityId,PDO::PARAM_INT);
