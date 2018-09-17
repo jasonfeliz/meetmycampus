@@ -48,7 +48,12 @@
 
 </head>
 <body id="page-top">
+                <?php
+                    //Unread notifications 
+                    $notifications_obj = new Notification($connect, $_COOKIE['user_id']);
+                    $num_notifications = $notifications_obj->getUnreadNumber();
 
+                ?>
 <header class="bg-primary">
     <nav id="" class="main-nav-header main-container">
         <ul class="nav-list">
@@ -67,6 +72,10 @@
             <?php if($loggedIn):?>
             <li class="main-menu-button">
                 <i id="menu-button" class="fa fa-bars fa-2x" aria-hidden="true"></i>
+                <?php
+                    if($num_notifications > 0)
+                        echo '<span></span>';
+                ?>
             </li>
             <?php endif; ?>
             <li class="lg-screen-search">
@@ -83,12 +92,7 @@
             </li>
             <li>
             <?php if($loggedIn):?>
-                <?php
-                    //Unread notifications 
-                    $notifications_obj = new Notification($connect, $_COOKIE['user_id']);
-                    $num_notifications = $notifications_obj->getUnreadNumber();
 
-                ?>
                 <ul class="header-icons-list">
                     <li><a href="home.php" class="home-button">Home</a></li>
                     <li><a href="favorites.php"><i class="fa fa-heart fa-lg favorite-btn" aria-hidden="true"></i></a></li>
@@ -239,6 +243,7 @@
 </header>
 <div id="mobile-menu">
     <div>
+
         <ul class="mobile-menu-primary">
             <li>
                 <div>
@@ -258,8 +263,12 @@
                 </div>
             </li>
             <li>
-                <div>
+                <div style="position: relative;">
                     <a href="notifications.php">My Notifications</a>
+                    <?php
+                        if($num_notifications > 0)
+                             echo '<span class="notification_badge mobile_badge" id="unread_message">' . $num_notifications . '</span>';
+                        ?>
                 </div>
                 
             </li>

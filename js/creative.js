@@ -418,6 +418,7 @@ $('#search-button').click(function(){
 });
 $('#menu-button').click(function(){
     input = $('#mobile-menu');
+        $(this).next().hide();
         if (input.css('display') == 'none') {
             $(this).removeClass('fa-bars');
             $(this).addClass('fa-times');
