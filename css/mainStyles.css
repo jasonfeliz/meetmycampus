@@ -6,6 +6,7 @@ line-height : 1.1 !important ;
 display : flex;
 flex-direction : column;
 font-family : 'Open sans', 'Helvetica Neue', Arial, sans-serif;
+box-sizing: border-box;
 }
 .nav-list > li > input[type="text"]::-webkit-input-placeholder, .nav-list > li > input[type="text"]:-moz-placeholder, .nav-list > li > input[type="text"]::-moz-placeholder, .nav-list > li > input[type="text"]:-ms-input-placeholder {
 color : #5a626f;

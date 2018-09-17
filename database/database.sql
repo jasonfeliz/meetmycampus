@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 18, 2018 at 01:15 AM
+-- Generation Time: Sep 17, 2018 at 08:52 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 5.6.31
 
@@ -797,6 +797,24 @@ INSERT INTO `colleges` (`college_id`, `uni_name`, `city`, `state`, `email_url`, 
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `collegeStudent`
+--
+
+CREATE TABLE `collegeStudent` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `firstName` varchar(100) DEFAULT NULL,
+  `lastName` varchar(100) DEFAULT NULL,
+  `userName` varchar(30) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `token` varchar(100) DEFAULT NULL,
+  `verified` varchar(255) DEFAULT 'no',
+  `dateSignedUp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `universityID` int(10) UNSIGNED DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `college_student`
 --
 
@@ -844,7 +862,7 @@ INSERT INTO `college_student` (`id`, `first_name`, `last_name`, `username`, `ema
 (59, 'Carlos', 'Martinez', 'carlos', 'carlos@harvard.edu', '$2y$10$V.aVHQfsQyDSqVSlEbfr0ea131XoxLN4xBXYNDeKe1UfPMRlAaHke', '2018-07-11 18:52:58', 227, 'college_student', 0, 1, ''),
 (60, 'Luis', 'Miguel', 'luismiguel', 'luismiguel@harvard.edu', '$2y$10$/F1qJhyzSMgsZI3eDcrr7OzUklgvvkAgKJ.Aw/hRvUXUNoZewHrR2', '2018-07-11 18:54:40', 227, 'college_student', 0, 1, ''),
 (61, 'Miguel', 'Cairo', 'miguelcario', 'miguelc@harvard.edu', '$2y$10$aeO7IH.48RGicBSklt7SaeDGLf0WsFWZf8JyFeZL/WjDZzA1ASE2.', '2018-07-11 19:09:06', 227, 'college_student', 0, 1, ''),
-(62, 'Kelly', 'Maine', 'kellymaine', 'kelly@harvard.edu', '$2y$10$yyPtnzJ1jdsMdDCKlW2BM.SrVnmmKc/Tv8eM7V0Wj.iKCNuH/6GT.', '2018-07-19 03:54:07', 227, 'college_student', 0, 1, ''),
+(62, 'Kelly', 'Maine', 'kellymainee', 'kelly@harvard.edu', '$2y$10$yyPtnzJ1jdsMdDCKlW2BM.SrVnmmKc/Tv8eM7V0Wj.iKCNuH/6GT.', '2018-07-19 03:54:07', 227, 'college_student', 0, 1, ''),
 (63, 'test', 'tester', 'tester', 'test@jwu.edu', '$2y$10$vews/EJwZWZOd8O1x2kIyOB5RitRsx2cNBsP2Eb2Bv88rlboJW06C', '2018-07-23 16:13:36', 262, 'college_student', 0, 0, ''),
 (64, 'test', 'test', 'arkham', 'tes@harvard.edu', '$2y$10$UBF5yBTu9DIFZzHLKCddHuXCnGzac2GERf9xguWSIPv5A294h0Wsu', '2018-07-23 16:29:06', 227, 'college_student', 0, 0, ''),
 (65, 'test2', 'tester', 'arkham', 'jrf976@unc.edu', '$2y$10$Llw3J0tB/ibmrNWN7vBoaOfjmByRoR7pYDvzCnDoSSPq9Iw3zJlOu', '2018-07-23 16:35:24', 598, 'college_student', 0, 0, ''),
@@ -852,7 +870,11 @@ INSERT INTO `college_student` (`id`, `first_name`, `last_name`, `username`, `ema
 (67, 'sdfsdf', 'dfsd', 'dsfsdfdsf', 'fsfsdf@jwu.edu', '$2y$10$dqP7B3TZEpaQyTtYwNheouMJ05nJJphc6zRANwXbsMKLLN3dqiIlC', '2018-07-23 19:11:17', 262, 'college_student', 0, 0, ''),
 (68, 'Jason', 'Feliz', 'jfeliz', 'jrf976@jwu.edu', '$2y$10$r7rIUU/cvM1R9DcnitzfKOhJYV23/CXsL/kufELncunXCXKRA44FK', '2018-07-27 13:40:40', 262, 'college_student', 0, 0, ''),
 (69, 'sdaS', 'Asdad', 'asdsad', 'assdf@harvard.edu', '$2y$10$gcbEwTY4N/N0tFj5FyNQ2OORJ8nmxwUsipcaHQdBtpPTiGi.HguCO', '2018-08-12 06:24:23', 227, 'college_student', 0, 0, ''),
-(70, 'colleen', 'sanchez', 'csanchez', 'csanchez@princeton.edu', '$2y$10$LD3aKn6F8LDi8y6nTVsA/e6r1CLMhNXyc73MUqrMnDvHUl0HZG9Ri', '2018-08-12 06:28:47', 394, 'college_student', 0, 0, '');
+(70, 'colleen', 'sanchez', 'csanchez', 'csanchez@princeton.edu', '$2y$10$LD3aKn6F8LDi8y6nTVsA/e6r1CLMhNXyc73MUqrMnDvHUl0HZG9Ri', '2018-08-12 06:28:47', 394, 'college_student', 0, 0, ''),
+(71, 'Mike', 'Michael', 'michael', 'michael@harvard.edu', '$2y$10$5snNrNPe7VpnPRbd2VFlJuTsn7odMkCMP2BVqywukooqnrEfxuoNq', '2018-08-29 16:44:52', 227, 'college_student', 0, 0, ''),
+(72, 'Mike', 'Michael', 'mikeeee', 'mikee@jwu.edu', '$2y$10$EENE8hTcW582OjDsTxbSHe6rGLi1MQF.XisL1.TZrK9NdaU82Jwu6', '2018-08-29 16:59:37', 262, 'college_student', 0, 0, ''),
+(77, 'ABC', 'DEF', 'abcdef', 'abc@harvard.edu', '$2y$10$8WAK06kg/RhO.hAPoxMch.5crFq8znh2OWaGIbI795t7oRGUL6Gqa', '2018-09-05 13:35:01', 227, 'college_student', 0, 0, ''),
+(78, 'Jim', 'jones', 'jimjones', 'jimjone@harvard.edu', '$2y$10$Kd/5.BvZSumufLR9b9jT.eW0iqgID4bnIYB5TRQbryOnlHc3krm0S', '2018-09-05 13:41:44', 227, 'college_student', 0, 0, '');
 
 -- --------------------------------------------------------
 
@@ -888,7 +910,7 @@ INSERT INTO `communities` (`community_id`, `college_id`, `category_id`, `creator
 (10, 394, 10, 35, 'art fans @princeton', NULL, 'we love art', 'group', 'public', '#ffcc2c', '', NULL, '2018-02-16 19:10:36'),
 (20, 262, 9, 35, 'Wildcat Venture Club', NULL, 'Learn venture capitalist techniques', 'group', 'private', '#a1a9c1', '', '2018-05-08 11:53:25', '2018-03-26 19:47:35'),
 (22, 227, 6, 35, 'Vegan Athletes @Harvard', NULL, 'Join our community if you would like to connect with vegan athletes on campus.', 'group', 'public', '#7baf86', '', NULL, '2018-04-04 19:10:00'),
-(23, 227, 12, 35, 'LGBTQ @Harvard', 'Harvard&#39;s home for Lesbian, Gay, Bisexual, Transgender, Queer Community! Join the movement!!!!!', 'Meet and Discuss with LGBTQ advocates @Harvard!', 'group', 'public', '#ffbdbd', '', '2018-05-19 06:32:21', '2018-04-13 14:51:46'),
+(23, 227, 12, 35, 'LGBTQ @Harvard', 'Harvard&#39;s home for Lesbian, Gay, Bisexual, Transgender, Queer Community!\r\n\r\nJoin the movement!!!!!', 'Meet and Discuss with LGBTQ advocates @Harvard!', 'group', 'public', '#ffbdbd', '', '2018-05-19 06:32:21', '2018-04-13 14:51:46'),
 (24, 227, 1, 39, 'miller test', NULL, 'miller test', 'group', 'private', '#DF7367', '', '2018-05-08 08:20:33', '2018-04-25 15:45:59'),
 (25, 227, 2, 39, 'miller test 2', 'join millers test', 'miller test 2', 'group', 'private', '#5a626f', '', '2018-05-16 13:32:08', '2018-04-25 19:38:14'),
 (27, 227, 23, 38, 'Finance', NULL, NULL, 'majors', 'public', '#5a626f', '', NULL, '2018-06-14 14:21:31'),
@@ -899,7 +921,37 @@ INSERT INTO `communities` (`community_id`, `college_id`, `category_id`, `creator
 (42, 227, 23, 38, 'Computer Science', NULL, NULL, 'majors', 'public', '#5a626f', '', NULL, '2018-07-11 18:54:40'),
 (43, 227, 23, 38, 'Electrical Engineering', NULL, NULL, 'majors', 'public', '#5a626f', '', NULL, '2018-07-11 19:09:06'),
 (44, 227, 2, 61, 'Students against Trump', 'klndsnkadasdn', 'asdfklnfdlnf', 'group', 'public', '#477bd2', '', '2018-07-12 05:22:57', '2018-07-11 23:21:47'),
-(45, 262, 23, 38, 'Finance', NULL, NULL, 'majors', 'public', '#5a626f', '', NULL, '2018-07-14 00:43:26');
+(45, 262, 23, 38, 'Finance', NULL, NULL, 'majors', 'public', '#5a626f', '', NULL, '2018-07-14 00:43:26'),
+(46, 227, 23, 38, 'Financial Planning and Services', NULL, NULL, 'majors', 'public', '#5a626f', '', NULL, '2018-09-05 13:24:00'),
+(47, 227, 23, 38, 'Financial Planning and Services', NULL, NULL, 'majors', 'public', '#5a626f', '', NULL, '2018-09-05 13:25:30'),
+(48, 227, 23, 38, 'Finance', NULL, NULL, 'majors', 'public', '#5a626f', '', NULL, '2018-09-05 13:37:34'),
+(49, 227, 23, 38, 'Finance', NULL, NULL, 'majors', 'public', '#5a626f', '', NULL, '2018-09-05 13:42:06'),
+(50, 227, 23, 38, 'Computer Science', NULL, NULL, 'majors', 'public', '#5a626f', '', NULL, '2018-09-10 04:24:30'),
+(51, 227, 6, 62, 'health', 'join us if you&#39;d want to be healthy', 'welcome to health group', 'group', 'public', '#ad91c5', '', NULL, '2018-09-10 05:39:39'),
+(52, 227, 6, 62, 'sample', 'sample', 'sample', 'group', 'public', '#DF7367', '', NULL, '2018-09-10 13:12:12'),
+(53, 227, 6, 62, 'sample2', 'sample2', 'sample2', 'group', 'public', '#DF7367', '', NULL, '2018-09-10 16:27:11'),
+(54, 227, 6, 62, 'sample3', 'sample', 'sample', 'group', 'public', '#DF7367', '', NULL, '2018-09-10 16:32:44'),
+(55, 227, 6, 62, 'sample5', 'sample', 'sample', 'group', 'public', '#DF7367', '', NULL, '2018-09-10 16:36:06'),
+(56, 227, 6, 62, 'sampleee', 'sample', 'sample', 'group', 'public', '#DF7367', '', NULL, '2018-09-10 20:18:02'),
+(57, 704, 6, 35, 'sampppp', 'sampppp', 'samppp', 'group', 'public', '#DF7367', '', NULL, '2018-09-11 01:14:55'),
+(58, 402, 1, 35, 'test1', 'test', 'test', 'group', 'public', '#DF7367', '', NULL, '2018-09-11 17:41:01'),
+(59, 402, 2, 35, 'test2', 'test', 'test', 'group', 'public', '#DF7367', '', NULL, '2018-09-11 17:41:36'),
+(60, 402, 20, 35, 'test3', 'test', 'test', 'group', 'public', '#DF7367', '', NULL, '2018-09-11 17:42:03'),
+(61, 704, 1, 35, 'test5', 'test', 'test', 'group', 'public', '#DF7367', '', NULL, '2018-09-11 17:42:29'),
+(62, 704, 2, 35, 'test6', 'test', 'test', 'group', 'public', '#DF7367', '', NULL, '2018-09-11 17:42:46'),
+(63, 704, 20, 35, 'test7', 'test', 'test', 'group', 'public', '#DF7367', '', NULL, '2018-09-11 17:42:59'),
+(64, 262, 1, 35, 'test9', 'test', 'test', 'group', 'public', '#DF7367', '', NULL, '2018-09-11 17:43:20'),
+(65, 262, 2, 35, 'test10', 'test', 'test', 'group', 'public', '#DF7367', '', NULL, '2018-09-11 17:43:32'),
+(66, 262, 20, 35, 'test11', 'test', 'test', 'group', 'public', '#DF7367', '', NULL, '2018-09-11 17:43:53'),
+(67, 394, 1, 35, 'test12', 'test', 'test', 'group', 'public', '#DF7367', '', NULL, '2018-09-11 17:44:27'),
+(68, 394, 20, 35, 'test13', 'test', 'test', 'group', 'public', '#DF7367', '', NULL, '2018-09-11 17:44:38'),
+(69, 520, 1, 35, 'last test', 'test', 'test', 'group', 'public', '#DF7367', '', NULL, '2018-09-11 17:45:04'),
+(70, 227, 1, 78, 'yes', 'yes', 'yes', 'group', 'public', '#DF7367', '', NULL, '2018-09-11 17:46:53'),
+(71, 394, 6, 37, 'health geeks', 'healthhh', 'we love health', 'group', 'public', '#DF7367', '', NULL, '2018-09-11 21:28:06'),
+(72, 618, 26, 35, 'paerty', 'party', 'party', 'group', 'public', '#DF7367', '', NULL, '2018-09-11 21:34:06'),
+(73, 227, 1, 35, 'games', 'games', 'games', 'group', 'public', '#DF7367', '', NULL, '2018-09-17 06:39:03'),
+(74, 394, 1, 62, 'gameing', 'gaming', 'gaming', 'group', 'public', '#DF7367', '', NULL, '2018-09-17 06:42:22'),
+(75, 402, 1, 62, 'gamers', 'fdsd,nbfk', 'sdasd', 'group', 'public', '#DF7367', '', NULL, '2018-09-17 06:43:01');
 
 -- --------------------------------------------------------
 
@@ -931,7 +983,32 @@ INSERT INTO `community_admins` (`admin_id`, `community_id`, `student_id`, `admin
 (17, 31, 38, 2, '2018-06-14 17:00:19'),
 (19, 36, 38, 2, '2018-07-11 17:38:44'),
 (20, 42, 38, 2, '2018-07-11 18:54:40'),
-(21, 44, 61, 2, '2018-07-11 23:21:47');
+(21, 44, 61, 2, '2018-07-11 23:21:47'),
+(22, 51, 62, 2, '2018-09-10 05:39:39'),
+(23, 52, 62, 2, '2018-09-10 13:12:12'),
+(24, 53, 62, 2, '2018-09-10 16:27:11'),
+(25, 54, 62, 2, '2018-09-10 16:32:44'),
+(26, 55, 62, 2, '2018-09-10 16:36:06'),
+(27, 56, 62, 2, '2018-09-10 20:18:02'),
+(28, 57, 35, 2, '2018-09-11 01:14:55'),
+(29, 58, 35, 2, '2018-09-11 17:41:01'),
+(30, 59, 35, 2, '2018-09-11 17:41:36'),
+(31, 60, 35, 2, '2018-09-11 17:42:03'),
+(32, 61, 35, 2, '2018-09-11 17:42:29'),
+(33, 62, 35, 2, '2018-09-11 17:42:46'),
+(34, 63, 35, 2, '2018-09-11 17:42:59'),
+(35, 64, 35, 2, '2018-09-11 17:43:20'),
+(36, 65, 35, 2, '2018-09-11 17:43:32'),
+(37, 66, 35, 2, '2018-09-11 17:43:53'),
+(38, 67, 35, 2, '2018-09-11 17:44:27'),
+(39, 68, 35, 2, '2018-09-11 17:44:38'),
+(40, 69, 35, 2, '2018-09-11 17:45:04'),
+(41, 70, 78, 2, '2018-09-11 17:46:53'),
+(42, 71, 37, 2, '2018-09-11 21:28:06'),
+(43, 72, 35, 2, '2018-09-11 21:34:06'),
+(44, 73, 35, 2, '2018-09-17 06:39:03'),
+(45, 74, 62, 2, '2018-09-17 06:42:22'),
+(46, 75, 62, 2, '2018-09-17 06:43:01');
 
 -- --------------------------------------------------------
 
@@ -964,7 +1041,12 @@ INSERT INTO `community_discussions` (`c_discussion_id`, `community_id`, `student
 (27, 27, 35, 'first finance post', 'this is my first finance post!', NULL, '2018-06-16 12:22:13'),
 (28, 23, 35, 'test', 'This is just a test. \r\n\r\nDon&#39;t panick. We are not here to hurt you. We&#39;re here to take over your life....', NULL, '2018-06-22 01:18:35'),
 (29, 25, 39, 'test', 'hello,\r\n\r\nthis is a test\r\n\r\nThank you,\r\nTester', NULL, '2018-06-28 11:40:33'),
-(30, 1, 35, 'escape output', 'i am awesome', NULL, '2018-07-19 12:32:06');
+(30, 1, 35, 'escape output', 'i am awesome', NULL, '2018-07-19 12:32:06'),
+(31, 1, 62, 'whats on my mind?', 'Nature', '', '2018-09-11 14:15:40'),
+(32, 1, 62, 'test2', 'test2', '', '2018-09-11 14:16:21'),
+(33, 1, 62, 'test2', 'test2', '', '2018-09-11 14:17:02'),
+(34, 72, 35, 'yeaa', 'yea', '', '2018-09-11 17:35:16'),
+(35, 1, 62, 'test 19', 'ASCASD', '', '2018-09-12 19:20:57');
 
 -- --------------------------------------------------------
 
@@ -1001,7 +1083,8 @@ INSERT INTO `community_discussion_vote` (`c_vote_id`, `c_discussion_id`, `studen
 (29, 19, 39, 1),
 (30, 1, 39, 1),
 (31, 19, 61, 1),
-(32, 2, 61, 1);
+(32, 2, 61, 1),
+(33, 27, 35, 1);
 
 -- --------------------------------------------------------
 
@@ -1050,7 +1133,7 @@ INSERT INTO `community_members` (`community_member_id`, `community_id`, `student
 (114, 2, 35, 1, 0, '2018-06-20 16:29:30'),
 (116, 25, 35, 1, 0, '2018-06-21 02:32:34'),
 (118, 24, 35, 1, 1, '2018-06-27 19:13:53'),
-(119, 20, 39, 2, 0, '2018-06-29 01:22:46'),
+(119, 20, 39, 1, 0, '2018-06-29 01:22:46'),
 (121, 36, 38, 1, 1, '2018-07-11 17:38:44'),
 (122, 36, 54, 1, 1, '2018-07-11 17:38:44'),
 (123, 42, 38, 1, 1, '2018-07-11 18:54:40'),
@@ -1064,8 +1147,47 @@ INSERT INTO `community_members` (`community_member_id`, `community_id`, `student
 (131, 1, 62, 1, 1, '2018-07-19 03:54:18'),
 (132, 23, 62, 1, 1, '2018-07-19 03:54:31'),
 (133, 44, 62, 1, 1, '2018-07-19 03:55:02'),
-(134, 20, 68, 2, 0, '2018-07-27 13:41:35'),
-(135, 32, 68, 1, 1, '2018-07-27 13:41:49');
+(134, 20, 68, 1, 0, '2018-07-27 13:41:35'),
+(135, 32, 68, 1, 1, '2018-07-27 13:41:49'),
+(142, 48, 77, 1, 1, '2018-09-05 13:37:34'),
+(143, 9, 77, 1, 1, '2018-09-05 13:37:34'),
+(144, 2, 77, 1, 1, '2018-09-05 13:37:34'),
+(145, 1, 77, 1, 1, '2018-09-05 13:37:34'),
+(146, 49, 78, 1, 1, '2018-09-05 13:42:06'),
+(147, 1, 78, 1, 1, '2018-09-05 13:42:06'),
+(148, 4, 78, 1, 1, '2018-09-05 13:42:06'),
+(149, 2, 78, 1, 1, '2018-09-05 13:42:06'),
+(150, 50, 62, 1, 1, '2018-09-10 04:24:30'),
+(151, 25, 62, 1, 1, '2018-09-10 04:24:30'),
+(152, 22, 62, 1, 1, '2018-09-10 04:24:30'),
+(153, 2, 62, 1, 1, '2018-09-10 04:24:30'),
+(154, 9, 62, 1, 1, '2018-09-10 04:25:35'),
+(155, 51, 62, 1, 1, '2018-09-10 05:39:39'),
+(156, 52, 62, 1, 1, '2018-09-10 13:12:12'),
+(157, 53, 62, 1, 1, '2018-09-10 16:27:11'),
+(158, 54, 62, 1, 1, '2018-09-10 16:32:44'),
+(159, 55, 62, 1, 1, '2018-09-10 16:36:06'),
+(160, 56, 62, 1, 1, '2018-09-10 20:18:02'),
+(161, 57, 35, 1, 1, '2018-09-11 01:14:55'),
+(162, 58, 35, 1, 1, '2018-09-11 17:41:01'),
+(163, 59, 35, 1, 1, '2018-09-11 17:41:36'),
+(164, 60, 35, 1, 1, '2018-09-11 17:42:03'),
+(165, 61, 35, 1, 1, '2018-09-11 17:42:29'),
+(166, 62, 35, 1, 1, '2018-09-11 17:42:46'),
+(167, 63, 35, 1, 1, '2018-09-11 17:42:59'),
+(168, 64, 35, 1, 1, '2018-09-11 17:43:20'),
+(169, 65, 35, 1, 1, '2018-09-11 17:43:32'),
+(170, 66, 35, 1, 1, '2018-09-11 17:43:53'),
+(171, 67, 35, 1, 1, '2018-09-11 17:44:27'),
+(172, 68, 35, 1, 1, '2018-09-11 17:44:38'),
+(173, 69, 35, 1, 1, '2018-09-11 17:45:04'),
+(174, 70, 78, 1, 1, '2018-09-11 17:46:53'),
+(175, 71, 37, 1, 1, '2018-09-11 21:28:06'),
+(176, 72, 35, 1, 1, '2018-09-11 21:34:06'),
+(177, 51, 35, 1, 1, '2018-09-16 16:16:56'),
+(178, 73, 35, 1, 1, '2018-09-17 06:39:03'),
+(179, 74, 62, 1, 1, '2018-09-17 06:42:22'),
+(180, 75, 62, 1, 1, '2018-09-17 06:43:01');
 
 -- --------------------------------------------------------
 
@@ -1091,7 +1213,8 @@ INSERT INTO `c_discussion_replies` (`c_discussion_reply_id`, `c_discussion_id`, 
 (16, 2, 35, 'hey! we&#39;re the millers', '2018-06-04 19:54:43'),
 (19, 2, 35, 'yalll', '2018-06-06 21:45:11'),
 (20, 19, 35, 'do we rule?!!?', '2018-06-07 11:32:53'),
-(22, 21, 35, 'yesss', '2018-06-07 12:57:52');
+(22, 21, 35, 'yesss', '2018-06-07 12:57:52'),
+(23, 2, 62, 'I love sandwiches', '2018-09-11 14:35:19');
 
 -- --------------------------------------------------------
 
@@ -1120,7 +1243,45 @@ INSERT INTO `c_discussion_r_reply` (`r_reply_id`, `c_discussion_reply_id`, `stud
 (14, 15, 35, 'hey man!', '2018-06-07 08:35:23'),
 (15, 20, 35, 'of course!!!!', '2018-06-07 11:33:12'),
 (16, 19, 35, 'hey!!!!!!!!', '2018-06-07 11:40:01'),
-(18, 22, 35, 'nooooo', '2018-06-07 12:57:58');
+(18, 22, 35, 'nooooo', '2018-06-07 12:57:58'),
+(19, 23, 35, 'Is that right?', '2018-09-11 14:59:34'),
+(20, 23, 35, 'is that right?', '2018-09-11 15:00:06'),
+(21, 23, 35, 'is that right?', '2018-09-11 15:03:49'),
+(22, 23, 35, 'is thatright?', '2018-09-11 15:04:09'),
+(23, 19, 62, 'hola', '2018-09-12 17:21:43'),
+(24, 19, 62, 'hiii', '2018-09-12 18:21:54'),
+(25, 19, 62, 'yeaa', '2018-09-12 18:23:22'),
+(26, 19, 62, 'helllo', '2018-09-12 18:24:45'),
+(27, 19, 62, 'hi again', '2018-09-12 18:26:41'),
+(28, 19, 62, 'hi otra cez', '2018-09-12 18:35:08'),
+(29, 19, 62, 'jbkjb', '2018-09-12 18:38:04'),
+(30, 19, 62, 'hiiiii', '2018-09-12 18:40:17'),
+(31, 19, 62, 'hi', '2018-09-12 19:14:19'),
+(32, 15, 62, 'yoo', '2018-09-12 19:15:57'),
+(33, 15, 62, 'hello', '2018-09-12 19:16:36'),
+(34, 16, 62, 'ehyy', '2018-09-12 19:16:50'),
+(35, 16, 62, 'supp', '2018-09-12 19:18:14'),
+(36, 16, 62, 'supp', '2018-09-12 19:19:30'),
+(37, 16, 62, 'sup again', '2018-09-12 19:20:09'),
+(38, 19, 62, 'yaaa', '2018-09-12 21:12:46'),
+(39, 19, 62, 'ya', '2018-09-12 21:12:58'),
+(40, 19, 62, 'yaaaa', '2018-09-12 21:13:34'),
+(41, 19, 62, 'jkdskajnsd', '2018-09-12 21:14:00'),
+(42, 19, 62, 'asdas', '2018-09-12 21:14:10'),
+(43, 19, 62, 'this time?', '2018-09-12 22:59:24'),
+(44, 19, 62, 'no way', '2018-09-12 23:01:56'),
+(45, 19, 62, 'ax', '2018-09-12 23:07:09'),
+(46, 19, 62, 'sdsd', '2018-09-12 23:07:25'),
+(47, 16, 62, 'lets goo', '2018-09-12 23:09:36'),
+(48, 23, 62, 'yo kelly', '2018-09-12 23:11:06'),
+(49, 23, 62, 'hii', '2018-09-12 23:11:40'),
+(50, 19, 35, 'sike', '2018-09-16 14:28:04'),
+(51, 19, 35, 'asdasd', '2018-09-16 14:35:49'),
+(52, 19, 35, 'yea', '2018-09-16 14:36:05'),
+(53, 19, 35, 'saddd', '2018-09-16 18:38:55'),
+(54, 19, 35, 'happy', '2018-09-16 18:44:47'),
+(55, 19, 35, 'no way', '2018-09-16 21:37:46'),
+(56, 16, 35, 'we are', '2018-09-17 02:27:02');
 
 -- --------------------------------------------------------
 
@@ -1336,7 +1497,9 @@ CREATE TABLE `events` (
 
 INSERT INTO `events` (`event_id`, `event_type_id`, `college_id`, `student_id`, `community_id`, `event_access`, `event_title`, `event_description`, `event_location`, `event_address`, `event_date`, `event_time`, `event_photo`, `date_created`) VALUES
 (4, 1, 227, 35, 1, 'public', 'Coffee and Study', 'Who wants to meetup for coffee and study for final exams. Leave comments below or DM me', 'Starbucks on Mass Ave.', '', '2017-12-08', '06:00:00', '', '2017-12-08 09:49:38'),
-(6, 6, 227, 44, NULL, 'public', 'Wall Street movie night', 'finance junkies watching wall street movies all night', 'dorm', NULL, '2018-04-14', '13:30:00', '', '2018-03-14 18:06:21');
+(6, 6, 227, 44, NULL, 'public', 'Wall Street movie night', 'finance junkies watching wall street movies all night', 'dorm', NULL, '2018-04-14', '13:30:00', '', '2018-03-14 18:06:21'),
+(7, 1, 227, 35, 1, 'public', 'test', 'testt', 'baseball house', NULL, '2018-09-12', '13:30:00', '', '2018-09-11 21:15:52'),
+(8, 1, 227, 35, 51, 'public', 'qweqwe', 'qweqweqw', 'wwewe', NULL, '2018-09-18', '13:30:00', '', '2018-09-16 16:16:39');
 
 -- --------------------------------------------------------
 
@@ -1454,7 +1617,11 @@ INSERT INTO `favorites` (`favorite_id`, `user_id`, `favorite_type`, `type_id`) V
 (136, 61, 'community_discussion', 2),
 (137, 61, 'discussion', 9),
 (138, 61, 'discussion', 16),
-(140, 61, 'community_discussion', 19);
+(140, 61, 'community_discussion', 19),
+(141, 77, 'community_discussion', 30),
+(142, 77, 'community_discussion', 2),
+(143, 62, 'discussion', 16),
+(144, 35, 'event', 8);
 
 -- --------------------------------------------------------
 
@@ -1473,7 +1640,6 @@ CREATE TABLE `friend_followers` (
 --
 
 INSERT INTO `friend_followers` (`follower_id`, `user_id`, `friend_id`) VALUES
-(3, 35, 39),
 (5, 35, 40),
 (7, 35, 42),
 (8, 35, 43),
@@ -1489,13 +1655,17 @@ INSERT INTO `friend_followers` (`follower_id`, `user_id`, `friend_id`) VALUES
 (34, 39, 39),
 (35, 39, 40),
 (36, 39, 35),
-(46, 35, 35),
 (53, 35, 37),
 (55, 39, 42),
 (56, 39, 51),
 (57, 35, 41),
-(58, 62, 35),
-(62, 62, 61);
+(62, 62, 61),
+(63, 35, 61),
+(64, 78, 35),
+(65, 35, 35),
+(67, 35, 39),
+(70, 35, 62),
+(71, 62, 35);
 
 -- --------------------------------------------------------
 
@@ -1516,7 +1686,6 @@ CREATE TABLE `interests` (
 INSERT INTO `interests` (`interest_id`, `category_id`, `student_id`) VALUES
 (1, 14, 35),
 (4, 20, 35),
-(5, 7, 35),
 (7, 11, 35),
 (23, 9, 37),
 (24, 12, 37),
@@ -1542,7 +1711,36 @@ INSERT INTO `interests` (`interest_id`, `category_id`, `student_id`) VALUES
 (52, 21, 62),
 (54, 2, 35),
 (55, 1, 35),
-(56, 2, 51);
+(56, 2, 51),
+(66, 17, 77),
+(67, 18, 77),
+(68, 19, 77),
+(69, 21, 77),
+(70, 22, 77),
+(71, 24, 77),
+(72, 26, 77),
+(73, 27, 77),
+(74, 13, 78),
+(75, 14, 78),
+(76, 15, 78),
+(77, 17, 78),
+(78, 18, 78),
+(79, 19, 78),
+(80, 20, 78),
+(81, 1, 62),
+(82, 2, 62),
+(83, 3, 62),
+(84, 4, 62),
+(85, 5, 62),
+(87, 8, 62),
+(88, 11, 62),
+(89, 15, 62),
+(90, 10, 35),
+(91, 1, 78),
+(92, 2, 78),
+(93, 6, 78),
+(94, 20, 78),
+(95, 1, 39);
 
 -- --------------------------------------------------------
 
@@ -1567,7 +1765,12 @@ INSERT INTO `majors` (`major_id`, `major_list_id`, `college_id`) VALUES
 (10, 1101, 227),
 (11, 292, 227),
 (12, 1224, 227),
-(13, 210, 262);
+(13, 210, 262),
+(14, 211, 227),
+(15, 211, 227),
+(16, 210, 227),
+(17, 210, 227),
+(18, 292, 227);
 
 -- --------------------------------------------------------
 
@@ -2817,14 +3020,109 @@ INSERT INTO `majors_list` (`major_list_id`, `major`) VALUES
 
 CREATE TABLE `notifications` (
   `notification_id` int(11) NOT NULL,
-  `user_to` varchar(64) NOT NULL,
-  `user_from` varchar(64) NOT NULL,
-  `message` text NOT NULL,
-  `link` varchar(100) NOT NULL,
-  `datetime` datetime NOT NULL,
-  `opened` varchar(3) NOT NULL,
-  `viewed` varchar(3) NOT NULL
+  `user_to` int(10) UNSIGNED DEFAULT NULL,
+  `user_from` int(10) UNSIGNED DEFAULT NULL,
+  `community_from` int(10) UNSIGNED DEFAULT NULL,
+  `discussion_from` int(10) UNSIGNED DEFAULT NULL,
+  `comment_from` int(10) UNSIGNED DEFAULT NULL,
+  `category_from` int(10) UNSIGNED DEFAULT NULL,
+  `event_from` int(10) UNSIGNED DEFAULT NULL,
+  `datetime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `viewed` int(11) NOT NULL DEFAULT '0',
+  `opened` int(11) NOT NULL DEFAULT '0',
+  `type` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `notifications`
+--
+
+INSERT INTO `notifications` (`notification_id`, `user_to`, `user_from`, `community_from`, `discussion_from`, `comment_from`, `category_from`, `event_from`, `datetime`, `viewed`, `opened`, `type`) VALUES
+(9, 39, NULL, 22, NULL, NULL, 6, NULL, '2018-09-10 00:21:23', 1, 1, 'new_community'),
+(10, 62, NULL, 22, NULL, NULL, 6, NULL, '2018-09-10 00:21:23', 1, 1, 'new_community'),
+(12, 39, NULL, 53, NULL, NULL, 6, NULL, '2018-09-10 12:27:11', 1, 0, 'new_community'),
+(13, 62, NULL, 53, NULL, NULL, 6, NULL, '2018-09-10 12:27:11', 1, 1, 'new_community'),
+(14, 62, NULL, 53, NULL, NULL, 6, NULL, '2018-09-10 12:27:11', 1, 1, 'new_community'),
+(16, 39, NULL, 55, NULL, NULL, 6, NULL, '2018-09-10 12:36:06', 1, 0, 'new_community'),
+(17, 62, NULL, 55, NULL, NULL, 6, NULL, '2018-09-10 12:36:06', 1, 1, 'new_community'),
+(19, 39, NULL, 22, NULL, NULL, 6, NULL, '2018-09-10 16:09:09', 1, 0, 'new_community'),
+(20, 62, NULL, 22, NULL, NULL, 6, NULL, '2018-09-10 16:09:09', 1, 1, 'new_community'),
+(22, 39, NULL, 56, NULL, NULL, 6, NULL, '2018-09-10 16:18:02', 1, 0, 'new_community'),
+(23, 62, NULL, 56, NULL, NULL, 6, NULL, '2018-09-10 16:18:02', 1, 1, 'new_community'),
+(25, 39, NULL, 22, NULL, NULL, 6, NULL, '2018-09-10 21:15:18', 1, 0, 'new_community'),
+(26, 62, NULL, 22, NULL, NULL, 6, NULL, '2018-09-10 21:15:18', 1, 0, 'new_community'),
+(36, 35, NULL, 61, NULL, NULL, 1, NULL, '2018-09-11 13:42:29', 1, 0, 'new_community'),
+(40, 35, NULL, 63, NULL, NULL, 20, NULL, '2018-09-11 13:42:59', 1, 0, 'new_community'),
+(43, 35, NULL, 64, NULL, NULL, 1, NULL, '2018-09-11 13:43:20', 1, 0, 'new_community'),
+(50, 35, NULL, 67, NULL, NULL, 1, NULL, '2018-09-11 13:44:27', 1, 0, 'new_community'),
+(52, 39, NULL, 67, NULL, NULL, 1, NULL, '2018-09-11 13:44:27', 1, 0, 'new_community'),
+(56, 62, NULL, 70, NULL, NULL, 1, NULL, '2018-09-11 13:46:53', 1, 1, 'new_community'),
+(57, 35, NULL, 70, NULL, NULL, 1, NULL, '2018-09-11 13:46:53', 1, 0, 'new_community'),
+(58, 62, NULL, 70, NULL, NULL, 1, NULL, '2018-09-11 13:46:53', 1, 0, 'new_community'),
+(60, 39, NULL, 70, NULL, NULL, 1, NULL, '2018-09-11 13:46:53', 1, 0, 'new_community'),
+(62, 41, NULL, NULL, 32, NULL, NULL, NULL, '2018-09-11 14:16:21', 0, 0, 'new_community_discussion'),
+(63, 44, NULL, NULL, 32, NULL, NULL, NULL, '2018-09-11 14:16:21', 0, 0, 'new_community_discussion'),
+(64, 42, NULL, NULL, 32, NULL, NULL, NULL, '2018-09-11 14:16:21', 0, 0, 'new_community_discussion'),
+(66, 39, NULL, NULL, 32, NULL, NULL, NULL, '2018-09-11 14:16:21', 1, 0, 'new_community_discussion'),
+(67, 61, NULL, NULL, 32, NULL, NULL, NULL, '2018-09-11 14:16:21', 0, 0, 'new_community_discussion'),
+(68, 62, NULL, NULL, 32, NULL, NULL, NULL, '2018-09-11 14:16:21', 1, 0, 'new_community_discussion'),
+(69, 77, NULL, NULL, 32, NULL, NULL, NULL, '2018-09-11 14:16:21', 0, 0, 'new_community_discussion'),
+(72, 41, NULL, 1, 33, NULL, NULL, NULL, '2018-09-11 14:17:02', 0, 0, 'new_community_discussion'),
+(73, 44, NULL, 1, 33, NULL, NULL, NULL, '2018-09-11 14:17:02', 0, 0, 'new_community_discussion'),
+(74, 42, NULL, 1, 33, NULL, NULL, NULL, '2018-09-11 14:17:02', 0, 0, 'new_community_discussion'),
+(76, 39, NULL, 1, 33, NULL, NULL, NULL, '2018-09-11 14:17:02', 1, 0, 'new_community_discussion'),
+(77, 61, NULL, 1, 33, NULL, NULL, NULL, '2018-09-11 14:17:02', 0, 0, 'new_community_discussion'),
+(78, 62, NULL, 1, 33, NULL, NULL, NULL, '2018-09-11 14:17:02', 1, 1, 'new_community_discussion'),
+(79, 77, NULL, 1, 33, NULL, NULL, NULL, '2018-09-11 14:17:02', 0, 0, 'new_community_discussion'),
+(81, 35, 62, 1, 2, NULL, NULL, NULL, '2018-09-11 14:35:19', 1, 1, 'discussion_reply'),
+(83, 35, 35, NULL, NULL, NULL, NULL, NULL, '2018-09-11 15:00:06', 1, 1, 'reply_comment'),
+(84, 62, 35, NULL, NULL, NULL, NULL, NULL, '2018-09-11 15:04:09', 1, 1, 'reply_comment'),
+(88, 41, NULL, 1, NULL, NULL, NULL, 7, '2018-09-11 17:15:52', 0, 0, 'new_community_event'),
+(89, 44, NULL, 1, NULL, NULL, NULL, 7, '2018-09-11 17:15:52', 0, 0, 'new_community_event'),
+(90, 42, NULL, 1, NULL, NULL, NULL, 7, '2018-09-11 17:15:52', 0, 0, 'new_community_event'),
+(92, 39, NULL, 1, NULL, NULL, NULL, 7, '2018-09-11 17:15:52', 1, 0, 'new_community_event'),
+(93, 61, NULL, 1, NULL, NULL, NULL, 7, '2018-09-11 17:15:52', 0, 0, 'new_community_event'),
+(94, 62, NULL, 1, NULL, NULL, NULL, 7, '2018-09-11 17:15:52', 1, 1, 'new_community_event'),
+(95, 77, NULL, 1, NULL, NULL, NULL, 7, '2018-09-11 17:15:52', 0, 0, 'new_community_event'),
+(97, 35, NULL, 71, NULL, NULL, 6, NULL, '2018-09-11 17:28:06', 1, 0, 'new_community'),
+(98, 39, NULL, 71, NULL, NULL, 6, NULL, '2018-09-11 17:28:06', 1, 0, 'new_community'),
+(99, 62, NULL, 71, NULL, NULL, 6, NULL, '2018-09-11 17:28:06', 1, 1, 'new_community'),
+(102, 62, 35, NULL, NULL, NULL, NULL, NULL, '2018-09-12 17:14:14', 1, 1, 'user_followed'),
+(103, 35, 62, NULL, NULL, 23, NULL, NULL, '2018-09-12 17:21:43', 1, 1, 'reply_comment'),
+(113, 62, 62, NULL, NULL, NULL, NULL, NULL, '2018-09-12 19:18:14', 1, 1, 'reply_comment'),
+(114, 37, NULL, 1, 35, NULL, NULL, NULL, '2018-09-12 19:20:57', 0, 0, 'new_community_discussion'),
+(115, 41, NULL, 1, 35, NULL, NULL, NULL, '2018-09-12 19:20:57', 0, 0, 'new_community_discussion'),
+(116, 44, NULL, 1, 35, NULL, NULL, NULL, '2018-09-12 19:20:57', 0, 0, 'new_community_discussion'),
+(117, 42, NULL, 1, 35, NULL, NULL, NULL, '2018-09-12 19:20:57', 0, 0, 'new_community_discussion'),
+(118, 35, NULL, 1, 35, NULL, NULL, NULL, '2018-09-12 19:20:57', 1, 0, 'new_community_discussion'),
+(119, 39, NULL, 1, 35, NULL, NULL, NULL, '2018-09-12 19:20:57', 0, 0, 'new_community_discussion'),
+(120, 61, NULL, 1, 35, NULL, NULL, NULL, '2018-09-12 19:20:57', 0, 0, 'new_community_discussion'),
+(121, 62, NULL, 1, 35, NULL, NULL, NULL, '2018-09-12 19:20:57', 1, 1, 'new_community_discussion'),
+(122, 77, NULL, 1, 35, NULL, NULL, NULL, '2018-09-12 19:20:57', 0, 0, 'new_community_discussion'),
+(123, 78, NULL, 1, 35, NULL, NULL, NULL, '2018-09-12 19:20:57', 0, 0, 'new_community_discussion'),
+(132, 35, 35, 1, 2, 47, NULL, NULL, '2018-09-12 23:09:36', 1, 1, 'reply_comment'),
+(133, NULL, 62, NULL, NULL, 48, NULL, NULL, '2018-09-12 23:11:06', 0, 0, 'reply_comment'),
+(135, 35, 62, NULL, NULL, NULL, NULL, NULL, '2018-09-13 22:18:15', 1, 1, 'user_followed'),
+(136, 62, NULL, 51, NULL, NULL, NULL, 8, '2018-09-16 12:16:39', 1, 1, 'new_community_event'),
+(137, 35, 35, 1, 2, 50, NULL, NULL, '2018-09-16 14:28:04', 1, 1, 'reply_comment'),
+(138, 35, 35, 1, 2, 51, NULL, NULL, '2018-09-16 14:35:49', 1, 0, 'reply_comment'),
+(139, 35, 35, 1, 2, 52, NULL, NULL, '2018-09-16 14:36:05', 1, 1, 'reply_comment'),
+(140, 35, 35, 1, 2, 53, NULL, NULL, '2018-09-16 18:38:55', 1, 1, 'reply_comment'),
+(141, 35, 35, 1, 2, 54, NULL, NULL, '2018-09-16 18:44:47', 1, 0, 'reply_comment'),
+(142, 35, 35, 1, 2, 55, NULL, NULL, '2018-09-16 21:37:46', 1, 1, 'reply_comment'),
+(143, 35, 35, 1, 2, 56, NULL, NULL, '2018-09-17 02:27:02', 1, 0, 'reply_comment'),
+(144, 62, NULL, 73, NULL, NULL, 1, NULL, '2018-09-17 02:39:03', 1, 0, 'new_community'),
+(145, 35, NULL, 73, NULL, NULL, 1, NULL, '2018-09-17 02:39:03', 1, 1, 'new_community'),
+(146, 62, NULL, 73, NULL, NULL, 1, NULL, '2018-09-17 02:39:03', 1, 0, 'new_community'),
+(147, 78, NULL, 73, NULL, NULL, 1, NULL, '2018-09-17 02:39:03', 0, 0, 'new_community'),
+(148, 39, NULL, 73, NULL, NULL, 1, NULL, '2018-09-17 02:39:03', 0, 0, 'new_community'),
+(149, 62, NULL, 74, NULL, NULL, 1, NULL, '2018-09-17 02:42:22', 1, 0, 'new_community'),
+(150, 35, NULL, 74, NULL, NULL, 1, NULL, '2018-09-17 02:42:22', 0, 0, 'new_community'),
+(151, 62, NULL, 74, NULL, NULL, 1, NULL, '2018-09-17 02:42:22', 1, 1, 'new_community'),
+(152, 78, NULL, 74, NULL, NULL, 1, NULL, '2018-09-17 02:42:22', 0, 0, 'new_community'),
+(153, 39, NULL, 74, NULL, NULL, 1, NULL, '2018-09-17 02:42:22', 0, 0, 'new_community'),
+(154, 35, NULL, 75, NULL, NULL, 1, NULL, '2018-09-17 02:43:01', 0, 0, 'new_community'),
+(155, 78, NULL, 75, NULL, NULL, 1, NULL, '2018-09-17 02:43:01', 0, 0, 'new_community');
 
 -- --------------------------------------------------------
 
@@ -2853,6 +3151,17 @@ INSERT INTO `report_content` (`report_content_id`, `content_type`, `content_id`,
 (6, 'event_comment', 16, 0, ''),
 (7, 'report_profile', 39, 0, ''),
 (8, 'report_profile', 41, 0, '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `resetPassword`
+--
+
+CREATE TABLE `resetPassword` (
+  `id` int(10) UNSIGNED DEFAULT NULL,
+  `reset_code` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -2985,7 +3294,30 @@ INSERT INTO `school_followers` (`school_follower_id`, `user_id`, `college_id`, `
 (48, 67, 262, '2018-07-23 15:11:17'),
 (49, 68, 262, '2018-07-27 09:40:40'),
 (50, 69, 227, '2018-08-12 02:24:23'),
-(51, 70, 394, '2018-08-12 02:28:47');
+(51, 70, 394, '2018-08-12 02:28:47'),
+(53, 77, 227, '2018-09-05 09:35:01'),
+(54, 78, 227, '2018-09-05 09:41:44'),
+(55, 78, 466, '2018-09-11 13:39:57'),
+(56, 78, 402, '2018-09-11 13:39:57'),
+(57, 78, 704, '2018-09-11 13:39:57'),
+(58, 78, 262, '2018-09-11 13:39:57'),
+(59, 78, 394, '2018-09-11 13:39:57'),
+(60, 62, 394, '2018-09-11 13:54:43'),
+(61, 62, 704, '2018-09-11 13:55:17');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `university`
+--
+
+CREATE TABLE `university` (
+  `universityID` int(10) UNSIGNED NOT NULL,
+  `uni_name` varchar(100) DEFAULT NULL,
+  `city` varchar(100) DEFAULT NULL,
+  `state` varchar(100) DEFAULT NULL,
+  `email_url` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -2995,44 +3327,46 @@ INSERT INTO `school_followers` (`school_follower_id`, `user_id`, `college_id`, `
 
 CREATE TABLE `user_profile` (
   `profile_id` int(10) UNSIGNED NOT NULL,
-  `major_id` int(10) UNSIGNED DEFAULT NULL,
+  `major_id` int(10) UNSIGNED DEFAULT '1222',
   `student_id` int(10) UNSIGNED DEFAULT NULL,
   `about` text,
   `gender` varchar(32) DEFAULT NULL,
-  `location_city` varchar(64) DEFAULT NULL,
   `location_state` varchar(10) NOT NULL,
   `grad_year` year(4) DEFAULT NULL,
-  `user_photo` varchar(64) NOT NULL
+  `user_photo` varchar(64) NOT NULL,
+  `profile_build` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user_profile`
 --
 
-INSERT INTO `user_profile` (`profile_id`, `major_id`, `student_id`, `about`, `gender`, `location_city`, `location_state`, `grad_year`, `user_photo`) VALUES
-(2, 210, 35, 'Avid fan of the New England Patriots, Lover of all things coffee...', 'Male', 'Cranston', 'RI', 2014, ''),
-(3, 242, 37, 'I love driving my range rover all over Cranston...', 'Male', 'Cranston', 'RI', 2018, ''),
-(4, 210, 42, NULL, NULL, NULL, '', NULL, ''),
-(5, 292, 39, 'I use to shoot 3&#39;s for a living. ', NULL, NULL, '', NULL, ''),
-(6, 210, 40, NULL, NULL, NULL, '', NULL, ''),
-(7, 210, 41, NULL, NULL, NULL, '', NULL, ''),
-(8, 210, 43, NULL, NULL, NULL, '', NULL, ''),
-(9, 210, 44, NULL, NULL, NULL, '', NULL, ''),
-(10, 242, 45, NULL, NULL, NULL, '', NULL, ''),
-(11, 242, 46, NULL, NULL, NULL, '', NULL, ''),
-(12, 832, 47, NULL, NULL, NULL, '', NULL, ''),
-(14, 1112, 51, NULL, NULL, NULL, '', NULL, ''),
-(15, 900, 52, NULL, NULL, NULL, '', NULL, ''),
-(16, 1101, 54, NULL, NULL, NULL, '', NULL, ''),
-(17, 292, 60, NULL, NULL, NULL, '', NULL, ''),
-(18, 1224, 61, NULL, NULL, NULL, '', NULL, ''),
-(19, 1101, 62, NULL, NULL, NULL, '', NULL, ''),
-(20, 1101, 63, NULL, NULL, NULL, '', NULL, ''),
-(21, NULL, 64, NULL, NULL, NULL, '', NULL, ''),
-(22, NULL, 67, NULL, NULL, NULL, '', NULL, ''),
-(23, NULL, 68, NULL, NULL, NULL, '', NULL, ''),
-(24, NULL, 69, NULL, NULL, NULL, '', NULL, ''),
-(25, NULL, 70, NULL, NULL, NULL, '', NULL, '');
+INSERT INTO `user_profile` (`profile_id`, `major_id`, `student_id`, `about`, `gender`, `location_state`, `grad_year`, `user_photo`, `profile_build`) VALUES
+(2, 210, 35, 'Avid fan of the New England Patriots, Lover of all things coffee...', 'Male', 'RI', 2014, '', 1),
+(3, 242, 37, 'I love driving my range rover all over Cranston...', 'Male', 'RI', 2018, '', 1),
+(4, 210, 42, NULL, NULL, '', NULL, '', 0),
+(5, 292, 39, 'I use to shoot 3&#39;s for a living. ', NULL, '', NULL, '', 1),
+(6, 210, 40, NULL, NULL, '', NULL, '', 0),
+(7, 210, 41, NULL, NULL, '', NULL, '', 0),
+(8, 210, 43, NULL, NULL, '', NULL, '', 0),
+(9, 210, 44, NULL, NULL, '', NULL, '', 0),
+(10, 242, 45, NULL, NULL, '', NULL, '', 0),
+(11, 242, 46, NULL, NULL, '', NULL, '', 0),
+(12, 832, 47, NULL, NULL, '', NULL, '', 0),
+(14, 1112, 51, NULL, NULL, '', NULL, '', 0),
+(15, 900, 52, NULL, NULL, '', NULL, '', 0),
+(16, 1101, 54, NULL, NULL, '', NULL, '', 0),
+(17, 292, 60, NULL, NULL, '', NULL, '', 0),
+(18, 1224, 61, NULL, NULL, '', NULL, '', 0),
+(19, 292, 62, 'i am kelly', NULL, 'RI', 2019, '', 1),
+(20, 1101, 63, NULL, NULL, '', NULL, '', 0),
+(21, 1222, 64, NULL, NULL, '', NULL, '', 0),
+(22, 1222, 67, NULL, NULL, '', NULL, '', 0),
+(23, 1222, 68, NULL, NULL, '', NULL, '', 0),
+(24, 1222, 69, NULL, NULL, '', NULL, '', 0),
+(25, 1222, 70, NULL, NULL, '', NULL, '', 0),
+(32, 210, 77, 'I am awesome', NULL, 'RI', 2018, '', 1),
+(33, 210, 78, 'awesomeness', NULL, 'RI', 2021, '', 1);
 
 -- --------------------------------------------------------
 
@@ -3076,6 +3410,13 @@ ALTER TABLE `categories`
 --
 ALTER TABLE `colleges`
   ADD PRIMARY KEY (`college_id`);
+
+--
+-- Indexes for table `collegeStudent`
+--
+ALTER TABLE `collegeStudent`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `universityID` (`universityID`);
 
 --
 -- Indexes for table `college_student`
@@ -3138,8 +3479,8 @@ ALTER TABLE `c_discussion_replies`
 --
 ALTER TABLE `c_discussion_r_reply`
   ADD PRIMARY KEY (`r_reply_id`),
-  ADD KEY `c_discussion_r_reply_ibfk_5` (`student_id`),
-  ADD KEY `c_discussion_reply_id` (`c_discussion_reply_id`);
+  ADD KEY `c_discussion_reply_id` (`c_discussion_reply_id`),
+  ADD KEY `c_discussion_r_reply_ibfk_2` (`student_id`);
 
 --
 -- Indexes for table `discussion_post`
@@ -3260,13 +3601,26 @@ ALTER TABLE `majors_list`
 -- Indexes for table `notifications`
 --
 ALTER TABLE `notifications`
-  ADD PRIMARY KEY (`notification_id`);
+  ADD PRIMARY KEY (`notification_id`),
+  ADD KEY `user_to` (`user_to`),
+  ADD KEY `user_from` (`user_from`),
+  ADD KEY `community_from` (`community_from`),
+  ADD KEY `notifications_ibfk_4` (`discussion_from`),
+  ADD KEY `category_from` (`category_from`),
+  ADD KEY `event_from` (`event_from`),
+  ADD KEY `notifications_ibfk_5` (`comment_from`);
 
 --
 -- Indexes for table `report_content`
 --
 ALTER TABLE `report_content`
   ADD PRIMARY KEY (`report_content_id`);
+
+--
+-- Indexes for table `resetPassword`
+--
+ALTER TABLE `resetPassword`
+  ADD KEY `id` (`id`);
 
 --
 -- Indexes for table `reset_password`
@@ -3305,6 +3659,12 @@ ALTER TABLE `school_followers`
   ADD KEY `school_followers_ibfk_3` (`college_id`);
 
 --
+-- Indexes for table `university`
+--
+ALTER TABLE `university`
+  ADD PRIMARY KEY (`universityID`);
+
+--
 -- Indexes for table `user_profile`
 --
 ALTER TABLE `user_profile`
@@ -3327,45 +3687,50 @@ ALTER TABLE `categories`
 ALTER TABLE `colleges`
   MODIFY `college_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=706;
 --
+-- AUTO_INCREMENT for table `collegeStudent`
+--
+ALTER TABLE `collegeStudent`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `college_student`
 --
 ALTER TABLE `college_student`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
 --
 -- AUTO_INCREMENT for table `communities`
 --
 ALTER TABLE `communities`
-  MODIFY `community_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `community_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 --
 -- AUTO_INCREMENT for table `community_admins`
 --
 ALTER TABLE `community_admins`
-  MODIFY `admin_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `admin_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 --
 -- AUTO_INCREMENT for table `community_discussions`
 --
 ALTER TABLE `community_discussions`
-  MODIFY `c_discussion_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `c_discussion_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 --
 -- AUTO_INCREMENT for table `community_discussion_vote`
 --
 ALTER TABLE `community_discussion_vote`
-  MODIFY `c_vote_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `c_vote_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 --
 -- AUTO_INCREMENT for table `community_members`
 --
 ALTER TABLE `community_members`
-  MODIFY `community_member_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=136;
+  MODIFY `community_member_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=181;
 --
 -- AUTO_INCREMENT for table `c_discussion_replies`
 --
 ALTER TABLE `c_discussion_replies`
-  MODIFY `c_discussion_reply_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `c_discussion_reply_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
 -- AUTO_INCREMENT for table `c_discussion_r_reply`
 --
 ALTER TABLE `c_discussion_r_reply`
-  MODIFY `r_reply_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `r_reply_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 --
 -- AUTO_INCREMENT for table `discussion_post`
 --
@@ -3400,7 +3765,7 @@ ALTER TABLE `email_newsletter`
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `event_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `event_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `event_attendees`
 --
@@ -3420,22 +3785,22 @@ ALTER TABLE `event_type`
 -- AUTO_INCREMENT for table `favorites`
 --
 ALTER TABLE `favorites`
-  MODIFY `favorite_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
+  MODIFY `favorite_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=145;
 --
 -- AUTO_INCREMENT for table `friend_followers`
 --
 ALTER TABLE `friend_followers`
-  MODIFY `follower_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `follower_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 --
 -- AUTO_INCREMENT for table `interests`
 --
 ALTER TABLE `interests`
-  MODIFY `interest_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `interest_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
 --
 -- AUTO_INCREMENT for table `majors`
 --
 ALTER TABLE `majors`
-  MODIFY `major_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `major_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `majors_list`
 --
@@ -3445,7 +3810,7 @@ ALTER TABLE `majors_list`
 -- AUTO_INCREMENT for table `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `notification_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `notification_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=156;
 --
 -- AUTO_INCREMENT for table `report_content`
 --
@@ -3470,15 +3835,26 @@ ALTER TABLE `review_ratings`
 -- AUTO_INCREMENT for table `school_followers`
 --
 ALTER TABLE `school_followers`
-  MODIFY `school_follower_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `school_follower_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+--
+-- AUTO_INCREMENT for table `university`
+--
+ALTER TABLE `university`
+  MODIFY `universityID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `user_profile`
 --
 ALTER TABLE `user_profile`
-  MODIFY `profile_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `profile_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `collegeStudent`
+--
+ALTER TABLE `collegeStudent`
+  ADD CONSTRAINT `collegestudent_ibfk_1` FOREIGN KEY (`universityID`) REFERENCES `university` (`universityID`);
 
 --
 -- Constraints for table `college_student`
@@ -3533,7 +3909,8 @@ ALTER TABLE `c_discussion_replies`
 -- Constraints for table `c_discussion_r_reply`
 --
 ALTER TABLE `c_discussion_r_reply`
-  ADD CONSTRAINT `c_discussion_r_reply_ibfk_1` FOREIGN KEY (`c_discussion_reply_id`) REFERENCES `c_discussion_replies` (`c_discussion_reply_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `c_discussion_r_reply_ibfk_1` FOREIGN KEY (`c_discussion_reply_id`) REFERENCES `c_discussion_replies` (`c_discussion_reply_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `c_discussion_r_reply_ibfk_2` FOREIGN KEY (`student_id`) REFERENCES `college_student` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `discussion_post`
@@ -3616,6 +3993,24 @@ ALTER TABLE `interests`
 ALTER TABLE `majors`
   ADD CONSTRAINT `majors_ibfk_1` FOREIGN KEY (`college_id`) REFERENCES `colleges` (`college_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `majors_ibfk_3` FOREIGN KEY (`major_list_id`) REFERENCES `majors_list` (`major_list_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `notifications`
+--
+ALTER TABLE `notifications`
+  ADD CONSTRAINT `notifications_ibfk_1` FOREIGN KEY (`user_to`) REFERENCES `college_student` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `notifications_ibfk_2` FOREIGN KEY (`user_from`) REFERENCES `college_student` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `notifications_ibfk_3` FOREIGN KEY (`community_from`) REFERENCES `communities` (`community_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `notifications_ibfk_4` FOREIGN KEY (`discussion_from`) REFERENCES `community_discussions` (`c_discussion_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `notifications_ibfk_5` FOREIGN KEY (`comment_from`) REFERENCES `c_discussion_r_reply` (`r_reply_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `notifications_ibfk_6` FOREIGN KEY (`category_from`) REFERENCES `categories` (`category_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `notifications_ibfk_7` FOREIGN KEY (`event_from`) REFERENCES `events` (`event_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `resetPassword`
+--
+ALTER TABLE `resetPassword`
+  ADD CONSTRAINT `resetpassword_ibfk_1` FOREIGN KEY (`id`) REFERENCES `collegeStudent` (`id`);
 
 --
 -- Constraints for table `reset_password`
