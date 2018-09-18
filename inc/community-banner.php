@@ -55,7 +55,7 @@
 
 			    </div>
 			</section>
-            <section class="nav-community-home" style="background-color:<?php echo $community['community_color'];?>">
+            <section class="nav-community-home">
                 <ul class="nav-community-list">
                     <li  id="about-item">
                         <div class="nav-community-item">
