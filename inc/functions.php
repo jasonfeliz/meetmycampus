@@ -1380,7 +1380,9 @@ function get_category_communities($categoryId,$collegeId){
 	global $connect;
 	try{
 			$connect->beginTransaction();
-			$stmt = $connect->prepare("SELECT * FROM communities WHERE category_id = ? AND college_id = ?");
+			$stmt = $connect->prepare("SELECT * FROM communities 
+										INNER JOIN categories ON communities.category_id = categories.category_id
+										WHERE communities.category_id = ? AND college_id = ?");
 			$stmt->bindParam(1,$categoryId,PDO::PARAM_INT);
 			$stmt->bindParam(2,$collegeId,PDO::PARAM_INT);
 			$stmt->execute();
@@ -2127,8 +2129,8 @@ function get_user_communities($studentId,$all=null){
 	if (is_null($all)) {
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT uni_name,community_members.community_id, community_name, category_id,community_category,community_color,community_photo  						   FROM community_members
-											INNER JOIN communities JOIN colleges ON community_members.community_id = communities.community_id AND communities.college_id = colleges.college_id
+				$stmt = $connect->prepare("SELECT uni_name,community_members.community_id,community_name,communities.category_id,community_category,community_color,community_photo,category 						   FROM community_members
+											INNER JOIN communities JOIN colleges JOIN categories ON community_members.community_id = communities.community_id AND communities.college_id = colleges.college_id AND communities.category_id = categories.category_id
 											WHERE student_id = ? AND status = 1");
 				$stmt->bindParam(1,$studentId,PDO::PARAM_INT);
 				$stmt->execute();
@@ -2141,8 +2143,8 @@ function get_user_communities($studentId,$all=null){
 	}else{
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT uni_name,community_members.community_id, community_name, category_id,community_category,community_color,community_photo  						   FROM community_members
-											INNER JOIN communities JOIN colleges ON community_members.community_id = communities.community_id AND communities.college_id = colleges.college_id
+				$stmt = $connect->prepare("SELECT uni_name,community_members.community_id, community_name, communities.category_id,community_category,community_color,community_photo,category  						   FROM community_members
+											INNER JOIN communities JOIN colleges  JOIN categories ON community_members.community_id = communities.community_id AND communities.college_id = colleges.college_id AND communities.category_id = categories.category_id
 											WHERE student_id = ?");
 				$stmt->bindParam(1,$studentId,PDO::PARAM_INT);
 				$stmt->execute();

@@ -49,9 +49,12 @@
 </head>
 <body id="page-top">
                 <?php
-                    //Unread notifications 
-                    $notifications_obj = new Notification($connect, $_COOKIE['user_id']);
-                    $num_notifications = $notifications_obj->getUnreadNumber();
+                    if ($loggedIn) {
+                        //Unread notifications 
+                        $notifications_obj = new Notification($connect, $_COOKIE['user_id']);
+                        $num_notifications = $notifications_obj->getUnreadNumber();
+                    }
+
 
                 ?>
 <header class="bg-primary">

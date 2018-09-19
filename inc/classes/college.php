@@ -161,7 +161,9 @@ class College {
 
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT * FROM communities WHERE college_id = ? AND community_category = 'story'");
+				$stmt = $connect->prepare("SELECT * FROM communities 
+											INNER JOIN categories ON communities.category_id = categories.category_id
+											WHERE college_id = ? AND community_category = 'story'");
 				$stmt->bindParam(1,$this->college['college_id'],PDO::PARAM_INT);
 				$stmt->execute();
 				$connect->commit();

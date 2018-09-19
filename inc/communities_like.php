@@ -40,10 +40,28 @@
 										}elseif($_GET['b_filter'] == 'stories'){
 											if (!empty($stories)) {
 												foreach ($stories as $key){
-													$content = 	'<li>';
-													$content.=	'<a href="community.php?school_name='. $urlCollegeName . '&category_id=' . $key['category_id'] . '&community_id=' . $key['community_id']. '&community_cat=' . $key['community_category'] .'" class="list-thumbnail" style="background-color:' . $key['community_color'] . ';">';
-													$content.= '<img src="img/community5.png">';
-													$content.= '<h5>'.$key['community_name']. '</h5></a></li>';
+													$community_obj = new Community($connect,$key['community_id'],$userId);
+													$member_count = count($community_obj->get_community_members());
+													if ($member_count == 1) {
+														$members = $member_count . " member";
+													}else{
+														$members = $member_count . " members";
+													}
+													$content = '<li>';
+													$content.=	'<div>
+																	<a href="community.php?school_name='. $urlCollegeName . '&community_id=' . $key['community_id']. '&community_cat=' . $key['community_category'] .'" class="list-thumbnail" style="background-color:' . $key['community_color'] . '">
+																			<img src="img/community5.png">
+																	</a>
+																</div>';
+
+													$content.= '<div class="community_info_box">
+																	<p class="community_info_box_name"><a href="community.php?school_name='. $urlCollegeName . '&community_id=' . $key['community_id']. '&community_cat=' . $key['community_category'] .'" style="color:'. $key['community_color'] .'">'.$key['community_name']. '</a></p>
+																	<div>
+																		<p class="community_info_box_cat"><a href="category.php?school_name='. $urlCollegeName .'&category_id='. $key['category_id'] .'">'.$key['category']. '</a></p>
+																		<p>'. $members .'</p>
+																	</div>
+																</div>';
+													$content.= '</li>';
 													echo $content;
 												}
 											exit();	
@@ -55,10 +73,28 @@
 									}
 									if(!empty($communities)){
 										foreach ($communities as $key){
-												$content = 	'<li>';
-												$content.=	'<a href="community.php?school_name='. $urlCollegeName . '&category_id=' . $key['category_id'] . '&community_id=' . $key['community_id']. '&community_cat=' . $key['community_category'] .'" class="list-thumbnail" style="background-color:' . $key['community_color'] . ';">';
-												$content.= '<img src="img/community5.png">';
-												$content.= '<h5>'.$key['community_name']. '</h5></a></li>';
+												$community_obj = new Community($connect,$key['community_id'],$userId);
+												$member_count = count($community_obj->get_community_members());
+												if ($member_count == 1) {
+													$members = $member_count . " member";
+												}else{
+													$members = $member_count . " members";
+												}
+												$content = '<li>';
+												$content.=	'<div>
+																<a href="community.php?school_name='. $urlCollegeName . '&community_id=' . $key['community_id']. '&community_cat=' . $key['community_category'] .'" class="list-thumbnail" style="background-color:' . $key['community_color'] . '">
+																		<img src="img/community5.png">
+																</a>
+															</div>';
+
+												$content.= '<div class="community_info_box">
+																<p class="community_info_box_name"><a href="community.php?school_name='. $urlCollegeName . '&community_id=' . $key['community_id']. '&community_cat=' . $key['community_category'] .'" style="color:'. $key['community_color'] .'">'.$key['community_name']. '</a></p>
+																<div>
+																	<p class="community_info_box_cat"><a href="category.php?school_name='. $urlCollegeName .'&category_id='. $key['category_id'] .'">'.$key['category']. '</a></p>
+																	<p>'. $members .'</p>
+																</div>
+															</div>';
+												$content.= '</li>';
 												echo $content;
 										}										
 									}else{
