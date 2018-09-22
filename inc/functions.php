@@ -1836,7 +1836,7 @@ function get_all_events($collegeId,$eType = NULL,$communityId = NULL){
 	}elseif(!is_null($eType) && !is_null($communityId)){
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT event_id,community_id, student_id, event_access, event_title, event_description, event_location, event_address, event_date, event_time, event_photo, date_createdFROM events
+				$stmt = $connect->prepare("SELECT event_id,community_id, student_id, event_access, event_title, event_description, event_location, event_address, event_date, event_time, event_photo, date_created FROM events
 											INNER JOIN college_student ON events.student_id = college_student.id
 											INNER JOIN event_type ON events.event_type_id =  event_type.event_type_id
 											WHERE events.college_id = ? AND event_type.event_type= ? AND community_id= ?");

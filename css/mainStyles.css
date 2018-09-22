@@ -7,6 +7,7 @@ display : flex;
 flex-direction : column;
 font-family : 'Open sans', 'Helvetica Neue', Arial, sans-serif;
 box-sizing: border-box;
+color: #464646;
 }
 .nav-list > li > input[type="text"]::-webkit-input-placeholder, .nav-list > li > input[type="text"]:-moz-placeholder, .nav-list > li > input[type="text"]::-moz-placeholder, .nav-list > li > input[type="text"]:-ms-input-placeholder {
 color : #5a626f;

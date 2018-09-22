@@ -5,7 +5,8 @@ require_once('inc/start.php');
 if (!empty($_GET['community_id']) && !empty($_GET['event_id'])) {
 	$communityId = intval(trim(filter_input(INPUT_GET, 'community_id' ,FILTER_SANITIZE_STRING)));
 	$eventId = intval(trim(filter_input(INPUT_GET, 'event_id' ,FILTER_SANITIZE_STRING)));
-	$community = get_community($communityId,$collegeId);
+	$community_obj = new Community($connect,$communityId,$userId);
+	$community = $community_obj->get_community();
 	$event = get_event(NULL,$communityId,$eventId);
 	if (!$community) {
 		$_SESSION['error_page_message'] = "Due to a disturbance in the force, this page couldn't be found.";
