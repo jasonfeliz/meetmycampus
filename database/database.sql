@@ -1023,7 +1023,7 @@ CREATE TABLE `community_discussions` (
   `c_discussion_title` text,
   `c_discussion_post` text NOT NULL,
   `community_discussion_photo` varchar(64) DEFAULT NULL,
-  `post_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `post_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -1201,7 +1201,7 @@ CREATE TABLE `c_discussion_replies` (
   `c_discussion_id` int(10) UNSIGNED NOT NULL,
   `student_id` int(10) UNSIGNED DEFAULT NULL,
   `reply_post` varchar(4096) NOT NULL,
-  `post_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `post_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -1229,7 +1229,7 @@ CREATE TABLE `c_discussion_r_reply` (
   `c_discussion_reply_id` int(10) UNSIGNED NOT NULL,
   `student_id` int(10) UNSIGNED DEFAULT NULL,
   `r_reply_post` varchar(4096) NOT NULL,
-  `post_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `post_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -1323,7 +1323,7 @@ CREATE TABLE `discussion_replies` (
   `discussion_id` int(10) UNSIGNED NOT NULL,
   `student_id` int(10) UNSIGNED DEFAULT NULL,
   `reply_post` varchar(4096) NOT NULL,
-  `post_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `post_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -1344,7 +1344,7 @@ CREATE TABLE `discussion_r_replies` (
   `d_reply_id` int(10) UNSIGNED DEFAULT NULL,
   `student_id` int(10) UNSIGNED DEFAULT NULL,
   `r_reply_post` varchar(4096) NOT NULL,
-  `post_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `post_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -1541,7 +1541,7 @@ CREATE TABLE `event_comments` (
   `event_id` int(10) UNSIGNED DEFAULT NULL,
   `student_id` int(10) UNSIGNED DEFAULT NULL,
   `comment` varchar(4096) NOT NULL,
-  `post_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `post_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -3030,7 +3030,7 @@ CREATE TABLE `notifications` (
   `comment_from` int(10) UNSIGNED DEFAULT NULL,
   `category_from` int(10) UNSIGNED DEFAULT NULL,
   `event_from` int(10) UNSIGNED DEFAULT NULL,
-  `datetime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `datetime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `viewed` int(11) NOT NULL DEFAULT '0',
   `opened` int(11) NOT NULL DEFAULT '0',
   `type` varchar(32) NOT NULL
@@ -3193,7 +3193,7 @@ CREATE TABLE `reviews` (
   `review_rating_id` int(10) UNSIGNED NOT NULL,
   `student_id` int(10) UNSIGNED NOT NULL,
   `review_description` varchar(4096) NOT NULL,
-  `date_created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -3270,7 +3270,7 @@ CREATE TABLE `school_followers` (
   `school_follower_id` int(10) UNSIGNED NOT NULL,
   `user_id` int(10) UNSIGNED NOT NULL,
   `college_id` int(10) UNSIGNED NOT NULL,
-  `date_followed` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `date_followed` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
