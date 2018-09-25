@@ -202,14 +202,13 @@ function doFavorites(favoriteType, typeId, userId, id){
 
 function followSchool(userId,collegeId,id){
 	var id = '#' + $(id).attr('id');
-	// console.log(id);
 	$.ajax({
 	     type: "POST",
 	     url: 'procedures/doFollowSchool.php',
 	     data: {'user-id': userId, 'college-id':collegeId},
 	     success: function(result) {
 	     	if (result == "follow") {
-	     		$(id).html("Unfollow School");
+	     		$(id).html("Following");
 	     	}else if(result == "unfollow"){
 	     		$(id).html("+ Follow School");
 	     	}else{

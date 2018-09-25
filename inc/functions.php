@@ -450,6 +450,7 @@ function follow_school($collegeId,$userId){
 				$stmt->execute();
 				$connect->commit();
 			}
+			return true;
 		} catch (Exception $e) {
 			throw $e;
 		}

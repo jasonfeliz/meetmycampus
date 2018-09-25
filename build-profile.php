@@ -86,9 +86,10 @@ if (!isset($_COOKIE['user_id'])) {
 	                                    <option value="2000">2000</option>
 	                                </select>                       
 	                            </div>
-                                <div style="margin-top: 15px;">
+                                <div style="margin-top: 15px;text-align: left;">
                                     <label style="margin-bottom: 10px;">Where are you from?</label>
                                     <select class="form_input"  type="text" name="location" id="location_search" placeholder="Select State"> 
+                                            <option value="">Select State</option>
                                             <option value="AL">Alabama</option>
                                             <option value="AK">Alaska</option>
                                             <option value="AZ">Arizona</option>

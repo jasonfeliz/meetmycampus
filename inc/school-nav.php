@@ -2,15 +2,11 @@
 			<section class="banner-school-home">
 				<?php 
 				
-					if(!$loggedIn){
-						echo '<button class="banner-school-button"' . $onClick .'">+ Follow School</button>';
-					}elseif($loggedIn){
-						if ($userSchool == $collegeName){
-							echo '<button class="banner-school-button">My Campus</button>';
-						}else{
+					if($loggedIn){
+						if ($userSchool != $collegeName){
 							$followedSchools = get_followed_schools($userId,$collegeId);
 							if ($followedSchools) {
-								echo  '<button class="banner-school-button" id="follow-button" onclick="followSchool('. $userId . ', ' .$collegeId .',this)" value="">Unfollow School</button>';
+								echo  '<button class="banner-school-button" id="follow-button" onclick="followSchool('. $userId . ', ' .$collegeId .',this)" value="">Following</button>';
 							}else{
 								echo  '<button class="banner-school-button" id="follow-button" onclick="followSchool('. $userId . ', ' .$collegeId .',this)" value="">+ Follow School</button>';
 							}	

@@ -2064,6 +2064,7 @@ padding : 10px 15px;
 border-radius : 2px;
 font-size : 10px;
 position : relative;
+z-index: 10000;
 }
 .banner-school-button:hover, .banner-school-button:focus {
 background : #52d2bc;
