@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 17, 2018 at 08:52 PM
+-- Generation Time: Sep 25, 2018 at 08:21 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 5.6.31
 
@@ -1046,7 +1046,8 @@ INSERT INTO `community_discussions` (`c_discussion_id`, `community_id`, `student
 (32, 1, 62, 'test2', 'test2', '', '2018-09-11 14:16:21'),
 (33, 1, 62, 'test2', 'test2', '', '2018-09-11 14:17:02'),
 (34, 72, 35, 'yeaa', 'yea', '', '2018-09-11 17:35:16'),
-(35, 1, 62, 'test 19', 'ASCASD', '', '2018-09-12 19:20:57');
+(35, 1, 62, 'test 19', 'ASCASD', '', '2018-09-12 19:20:57'),
+(36, 63, 35, 'test', 'testt agaim', '', '2018-09-21 00:03:25');
 
 -- --------------------------------------------------------
 
@@ -1214,7 +1215,8 @@ INSERT INTO `c_discussion_replies` (`c_discussion_reply_id`, `c_discussion_id`, 
 (19, 2, 35, 'yalll', '2018-06-06 21:45:11'),
 (20, 19, 35, 'do we rule?!!?', '2018-06-07 11:32:53'),
 (22, 21, 35, 'yesss', '2018-06-07 12:57:52'),
-(23, 2, 62, 'I love sandwiches', '2018-09-11 14:35:19');
+(23, 2, 62, 'I love sandwiches', '2018-09-11 14:35:19'),
+(24, 19, 35, 'Yess we do', '2018-09-20 12:39:10');
 
 -- --------------------------------------------------------
 
@@ -1388,7 +1390,7 @@ INSERT INTO `discussion_topics` (`discussion_topic_id`, `discussion_topic`) VALU
 (18, 'Theatre'),
 (19, 'Books'),
 (20, 'Tv + Films'),
-(21, 'Campus rant'),
+(21, 'Campus Stories'),
 (22, 'Financial Aid'),
 (23, 'Majors'),
 (24, 'Admissions'),
@@ -1408,7 +1410,7 @@ INSERT INTO `discussion_topics` (`discussion_topic_id`, `discussion_topic`) VALU
 (38, 'Mainstream Media'),
 (39, 'Food '),
 (40, 'Jobs'),
-(41, 'Romance'),
+(41, 'College Romance'),
 (42, 'Peer Pressure'),
 (43, 'Getting In'),
 (44, 'Freshmen Life'),
@@ -1665,7 +1667,8 @@ INSERT INTO `friend_followers` (`follower_id`, `user_id`, `friend_id`) VALUES
 (65, 35, 35),
 (67, 35, 39),
 (70, 35, 62),
-(71, 62, 35);
+(71, 62, 35),
+(72, 62, 62);
 
 -- --------------------------------------------------------
 
@@ -3117,12 +3120,15 @@ INSERT INTO `notifications` (`notification_id`, `user_to`, `user_from`, `communi
 (147, 78, NULL, 73, NULL, NULL, 1, NULL, '2018-09-17 02:39:03', 0, 0, 'new_community'),
 (148, 39, NULL, 73, NULL, NULL, 1, NULL, '2018-09-17 02:39:03', 0, 0, 'new_community'),
 (149, 62, NULL, 74, NULL, NULL, 1, NULL, '2018-09-17 02:42:22', 1, 0, 'new_community'),
-(150, 35, NULL, 74, NULL, NULL, 1, NULL, '2018-09-17 02:42:22', 0, 0, 'new_community'),
+(150, 35, NULL, 74, NULL, NULL, 1, NULL, '2018-09-17 02:42:22', 1, 0, 'new_community'),
 (151, 62, NULL, 74, NULL, NULL, 1, NULL, '2018-09-17 02:42:22', 1, 1, 'new_community'),
 (152, 78, NULL, 74, NULL, NULL, 1, NULL, '2018-09-17 02:42:22', 0, 0, 'new_community'),
 (153, 39, NULL, 74, NULL, NULL, 1, NULL, '2018-09-17 02:42:22', 0, 0, 'new_community'),
-(154, 35, NULL, 75, NULL, NULL, 1, NULL, '2018-09-17 02:43:01', 0, 0, 'new_community'),
-(155, 78, NULL, 75, NULL, NULL, 1, NULL, '2018-09-17 02:43:01', 0, 0, 'new_community');
+(154, 35, NULL, 75, NULL, NULL, 1, NULL, '2018-09-17 02:43:01', 1, 1, 'new_community'),
+(155, 78, NULL, 75, NULL, NULL, 1, NULL, '2018-09-17 02:43:01', 0, 0, 'new_community'),
+(156, 62, 62, NULL, NULL, NULL, NULL, NULL, '2018-09-18 13:05:03', 1, 1, 'user_followed'),
+(157, 35, 35, 4, 19, NULL, NULL, NULL, '2018-09-20 12:39:10', 1, 1, 'discussion_reply'),
+(158, 35, NULL, 63, 36, NULL, NULL, NULL, '2018-09-21 00:03:25', 1, 1, 'new_community_discussion');
 
 -- --------------------------------------------------------
 
@@ -3277,7 +3283,6 @@ INSERT INTO `school_followers` (`school_follower_id`, `user_id`, `college_id`, `
 (17, 35, 704, '2018-02-21 00:48:09'),
 (18, 35, 402, '2018-02-22 22:31:44'),
 (19, 35, 262, '2018-02-27 22:16:48'),
-(21, 35, 394, '2018-03-02 13:31:47'),
 (23, 47, 262, '2018-03-24 23:09:07'),
 (25, 35, 466, '2018-03-29 21:45:30'),
 (27, 39, 227, '2018-04-25 11:26:17'),
@@ -3303,7 +3308,8 @@ INSERT INTO `school_followers` (`school_follower_id`, `user_id`, `college_id`, `
 (58, 78, 262, '2018-09-11 13:39:57'),
 (59, 78, 394, '2018-09-11 13:39:57'),
 (60, 62, 394, '2018-09-11 13:54:43'),
-(61, 62, 704, '2018-09-11 13:55:17');
+(61, 62, 704, '2018-09-11 13:55:17'),
+(68, 35, 394, '2018-09-23 13:16:03');
 
 -- --------------------------------------------------------
 
@@ -3710,7 +3716,7 @@ ALTER TABLE `community_admins`
 -- AUTO_INCREMENT for table `community_discussions`
 --
 ALTER TABLE `community_discussions`
-  MODIFY `c_discussion_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `c_discussion_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 --
 -- AUTO_INCREMENT for table `community_discussion_vote`
 --
@@ -3725,7 +3731,7 @@ ALTER TABLE `community_members`
 -- AUTO_INCREMENT for table `c_discussion_replies`
 --
 ALTER TABLE `c_discussion_replies`
-  MODIFY `c_discussion_reply_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `c_discussion_reply_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT for table `c_discussion_r_reply`
 --
@@ -3790,7 +3796,7 @@ ALTER TABLE `favorites`
 -- AUTO_INCREMENT for table `friend_followers`
 --
 ALTER TABLE `friend_followers`
-  MODIFY `follower_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+  MODIFY `follower_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 --
 -- AUTO_INCREMENT for table `interests`
 --
@@ -3810,7 +3816,7 @@ ALTER TABLE `majors_list`
 -- AUTO_INCREMENT for table `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `notification_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=156;
+  MODIFY `notification_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
 --
 -- AUTO_INCREMENT for table `report_content`
 --
@@ -3835,7 +3841,7 @@ ALTER TABLE `review_ratings`
 -- AUTO_INCREMENT for table `school_followers`
 --
 ALTER TABLE `school_followers`
-  MODIFY `school_follower_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `school_follower_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 --
 -- AUTO_INCREMENT for table `university`
 --
