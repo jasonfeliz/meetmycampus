@@ -31,9 +31,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 		if($addReply){
 			$type = "discussion_reply";
 			$user_to_id = intval(get_community_discussion($communityId,$discussionId)['student_id']);
+			if ($user_to_id != $userId){
+				$notification_obj = new Notification($connect,$user_to_id);
+          		$notification_obj->setNotification($type, $userId, $communityId, $discussionId, NULL,NULL, NULL);
+			}
 
-          	$notification_obj = new Notification($connect,$user_to_id);
-          	$notification_obj->setNotification($type, $userId, $communityId, $discussionId, NULL,NULL, NULL);
 
 
 

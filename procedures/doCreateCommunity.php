@@ -58,27 +58,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         if (!empty($result)) {
             foreach ($result as $key) {
-                //loop through the user's array and get the list of colleges they follow or belong to.
-                $connect->beginTransaction();
-                $stmt = $connect->prepare("SELECT college_id FROM school_followers WHERE user_id = ?");
-                $stmt->bindParam(1,$key['student_id'],PDO::PARAM_INT);
-                $stmt->execute();
-                $connect->commit();
-                $array = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                if (!empty($array)) {
-                    foreach ($array as $id) {
-                        //if the college id of the new community is in the list of colleges that the target user follows, then send that user a notitfication that a new user has been created at one of their schools 
-                        if (intval($id['college_id']) == $college_id) {
-                            $notification_obj = new Notification($connect,$key['student_id']);
-                            $notification_obj->setNotification($type, NULL, $new_community['community_id'], NULL, NULL,$categoryId, NULL);
-                        }
+                //check if the student_id of the current key is not matched to the student creating the community, so that student wont get the notification 
+                if (intval($key['student_id']) != $userId) {
+                    //loop through the user's array and get the list of colleges they follow or belong to.
+                    $connect->beginTransaction();
+                    $stmt = $connect->prepare("SELECT college_id FROM school_followers WHERE user_id = ?");
+                    $stmt->bindParam(1,$key['student_id'],PDO::PARAM_INT);
+                    $stmt->execute();
+                    $connect->commit();
+                    $array = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                    if (!empty($array)) {
+                        foreach ($array as $id) {
+                            //if the college id of the new community is in the list of colleges that the target user follows, then send that user a notitfication that a new user has been created at one of their schools 
+                            if (intval($id['college_id']) == $college_id) {
+                                $notification_obj = new Notification($connect,$key['student_id']);
+                                $notification_obj->setNotification($type, NULL, $new_community['community_id'], NULL, NULL,$categoryId, NULL);
+                            }
 
+                        }
                     }
                 }
-
-
             }
-        }
+        } 
 
     	redirect('../community.php?school_name='. $urlCollegeName . '&category_id=' . $categoryId . '&community_id=' . $new_community['community_id'] . '&community_cat=' . $new_community['community_category'] );
     }else{

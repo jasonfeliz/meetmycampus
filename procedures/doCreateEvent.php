@@ -47,8 +47,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         //send notification that a new event was created in the community they belong to.
         if (!empty($community_members)) {
           foreach ($community_members as $key) {
+            if ($key['student_id'] != $userId){
               $notification_obj = new Notification($connect,$key['student_id']);
-              $notification_obj->setNotification($type, NULL, $result['community_id'], NULL, NULL,NULL, $result['event_id']);
+              $notification_obj->setNotification($type, NULL, $result['community_id'], NULL, NULL,NULL, $result['event_id']);             
+            }
+
           }
         }
         redirect('../event.php?school_name='. $urlCollegeName . '&community_id=' . $result['community_id'] . '&event_id=' . $result['event_id']);

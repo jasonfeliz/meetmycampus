@@ -32,8 +32,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       //send notification that a new discussion was posted in the community they belong to.
       if (!empty($community_members)) {
         foreach ($community_members as $key) {
+          if (intval($key['student_id']) != $userId){
             $notification_obj = new Notification($connect,$key['student_id']);
-            $notification_obj->setNotification($type, NULL, $communityId, $result, NULL,NULL, NULL);
+            $notification_obj->setNotification($type, NULL, $communityId, $result, NULL,NULL, NULL);           
+          }
+
         }
       }
 

@@ -89,7 +89,7 @@ class Notification {
 					$college_name = urlencode($discussion_info['uni_name']);
 					$community_id = $discussion_info['community_id'];
 					$discussion_id = $discussion_info['c_discussion_id'];
-					$link = '<a href="community-discussion.php?school_name='. $college_name .'&community_id='.$community_id.'&c_discussion_id='.$discussion_id.'" class="notification_link" data-n-id="'.$key["notification_id"].'"><span>@'.$user_from_username . '</span> replied to your post titled: "<span>'.$discussion_info['c_discussion_title'].'"</span></a>';
+					$link = '<a href="community-discussion.php?school_name='. $college_name .'&community_id='.$community_id.'&c_discussion_id='.$discussion_id.'#c_reply_edit_'.$discussion_id.'" class="notification_link" data-n-id="'.$key["notification_id"].'"><span>@'.$user_from_username . '</span> replied to your post titled: "<span>'.$discussion_info['c_discussion_title'].'"</span></a>';
 					break;
 				case 'reply_comment':
 					$user_from_obj = new User($connect,$key['user_from']);

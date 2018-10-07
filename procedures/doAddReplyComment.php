@@ -47,9 +47,11 @@ if (isset($_POST['r-reply-post'])) {
 		$user_to_id = intval($info['student_id']);
 		$community_id = intval($info['community_id']);
 		$discussion_id = intval($info['c_discussion_id']);
+		if ($user_to_id != $_COOKIE['user_id']){
+        	$notification_obj = new Notification($connect,$user_to_id);
+        	$notification_obj->setNotification($type, $studentId, $community_id, $discussion_id,$addReplyCommentId,NULL, NULL);			
+		}
 
-        $notification_obj = new Notification($connect,$user_to_id);
-        $notification_obj->setNotification($type, $studentId, $community_id, $discussion_id,$addReplyCommentId,NULL, NULL);
 
 		$comments = '<li class="discussion-reply-list-item">';
 		$comments .= '<a href="profile.php?profile_id='. $studentId . '" class="reply-link">' . '@' . $username . '</a><span> - Just now</span>';
