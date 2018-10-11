@@ -946,8 +946,10 @@ function add_reply($communityId = null, $discussionId, $userId, $replyPost){
 			$stmt->bindParam(2,$userId,PDO::PARAM_INT);
 			$stmt->bindParam(3,$replyPost,PDO::PARAM_STR);
 			$stmt->execute();
+			$replyId = intval($connect->lastInsertId());
 			$connect->commit();
-			return true;
+			
+			return $replyId;
 		}catch(Exception $e){
 			throw $e;
 		}
@@ -959,8 +961,10 @@ function add_reply($communityId = null, $discussionId, $userId, $replyPost){
 			$stmt->bindParam(2,$userId,PDO::PARAM_INT);
 			$stmt->bindParam(3,$replyPost,PDO::PARAM_STR);
 			$stmt->execute();
+			$replyId = intval($connect->lastInsertId());
 			$connect->commit();
-			return true;
+			
+			return $replyId;
 		}catch(Exception $e){
 			throw $e;
 		}

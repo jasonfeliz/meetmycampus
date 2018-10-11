@@ -23,17 +23,17 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 		}
 
+
 									
 	}else if(isset($_POST['community-id'])){
 		$communityId = trim(filter_input(INPUT_POST,"community-id",FILTER_SANITIZE_NUMBER_INT));
 		$addReply = add_reply($communityId, $discussionId, $userId, $replyPost);
-
 		if($addReply){
 			$type = "discussion_reply";
 			$user_to_id = intval(get_community_discussion($communityId,$discussionId)['student_id']);
 			if ($user_to_id != $userId){
 				$notification_obj = new Notification($connect,$user_to_id);
-          		$notification_obj->setNotification($type, $userId, $communityId, $discussionId, NULL,NULL, NULL);
+          		$notification_obj->setNotification($type, $userId, $communityId, $discussionId, $addReply,NULL, NULL);
 			}
 
 

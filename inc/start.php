@@ -41,7 +41,7 @@ if ($loggedIn && empty($_GET['school_name'])) {
 	if(!empty($_GET['profile_id'])){
 			$profileId = intval(trim(filter_input(INPUT_GET, 'profile_id', FILTER_SANITIZE_STRING)));
 	}
-	if(empty($schoolInfo)){
+	if(empty($schoolInfo->get_school_id())){
 	    $_SESSION['school_search'] = $universitySearched;
 	    redirect("search_college.php");
 	}

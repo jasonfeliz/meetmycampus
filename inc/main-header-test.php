@@ -63,10 +63,10 @@
             <li><a class="" href="index.php" ><img class="logo" src="img/logo/logo3.gif"></a></li>
             <li class="sm-screen-search">
                 <div>
-                    <form method="GET" action="search.php">
+                    <form method="GET" action="home.php" id="explore_colleges_form_mobile">
                         <div>
                             <i id="search-button" class="fa fa-search fa-lg" aria-hidden="true" style="cursor: pointer;color: #DF7367;"></i>
-                            <input class="sm-screen-search-input explore-colleges-input" type="text" name="search" placeholder="Search for Colleges" autocomplete="on">
+                            <input class="sm-screen-search-input explore-colleges-input" id="explore_colleges_mobile" type="text" name="school_name" placeholder="Search for Colleges" autocomplete="on">
                             <button type="submit" style="display: none;"></button>
                         </div>     
                     </form>                   
