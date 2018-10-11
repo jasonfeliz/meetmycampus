@@ -33,8 +33,11 @@ include('inc/main-header-test.php');
 													$onClick = 'id="createCommunityBtn"';
 												}
 											?>
-											<h3 class="home-header">Discussions</h3>
-											<button <?php echo $onClick; ?> > + Start Discussion</button>
+											<div>
+												<h3 class="home-header">Discussions</h3>
+												<button <?php echo $onClick; ?> > + Start Discussion</button>												
+											</div>
+
 											<div>
 												<input type="text" name="community_search" placeholder="Search discussions">
 											</div>

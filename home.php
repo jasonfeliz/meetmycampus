@@ -33,8 +33,11 @@ include('inc/main-header-test.php');
 										}
 									?>
 									<div class="home-header-section">
-										<h3 class="home-header">Communities</h3>
-										<button <?php echo $onClick; ?> > + Create Community</button>
+										<div>
+											<h3 class="home-header">Communities</h3>
+											<button <?php echo $onClick; ?> > + Create Community</button>											
+										</div>
+
 										<div>
 											<input type="text" name="community_search" placeholder="Search communities">
 										</div>
