@@ -20,6 +20,7 @@ if(!$loggedIn){
 	$userEmail = $userInfo['email'];
 	$userSchool = $userInfo['uni_name'];
 	$userType = $userInfo['user_type'];
+	$user_interests = $user_obj->get_user_interests();
 
     $profile_status = $user_obj->get_profile_info()['profile_build']; 
     if ($profile_status == 0) {  //if profile has already not beencompleted, send user to build profile pagew.

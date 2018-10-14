@@ -1725,7 +1725,7 @@ function get_topic($topicId){
 }
 function get_all_discussions($collegeId,$discussionTopic){
 	global $connect;
-	if ($discussionTopic == "all") {
+	if ($discussionTopic == "all") { 
 			try{
 					$connect->beginTransaction();
 					$stmt = $connect->prepare("SELECT d_post_id, discussion_post.student_id, userName, discussion_title, discussion_post, post_date,discussion_photo FROM discussion_post 

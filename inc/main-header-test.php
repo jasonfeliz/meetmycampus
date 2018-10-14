@@ -66,7 +66,7 @@
                     <form method="GET" action="home.php" id="explore_colleges_form_mobile">
                         <div>
                             <i id="search-button" class="fa fa-search fa-lg" aria-hidden="true" style="cursor: pointer;color: #DF7367;"></i>
-                            <input class="sm-screen-search-input explore-colleges-input" id="explore_colleges_mobile" type="text" name="school_name" placeholder="Search for Colleges" autocomplete="on">
+                            <input id="explore_colleges_mobile" class="sm-screen-search-input explore-colleges-input explore_colleges" type="text" name="school_name" placeholder="Search for Colleges" autocomplete="on">
                             <button type="submit" style="display: none;"></button>
                         </div>     
                     </form>                   
@@ -84,7 +84,7 @@
             <li class="lg-screen-search">
                 <form method="GET" action="home.php" id="explore-colleges-form" class='explore-college-form ui-widget'>
                     <div class="input-group stylish-input-group">
-                        <input id="explore-colleges" type="text" name="school_name" class="form-control lg-screen-search-input"  placeholder="Search for Colleges" >
+                        <input type="text" name="school_name" class="form-control lg-screen-search-input explore-colleges" id="explore-colleges" placeholder="Search for Colleges" >
                         <span class="input-group-addon">
                             <button type="submit">
                                 <span class="glyphicon glyphicon-search"></span>

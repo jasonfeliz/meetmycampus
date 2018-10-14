@@ -80,14 +80,31 @@ $(function() {
     var collegeListUrl =  './json/college_list2.json';
     $.getJSON(collegeListUrl,function(data){
         collegeList = data;
-        $("#explore-colleges, #explore_colleges_mobile").autocomplete({
+        $("#explore-colleges").autocomplete({
                 delay: 200,
                 minLength: 2,
                 source: collegeList,
                 autoFocus: true,
                 select: function(event, ui) { 
-                    $("#explore-colleges, #explore_colleges_mobile").val(ui.item.value);
-                    $("#explore-colleges-form, #explore_colleges_form_mobile").submit(); 
+                    $("#explore-colleges").val(ui.item.value);
+                    $("#explore-colleges-form").submit(); 
+                }
+        }).autocomplete( "instance" )._renderItem = function( ul, item ) {
+      return $( "<li>" )
+        .append( "<div>" + item.value + "</div>" )
+        .appendTo( ul );
+        };
+    });
+    $.getJSON(collegeListUrl,function(data){
+        collegeList = data;
+        $("#explore_colleges_mobile").autocomplete({
+                delay: 200,
+                minLength: 2,
+                source: collegeList,
+                autoFocus: true,
+                select: function(event, ui) { 
+                    $("#explore_colleges_mobile").val(ui.item.value);
+                    $("#explore_colleges_form_mobile").submit(); 
                 }
         }).autocomplete( "instance" )._renderItem = function( ul, item ) {
       return $( "<li>" )
