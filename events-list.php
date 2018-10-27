@@ -32,19 +32,7 @@ include('inc/main-header-test.php');
 
 								<section id="show-event" class="tabs">
 									<div id="e_c" class="active">
-										<?php echo $schoolInfo->showMeetups('communities'); ?>
-									</div>
-									<div id="e_rc">
-										<?php echo showMeetups('recreation_sports'); ?>
-									</div>
-									<div id="e_ac">
-										<?php echo showMeetups('academics_career'); ?>
-									</div>
-									<div id="e_sl">
-										<?php echo showMeetups('student_life'); ?>
-									</div>
-									<div id="e_le">
-										<?php echo showMeetups('local_events'); ?>
+										<?php echo $schoolInfo->showMeetups(null); ?>
 									</div>
 								</section>
 						</div>

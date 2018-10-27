@@ -1095,11 +1095,11 @@ function get_total_votes($discussionId){
 
 	try {
 		$connect->beginTransaction();
-		$stmt = $connect->prepare("SELECT SUM(vote) FROM discussion_vote WHERE discussion_id = ?");
+		$stmt = $connect->prepare("SELECT SUM(vote) FROM community_discussion_vote WHERE c_discussion_id = ?");
 		$stmt->bindParam(1,$discussionId,PDO::PARAM_INT);
 		$stmt->execute();
 		$connect->commit();
-		return $stmt->fetchColumn();
+		return intval($stmt->fetchColumn());
 	} catch (Exception $e) {
 		throw $e;
 	}
@@ -2049,12 +2049,11 @@ function get_community_discussion($communityId,$c_discussion_id){
 	global $connect;
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT c_discussion_id, college_student.userName,c_discussion_title, student_id, c_discussion_post, post_date,community_discussion_photo,community_discussions.community_id,community_name,uni_name  FROM community_discussions
+				$stmt = $connect->prepare("SELECT c_discussion_id, college_student.userName,c_discussion_title, category,student_id, c_discussion_post, post_date,community_discussion_photo,community_discussions.community_id,community_name,uni_name  FROM community_discussions
 											INNER JOIN college_student JOIN colleges ON community_discussions.student_id = college_student.id AND college_student.college_id = colleges.college_id
-											INNER JOIN communities ON community_discussions.community_id = communities.community_id
-											WHERE community_discussions.community_id = ? AND c_discussion_id=?");
-				$stmt->bindParam(1,$communityId,PDO::PARAM_INT);
-				$stmt->bindParam(2,$c_discussion_id,PDO::PARAM_INT);
+											INNER JOIN communities JOIN categories ON community_discussions.community_id = communities.community_id AND communities.category_id = categories.category_id
+											WHERE  c_discussion_id=?");
+				$stmt->bindParam(1,$c_discussion_id,PDO::PARAM_INT);
 				$stmt->execute();
 				$connect->commit();
 				return $stmt->fetch(PDO::FETCH_ASSOC);
@@ -2793,18 +2792,21 @@ function deleteResetCode($userId){
   	  	throw $e;
   	}
 }
-				function assoc_asort (&$array, $key) {
-				    $sorter=array();
-				    $ret=array();
-				    reset($array);
-				    foreach ($array as $ii => $va) {
-				        $sorter[$ii]=$va[$key];
+				function assoc_asort (&$myArray, $key) {
+				    $sortArray = [];
+				    $results = [];
+				    reset($myArray);
+
+				    foreach ($myArray as $i => $value) {
+				        $sortArray[$i]=$value[$key];
 				    }
-				    arsort($sorter);
-				    foreach ($sorter as $ii => $va) {
-				        $ret[$ii]=$array[$ii];
+
+				    arsort($sortArray);
+				    
+				    foreach ($sortArray as $i => $value) {
+				    	$results[$i] = $myArray[$i];
 				    }
-				    $array=$ret;
+				    $myArray=$results;
 				}
 function authenticate_user(){
 	if ((!isset($_COOKIE['user_id'])) || (!strlen($_COOKIE['user_id']) > 0)) {
@@ -2821,6 +2823,10 @@ function authorize_user($userId,$pageLink){
 	}
 }
 
-
-
+function echo_pre_o(){
+	echo "<pre>";
+}
+function echo_pre_c(){
+	echo "</pre>";
+}
 ?>

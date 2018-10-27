@@ -100,7 +100,7 @@
 													$content .= '<div></li>';
 													
 											}else {
-												$content =  '<div class="private-section"> <h3 style="padding:20px;">Be the first to start a discussion ' . '@' .$community['community_name'] . '</h3></div>';
+												$content =  '<div class="private-section"> <h3 style="padding:20px;">No discussions yet ' . '@' .$community['community_name'] . '</h3></div>';
 											}
 											echo $content;
 										?>

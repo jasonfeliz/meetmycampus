@@ -178,44 +178,31 @@ class College {
 		}
 	}
 
-	public function get_all_discussions($topicId = NULL){
+	public function get_all_discussions($interest_id = NULL){
 		$connect = $this->connect;
 
-		if ($topicId == "all") {
-				try{
-						$connect->beginTransaction();
-						$stmt = $connect->prepare("SELECT d_post_id, discussion_post.student_id, userName, discussion_title, discussion_post, post_date,discussion_photo FROM discussion_post
-													INNER JOIN college_student ON discussion_post.student_id = college_student.id		                             
-													WHERE discussion_post.college_id = ?");
-						$stmt->bindParam(1,$this->college['college_id'],PDO::PARAM_INT);
-						$stmt->execute();
-						$connect->commit();
-						$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-				}catch(Exception $e){
-					throw $e;
-				}
-		}else{
+
 			try{
-					$topicId = intval($topicId);
 					$connect->beginTransaction();
-					$stmt = $connect->prepare("SELECT d_post_id, discussion_post.student_id, userName, discussion_title, discussion_post, post_date,discussion_photo FROM discussion_post 
-												INNER JOIN college_student ON discussion_post.student_id = college_student.id
-												WHERE discussion_post.college_id = ? AND d_topic_id = ?");
+					$stmt = $connect->prepare("SELECT c_discussion_id,community_name,community_discussions.community_id,communities.category_id,category, community_discussions.student_id, userName, c_discussion_title, c_discussion_post, post_date,community_discussion_photo FROM community_discussions 
+												INNER JOIN college_student ON community_discussions.student_id = college_student.id
+												INNER JOIN communities JOIN categories ON community_discussions.community_id = communities.community_id AND communities.category_id = categories.category_id
+												WHERE communities.college_id = ? AND community_type = 'public' ORDER BY post_date DESC");
 					$stmt->bindParam(1,$this->college['college_id'],PDO::PARAM_INT);
-					$stmt->bindParam(2,$topicId,PDO::PARAM_INT);
 					$stmt->execute();
 					$connect->commit();
 					$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 			}catch(Exception $e){
 				throw $e;
 			}
-		}
+
 		if (!empty($results)) {
 			return $results;
 		}else{
 			return false;
 		}
 	}
+
 
 	public function get_all_reviews($categoryId=NULL,$ratings=NULL){
 		$connect = $this->connect;
@@ -362,7 +349,7 @@ class College {
 						$stmt = $connect->prepare("SELECT event_id, community_id,event_type, student_id, event_access, event_title, event_description, event_location, event_address, event_date, event_time, event_photo, date_created FROM events
 													INNER JOIN college_student ON events.student_id = college_student.id
 			                                        INNER JOIN event_type ON events.event_type_id =  event_type.event_type_id 
-													WHERE events.college_id = ?");
+													WHERE events.college_id = ? ORDER BY date_created DESC");
 						$stmt->bindParam(1,$this->college['college_id'],PDO::PARAM_INT);
 						$stmt->execute();
 						$connect->commit();
@@ -372,7 +359,7 @@ class College {
 				}
 	}
 
-	public function showMeetups($meetupRoom){
+	public function showMeetups($interest_id = NULL){
 		global $userId;
 		global $loggedIn;
 		global $collegeId;
