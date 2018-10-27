@@ -3888,12 +3888,16 @@ margin : 4px auto 4px 0;
 padding-bottom : 10px !important ;
 margin-bottom : 10px !important ;
 font-size : 0.8em;
+align-items: center;
 }
 .forum-item-header > li:first-child {
 margin-right : auto;
 }
 .forum-username {
 color : #ea7363;
+}
+.forum-item-header > li{
+  margin: 10px 0;
 }
 .forum-item-header > li span {
 font-style : italic;
@@ -3934,6 +3938,16 @@ font-size : 0.85em;
 font-weight : bold;
 color : rgba(46, 47, 48, 0.65);
 }
+
+.forum-item-links > *{
+  margin-right:  10px;
+  display: inline-block;
+  border:solid 1px rgba(0,0,0,.2);
+  border-radius: 30px;
+  padding: 5px 10px;
+}
+
+
 .forum-item-btns {
 display : flex;
 align-items : baseline;

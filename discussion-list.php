@@ -47,7 +47,6 @@ include('inc/main-header-test.php');
 								<section id="show-room" class="tabs">
 									<div id="d_c" class="active">
 										<ul class="forum-list" id="discussion-list">
-											<!-- <?php echo $schoolInfo->showDiscussions($discussionTopicId);?> -->
 											<?php 
 
 													$interests_array = [];
@@ -113,16 +112,16 @@ include('inc/main-header-test.php');
 															$content .= '</div><div class="forum-main">';
 															$content .= '<div class="forum-post-body"><a href="community-discussion.php?school_name=' .$urlCollegeName . '&community_id=' . $key['community_id'] . '&c_discussion_id=' . $key['c_discussion_id'] . '"><p class="forum-title community-forum">' . nl2br($key['c_discussion_title']) . '</p></a></div>';
 																$content .= '<ul class="forum-item-header">';
-																$content .= "<li>
-																		<span><a href='#'>{$key['community_name']}</a></span>
-																		<span><a href='#'>{$key['category']}</a></span>
-																</li>";
 															if ($storyConstant) {
 																$content .= '<li>Anonymous - '. $postTime.'</li>';
 															}else{
 																$content .= '<li><span>Posted by: </span><a href="profile.php?profile_id=' . $key['student_id'] . '" class="forum-username">' . '@'.$key['userName'] . '</a><span> - '. $postTime.'</span></li>';
 															}
 															$content .= '<li class="forum-item-btns"><span class="fa">'. $replyCount .'</span><i class="fa fa-heart-o" ' . $color . ' aria-hidden="true" id="c-discussion-'. $key['c_discussion_id'] . '" onclick="doFavorites(\'community_discussion\',' . $key['c_discussion_id'] . ', ' .$userId . ', this)"></i><i class="fa fa-ellipsis-h" id="ellipsis-cd-'.$key['c_discussion_id'].'" aria-hidden="true" onclick="showEllipsis(this)"></i><div class="ellipsis-menu"><ul><li data-type="c_post" data-id="'.$key['c_discussion_id'].'" class="ellipsis-button report-btn">Report</li>'.$remove.'</ul></div></li>';
+																$content .= "<li class='forum-item-links'>
+																		<span style='border-color:{$key['community_color']};'><a href='#' style='color:{$key['community_color']};'>{$key['community_name']}</a></span>
+																		<span><a href='#'>{$key['category']}</a></span>
+																</li>";														
 																$content .= '</ul>';
 															}	
 
