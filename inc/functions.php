@@ -1055,6 +1055,7 @@ function new_vote($discussionId,$userId,$action){
 			throw $e;
 		}
 	}
+	
 }
 
 function update_vote($discussionId,$userId,$action){
