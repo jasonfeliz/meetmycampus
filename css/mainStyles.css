@@ -3519,7 +3519,7 @@ top : 135px !important ;
 #forum-list > .forum-item,
 #search_discussion_list > .forum-item {
 display : flex;
-align-items : baseline;
+align-items : center;
 position : relative;
 }
 #search_discussion_list > .forum-item{
@@ -3802,6 +3802,11 @@ font-size : 0.8em;
 }
 }
 @media (min-width:1024px) {
+#discussion-list > .forum-item, 
+#forum-list > .forum-item,
+#search_discussion_list > .forum-item {
+align-items : baseline;
+}
 .filter-box > select {
 width : 150px;
 }
@@ -3906,6 +3911,9 @@ color : #ea7363;
 }
 .forum-item-header > li span {
 font-style : italic;
+color : rgba(0, 0, 0, 0.4);
+}
+.forum-item-header > li span > a {
 color : rgba(0, 0, 0, 0.4);
 }
 .forum-header ul li p {
