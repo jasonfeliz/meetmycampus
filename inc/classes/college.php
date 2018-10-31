@@ -184,7 +184,7 @@ class College {
 
 			try{
 					$connect->beginTransaction();
-					$stmt = $connect->prepare("SELECT c_discussion_id,community_name,community_color,community_discussions.community_id,communities.category_id,category, community_discussions.student_id, userName, c_discussion_title, c_discussion_post, post_date,community_discussion_photo FROM community_discussions 
+					$stmt = $connect->prepare("SELECT c_discussion_id,community_name,community_color,community_discussions.community_id,communities.category_id,category, community_discussions.student_id, username, c_discussion_title, c_discussion_post, post_date,community_discussion_photo FROM community_discussions 
 												INNER JOIN college_student ON community_discussions.student_id = college_student.id
 												INNER JOIN communities JOIN categories ON community_discussions.community_id = communities.community_id AND communities.category_id = categories.category_id
 												WHERE communities.college_id = ? AND community_type = 'public' ORDER BY post_date DESC");
@@ -196,11 +196,11 @@ class College {
 				throw $e;
 			}
 
-		if (!empty($results)) {
-			return $results;
-		}else{
-			return false;
-		}
+			if (!empty($results)) {
+				return $results;
+			}else{
+				return false;
+			}
 	}
 
 

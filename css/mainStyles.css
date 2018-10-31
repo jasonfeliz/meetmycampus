@@ -2721,8 +2721,8 @@ margin-left : auto !important ;
   background : #fff;
   position : absolute;
   z-index : 100;
-  min-height : 600px;
-  max-height : 600px;
+  min-height : 900px;
+  max-height:900px;
   top : 10px;
   border-radius : 2px;
   overflow : scroll;
@@ -3515,10 +3515,15 @@ background-image : linear-gradient(rgba(255, 255, 255, 0), #fff);
 .community-forum:after {
 top : 135px !important ;
 }
-#discussion-list > .forum-item, #forum-list > .forum-item {
+#discussion-list > .forum-item, 
+#forum-list > .forum-item,
+#search_discussion_list > .forum-item {
 display : flex;
 align-items : baseline;
 position : relative;
+}
+#search_discussion_list > .forum-item{
+  max-width: 100% !important;
 }
 .forum-item-list {
 color : rgba(0, 0, 0, 0.5);

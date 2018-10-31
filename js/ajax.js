@@ -565,12 +565,12 @@ function search_discussion(term,collegeId,collegeName){
 		     url: 'procedures/doSearch.php',
 		     data: {'search_discussion': term,'college_id':collegeId,'college_name':collegeName},
 		     success: function(result) {
-		     	$('#search_results_d').html(result)
+		     	$('#search_results_d > ul').html(result)
 
 		     }
 		});		
 	}else if(term.length < 1){
-		$('#search_results_d').html('')
+		$('#search_results_d > ul').html('')
 	}
 
 }
