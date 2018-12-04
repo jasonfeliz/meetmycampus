@@ -1,9 +1,9 @@
-<?php 
+<?php
 class College {
 
 	private $connect;
 	private $college;
-	
+
 	//constructor
 	public function __construct($connect,$collegeId = NULL,$collegeName = NULL){
 		$this->connect = $connect;
@@ -56,11 +56,11 @@ class College {
 		if (is_null($communityId)) {
 			$communityId = 0;
 		}
-		
+
 		if (is_null($categoryId)) {
 			try{
 					$connect->beginTransaction();
-					$stmt = $connect->prepare("SELECT * FROM communities 
+					$stmt = $connect->prepare("SELECT * FROM communities
 												INNER JOIN categories ON communities.category_id = categories.category_id
 												WHERE college_id = ? AND community_category <> 'majors' AND community_id <> ?");
 					$stmt->bindParam(1,$this->college['college_id'],PDO::PARAM_INT);
@@ -74,7 +74,7 @@ class College {
 		}else{
 			try{
 					$connect->beginTransaction();
-					$stmt = $connect->prepare("SELECT * FROM communities 
+					$stmt = $connect->prepare("SELECT * FROM communities
 												INNER JOIN categories ON communities.category_id =  categories.category_id
 												WHERE college_id = ? AND communities.category_id = ?  AND community_category <> 'majors' AND community_id <> ? LIMIT 6");
 					$stmt->bindParam(1,$this->college['college_id'],PDO::PARAM_INT);
@@ -85,7 +85,7 @@ class College {
 					$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 			}catch(Exception $e){
 				throw $e;
-			}	
+			}
 		}
 		if (!empty($results)) {
 			return $results;
@@ -98,7 +98,7 @@ class College {
 		$connect = $this->connect;
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT * FROM communities 
+				$stmt = $connect->prepare("SELECT * FROM communities
 											INNER JOIN categories ON communities.category_id = categories.category_id
 											WHERE communities.category_id = ? AND college_id = ? AND community_category <> 'majors'");
 				$stmt->bindParam(1,$categoryId,PDO::PARAM_INT);
@@ -109,7 +109,7 @@ class College {
 		}catch(Exception $e){
 			throw $e;
 		}
-			
+
 		return $results;
 
 	}
@@ -118,7 +118,7 @@ class College {
 		$connect = $this->connect;
 			try{
 				$connect->beginTransaction();
-					$stmt = $connect->prepare("SELECT id,first_name, last_name, userName, email, uni_name 
+					$stmt = $connect->prepare("SELECT id,first_name, last_name, userName, email, uni_name
 															  FROM college_student INNER JOIN colleges ON college_student.college_id = colleges.college_id
 															  WHERE colleges.college_id = ?");
 					$stmt->bindParam(1,$this->college['college_id'],PDO::PARAM_INT);
@@ -161,7 +161,7 @@ class College {
 
 		try{
 				$connect->beginTransaction();
-				$stmt = $connect->prepare("SELECT * FROM communities 
+				$stmt = $connect->prepare("SELECT * FROM communities
 											INNER JOIN categories ON communities.category_id = categories.category_id
 											WHERE college_id = ? AND community_category = 'story'");
 				$stmt->bindParam(1,$this->college['college_id'],PDO::PARAM_INT);
@@ -178,13 +178,13 @@ class College {
 		}
 	}
 
-	public function get_all_discussions($interest_id = NULL){
+	public function get_all_discussions($interest_id = NULL,$filter_id = NULL){
 		$connect = $this->connect;
 
 
 			try{
 					$connect->beginTransaction();
-					$stmt = $connect->prepare("SELECT c_discussion_id,community_name,community_color,community_discussions.community_id,communities.category_id,category, community_discussions.student_id, username, c_discussion_title, c_discussion_post, post_date,community_discussion_photo FROM community_discussions 
+					$stmt = $connect->prepare("SELECT c_discussion_id,community_name,community_color,community_discussions.community_id,communities.category_id,category, community_discussions.student_id, username, c_discussion_title, c_discussion_post, post_date,community_discussion_photo FROM community_discussions
 												INNER JOIN college_student ON community_discussions.student_id = college_student.id
 												INNER JOIN communities JOIN categories ON community_discussions.community_id = communities.community_id AND communities.category_id = categories.category_id
 												WHERE communities.college_id = ? AND community_type = 'public' ORDER BY post_date DESC");
@@ -269,7 +269,7 @@ class College {
 					$results =  $stmt->fetchAll(PDO::FETCH_ASSOC);
 			}catch(Exception $e){
 				throw $e;
-			}		
+			}
 		}
 		if (!empty($results)) {
 			return $results;
@@ -297,7 +297,7 @@ class College {
 				foreach ($discussionsList as $key) {
 					$replies = get_all_discussion_replies($key['d_post_id']);
 					if(count($replies)==1){
-						$replyCount = count($replies)." reply"; 
+						$replyCount = count($replies)." reply";
 					}else{
 						$replyCount = count($replies)." replies";
 					}
@@ -348,7 +348,7 @@ class College {
 						$connect->beginTransaction();
 						$stmt = $connect->prepare("SELECT event_id, community_id,event_type, student_id, event_access, event_title, event_description, event_location, event_address, event_date, event_time, event_photo, date_created FROM events
 													INNER JOIN college_student ON events.student_id = college_student.id
-			                                        INNER JOIN event_type ON events.event_type_id =  event_type.event_type_id 
+			                                        INNER JOIN event_type ON events.event_type_id =  event_type.event_type_id
 													WHERE events.college_id = ? ORDER BY date_created DESC");
 						$stmt->bindParam(1,$this->college['college_id'],PDO::PARAM_INT);
 						$stmt->execute();
@@ -386,7 +386,7 @@ class College {
 				$content .= '<div><p>' . $key['event_description'] . '</p></div>';
 				$content .= '<ul>';
 				$content .= '<li class="event-info"><p>'. $key['event_date'] . '</p><p>' . '@' .$key['event_location'] . '</p></li>';
-										
+
 				$content .= '</ul>';
 
 				$content .= '</li>';
@@ -395,8 +395,8 @@ class College {
 		}else{
 			$content = '<h3 style="padding:20px;">Be the first to create an event ' . $collegeAbrev . '</h3>';
 		}
-									
-		
+
+
 		return $content;
 }
 
